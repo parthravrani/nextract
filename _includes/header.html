@@ -1,9 +1,22 @@
 <header class="sticky top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center relative">
         <a href="{{ '/' | relative_url }}" class="text-2xl font-black tracking-tighter cursor-pointer">
-            <span class="gradient-text">N</span>EXTRACT
+            <div class="flex items-center gap-3">
+  
+            <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Nextract Logo" class="h-8 w-auto">
+
+            <div>
+                <h3 class="text-xl font-extrabold tracking-tighter leading-tight">
+                Nextract
+                </h3>
+                <p class="text-lg font-medium leading-tight">
+                Data Solutions
+                </p>
+            </div>
+            
+            </div>
         </a>
-        <nav class="hidden md:flex items-center space-x-8 font-semibold">
+        <nav class="hidden md:flex items-center space-x-4 lg:space-x-8 font-semibold absolute left-1/2 -translate-x-1/2">
             {% for nav in site.navigation %}
                 {% if nav.dropdown %}
                     <div class="relative" id="legal-dropdown-container">
@@ -21,7 +34,10 @@
                 {% endif %}
             {% endfor %}
         </nav>
-        <a href="#contact-shared" class="hidden md:block cta-primary px-5 py-2.5 text-white font-bold">Get a Free Quote</a>
+        <div class="hidden md:flex items-center gap-4">
+            <a href="{{ '/assets/deck/Nextract Data Solutions.pdf' | relative_url }}" target="_blank" class="cta-secondary px-5 py-2.5 font-bold"><i class="ri-download-2-line"></i> Deck</a>
+            <a href="#contact-shared" class="cta-primary px-5 py-2.5 text-white font-bold">Get a Free Quote</a>
+        </div>
         <button id="mobile-menu-button" class="md:hidden"><i class="ri-menu-3-line text-2xl"></i></button>
     </div>
 </header>

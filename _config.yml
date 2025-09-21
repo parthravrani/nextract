@@ -16,9 +16,14 @@ phone: "+91 85110-98799"
 address: "B-1308, Eastface, Ahmedabad, Gujarat 380058"
 
 # Social Media
-linkedin_url: "#"
+linkedin_url: "https://www.linkedin.com/company/nextract-data-solutions"
 twitter_url: "#"
-instagram_url: "#"
+instagram_url: "https://www.instagram.com/nextract.dev/"
+
+# Social Media Parth
+linkedin_url_parth: "https://www.linkedin.com/in/parthravrani/"
+twitter_url: "#"
+instagram_url: "https://www.instagram.com/nextract.dev/"
 
 # Business Info
 founded_year: 2017

@@ -9,19 +9,23 @@
     {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
     <link rel="canonical" href="{{ site.canonical_url }}{{ page.url }}">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32x32.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicon-16x16.png' | relative_url }}">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site.canonical_url }}{{ page.url }}">
     <meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} | Enterprise Web Scraping & Data Extraction Services{% endif %}">
     <meta property="og:description" content="{% if page.og_description %}{{ page.og_description }}{% else %}Turn web data into actionable business intelligence. Nextract provides reliable, scalable, and ethical web scraping solutions for enterprise clients.{% endif %}">
-    <meta property="og:image" content="{{ site.og_image }}">
+    <!-- <meta property="og:image" content="{{ site.og_image }}"> -->
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="{{ site.canonical_url }}{{ page.url }}">
     <meta property="twitter:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} | Enterprise Web Scraping & Data Extraction Services{% endif %}">
     <meta property="twitter:description" content="{% if page.twitter_description %}{{ page.twitter_description }}{% else %}Turn web data into actionable business intelligence. Nextract provides reliable, scalable, and ethical web scraping solutions for enterprise clients.{% endif %}">
-    <meta property="twitter:image" content="{{ site.twitter_image }}">
+    <!-- <meta property="twitter:image" content="{{ site.twitter_image }}"> -->
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -43,6 +47,17 @@
         .hero-gradient { background-color: #0052FF; background-image: linear-gradient(225deg, #0052FF 0%, #0A2E7E 100%); }
         .cta-primary { background-color: #0052FF; border-radius: 8px; transition: all 0.3s ease; }
         .cta-primary:hover { background-color: #0045D6; transform: translateY(-2px); box-shadow: 0 7px 15px -3px rgba(0, 82, 255, 0.4); }
+        .cta-secondary {
+            background-color: transparent;
+            border: 1px solid #0052FF;
+            color: #0052FF;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .cta-secondary:hover {
+            background-color: #0052FF;
+            color: white;
+        }
         .hero-cta-primary { background-color: #FFFFFF; color: #0045D6; border-radius: 8px; transition: all 0.3s ease; }
         .hero-cta-primary:hover { transform: translateY(-2px); box-shadow: 0 7px 20px -3px rgba(0,0,0,0.2); }
         .hero-cta-secondary { background-color: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.3); color: #FFFFFF; border-radius: 8px; transition: all 0.3s ease; }
@@ -61,6 +76,22 @@
         .legal-content ul { list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1rem; }
         .legal-content li { margin-bottom: 0.5rem; }
         .legal-content .disclaimer { font-style: italic; color: #718096; text-align: center; margin-bottom: 2rem; }
+
+        /* Accordion Styles */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-item.active .accordion-content {
+            max-height: 500px; /* Adjust as needed */
+        }
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+        .accordion-icon {
+            transition: transform 0.3s ease-out;
+        }
     </style>
 
     {% seo %}

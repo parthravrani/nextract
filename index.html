@@ -13,7 +13,7 @@ twitter_description: "Turn web data into actionable business intelligence. Nextr
             <h1 class="text-4xl sm:text-5xl md:text-7xl font-black leading-tight tracking-tight mb-6 reveal">Actionable Data, <br class="hidden md:block"/> Delivered.</h1>
             <p class="max-w-3xl mx-auto text-lg md:text-xl text-blue-200 mb-10 font-medium reveal" style="transition-delay: 0.2s;">Nextract provides done-for-you web scraping and data pipelines, giving you the clean, structured data you need to make smarter decisions and outpace the competition.</p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 reveal" style="transition-delay: 0.4s;">
-                <a href="#" class="hero-cta-primary w-full sm:w-auto font-bold py-3 px-6 flex items-center justify-center gap-2"><i class="ri-download-2-line"></i>Download Capabilities Deck</a>
+                <a href="{{ '/assets/deck/Nextract Data Solutions.pdf' | relative_url }}" target="_blank" class="hero-cta-primary w-full sm:w-auto font-bold py-3 px-6 flex items-center justify-center gap-2"><i class="ri-download-2-line"></i>Download Capabilities Deck</a>
                 <a href="#contact-shared" class="hero-cta-secondary w-full sm:w-auto font-bold py-3 px-6">SPEAK TO AN EXPERT</a>
             </div>
             <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto text-center reveal" style="transition-delay: 0.6s;">
@@ -27,13 +27,13 @@ twitter_description: "Turn web data into actionable business intelligence. Nextr
     
     <section class="py-12 bg-gray-50">
         <div class="container mx-auto px-6 reveal">
-            <p class="text-center text-sm text-gray-500 font-semibold uppercase tracking-widest mb-6">POWERING DECISIONS FOR INDUSTRY LEADERS</p>
-            <div class="flex flex-wrap justify-center items-center gap-10 grayscale opacity-60">
+            <p class="text-center text-sm text-gray-500 font-semibold uppercase tracking-widest">POWERING DECISIONS FOR INDUSTRY LEADERS</p>
+            <!-- <div class="flex flex-wrap justify-center items-center gap-10 grayscale opacity-60">
                  <svg class="h-6" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg" alt="Forge logo"><path d="M20 40C8.954 40 0 31.046 0 20S8.954 0 20 0h80c11.046 0 20 8.954 20 20s-8.954 20-20 20H20z" fill="#D1D5DB"/><text x="60" y="25" font-family="Montserrat" font-size="12" font-weight="bold" text-anchor="middle" fill="#6B7280">FORGE</text></svg>
                  <svg class="h-6" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg" alt="Summit logo"><path d="M20 40C8.954 40 0 31.046 0 20S8.954 0 20 0h80c11.046 0 20 8.954 20 20s-8.954 20-20 20H20z" fill="#D1D5DB"/><text x="60" y="25" font-family="Montserrat" font-size="12" font-weight="bold" text-anchor="middle" fill="#6B7280">SUMMIT</text></svg>
                  <svg class="h-6" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg" alt="Quantum logo"><path d="M20 40C8.954 40 0 31.046 0 20S8.954 0 20 0h80c11.046 0 20 8.954 20 20s-8.954 20-20 20H20z" fill="#D1D5DB"/><text x="60" y="25" font-family="Montserrat" font-size="12" font-weight="bold" text-anchor="middle" fill="#6B7280">QUANTUM</text></svg>
                  <svg class="h-6 hidden sm:block" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg" alt="Aegis logo"><path d="M20 40C8.954 40 0 31.046 0 20S8.954 0 20 0h80c11.046 0 20 8.954 20 20s-8.954 20-20 20H20z" fill="#D1D5DB"/><text x="60" y="25" font-family="Montserrat" font-size="12" font-weight="bold" text-anchor="middle" fill="#6B7280">AEGIS</text></svg>
-            </div>
+            </div> -->
         </div>
     </section>
     
@@ -141,34 +141,49 @@ twitter_description: "Turn web data into actionable business intelligence. Nextr
             </div>
         </div>
     </section>
-    
+
     <section id="faq" class="py-20 lg:py-32">
         <div class="container mx-auto px-6 max-w-4xl">
             <div class="text-center mb-12 reveal">
                 <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Frequently Asked Questions</h2>
             </div>
-            <div class="space-y-6">
-                <div class="card-style p-6 reveal">
-                    <h3 class="font-bold text-lg mb-2">Is web scraping legal?</h3>
-                    <p class="text-gray-600">Yes, web scraping is legal when done ethically and responsibly. We only scrape publicly available data and strictly adhere to website terms of service, robots.txt files, and data protection regulations like GDPR and CCPA to ensure our practices are fully compliant.</p>
+            <div class="space-y-4">
+                <div class="accordion-item card-style reveal">
+                    <button class="accordion-header w-full flex justify-between items-center text-left p-6">
+                        <h3 class="font-bold text-lg">Is web scraping legal?</h3>
+                        <i class="ri-add-line accordion-icon text-2xl transition-transform"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p class="text-gray-600 px-6 pb-6">Yes, web scraping is legal when done ethically and responsibly. We only scrape publicly available data and strictly adhere to website terms of service, robots.txt files, and data protection regulations like GDPR and CCPA to ensure our practices are fully compliant.</p>
+                    </div>
                 </div>
-                <div class="card-style p-6 reveal" style="transition-delay: 0.1s;">
-                    <h3 class="font-bold text-lg mb-2">What data formats do you deliver?</h3>
-                    <p class="text-gray-600">We can deliver data in any format you need, including JSON, CSV, XML, or directly to your database or cloud storage like Amazon S3. We customize the delivery method to fit seamlessly into your existing workflows.</p>
+                <div class="accordion-item card-style reveal" style="transition-delay: 0.1s;">
+                    <button class="accordion-header w-full flex justify-between items-center text-left p-6">
+                        <h3 class="font-bold text-lg">What data formats do you deliver?</h3>
+                        <i class="ri-add-line accordion-icon text-2xl transition-transform"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p class="text-gray-600 px-6 pb-6">We can deliver data in any format you need, including JSON, CSV, XML, or directly to your database or cloud storage like Amazon S3. We customize the delivery method to fit seamlessly into your existing workflows.</p>
+                    </div>
                 </div>
-                <div class="card-style p-6 reveal" style="transition-delay: 0.2s;">
-                    <h3 class="font-bold text-lg mb-2">How do you handle anti-scraping measures like CAPTCHAs?</h3>
-                    <p class="text-gray-600">Our technical team uses a sophisticated stack of technologies, including proxy rotation, user-agent simulation, and advanced CAPTCHA-solving services, to handle complex anti-scraping measures. This ensures a reliable and uninterrupted flow of data.</p>
+                <div class="accordion-item card-style reveal" style="transition-delay: 0.2s;">
+                    <button class="accordion-header w-full flex justify-between items-center text-left p-6">
+                        <h3 class="font-bold text-lg">How do you handle anti-scraping measures like CAPTCHAs?</h3>
+                        <i class="ri-add-line accordion-icon text-2xl transition-transform"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p class="text-gray-600 px-6 pb-6">Our technical team uses a sophisticated stack of technologies, including proxy rotation, user-agent simulation, and advanced CAPTCHA-solving services, to handle complex anti-scraping measures. This ensures a reliable and uninterrupted flow of data.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="founder" class="py-20 lg:py-32">
+    <section id="founder" class="py-20 lg:py-32 section-light">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center gap-12 max-w-4xl mx-auto reveal">
-                <div class="md:w-1/3 flex justify-center"><img src="https://i.pravatar.cc/150?u=parth_ravrani" alt="Founder Parth Ravrani" class="rounded-full w-40 h-40 md:w-48 md-h-48 object-cover shadow-2xl border-4 border-white"></div>
-                <div class="md:w-2/3 text-center md:text-left"><h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">Built by an Engineer, <span class="gradient-text">Run for Businesses</span></h2><p class="text-lg text-gray-600 leading-relaxed mb-4">Parth Ravrani, our founder, saw firsthand how inaccessible critical web data could be. He created Nextract to democratize access to high-quality data by handling all the complex engineering, allowing businesses to focus on innovation and growth.</p><a href="{{ site.linkedin_url }}" class="text-blue-600 hover:text-blue-800 font-bold text-lg flex items-center justify-center md:justify-start gap-2"><i class="ri-linkedin-box-fill text-2xl"></i>Connect on LinkedIn</a></div>
+                <div class="md:w-1/3 flex justify-center"><img src="{{ '/assets/images/parth-ravrani.png' | relative_url }}" alt="Founder Parth Ravrani" class="rounded-full w-40 h-40 md:w-48 md-h-48 object-cover shadow-2xl border-4 border-white"></div>
+                <div class="md:w-2/3 text-center md:text-left"><h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">Built by an Engineer, <span class="gradient-text">Run for Businesses</span></h2><p class="text-lg text-gray-600 leading-relaxed mb-4">Parth Ravrani, our founder, saw firsthand how inaccessible critical web data could be. He created Nextract to democratize access to high-quality data by handling all the complex engineering, allowing businesses to focus on innovation and growth.</p><a href="{{ site.linkedin_url_parth }}" target="_blank" class="text-blue-600 hover:text-blue-800 font-bold text-lg flex items-center justify-center md:justify-start gap-2"><i class="ri-linkedin-box-fill text-2xl"></i>Connect on LinkedIn</a></div>
             </div>
         </div>
     </section>

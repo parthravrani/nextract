@@ -9,6 +9,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileLegalSubmenu = document.getElementById('mobile-legal-submenu');
     const mobileLegalIcon = document.getElementById('mobile-legal-icon');
     const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    const accordionItems = document.querySelectorAll('.accordion-item');
+
+    accordionItems.forEach(item => {
+        const header = item.querySelector('.accordion-header');
+        header.addEventListener('click', () => {
+            // Close other open items
+            accordionItems.forEach(otherItem => {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
+                    otherItem.classList.remove('active');
+                    otherItem.querySelector('.accordion-icon').classList.replace('ri-subtract-line', 'ri-add-line');
+                }
+            });
+
+            // Toggle the clicked item
+            item.classList.toggle('active');
+            const icon = item.querySelector('.accordion-icon');
+            if (item.classList.contains('active')) {
+                icon.classList.replace('ri-add-line', 'ri-subtract-line');
+            } else {
+                icon.classList.replace('ri-subtract-line', 'ri-add-line');
+            }
+        });
+    });
 
     legalDropdownButton.addEventListener('click', (event) => {
         event.stopPropagation();
