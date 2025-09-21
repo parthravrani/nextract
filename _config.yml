@@ -1,0 +1,93 @@
+# Welcome to Jekyll!
+# Nextract - Enterprise Web Scraping & Data Extraction Services
+
+# Site settings
+title: "Nextract"
+email: "hello@nextract.dev"
+description: >-
+  Nextract offers enterprise-grade web scraping and data extraction services. 
+  Get clean, reliable data for price intelligence, lead generation, and market research.
+  Turn web data into actionable business intelligence.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://www.nextract.dev" # the base hostname & protocol for your site
+
+# Contact Information
+phone: "+91 85110-98799"
+address: "B-1308, Eastface, Ahmedabad, Gujarat 380058"
+
+# Social Media
+linkedin_url: "#"
+twitter_url: "#"
+instagram_url: "#"
+
+# Business Info
+founded_year: 2017
+years_experience: 8
+
+# SEO Settings
+canonical_url: "https://www.nextract.dev"
+og_image: "https://www.nextract.dev/og-image.jpg"
+twitter_image: "https://www.nextract.dev/twitter-image.jpg"
+
+# Navigation
+navigation:
+  - name: "Solutions"
+    link: "/solutions/"
+  - name: "Industries"
+    link: "/industries/"
+  - name: "Legal"
+    link: "#"
+    dropdown:
+      - name: "Trust & Security"
+        link: "/trust-security/"
+      - name: "Terms of Service"
+        link: "/terms/"
+      - name: "Privacy Policy"
+        link: "/privacy/"
+      - name: "SLA"
+        link: "/sla/"
+      - name: "Legal Compliance"
+        link: "/compliance/"
+  - name: "About Us"
+    link: "/about/"
+
+# Build settings
+permalink: pretty
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+
+# Sass settings
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Collections
+collections:
+  solutions:
+    output: true
+    permalink: /:collection/:name/
+  
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md

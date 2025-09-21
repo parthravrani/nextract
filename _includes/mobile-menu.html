@@ -1,0 +1,23 @@
+<div id="mobile-menu" class="hidden fixed inset-0 bg-white z-[100] p-6">
+    <div class="flex justify-end">
+        <button id="close-menu-button"><i class="ri-close-line text-3xl"></i></button>
+    </div>
+    <nav class="flex flex-col items-center justify-center h-full space-y-4 text-xl font-semibold text-gray-800">
+        {% for nav in site.navigation %}
+            {% if nav.dropdown %}
+                <div class="w-full text-center">
+                    <button id="mobile-legal-button" class="w-full flex items-center justify-center py-2">{{ nav.name }} <i id="mobile-legal-icon" class="ri-add-line ml-1"></i></button>
+                    <div id="mobile-legal-submenu" class="hidden flex-col items-center space-y-4 pt-4 text-base font-medium">
+                        {% for dropdown_item in nav.dropdown %}
+                            <a href="{{ dropdown_item.link | relative_url }}" class="mobile-nav-link">{{ dropdown_item.name }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% else %}
+                <a href="{{ nav.link | relative_url }}" class="mobile-nav-link">{{ nav.name }}</a>
+            {% endif %}
+        {% endfor %}
+        <hr class="w-24 border-gray-300"/>
+        <a href="#contact-shared" class="mobile-nav-link cta-primary text-white px-6 py-3 rounded-lg">Get a Free Quote</a>
+    </nav>
+</div>

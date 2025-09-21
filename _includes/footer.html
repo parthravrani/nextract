@@ -1,0 +1,64 @@
+<footer class="section-dark py-20 lg:py-24">
+    <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
+            <div>
+                <h3 class="text-xl font-black tracking-tighter mb-4"><span class="gradient-text">N</span>EXTRACT</h3>
+                <p class="text-gray-400 mb-6 max-w-md">The data partner for growing businesses. We handle the engineering so you can focus on what you do best.</p>
+                <div class="space-y-4 text-gray-300">
+                    <div class="flex items-center gap-3"><i class="ri-phone-fill text-blue-400"></i><span>{{ site.phone }}</span></div>
+                    <div class="flex items-center gap-3"><i class="ri-mail-send-fill text-blue-400"></i><span>{{ site.email }}</span></div>
+                    <div class="flex items-start gap-3"><i class="ri-map-pin-2-fill text-blue-400 mt-1"></i><span>{{ site.address }}</span></div>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-white mb-6">Get in Touch</h3>
+                <form action="#" method="POST" class="space-y-4">
+                    <input type="text" name="name" placeholder="Your Name" class="form-input">
+                    <input type="email" name="email" placeholder="Your Email" class="form-input">
+                    <textarea name="message" rows="4" placeholder="Your Message" class="form-input"></textarea>
+                    <button type="submit" class="cta-primary text-white font-bold w-full py-3">Send Message</button>
+                </form>
+            </div>
+        </div>
+         <div class="mt-16 border-t border-gray-700 pt-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                     <h4 class="font-bold text-white mb-4">Solutions</h4>
+                     <ul class="space-y-3 text-gray-400">
+                         <li><a href="{{ '/solutions/' | relative_url }}#solutions-detailed" class="hover:text-white">Custom Scraping</a></li>
+                         <li><a href="{{ '/solutions/' | relative_url }}#solutions-detailed" class="hover:text-white">Data-as-a-Service</a></li>
+                         <li><a href="{{ '/solutions/' | relative_url }}#solutions-detailed" class="hover:text-white">Data Enrichment</a></li>
+                     </ul>
+                </div>
+                <div>
+                     <h4 class="font-bold text-white mb-4">Company</h4>
+                     <ul class="space-y-3 text-gray-400">
+                         <li><a href="{{ '/about/' | relative_url }}" class="hover:text-white">About Us</a></li>
+                         <li><a href="{{ '/' | relative_url }}#difference" class="hover:text-white">Why Nextract</a></li>
+                         <li><a href="#contact-shared" class="hover:text-white">Contact Us</a></li>
+                     </ul>
+                </div>
+                <div>
+                     <h4 class="font-bold text-white mb-4">Legal</h4>
+                     <ul class="space-y-3 text-gray-400">
+                        <li><a href="{{ '/privacy/' | relative_url }}" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="{{ '/terms/' | relative_url }}" class="hover:text-white">Terms of Service</a></li>
+                        <li><a href="{{ '/sla/' | relative_url }}" class="hover:text-white">SLA</a></li>
+                     </ul>
+                </div>
+                <div class="text-gray-500">
+                    <h4 class="font-bold text-white mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="{{ site.linkedin_url }}" class="hover:text-white transition-colors"><i class="ri-linkedin-box-fill text-2xl"></i></a>
+                        <a href="{{ site.twitter_url }}" class="hover:text-white transition-colors"><i class="ri-twitter-x-line text-2xl"></i></a>
+                        <a href="{{ site.instagram_url }}" class="hover:text-white transition-colors"><i class="ri-instagram-line text-2xl"></i></a>
+                    </div>
+                </div>
+            </div>
+         </div>
+         <div class="mt-8 border-t border-gray-700 pt-8 flex flex-col sm:flex-row justify-between items-center text-gray-500">
+            <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All Rights Reserved.</p>
+            <p class="font-bold mt-4 sm:mt-0">DMCA Protected</p>
+         </div>
+    </div>
+</footer>

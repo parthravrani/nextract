@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} | Enterprise Web Scraping & Data Extraction Services{% endif %}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
+    <link rel="canonical" href="{{ site.canonical_url }}{{ page.url }}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.canonical_url }}{{ page.url }}">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} | Enterprise Web Scraping & Data Extraction Services{% endif %}">
+    <meta property="og:description" content="{% if page.og_description %}{{ page.og_description }}{% else %}Turn web data into actionable business intelligence. Nextract provides reliable, scalable, and ethical web scraping solutions for enterprise clients.{% endif %}">
+    <meta property="og:image" content="{{ site.og_image }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ site.canonical_url }}{{ page.url }}">
+    <meta property="twitter:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} | Enterprise Web Scraping & Data Extraction Services{% endif %}">
+    <meta property="twitter:description" content="{% if page.twitter_description %}{{ page.twitter_description }}{% else %}Turn web data into actionable business intelligence. Nextract provides reliable, scalable, and ethical web scraping solutions for enterprise clients.{% endif %}">
+    <meta property="twitter:image" content="{{ site.twitter_image }}">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    
+    <!-- Custom Styles -->
+    <style>
+        body { font-family: 'Montserrat', sans-serif; background-color: #FFFFFF; color: #1a202c; }
+        .section-light { background-color: #F7F7FF; }
+        .section-dark { background-color: #0D1117; color: #FFFFFF; }
+        .gradient-text { background: linear-gradient(90deg, #0052FF, #0A2E7E); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-gradient { background-color: #0052FF; background-image: linear-gradient(225deg, #0052FF 0%, #0A2E7E 100%); }
+        .cta-primary { background-color: #0052FF; border-radius: 8px; transition: all 0.3s ease; }
+        .cta-primary:hover { background-color: #0045D6; transform: translateY(-2px); box-shadow: 0 7px 15px -3px rgba(0, 82, 255, 0.4); }
+        .hero-cta-primary { background-color: #FFFFFF; color: #0045D6; border-radius: 8px; transition: all 0.3s ease; }
+        .hero-cta-primary:hover { transform: translateY(-2px); box-shadow: 0 7px 20px -3px rgba(0,0,0,0.2); }
+        .hero-cta-secondary { background-color: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.3); color: #FFFFFF; border-radius: 8px; transition: all 0.3s ease; }
+        .hero-cta-secondary:hover { background-color: rgba(255, 255, 255, 0.2); }
+        .card-style { background-color: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 1rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .card-style:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); }
+        .dark-card { background-color: #161B22; border: 1px solid #30363D; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.6s ease-out; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .form-input { width: 100%; background-color: #161B22; border: 1px solid #30363D; color: white; padding: 0.75rem 1rem; border-radius: 8px; transition: border-color 0.3s ease; }
+        .form-input:focus { outline: none; border-color: #0052FF; }
+        /* Legal page typography (from source HTML) */
+        .legal-content h2 { font-size: 1.875rem; font-weight: 800; margin-bottom: 1.5rem; }
+        .legal-content h3 { font-size: 1.25rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; }
+        .legal-content p { margin-bottom: 1rem; line-height: 1.75; color: #4a5568; }
+        .legal-content ul { list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1rem; }
+        .legal-content li { margin-bottom: 0.5rem; }
+        .legal-content .disclaimer { font-style: italic; color: #718096; text-align: center; margin-bottom: 2rem; }
+    </style>
+
+    {% seo %}
+</head>
+<body class="antialiased">
+    {% include header.html %}
+    {% include mobile-menu.html %}
+    
+    {{ content }}
+
+    {% include footer.html %}
+    
+    <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
+</body>
+</html>
