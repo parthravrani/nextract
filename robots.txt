@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.nextract.dev/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /_site/
+Disallow: /vendor/
+Disallow: /.jekyll-cache/
+Disallow: /.sass-cache/
+

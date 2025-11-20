@@ -4,26 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- Primary Meta Tags -->
     <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} | Enterprise Web Scraping & Data Extraction Services{% endif %}</title>
+    <meta name="title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} | Enterprise Web Scraping & Data Extraction Services{% endif %}">
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
+    <meta name="author" content="{{ site.title }}">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Canonical URL -->
     <link rel="canonical" href="{{ site.canonical_url }}{{ page.url }}">
 
+    <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32x32.png' | relative_url }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicon-16x16.png' | relative_url }}">
+    <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site.canonical_url }}{{ page.url }}">
     <meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} | Enterprise Web Scraping & Data Extraction Services{% endif %}">
-    <meta property="og:description" content="{% if page.og_description %}{{ page.og_description }}{% else %}Turn web data into actionable business intelligence. Nextract provides reliable, scalable, and ethical web scraping solutions for enterprise clients.{% endif %}">
+    <meta property="og:description" content="{% if page.og_description %}{{ page.og_description }}{% else %}{{ page.description | default: site.description }}{% endif %}">
+    <meta property="og:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.canonical_url }}/assets/images/og-image.jpg{% endif %}">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:locale" content="en_US">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="{{ site.canonical_url }}{{ page.url }}">
-    <meta property="twitter:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} | Enterprise Web Scraping & Data Extraction Services{% endif %}">
-    <meta property="twitter:description" content="{% if page.twitter_description %}{{ page.twitter_description }}{% else %}Turn web data into actionable business intelligence. Nextract provides reliable, scalable, and ethical web scraping solutions for enterprise clients.{% endif %}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{ site.canonical_url }}{{ page.url }}">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} | Enterprise Web Scraping & Data Extraction Services{% endif %}">
+    <meta name="twitter:description" content="{% if page.twitter_description %}{{ page.twitter_description }}{% else %}{{ page.description | default: site.description }}{% endif %}">
+    <meta name="twitter:image" content="{% if page.twitter_image %}{{ page.twitter_image }}{% else %}{{ site.canonical_url }}/assets/images/twitter-image.jpg{% endif %}">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "{% if page.url == '/' %}Organization{% else %}WebPage{% endif %}",
+      {% if page.url == '/' %}"name": "{{ site.title }}",
+      "url": "{{ site.canonical_url }}",
+      "logo": "{{ site.canonical_url }}/assets/images/logo.png",
+      "description": "{{ site.description }}",
+      "email": "{{ site.email }}",
+      "telephone": "{{ site.phone }}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "B-1308, Eastface",
+        "addressLocality": "Ahmedabad",
+        "addressRegion": "Gujarat",
+        "postalCode": "380058",
+        "addressCountry": "IN"
+      },
+      "sameAs": [
+        "{{ site.linkedin_url }}",
+        "{{ site.instagram_url }}"
+      ],
+      "foundingDate": "{{ site.founded_year }}",
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": "10-50"
+      }{% else %}"name": "{{ page.title }} | {{ site.title }}",
+      "url": "{{ site.canonical_url }}{{ page.url }}",
+      "description": "{{ page.description | default: site.description }}",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "{{ site.title }}",
+        "url": "{{ site.canonical_url }}"
+      }{% endif %}
+    }
+    </script>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
