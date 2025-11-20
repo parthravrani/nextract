@@ -1,7 +1,63 @@
-<section id="contact-shared" class="py-20 lg:py-32 hero-gradient text-white">
-    <div class="container mx-auto px-6 text-center">
-        <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-4">Get Actionable Data Tomorrow</h2>
-        <p class="max-w-2xl mx-auto text-lg text-blue-200 mb-8">Stop waiting on engineering backlogs. Tell us what you need, and let our team handle the rest. Get a free strategy call and data sample to see how we can help.</p>
-        <a href="https://calendly.com/parthravrani/30min" target="_blank" class="hero-cta-primary text-blue-800 font-bold py-4 px-8 text-lg">Schedule Your Free Strategy Call</a>
+<section id="contact-shared" class="py-20 lg:py-32 hero-gradient text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full -translate-x-1/2 -translate-y-1/2 animate-pulse"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full translate-x-1/2 translate-y-1/2 animate-pulse" style="animation-delay: 1s;"></div>
+    </div>
+    <div class="container mx-auto px-6 text-center relative z-10">
+        <div class="reveal">
+            <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-4 py-2 rounded-full border border-white/30 mb-6">
+                <i class="ri-flashlight-line text-yellow-300"></i>
+                <span class="text-sm font-semibold">Limited Time Offer</span>
+            </div>
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-black tracking-tight mb-6">
+                Get Actionable Data <span class="gradient-text-white">Tomorrow</span>
+            </h2>
+            <p class="max-w-2xl mx-auto text-lg md:text-xl text-blue-100 mb-4 leading-relaxed">
+                Stop waiting on engineering backlogs. Tell us what you need, and let our team handle the rest.
+            </p>
+            <p class="max-w-xl mx-auto text-base text-blue-200 mb-10">
+                Get a <span class="font-bold text-white">free strategy call</span> and <span class="font-bold text-white">data sample</span> to see how we can help transform your business.
+            </p>
+            
+            <!-- Quick Stats -->
+            <div class="flex flex-wrap items-center justify-center gap-6 mb-10 text-sm">
+                <div class="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
+                    <i class="ri-time-line"></i> <span class="font-bold">30 min</span> free consultation
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
+                    <i class="ri-file-list-line"></i> <span class="font-bold">Free</span> data sample
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
+                    <i class="ri-money-dollar-circle-line"></i> <span class="font-bold">No</span> credit card required
+                </div>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://calendly.com/parthravrani/30min" target="_blank" class="hero-cta-primary text-blue-800 font-bold py-4 px-10 text-lg flex items-center gap-2 relative z-10 shadow-2xl group">
+                    <i class="ri-calendar-line group-hover:scale-110 transition-transform"></i>
+                    Schedule Your Free Strategy Call
+                    <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <a href="mailto:hello@nextract.dev" class="hero-cta-secondary font-bold py-4 px-10 text-lg relative z-10 group">
+                    <i class="ri-mail-line mr-2 group-hover:scale-110 transition-transform inline-block"></i>Email Us
+                </a>
+            </div>
+            
+            <!-- Trust indicators -->
+            <div class="mt-12 flex flex-wrap items-center justify-center gap-6 text-xs text-blue-200">
+                <div class="flex items-center gap-2">
+                    <i class="ri-shield-check-line text-green-300"></i>
+                    <span>100% Confidential</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="ri-time-line text-blue-300"></i>
+                    <span>Response in 2 hours</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="ri-user-heart-line text-pink-300"></i>
+                    <span>500+ Happy Clients</span>
+                </div>
+            </div>
+        </div>
     </div>
 </section>

@@ -1,24 +1,45 @@
-<div id="mobile-menu" class="hidden fixed inset-0 bg-white z-[100] p-6">
-    <div class="flex justify-end">
-        <button id="close-menu-button"><i class="ri-close-line text-3xl"></i></button>
+<div id="mobile-menu" class="hidden fixed inset-0 bg-white z-[100] p-6 overflow-y-auto">
+    <div class="flex justify-between items-center mb-8">
+        <div class="flex items-center gap-3">
+            <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Nextract Logo" class="h-8 w-auto">
+            <div>
+                <h3 class="text-lg font-extrabold tracking-tighter text-gray-900">Nextract</h3>
+                <p class="text-xs font-medium text-gray-600">Data Solutions</p>
+            </div>
+        </div>
+        <button id="close-menu-button" class="p-2 rounded-lg hover:bg-gray-100 transition-colors">
+            <i class="ri-close-line text-3xl text-gray-700"></i>
+        </button>
     </div>
-    <nav class="flex flex-col items-center justify-center h-full space-y-4 text-xl font-semibold text-gray-800">
+    <nav class="flex flex-col space-y-2">
         {% for nav in site.navigation %}
             {% if nav.dropdown %}
-                <div class="w-full text-center">
-                    <button id="mobile-legal-button" class="w-full flex items-center justify-center py-2">{{ nav.name }} <i id="mobile-legal-icon" class="ri-add-line ml-1"></i></button>
-                    <div id="mobile-legal-submenu" class="hidden flex-col items-center space-y-4 pt-4 text-base font-medium">
+                <div class="w-full">
+                    <button id="mobile-legal-button" class="w-full flex items-center justify-between py-4 px-4 text-lg font-semibold text-gray-800 hover:bg-blue-50 rounded-lg transition-colors">
+                        <span>{{ nav.name }}</span>
+                        <i id="mobile-legal-icon" class="ri-add-line text-xl transition-transform duration-300"></i>
+                    </button>
+                    <div id="mobile-legal-submenu" class="hidden flex-col space-y-1 pt-2 pb-4 pl-6">
                         {% for dropdown_item in nav.dropdown %}
-                            <a href="{{ dropdown_item.link | relative_url }}" class="mobile-nav-link">{{ dropdown_item.name }}</a>
+                            <a href="{{ dropdown_item.link | relative_url }}" class="mobile-nav-link block py-3 px-4 text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors flex items-center gap-2">
+                                <i class="ri-arrow-right-s-line text-sm"></i>
+                                {{ dropdown_item.name }}
+                            </a>
                         {% endfor %}
                     </div>
                 </div>
             {% else %}
-                <a href="{{ nav.link | relative_url }}" class="mobile-nav-link">{{ nav.name }}</a>
+                <a href="{{ nav.link | relative_url }}" class="mobile-nav-link block py-4 px-4 text-lg font-semibold text-gray-800 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors{% if page.url == nav.link %} bg-blue-50 text-blue-600{% endif %}">{{ nav.name }}</a>
             {% endif %}
         {% endfor %}
-        <hr class="w-24 border-gray-300"/>
-        <a href="{{ '/assets/deck/Nextract Data Solutions.pdf' | relative_url }}" target="_blank" class="cta-secondary px-5 py-2.5 font-bold"><i class="ri-download-2-line"></i> Deck</a>
-        <a href="#contact-shared" class="mobile-nav-link cta-primary text-white px-6 py-3 rounded-lg">Get a Free Quote</a>
+        <div class="pt-6 border-t border-gray-200 space-y-3">
+            <a href="{{ '/assets/deck/Nextract Data Solutions.pdf' | relative_url }}" target="_blank" class="cta-secondary w-full px-6 py-3 font-bold flex items-center justify-center gap-2">
+                <i class="ri-download-2-line"></i> Download Deck
+            </a>
+            <a href="#contact-shared" class="cta-primary w-full px-6 py-3 text-white font-bold flex items-center justify-center gap-2">
+                Get a Free Quote
+                <i class="ri-arrow-right-line"></i>
+            </a>
+        </div>
     </nav>
 </div>

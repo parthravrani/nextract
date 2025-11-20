@@ -5,10 +5,39 @@ description: "Learn about Nextract's mission to democratize web data. Meet our t
 ---
 
 <main>
-    <section class="section-light py-20 md:py-32 text-center">
-        <div class="container mx-auto px-6">
-            <h1 class="text-4xl md:text-6xl font-black text-gray-900 leading-tight tracking-tighter mb-6 reveal">Built by Engineers, <br class="hidden md:block"/> Run for Businesses.</h1>
-            <p class="max-w-3xl mx-auto text-lg md:text-xl text-gray-600 font-medium reveal" style="transition-delay: 0.2s;">We're a team of dedicated data experts passionate about solving complex data extraction challenges to help businesses thrive.</p>
+    <section class="hero-gradient text-white py-20 md:py-32 text-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+        </div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="reveal mb-6">
+                <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-4 py-2 rounded-full border border-white/30">
+                    <i class="ri-team-fill text-blue-300"></i>
+                    <span class="text-sm font-semibold">Expert Team • {{ site.years_experience }}+ Years Experience</span>
+                </div>
+            </div>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight tracking-tighter mb-6 reveal">
+                Built by Engineers,<br class="hidden md:block"/>
+                <span class="gradient-text-white">Run for Businesses.</span>
+            </h1>
+            <p class="max-w-3xl mx-auto text-lg md:text-xl text-blue-100 font-medium reveal" style="transition-delay: 0.2s;">
+                We're a team of dedicated data experts passionate about solving complex data extraction challenges to help businesses thrive and gain competitive advantage.
+            </p>
+            <div class="mt-12 flex flex-wrap items-center justify-center gap-6 reveal" style="transition-delay: 0.3s;">
+                <div class="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20">
+                    <div class="text-2xl font-black mb-1">500+</div>
+                    <div class="text-xs text-blue-200">Projects Delivered</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20">
+                    <div class="text-2xl font-black mb-1">99.9%</div>
+                    <div class="text-xs text-blue-200">Success Rate</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20">
+                    <div class="text-2xl font-black mb-1">24/7</div>
+                    <div class="text-xs text-blue-200">Support</div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -23,47 +52,118 @@ description: "Learn about Nextract's mission to democratize web data. Meet our t
 
     <section class="py-20 lg:py-32 section-light">
         <div class="container mx-auto px-6 text-center">
-            <div class="reveal"><h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-12">Our Mission & Values</h2></div>
+            <div class="reveal">
+                <p class="text-blue-600 font-bold text-sm uppercase tracking-widest mb-3">WHO WE ARE</p>
+                <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">Our Mission & Values</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto mb-12">Driven by excellence, powered by innovation, committed to your success.</p>
+            </div>
             <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <div class="card-style p-8 reveal">
-                    <i class="ri-rocket-line text-4xl text-blue-500 mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Our Mission</h3>
-                    <p class="text-gray-600">To deliver accurate, timely data that empowers businesses to make informed decisions and gain a competitive advantage.</p>
+                <div class="card-style p-8 reveal group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                        <i class="ri-rocket-line text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Our Mission</h3>
+                    <p class="text-gray-600 leading-relaxed">To deliver accurate, timely data that empowers businesses to make informed decisions and gain a competitive advantage in today's data-driven world.</p>
                 </div>
-                <div class="card-style p-8 reveal" style="transition-delay: 0.2s;">
-                    <i class="ri-shield-star-line text-4xl text-blue-500 mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Our Vision</h3>
-                    <p class="text-gray-600">To be the most trusted and technically proficient data extraction partner for enterprises worldwide.</p>
+                <div class="card-style p-8 reveal group" style="transition-delay: 0.2s;">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                        <i class="ri-shield-star-line text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Our Vision</h3>
+                    <p class="text-gray-600 leading-relaxed">To be the most trusted and technically proficient data extraction partner for enterprises worldwide, setting the standard for quality and reliability.</p>
                 </div>
-                <div class="card-style p-8 reveal" style="transition-delay: 0.4s;">
-                    <i class="ri-shake-hands-line text-4xl text-blue-500 mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Our Values</h3>
-                    <p class="text-gray-600">Excellence, Innovation, Transparency, and a deep commitment to our clients' success.</p>
+                <div class="card-style p-8 reveal group" style="transition-delay: 0.4s;">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                        <i class="ri-shake-hands-line text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Our Values</h3>
+                    <p class="text-gray-600 leading-relaxed">Excellence in execution, innovation in approach, transparency in communication, and an unwavering commitment to our clients' success.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="technology" class="py-20 lg:py-32">
+    <section id="technology" class="py-20 lg:py-32 bg-gradient-to-b from-white to-gray-50">
         <div class="container mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-12 reveal">
-                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">The Technology That Powers Us</h2>
-                <p class="text-gray-600 text-lg font-medium">We've built a robust, cloud-native infrastructure designed from the ground up to handle web data extraction at any scale, ensuring you get reliable data, every time.</p>
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <p class="text-blue-600 font-bold text-sm uppercase tracking-widest mb-3">OUR TECHNOLOGY</p>
+                <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">The Technology That Powers Us</h2>
+                <p class="text-gray-600 text-lg font-medium mb-6">We've built a robust, cloud-native infrastructure designed from the ground up to handle web data extraction at any scale, ensuring you get reliable data, every time.</p>
+                <div class="flex flex-wrap items-center justify-center gap-6 text-sm">
+                    <div class="flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-full">
+                        <i class="ri-server-line text-blue-600"></i>
+                        <span><span class="font-bold">100M+</span> requests/day capacity</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-full">
+                        <i class="ri-shield-check-line text-blue-600"></i>
+                        <span><span class="font-bold">99.9%</span> uptime guarantee</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-full">
+                        <i class="ri-global-line text-blue-600"></i>
+                        <span><span class="font-bold">50+</span> data centers</span>
+                    </div>
+                </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="card-style p-8 reveal"><i class="ri-braces-line text-3xl text-blue-500 mb-4"></i><h3 class="text-xl font-bold mb-2">Advanced Anti-Bot Evasion</h3><p class="text-gray-600 leading-relaxed">Our systems expertly navigate JavaScript-heavy sites, CAPTCHAs, and sophisticated anti-scraping measures to guarantee data delivery.</p></div>
-                <div class="card-style p-8 reveal" style="transition-delay: 0.1s;"><i class="ri-cloud-line text-3xl text-blue-500 mb-4"></i><h3 class="text-xl font-bold mb-2">Scalable Distributed Infrastructure</h3><p class="text-gray-600 leading-relaxed">Our cloud-based architecture allows us to process millions of data points efficiently, ensuring timely delivery for even the largest projects.</p></div>
-                <div class="card-style p-8 reveal" style="transition-delay: 0.2s;"><i class="ri-file-shield-2-line text-3xl text-blue-500 mb-4"></i><h3 class="text-xl font-bold mb-2">Data Quality & Validation</h3><p class="text-gray-600 leading-relaxed">Every data point goes through a rigorous automated validation and cleansing process to ensure a 99.9% accuracy rate.</p></div>
-                <div class="card-style p-8 reveal" style="transition-delay: 0.3s;"><i class="ri-flow-chart text-3xl text-blue-500 mb-4"></i><h3 class="text-xl font-bold mb-2">Flexible Integration</h3><p class="text-gray-600 leading-relaxed">We deliver clean, structured data in any format (JSON, CSV, XML) and to any destination, including API, S3, or your internal database.</p></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="card-style p-8 reveal group">
+                    <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                        <i class="ri-braces-line text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Advanced Anti-Bot Evasion</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">Our systems expertly navigate JavaScript-heavy sites, CAPTCHAs, and sophisticated anti-scraping measures to guarantee data delivery.</p>
+                    <div class="bg-blue-50 rounded-lg p-4">
+                        <p class="text-sm text-gray-700">
+                            <i class="ri-checkbox-circle-fill text-blue-600"></i> Proxy rotation<br>
+                            <i class="ri-checkbox-circle-fill text-blue-600 mt-2"></i> CAPTCHA solving<br>
+                            <i class="ri-checkbox-circle-fill text-blue-600 mt-2"></i> Browser automation
+                        </p>
+                    </div>
+                </div>
+                <div class="card-style p-8 reveal group" style="transition-delay: 0.1s;">
+                    <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                        <i class="ri-cloud-line text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Scalable Distributed Infrastructure</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">Our cloud-based architecture allows us to process millions of data points efficiently, ensuring timely delivery for even the largest projects.</p>
+                    <div class="bg-blue-50 rounded-lg p-4">
+                        <p class="text-sm text-gray-700">
+                            <i class="ri-checkbox-circle-fill text-blue-600"></i> Auto-scaling clusters<br>
+                            <i class="ri-checkbox-circle-fill text-blue-600 mt-2"></i> Load balancing<br>
+                            <i class="ri-checkbox-circle-fill text-blue-600 mt-2"></i> Global distribution
+                        </p>
+                    </div>
+                </div>
+                <div class="card-style p-8 reveal group" style="transition-delay: 0.2s;">
+                    <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                        <i class="ri-file-shield-2-line text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Data Quality & Validation</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">Every data point goes through a rigorous automated validation and cleansing process to ensure a 99.9% accuracy rate.</p>
+                    <div class="bg-blue-50 rounded-lg p-4">
+                        <p class="text-sm text-gray-700">
+                            <i class="ri-checkbox-circle-fill text-blue-600"></i> Multi-layer validation<br>
+                            <i class="ri-checkbox-circle-fill text-blue-600 mt-2"></i> Data cleansing<br>
+                            <i class="ri-checkbox-circle-fill text-blue-600 mt-2"></i> Quality scoring
+                        </p>
+                    </div>
+                </div>
+                <div class="card-style p-8 reveal group" style="transition-delay: 0.3s;">
+                    <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                        <i class="ri-flow-chart text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Flexible Integration</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">We deliver clean, structured data in any format (JSON, CSV, XML) and to any destination, including API, S3, or your internal database.</p>
+                    <div class="bg-blue-50 rounded-lg p-4">
+                        <p class="text-sm text-gray-700">
+                            <i class="ri-checkbox-circle-fill text-blue-600"></i> REST APIs<br>
+                            <i class="ri-checkbox-circle-fill text-blue-600 mt-2"></i> Webhooks<br>
+                            <i class="ri-checkbox-circle-fill text-blue-600 mt-2"></i> Cloud storage
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contact-shared" class="py-20 lg:py-32 hero-gradient text-white">
-        <div class="container mx-auto px-6 text-center reveal">
-            <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-4">Ready to Partner with Us?</h2>
-            <p class="max-w-2xl mx-auto text-lg text-blue-200 mb-8">Let's discuss your data challenges. Schedule a free, no-obligation strategy call to discover how Nextract can become an extension of your team.</p>
-            <a href="https://calendly.com/parthravrani/30min" target="_blank" class="hero-cta-primary text-blue-800 font-bold py-4 px-8 text-lg">Schedule Your Free Strategy Call</a>
-        </div>
-    </section>
+    {% include contact-section.html %}
 </main>
