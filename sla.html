@@ -5,51 +5,94 @@ description: "Review the Service Level Agreement (SLA) for Nextract's data extra
 ---
 
 <main>
-    <section class="hero-gradient text-white py-16 md:py-20 text-center relative overflow-hidden">
-        <div class="absolute inset-0 opacity-20">
-            <div class="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+    <!-- Hero Section -->
+    <section class="min-h-[60vh] flex items-center justify-center relative overflow-hidden bg-white">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 blur-[100px] animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-600/10 blur-[100px] animate-pulse" style="animation-delay: 1s;"></div>
         </div>
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="reveal">
-                <i class="ri-time-line text-5xl mb-4"></i>
-                <h1 class="text-3xl md:text-5xl font-black tracking-tight mb-4">Service Level Agreement</h1>
-                <p class="max-w-2xl mx-auto text-blue-100">Our commitment to reliability, performance, and your success.</p>
+        
+        <div class="container mx-auto px-6 max-w-7xl relative z-10">
+            <div class="max-w-5xl mx-auto text-center">
+                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-6">SLA</div>
+                <h1 class="text-6xl md:text-8xl font-black text-gray-900 mb-8 leading-[0.9] tracking-tight">
+                    Service Level<br/>
+                    <span class="bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent">Agreement</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
+                    Our commitment to reliability, performance,<br/>
+                    <span class="font-semibold text-gray-900">and your success.</span>
+                </p>
             </div>
         </div>
     </section>
     
-    <div class="section-light py-20 lg:py-32">
-        <div class="container mx-auto px-6 max-w-4xl legal-content">
-            <p class="disclaimer text-center mb-8">Last updated: {{ 'now' | date: "%B %d, %Y" }}</p>
-            <h3>Introduction</h3>
-            <p>This Service Level Agreement (SLA) outlines Nextract Data Solutions' commitment to providing reliable and high-quality API services to our clients. It defines our service guarantees, support procedures, and compensation for any service disruptions.</p>
-            <h3>Uptime Guarantee</h3>
-            <p>We guarantee a 99.9% uptime for our API services, excluding scheduled maintenance windows. This means that our API will be available and responsive for at least 99.9% of the time in any given month.</p>
-            <h3>Service Credits</h3>
-            <p>In the event that our API uptime falls below the guaranteed 99.9%, clients will be eligible for service credits. The amount of service credits will be determined based on the duration of the downtime and as specified in your individual service agreement.</p>
-            <h3>Support</h3>
-            <p>We provide email support to address any technical issues or inquiries related to our API services. Our standard support response time is 24 hours during business days (Monday-Friday, [IST]).</p>
-            <h3>Maintenance</h3>
-            <p>Scheduled maintenance will be performed during off-peak hours to minimize disruption to our clients. We will provide advance notice of any planned maintenance windows.</p>
-            <h3>Exclusions</h3>
-            <p>This SLA does not cover downtime or service disruptions caused by:</p>
-            <ul>
-                <li>Factors beyond our reasonable control, such as internet service provider outages or force majeure events.</li>
-                <li>User errors or misuse of the API.</li>
-                <li>Scheduled maintenance windows.</li>
-                <li>Third-party service outages.</li>
-            </ul>
-            <h3>Monitoring</h3>
-            <p>We continuously monitor our API services to ensure uptime and performance. We use various monitoring tools and techniques to detect and resolve any potential issues promptly.</p>
-            <h3>Contact Information</h3>
-            <p>If you have any questions or concerns regarding this SLA, please contact us via email at hello@nextract.dev</p>
-        </div>
-    </div>
-    <section id="contact-shared" class="py-20 lg:py-32 hero-gradient text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-4">Get Actionable Data Tomorrow</h2>
-            <p class="max-w-2xl mx-auto text-lg text-blue-200 mb-8">Stop waiting on engineering backlogs. Tell us what you need, and let our team handle the rest. Get a free strategy call and data sample to see how we can help.</p>
-            <a href="https://calendly.com/parthravrani/30min" target="_blank" class="hero-cta-primary text-blue-800 font-bold py-4 px-8 text-lg">Schedule Your Free Strategy Call</a>
+    <!-- Content Section -->
+    <section class="py-32 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <p class="text-center text-gray-600 mb-16 text-sm">Last updated: {{ 'now' | date: "%B %d, %Y" }}</p>
+            
+            <div class="space-y-12">
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 mb-6">Introduction</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg">This Service Level Agreement (SLA) outlines Nextract Data Solutions' commitment to providing reliable and high-quality API services to our clients. It defines our service guarantees, support procedures, and compensation for any service disruptions.</p>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 mb-6">Uptime Guarantee</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg">We guarantee a 99.9% uptime for our API services, excluding scheduled maintenance windows. This means that our API will be available and responsive for at least 99.9% of the time in any given month.</p>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 mb-6">Service Credits</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg">In the event that our API uptime falls below the guaranteed 99.9%, clients will be eligible for service credits. The amount of service credits will be determined based on the duration of the downtime and as specified in your individual service agreement.</p>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 mb-6">Support</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg">We provide email support to address any technical issues or inquiries related to our API services. Our standard support response time is 24 hours during business days (Monday-Friday, IST).</p>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 mb-6">Maintenance</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg">Scheduled maintenance will be performed during off-peak hours to minimize disruption to our clients. We will provide advance notice of any planned maintenance windows.</p>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 mb-6">Exclusions</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg mb-4">This SLA does not cover downtime or service disruptions caused by:</p>
+                    <ul class="space-y-3 text-gray-600 text-lg">
+                        <li class="flex items-start gap-3">
+                            <span class="text-orange-600 font-black mt-1">→</span>
+                            <span>Factors beyond our reasonable control, such as internet service provider outages or force majeure events.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-orange-600 font-black mt-1">→</span>
+                            <span>User errors or misuse of the API.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-orange-600 font-black mt-1">→</span>
+                            <span>Scheduled maintenance windows.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-orange-600 font-black mt-1">→</span>
+                            <span>Third-party service outages.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 mb-6">Monitoring</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg">We continuously monitor our API services to ensure uptime and performance. We use various monitoring tools and techniques to detect and resolve any potential issues promptly.</p>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 mb-6">Contact Information</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg">If you have any questions or concerns regarding this SLA, please contact us via email at <a href="mailto:hello@nextract.dev" class="text-blue-600 hover:underline font-semibold">hello@nextract.dev</a></p>
+                </div>
+            </div>
         </div>
     </section>
+
+    {% include contact-section.html %}
 </main>

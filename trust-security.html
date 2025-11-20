@@ -5,41 +5,66 @@ description: "Learn about Nextract's commitment to data security, privacy, compl
 ---
 
 <main>
-    <section class="hero-gradient text-white py-16 md:py-20 text-center relative overflow-hidden">
-        <div class="absolute inset-0 opacity-20">
-            <div class="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+    <!-- Hero Section -->
+    <section class="min-h-[60vh] flex items-center justify-center relative overflow-hidden bg-white">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 blur-[100px] animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-600/10 blur-[100px] animate-pulse" style="animation-delay: 1s;"></div>
         </div>
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="reveal">
-                <i class="ri-lock-password-line text-5xl mb-4"></i>
-                <h1 class="text-3xl md:text-5xl font-black tracking-tight mb-4">Trust & Security</h1>
-                <p class="max-w-2xl mx-auto text-blue-100">Enterprise-grade security and compliance you can trust.</p>
+        
+        <div class="container mx-auto px-6 max-w-7xl relative z-10">
+            <div class="max-w-5xl mx-auto text-center">
+                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-6">Security</div>
+                <h1 class="text-6xl md:text-8xl font-black text-gray-900 mb-8 leading-[0.9] tracking-tight">
+                    Trust &<br/>
+                    <span class="bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent">Security</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
+                    Enterprise-grade security and compliance<br/>
+                    <span class="font-semibold text-gray-900">you can trust.</span>
+                </p>
             </div>
         </div>
     </section>
     
-    <div class="section-light py-20 lg:py-32">
-        <div class="container mx-auto px-6 max-w-4xl legal-content">
-            <p class="disclaimer text-center mb-8">Last updated: {{ 'now' | date: "%B %d, %Y" }}</p>
-            <h3>Security, Privacy, and Compliance</h3>
-            <p>At Nextract Data Solutions, we prioritize the security and integrity of your data. We adhere to stringent data protection practices, comply with all applicable legal standards, and maintain ethical web scraping procedures. This page outlines our commitment to safeguarding your information and ensuring responsible data acquisition.</p>
-            <h3>Data Privacy and Protection</h3>
-            <p>We implement robust measures to protect your data. This includes GDPR and CCPA compliance, data encryption during transmission, and secure data retention policies. We only store data as required by our contracts and policies, ensuring minimal retention for your security. <a href="{{ 'privacy.html' | relative_url }}" class="text-blue-600 hover:underline">Privacy Policy</a></p>
-            <h3>Compliance and Certifications</h3>
-            <p>Our services are designed to comply with industry standards for data protection, including GDPR and CCPA. We leverage the secure infrastructure of AWS and Cloudflare to ensure high availability and protection. We follow all local and international data protection laws. <a href="{{ 'compliance.html' | relative_url }}" class="text-blue-600 hover:underline">Legal Compliance Details</a></p>
-            <h3>Ethical Web Scraping Practices</h3>
-            <p>We are committed to ethical data acquisition. This includes respecting robots.txt files, adhering to website terms of use, and ensuring all data is collected responsibly and legally. <a href="{{ 'terms.html' | relative_url }}" class="text-blue-600 hover:underline">Terms of Service</a></p>
-            <h3>Service Reliability and Uptime</h3>
-            <p>We Guarantee high uptime of our services. We provide a Service level agreement that is accessible here. <a href="{{ 'sla.html' | relative_url }}" class="text-blue-600 hover:underline">SLA</a></p>
-            <h3>Contact Information</h3>
-            <p>If you have any questions regarding our security, privacy, or compliance practices, please contact us at hello@nextract.dev</p>
-        </div>
-    </div>
-    <section id="contact-shared" class="py-20 lg:py-32 hero-gradient text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-4">Get Actionable Data Tomorrow</h2>
-            <p class="max-w-2xl mx-auto text-lg text-blue-200 mb-8">Stop waiting on engineering backlogs. Tell us what you need, and let our team handle the rest. Get a free strategy call and data sample to see how we can help.</p>
-            <a href="https://calendly.com/parthravrani/30min" target="_blank" class="hero-cta-primary text-blue-800 font-bold py-4 px-8 text-lg">Schedule Your Free Strategy Call</a>
+    <!-- Content Section -->
+    <section class="py-32 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <p class="text-center text-gray-600 mb-16 text-sm">Last updated: {{ 'now' | date: "%B %d, %Y" }}</p>
+            
+            <div class="space-y-12">
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 mb-6">Security, Privacy, and Compliance</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg">At Nextract Data Solutions, we prioritize the security and integrity of your data. We adhere to stringent data protection practices, comply with all applicable legal standards, and maintain ethical web scraping procedures. This page outlines our commitment to safeguarding your information and ensuring responsible data acquisition.</p>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 mb-6">Data Privacy and Protection</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg">We implement robust measures to protect your data. This includes GDPR and CCPA compliance, data encryption during transmission, and secure data retention policies. We only store data as required by our contracts and policies, ensuring minimal retention for your security. <a href="{{ '/privacy/' | relative_url }}" class="text-blue-600 hover:underline font-semibold">Privacy Policy</a></p>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 mb-6">Compliance and Certifications</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg">Our services are designed to comply with industry standards for data protection, including GDPR and CCPA. We leverage the secure infrastructure of AWS and Cloudflare to ensure high availability and protection. We follow all local and international data protection laws. <a href="{{ '/compliance/' | relative_url }}" class="text-blue-600 hover:underline font-semibold">Legal Compliance Details</a></p>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 mb-6">Ethical Web Scraping Practices</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg">We are committed to ethical data acquisition. This includes respecting robots.txt files, adhering to website terms of use, and ensuring all data is collected responsibly and legally. <a href="{{ '/terms/' | relative_url }}" class="text-blue-600 hover:underline font-semibold">Terms of Service</a></p>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 mb-6">Service Reliability and Uptime</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg">We guarantee high uptime of our services. We provide a Service Level Agreement that is accessible here. <a href="{{ '/sla/' | relative_url }}" class="text-blue-600 hover:underline font-semibold">SLA</a></p>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 mb-6">Contact Information</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg">If you have any questions regarding our security, privacy, or compliance practices, please contact us at <a href="mailto:hello@nextract.dev" class="text-blue-600 hover:underline font-semibold">hello@nextract.dev</a></p>
+                </div>
+            </div>
         </div>
     </section>
+
+    {% include contact-section.html %}
 </main>

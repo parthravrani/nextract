@@ -5,54 +5,103 @@ description: "Understand Nextract's commitment to legal compliance, including GD
 ---
 
 <main>
-    <section class="hero-gradient text-white py-16 md:py-20 text-center relative overflow-hidden">
-        <div class="absolute inset-0 opacity-20">
-            <div class="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+    <!-- Hero Section -->
+    <section class="min-h-[60vh] flex items-center justify-center relative overflow-hidden bg-white">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 blur-[100px] animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-600/10 blur-[100px] animate-pulse" style="animation-delay: 1s;"></div>
         </div>
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="reveal">
-                <i class="ri-shield-star-line text-5xl mb-4"></i>
-                <h1 class="text-3xl md:text-5xl font-black tracking-tight mb-4">Legal Compliance</h1>
-                <p class="max-w-2xl mx-auto text-blue-100">Our commitment to ethical practices and regulatory compliance.</p>
+        
+        <div class="container mx-auto px-6 max-w-7xl relative z-10">
+            <div class="max-w-5xl mx-auto text-center">
+                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-6">Compliance</div>
+                <h1 class="text-6xl md:text-8xl font-black text-gray-900 mb-8 leading-[0.9] tracking-tight">
+                    Legal<br/>
+                    <span class="bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent">Compliance</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
+                    Our commitment to ethical practices<br/>
+                    <span class="font-semibold text-gray-900">and regulatory compliance.</span>
+                </p>
             </div>
         </div>
     </section>
     
-    <div class="section-light py-20 lg:py-32">
-        <div class="container mx-auto px-6 max-w-4xl legal-content">
-            <p class="disclaimer text-center mb-8">Last updated: {{ 'now' | date: "%B %d, %Y" }}</p>
-            <h3>Introduction</h3>
-            <p>Nextract Data Solutions is committed to upholding the highest standards of legal compliance in all aspects of our operations. We understand the importance of adhering to relevant laws and regulations to ensure the protection of data and intellectual property.</p>
-            <h3>GDPR and CCPA Compliance</h3>
-            <p>We adhere to the principles of the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA) where applicable. We prioritize user privacy and data protection rights by implementing the following measures:</p>
-            <ul>
-                <li>We maintain transparent data processing practices.</li>
-                <li>We provide users with the ability to exercise their data rights.</li>
-                <li>We implement appropriate security measures to protect personal data.</li>
-            </ul>
-            <h3>DMCA Compliance</h3>
-            <p>Nextract Data Solutions is compliant with the Digital Millennium Copyright Act (DMCA). We respect intellectual property rights and will promptly respond to any valid DMCA takedown notices. Our procedures include:</p>
-            <ul>
-                <li>Designated agent for DMCA notifications.</li>
-                <li>Prompt removal of infringing material upon receipt of valid notices.</li>
-                <li>Policy for repeat infringers.</li>
-            </ul>
-            <h3>Ethical Web Scraping Practices</h3>
-            <p>We are committed to ethical web scraping practices. This includes:</p>
-            <ul>
-                <li>Respecting robots.txt files.</li>
-                <li>Adhering to website terms of use.</li>
-                <li>Ensuring that data collection is conducted in a responsible and legal manner.</li>
-            </ul>
-            <h3>Contact for Legal Inquiries</h3>
-            <p>For any legal compliance inquiries, please contact us via email at hello@nextract.dev</p>
-        </div>
-    </div>
-    <section id="contact-shared" class="py-20 lg:py-32 hero-gradient text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-4">Get Actionable Data Tomorrow</h2>
-            <p class="max-w-2xl mx-auto text-lg text-blue-200 mb-8">Stop waiting on engineering backlogs. Tell us what you need, and let our team handle the rest. Get a free strategy call and data sample to see how we can help.</p>
-            <a href="https://calendly.com/parthravrani/30min" target="_blank" class="hero-cta-primary text-blue-800 font-bold py-4 px-8 text-lg">Schedule Your Free Strategy Call</a>
+    <!-- Content Section -->
+    <section class="py-32 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <p class="text-center text-gray-600 mb-16 text-sm">Last updated: {{ 'now' | date: "%B %d, %Y" }}</p>
+            
+            <div class="space-y-12">
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 mb-6">Introduction</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg">Nextract Data Solutions is committed to upholding the highest standards of legal compliance in all aspects of our operations. We understand the importance of adhering to relevant laws and regulations to ensure the protection of data and intellectual property.</p>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 mb-6">GDPR and CCPA Compliance</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg mb-4">We adhere to the principles of the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA) where applicable. We prioritize user privacy and data protection rights by implementing the following measures:</p>
+                    <ul class="space-y-3 text-gray-600 text-lg">
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-600 font-black mt-1">→</span>
+                            <span>We maintain transparent data processing practices.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-600 font-black mt-1">→</span>
+                            <span>We provide users with the ability to exercise their data rights.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-600 font-black mt-1">→</span>
+                            <span>We implement appropriate security measures to protect personal data.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 mb-6">DMCA Compliance</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg mb-4">Nextract Data Solutions is compliant with the Digital Millennium Copyright Act (DMCA). We respect intellectual property rights and will promptly respond to any valid DMCA takedown notices. Our procedures include:</p>
+                    <ul class="space-y-3 text-gray-600 text-lg">
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-600 font-black mt-1">→</span>
+                            <span>Designated agent for DMCA notifications.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-600 font-black mt-1">→</span>
+                            <span>Prompt removal of infringing material upon receipt of valid notices.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-600 font-black mt-1">→</span>
+                            <span>Policy for repeat infringers.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 mb-6">Ethical Web Scraping Practices</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg mb-4">We are committed to ethical web scraping practices. This includes:</p>
+                    <ul class="space-y-3 text-gray-600 text-lg">
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-600 font-black mt-1">→</span>
+                            <span>Respecting robots.txt files.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-600 font-black mt-1">→</span>
+                            <span>Adhering to website terms of use.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-600 font-black mt-1">→</span>
+                            <span>Ensuring that data collection is conducted in a responsible and legal manner.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 mb-6">Contact for Legal Inquiries</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg">For any legal compliance inquiries, please contact us via email at <a href="mailto:hello@nextract.dev" class="text-blue-600 hover:underline font-semibold">hello@nextract.dev</a></p>
+                </div>
+            </div>
         </div>
     </section>
+
+    {% include contact-section.html %}
 </main>

@@ -5,59 +5,114 @@ description: "Please read the Terms of Service for using Nextract's data scrapin
 ---
 
 <main>
-    <section class="hero-gradient text-white py-16 md:py-20 text-center relative overflow-hidden">
-        <div class="absolute inset-0 opacity-20">
-            <div class="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+    <!-- Hero Section -->
+    <section class="min-h-[60vh] flex items-center justify-center relative overflow-hidden bg-white">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 blur-[100px] animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-600/10 blur-[100px] animate-pulse" style="animation-delay: 1s;"></div>
         </div>
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="reveal">
-                <i class="ri-file-text-line text-5xl mb-4"></i>
-                <h1 class="text-3xl md:text-5xl font-black tracking-tight mb-4">Terms of Service</h1>
-                <p class="max-w-2xl mx-auto text-blue-100">Please read these terms carefully before using our services.</p>
+        
+        <div class="container mx-auto px-6 max-w-7xl relative z-10">
+            <div class="max-w-5xl mx-auto text-center">
+                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-6">Terms</div>
+                <h1 class="text-6xl md:text-8xl font-black text-gray-900 mb-8 leading-[0.9] tracking-tight">
+                    Terms of<br/>
+                    <span class="bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent">Service</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
+                    Please read these terms carefully<br/>
+                    <span class="font-semibold text-gray-900">before using our services.</span>
+                </p>
             </div>
         </div>
     </section>
     
-    <div class="section-light py-20 lg:py-32">
-        <div class="container mx-auto px-6 max-w-4xl legal-content">
-            <p class="disclaimer text-center mb-8">Last updated: {{ 'now' | date: "%B %d, %Y" }}</p>
-            <h3>Introduction</h3>
-            <p>Welcome to Nextract Data Solutions. By accessing and using our data scraping and API services, you agree to comply with and be bound by the following terms and conditions. Please read them carefully.</p>
-            <h3>Service Description</h3>
-            <p>Nextract Data Solutions provides data scraping and API services that enable users to access and utilize publicly available data from various sources.</p>
-            <h3>User Responsibilities</h3>
-            <p>By using our services, you agree to the following:</p>
-            <ul>
-                <li>Lawful Use: You will use our services only for lawful and ethical purposes.</li>
-                <li>Compliance: You are responsible for ensuring your data scraping activities comply with all applicable laws and regulations, including but not limited to copyright, privacy, and data protection laws.</li>
-                <li>Website Terms: You will adhere to the terms of service and robots.txt files of any websites you scrape using our services.</li>
-                <li>Accountability: You are responsible for any data you scrape and how you use it.</li>
-            </ul>
-            <p>You must not:</p>
-            <ul>
-                <li>Scrape data that violates copyright or privacy laws.</li>
-                <li>Attempt to disrupt or interfere with our services or any target websites.</li>
-                <li>Use our services for any malicious or illegal activities.</li>
-            </ul>
-            <h3>Intellectual Property</h3>
-            <p>Nextract Data Solutions retains all intellectual property rights to its services, including software, APIs, website content, and any related materials. You are granted a limited, non-exclusive, and non-transferable license to use our services as permitted by these terms.</p>
-            <h3>Payment</h3>
-            <p>Service fees are as specified in your service agreement or on our website. Payments are managed internally or through RapidAPI, depending on the service you purchase.</p>
-            <h3>Limitation of Liability</h3>
-            <p>Nextract Data Solutions shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our services, including but not limited to loss of data, profits, or business opportunities.</p>
-            <h3>Termination</h3>
-            <p>We reserve the right to terminate your access to our services for any violation of these terms, or for any other reason at our sole discretion.</p>
-            <h3>Changes to Terms</h3>
-            <p>We may modify these terms at any time. We will notify you of any significant changes by posting the updated terms on our website or by other means of communication. Your continued use of our services after such changes constitutes your acceptance of the new terms.</p>
-            <h3>Contact Us</h3>
-            <p>If you have any questions or concerns regarding these Terms of Service, please contact us at hello@nextractdata.com</p>
-        </div>
-    </div>
-    <section id="contact-shared" class="py-20 lg:py-32 hero-gradient text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-4">Get Actionable Data Tomorrow</h2>
-            <p class="max-w-2xl mx-auto text-lg text-blue-200 mb-8">Stop waiting on engineering backlogs. Tell us what you need, and let our team handle the rest. Get a free strategy call and data sample to see how we can help.</p>
-            <a href="https://calendly.com/parthravrani/30min" target="_blank" class="hero-cta-primary text-blue-800 font-bold py-4 px-8 text-lg">Schedule Your Free Strategy Call</a>
+    <!-- Content Section -->
+    <section class="py-32 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <p class="text-center text-gray-600 mb-16 text-sm">Last updated: {{ 'now' | date: "%B %d, %Y" }}</p>
+            
+            <div class="space-y-12">
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 mb-6">Introduction</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg">Welcome to Nextract Data Solutions. By accessing and using our data scraping and API services, you agree to comply with and be bound by the following terms and conditions. Please read them carefully.</p>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 mb-6">Service Description</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg">Nextract Data Solutions provides data scraping and API services that enable users to access and utilize publicly available data from various sources.</p>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 mb-6">User Responsibilities</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg mb-4">By using our services, you agree to the following:</p>
+                    <ul class="space-y-3 text-gray-600 text-lg">
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-600 font-black mt-1">→</span>
+                            <span><strong class="text-gray-900">Lawful Use:</strong> You will use our services only for lawful and ethical purposes.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-600 font-black mt-1">→</span>
+                            <span><strong class="text-gray-900">Compliance:</strong> You are responsible for ensuring your data scraping activities comply with all applicable laws and regulations, including but not limited to copyright, privacy, and data protection laws.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-600 font-black mt-1">→</span>
+                            <span><strong class="text-gray-900">Website Terms:</strong> You will adhere to the terms of service and robots.txt files of any websites you scrape using our services.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-600 font-black mt-1">→</span>
+                            <span><strong class="text-gray-900">Accountability:</strong> You are responsible for any data you scrape and how you use it.</span>
+                        </li>
+                    </ul>
+                    <p class="text-gray-600 leading-relaxed text-lg mt-6 mb-4 font-semibold">You must not:</p>
+                    <ul class="space-y-3 text-gray-600 text-lg">
+                        <li class="flex items-start gap-3">
+                            <span class="text-orange-600 font-black mt-1">→</span>
+                            <span>Scrape data that violates copyright or privacy laws.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-orange-600 font-black mt-1">→</span>
+                            <span>Attempt to disrupt or interfere with our services or any target websites.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-orange-600 font-black mt-1">→</span>
+                            <span>Use our services for any malicious or illegal activities.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 mb-6">Intellectual Property</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg">Nextract Data Solutions retains all intellectual property rights to its services, including software, APIs, website content, and any related materials. You are granted a limited, non-exclusive, and non-transferable license to use our services as permitted by these terms.</p>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 mb-6">Payment</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg">Service fees are as specified in your service agreement or on our website. Payments are managed internally or through RapidAPI, depending on the service you purchase.</p>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 mb-6">Limitation of Liability</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg">Nextract Data Solutions shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our services, including but not limited to loss of data, profits, or business opportunities.</p>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 mb-6">Termination</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg">We reserve the right to terminate your access to our services for any violation of these terms, or for any other reason at our sole discretion.</p>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 mb-6">Changes to Terms</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg">We may modify these terms at any time. We will notify you of any significant changes by posting the updated terms on our website or by other means of communication. Your continued use of our services after such changes constitutes your acceptance of the new terms.</p>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 mb-6">Contact Us</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg">If you have any questions or concerns regarding these Terms of Service, please contact us at <a href="mailto:hello@nextract.dev" class="text-blue-600 hover:underline font-semibold">hello@nextract.dev</a></p>
+                </div>
+            </div>
         </div>
     </section>
+
+    {% include contact-section.html %}
 </main>

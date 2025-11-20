@@ -1,69 +1,63 @@
-<header id="main-header" class="sticky top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-b border-gray-200/50 shadow-sm transition-all duration-300">
-    <div class="container mx-auto px-6 py-3 md:py-4 flex justify-between items-center">
+<header id="main-header" class="sticky top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 transition-all duration-300">
+    <div class="container mx-auto px-6 py-5 flex justify-between items-center max-w-7xl">
         
+        <!-- Logo -->
         <div class="flex-1 flex justify-start">
             <a href="{{ '/' | relative_url }}" class="flex items-center gap-3 cursor-pointer group">
-                <div class="relative">
-                    <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Nextract Logo" class="h-8 w-auto group-hover:scale-110 transition-transform duration-300">
-                    <div class="absolute inset-0 bg-blue-600 rounded-full opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
-                </div>
+                <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Nextract Logo" class="h-9 w-auto">
                 <div>
-                    <h3 class="text-xl font-extrabold tracking-tighter leading-tight text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
-                    Nextract
+                    <h3 class="text-xl font-black tracking-tight text-gray-900 group-hover:text-blue-600 transition-colors">
+                        Nextract
                     </h3>
-                    <p class="text-xs md:text-sm font-medium leading-tight text-gray-600 group-hover:text-blue-500 transition-colors duration-300">
-                    Data Solutions
+                    <p class="text-xs font-medium text-gray-600 group-hover:text-blue-600 transition-colors">
+                        Data Solutions
                     </p>
                 </div>
             </a>
         </div>
         
-        <nav class="hidden lg:flex items-center space-x-1 font-semibold">
+        <!-- Navigation -->
+        <nav class="hidden lg:flex items-center gap-1 font-semibold">
             {% for nav in site.navigation %}
                 {% if nav.dropdown %}
                     <div class="relative" id="legal-dropdown-container">
-                        <button id="legal-dropdown-button" class="text-gray-700 hover:text-blue-600 transition-all duration-300 flex items-center gap-1 py-2.5 px-4 rounded-lg hover:bg-blue-50 relative group">
-                            <span>{{ nav.name }}</span>
-                            <i class="ri-arrow-down-s-line text-sm transition-transform duration-300 group-hover:rotate-180"></i>
+                        <button id="legal-dropdown-button" class="text-gray-900 hover:text-blue-600 transition-colors flex items-center gap-1 py-3 px-5 relative group">
+                            <span class="text-sm">{{ nav.name }}</span>
+                            <i class="ri-arrow-down-s-line text-xs transition-transform duration-300 group-hover:rotate-180"></i>
                             <span class="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                         </button>
-                        <div id="legal-dropdown-menu" class="absolute hidden bg-white shadow-2xl rounded-xl mt-3 py-2 w-64 border border-gray-100 z-50 overflow-hidden animate-fade-in">
-                            <div class="px-4 py-2 bg-blue-50 border-b border-blue-100">
+                        <div id="legal-dropdown-menu" class="absolute hidden bg-white border border-gray-200 mt-2 py-2 w-64 z-50">
+                            <div class="px-4 py-3 bg-gray-50 border-b border-gray-200">
                                 <p class="text-xs font-bold text-blue-600 uppercase tracking-widest">Legal & Compliance</p>
                             </div>
                             {% for dropdown_item in nav.dropdown %}
-                                <a href="{{ dropdown_item.link | relative_url }}" class="block px-4 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-transparent hover:text-blue-600 transition-all duration-200 flex items-center gap-2 group/item">
-                                    <i class="ri-arrow-right-s-line text-sm opacity-0 group-hover/item:opacity-100 transition-opacity"></i>
+                                <a href="{{ dropdown_item.link | relative_url }}" class="block px-4 py-3 text-gray-900 hover:bg-gray-50 hover:text-blue-600 transition-all text-sm flex items-center gap-2 group/item">
+                                    <span class="text-xs opacity-0 group-hover/item:opacity-100 transition-opacity">→</span>
                                     <span>{{ dropdown_item.name }}</span>
                                 </a>
                             {% endfor %}
                         </div>
                     </div>
                 {% else %}
-                    <a href="{{ nav.link | relative_url }}" class="text-gray-700 hover:text-blue-600 transition-all duration-300 py-2.5 px-4 rounded-lg hover:bg-blue-50 relative group{% if page.url == nav.link %} text-blue-600 font-bold bg-blue-50{% endif %}">
-                        <span class="relative z-10">{{ nav.name }}</span>
+                    <a href="{{ nav.link | relative_url }}" class="text-gray-900 hover:text-blue-600 transition-colors py-3 px-5 relative group text-sm{% if page.url == nav.link %} text-blue-600 font-bold{% endif %}">
+                        <span>{{ nav.name }}</span>
                         <span class="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 {% if page.url == nav.link %}scale-x-100{% else %}scale-x-0 group-hover:scale-x-100{% endif %} transition-transform duration-300 origin-left"></span>
                     </a>
                 {% endif %}
             {% endfor %}
         </nav>
 
-        <div class="flex-1 hidden lg:flex items-center justify-end gap-3">
-            <a href="{{ '/assets/deck/Nextract Data Solutions.pdf' | relative_url }}" target="_blank" class="cta-secondary px-5 py-2.5 font-bold text-sm flex items-center gap-2 group relative overflow-hidden">
-                <i class="ri-download-2-line group-hover:animate-bounce"></i>
-                <span class="relative z-10">Deck</span>
-            </a>
-            <a href="#contact-shared" class="cta-primary px-6 py-2.5 text-white font-bold text-sm flex items-center gap-2 group relative overflow-hidden">
-                <span class="relative z-10">Get a Free Quote</span>
-                <i class="ri-arrow-right-line relative z-10 group-hover:translate-x-1 transition-transform"></i>
+        <!-- CTA Button -->
+        <div class="flex-1 hidden lg:flex items-center justify-end">
+            <a href="/contact/" class="px-8 py-3 bg-gray-900 text-white font-bold text-sm hover:bg-blue-600 transition-all inline-flex items-center gap-2 group">
+                Contact
+                <span class="group-hover:translate-x-1 transition-transform">→</span>
             </a>
         </div>
 
-        <button id="mobile-menu-button" class="lg:hidden p-2.5 rounded-lg hover:bg-blue-50 transition-colors duration-300 group relative">
-            <i class="ri-menu-3-line text-2xl text-gray-700 group-hover:text-blue-600 transition-colors"></i>
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="lg:hidden p-2 hover:bg-gray-50 transition-colors group">
+            <i class="ri-menu-3-line text-2xl text-gray-900 group-hover:text-blue-600 transition-colors"></i>
         </button>
     </div>
-    
-    <!-- Scroll indicator -->
-    <div id="scroll-indicator" class="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-blue-600 to-blue-800 transition-all duration-300" style="width: 0%;"></div>
 </header>
