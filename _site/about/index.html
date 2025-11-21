@@ -4,24 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>About Nextract | Our Mission & Team | Nextract</title>
-    <meta name="description" content="Learn about Nextract's mission to democratize web data. Meet our team of expert data engineers dedicated to providing reliable and ethical data solutions.">
+    <!-- Primary Meta Tags -->
+    <title>About | Nextract</title>
+    <meta name="title" content="About | Nextract">
+    <meta name="description" content="Learn about Nextract's mission to deliver reliable web scraping and data extraction services. Trusted by 500+ companies worldwide.">
+    <meta name="keywords" content="about nextract, web scraping company, data extraction company, about us">
+    <meta name="author" content="Nextract">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
     
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://www.nextract.dev/about/">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.nextract.dev/about/">
-    <meta property="og:title" content="About Nextract | Our Mission & Team | Nextract">
-    <meta property="og:description" content="Turn web data into actionable business intelligence. Nextract provides reliable, scalable, and ethical web scraping solutions for enterprise clients.">
-    <meta property="og:image" content="https://www.nextract.dev/og-image.jpg">
+    <meta property="og:title" content="About | Nextract">
+    <meta property="og:description" content="Learn about Nextract's mission to deliver reliable web scraping and data extraction services. Trusted by 500+ companies worldwide.">
+    <meta property="og:image" content="https://www.nextract.dev/assets/images/og-image.jpg">
+    <meta property="og:site_name" content="Nextract">
+    <meta property="og:locale" content="en_US">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.nextract.dev/about/">
-    <meta property="twitter:title" content="About Nextract | Our Mission & Team | Nextract">
-    <meta property="twitter:description" content="Turn web data into actionable business intelligence. Nextract provides reliable, scalable, and ethical web scraping solutions for enterprise clients.">
-    <meta property="twitter:image" content="https://www.nextract.dev/twitter-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.nextract.dev/about/">
+    <meta name="twitter:title" content="About | Nextract">
+    <meta name="twitter:description" content="Learn about Nextract's mission to deliver reliable web scraping and data extraction services. Trusted by 500+ companies worldwide.">
+    <meta name="twitter:image" content="https://www.nextract.dev/assets/images/twitter-image.jpg">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "About | Nextract",
+      "url": "https://www.nextract.dev/about/",
+      "description": "Learn about Nextract's mission to deliver reliable web scraping and data extraction services. Trusted by 500+ companies worldwide.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Nextract",
+        "url": "https://www.nextract.dev"
+      }
+    }
+    </script>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -36,268 +69,760 @@
     
     <!-- Custom Styles -->
     <style>
-        body { font-family: 'Montserrat', sans-serif; background-color: #FFFFFF; color: #1a202c; }
-        .section-light { background-color: #F7F7FF; }
-        .section-dark { background-color: #0D1117; color: #FFFFFF; }
-        .gradient-text { background: linear-gradient(90deg, #0052FF, #0A2E7E); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero-gradient { background-color: #0052FF; background-image: linear-gradient(225deg, #0052FF 0%, #0A2E7E 100%); }
-        .cta-primary { background-color: #0052FF; border-radius: 8px; transition: all 0.3s ease; }
-        .cta-primary:hover { background-color: #0045D6; transform: translateY(-2px); box-shadow: 0 7px 15px -3px rgba(0, 82, 255, 0.4); }
-        .hero-cta-primary { background-color: #FFFFFF; color: #0045D6; border-radius: 8px; transition: all 0.3s ease; }
-        .hero-cta-primary:hover { transform: translateY(-2px); box-shadow: 0 7px 20px -3px rgba(0,0,0,0.2); }
-        .hero-cta-secondary { background-color: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.3); color: #FFFFFF; border-radius: 8px; transition: all 0.3s ease; }
-        .hero-cta-secondary:hover { background-color: rgba(255, 255, 255, 0.2); }
-        .card-style { background-color: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 1rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-        .card-style:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); }
-        .dark-card { background-color: #161B22; border: 1px solid #30363D; }
-        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.6s ease-out; }
-        .reveal.visible { opacity: 1; transform: translateY(0); }
-        .form-input { width: 100%; background-color: #161B22; border: 1px solid #30363D; color: white; padding: 0.75rem 1rem; border-radius: 8px; transition: border-color 0.3s ease; }
-        .form-input:focus { outline: none; border-color: #0052FF; }
-        /* Legal page typography (from source HTML) */
+        /* Fixed Color Palette */
+        :root {
+            --color-blue: #0052FF;
+            --color-blue-dark: #0045D6;
+            --color-blue-light: #E6F0FF;
+            --color-orange: #FF6B35;
+            --color-orange-dark: #E55A2B;
+            --color-black: #000000;
+            --color-white: #FFFFFF;
+            --color-gray-light: #F5F5F5;
+            --color-gray-border: #E5E7EB;
+            --color-gray-text: #6B7280;
+            --color-gray-dark: #1F2937;
+        }
+        
+        body { font-family: 'Montserrat', sans-serif; background-color: var(--color-white); color: var(--color-gray-dark); }
+        .section-light { background-color: var(--color-gray-light); }
+        .section-dark { background-color: var(--color-gray-dark); color: var(--color-white); }
+        .gradient-text { background: linear-gradient(90deg, var(--color-blue), var(--color-blue-dark)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-gradient { 
+            background-color: var(--color-blue); 
+            background-image: linear-gradient(225deg, var(--color-blue) 0%, var(--color-blue-dark) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-primary { 
+            background-color: var(--color-blue); 
+            transition: background-color 0.2s ease;
+        }
+        .cta-primary:hover { 
+            background-color: var(--color-blue-dark); 
+        }
+        .cta-secondary {
+            background-color: transparent;
+            border: 2px solid var(--color-blue);
+            color: var(--color-blue);
+            transition: all 0.2s ease;
+        }
+        .cta-secondary:hover {
+            background-color: var(--color-blue);
+            color: var(--color-white);
+        }
+        .hero-cta-primary { 
+            background-color: var(--color-white); 
+            color: var(--color-blue-dark); 
+            transition: background-color 0.2s ease;
+        }
+        .hero-cta-primary:hover { 
+            background-color: var(--color-gray-light);
+        }
+        .hero-cta-secondary { 
+            background-color: rgba(255, 255, 255, 0.1); 
+            border: 2px solid rgba(255, 255, 255, 0.3); 
+            color: var(--color-white); 
+            transition: all 0.2s ease;
+            backdrop-filter: blur(10px);
+        }
+        .hero-cta-secondary:hover { 
+            background-color: rgba(255, 255, 255, 0.2); 
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+        .card-style { 
+            background-color: var(--color-white); 
+            border: 1px solid var(--color-gray-border); 
+            transition: border-color 0.2s ease;
+        }
+        .card-style:hover { 
+            border-color: var(--color-blue);
+        }
+        .dark-card { 
+            background-color: var(--color-gray-dark); 
+            border: 1px solid var(--color-gray-border);
+            transition: border-color 0.2s ease;
+        }
+        .dark-card:hover {
+            border-color: var(--color-blue);
+        }
+        .reveal { 
+            opacity: 0; 
+            transform: translateY(40px); 
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); 
+        }
+        .reveal.visible { 
+            opacity: 1; 
+            transform: translateY(0); 
+        }
+        .form-input { 
+            width: 100%; 
+            background-color: var(--color-white); 
+            border: 1px solid var(--color-gray-border); 
+            color: var(--color-gray-dark); 
+            padding: 0.75rem 1rem; 
+            transition: border-color 0.2s ease;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .form-input::placeholder {
+            color: var(--color-gray-text);
+            transition: color 0.3s ease;
+        }
+        .form-input:hover {
+            border-color: var(--color-gray-text);
+        }
+        .form-input:focus { 
+            outline: none; 
+            border-color: var(--color-blue);
+            background-color: var(--color-white);
+        }
+        
+        /* Form success state */
+        .form-input.success {
+            border-color: var(--color-blue);
+            background-color: var(--color-blue-light);
+        }
+        
+        /* Form error state */
+        .form-input.error {
+            border-color: var(--color-orange);
+            background-color: rgba(255, 107, 53, 0.05);
+        }
+        /* Legal page typography */
         .legal-content h2 { font-size: 1.875rem; font-weight: 800; margin-bottom: 1.5rem; }
         .legal-content h3 { font-size: 1.25rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; }
-        .legal-content p { margin-bottom: 1rem; line-height: 1.75; color: #4a5568; }
+        .legal-content p { margin-bottom: 1rem; line-height: 1.75; color: var(--color-gray-text); }
         .legal-content ul { list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1rem; }
         .legal-content li { margin-bottom: 0.5rem; }
-        .legal-content .disclaimer { font-style: italic; color: #718096; text-align: center; margin-bottom: 2rem; }
+        .legal-content .disclaimer { font-style: italic; color: var(--color-gray-text); text-align: center; margin-bottom: 2rem; }
+
+        /* Accordion Styles */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .accordion-item.active .accordion-content {
+            max-height: 500px;
+        }
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+        .accordion-icon {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .accordion-header:hover {
+            background-color: var(--color-blue-light);
+        }
+        
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Navbar scroll effect */
+        header.scrolled {
+            background-color: rgba(255, 255, 255, 0.98);
+            border-bottom: 1px solid var(--color-gray-border);
+        }
+        
+        /* Dropdown animation */
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in {
+            animation: fade-in 0.3s ease-out;
+        }
+        
+        /* Mobile menu animation */
+        #mobile-menu {
+            animation: slide-in 0.3s ease-out;
+        }
+        @keyframes slide-in {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+        
+        /* Modern Scroll Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Modern button hover effects */
+        .modern-btn {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .modern-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .modern-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        /* Glassmorphism effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        /* Number counter animation */
+        @keyframes countUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .number-animate {
+            animation: countUp 0.8s ease-out forwards;
+        }
     </style>
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>About Nextract Our Mission &amp; Team | Nextract</title>
+<title>About | Nextract</title>
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="About Nextract Our Mission &amp; Team" />
+<meta property="og:title" content="About" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Learn about Nextract’s mission to democratize web data. Meet our team of expert data engineers dedicated to providing reliable and ethical data solutions." />
-<meta property="og:description" content="Learn about Nextract’s mission to democratize web data. Meet our team of expert data engineers dedicated to providing reliable and ethical data solutions." />
-<link rel="canonical" href="http://0.0.0.0:4000/about/" />
-<meta property="og:url" content="http://0.0.0.0:4000/about/" />
+<meta name="description" content="Learn about Nextract’s mission to deliver reliable web scraping and data extraction services. Trusted by 500+ companies worldwide." />
+<meta property="og:description" content="Learn about Nextract’s mission to deliver reliable web scraping and data extraction services. Trusted by 500+ companies worldwide." />
+<link rel="canonical" href="http://localhost:4000/about/" />
+<meta property="og:url" content="http://localhost:4000/about/" />
 <meta property="og:site_name" content="Nextract" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="About Nextract Our Mission &amp; Team" />
+<meta property="twitter:title" content="About" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"Learn about Nextract’s mission to democratize web data. Meet our team of expert data engineers dedicated to providing reliable and ethical data solutions.","headline":"About Nextract Our Mission &amp; Team","name":"Nextract","url":"http://0.0.0.0:4000/about/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","description":"Learn about Nextract’s mission to deliver reliable web scraping and data extraction services. Trusted by 500+ companies worldwide.","headline":"About","name":"Nextract","url":"http://localhost:4000/about/"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
 <body class="antialiased">
-    <header class="sticky top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="/" class="text-2xl font-black tracking-tighter cursor-pointer">
-            <span class="gradient-text">N</span>EXTRACT
-        </a>
-        <nav class="hidden md:flex items-center space-x-8 font-semibold">
+    <header id="main-header" class="sticky top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 transition-all duration-300">
+    <div class="container mx-auto px-6 py-5 flex justify-between items-center max-w-7xl">
+        
+        <!-- Logo -->
+        <div class="flex-1 flex justify-start">
+            <a href="/" class="flex items-center gap-3 cursor-pointer group">
+                <img src="/assets/images/logo.png" alt="Nextract Logo" class="h-9 w-auto">
+                <div>
+                    <h3 class="text-xl font-black tracking-tight text-gray-900 group-hover:text-blue-600 transition-colors">
+                        Nextract
+                    </h3>
+                    <p class="text-xs font-medium text-gray-600 group-hover:text-blue-600 transition-colors">
+                        Data Solutions
+                    </p>
+                </div>
+            </a>
+        </div>
+        
+        <!-- Navigation -->
+        <nav class="hidden lg:flex items-center gap-1 font-semibold">
             
                 
-                    <a href="/solutions/" class="text-gray-600 hover:text-blue-600 transition-colors">Solutions</a>
+                    <a href="/products/" class="text-gray-900 hover:text-blue-600 transition-colors py-3 px-5 relative group text-sm">
+                        <span>Products</span>
+                        <span class="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                    </a>
                 
             
                 
-                    <a href="/industries/" class="text-gray-600 hover:text-blue-600 transition-colors">Industries</a>
+                    <a href="/solutions/" class="text-gray-900 hover:text-blue-600 transition-colors py-3 px-5 relative group text-sm">
+                        <span>Solutions</span>
+                        <span class="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                    </a>
+                
+            
+                
+                    <a href="/industries/" class="text-gray-900 hover:text-blue-600 transition-colors py-3 px-5 relative group text-sm">
+                        <span>Industries</span>
+                        <span class="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                    </a>
+                
+            
+                
+                    <a href="/case-studies/" class="text-gray-900 hover:text-blue-600 transition-colors py-3 px-5 relative group text-sm">
+                        <span>Case Studies</span>
+                        <span class="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                    </a>
+                
+            
+                
+                    <a href="/about/" class="text-gray-900 hover:text-blue-600 transition-colors py-3 px-5 relative group text-sm text-blue-600 font-bold">
+                        <span>About</span>
+                        <span class="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 scale-x-100 transition-transform duration-300 origin-left"></span>
+                    </a>
+                
+            
+                
+                    <a href="/contact/" class="text-gray-900 hover:text-blue-600 transition-colors py-3 px-5 relative group text-sm">
+                        <span>Contact</span>
+                        <span class="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                    </a>
                 
             
                 
                     <div class="relative" id="legal-dropdown-container">
-                        <button id="legal-dropdown-button" class="text-gray-600 hover:text-blue-600 transition-colors flex items-center">
-                            Legal <i class="ri-arrow-down-s-line ml-1"></i>
+                        <button id="legal-dropdown-button" class="text-gray-900 hover:text-blue-600 transition-colors flex items-center gap-1 py-3 px-5 relative group">
+                            <span class="text-sm">Legal</span>
+                            <i class="ri-arrow-down-s-line text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+                            <span class="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                         </button>
-                        <div id="legal-dropdown-menu" class="absolute hidden bg-white shadow-lg rounded-lg mt-2 py-2 w-48 border border-gray-100 z-50">
+                        <div id="legal-dropdown-menu" class="absolute hidden bg-white border border-gray-200 mt-2 py-2 w-64 z-50">
+                            <div class="px-4 py-3 bg-gray-50 border-b border-gray-200">
+                                <p class="text-xs font-bold text-blue-600 uppercase tracking-widest">Legal & Compliance</p>
+                            </div>
                             
-                                <a href="/trust-security/" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Trust & Security</a>
+                                <a href="/trust-security/" class="block px-4 py-3 text-gray-900 hover:bg-gray-50 hover:text-blue-600 transition-all text-sm flex items-center gap-2 group/item">
+                                    <span class="text-xs opacity-0 group-hover/item:opacity-100 transition-opacity">→</span>
+                                    <span>Trust & Security</span>
+                                </a>
                             
-                                <a href="/terms/" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Terms of Service</a>
+                                <a href="/terms/" class="block px-4 py-3 text-gray-900 hover:bg-gray-50 hover:text-blue-600 transition-all text-sm flex items-center gap-2 group/item">
+                                    <span class="text-xs opacity-0 group-hover/item:opacity-100 transition-opacity">→</span>
+                                    <span>Terms of Service</span>
+                                </a>
                             
-                                <a href="/privacy/" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Privacy Policy</a>
+                                <a href="/privacy/" class="block px-4 py-3 text-gray-900 hover:bg-gray-50 hover:text-blue-600 transition-all text-sm flex items-center gap-2 group/item">
+                                    <span class="text-xs opacity-0 group-hover/item:opacity-100 transition-opacity">→</span>
+                                    <span>Privacy Policy</span>
+                                </a>
                             
-                                <a href="/sla/" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">SLA</a>
+                                <a href="/sla/" class="block px-4 py-3 text-gray-900 hover:bg-gray-50 hover:text-blue-600 transition-all text-sm flex items-center gap-2 group/item">
+                                    <span class="text-xs opacity-0 group-hover/item:opacity-100 transition-opacity">→</span>
+                                    <span>SLA</span>
+                                </a>
                             
-                                <a href="/compliance/" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Legal Compliance</a>
+                                <a href="/compliance/" class="block px-4 py-3 text-gray-900 hover:bg-gray-50 hover:text-blue-600 transition-all text-sm flex items-center gap-2 group/item">
+                                    <span class="text-xs opacity-0 group-hover/item:opacity-100 transition-opacity">→</span>
+                                    <span>Legal Compliance</span>
+                                </a>
                             
                         </div>
                     </div>
                 
             
-                
-                    <a href="/about/" class="text-gray-600 hover:text-blue-600 transition-colors text-blue-600 font-bold">About Us</a>
-                
-            
         </nav>
-        <a href="#contact-shared" class="hidden md:block cta-primary px-5 py-2.5 text-white font-bold">Get a Free Quote</a>
-        <button id="mobile-menu-button" class="md:hidden"><i class="ri-menu-3-line text-2xl"></i></button>
+
+        <!-- CTA Button -->
+        <div class="flex-1 hidden lg:flex items-center justify-end">
+            <a href="/contact/" class="px-8 py-3 bg-gray-900 text-white font-bold text-sm hover:bg-blue-600 transition-all inline-flex items-center gap-2 group">
+                Contact
+                <span class="group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="lg:hidden p-2 hover:bg-gray-50 transition-colors group">
+            <i class="ri-menu-3-line text-2xl text-gray-900 group-hover:text-blue-600 transition-colors"></i>
+        </button>
     </div>
 </header>
-    <div id="mobile-menu" class="hidden fixed inset-0 bg-white z-[100] p-6">
-    <div class="flex justify-end">
-        <button id="close-menu-button"><i class="ri-close-line text-3xl"></i></button>
+
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-white z-[100] p-6 overflow-y-auto">
+    <div class="flex justify-between items-center mb-12">
+        <div class="flex items-center gap-3">
+            <img src="/assets/images/logo.png" alt="Nextract Logo" class="h-9 w-auto">
+            <div>
+                <h3 class="text-xl font-black tracking-tight text-gray-900">Nextract</h3>
+                <p class="text-xs font-medium text-gray-600">Data Solutions</p>
+            </div>
+        </div>
+        <button id="close-menu-button" class="p-2 hover:bg-gray-50 transition-colors">
+            <i class="ri-close-line text-3xl text-gray-900"></i>
+        </button>
     </div>
-    <nav class="flex flex-col items-center justify-center h-full space-y-4 text-xl font-semibold text-gray-800">
+    <nav class="flex flex-col space-y-1">
         
             
-                <a href="/solutions/" class="mobile-nav-link">Solutions</a>
-            
-        
-            
-                <a href="/industries/" class="mobile-nav-link">Industries</a>
+                <a href="/products/" class="mobile-nav-link block py-4 px-4 text-base font-semibold text-gray-900 hover:bg-gray-50 transition-colors">Products</a>
             
         
             
-                <div class="w-full text-center">
-                    <button id="mobile-legal-button" class="w-full flex items-center justify-center py-2">Legal <i id="mobile-legal-icon" class="ri-add-line ml-1"></i></button>
-                    <div id="mobile-legal-submenu" class="hidden flex-col items-center space-y-4 pt-4 text-base font-medium">
+                <a href="/solutions/" class="mobile-nav-link block py-4 px-4 text-base font-semibold text-gray-900 hover:bg-gray-50 transition-colors">Solutions</a>
+            
+        
+            
+                <a href="/industries/" class="mobile-nav-link block py-4 px-4 text-base font-semibold text-gray-900 hover:bg-gray-50 transition-colors">Industries</a>
+            
+        
+            
+                <a href="/case-studies/" class="mobile-nav-link block py-4 px-4 text-base font-semibold text-gray-900 hover:bg-gray-50 transition-colors">Case Studies</a>
+            
+        
+            
+                <a href="/about/" class="mobile-nav-link block py-4 px-4 text-base font-semibold text-gray-900 hover:bg-gray-50 transition-colors bg-gray-50 text-blue-600">About</a>
+            
+        
+            
+                <a href="/contact/" class="mobile-nav-link block py-4 px-4 text-base font-semibold text-gray-900 hover:bg-gray-50 transition-colors">Contact</a>
+            
+        
+            
+                <div class="w-full">
+                    <button id="mobile-legal-button" class="w-full flex items-center justify-between py-4 px-4 text-base font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
+                        <span>Legal</span>
+                        <i id="mobile-legal-icon" class="ri-add-line text-xl transition-transform duration-300"></i>
+                    </button>
+                    <div id="mobile-legal-submenu" class="hidden flex-col space-y-1 pt-2 pb-4 pl-6">
                         
-                            <a href="/trust-security/" class="mobile-nav-link">Trust & Security</a>
+                            <a href="/trust-security/" class="mobile-nav-link block py-3 px-4 text-sm text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-2 group">
+                                <span class="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                                Trust & Security
+                            </a>
                         
-                            <a href="/terms/" class="mobile-nav-link">Terms of Service</a>
+                            <a href="/terms/" class="mobile-nav-link block py-3 px-4 text-sm text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-2 group">
+                                <span class="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                                Terms of Service
+                            </a>
                         
-                            <a href="/privacy/" class="mobile-nav-link">Privacy Policy</a>
+                            <a href="/privacy/" class="mobile-nav-link block py-3 px-4 text-sm text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-2 group">
+                                <span class="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                                Privacy Policy
+                            </a>
                         
-                            <a href="/sla/" class="mobile-nav-link">SLA</a>
+                            <a href="/sla/" class="mobile-nav-link block py-3 px-4 text-sm text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-2 group">
+                                <span class="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                                SLA
+                            </a>
                         
-                            <a href="/compliance/" class="mobile-nav-link">Legal Compliance</a>
+                            <a href="/compliance/" class="mobile-nav-link block py-3 px-4 text-sm text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-2 group">
+                                <span class="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                                Legal Compliance
+                            </a>
                         
                     </div>
                 </div>
             
         
-            
-                <a href="/about/" class="mobile-nav-link">About Us</a>
-            
-        
-        <hr class="w-24 border-gray-300"/>
-        <a href="#contact-shared" class="mobile-nav-link cta-primary text-white px-6 py-3 rounded-lg">Get a Free Quote</a>
+        <div class="pt-8 border-t border-gray-200">
+            <a href="/contact/" class="w-full px-8 py-4 bg-gray-900 text-white font-bold flex items-center justify-center gap-2 hover:bg-blue-600 transition-all">
+                Contact Us
+                <i class="ri-arrow-right-line"></i>
+            </a>
+        </div>
     </nav>
 </div>
+
     
     <main>
-    <section class="section-light py-20 md:py-32 text-center">
-        <div class="container mx-auto px-6">
-            <h1 class="text-4xl md:text-6xl font-black text-gray-900 leading-tight tracking-tighter mb-6 reveal">Built by Engineers, <br class="hidden md:block"/> Run for Businesses.</h1>
-            <p class="max-w-3xl mx-auto text-lg md:text-xl text-gray-600 font-medium reveal" style="transition-delay: 0.2s;">We're a team of dedicated data experts passionate about solving complex data extraction challenges to help businesses thrive.</p>
+    <!-- Hero Section -->
+    <section class="min-h-[80vh] flex items-center justify-center relative overflow-hidden bg-white">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 blur-[100px] animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-600/10 blur-[100px] animate-pulse" style="animation-delay: 1s;"></div>
         </div>
-    </section>
-
-    <section id="founder" class="py-20 lg:py-32">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center gap-12 max-w-4xl mx-auto reveal">
-                <div class="md:w-1/3 flex justify-center"><img src="https://i.pravatar.cc/150?u=parth_ravrani" alt="Founder Parth Ravrani" class="rounded-full w-40 h-40 md:w-48 md-h-48 object-cover shadow-2xl border-4 border-white"></div>
-                <div class="md:w-2/3 text-center md:text-left"><h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">A Message from Our Founder</h2><p class="text-lg text-gray-600 leading-relaxed mb-4">"I saw firsthand how inaccessible critical web data could be. I created Nextract to democratize access to high-quality data by handling all the complex engineering, allowing businesses to focus on innovation and growth."</p><a href="#" class="text-blue-600 hover:text-blue-800 font-bold text-lg flex items-center justify-center md:justify-start gap-2"><i class="ri-linkedin-box-fill text-2xl"></i>Connect with Parth Ravrani</a></div>
+        
+        <div class="container mx-auto px-6 max-w-7xl relative z-10">
+            <div class="max-w-5xl mx-auto text-center">
+                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-6">About</div>
+                <h1 class="text-6xl md:text-8xl font-black text-gray-900 mb-8 leading-[0.9] tracking-tight">
+                    About<br/>
+                    <span class="bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent">Nextract</span>
+                </h1>
+                <p class="text-2xl md:text-3xl text-gray-600 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
+                    Built by engineers, run for businesses.<br/>
+                    <span class="font-semibold text-gray-900">We deliver reliable data extraction solutions.</span>
+                </p>
             </div>
         </div>
     </section>
 
-    <section class="py-20 lg:py-32 section-light">
-        <div class="container mx-auto px-6 text-center">
-            <div class="reveal"><h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-12">Our Mission & Values</h2></div>
-            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <div class="card-style p-8 reveal">
-                    <i class="ri-rocket-line text-4xl text-blue-500 mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Our Mission</h3>
-                    <p class="text-gray-600">To deliver accurate, timely data that empowers businesses to make informed decisions and gain a competitive advantage.</p>
+    <!-- Mission & Values -->
+    <section class="py-32 bg-white">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="group p-10 border border-gray-200 hover:border-blue-600 transition-all bg-white hover:bg-gray-50">
+                    <div class="text-5xl font-black text-blue-600 mb-6">01</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+                    <p class="text-gray-600 leading-relaxed text-lg">To deliver accurate, timely data that empowers businesses to make informed decisions.</p>
                 </div>
-                <div class="card-style p-8 reveal" style="transition-delay: 0.2s;">
-                    <i class="ri-shield-star-line text-4xl text-blue-500 mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Our Vision</h3>
-                    <p class="text-gray-600">To be the most trusted and technically proficient data extraction partner for enterprises worldwide.</p>
+                <div class="group p-10 border border-gray-200 hover:border-blue-600 transition-all bg-white hover:bg-gray-50">
+                    <div class="text-5xl font-black text-blue-600 mb-6">02</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
+                    <p class="text-gray-600 leading-relaxed text-lg">To be the most trusted data extraction partner for enterprises worldwide.</p>
                 </div>
-                <div class="card-style p-8 reveal" style="transition-delay: 0.4s;">
-                    <i class="ri-shake-hands-line text-4xl text-blue-500 mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Our Values</h3>
-                    <p class="text-gray-600">Excellence, Innovation, Transparency, and a deep commitment to our clients' success.</p>
+                <div class="group p-10 border border-gray-200 hover:border-orange-600 transition-all bg-white hover:bg-gray-50">
+                    <div class="text-5xl font-black text-orange-600 mb-6">03</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Values</h3>
+                    <p class="text-gray-600 leading-relaxed text-lg">Excellence, innovation, transparency, and commitment to client success.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="technology" class="py-20 lg:py-32">
-        <div class="container mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-12 reveal">
-                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">The Technology That Powers Us</h2>
-                <p class="text-gray-600 text-lg font-medium">We've built a robust, cloud-native infrastructure designed from the ground up to handle web data extraction at any scale, ensuring you get reliable data, every time.</p>
+    <!-- Stats -->
+    <section class="py-32 bg-gray-900 text-white">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="mb-20">
+                <div class="text-sm font-bold text-blue-400 uppercase tracking-widest mb-4">Stats</div>
+                <h2 class="text-5xl md:text-7xl font-black mb-6 leading-tight">By The<br/>Numbers</h2>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="card-style p-8 reveal"><i class="ri-braces-line text-3xl text-blue-500 mb-4"></i><h3 class="text-xl font-bold mb-2">Advanced Anti-Bot Evasion</h3><p class="text-gray-600 leading-relaxed">Our systems expertly navigate JavaScript-heavy sites, CAPTCHAs, and sophisticated anti-scraping measures to guarantee data delivery.</p></div>
-                <div class="card-style p-8 reveal" style="transition-delay: 0.1s;"><i class="ri-cloud-line text-3xl text-blue-500 mb-4"></i><h3 class="text-xl font-bold mb-2">Scalable Distributed Infrastructure</h3><p class="text-gray-600 leading-relaxed">Our cloud-based architecture allows us to process millions of data points efficiently, ensuring timely delivery for even the largest projects.</p></div>
-                <div class="card-style p-8 reveal" style="transition-delay: 0.2s;"><i class="ri-file-shield-2-line text-3xl text-blue-500 mb-4"></i><h3 class="text-xl font-bold mb-2">Data Quality & Validation</h3><p class="text-gray-600 leading-relaxed">Every data point goes through a rigorous automated validation and cleansing process to ensure a 99.9% accuracy rate.</p></div>
-                <div class="card-style p-8 reveal" style="transition-delay: 0.3s;"><i class="ri-flow-chart text-3xl text-blue-500 mb-4"></i><h3 class="text-xl font-bold mb-2">Flexible Integration</h3><p class="text-gray-600 leading-relaxed">We deliver clean, structured data in any format (JSON, CSV, XML) and to any destination, including API, S3, or your internal database.</p></div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+                <div>
+                    <div class="text-7xl md:text-8xl font-black text-blue-600 mb-2">500+</div>
+                    <div class="text-gray-400 text-lg">Companies</div>
+                </div>
+                <div>
+                    <div class="text-7xl md:text-8xl font-black text-blue-600 mb-2">8+</div>
+                    <div class="text-gray-400 text-lg">Years Experience</div>
+                </div>
+                <div>
+                    <div class="text-7xl md:text-8xl font-black text-orange-600 mb-2">99.9%</div>
+                    <div class="text-gray-400 text-lg">Uptime</div>
+                </div>
+                <div>
+                    <div class="text-7xl md:text-8xl font-black text-orange-600 mb-2">24/7</div>
+                    <div class="text-gray-400 text-lg">Support</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contact-shared" class="py-20 lg:py-32 hero-gradient text-white">
-        <div class="container mx-auto px-6 text-center reveal">
-            <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-4">Ready to Partner with Us?</h2>
-            <p class="max-w-2xl mx-auto text-lg text-blue-200 mb-8">Let's discuss your data challenges. Schedule a free, no-obligation strategy call to discover how Nextract can become an extension of your team.</p>
-            <a href="/#contact-shared" class="hero-cta-primary text-blue-800 font-bold py-4 px-8 text-lg">Schedule Your Free Strategy Call</a>
+    <section id="contact-shared" class="py-32 bg-gray-900 text-white">
+    <div class="container mx-auto px-6 max-w-7xl text-center">
+        <h2 class="text-5xl md:text-7xl font-black mb-8 leading-tight">
+            Ready to<br/>
+            <span class="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">Get Started?</span>
+        </h2>
+        <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+            Get in touch and we'll help you find the right solution for your data needs.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="/contact/" class="px-10 py-5 bg-white text-gray-900 font-bold text-lg hover:bg-blue-600 hover:text-white transition-all inline-flex items-center gap-2">
+                Contact Us
+                <i class="ri-arrow-right-line"></i>
+            </a>
+            <a href="https://calendly.com/parthravrani/30min" target="_blank" class="px-10 py-5 border-2 border-white text-white font-bold text-lg hover:bg-white hover:text-gray-900 transition-all inline-flex items-center gap-2">
+                <i class="ri-calendar-line"></i>
+                Schedule a Call
+            </a>
         </div>
-    </section>
+    </div>
+</section>
+
 </main>
 
 
-    <footer class="section-dark py-20 lg:py-24">
-    <div class="container mx-auto px-6">
-        <div class="grid lg:grid-cols-2 gap-16 items-start">
-            <div>
-                <h3 class="text-xl font-black tracking-tighter mb-4"><span class="gradient-text">N</span>EXTRACT</h3>
-                <p class="text-gray-400 mb-6 max-w-md">The data partner for growing businesses. We handle the engineering so you can focus on what you do best.</p>
-                <div class="space-y-4 text-gray-300">
-                    <div class="flex items-center gap-3"><i class="ri-phone-fill text-blue-400"></i><span>+91 85110-98799</span></div>
-                    <div class="flex items-center gap-3"><i class="ri-mail-send-fill text-blue-400"></i><span>hello@nextract.dev</span></div>
-                    <div class="flex items-start gap-3"><i class="ri-map-pin-2-fill text-blue-400 mt-1"></i><span>B-1308, Eastface, Ahmedabad, Gujarat 380058</span></div>
+    <footer class="bg-gray-900 text-white py-24">
+    <div class="container mx-auto px-6 max-w-7xl">
+        <!-- Main Footer Content -->
+        <div class="grid lg:grid-cols-4 gap-16 mb-20">
+            <!-- Company Info -->
+            <div class="lg:col-span-1">
+                <div class="mb-8">
+                    <h3 class="text-2xl font-black mb-2 text-white">
+                        Nextract
+                    </h3>
+                    <p class="text-sm text-gray-400 mb-2">Data Solutions</p>
+                </div>
+                <p class="text-gray-400 mb-8 leading-relaxed text-sm">
+                    The data partner for growing businesses. We handle the engineering so you can focus on what you do best.
+                </p>
+                
+                <!-- Quick Stats -->
+                <div class="grid grid-cols-2 gap-4 mb-8">
+                    <div class="p-4 border border-gray-800">
+                        <div class="text-3xl font-black text-blue-600 mb-1">500+</div>
+                        <div class="text-xs text-gray-400">Clients</div>
+                    </div>
+                    <div class="p-4 border border-gray-800">
+                        <div class="text-3xl font-black text-blue-600 mb-1">99.9%</div>
+                        <div class="text-xs text-gray-400">Uptime</div>
+                    </div>
+                </div>
+                
+                <!-- Social Links -->
+                <div class="flex gap-4">
+                    <a href="https://www.linkedin.com/company/nextract-data-solutions" target="_blank" class="w-10 h-10 border border-gray-800 hover:border-blue-600 hover:bg-blue-600 flex items-center justify-center transition-all group">
+                        <i class="ri-linkedin-box-fill text-gray-400 group-hover:text-white transition-colors"></i>
+                    </a>
+                    <a href="https://www.instagram.com/nextract.dev/" target="_blank" class="w-10 h-10 border border-gray-800 hover:border-blue-600 hover:bg-blue-600 flex items-center justify-center transition-all group">
+                        <i class="ri-instagram-line text-gray-400 group-hover:text-white transition-colors"></i>
+                    </a>
                 </div>
             </div>
+            
+            <!-- Solutions -->
             <div>
-                <h3 class="text-2xl font-bold text-white mb-6">Get in Touch</h3>
-                <form action="#" method="POST" class="space-y-4">
-                    <input type="text" name="name" placeholder="Your Name" class="form-input">
-                    <input type="email" name="email" placeholder="Your Email" class="form-input">
-                    <textarea name="message" rows="4" placeholder="Your Message" class="form-input"></textarea>
-                    <button type="submit" class="cta-primary text-white font-bold w-full py-3">Send Message</button>
-                </form>
+                <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-6">Solutions</div>
+                <ul class="space-y-4">
+                    <li><a href="/solutions/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
+                        <span class="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                        <span>Custom Scraping</span>
+                    </a></li>
+                    <li><a href="/solutions/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
+                        <span class="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                        <span>Data-as-a-Service</span>
+                    </a></li>
+                    <li><a href="/solutions/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
+                        <span class="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                        <span>Data Enrichment</span>
+                    </a></li>
+                </ul>
+            </div>
+            
+            <!-- Company -->
+            <div>
+                <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-6">Company</div>
+                <ul class="space-y-4">
+                    <li><a href="/about/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
+                        <span class="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                        <span>About Us</span>
+                    </a></li>
+                    <li><a href="/products/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
+                        <span class="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                        <span>Products</span>
+                    </a></li>
+                    <li><a href="/solutions/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
+                        <span class="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                        <span>Solutions</span>
+                    </a></li>
+                    <li><a href="/industries/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
+                        <span class="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                        <span>Industries</span>
+                    </a></li>
+                    <li><a href="/case-studies/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
+                        <span class="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                        <span>Case Studies</span>
+                    </a></li>
+                    <li><a href="/contact/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
+                        <span class="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                        <span>Contact</span>
+                    </a></li>
+                </ul>
+            </div>
+            
+            <!-- Legal -->
+            <div>
+                <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-6">Legal</div>
+                <ul class="space-y-4">
+                    <li><a href="/privacy/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
+                        <span class="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                        <span>Privacy Policy</span>
+                    </a></li>
+                    <li><a href="/terms/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
+                        <span class="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                        <span>Terms of Service</span>
+                    </a></li>
+                    <li><a href="/sla/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
+                        <span class="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                        <span>SLA</span>
+                    </a></li>
+                    <li><a href="/compliance/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
+                        <span class="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                        <span>Compliance</span>
+                    </a></li>
+                    <li><a href="/trust-security/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
+                        <span class="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                        <span>Trust & Security</span>
+                    </a></li>
+                </ul>
             </div>
         </div>
-         <div class="mt-16 border-t border-gray-700 pt-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div>
-                     <h4 class="font-bold text-white mb-4">Solutions</h4>
-                     <ul class="space-y-3 text-gray-400">
-                         <li><a href="/solutions/#solutions-detailed" class="hover:text-white">Custom Scraping</a></li>
-                         <li><a href="/solutions/#solutions-detailed" class="hover:text-white">Data-as-a-Service</a></li>
-                         <li><a href="/solutions/#solutions-detailed" class="hover:text-white">Data Enrichment</a></li>
-                     </ul>
+        
+        <!-- Contact Info Bar -->
+        <div class="border-t border-gray-800 pt-12 pb-12">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-blue-600 flex items-center justify-center flex-shrink-0">
+                        <i class="ri-mail-line text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Email</div>
+                        <a href="mailto:hello@nextract.dev" class="text-white hover:text-blue-600 transition-colors text-lg font-semibold">hello@nextract.dev</a>
+                    </div>
                 </div>
-                <div>
-                     <h4 class="font-bold text-white mb-4">Company</h4>
-                     <ul class="space-y-3 text-gray-400">
-                         <li><a href="/about/" class="hover:text-white">About Us</a></li>
-                         <li><a href="/#difference" class="hover:text-white">Why Nextract</a></li>
-                         <li><a href="#contact-shared" class="hover:text-white">Contact Us</a></li>
-                     </ul>
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-blue-600 flex items-center justify-center flex-shrink-0">
+                        <i class="ri-phone-line text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Phone</div>
+                        <a href="tel:+918511098799" class="text-white hover:text-blue-600 transition-colors text-lg font-semibold">+91 85110-98799</a>
+                    </div>
                 </div>
-                <div>
-                     <h4 class="font-bold text-white mb-4">Legal</h4>
-                     <ul class="space-y-3 text-gray-400">
-                        <li><a href="/privacy/" class="hover:text-white">Privacy Policy</a></li>
-                        <li><a href="/terms/" class="hover:text-white">Terms of Service</a></li>
-                        <li><a href="/sla/" class="hover:text-white">SLA</a></li>
-                     </ul>
-                </div>
-                <div class="text-gray-500">
-                    <h4 class="font-bold text-white mb-4">Connect</h4>
-                    <div class="flex space-x-4">
-                        <a href="#" class="hover:text-white transition-colors"><i class="ri-linkedin-box-fill text-2xl"></i></a>
-                        <a href="#" class="hover:text-white transition-colors"><i class="ri-twitter-x-line text-2xl"></i></a>
-                        <a href="#" class="hover:text-white transition-colors"><i class="ri-instagram-line text-2xl"></i></a>
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-orange-600 flex items-center justify-center flex-shrink-0">
+                        <i class="ri-map-pin-line text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Address</div>
+                        <div class="text-white text-lg font-semibold">B-1308, Eastface, Ahmedabad, Gujarat 380058</div>
                     </div>
                 </div>
             </div>
-         </div>
-         <div class="mt-8 border-t border-gray-700 pt-8 flex flex-col sm:flex-row justify-between items-center text-gray-500">
-            <p>&copy; 2025 Nextract. All Rights Reserved.</p>
-            <p class="font-bold mt-4 sm:mt-0">DMCA Protected</p>
-         </div>
+        </div>
+        
+        <!-- Bottom Bar -->
+        <div class="border-t border-gray-800 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex flex-col md:flex-row items-center gap-4 text-gray-400 text-sm">
+                    <p>&copy; 2025 Nextract Data Solutions Pvt Ltd. All Rights Reserved.</p>
+                </div>
+                <div class="flex items-center gap-6 text-sm">
+                    <div class="flex items-center gap-2 text-gray-400">
+                        <div class="w-1.5 h-1.5 bg-blue-600"></div>
+                        <span>GDPR Compliant</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-400">
+                        <div class="w-1.5 h-1.5 bg-blue-600"></div>
+                        <span>SOC 2 Certified</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-400">
+                        <div class="w-1.5 h-1.5 bg-blue-600"></div>
+                        <span>ISO 27001</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </footer>
+
     
     <script src="/assets/js/script.js"></script>
 </body>

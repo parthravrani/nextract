@@ -22,7 +22,7 @@ keywords: "contact nextract, web scraping contact, data extraction contact, get 
                 </h1>
                 <p class="text-2xl md:text-3xl text-gray-600 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
                     Have questions? We're here to help.<br/>
-                    <span class="font-semibold text-gray-900">Reach out and we'll get back to you within 2 hours.</span>
+                    <span class="font-semibold text-gray-900">Whether you need our API or custom solutions, reach out and we'll get back to you within 2 hours.</span>
                 </p>
             </div>
         </div>
@@ -49,8 +49,19 @@ keywords: "contact nextract, web scraping contact, data extraction contact, get 
                             <input type="text" id="company" name="company" class="w-full px-4 py-4 border border-gray-200 focus:outline-none focus:border-blue-600 transition-all text-gray-900">
                         </div>
                         <div>
+                            <label for="interest" class="block text-sm font-bold text-gray-900 mb-2">I'm Interested In <span class="text-orange-600">*</span></label>
+                            <select id="interest" name="interest" required class="w-full px-4 py-4 border border-gray-200 focus:outline-none focus:border-blue-600 transition-all text-gray-900">
+                                <option value="">Select an option</option>
+                                <option value="api">Self-Service API</option>
+                                <option value="custom">Custom Scraping Solutions</option>
+                                <option value="managed">Managed Services</option>
+                                <option value="consulting">Consulting & Strategy</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div>
                             <label for="message" class="block text-sm font-bold text-gray-900 mb-2">Message <span class="text-orange-600">*</span></label>
-                            <textarea id="message" name="message" rows="6" required class="w-full px-4 py-4 border border-gray-200 focus:outline-none focus:border-blue-600 transition-all resize-none text-gray-900"></textarea>
+                            <textarea id="message" name="message" rows="6" required class="w-full px-4 py-4 border border-gray-200 focus:outline-none focus:border-blue-600 transition-all resize-none text-gray-900" placeholder="Tell us about your data extraction needs..."></textarea>
                         </div>
                         <input type="text" name="_gotcha" style="display:none">
                         <button type="submit" class="w-full px-10 py-5 bg-gray-900 text-white font-bold text-lg hover:bg-blue-600 transition-all group">
@@ -65,6 +76,24 @@ keywords: "contact nextract, web scraping contact, data extraction contact, get 
 
                 <!-- Contact Info -->
                 <div class="space-y-6">
+                    <div class="p-10 border border-gray-200 bg-gray-50">
+                        <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-6">What We Offer</div>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="font-bold text-gray-900 mb-1">Self-Service API</div>
+                                <div class="text-gray-600 text-sm">Instant access, pay-as-you-go pricing</div>
+                            </div>
+                            <div>
+                                <div class="font-bold text-gray-900 mb-1">Custom Solutions</div>
+                                <div class="text-gray-600 text-sm">Tailored development for your unique needs</div>
+                            </div>
+                            <div>
+                                <div class="font-bold text-gray-900 mb-1">Managed Services</div>
+                                <div class="text-gray-600 text-sm">24/7 monitoring and maintenance</div>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="p-10 border border-gray-200">
                         <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-6">Contact Information</div>
                         <div class="space-y-8">
