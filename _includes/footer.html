@@ -240,25 +240,32 @@
             </div>
         </div>
         
-        <!-- Bottom Bar -->
-        <div class="border-t border-gray-800 pt-10">
+        <!-- Compliance Badges Section -->
+        <div class="border-t border-gray-800 pt-10 pb-6">
             <div class="flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="text-gray-400 text-sm font-medium">
                     <p>&copy; {{ 'now' | date: "%Y" }} Nextract Data Solutions Pvt Ltd. All Rights Reserved.</p>
                 </div>
-                <div class="flex items-center gap-6 text-sm">
-                    <div class="flex items-center gap-2 text-gray-400 px-3 py-1.5 bg-gray-800/50 border border-gray-700 hover:border-blue-600 transition-all group cursor-default">
-                        <div class="w-2 h-2 bg-blue-600 group-hover:scale-125 transition-transform"></div>
-                        <span class="font-semibold">GDPR Compliant</span>
+                <!-- Compliance Badges -->
+                <div class="flex flex-col items-end gap-3">
+                    <div class="flex flex-wrap items-center justify-end gap-4">
+                        <div class="flex items-center gap-2 text-gray-300 px-3 py-1.5 bg-gray-800/50 border border-gray-700 rounded-lg">
+                            <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                            <span class="font-semibold text-xs">GDPR Compliant</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-300 px-3 py-1.5 bg-gray-800/50 border border-gray-700 rounded-lg">
+                            <div class="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                            <span class="font-semibold text-xs">SOC 2 In Progress</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-300 px-3 py-1.5 bg-gray-800/50 border border-gray-700 rounded-lg">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                            <span class="font-semibold text-xs">ISO 27001 Partners</span>
+                        </div>
                     </div>
-                    <div class="flex items-center gap-2 text-gray-400 px-3 py-1.5 bg-gray-800/50 border border-gray-700 hover:border-blue-600 transition-all group cursor-default">
-                        <div class="w-2 h-2 bg-blue-600 group-hover:scale-125 transition-transform"></div>
-                        <span class="font-semibold">SOC 2 Certified</span>
-                    </div>
-                    <div class="flex items-center gap-2 text-gray-400 px-3 py-1.5 bg-gray-800/50 border border-gray-700 hover:border-blue-600 transition-all group cursor-default">
-                        <div class="w-2 h-2 bg-blue-600 group-hover:scale-125 transition-transform"></div>
-                        <span class="font-semibold">ISO 27001</span>
-                    </div>
+                    <!-- Compliance Disclaimer - Small Text Below -->
+                    <p class="text-[9px] text-gray-600 leading-tight max-w-[320px] text-right opacity-70">
+                        Compliance: GDPR compliant. SOC 2 in progress. ISO 27001 via partners.
+                    </p>
                 </div>
             </div>
         </div>

@@ -1,10 +1,11 @@
-<header id="main-header" class="bg-white border-b-2 border-gray-200 shadow-lg">
-    <div class="container mx-auto px-6 py-4 max-w-7xl">
+<header id="main-header" class="bg-white border-b border-gray-100 shadow-sm sticky z-40 backdrop-blur-sm bg-white/95" style="top: 40px;">
+    <div class="container mx-auto px-4 lg:px-6 max-w-7xl">
         
-        <!-- Top Row: Logo and Mobile Menu -->
-        <div class="flex items-center justify-between mb-4 lg:mb-0">
+        <!-- Main Navbar -->
+        <div class="flex items-center justify-between h-20">
+            
             <!-- Logo -->
-            <div class="flex-1 flex justify-start">
+            <div class="flex-shrink-0">
                 <a href="{{ '/' | relative_url }}" class="flex items-center gap-3 cursor-pointer group">
                     <div class="relative">
                         <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Nextract Logo" class="h-10 w-auto transition-transform group-hover:scale-105">
@@ -20,118 +21,243 @@
                 </a>
             </div>
 
-            <!-- Get Started Button and Pitch Deck - Desktop Only -->
-            <div class="hidden lg:flex items-center gap-4">
-                <div class="h-6 w-px bg-gray-300"></div>
-                <a href="{{ '/assets/deck/Nextract Data Solutions - Pitch Deck.pdf' | relative_url }}" download="Nextract-Pitch-Deck.pdf" class="px-5 py-2.5 border-2 border-gray-900 text-gray-900 font-bold text-sm hover:bg-gray-900 hover:text-white transition-all inline-flex items-center gap-2 group">
-                    <i class="ri-download-line"></i>
-                    Pitch Deck
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-1 flex-1 justify-center">
+                
+                <!-- Products Dropdown -->
+                <div class="nav-dropdown group relative">
+                    <button class="nav-link flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-gray-700 hover:text-blue-600 transition-all rounded-lg hover:bg-gray-50{% if page.url == '/products/' or page.url contains '/scrapers/' or page.url contains '/apis/' or page.url contains '/datasets/' %} text-blue-600 bg-blue-50{% endif %}">
+                        Products
+                        <i class="ri-arrow-down-s-line text-base transition-transform group-hover:rotate-180"></i>
+                    </button>
+                    <div class="nav-dropdown-menu absolute top-full left-0 mt-2 w-[400px] bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                        <div class="p-8">
+                            <div class="mb-6 pb-4 border-b border-gray-100">
+                                <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wider">Our Products</h3>
+                            </div>
+                            <div class="space-y-2">
+                                <a href="/products/" class="flex items-start gap-4 p-4 rounded-xl hover:bg-blue-50 transition-all group/item border border-transparent hover:border-blue-100">
+                                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center group-hover/item:bg-blue-600 transition-colors">
+                                        <i class="ri-code-s-slash-line text-blue-600 group-hover/item:text-white text-xl"></i>
+                                    </div>
+                                    <div class="flex-1 pt-1">
+                                        <div class="font-bold text-gray-900 group-hover/item:text-blue-600 transition-colors text-base mb-1">API</div>
+                                        <div class="text-sm text-gray-500">Self-service web scraping API</div>
+                                    </div>
+                                </a>
+                                <a href="/scrapers/" class="flex items-start gap-4 p-4 rounded-xl hover:bg-purple-50 transition-all group/item border border-transparent hover:border-purple-100">
+                                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center group-hover/item:bg-purple-600 transition-colors">
+                                        <i class="ri-scissors-cut-line text-purple-600 group-hover/item:text-white text-xl"></i>
+                                    </div>
+                                    <div class="flex-1 pt-1">
+                                        <div class="font-bold text-gray-900 group-hover/item:text-purple-600 transition-colors text-base mb-1">Scrapers</div>
+                                        <div class="text-sm text-gray-500">Platform-specific scrapers</div>
+                                    </div>
+                                </a>
+                                <a href="/apis/" class="flex items-start gap-4 p-4 rounded-xl hover:bg-green-50 transition-all group/item border border-transparent hover:border-green-100">
+                                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center group-hover/item:bg-green-600 transition-colors">
+                                        <i class="ri-plug-line text-green-600 group-hover/item:text-white text-xl"></i>
+                                    </div>
+                                    <div class="flex-1 pt-1">
+                                        <div class="font-bold text-gray-900 group-hover/item:text-green-600 transition-colors text-base mb-1">APIs</div>
+                                        <div class="text-sm text-gray-500">Ready-to-use data APIs</div>
+                                    </div>
+                                </a>
+                                <a href="/datasets/" class="flex items-start gap-4 p-4 rounded-xl hover:bg-orange-50 transition-all group/item border border-transparent hover:border-orange-100">
+                                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center group-hover/item:bg-orange-600 transition-colors">
+                                        <i class="ri-database-2-line text-orange-600 group-hover/item:text-white text-xl"></i>
+                                    </div>
+                                    <div class="flex-1 pt-1">
+                                        <div class="font-bold text-gray-900 group-hover/item:text-orange-600 transition-colors text-base mb-1">Datasets</div>
+                                        <div class="text-sm text-gray-500">Pre-built data collections</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services Dropdown -->
+                <div class="nav-dropdown group relative">
+                    <button class="nav-link flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-gray-700 hover:text-blue-600 transition-all rounded-lg hover:bg-gray-50{% if page.url contains '/services/' or page.url contains '/solutions/' %} text-blue-600 bg-blue-50{% endif %}">
+                        Services
+                        <i class="ri-arrow-down-s-line text-base transition-transform group-hover:rotate-180"></i>
+                    </button>
+                    <div class="nav-dropdown-menu absolute top-full left-0 mt-2 w-[360px] bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                        <div class="p-8">
+                            <div class="mb-6 pb-4 border-b border-gray-100">
+                                <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wider">Our Services</h3>
+                            </div>
+                            <div class="space-y-3">
+                                <a href="/services/" class="flex items-start gap-4 p-5 rounded-xl hover:bg-blue-50 transition-all group/item border border-transparent hover:border-blue-100">
+                                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center group-hover/item:bg-blue-600 transition-colors">
+                                        <i class="ri-service-line text-blue-600 group-hover/item:text-white text-xl"></i>
+                                    </div>
+                                    <div class="flex-1 pt-1">
+                                        <div class="font-bold text-gray-900 group-hover/item:text-blue-600 transition-colors text-base mb-1">All Services</div>
+                                        <div class="text-sm text-gray-500">Industry-specific scraping</div>
+                                    </div>
+                                </a>
+                                <a href="/solutions/" class="flex items-start gap-4 p-5 rounded-xl hover:bg-indigo-50 transition-all group/item border border-transparent hover:border-indigo-100">
+                                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-indigo-100 flex items-center justify-center group-hover/item:bg-indigo-600 transition-colors">
+                                        <i class="ri-tools-line text-indigo-600 group-hover/item:text-white text-xl"></i>
+                                    </div>
+                                    <div class="flex-1 pt-1">
+                                        <div class="font-bold text-gray-900 group-hover/item:text-indigo-600 transition-colors text-base mb-1">Custom Solutions</div>
+                                        <div class="text-sm text-gray-500">Tailored data extraction</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Industries -->
+                <a href="/industries/" class="nav-link px-4 py-2.5 text-sm font-semibold text-gray-700 hover:text-blue-600 transition-all rounded-lg hover:bg-gray-50{% if page.url contains '/industries/' %} text-blue-600 bg-blue-50{% endif %}">
+                    Industries
                 </a>
-                <a href="/contact/" class="px-6 py-2.5 bg-gray-900 text-white font-bold text-sm hover:bg-blue-600 transition-all inline-flex items-center gap-2 group shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-                    Get Started
-                    <span class="group-hover:translate-x-1 transition-transform">→</span>
+
+                <!-- Resources Dropdown -->
+                <div class="nav-dropdown group relative">
+                    <button class="nav-link flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-gray-700 hover:text-blue-600 transition-all rounded-lg hover:bg-gray-50{% if page.url contains '/case-studies/' or page.url contains '/intelligence/' or page.url == '/testimonials/' or page.url == '/faq/' %} text-blue-600 bg-blue-50{% endif %}">
+                        Resources
+                        <i class="ri-arrow-down-s-line text-base transition-transform group-hover:rotate-180"></i>
+                    </button>
+                    <div class="nav-dropdown-menu absolute top-full left-0 mt-2 w-[400px] bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                        <div class="p-8">
+                            <div class="mb-6 pb-4 border-b border-gray-100">
+                                <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wider">Resources</h3>
+                            </div>
+                            <div class="space-y-2">
+                                <a href="/case-studies/" class="flex items-start gap-4 p-4 rounded-xl hover:bg-blue-50 transition-all group/item border border-transparent hover:border-blue-100">
+                                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center group-hover/item:bg-blue-600 transition-colors">
+                                        <i class="ri-file-list-3-line text-blue-600 group-hover/item:text-white text-xl"></i>
+                                    </div>
+                                    <div class="flex-1 pt-1">
+                                        <div class="font-bold text-gray-900 group-hover/item:text-blue-600 transition-colors text-base mb-1">Case Studies</div>
+                                        <div class="text-sm text-gray-500">Success stories</div>
+                                    </div>
+                                </a>
+                                <a href="/intelligence/" class="flex items-start gap-4 p-4 rounded-xl hover:bg-purple-50 transition-all group/item border border-transparent hover:border-purple-100">
+                                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center group-hover/item:bg-purple-600 transition-colors">
+                                        <i class="ri-brain-line text-purple-600 group-hover/item:text-white text-xl"></i>
+                                    </div>
+                                    <div class="flex-1 pt-1">
+                                        <div class="font-bold text-gray-900 group-hover/item:text-purple-600 transition-colors text-base mb-1">Intelligence</div>
+                                        <div class="text-sm text-gray-500">Data insights</div>
+                                    </div>
+                                </a>
+                                <a href="/testimonials/" class="flex items-start gap-4 p-4 rounded-xl hover:bg-yellow-50 transition-all group/item border border-transparent hover:border-yellow-100">
+                                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-yellow-100 flex items-center justify-center group-hover/item:bg-yellow-600 transition-colors">
+                                        <i class="ri-star-line text-yellow-600 group-hover/item:text-white text-xl"></i>
+                                    </div>
+                                    <div class="flex-1 pt-1">
+                                        <div class="font-bold text-gray-900 group-hover/item:text-yellow-600 transition-colors text-base mb-1">Testimonials</div>
+                                        <div class="text-sm text-gray-500">Client reviews</div>
+                                    </div>
+                                </a>
+                                <a href="/faq/" class="flex items-start gap-4 p-4 rounded-xl hover:bg-green-50 transition-all group/item border border-transparent hover:border-green-100">
+                                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center group-hover/item:bg-green-600 transition-colors">
+                                        <i class="ri-question-line text-green-600 group-hover/item:text-white text-xl"></i>
+                                    </div>
+                                    <div class="flex-1 pt-1">
+                                        <div class="font-bold text-gray-900 group-hover/item:text-green-600 transition-colors text-base mb-1">FAQ</div>
+                                        <div class="text-sm text-gray-500">Common questions</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company Dropdown -->
+                <div class="nav-dropdown group relative">
+                    <button class="nav-link flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-gray-700 hover:text-blue-600 transition-all rounded-lg hover:bg-gray-50{% if page.url == '/about/' or page.url == '/contact/' %} text-blue-600 bg-blue-50{% endif %}">
+                        Company
+                        <i class="ri-arrow-down-s-line text-base transition-transform group-hover:rotate-180"></i>
+                    </button>
+                    <div class="nav-dropdown-menu absolute top-full left-0 mt-2 w-[320px] bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                        <div class="p-8">
+                            <div class="mb-6 pb-4 border-b border-gray-100">
+                                <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wider">Company</h3>
+                            </div>
+                            <div class="space-y-2">
+                                <a href="/about/" class="flex items-center gap-4 p-4 rounded-xl hover:bg-blue-50 transition-all group/item border border-transparent hover:border-blue-100">
+                                    <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center group-hover/item:bg-blue-600 transition-colors">
+                                        <i class="ri-information-line text-blue-600 group-hover/item:text-white text-lg"></i>
+                                    </div>
+                                    <span class="font-bold text-gray-900 group-hover/item:text-blue-600 transition-colors text-base">About Us</span>
+                                </a>
+                                <a href="/contact/" class="flex items-center gap-4 p-4 rounded-xl hover:bg-blue-50 transition-all group/item border border-transparent hover:border-blue-100">
+                                    <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center group-hover/item:bg-blue-600 transition-colors">
+                                        <i class="ri-mail-line text-blue-600 group-hover/item:text-white text-lg"></i>
+                                    </div>
+                                    <span class="font-bold text-gray-900 group-hover/item:text-blue-600 transition-colors text-base">Contact</span>
+                                </a>
+                            </div>
+                            <div class="mt-6 pt-6 border-t border-gray-100">
+                                <div class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-3">Legal</div>
+                                <div class="space-y-2">
+                                    <a href="/trust-security/" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-all text-sm text-gray-600 hover:text-gray-900">
+                                        <i class="ri-shield-check-line text-base"></i>
+                                        <span class="font-medium">Trust & Security</span>
+                                    </a>
+                                    <a href="/terms/" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-all text-sm text-gray-600 hover:text-gray-900">
+                                        <i class="ri-file-text-line text-base"></i>
+                                        <span class="font-medium">Terms</span>
+                                    </a>
+                                    <a href="/privacy/" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-all text-sm text-gray-600 hover:text-gray-900">
+                                        <i class="ri-lock-line text-base"></i>
+                                        <span class="font-medium">Privacy</span>
+                                    </a>
+                                    <a href="/sla/" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-all text-sm text-gray-600 hover:text-gray-900">
+                                        <i class="ri-time-line text-base"></i>
+                                        <span class="font-medium">SLA</span>
+                                    </a>
+                                    <a href="/compliance/" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-all text-sm text-gray-600 hover:text-gray-900">
+                                        <i class="ri-checkbox-circle-line text-base"></i>
+                                        <span class="font-medium">Compliance</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </nav>
+
+            <!-- Right Side Actions -->
+            <div class="hidden lg:flex items-center gap-3 flex-shrink-0">
+                <a href="{{ '/assets/deck/Nextract Data Solutions - Pitch Deck.pdf' | relative_url }}" download="Nextract-Pitch-Deck.pdf" class="px-4 py-2 border-2 border-gray-300 text-gray-700 font-semibold text-sm hover:border-gray-900 hover:text-gray-900 hover:bg-gray-50 transition-all inline-flex items-center gap-2 rounded-lg group">
+                    <i class="ri-download-line"></i>
+                    <span>Pitch Deck</span>
+                </a>
+                <a href="/contact/" class="px-5 py-2.5 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold text-sm hover:from-blue-700 hover:to-blue-800 transition-all inline-flex items-center gap-2 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 group">
+                    <span>Get Started</span>
+                    <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
                 </a>
             </div>
 
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="lg:hidden p-2.5 hover:bg-gray-50 transition-colors group">
+            <button id="mobile-menu-button" class="lg:hidden p-2.5 hover:bg-gray-50 transition-colors rounded-lg group">
                 <i class="ri-menu-3-line text-2xl text-gray-900 group-hover:text-blue-600 transition-colors"></i>
             </button>
         </div>
-        
-        <!-- Desktop Navigation -->
-        <div class="hidden lg:block">
-            <!-- Primary Navigation Row -->
-            <nav class="flex items-center gap-3 mb-4 pb-4 border-b border-gray-200">
-                <!-- Products Group -->
-                <div class="flex items-center gap-2">
-                    <a href="/products/" class="text-gray-900 hover:text-blue-600 transition-colors py-2 px-4 relative group text-sm font-bold{% if page.url == '/products/' %} text-blue-600{% endif %}">
-                        <span>Products</span>
-                        <span class="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 {% if page.url == '/products/' %}scale-x-100{% else %}scale-x-0 group-hover:scale-x-100{% endif %} transition-transform duration-300 origin-left"></span>
-                    </a>
-                    <a href="/scrapers/" class="text-gray-700 hover:text-blue-600 transition-colors py-2 px-3 relative group text-sm font-medium{% if page.url contains '/scrapers/' %} text-blue-600 font-bold{% endif %}">
-                        <span>Scrapers</span>
-                        <span class="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 {% if page.url contains '/scrapers/' %}scale-x-100{% else %}scale-x-0 group-hover:scale-x-100{% endif %} transition-transform duration-300 origin-left"></span>
-                    </a>
-                    <a href="/apis/" class="text-gray-700 hover:text-blue-600 transition-colors py-2 px-3 relative group text-sm font-medium{% if page.url contains '/apis/' %} text-blue-600 font-bold{% endif %}">
-                        <span>APIs</span>
-                        <span class="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 {% if page.url contains '/apis/' %}scale-x-100{% else %}scale-x-0 group-hover:scale-x-100{% endif %} transition-transform duration-300 origin-left"></span>
-                    </a>
-                    <a href="/datasets/" class="text-gray-700 hover:text-blue-600 transition-colors py-2 px-3 relative group text-sm font-medium{% if page.url contains '/datasets/' %} text-blue-600 font-bold{% endif %}">
-                        <span>Datasets</span>
-                        <span class="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 {% if page.url contains '/datasets/' %}scale-x-100{% else %}scale-x-0 group-hover:scale-x-100{% endif %} transition-transform duration-300 origin-left"></span>
-                    </a>
-                </div>
-                
-                <span class="text-gray-300 text-lg">|</span>
-                
-                <!-- Services Group -->
-                <div class="flex items-center gap-2">
-                    <a href="/services/" class="text-gray-900 hover:text-blue-600 transition-colors py-2 px-4 relative group text-sm font-bold{% if page.url contains '/services/' %} text-blue-600{% endif %}">
-                        <span>Services</span>
-                        <span class="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 {% if page.url contains '/services/' %}scale-x-100{% else %}scale-x-0 group-hover:scale-x-100{% endif %} transition-transform duration-300 origin-left"></span>
-                    </a>
-                    <a href="/solutions/" class="text-gray-700 hover:text-blue-600 transition-colors py-2 px-3 relative group text-sm font-medium{% if page.url contains '/solutions/' %} text-blue-600 font-bold{% endif %}">
-                        <span>Solutions</span>
-                        <span class="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 {% if page.url contains '/solutions/' %}scale-x-100{% else %}scale-x-0 group-hover:scale-x-100{% endif %} transition-transform duration-300 origin-left"></span>
-                    </a>
-                </div>
-                
-                <span class="text-gray-300 text-lg">|</span>
-                
-                <!-- Resources Group -->
-                <div class="flex items-center gap-2">
-                    <a href="/industries/" class="text-gray-900 hover:text-blue-600 transition-colors py-2 px-4 relative group text-sm font-bold{% if page.url contains '/industries/' %} text-blue-600{% endif %}">
-                        <span>Industries</span>
-                        <span class="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 {% if page.url contains '/industries/' %}scale-x-100{% else %}scale-x-0 group-hover:scale-x-100{% endif %} transition-transform duration-300 origin-left"></span>
-                    </a>
-                    <a href="/intelligence/" class="text-gray-700 hover:text-blue-600 transition-colors py-2 px-3 relative group text-sm font-medium{% if page.url contains '/intelligence/' %} text-blue-600 font-bold{% endif %}">
-                        <span>Intelligence</span>
-                        <span class="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 {% if page.url contains '/intelligence/' %}scale-x-100{% else %}scale-x-0 group-hover:scale-x-100{% endif %} transition-transform duration-300 origin-left"></span>
-                    </a>
-                    <a href="/case-studies/" class="text-gray-700 hover:text-blue-600 transition-colors py-2 px-3 relative group text-sm font-medium{% if page.url contains '/case-studies/' %} text-blue-600 font-bold{% endif %}">
-                        <span>Case Studies</span>
-                        <span class="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 {% if page.url contains '/case-studies/' %}scale-x-100{% else %}scale-x-0 group-hover:scale-x-100{% endif %} transition-transform duration-300 origin-left"></span>
-                    </a>
-                </div>
-                
-                <span class="text-gray-300 text-lg">|</span>
-                
-                <!-- Company Group -->
-                <div class="flex items-center gap-2">
-                    <a href="/about/" class="text-gray-900 hover:text-blue-600 transition-colors py-2 px-4 relative group text-sm font-bold{% if page.url == '/about/' %} text-blue-600{% endif %}">
-                        <span>About</span>
-                        <span class="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 {% if page.url == '/about/' %}scale-x-100{% else %}scale-x-0 group-hover:scale-x-100{% endif %} transition-transform duration-300 origin-left"></span>
-                    </a>
-                    <a href="/contact/" class="text-gray-700 hover:text-blue-600 transition-colors py-2 px-3 relative group text-sm font-medium{% if page.url == '/contact/' %} text-blue-600 font-bold{% endif %}">
-                        <span>Contact</span>
-                        <span class="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 {% if page.url == '/contact/' %}scale-x-100{% else %}scale-x-0 group-hover:scale-x-100{% endif %} transition-transform duration-300 origin-left"></span>
-                    </a>
-                </div>
-            </nav>
-            
-            <!-- Secondary Navigation Row (Support & Legal) -->
-            <nav class="flex items-center gap-4 text-xs">
-                <a href="/testimonials/" class="text-gray-500 hover:text-gray-900 transition-colors font-semibold px-3 py-1.5 hover:bg-gray-50{% if page.url == '/testimonials/' %} text-gray-900 bg-gray-50{% endif %}">
-                    Testimonials
-                </a>
-                <span class="text-gray-300">•</span>
-                <a href="/faq/" class="text-gray-500 hover:text-gray-900 transition-colors font-semibold px-3 py-1.5 hover:bg-gray-50{% if page.url == '/faq/' %} text-gray-900 bg-gray-50{% endif %}">
-                    FAQ
-                </a>
-                <span class="text-gray-300">•</span>
-                <a href="/trust-security/" class="text-gray-500 hover:text-gray-900 transition-colors font-semibold px-3 py-1.5 hover:bg-gray-50{% if page.url == '/trust-security/' %} text-gray-900 bg-gray-50{% endif %}">
-                    Trust & Security
-                </a>
-                <span class="text-gray-300">•</span>
-                <a href="/terms/" class="text-gray-500 hover:text-gray-900 transition-colors font-semibold px-3 py-1.5 hover:bg-gray-50{% if page.url == '/terms/' %} text-gray-900 bg-gray-50{% endif %}">
-                    Terms
-                </a>
-                <span class="text-gray-300">•</span>
-                <a href="/privacy/" class="text-gray-500 hover:text-gray-900 transition-colors font-semibold px-3 py-1.5 hover:bg-gray-50{% if page.url == '/privacy/' %} text-gray-900 bg-gray-50{% endif %}">
-                    Privacy
-                </a>
-            </nav>
-        </div>
     </div>
+
+    <!-- CSS for dropdown hover persistence -->
+    <style>
+        .nav-dropdown:hover .nav-dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        /* Keep dropdown open when hovering over it */
+        .nav-dropdown-menu:hover {
+            opacity: 1 !important;
+            visibility: visible !important;
+            transform: translateY(0) !important;
+        }
+    </style>
 </header>
