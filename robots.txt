@@ -9,5 +9,19 @@ Disallow: /_site/
 Disallow: /vendor/
 Disallow: /.jekyll-cache/
 Disallow: /.sass-cache/
+Disallow: /node_modules/
+Disallow: /generate-pdfs.js
+Disallow: /*.pdf$
+
+# Allow important pages
+Allow: /products/
+Allow: /solutions/
+Allow: /industries/
+Allow: /case-studies/
+Allow: /about/
+Allow: /contact/
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
 
 

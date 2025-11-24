@@ -10,12 +10,28 @@
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
     <meta name="author" content="{{ site.title }}">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="language" content="English">
     <meta name="revisit-after" content="7 days">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    <meta name="geo.region" content="IN-GJ">
+    <meta name="geo.placename" content="Ahmedabad">
+    <meta name="geo.position" content="23.0225;72.5714">
+    <meta name="ICBM" content="23.0225, 72.5714">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ site.canonical_url }}{{ page.url }}">
+    
+    <!-- Alternate Languages (Ready for International SEO) -->
+    <link rel="alternate" hreflang="en" href="{{ site.canonical_url }}{{ page.url }}">
+    <link rel="alternate" hreflang="x-default" href="{{ site.canonical_url }}{{ page.url }}">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
@@ -31,6 +47,9 @@
     <meta property="og:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.canonical_url }}/assets/images/og-image.jpg{% endif %}">
     <meta property="og:site_name" content="{{ site.title }}">
     <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="article:author" content="{{ site.title }}">
+    <meta property="article:publisher" content="{{ site.canonical_url }}">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
@@ -40,11 +59,14 @@
     <meta name="twitter:image" content="{% if page.twitter_image %}{{ page.twitter_image }}{% else %}{{ site.canonical_url }}/assets/images/twitter-image.jpg{% endif %}">
     
     <!-- Structured Data (JSON-LD) -->
+    {% if page.url == '/' %}
+    <!-- Organization Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "{% if page.url == '/' %}Organization{% else %}WebPage{% endif %}",
-      {% if page.url == '/' %}"name": "{{ site.title }}",
+      "@type": "Organization",
+      "name": "{{ site.title }}",
+      "alternateName": "Nextract Data Solutions",
       "url": "{{ site.canonical_url }}",
       "logo": "{{ site.canonical_url }}/assets/images/logo.png",
       "description": "{{ site.description }}",
@@ -66,7 +88,38 @@
       "numberOfEmployees": {
         "@type": "QuantitativeValue",
         "value": "10-50"
-      }{% else %}"name": "{{ page.title }} | {{ site.title }}",
+      },
+      "areaServed": "Worldwide",
+      "serviceType": "Web Scraping API and Data Extraction Services",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "150"
+      }
+    }
+    </script>
+    
+    <!-- WebSite Schema with SearchAction -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "{{ site.title }}",
+      "url": "{{ site.canonical_url }}",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "{{ site.canonical_url }}/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    {% else %}
+    <!-- WebPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "{{ page.title }} | {{ site.title }}",
       "url": "{{ site.canonical_url }}{{ page.url }}",
       "description": "{{ page.description | default: site.description }}",
       "inLanguage": "en-US",
@@ -74,9 +127,74 @@
         "@type": "WebSite",
         "name": "{{ site.title }}",
         "url": "{{ site.canonical_url }}"
-      }{% endif %}
+      },
+      "about": {
+        "@type": "Organization",
+        "name": "{{ site.title }}"
+      },
+      "datePublished": "{{ site.time | date: '%Y-%m-%d' }}",
+      "dateModified": "{{ site.time | date: '%Y-%m-%d' }}"
     }
     </script>
+    
+    {% if page.url contains '/products/' %}
+    <!-- Service Schema for Products Page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Web Scraping API",
+      "provider": {
+        "@type": "Organization",
+        "name": "{{ site.title }}"
+      },
+      "areaServed": "Worldwide",
+      "description": "{{ page.description }}",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "{{ site.canonical_url }}{{ page.url }}"
+      }
+    }
+    </script>
+    {% endif %}
+    
+    {% if page.url contains '/solutions/' %}
+    <!-- Service Schema for Solutions Page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Custom Web Scraping Solutions",
+      "provider": {
+        "@type": "Organization",
+        "name": "{{ site.title }}"
+      },
+      "areaServed": "Worldwide",
+      "description": "{{ page.description }}"
+    }
+    </script>
+    {% endif %}
+    
+    {% if page.url contains '/industries/' %}
+    <!-- Service Schema for Industry Pages -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "{{ page.category }} Data Scraping Services",
+      "provider": {
+        "@type": "Organization",
+        "name": "{{ site.title }}"
+      },
+      "areaServed": "Worldwide",
+      "description": "{{ page.description }}"
+    }
+    </script>
+    {% endif %}
+    {% endif %}
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -343,11 +461,90 @@
         .number-animate {
             animation: countUp 0.8s ease-out forwards;
         }
+        
+        /* Marquee/Ticker Animation */
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            width: 100%;
+        }
+        
+        .marquee-content {
+            display: inline-flex;
+            animation: marquee 25s linear infinite;
+            will-change: transform;
+        }
+        
+        .marquee-content:hover {
+            animation-play-state: paused;
+        }
+        
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-33.333%);
+            }
+        }
+        
+        /* Ensure smooth scrolling */
+        .marquee-content span {
+            display: inline-flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+        
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .marquee-content {
+                font-size: 0.875rem;
+            }
+            .marquee-content span {
+                gap: 0.5rem;
+            }
+        }
     </style>
 
     {% seo %}
 </head>
 <body class="antialiased">
+    <!-- Black Friday Ticker Banner -->
+    <div class="sticky top-0 left-0 right-0 bg-gradient-to-r from-orange-600 to-red-600 text-white py-2.5 overflow-hidden z-50 shadow-lg">
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <span class="inline-flex items-center gap-4 mx-8 whitespace-nowrap">
+                    <span class="text-lg md:text-xl">🎉</span>
+                    <span class="font-bold uppercase tracking-widest text-xs md:text-sm">Black Friday Special</span>
+                    <span class="font-bold text-base md:text-lg">Get 30% OFF on All Services</span>
+                    <span class="text-xs md:text-sm opacity-90 hidden md:inline">Limited time offer - Contact us now!</span>
+                    <a href="/contact/" class="px-3 md:px-4 py-1 bg-white text-orange-600 font-bold hover:bg-gray-100 transition-colors rounded text-xs md:text-sm whitespace-nowrap">
+                        Claim Discount →
+                    </a>
+                </span>
+                <span class="inline-flex items-center gap-4 mx-8 whitespace-nowrap">
+                    <span class="text-lg md:text-xl">🎉</span>
+                    <span class="font-bold uppercase tracking-widest text-xs md:text-sm">Black Friday Special</span>
+                    <span class="font-bold text-base md:text-lg">Get 30% OFF on All Services</span>
+                    <span class="text-xs md:text-sm opacity-90 hidden md:inline">Limited time offer - Contact us now!</span>
+                    <a href="/contact/" class="px-3 md:px-4 py-1 bg-white text-orange-600 font-bold hover:bg-gray-100 transition-colors rounded text-xs md:text-sm whitespace-nowrap">
+                        Claim Discount →
+                    </a>
+                </span>
+                <span class="inline-flex items-center gap-4 mx-8 whitespace-nowrap">
+                    <span class="text-lg md:text-xl">🎉</span>
+                    <span class="font-bold uppercase tracking-widest text-xs md:text-sm">Black Friday Special</span>
+                    <span class="font-bold text-base md:text-lg">Get 30% OFF on All Services</span>
+                    <span class="text-xs md:text-sm opacity-90 hidden md:inline">Limited time offer - Contact us now!</span>
+                    <a href="/contact/" class="px-3 md:px-4 py-1 bg-white text-orange-600 font-bold hover:bg-gray-100 transition-colors rounded text-xs md:text-sm whitespace-nowrap">
+                        Claim Discount →
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+    
     {% include header.html %}
     {% include mobile-menu.html %}
     

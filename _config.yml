@@ -91,6 +91,9 @@ collections:
   case-studies:
     output: true
     permalink: /:collection/:name/
+  industries:
+    output: true
+    permalink: /:collection/:name/
   
 # Exclude from processing
 exclude:
