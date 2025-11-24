@@ -30,66 +30,15 @@ layout: null
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+  <!-- Industries Pages -->
+  {% for industry in site.industries %}
   <url>
-    <loc>{{ site.canonical_url }}/industries/e-commerce/</loc>
+    <loc>{{ site.canonical_url }}{{ industry.url }}</loc>
     <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>{{ site.canonical_url }}/industries/quick-commerce/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>{{ site.canonical_url }}/industries/finance-banking/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>{{ site.canonical_url }}/industries/real-estate/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>{{ site.canonical_url }}/industries/healthcare/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>{{ site.canonical_url }}/industries/travel-hospitality/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>{{ site.canonical_url }}/industries/technology/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>{{ site.canonical_url }}/industries/manufacturing/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>{{ site.canonical_url }}/industries/energy-utilities/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>{{ site.canonical_url }}/industries/media-entertainment/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  {% endfor %}
   <url>
     <loc>{{ site.canonical_url }}/case-studies/</loc>
     <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
@@ -108,48 +57,15 @@ layout: null
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- Case Studies Pages -->
+  {% for case_study in site.case-studies %}
   <url>
-    <loc>{{ site.canonical_url }}/case-studies/amazon-reviews-competitive-gold/</loc>
+    <loc>{{ site.canonical_url }}{{ case_study.url }}</loc>
     <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>{{ site.canonical_url }}/case-studies/grab-taxi-fleet-intelligence/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>{{ site.canonical_url }}/case-studies/precision-travel-intelligence/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>{{ site.canonical_url }}/case-studies/quick-commerce-delivery-zones/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>{{ site.canonical_url }}/case-studies/doordash-restaurant-data/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>{{ site.canonical_url }}/case-studies/restaurant-dominated-delivery/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>{{ site.canonical_url }}/case-studies/mobile-restaurant-intelligence/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  {% endfor %}
   <url>
     <loc>{{ site.canonical_url }}/about/</loc>
     <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
