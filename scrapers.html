@@ -1,0 +1,73 @@
+---
+layout: default
+title: "Web Scrapers for Popular Platforms | Nextract"
+description: "Ready-to-use web scrapers for Amazon, LinkedIn, Yelp, Zillow, Glassdoor, TikTok, Netflix, and more. Extract data from any platform with our specialized scrapers."
+keywords: "web scrapers, Amazon scraper, LinkedIn scraper, Yelp scraper, Zillow scraper, Glassdoor scraper, TikTok scraper, Netflix scraper, platform scrapers, data scrapers"
+og_description: "Web scrapers for popular platforms. Amazon, LinkedIn, Yelp, Zillow, Glassdoor, TikTok, Netflix, and more. Ready-to-use solutions."
+twitter_description: "Web scrapers for Amazon, LinkedIn, Yelp, Zillow, Glassdoor, TikTok, Netflix. Extract data from any platform."
+---
+
+<main>
+    <!-- Hero Section -->
+    <section class="min-h-[80vh] flex items-center justify-center relative overflow-hidden bg-white">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 blur-[100px] animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-600/10 blur-[100px] animate-pulse" style="animation-delay: 1s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 max-w-7xl relative z-10">
+            <div class="max-w-5xl mx-auto text-center">
+                <div class="text-sm font-bold text-orange-600 uppercase tracking-widest mb-6">Scrapers</div>
+                <h1 class="text-6xl md:text-8xl font-black text-gray-900 mb-8 leading-[0.9] tracking-tight">
+                    Platform-Specific<br/>
+                    <span class="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">Web Scrapers</span>
+                </h1>
+                <p class="text-2xl md:text-3xl text-gray-600 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
+                    Ready-to-use scrapers for the platforms you need.<br/>
+                    <span class="font-semibold text-gray-900">Pre-built solutions, instant deployment.</span>
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+                    <a href="/contact/" class="group relative px-10 py-5 bg-gray-900 text-white font-bold text-lg overflow-hidden">
+                        <span class="relative z-10 flex items-center gap-2">
+                            Get Started Free
+                            <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
+                        </span>
+                        <div class="absolute inset-0 bg-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                    </a>
+                    <a href="/apis/" class="px-10 py-5 border-2 border-gray-900 text-gray-900 font-bold text-lg hover:bg-gray-900 hover:text-white transition-all">
+                        View APIs Instead
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scrapers Grid -->
+    <section class="py-32 bg-white">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="mb-20">
+                <div class="text-sm font-bold text-orange-600 uppercase tracking-widest mb-4">Our Scrapers</div>
+                <h2 class="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-tight">Built for<br/>Popular Platforms</h2>
+                <p class="text-xl text-gray-600 max-w-3xl">Specialized scrapers designed to handle each platform's unique structure and anti-bot measures.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {% assign scrapers = site.scrapers | sort: 'order' %}
+                {% for scraper in scrapers %}
+                <a href="{{ scraper.url | relative_url }}" class="group p-10 border border-gray-200 hover:border-orange-600 transition-all bg-white hover:bg-gray-50 block no-underline">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 no-underline">{{ scraper.title }}</h3>
+                    <p class="text-gray-600 leading-relaxed text-lg mb-6">{{ scraper.description }}</p>
+                    <div class="flex items-center gap-2 text-orange-600 font-semibold group-hover:gap-4 transition-all">
+                        <span>Explore Scraper</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    {% include contact-section.html %}
+</main>
+

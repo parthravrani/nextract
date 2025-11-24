@@ -34,13 +34,13 @@ twitter_description: "Healthcare scraping: Clinical trials, medical research, pr
                 </p>
                 
                 <!-- Black Friday Banner -->
-                <div class="mt-8 p-6 bg-gradient-to-r from-orange-600 to-red-600 text-white rounded-lg shadow-lg">
+                <div class="mt-8 p-6 bg-gradient-to-r from-orange-600 to-red-600 shadow-lg border border-orange-500">
                     <div class="flex items-center gap-3 mb-2">
-                        <span class="text-2xl font-black">🎉</span>
-                        <span class="text-sm font-bold uppercase tracking-widest">Black Friday Special</span>
+                        <span class="text-2xl font-black text-white">🎉</span>
+                        <span class="text-sm font-bold uppercase tracking-widest text-white">Black Friday Special</span>
                     </div>
-                    <p class="text-lg font-semibold mb-1">Get 30% OFF on all healthcare data extraction services</p>
-                    <p class="text-sm opacity-90">Limited time offer - Contact us now to claim your discount!</p>
+                    <p class="text-lg font-semibold mb-1 text-white">Get 30% OFF on all healthcare data extraction services</p>
+                    <p class="text-sm text-white opacity-95">Limited time offer - Contact us now to claim your discount!</p>
                 </div>
             </div>
         </div>
@@ -218,13 +218,13 @@ twitter_description: "Healthcare scraping: Clinical trials, medical research, pr
     </section>
 
     <!-- Black Friday CTA -->
-    <section class="py-32 bg-gradient-to-r from-orange-600 to-red-600 text-white">
+    <section class="py-32 bg-gradient-to-r from-orange-600 to-red-600">
         <div class="container mx-auto px-6 max-w-7xl">
             <div class="max-w-4xl mx-auto text-center">
-                <div class="text-6xl mb-6">🎉</div>
-                <h2 class="text-4xl md:text-5xl font-black mb-6">Black Friday Special Offer</h2>
-                <p class="text-xl mb-8 opacity-90">
-                    Get <strong class="text-3xl">30% OFF</strong> on all healthcare data extraction services
+                <div class="text-6xl mb-6 text-white">🎉</div>
+                <h2 class="text-4xl md:text-5xl font-black mb-6 text-white">Black Friday Special Offer</h2>
+                <p class="text-xl mb-8 text-white opacity-95">
+                    Get <strong class="text-3xl text-white">30% OFF</strong> on all healthcare data extraction services
                 </p>
                 <a href="/contact/" class="inline-block px-10 py-5 bg-white text-orange-600 font-bold text-lg hover:bg-gray-100 transition-colors">
                     Claim Your Discount →

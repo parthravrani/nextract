@@ -37,17 +37,56 @@ twitter_image: "https://www.nextract.dev/twitter-image.jpg"
 # Navigation
 navigation:
   - name: "Products"
-    link: "/products/"
-  - name: "Solutions"
-    link: "/solutions/"
-  - name: "Industries"
-    link: "/industries/"
-  - name: "Case Studies"
-    link: "/case-studies/"
-  - name: "About"
-    link: "/about/"
-  - name: "Contact"
-    link: "/contact/"
+    link: "#"
+    dropdown:
+      - name: "API"
+        link: "/products/"
+        description: "Self-service web scraping API"
+      - name: "Scrapers"
+        link: "/scrapers/"
+        description: "Platform-specific scrapers"
+      - name: "APIs"
+        link: "/apis/"
+        description: "Ready-to-use data APIs"
+      - name: "Datasets"
+        link: "/datasets/"
+        description: "Pre-built data collections"
+  - name: "Services"
+    link: "#"
+    dropdown:
+      - name: "All Services"
+        link: "/services/"
+        description: "Industry-specific scraping"
+      - name: "Custom Solutions"
+        link: "/solutions/"
+        description: "Tailored data extraction"
+  - name: "Resources"
+    link: "#"
+    dropdown:
+      - name: "Industries"
+        link: "/industries/"
+        description: "Industry solutions"
+      - name: "Intelligence"
+        link: "/intelligence/"
+        description: "Data intelligence & insights"
+      - name: "Case Studies"
+        link: "/case-studies/"
+        description: "Success stories"
+      - name: "Testimonials"
+        link: "/testimonials/"
+        description: "Client reviews & feedback"
+      - name: "FAQ"
+        link: "/faq/"
+        description: "Frequently asked questions"
+  - name: "Company"
+    link: "#"
+    dropdown:
+      - name: "About Us"
+        link: "/about/"
+        description: "Learn about Nextract"
+      - name: "Contact"
+        link: "/contact/"
+        description: "Get in touch"
   - name: "Legal"
     link: "#"
     dropdown:
@@ -92,6 +131,21 @@ collections:
     output: true
     permalink: /:collection/:name/
   industries:
+    output: true
+    permalink: /:collection/:name/
+  services:
+    output: true
+    permalink: /:collection/:name/
+  scrapers:
+    output: true
+    permalink: /:collection/:name/
+  apis:
+    output: true
+    permalink: /:collection/:name/
+  intelligence:
+    output: true
+    permalink: /:collection/:name/
+  datasets:
     output: true
     permalink: /:collection/:name/
   

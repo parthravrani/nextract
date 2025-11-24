@@ -9,53 +9,361 @@
 
 <url>
   <loc>https://nextract.dev/</loc>
-  <lastmod>2025-09-21T07:47:25+00:00</lastmod>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>daily</changefreq>
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://nextract.dev/products/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/services/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/scrapers/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/apis/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
   <loc>https://nextract.dev/solutions/</loc>
-  <lastmod>2025-09-21T07:47:25+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
 </url>
 <url>
   <loc>https://nextract.dev/industries/</loc>
-  <lastmod>2025-09-21T07:47:25+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://nextract.dev/trust-security/</loc>
-  <lastmod>2025-09-21T07:47:25+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://nextract.dev/intelligence/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://nextract.dev/terms/</loc>
-  <lastmod>2025-09-21T07:47:25+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://nextract.dev/privacy/</loc>
-  <lastmod>2025-09-21T07:47:25+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://nextract.dev/sla/</loc>
-  <lastmod>2025-09-21T07:47:25+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://nextract.dev/compliance/</loc>
-  <lastmod>2025-09-21T07:47:25+00:00</lastmod>
+  <loc>https://nextract.dev/case-studies/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://nextract.dev/about/</loc>
-  <lastmod>2025-09-21T07:47:25+00:00</lastmod>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://nextract.dev/assets/deck/Nextract%20Data%20Solutions.pdf</loc>
-  <lastmod>2025-09-21T07:47:25+00:00</lastmod>
+  <loc>https://nextract.dev/contact/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/trust-security/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/terms/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/privacy/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/sla/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/compliance/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+
+<!-- Services Pages -->
+<url>
+  <loc>https://nextract.dev/services/e-commerce-scraping/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/services/restaurant-scraping/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/services/hotel-scraping/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/services/real-estate-scraping/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/services/finance-scraping/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/services/social-media-scraping/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/services/jobs-scraping/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/services/travel-scraping/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/services/healthcare-scraping/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/services/car-rental-scraping/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<!-- Scraper Pages -->
+<url>
+  <loc>https://nextract.dev/scrapers/amazon-scraper/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/scrapers/linkedin-scraper/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/scrapers/yelp-scraper/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/scrapers/zillow-scraper/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/scrapers/glassdoor-scraper/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/scrapers/tiktok-scraper/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/scrapers/netflix-scraper/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/scrapers/serp-scraper/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<!-- API Pages -->
+<url>
+  <loc>https://nextract.dev/apis/amazon-api/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/apis/walmart-api/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/apis/airbnb-api/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/apis/etsy-api/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/apis/expedia-api/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/apis/uber-eats-api/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/apis/target-api/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/apis/best-buy-api/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<!-- Intelligence Pages -->
+<url>
+  <loc>https://nextract.dev/intelligence/e-commerce-intelligence/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/intelligence/price-intelligence/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/intelligence/market-intelligence/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/intelligence/restaurant-intelligence/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/intelligence/travel-intelligence/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/intelligence/real-estate-intelligence/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<!-- Industry Pages -->
+<url>
+  <loc>https://nextract.dev/industries/e-commerce/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/industries/quick-commerce/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/industries/finance-banking/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/industries/real-estate/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/industries/travel-hospitality/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/industries/healthcare/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/industries/technology/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/industries/manufacturing/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/industries/media-entertainment/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://nextract.dev/industries/energy-utilities/</loc>
+  <lastmod>2025-01-21T07:47:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
 </url>
 
 

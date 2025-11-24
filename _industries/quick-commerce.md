@@ -34,13 +34,13 @@ twitter_description: "Food delivery scraping: DoorDash, Uber Eats, Instacart dat
                 </p>
                 
                 <!-- Black Friday Banner -->
-                <div class="mt-8 p-6 bg-gradient-to-r from-orange-600 to-red-600 text-white rounded-lg shadow-lg">
+                <div class="mt-8 p-6 bg-gradient-to-r from-orange-600 to-red-600 shadow-lg border border-orange-500">
                     <div class="flex items-center gap-3 mb-2">
-                        <span class="text-2xl font-black">🎉</span>
-                        <span class="text-sm font-bold uppercase tracking-widest">Black Friday Special</span>
+                        <span class="text-2xl font-black text-white">🎉</span>
+                        <span class="text-sm font-bold uppercase tracking-widest text-white">Black Friday Special</span>
                     </div>
-                    <p class="text-lg font-semibold mb-1">Get 30% OFF on all quick commerce data extraction services</p>
-                    <p class="text-sm opacity-90">Limited time offer - Perfect for restaurant chains and delivery platforms!</p>
+                    <p class="text-lg font-semibold mb-1 text-white">Get 30% OFF on all quick commerce data extraction services</p>
+                    <p class="text-sm text-white opacity-95">Limited time offer - Perfect for restaurant chains and delivery platforms!</p>
                 </div>
             </div>
         </div>
@@ -397,45 +397,45 @@ twitter_description: "Food delivery scraping: DoorDash, Uber Eats, Instacart dat
     </section>
 
     <!-- Benefits -->
-    <section class="py-32 bg-gray-900 text-white">
+    <section class="py-32 bg-gray-900">
         <div class="container mx-auto px-6 max-w-7xl">
             <div class="mb-20">
                 <div class="text-sm font-bold text-orange-400 uppercase tracking-widest mb-4">Benefits</div>
-                <h2 class="text-4xl md:text-5xl font-black mb-6">Why Choose Nextract for Quick Commerce Data</h2>
+                <h2 class="text-4xl md:text-5xl font-black mb-6 text-white">Why Choose Nextract for Quick Commerce Data</h2>
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="p-8 bg-white/5 backdrop-blur-sm border border-white/10">
-                    <div class="text-4xl font-black text-orange-600 mb-4">Real-time</div>
-                    <h3 class="text-2xl font-bold mb-3">Data Updates</h3>
-                    <p class="text-gray-300">Get the latest menu changes, pricing updates, and availability in real-time</p>
+                    <div class="text-4xl font-black text-orange-400 mb-4">Real-time</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Data Updates</h3>
+                    <p class="text-gray-200">Get the latest menu changes, pricing updates, and availability in real-time</p>
                 </div>
                 
                 <div class="p-8 bg-white/5 backdrop-blur-sm border border-white/10">
-                    <div class="text-4xl font-black text-blue-600 mb-4">Mobile</div>
-                    <h3 class="text-2xl font-bold mb-3">App Support</h3>
-                    <p class="text-gray-300">Extract data from mobile apps, not just websites</p>
+                    <div class="text-4xl font-black text-blue-400 mb-4">Mobile</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">App Support</h3>
+                    <p class="text-gray-200">Extract data from mobile apps, not just websites</p>
                 </div>
                 
                 <div class="p-8 bg-white/5 backdrop-blur-sm border border-white/10">
-                    <div class="text-4xl font-black text-orange-600 mb-4">Global</div>
-                    <h3 class="text-2xl font-bold mb-3">Coverage</h3>
-                    <p class="text-gray-300">Support for platforms across North America, Europe, Asia, and more</p>
+                    <div class="text-4xl font-black text-orange-400 mb-4">Global</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Coverage</h3>
+                    <p class="text-gray-200">Support for platforms across North America, Europe, Asia, and more</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Black Friday CTA -->
-    <section class="py-32 bg-gradient-to-r from-orange-600 to-red-600 text-white">
+    <section class="py-32 bg-gradient-to-r from-orange-600 to-red-600">
         <div class="container mx-auto px-6 max-w-7xl">
             <div class="max-w-4xl mx-auto text-center">
-                <div class="text-6xl mb-6">🎉</div>
-                <h2 class="text-4xl md:text-5xl font-black mb-6">Black Friday Special Offer</h2>
-                <p class="text-xl mb-8 opacity-90">
-                    Get <strong class="text-3xl">30% OFF</strong> on all quick commerce data extraction services
+                <div class="text-6xl mb-6 text-white">🎉</div>
+                <h2 class="text-4xl md:text-5xl font-black mb-6 text-white">Black Friday Special Offer</h2>
+                <p class="text-xl mb-8 text-white opacity-95">
+                    Get <strong class="text-3xl text-white">30% OFF</strong> on all quick commerce data extraction services
                 </p>
-                <p class="text-lg mb-8 opacity-80">
+                <p class="text-lg mb-8 text-white opacity-95">
                     Limited time offer - Perfect for restaurant chains and delivery platforms looking to gain competitive advantage
                 </p>
                 <a href="/contact/" class="inline-block px-10 py-5 bg-white text-orange-600 font-bold text-lg hover:bg-gray-100 transition-colors">

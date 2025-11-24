@@ -1,0 +1,73 @@
+---
+layout: default
+title: "Web Scraping APIs for E-commerce & More | Nextract"
+description: "RESTful APIs for Amazon, Walmart, Target, Best Buy, Etsy, Airbnb, Expedia, UberEats, and more. Simple integration, reliable data extraction."
+keywords: "scraping API, Amazon API, Walmart API, Target API, Best Buy API, Etsy API, Airbnb API, Expedia API, UberEats API, e-commerce API, REST API scraping"
+og_description: "Web scraping APIs for Amazon, Walmart, Target, Best Buy, Etsy, Airbnb, Expedia, and more. Simple REST API integration."
+twitter_description: "Scraping APIs for Amazon, Walmart, Target, Best Buy, Etsy, Airbnb, Expedia. Simple integration, reliable data."
+---
+
+<main>
+    <!-- Hero Section -->
+    <section class="min-h-[80vh] flex items-center justify-center relative overflow-hidden bg-white">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 blur-[100px] animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-600/10 blur-[100px] animate-pulse" style="animation-delay: 1s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 max-w-7xl relative z-10">
+            <div class="max-w-5xl mx-auto text-center">
+                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-6">APIs</div>
+                <h1 class="text-6xl md:text-8xl font-black text-gray-900 mb-8 leading-[0.9] tracking-tight">
+                    Platform<br/>
+                    <span class="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">Scraping APIs</span>
+                </h1>
+                <p class="text-2xl md:text-3xl text-gray-600 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
+                    RESTful APIs for instant data extraction.<br/>
+                    <span class="font-semibold text-gray-900">Simple integration, powerful results.</span>
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+                    <a href="/contact/" class="group relative px-10 py-5 bg-gray-900 text-white font-bold text-lg overflow-hidden">
+                        <span class="relative z-10 flex items-center gap-2">
+                            Get Started Free
+                            <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
+                        </span>
+                        <div class="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                    </a>
+                    <a href="/scrapers/" class="px-10 py-5 border-2 border-gray-900 text-gray-900 font-bold text-lg hover:bg-gray-900 hover:text-white transition-all">
+                        View Scrapers Instead
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- APIs Grid -->
+    <section class="py-32 bg-white">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="mb-20">
+                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Our APIs</div>
+                <h2 class="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-tight">Ready-to-Use<br/>REST APIs</h2>
+                <p class="text-xl text-gray-600 max-w-3xl">Pre-built APIs for popular platforms. Get started in minutes with our comprehensive documentation.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {% assign apis = site.apis | sort: 'order' %}
+                {% for api in apis %}
+                <a href="{{ api.url | relative_url }}" class="group p-10 border border-gray-200 hover:border-blue-600 transition-all bg-white hover:bg-gray-50 block no-underline">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 no-underline">{{ api.title }}</h3>
+                    <p class="text-gray-600 leading-relaxed text-lg mb-6">{{ api.description }}</p>
+                    <div class="flex items-center gap-2 text-blue-600 font-semibold group-hover:gap-4 transition-all">
+                        <span>View API Docs</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    {% include contact-section.html %}
+</main>
+

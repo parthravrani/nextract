@@ -11,30 +11,79 @@
             <i class="ri-close-line text-3xl text-gray-900"></i>
         </button>
     </div>
-    <nav class="flex flex-col space-y-1">
-        {% for nav in site.navigation %}
-            {% if nav.dropdown %}
-                <div class="w-full">
-                    <button id="mobile-legal-button" class="w-full flex items-center justify-between py-4 px-4 text-base font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
-                        <span>{{ nav.name }}</span>
-                        <i id="mobile-legal-icon" class="ri-add-line text-xl transition-transform duration-300"></i>
-                    </button>
-                    <div id="mobile-legal-submenu" class="hidden flex-col space-y-1 pt-2 pb-4 pl-6">
-                        {% for dropdown_item in nav.dropdown %}
-                            <a href="{{ dropdown_item.link | relative_url }}" class="mobile-nav-link block py-3 px-4 text-sm text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-2 group">
-                                <span class="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
-                                {{ dropdown_item.name }}
-                            </a>
-                        {% endfor %}
-                    </div>
-                </div>
-            {% else %}
-                <a href="{{ nav.link | relative_url }}" class="mobile-nav-link block py-4 px-4 text-base font-semibold text-gray-900 hover:bg-gray-50 transition-colors{% if page.url == nav.link %} bg-gray-50 text-blue-600{% endif %}">{{ nav.name }}</a>
-            {% endif %}
-        {% endfor %}
-        <div class="pt-8 border-t border-gray-200">
+    
+    <nav class="flex flex-col space-y-6">
+        <!-- Products Section -->
+        <div>
+            <a href="/products/" class="block py-4 px-4 text-lg font-bold text-gray-900 hover:bg-gray-50 transition-colors{% if page.url == '/products/' or page.url contains '/scrapers/' or page.url contains '/apis/' or page.url contains '/datasets/' %} bg-gray-50 text-blue-600{% endif %}">
+                Products
+            </a>
+            <div class="pl-6 space-y-1">
+                <a href="/products/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors{% if page.url == '/products/' %} bg-gray-50 text-blue-600 font-semibold{% endif %}">API</a>
+                <a href="/scrapers/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors{% if page.url contains '/scrapers/' %} bg-gray-50 text-blue-600 font-semibold{% endif %}">Scrapers</a>
+                <a href="/apis/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors{% if page.url contains '/apis/' %} bg-gray-50 text-blue-600 font-semibold{% endif %}">APIs</a>
+                <a href="/datasets/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors{% if page.url contains '/datasets/' %} bg-gray-50 text-blue-600 font-semibold{% endif %}">Datasets</a>
+            </div>
+        </div>
+        
+        <!-- Services Section -->
+        <div>
+            <a href="/services/" class="block py-4 px-4 text-lg font-bold text-gray-900 hover:bg-gray-50 transition-colors{% if page.url contains '/services/' or page.url contains '/solutions/' %} bg-gray-50 text-blue-600{% endif %}">
+                Services
+            </a>
+            <div class="pl-6 space-y-1">
+                <a href="/services/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors{% if page.url contains '/services/' %} bg-gray-50 text-blue-600 font-semibold{% endif %}">All Services</a>
+                <a href="/solutions/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors{% if page.url contains '/solutions/' %} bg-gray-50 text-blue-600 font-semibold{% endif %}">Custom Solutions</a>
+            </div>
+        </div>
+        
+        <!-- Industries Section -->
+        <div>
+            <a href="/industries/" class="block py-4 px-4 text-lg font-bold text-gray-900 hover:bg-gray-50 transition-colors{% if page.url contains '/industries/' %} bg-gray-50 text-blue-600{% endif %}">
+                Industries
+            </a>
+        </div>
+        
+        <!-- Resources Section -->
+        <div>
+            <a href="/case-studies/" class="block py-4 px-4 text-lg font-bold text-gray-900 hover:bg-gray-50 transition-colors{% if page.url contains '/case-studies/' or page.url contains '/intelligence/' or page.url == '/testimonials/' or page.url == '/faq/' %} bg-gray-50 text-blue-600{% endif %}">
+                Resources
+            </a>
+            <div class="pl-6 space-y-1">
+                <a href="/case-studies/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors{% if page.url contains '/case-studies/' %} bg-gray-50 text-blue-600 font-semibold{% endif %}">Case Studies</a>
+                <a href="/intelligence/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors{% if page.url contains '/intelligence/' %} bg-gray-50 text-blue-600 font-semibold{% endif %}">Intelligence</a>
+                <a href="/testimonials/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors{% if page.url == '/testimonials/' %} bg-gray-50 text-blue-600 font-semibold{% endif %}">Testimonials</a>
+                <a href="/faq/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors{% if page.url == '/faq/' %} bg-gray-50 text-blue-600 font-semibold{% endif %}">FAQ</a>
+            </div>
+        </div>
+        
+        <!-- Company Section -->
+        <div>
+            <a href="/about/" class="block py-4 px-4 text-lg font-bold text-gray-900 hover:bg-gray-50 transition-colors{% if page.url == '/about/' or page.url == '/contact/' %} bg-gray-50 text-blue-600{% endif %}">
+                Company
+            </a>
+            <div class="pl-6 space-y-1">
+                <a href="/about/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors{% if page.url == '/about/' %} bg-gray-50 text-blue-600 font-semibold{% endif %}">About Us</a>
+                <a href="/contact/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors{% if page.url == '/contact/' %} bg-gray-50 text-blue-600 font-semibold{% endif %}">Contact</a>
+            </div>
+        </div>
+        
+        <!-- Legal Section -->
+        <div class="pt-4 border-t border-gray-200">
+            <div class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-3 px-4">Legal</div>
+            <div class="space-y-1">
+                <a href="/trust-security/" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors{% if page.url == '/trust-security/' %} bg-gray-50 text-gray-900 font-semibold{% endif %}">Trust & Security</a>
+                <a href="/terms/" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors{% if page.url == '/terms/' %} bg-gray-50 text-gray-900 font-semibold{% endif %}">Terms</a>
+                <a href="/privacy/" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors{% if page.url == '/privacy/' %} bg-gray-50 text-gray-900 font-semibold{% endif %}">Privacy</a>
+                <a href="/sla/" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors{% if page.url == '/sla/' %} bg-gray-50 text-gray-900 font-semibold{% endif %}">SLA</a>
+                <a href="/compliance/" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors{% if page.url == '/compliance/' %} bg-gray-50 text-gray-900 font-semibold{% endif %}">Compliance</a>
+            </div>
+        </div>
+        
+        <!-- CTA Button -->
+        <div class="pt-6 border-t border-gray-200">
             <a href="/contact/" class="w-full px-8 py-4 bg-gray-900 text-white font-bold flex items-center justify-center gap-2 hover:bg-blue-600 transition-all">
-                Contact Us
+                Get Started
                 <i class="ri-arrow-right-line"></i>
             </a>
         </div>
