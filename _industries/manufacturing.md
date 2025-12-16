@@ -33,6 +33,7 @@ twitter_description: "Manufacturing scraping: Supply chain data, material pricin
                     <span class="font-semibold text-gray-900">Optimize your manufacturing operations with data-driven insights.</span>
                 </p>
                 
+                {% if site.show_offers %}
                 <!-- Black Friday Banner -->
                 <div class="mt-8 p-6 bg-gradient-to-r from-orange-600 to-red-600 shadow-lg border border-orange-500">
                     <div class="flex items-center gap-3 mb-2">
@@ -42,6 +43,7 @@ twitter_description: "Manufacturing scraping: Supply chain data, material pricin
                     <p class="text-lg font-semibold mb-1 text-white">Get 30% OFF on all manufacturing data extraction services</p>
                     <p class="text-sm text-white opacity-95">Limited time offer - Contact us now to claim your discount!</p>
                 </div>
+                {% endif %}
             </div>
         </div>
     </section>
@@ -218,6 +220,7 @@ twitter_description: "Manufacturing scraping: Supply chain data, material pricin
         </div>
     </section>
 
+    {% if site.show_offers %}
     <!-- Black Friday CTA -->
     <section class="py-32 bg-gradient-to-r from-orange-600 to-red-600">
         <div class="container mx-auto px-6 max-w-7xl">
@@ -233,6 +236,7 @@ twitter_description: "Manufacturing scraping: Supply chain data, material pricin
             </div>
         </div>
     </section>
+    {% endif %}
 
     {% include contact-section.html %}
 </main>

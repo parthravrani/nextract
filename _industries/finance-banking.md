@@ -33,6 +33,7 @@ twitter_description: "Finance data scraping: Stock markets, crypto, regulatory d
                     <span class="font-semibold text-gray-900">Power your financial analysis with real-time data.</span>
                 </p>
                 
+                {% if site.show_offers %}
                 <!-- Black Friday Banner -->
                 <div class="mt-8 p-6 bg-gradient-to-r from-orange-600 to-red-600 shadow-lg border border-orange-500">
                     <div class="flex items-center gap-3 mb-2">
@@ -42,6 +43,7 @@ twitter_description: "Finance data scraping: Stock markets, crypto, regulatory d
                     <p class="text-lg font-semibold mb-1 text-white">Get 30% OFF on all finance & banking data extraction services</p>
                     <p class="text-sm text-white opacity-95">Limited time offer - Contact us now to claim your discount!</p>
                 </div>
+                {% endif %}
             </div>
         </div>
     </section>
@@ -217,6 +219,7 @@ twitter_description: "Finance data scraping: Stock markets, crypto, regulatory d
         </div>
     </section>
 
+    {% if site.show_offers %}
     <!-- Black Friday CTA -->
     <section class="py-32 bg-gradient-to-r from-orange-600 to-red-600">
         <div class="container mx-auto px-6 max-w-7xl">
@@ -232,6 +235,7 @@ twitter_description: "Finance data scraping: Stock markets, crypto, regulatory d
             </div>
         </div>
     </section>
+    {% endif %}
 
     {% include contact-section.html %}
 </main>

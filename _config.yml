@@ -29,6 +29,9 @@ instagram_url: "https://www.instagram.com/nextract.dev/"
 founded_year: 2017
 years_experience: 8
 
+# Offer Settings
+show_offers: false  # Set to true to show promotional offers (Black Friday, etc.)
+
 # SEO Settings
 canonical_url: "https://www.nextract.dev"
 og_image: "https://www.nextract.dev/og-image.jpg"

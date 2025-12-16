@@ -865,6 +865,7 @@
     {% seo %}
 </head>
 <body class="antialiased">
+    {% if site.show_offers %}
     <!-- Black Friday Ticker Banner -->
     <div class="sticky top-0 left-0 right-0 bg-gradient-to-r from-orange-600 to-red-600 text-white py-2.5 overflow-hidden z-50 shadow-lg">
         <div class="marquee-container">
@@ -899,6 +900,7 @@
             </div>
         </div>
     </div>
+    {% endif %}
     
     {% include header.html %}
     {% include mobile-menu.html %}

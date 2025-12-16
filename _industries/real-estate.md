@@ -33,6 +33,7 @@ twitter_description: "Real estate scraping: Extract data from Zillow, Realtor.co
                     <span class="font-semibold text-gray-900">Power your real estate strategy with comprehensive market intelligence.</span>
                 </p>
                 
+                {% if site.show_offers %}
                 <!-- Black Friday Banner -->
                 <div class="mt-8 p-6 bg-gradient-to-r from-orange-600 to-red-600 shadow-lg border border-orange-500">
                     <div class="flex items-center gap-3 mb-2">
@@ -42,6 +43,7 @@ twitter_description: "Real estate scraping: Extract data from Zillow, Realtor.co
                     <p class="text-lg font-semibold mb-1 text-white">Get 30% OFF on all real estate data extraction services</p>
                     <p class="text-sm text-white opacity-95">Limited time offer - Contact us now to claim your discount!</p>
                 </div>
+                {% endif %}
             </div>
         </div>
     </section>
@@ -239,6 +241,7 @@ twitter_description: "Real estate scraping: Extract data from Zillow, Realtor.co
         </div>
     </section>
 
+    {% if site.show_offers %}
     <!-- Black Friday CTA -->
     <section class="py-32 bg-gradient-to-r from-orange-600 to-red-600">
         <div class="container mx-auto px-6 max-w-7xl">
@@ -254,6 +257,7 @@ twitter_description: "Real estate scraping: Extract data from Zillow, Realtor.co
             </div>
         </div>
     </section>
+    {% endif %}
 
     {% include contact-section.html %}
 </main>
