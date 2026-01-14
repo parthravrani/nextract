@@ -24,6 +24,25 @@ layout: null
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+  <!-- Solution Pages -->
+  <url>
+    <loc>{{ site.canonical_url }}/e-commerce/</loc>
+    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>{{ site.canonical_url }}/quick-commerce/</loc>
+    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>{{ site.canonical_url }}/food-delivery/</loc>
+    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
   <url>
     <loc>{{ site.canonical_url }}/industries/</loc>
     <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
