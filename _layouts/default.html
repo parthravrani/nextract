@@ -195,7 +195,145 @@
     }
     </script>
     {% endif %}
+    
+    {% if page.url == '/e-commerce/' %}
+    <!-- Service Schema for E-commerce Solution Page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "E-commerce Data Extraction & Scraping API",
+      "name": "E-commerce Data Solutions | Amazon, Flipkart, Walmart Scraping API",
+      "provider": {
+        "@type": "Organization",
+        "name": "{{ site.title }}",
+        "url": "{{ site.canonical_url }}"
+      },
+      "areaServed": "Worldwide",
+      "description": "{{ page.description }}",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "{{ site.canonical_url }}{{ page.url }}"
+      },
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": "23.0225",
+          "longitude": "72.5714"
+        }
+      }
+    }
+    </script>
     {% endif %}
+    
+    {% if page.url == '/quick-commerce/' %}
+    <!-- Service Schema for Quick Commerce Solution Page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Quick Commerce Data Extraction & Scraping API",
+      "name": "Quick Commerce Data Solutions | Blinkit, Zepto, Amazon Fresh Scraping API",
+      "provider": {
+        "@type": "Organization",
+        "name": "{{ site.title }}",
+        "url": "{{ site.canonical_url }}"
+      },
+      "areaServed": "Worldwide",
+      "description": "{{ page.description }}",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "{{ site.canonical_url }}{{ page.url }}"
+      },
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": "23.0225",
+          "longitude": "72.5714"
+        }
+      }
+    }
+    </script>
+    {% endif %}
+    
+    {% if page.url == '/food-delivery/' %}
+    <!-- Service Schema for Food Delivery Solution Page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Food Delivery Data Extraction & Scraping API",
+      "name": "Food Delivery Data Solutions | Zomato, Swiggy, DoorDash Scraping API",
+      "provider": {
+        "@type": "Organization",
+        "name": "{{ site.title }}",
+        "url": "{{ site.canonical_url }}"
+      },
+      "areaServed": "Worldwide",
+      "description": "{{ page.description }}",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "{{ site.canonical_url }}{{ page.url }}"
+      },
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": "23.0225",
+          "longitude": "72.5714"
+        }
+      }
+    }
+    </script>
+    {% endif %}
+    {% endif %}
+    
+    <!-- BreadcrumbList Schema for all pages except homepage -->
+    {% unless page.url == '/' %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{ site.canonical_url }}/"
+        }{% if page.url contains '/e-commerce/' or page.url contains '/quick-commerce/' or page.url contains '/food-delivery/' %},
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Solutions",
+          "item": "{{ site.canonical_url }}/#solutions"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "{{ page.title }}",
+          "item": "{{ site.canonical_url }}{{ page.url }}"
+        }{% elsif page.url contains '/products/' or page.url contains '/services/' or page.url contains '/industries/' %},
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "{{ page.title }}",
+          "item": "{{ site.canonical_url }}{{ page.url }}"
+        }{% endif %}
+      ]
+    }
+    </script>
+    {% endunless %}
     
     {% if page.url == '/faq/' %}
     <!-- FAQPage Schema -->

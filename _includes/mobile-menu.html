@@ -37,6 +37,18 @@
             </div>
         </div>
         
+        <!-- Solutions Section -->
+        <div>
+            <a href="/e-commerce/" class="block py-4 px-4 text-lg font-bold text-gray-900 hover:bg-gray-50 transition-colors{% if page.url == '/e-commerce/' or page.url == '/quick-commerce/' or page.url == '/food-delivery/' %} bg-gray-50 text-blue-600{% endif %}">
+                Solutions
+            </a>
+            <div class="pl-6 space-y-1">
+                <a href="/e-commerce/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors{% if page.url == '/e-commerce/' %} bg-gray-50 text-blue-600 font-semibold{% endif %}">E-commerce</a>
+                <a href="/quick-commerce/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors{% if page.url == '/quick-commerce/' %} bg-gray-50 text-blue-600 font-semibold{% endif %}">Quick Commerce</a>
+                <a href="/food-delivery/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors{% if page.url == '/food-delivery/' %} bg-gray-50 text-blue-600 font-semibold{% endif %}">Food Delivery</a>
+            </div>
+        </div>
+        
         <!-- Industries Section -->
         <div>
             <a href="/industries/" class="block py-4 px-4 text-lg font-bold text-gray-900 hover:bg-gray-50 transition-colors{% if page.url contains '/industries/' %} bg-gray-50 text-blue-600{% endif %}">

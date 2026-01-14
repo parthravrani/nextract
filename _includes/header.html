@@ -112,6 +112,50 @@
                     </div>
                 </div>
 
+                <!-- Solutions Dropdown -->
+                <div class="nav-dropdown group relative">
+                    <button class="nav-link flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-gray-700 hover:text-blue-600 transition-all rounded-lg hover:bg-gray-50{% if page.url == '/e-commerce/' or page.url == '/quick-commerce/' or page.url == '/food-delivery/' %} text-blue-600 bg-blue-50{% endif %}">
+                        Solutions
+                        <i class="ri-arrow-down-s-line text-base transition-transform group-hover:rotate-180"></i>
+                    </button>
+                    <div class="nav-dropdown-menu absolute top-full left-0 mt-2 w-[420px] bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                        <div class="p-8">
+                            <div class="mb-6 pb-4 border-b border-gray-100">
+                                <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wider">Industry Solutions</h3>
+                            </div>
+                            <div class="space-y-3">
+                                <a href="/e-commerce/" class="flex items-start gap-4 p-5 rounded-xl hover:bg-blue-50 transition-all group/item border border-transparent hover:border-blue-100">
+                                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center group-hover/item:bg-blue-600 transition-colors">
+                                        <i class="ri-shopping-cart-2-line text-blue-600 group-hover/item:text-white text-xl"></i>
+                                    </div>
+                                    <div class="flex-1 pt-1">
+                                        <div class="font-bold text-gray-900 group-hover/item:text-blue-600 transition-colors text-base mb-1">E-commerce</div>
+                                        <div class="text-sm text-gray-500">Amazon, Flipkart, Walmart & 50+ platforms</div>
+                                    </div>
+                                </a>
+                                <a href="/quick-commerce/" class="flex items-start gap-4 p-5 rounded-xl hover:bg-orange-50 transition-all group/item border border-transparent hover:border-orange-100">
+                                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center group-hover/item:bg-orange-600 transition-colors">
+                                        <i class="ri-timer-flash-line text-orange-600 group-hover/item:text-white text-xl"></i>
+                                    </div>
+                                    <div class="flex-1 pt-1">
+                                        <div class="font-bold text-gray-900 group-hover/item:text-orange-600 transition-colors text-base mb-1">Quick Commerce</div>
+                                        <div class="text-sm text-gray-500">Blinkit, Zepto, Amazon Fresh & more</div>
+                                    </div>
+                                </a>
+                                <a href="/food-delivery/" class="flex items-start gap-4 p-5 rounded-xl hover:bg-green-50 transition-all group/item border border-transparent hover:border-green-100">
+                                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center group-hover/item:bg-green-600 transition-colors">
+                                        <i class="ri-restaurant-line text-green-600 group-hover/item:text-white text-xl"></i>
+                                    </div>
+                                    <div class="flex-1 pt-1">
+                                        <div class="font-bold text-gray-900 group-hover/item:text-green-600 transition-colors text-base mb-1">Food Delivery</div>
+                                        <div class="text-sm text-gray-500">Zomato, Swiggy & delivery platforms</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Industries -->
                 <a href="/industries/" class="nav-link px-4 py-2.5 text-sm font-semibold text-gray-700 hover:text-blue-600 transition-all rounded-lg hover:bg-gray-50{% if page.url contains '/industries/' %} text-blue-600 bg-blue-50{% endif %}">
                     Industries
