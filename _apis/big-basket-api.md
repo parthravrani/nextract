@@ -13,7 +13,7 @@ RESTful API for extracting comprehensive grocery data including products, prices
 ## API Features
 
 - **Simple Integration**: RESTful API with JSON responses, easy to integrate
-- **High Reliability**: 99.9% uptime, automatic retry logic, error handling
+- **High Reliability**: High uptime commitment, automatic retry logic, error handling
 - **Real-time Data**: Get product data updates as they happen on Big Basket
 - **Scalable**: Handle millions of requests per day, auto-scaling infrastructure
 - **Anti-Bot Bypass**: Automatically handles CAPTCHAs, IP rotation, and anti-bot measures
@@ -58,4 +58,7 @@ GET /api/v1/bigbasket/search
 - **Enterprise Plans**: Custom pricing for enterprise needs
 
 [Get Started](/contact/) with Big Basket API today.
+
+
+
 

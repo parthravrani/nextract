@@ -44,7 +44,10 @@ Comprehensive job and recruitment dataset from Indeed platform. Monthly refresh 
 - **Data Points**: Millions of job listings across all industries
 - **Fields**: 40+ data fields per job listing
 - **Geographic Coverage**: Multiple countries and regions
-- **Quality**: 99.9% data accuracy with quality assurance
+- **Quality**: High data accuracy with quality assurance
 
 [Contact us](/contact/) to get access to the Indeed dataset.
+
+
+
 

@@ -44,7 +44,10 @@ Comprehensive grocery and quick commerce dataset from Blinkit platform. Monthly 
 - **Data Points**: Thousands of products across all categories
 - **Fields**: 30+ data fields per product
 - **Geographic Coverage**: Multiple cities and regions
-- **Quality**: 99.9% data accuracy with quality assurance
+- **Quality**: High data accuracy with quality assurance
 
 [Contact us](/contact/) to get access to the Blinkit dataset.
+
+
+
 

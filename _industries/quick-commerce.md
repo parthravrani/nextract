@@ -1,10 +1,10 @@
 ---
 layout: default
 title: "Quick Commerce Data Scraping | DoorDash, Uber Eats API"
-description: "Extract restaurant data, menus, pricing, and delivery zones from DoorDash, Uber Eats, Instacart, Swiggy, Zomato, Grubhub. Food delivery scraping API. 30% OFF Black Friday."
+description: "Extract restaurant data, menus, pricing, and delivery zones from DoorDash, Uber Eats, Instacart, Swiggy, Zomato, Grubhub. Food delivery scraping API. ."
 keywords: "quick commerce scraping, DoorDash scraping API, Uber Eats data extraction, Instacart scraping, Swiggy scraping, Zomato data scraping, food delivery scraping, restaurant data extraction, delivery zone mapping, menu scraping API"
 category: "Quick Commerce"
-og_description: "Quick commerce data scraping: DoorDash, Uber Eats, Instacart, Swiggy, Zomato. Restaurant & menu data extraction. 30% OFF Black Friday."
+og_description: "Quick commerce data scraping: DoorDash, Uber Eats, Instacart, Swiggy, Zomato. Restaurant & menu data extraction. ."
 twitter_description: "Food delivery scraping: DoorDash, Uber Eats, Instacart data extraction. Restaurant menus, pricing, delivery zones. Start free."
 ---
 

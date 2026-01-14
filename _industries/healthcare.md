@@ -1,10 +1,10 @@
 ---
 layout: default
 title: "Healthcare Data Scraping | Clinical Trials & Provider API"
-description: "Extract clinical trial data, medical research, provider information from ClinicalTrials.gov, PubMed, Healthgrades, Zocdoc. Healthcare scraping API. 30% OFF Black Friday."
+description: "Extract clinical trial data, medical research, provider information from ClinicalTrials.gov, PubMed, Healthgrades, Zocdoc. Healthcare scraping API. ."
 keywords: "healthcare data scraping, clinical trial scraping, medical research data extraction, provider data scraping, ClinicalTrials.gov scraping, PubMed data extraction, healthcare intelligence, medical database scraping"
 category: "Healthcare"
-og_description: "Healthcare data scraping: Clinical trials, medical research, provider data. Extract from ClinicalTrials.gov, PubMed. 30% OFF Black Friday."
+og_description: "Healthcare data scraping: Clinical trials, medical research, provider data. Extract from ClinicalTrials.gov, PubMed. ."
 twitter_description: "Healthcare scraping: Clinical trials, medical research, provider data extraction. ClinicalTrials.gov, PubMed scraping. Start free."
 ---
 
@@ -25,8 +25,7 @@ twitter_description: "Healthcare scraping: Clinical trials, medical research, pr
                 
                 <div class="text-sm font-bold text-orange-600 uppercase tracking-widest mb-6">{{ page.category }}</div>
                 <h1 class="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
-                    Healthcare<br/>
-                    <span class="bg-gradient-to-r from-orange-600 to-orange-600 bg-clip-text text-transparent">Data Solutions</span>
+                    Healthcare
                 </h1>
                 <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl font-light leading-relaxed">
                     Extract clinical trial data, research information, and provider intelligence.<br/>

@@ -1,10 +1,10 @@
 ---
 layout: default
 title: "Travel Data Scraping | Booking.com, Expedia, Airbnb API"
-description: "Extract flight prices, hotel rates, booking data from Booking.com, Expedia, Airbnb, Kayak, TripAdvisor, Hotels.com. Travel scraping API. 30% OFF Black Friday."
+description: "Extract flight prices, hotel rates, booking data from Booking.com, Expedia, Airbnb, Kayak, TripAdvisor, Hotels.com. Travel scraping API. ."
 keywords: "travel data scraping, hotel data extraction, flight price scraping, Booking.com scraping API, Expedia data extraction, Airbnb scraping, Kayak scraping, TripAdvisor data, travel booking scraping"
 category: "Travel & Hospitality"
-og_description: "Travel data scraping: Booking.com, Expedia, Airbnb, Kayak. Flight prices, hotel rates, booking data. 30% OFF Black Friday."
+og_description: "Travel data scraping: Booking.com, Expedia, Airbnb, Kayak. Flight prices, hotel rates, booking data. ."
 twitter_description: "Travel scraping: Extract data from Booking.com, Expedia, Airbnb. Flight prices, hotel rates, booking intelligence. Start free."
 ---
 
@@ -25,8 +25,7 @@ twitter_description: "Travel scraping: Extract data from Booking.com, Expedia, A
                 
                 <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-6">{{ page.category }}</div>
                 <h1 class="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
-                    Travel & Hospitality<br/>
-                    <span class="bg-gradient-to-r from-blue-600 to-orange-600 bg-clip-text text-transparent">Data Solutions</span>
+                    Travel & Hospitality
                 </h1>
                 <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl font-light leading-relaxed">
                     Extract flight prices, hotel rates, and booking intelligence from leading platforms.<br/>

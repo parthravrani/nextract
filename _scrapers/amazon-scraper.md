@@ -30,7 +30,7 @@ Extract comprehensive product data, pricing, reviews, ratings, seller informatio
 ## Features
 
 - **Anti-Bot Bypass**: Handles Amazon's anti-scraping measures automatically
-- **High Success Rate**: 99.9% success rate for data extraction
+- **High Success Rate**: High success rate for data extraction
 - **Real-time Updates**: Get data updates as they happen on Amazon
 - **Scalable**: Handle millions of products across Amazon marketplaces
 - **Structured Data**: Clean, normalized JSON data ready for your applications

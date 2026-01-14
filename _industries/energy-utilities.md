@@ -1,10 +1,10 @@
 ---
 layout: default
 title: "Energy & Utilities Data Scraping | Energy Prices API"
-description: "Extract energy prices, consumption data, regulatory filings from EIA, IEA, energy exchanges, utility platforms. Energy scraping API. 30% OFF Black Friday."
+description: "Extract energy prices, consumption data, regulatory filings from EIA, IEA, energy exchanges, utility platforms. Energy scraping API. ."
 keywords: "energy data scraping, utility data extraction, energy prices scraping, EIA data extraction, energy exchange scraping, regulatory data scraping, consumption data extraction, renewable energy scraping"
 category: "Energy & Utilities"
-og_description: "Energy & utilities data scraping: Energy prices, consumption data, regulatory filings. EIA, IEA, energy exchanges. 30% OFF Black Friday."
+og_description: "Energy & utilities data scraping: Energy prices, consumption data, regulatory filings. EIA, IEA, energy exchanges. ."
 twitter_description: "Energy scraping: Extract energy prices, consumption data, regulatory filings. EIA, IEA, energy exchanges. Start free."
 ---
 
@@ -25,8 +25,7 @@ twitter_description: "Energy scraping: Extract energy prices, consumption data, 
                 
                 <div class="text-sm font-bold text-orange-600 uppercase tracking-widest mb-6">{{ page.category }}</div>
                 <h1 class="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
-                    Energy & Utilities<br/>
-                    <span class="bg-gradient-to-r from-orange-600 to-orange-600 bg-clip-text text-transparent">Data Solutions</span>
+                    Energy & Utilities
                 </h1>
                 <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl font-light leading-relaxed">
                     Extract energy prices, consumption data, and regulatory intelligence.<br/>

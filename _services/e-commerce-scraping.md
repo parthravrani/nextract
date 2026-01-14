@@ -33,11 +33,14 @@ Amazon, Flipkart, Walmart, eBay, Shopify stores, Etsy, Alibaba, AliExpress, Targ
 
 ## Why Choose Nextract
 
-- **99.9% Uptime**: Reliable data extraction around the clock
+- **High uptime commitment**: Reliable data extraction around the clock
 - **Real-time Updates**: Get data as it changes on the platform
 - **Scalable**: Handle millions of products across thousands of stores
 - **Compliant**: Ethical scraping practices, respects robots.txt and ToS
 - **Custom Solutions**: Tailored to your specific data needs and workflows
 
 [Contact us](/contact/) to discuss your e-commerce data requirements.
+
+
+
 

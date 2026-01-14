@@ -44,7 +44,10 @@ Comprehensive content dataset from Netflix platform. Monthly refresh ensures you
 - **Data Points**: Thousands of titles and episodes
 - **Fields**: 50+ data fields per title
 - **Geographic Coverage**: Multiple regions worldwide
-- **Quality**: 99.9% data accuracy with quality assurance
+- **Quality**: High data accuracy with quality assurance
 
 [Contact us](/contact/) to get access to the Netflix dataset.
+
+
+
 

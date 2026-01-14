@@ -30,7 +30,7 @@ Extract comprehensive product data, pricing, reviews, inventory, and store infor
 ## Features
 
 - **Any Shopify Store**: Extract data from any Shopify-powered store
-- **High Success Rate**: 99.9% success rate for data extraction
+- **High Success Rate**: High success rate for data extraction
 - **Real-time Updates**: Get data updates as they happen on stores
 - **Scalable**: Handle thousands of Shopify stores
 - **Structured Data**: Clean, normalized JSON data ready for your applications
@@ -42,4 +42,7 @@ Extract comprehensive product data, pricing, reviews, inventory, and store infor
 - **Custom Solutions**: Tailored scraping workflows for your specific needs
 
 [Contact us](/contact/) to get started with Shopify scraping.
+
+
+
 

@@ -1,10 +1,10 @@
 ---
 layout: default
 title: "Media & Entertainment Data Scraping | Social Media API"
-description: "Extract social media data, content, trends from Twitter, Instagram, YouTube, TikTok, Reddit, Netflix, Spotify. Media scraping API. 30% OFF Black Friday."
+description: "Extract social media data, content, trends from Twitter, Instagram, YouTube, TikTok, Reddit, Netflix, Spotify. Media scraping API. ."
 keywords: "media data scraping, social media scraping API, Twitter scraping, Instagram data extraction, YouTube scraping, TikTok scraping, Reddit data extraction, entertainment data scraping, content aggregation"
 category: "Media & Entertainment"
-og_description: "Media & entertainment scraping: Twitter, Instagram, YouTube, TikTok, Reddit. Social media monitoring, content extraction. 30% OFF Black Friday."
+og_description: "Media & entertainment scraping: Twitter, Instagram, YouTube, TikTok, Reddit. Social media monitoring, content extraction. ."
 twitter_description: "Media scraping: Extract data from Twitter, Instagram, YouTube, TikTok. Social media monitoring, content trends. Start free."
 ---
 
@@ -25,8 +25,7 @@ twitter_description: "Media scraping: Extract data from Twitter, Instagram, YouT
                 
                 <div class="text-sm font-bold text-orange-600 uppercase tracking-widest mb-6">{{ page.category }}</div>
                 <h1 class="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
-                    Media & Entertainment<br/>
-                    <span class="bg-gradient-to-r from-orange-600 to-orange-600 bg-clip-text text-transparent">Data Solutions</span>
+                    Media & Entertainment
                 </h1>
                 <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl font-light leading-relaxed">
                     Extract content, social media data, and entertainment intelligence.<br/>

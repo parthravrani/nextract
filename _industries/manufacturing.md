@@ -1,10 +1,10 @@
 ---
 layout: default
 title: "Manufacturing Data Scraping | Supply Chain & Vendor API"
-description: "Extract supply chain data, material pricing, vendor information from Alibaba, Global Sources, ThomasNet, IndiaMART. Manufacturing scraping API. 30% OFF Black Friday."
+description: "Extract supply chain data, material pricing, vendor information from Alibaba, Global Sources, ThomasNet, IndiaMART. Manufacturing scraping API. ."
 keywords: "manufacturing data scraping, supply chain scraping, material pricing extraction, vendor data scraping, Alibaba scraping, B2B marketplace scraping, manufacturing intelligence, supplier data extraction"
 category: "Manufacturing"
-og_description: "Manufacturing data scraping: Supply chain, material pricing, vendor data. Extract from Alibaba, Global Sources. 30% OFF Black Friday."
+og_description: "Manufacturing data scraping: Supply chain, material pricing, vendor data. Extract from Alibaba, Global Sources. ."
 twitter_description: "Manufacturing scraping: Supply chain data, material pricing, vendor information. Alibaba, B2B marketplace extraction. Start free."
 ---
 
@@ -25,8 +25,7 @@ twitter_description: "Manufacturing scraping: Supply chain data, material pricin
                 
                 <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-6">{{ page.category }}</div>
                 <h1 class="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
-                    Manufacturing<br/>
-                    <span class="bg-gradient-to-r from-blue-600 to-orange-600 bg-clip-text text-transparent">Data Solutions</span>
+                    Manufacturing
                 </h1>
                 <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl font-light leading-relaxed">
                     Extract supply chain data, material pricing, and vendor intelligence.<br/>

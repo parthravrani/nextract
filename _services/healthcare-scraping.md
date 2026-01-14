@@ -34,10 +34,13 @@ WebMD, Drugs.com, Healthgrades, Vitals, medical device websites, pharmaceutical 
 ## Why Choose Nextract
 
 - **Comprehensive Coverage**: Extract all relevant healthcare data in structured format
-- **Accurate Data**: 99.9% data accuracy ensures reliable healthcare intelligence
+- **Accurate Data**: High data accuracy ensures reliable healthcare intelligence
 - **Compliant**: Adheres to healthcare data regulations and privacy requirements
 - **Scalable**: Handle large volumes of healthcare data across platforms
 - **Custom Solutions**: Tailored extraction workflows for your health tech needs
 
 [Contact us](/contact/) to discuss your healthcare data requirements.
+
+
+
 

@@ -1,10 +1,10 @@
 ---
 layout: default
 title: "Real Estate Data Scraping | Zillow, Realtor.com API"
-description: "Extract property listings, Zestimate values, market trends from Zillow, Realtor.com, Redfin, Trulia, Apartments.com. Real estate scraping API. 30% OFF Black Friday."
+description: "Extract property listings, Zestimate values, market trends from Zillow, Realtor.com, Redfin, Trulia, Apartments.com. Real estate scraping API. ."
 keywords: "real estate scraping, Zillow scraping API, Realtor.com data extraction, Redfin scraping, Trulia data, property listings scraping, Zestimate scraping, real estate market data, rental data extraction"
 category: "Real Estate"
-og_description: "Real estate data scraping: Zillow, Realtor.com, Redfin, Trulia. Property listings, prices, market trends. 30% OFF Black Friday."
+og_description: "Real estate data scraping: Zillow, Realtor.com, Redfin, Trulia. Property listings, prices, market trends. ."
 twitter_description: "Real estate scraping: Extract data from Zillow, Realtor.com, Redfin. Property listings, prices, market intelligence. Start free."
 ---
 
@@ -25,8 +25,7 @@ twitter_description: "Real estate scraping: Extract data from Zillow, Realtor.co
                 
                 <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-6">{{ page.category }}</div>
                 <h1 class="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
-                    Real Estate<br/>
-                    <span class="bg-gradient-to-r from-blue-600 to-orange-600 bg-clip-text text-transparent">Data Solutions</span>
+                    Real Estate
                 </h1>
                 <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl font-light leading-relaxed">
                     Extract property listings, market trends, and valuation data from leading platforms.<br/>

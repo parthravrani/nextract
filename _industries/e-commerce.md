@@ -1,10 +1,10 @@
 ---
 layout: default
 title: "E-commerce Data Scraping | Amazon, Flipkart, Walmart API"
-description: "Extract product data, pricing intelligence, and reviews from Amazon, Flipkart, Walmart, eBay, Shopify, Target, Best Buy. Real-time e-commerce scraping API. 30% OFF Black Friday."
+description: "Extract product data, pricing intelligence, and reviews from Amazon, Flipkart, Walmart, eBay, Shopify, Target, Best Buy. Real-time e-commerce scraping API. ."
 keywords: "e-commerce scraping, Amazon scraping API, Amazon data extraction, Flipkart scraping, Walmart product data, eBay scraping, Shopify data scraping, price intelligence API, product monitoring, e-commerce data extraction, retail data scraping, Amazon reviews scraping"
 category: "E-commerce"
-og_description: "E-commerce data scraping from Amazon, Flipkart, Walmart, eBay, Shopify. Extract products, prices, reviews. Real-time API. 30% OFF Black Friday."
+og_description: "E-commerce data scraping from Amazon, Flipkart, Walmart, eBay, Shopify. Extract products, prices, reviews. Real-time API. ."
 twitter_description: "E-commerce scraping: Amazon, Flipkart, Walmart, eBay data extraction. Product & price intelligence API. Start free."
 ---
 
@@ -25,8 +25,7 @@ twitter_description: "E-commerce scraping: Amazon, Flipkart, Walmart, eBay data 
                 
                 <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-6">{{ page.category }}</div>
                 <h1 class="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
-                    E-commerce & Retail<br/>
-                    <span class="bg-gradient-to-r from-blue-600 to-orange-600 bg-clip-text text-transparent">Data Solutions</span>
+                    E-commerce & Retail
                 </h1>
                 <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl font-light leading-relaxed">
                     Extract product data, pricing intelligence, and market insights from leading e-commerce platforms.<br/>
@@ -436,9 +435,9 @@ twitter_description: "E-commerce scraping: Amazon, Flipkart, Walmart, eBay data 
             
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="p-8 bg-white/5 backdrop-blur-sm border border-white/10">
-                    <div class="text-4xl font-black text-blue-400 mb-4">99.9%</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Uptime SLA</h3>
-                    <p class="text-gray-200">Reliable data extraction with enterprise-grade infrastructure</p>
+                    <div class="text-4xl font-black text-blue-400 mb-4">High</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Uptime Commitment</h3>
+                    <p class="text-gray-200">Reliable data extraction with modern infrastructure</p>
                 </div>
                 
                 <div class="p-8 bg-white/5 backdrop-blur-sm border border-white/10">

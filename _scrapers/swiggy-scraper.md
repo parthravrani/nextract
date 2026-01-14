@@ -30,7 +30,7 @@ Extract comprehensive food delivery data including restaurant menus, prices, rev
 ## Features
 
 - **Real-time Updates**: Get menu and price changes as they happen
-- **High Success Rate**: 99.9% success rate for data extraction
+- **High Success Rate**: High success rate for data extraction
 - **Scalable**: Handle thousands of restaurants and menu items
 - **Structured Data**: Clean, normalized JSON data ready for your applications
 - **Geographic Coverage**: Support for multiple cities and regions
@@ -42,4 +42,7 @@ Extract comprehensive food delivery data including restaurant menus, prices, rev
 - **Custom Solutions**: Tailored scraping workflows for your specific needs
 
 [Contact us](/contact/) to get started with Swiggy scraping.
+
+
+
 

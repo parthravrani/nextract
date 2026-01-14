@@ -3,9 +3,11 @@
 
 # Site settings
 title: "Nextract"
+name: "Nextract"
+short_name: "Nextract"
 email: "hello@nextract.dev"
 description: >-
-  Nextract offers enterprise-grade web scraping and data extraction services. 
+  Nextract - A Modern Data Solutions Company providing Professional web scraping and data extraction services. 
   Get clean, reliable data for price intelligence, lead generation, and market research.
   Turn web data into actionable business intelligence.
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -26,8 +28,8 @@ twitter_url: "#"
 instagram_url: "https://www.instagram.com/nextract.dev/"
 
 # Business Info
-founded_year: 2017
-years_experience: 8
+founded_year: 2024  # Update with actual founding year
+years_experience: 1  # Update with actual experience
 
 # Offer Settings
 show_offers: false  # Set to true to show promotional offers (Black Friday, etc.)

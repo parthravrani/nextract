@@ -44,7 +44,10 @@ Comprehensive restaurant and food delivery dataset from Zomato platform. Monthly
 - **Data Points**: Thousands of restaurants and menu items
 - **Fields**: 40+ data fields per restaurant
 - **Geographic Coverage**: Multiple cities and regions
-- **Quality**: 99.9% data accuracy with quality assurance
+- **Quality**: High data accuracy with quality assurance
 
 [Contact us](/contact/) to get access to the Zomato dataset.
+
+
+
 

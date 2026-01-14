@@ -61,3 +61,6 @@ Monitor competitor pricing, optimize your pricing strategy, and implement dynami
 
 [Contact us](/contact/) to discuss your price intelligence needs.
 
+
+
+

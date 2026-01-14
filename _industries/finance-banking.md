@@ -1,10 +1,10 @@
 ---
 layout: default
 title: "Finance & Banking Data Scraping | Stock & Crypto API"
-description: "Extract financial data, stock prices, crypto data, regulatory filings from NYSE, NASDAQ, Coinbase, Binance, SEC databases. Finance scraping API. 30% OFF Black Friday."
+description: "Extract financial data, stock prices, crypto data, regulatory filings from NYSE, NASDAQ, Coinbase, Binance, SEC databases. Finance scraping API. ."
 keywords: "finance data scraping, banking data extraction, stock market scraping, cryptocurrency data scraping, NYSE data, NASDAQ scraping, Coinbase API, Binance scraping, SEC filings scraping, financial market data extraction"
 category: "Finance & Banking"
-og_description: "Finance & banking data scraping: Stock exchanges, crypto platforms, SEC filings. Financial market intelligence API. 30% OFF Black Friday."
+og_description: "Finance & banking data scraping: Stock exchanges, crypto platforms, SEC filings. Financial market intelligence API. ."
 twitter_description: "Finance data scraping: Stock markets, crypto, regulatory data. Extract from NYSE, NASDAQ, Coinbase, Binance. Start free."
 ---
 
@@ -26,7 +26,7 @@ twitter_description: "Finance data scraping: Stock markets, crypto, regulatory d
                 <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-6">{{ page.category }}</div>
                 <h1 class="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
                     Finance & Banking<br/>
-                    <span class="bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent">Data Solutions</span>
+                    <span class="bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent"></span>
                 </h1>
                 <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl font-light leading-relaxed">
                     Extract financial data, market intelligence, and regulatory information from leading platforms.<br/>

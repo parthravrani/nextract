@@ -35,9 +35,12 @@ Yahoo Finance, Bloomberg, Reuters, Financial Times, SEC EDGAR, banking websites,
 
 - **Real-time Data**: Get financial data updates as they happen
 - **High Frequency**: Support for high-frequency data extraction requirements
-- **Accurate**: 99.9% data accuracy ensures reliable financial intelligence
+- **Accurate**: High data accuracy ensures reliable financial intelligence
 - **Compliant**: Adheres to financial data regulations and terms of service
 - **Custom Solutions**: Tailored extraction workflows for your fintech needs
 
 [Contact us](/contact/) to discuss your finance data requirements.
+
+
+
 

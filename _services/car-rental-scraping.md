@@ -36,8 +36,11 @@ Hertz, Avis, Enterprise, Budget, Sixt, Turo, Getaround, and car rental platforms
 - **Real-time Pricing**: Get price updates as they change on platforms
 - **Comprehensive Coverage**: Extract all relevant rental data in structured format
 - **Scalable**: Handle thousands of vehicles across multiple platforms
-- **Reliable**: 99.9% uptime ensures continuous data flow
+- **Reliable**: High uptime commitment ensures continuous data flow
 - **Custom Solutions**: Tailored extraction workflows for your mobility tech needs
 
 [Contact us](/contact/) to discuss your car rental data requirements.
+
+
+
 

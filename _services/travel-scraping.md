@@ -36,8 +36,11 @@ Expedia, Booking.com, Kayak, Skyscanner, Google Flights, Airbnb, TripAdvisor, Ma
 - **Real-time Pricing**: Get price updates as they change on platforms
 - **Comprehensive Coverage**: Extract all relevant travel data in structured format
 - **Scalable**: Handle thousands of routes, hotels, and rentals across platforms
-- **Reliable**: 99.9% uptime ensures continuous data flow for your travel tech
+- **Reliable**: High uptime commitment ensures continuous data flow for your travel tech
 - **Custom Solutions**: Tailored extraction workflows for your travel platform needs
 
 [Contact us](/contact/) to discuss your travel data requirements.
+
+
+
 

@@ -44,7 +44,10 @@ Comprehensive product dataset from Amazon marketplaces worldwide. Monthly refres
 - **Data Points**: Millions of products across all categories
 - **Fields**: 50+ data fields per product
 - **Historical Data**: Price history and trend data available
-- **Quality**: 99.9% data accuracy with quality assurance
+- **Quality**: High data accuracy with quality assurance
 
 [Contact us](/contact/) to get access to the Amazon dataset.
+
+
+
 

@@ -36,8 +36,11 @@ Booking.com, Expedia, Hotels.com, Agoda, Airbnb, TripAdvisor, Google Hotels, Kay
 - **Real-time Pricing**: Get price updates as they change on platforms
 - **Comprehensive Coverage**: Extract all relevant hotel data in structured format
 - **Scalable**: Handle thousands of properties across multiple platforms
-- **Reliable**: 99.9% uptime ensures continuous data flow
+- **Reliable**: High uptime commitment ensures continuous data flow
 - **Custom Solutions**: Tailored extraction workflows for your travel tech needs
 
 [Contact us](/contact/) to discuss your hotel data requirements.
+
+
+
 

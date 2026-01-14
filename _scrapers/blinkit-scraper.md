@@ -30,7 +30,7 @@ Extract comprehensive grocery and quick commerce data including products, prices
 ## Features
 
 - **Real-time Data**: Get product and price updates as they happen
-- **High Success Rate**: 99.9% success rate for data extraction
+- **High Success Rate**: High success rate for data extraction
 - **Scalable**: Handle thousands of products and stores
 - **Structured Data**: Clean, normalized JSON data ready for your applications
 - **Geographic Coverage**: Support for multiple cities and regions
@@ -42,4 +42,7 @@ Extract comprehensive grocery and quick commerce data including products, prices
 - **Custom Solutions**: Tailored scraping workflows for your specific needs
 
 [Contact us](/contact/) to get started with Blinkit scraping.
+
+
+
 

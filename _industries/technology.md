@@ -1,10 +1,10 @@
 ---
 layout: default
 title: "Technology Data Scraping | GitHub, Stack Overflow API"
-description: "Extract software listings, reviews, code metrics from GitHub, Stack Overflow, Product Hunt, G2, Capterra, App Stores. Tech scraping API. 30% OFF Black Friday."
+description: "Extract software listings, reviews, code metrics from GitHub, Stack Overflow, Product Hunt, G2, Capterra, App Stores. Tech scraping API. ."
 keywords: "technology data scraping, GitHub scraping API, Stack Overflow data extraction, software reviews scraping, Product Hunt scraping, G2 scraping, Capterra data, app store scraping, developer data extraction"
 category: "Technology"
-og_description: "Technology data scraping: GitHub, Stack Overflow, Product Hunt, G2. Software listings, reviews, developer data. 30% OFF Black Friday."
+og_description: "Technology data scraping: GitHub, Stack Overflow, Product Hunt, G2. Software listings, reviews, developer data. ."
 twitter_description: "Tech scraping: Extract data from GitHub, Stack Overflow, Product Hunt. Software listings, reviews, developer metrics. Start free."
 ---
 
@@ -26,7 +26,7 @@ twitter_description: "Tech scraping: Extract data from GitHub, Stack Overflow, P
                 <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-6">{{ page.category }}</div>
                 <h1 class="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
                     Technology<br/>
-                    <span class="bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent">Data Solutions</span>
+                    <span class="bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent"></span>
                 </h1>
                 <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl font-light leading-relaxed">
                     Extract software listings, reviews, and technical intelligence from leading platforms.<br/>
