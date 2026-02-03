@@ -1,7 +1,7 @@
 ---
 layout: product-page
-title: "Travel Data Scraping Services"
-description: "Extract flight prices, hotel rates, car rental prices, and travel deals from travel platforms. Power your travel tech with comprehensive travel intelligence."
+title: "Travel Data Extraction: Flights, Hotels & Rentals"
+description: "Extract flight prices, hotel rates (700K+ properties), car rentals from Expedia, Booking.com, Airbnb. Track dynamic pricing, availability. Real-time booking data."
 keywords: "travel scraping, flight data extraction, travel deals scraping, car rental scraping, travel intelligence, booking data"
 order: 8
 ---

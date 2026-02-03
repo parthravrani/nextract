@@ -1,7 +1,7 @@
 ---
 layout: product-page
-title: "Price Intelligence - Competitive Pricing Analytics"
-description: "Monitor competitor pricing, optimize your pricing strategy, and implement dynamic pricing with comprehensive price intelligence solutions."
+title: "Price Intelligence: Competitive Pricing & Market Monitoring"
+description: "Monitor competitor pricing, optimize pricing strategy, implement dynamic pricing. Comprehensive price intelligence solutions. Real-time monitoring. Start free."
 keywords: "price intelligence, competitive pricing, price monitoring, dynamic pricing, pricing strategy, price optimization"
 order: 2
 ---

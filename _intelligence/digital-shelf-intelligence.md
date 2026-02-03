@@ -1,7 +1,7 @@
 ---
 layout: product-page
-title: "Digital Shelf Intelligence - E-commerce Optimization"
-description: "Optimize your digital shelf presence with comprehensive intelligence. Share of search, content audit, reviews health, retail media optimization, and buy box monitoring."
+title: "Digital Shelf Intelligence: E-commerce Optimization & Monitoring"
+description: "Optimize digital shelf presence. Share of search, content audit, reviews health, buy box monitoring. Retail media optimization made simple. Start free trial."
 keywords: "digital shelf intelligence, share of search, content audit, reviews health, retail media optimization, buy box monitoring"
 order: 8
 ---

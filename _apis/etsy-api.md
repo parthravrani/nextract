@@ -1,7 +1,7 @@
 ---
 layout: product-page
-title: "Etsy API - Handmade & Vintage Product Data API"
-description: "RESTful API for extracting product data, prices, reviews, and seller information from Etsy. Power your handmade marketplace platform."
+title: "Etsy Marketplace API: Handmade & Vintage Data"
+description: "Extract 60M+ unique listings. Track trending crafts, artisan shops, custom orders. Monitor personalization trends globally. Real-time updates."
 keywords: "Etsy API, handmade API, vintage API, craft API, marketplace API"
 order: 4
 ---

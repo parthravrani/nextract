@@ -1,8 +1,8 @@
 ---
 layout: product-page
-title: "E-commerce Data Scraping Services"
-description: "Extract product data, pricing, reviews, inventory, and competitor intelligence from e-commerce platforms. Real-time data for price monitoring, market research, and business intelligence."
-keywords: "e-commerce scraping, product data extraction, price monitoring, competitor analysis, e-commerce intelligence, product scraping, inventory tracking"
+title: "E-commerce Data Extraction: Products, Prices & Reviews"
+description: "Extract 350M+ products from Amazon, Walmart, eBay, Shopify. Real-time pricing, inventory tracking, reviews. 50+ platforms supported. 99.9% uptime. JSON/CSV export."
+keywords: "e-commerce scraping, product data extraction, price monitoring, competitor analysis, e-commerce intelligence, product scraping, inventory tracking, Amazon scraping, Walmart scraping"
 order: 1
 ---
 

@@ -56,6 +56,18 @@ navigation:
       - name: "Datasets"
         link: "/datasets/"
         description: "Pre-built data collections"
+  - name: "Solutions"
+    link: "#"
+    dropdown:
+      - name: "E-commerce Solutions"
+        link: "/e-commerce/"
+        description: "Amazon, Walmart, eBay, Shopify"
+      - name: "Quick Commerce Solutions"
+        link: "/quick-commerce/"
+        description: "Blinkit, Zepto, Instacart"
+      - name: "Food Delivery Solutions"
+        link: "/food-delivery/"
+        description: "Swiggy, Zomato, DoorDash"
   - name: "Services"
     link: "#"
     dropdown:
@@ -71,9 +83,9 @@ navigation:
       - name: "Industries"
         link: "/industries/"
         description: "Industry solutions"
-      - name: "Intelligence"
-        link: "/intelligence/"
-        description: "Data intelligence & insights"
+      - name: "Intelligence & Blog"
+        link: "/blog/"
+        description: "Guides & strategies"
       - name: "Case Studies"
         link: "/case-studies/"
         description: "Success stories"
@@ -153,6 +165,12 @@ collections:
   datasets:
     output: true
     permalink: /:collection/:name/
+  brands:
+    output: true
+    permalink: /brands/:name/
+  blog:
+    output: true
+    permalink: /blog/:name/
   
 # Exclude from processing
 exclude:

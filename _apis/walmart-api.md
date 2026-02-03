@@ -1,7 +1,7 @@
 ---
 layout: product-page
-title: "Walmart API - Product Data Extraction API"
-description: "RESTful API for extracting product data, prices, reviews, and inventory from Walmart. Simple integration, reliable data extraction."
+title: "Walmart Product API: Real-Time Inventory & Pricing"
+description: "Access 35M+ products across 4,700+ stores. Track online & in-store inventory, pricing changes. Real-time JSON data. Auto-retry on blocks."
 keywords: "Walmart API, Walmart product API, Walmart scraping API, retail API, product data API"
 order: 2
 ---

@@ -20,7 +20,7 @@ layout: default
                 </div>
                 
                 <h1 class="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-tight">
-                    {{ page.title }}
+                    {{ page.title | remove: 'Nextract | ' }}
                 </h1>
                 
                 <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl leading-relaxed">
@@ -89,28 +89,161 @@ layout: default
     </section>
 
     <!-- Content Section -->
-    <section class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6 max-w-5xl">
-            <div class="bg-white border border-gray-200 shadow-lg p-8 md:p-12">
-                <div class="prose prose-lg max-w-none">
-                    {{ content }}
-                </div>
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-7xl" style="opacity: 1 !important; transform: none !important; visibility: visible !important;">
+            <style>
+                /* Minimal, theme-aligned styling for Markdown content coming from .md files */
+                .service-content {
+                    max-width: 56rem;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                /* Ensure content section container is always visible (kept from prior fix) */
+                section.py-20.bg-white .container {
+                    opacity: 1 !important;
+                    transform: none !important;
+                    visibility: visible !important;
+                }
+                section.py-20.bg-white .container * {
+                    opacity: 1 !important;
+                    transform: none !important;
+                    visibility: visible !important;
+                }
+
+                .service-content h1 {
+                    font-size: 2.5rem;
+                    font-weight: 900;
+                    color: var(--color-gray-dark);
+                    margin: 0 0 1.5rem;
+                    line-height: 1.1;
+                }
+                @media (min-width: 768px) {
+                    .service-content h1 {
+                        font-size: 3.25rem;
+                    }
+                }
+
+                .service-content h2 {
+                    font-size: 1.875rem;
+                    font-weight: 800;
+                    color: var(--color-gray-dark);
+                    margin: 3rem 0 1rem;
+                    line-height: 1.25;
+                }
+
+                .service-content h3 {
+                    font-size: 1.375rem;
+                    font-weight: 800;
+                    color: var(--color-gray-dark);
+                    margin: 2rem 0 0.75rem;
+                    line-height: 1.35;
+                }
+
+                .service-content p {
+                    color: var(--color-gray-text);
+                    font-size: 1.125rem;
+                    line-height: 1.75;
+                    margin: 0 0 1.25rem;
+                }
+
+                .service-content ul,
+                .service-content ol {
+                    margin: 0 0 1.25rem 1.25rem;
+                    color: var(--color-gray-text);
+                }
+                .service-content ul li {
+                    list-style-type: disc;
+                    margin-bottom: 0.5rem;
+                }
+                .service-content ol li {
+                    list-style-type: decimal;
+                    margin-bottom: 0.5rem;
+                }
+
+                .service-content a {
+                    color: var(--color-blue);
+                    font-weight: 600;
+                    text-decoration: none;
+                }
+                .service-content a:hover {
+                    color: var(--color-blue-dark);
+                    text-decoration: underline;
+                }
+
+                .service-content blockquote {
+                    border-left: 4px solid var(--color-blue);
+                    padding-left: 1rem;
+                    margin: 1.5rem 0;
+                    color: var(--color-gray-text);
+                }
+
+                .service-content hr {
+                    border: none;
+                    border-top: 1px solid var(--color-gray-border);
+                    margin: 2rem 0;
+                }
+
+                .service-content code {
+                    background: var(--color-gray-light);
+                    border: 1px solid var(--color-gray-border);
+                    padding: 0.1rem 0.35rem;
+                    font-size: 0.95em;
+                }
+
+                .service-content pre {
+                    background: #0b1220;
+                    color: #e5e7eb;
+                    border: 1px solid var(--color-gray-border);
+                    padding: 1.25rem;
+                    overflow: auto;
+                    margin: 1.5rem 0;
+                }
+                .service-content pre code {
+                    background: transparent;
+                    border: none;
+                    padding: 0;
+                    color: inherit;
+                }
+
+                .service-content table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    margin: 1.5rem 0;
+                    font-size: 1rem;
+                }
+                .service-content th,
+                .service-content td {
+                    border: 1px solid var(--color-gray-border);
+                    padding: 0.75rem;
+                    vertical-align: top;
+                }
+                .service-content th {
+                    background: var(--color-gray-light);
+                    color: var(--color-gray-dark);
+                    text-align: left;
+                    font-weight: 700;
+                }
+            </style>
+            
+            <div class="service-content">
+                {{ content }}
             </div>
             
             <!-- Mid-Page CTA -->
-            <div class="mt-12 p-8 bg-gradient-to-r from-blue-600 to-blue-700 text-center">
+            <div class="mt-12 p-8 md:p-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl text-center shadow-xl">
                 <h3 class="text-2xl md:text-3xl font-black mb-4 text-white">Ready to Get Started?</h3>
                 <p class="text-lg mb-6 text-white">Start extracting data in minutes. No credit card required.</p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="/contact/" class="px-8 py-4 bg-white text-blue-600 font-bold hover:bg-gray-100 transition-all inline-flex items-center gap-2">
+                    <a href="/contact/" class="px-8 py-4 bg-white text-blue-600 font-bold hover:bg-gray-100 transition-all inline-flex items-center gap-2 rounded-lg shadow-lg">
                         Get Started Free
                         <i class="ri-arrow-right-line"></i>
                     </a>
-                    <a href="https://calendly.com/parthravrani/30min" target="_blank" class="px-8 py-4 border-2 border-white text-white font-bold hover:bg-white hover:text-blue-600 transition-all inline-flex items-center gap-2">
+                    <a href="https://calendly.com/parthravrani/30min" target="_blank" class="px-8 py-4 border-2 border-white text-white font-bold hover:bg-white hover:text-blue-600 transition-all inline-flex items-center gap-2 rounded-lg">
                         <i class="ri-calendar-line"></i>
                         Schedule Demo
                     </a>
-                    <a href="{{ '/assets/deck/Nextract - Pitch Deck.pdf' | relative_url }}" download="Nextract-Pitch-Deck.pdf" class="px-8 py-4 border-2 border-white text-white font-bold hover:bg-white hover:text-blue-600 transition-all inline-flex items-center gap-2">
+                    <a href="{{ '/assets/deck/Nextract - Pitch Deck.pdf' | relative_url }}" download="Nextract-Pitch-Deck.pdf" class="px-8 py-4 border-2 border-white text-white font-bold hover:bg-white hover:text-blue-600 transition-all inline-flex items-center gap-2 rounded-lg">
                         <i class="ri-download-line"></i>
                         Download Deck
                     </a>

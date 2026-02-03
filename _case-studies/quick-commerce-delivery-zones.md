@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Cracking the Code of Quick Commerce Delivery Zones"
-description: "How we helped a grocery startup avoid failed deliveries with street-level intelligence, reducing failures by 61%."
+title: "61% Delivery Success: Quick Commerce Zone Optimization"
+description: "Grocery startup achieved 61% reduction in failed deliveries using street-level intelligence. Delivery zone mapping. Route optimization. Failure reduction."
 category: "Quick Commerce"
 client: "Grocery delivery startup"
 ---

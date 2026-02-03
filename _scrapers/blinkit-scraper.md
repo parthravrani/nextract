@@ -1,7 +1,7 @@
 ---
 layout: product-page
-title: "Blinkit Scraper - Quick Commerce Data Extraction"
-description: "Extract grocery data, product information, prices, and delivery data from Blinkit. Power your quick commerce intelligence with Blinkit data."
+title: "Blinkit Grocery Scraper: 10-Min Delivery Data"
+description: "Extract 5,000+ groceries from India's quick commerce leader. Track prices, delivery zones, dark store inventory. 10-minute delivery intelligence. Real-time updates."
 keywords: "Blinkit scraper, quick commerce scraper, grocery scraper, Blinkit data extraction"
 order: 11
 ---

@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "E-commerce Data Scraping | Amazon, Flipkart, Walmart API"
-description: "Extract product data, pricing intelligence, and reviews from Amazon, Flipkart, Walmart, eBay, Shopify, Target, Best Buy. Real-time e-commerce scraping API. ."
+title: "E-commerce Data Solutions: Amazon, Walmart & eBay Intelligence"
+description: "Extract e-commerce data from Amazon, Walmart, Flipkart, eBay, Shopify. Product data, pricing intelligence, reviews. Real-time API. Start free trial."
 keywords: "e-commerce scraping, Amazon scraping API, Amazon data extraction, Flipkart scraping, Walmart product data, eBay scraping, Shopify data scraping, price intelligence API, product monitoring, e-commerce data extraction, retail data scraping, Amazon reviews scraping"
 category: "E-commerce"
-og_description: "E-commerce data scraping from Amazon, Flipkart, Walmart, eBay, Shopify. Extract products, prices, reviews. Real-time API. ."
-twitter_description: "E-commerce scraping: Amazon, Flipkart, Walmart, eBay data extraction. Product & price intelligence API. Start free."
+og_description: "Extract e-commerce data from Amazon, Walmart, Flipkart, eBay, Shopify. Product data, pricing intelligence, reviews. Real-time API. Start free trial."
+twitter_description: "E-commerce scraping: Amazon, Walmart, Flipkart, eBay data extraction. Product & price intelligence API. Start free."
 ---
 
 <main>

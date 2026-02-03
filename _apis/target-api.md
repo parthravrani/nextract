@@ -1,7 +1,7 @@
 ---
 layout: product-page
-title: "Target API - Retail Product Data Extraction API"
-description: "RESTful API for extracting product data, prices, reviews, and inventory from Target. Power your retail intelligence platform."
+title: "Target Product API: Store Inventory & Pricing"
+description: "Extract exclusive brands across 1,900+ stores. Track pricing tiers, Circle deals, local inventory. Store pickup availability. JSON format."
 keywords: "Target API, retail API, product API, Target scraping API, retail data API"
 order: 7
 ---

@@ -1,7 +1,7 @@
 ---
 layout: product-page
-title: "Finance & Banking Data Scraping Services"
-description: "Extract financial data, stock prices, market data, loan rates, and banking information. Power your fintech applications with real-time financial intelligence."
+title: "Finance Data Extraction: Stocks, Banking & Market Data"
+description: "Extract stock prices, market data, loan rates from Yahoo Finance, Bloomberg, SEC EDGAR. Real-time financial data. High-frequency updates. JSON/CSV export."
 keywords: "finance scraping, banking data extraction, stock data, financial intelligence, loan rates scraping, market data extraction"
 order: 5
 ---

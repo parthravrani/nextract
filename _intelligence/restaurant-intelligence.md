@@ -1,7 +1,7 @@
 ---
 layout: product-page
-title: "Restaurant Intelligence - Food Industry Analytics"
-description: "Transform restaurant data into actionable intelligence. Menu analysis, pricing strategies, review monitoring, and market insights for food businesses."
+title: "Restaurant Intelligence: Menu Analytics & Competitive Insights"
+description: "Transform restaurant data into actionable intelligence. Menu analysis, pricing strategies, review monitoring. Market insights for food businesses. Start free."
 keywords: "restaurant intelligence, food industry analytics, menu intelligence, restaurant analytics, food tech intelligence"
 order: 4
 ---

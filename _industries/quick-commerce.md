@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "Quick Commerce Data Scraping | DoorDash, Uber Eats API"
-description: "Extract restaurant data, menus, pricing, and delivery zones from DoorDash, Uber Eats, Instacart, Swiggy, Zomato, Grubhub. Food delivery scraping API. ."
-keywords: "quick commerce scraping, DoorDash scraping API, Uber Eats data extraction, Instacart scraping, Swiggy scraping, Zomato data scraping, food delivery scraping, restaurant data extraction, delivery zone mapping, menu scraping API"
+title: "Quick Commerce Data Solutions: Blinkit, Zepto & Instacart Intelligence"
+description: "Extract quick commerce data from Blinkit, Zepto, Instacart. Grocery data, prices, delivery zones. 10-minute delivery intelligence. Real-time API. Start free."
+keywords: "quick commerce scraping, Blinkit scraping API, Zepto data extraction, Instacart scraping, grocery scraping, quick commerce intelligence, delivery zone mapping, grocery data extraction, 10-minute delivery"
 category: "Quick Commerce"
-og_description: "Quick commerce data scraping: DoorDash, Uber Eats, Instacart, Swiggy, Zomato. Restaurant & menu data extraction. ."
-twitter_description: "Food delivery scraping: DoorDash, Uber Eats, Instacart data extraction. Restaurant menus, pricing, delivery zones. Start free."
+og_description: "Extract quick commerce data from Blinkit, Zepto, Instacart. Grocery data, prices, delivery zones. 10-minute delivery intelligence. Real-time API. Start free."
+twitter_description: "Quick commerce scraping: Blinkit, Zepto, Instacart data extraction. Grocery, prices, delivery zones. 10-min delivery. Start free."
 ---
 
 <main>

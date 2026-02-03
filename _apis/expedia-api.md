@@ -1,7 +1,7 @@
 ---
 layout: product-page
-title: "Expedia API - Travel & Booking Data API"
-description: "RESTful API for extracting hotel rates, flight prices, car rental prices, and booking data from Expedia. Power your travel tech platform."
+title: "Expedia Travel API: Hotels, Flights & Rentals"
+description: "Monitor 700K+ hotel properties, flight prices, car rentals. Track package deals, rewards programs. Real-time booking intelligence. JSON format."
 keywords: "Expedia API, travel API, hotel API, flight API, booking API"
 order: 5
 ---

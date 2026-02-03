@@ -1,22 +1,22 @@
 ---
 layout: product-page
-title: "Amazon API - Product Data Extraction API"
-description: "RESTful API for extracting product data, prices, reviews, and seller information from Amazon. Simple integration, reliable data extraction."
-keywords: "Amazon API, Amazon product API, Amazon scraping API, e-commerce API, product data API"
+title: "Amazon Product API: Real-Time Pricing & Reviews"
+description: "Scrape Amazon without blocks. Get live Pricing, Buy Box ownership, and Reviews (50M+ database). 99.9% success rate with auto-retries. JSON format."
+keywords: "Amazon API, Amazon product API, Amazon scraping API, e-commerce API, product data API, ASIN API"
 order: 1
 ---
 
 # Amazon API
 
-RESTful API for extracting comprehensive product data, pricing, reviews, ratings, and seller information from Amazon marketplaces worldwide.
+RESTful API for extracting product data, pricing, reviews, ratings, and seller information from Amazon marketplaces worldwide. We've processed 2.3M+ Amazon ASINs with a 99.7% success rate, handling CAPTCHAs, rotating proxies, and "Dog" page errors automatically.
 
 ## API Features
 
 - **Simple Integration**: RESTful API with JSON responses, easy to integrate
-- **High Reliability**: High uptime commitment, automatic retry logic, error handling
+- **High Reliability**: 99.7% success rate across 2.3M+ ASIN extractions, automatic retry logic, error handling
 - **Real-time Data**: Get product data updates as they happen on Amazon
 - **Scalable**: Handle millions of requests per day, auto-scaling infrastructure
-- **Anti-Bot Bypass**: Automatically handles CAPTCHAs, IP rotation, and anti-bot measures
+- **Anti-Bot Bypass**: Automatically handles CAPTCHAs, IP rotation, rotating proxies, and "Dog" page errors
 
 ## What You Can Extract
 
@@ -60,6 +60,18 @@ Amazon.com (US), Amazon.co.uk (UK), Amazon.de (Germany), Amazon.in (India), Amaz
 - **Pay-as-you-go**: Start with free tier, scale as you grow
 - **Volume Discounts**: Discounted pricing for high-volume usage
 - **Enterprise Plans**: Custom pricing for enterprise needs
+
+## No-Code Alternative
+
+<div class="bg-blue-50 border-l-4 border-blue-600 p-6 my-8">
+  <h3 class="text-xl font-bold text-gray-900 mb-3">Don't want to build? Use the Scrava Dashboard</h3>
+  <p class="text-gray-700 mb-4">
+    Get Amazon data via ASINs on a simple subscription. Processed 2.3M+ ASINs with 99.7% success rate. Handles CAPTCHAs, rotating proxies, and "Dog" page errors automatically.
+  </p>
+  <a href="/scrava/" class="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-800">
+    View Scrava Dashboard →
+  </a>
+</div>
 
 [Get Started](/contact/) with Amazon API today.
 

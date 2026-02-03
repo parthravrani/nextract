@@ -1,7 +1,7 @@
 ---
 layout: product-page
-title: "Automotive Data Scraping Services - Vehicle & Mobility Data"
-description: "Extract automotive data, vehicle listings, EV marketplace data, ride-hailing data, tire pricing, and mobility intelligence. Power your automotive tech platform."
+title: "Automotive Data Extraction: Vehicles, EV & Ride-hailing"
+description: "Extract vehicle listings, EV data, ride-hailing metrics from AutoTrader, Cars.com, Uber, Lyft. Track tire pricing, inventory. Mobility intelligence. JSON format."
 keywords: "automotive scraping, vehicle data extraction, EV scraping, ride-hailing scraping, tire pricing, automotive intelligence"
 order: 12
 ---

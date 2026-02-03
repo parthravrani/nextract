@@ -62,7 +62,7 @@
                     {% for scraper in all_scrapers %}
                     <li><a href="{{ scraper.url | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-orange-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">{{ scraper.title | replace: ' Scraper', '' }}</span>
+                        <span class="group-hover:translate-x-1 transition-transform">{{ scraper.title | remove: 'Nextract | ' | replace: ' Scraper', '' }}</span>
                     </a></li>
                     {% endfor %}
                 </ul>
@@ -80,7 +80,7 @@
                     {% for api in all_apis %}
                     <li><a href="{{ api.url | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">{{ api.title | replace: ' API', '' }}</span>
+                        <span class="group-hover:translate-x-1 transition-transform">{{ api.title | remove: 'Nextract | ' | replace: ' API', '' }}</span>
                     </a></li>
                     {% endfor %}
                 </ul>
@@ -101,7 +101,7 @@
                     {% for service in all_services %}
                     <li><a href="{{ service.url | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">{{ service.title | replace: ' Services', '' | replace: ' Data Scraping', '' }}</span>
+                        <span class="group-hover:translate-x-1 transition-transform">{{ service.title | remove: 'Nextract | ' | replace: ' Services', '' | replace: ' Data Scraping', '' }}</span>
                     </a></li>
                     {% endfor %}
                 </ul>

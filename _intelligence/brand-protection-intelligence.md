@@ -1,7 +1,7 @@
 ---
 layout: product-page
-title: "Brand Protection Intelligence - MAP Violations & Counterfeit Detection"
-description: "Protect your brand with comprehensive brand protection intelligence. MAP violations, counterfeit detection, unauthorized seller detection, and brand governance."
+title: "Brand Protection Intelligence: MAP Monitoring & Counterfeit Detection"
+description: "Protect your brand with intelligence solutions. MAP violations, counterfeit detection, unauthorized sellers. Comprehensive brand governance. Start free trial."
 keywords: "brand protection, MAP violations, counterfeit detection, unauthorized sellers, brand governance, brand intelligence"
 order: 7
 ---

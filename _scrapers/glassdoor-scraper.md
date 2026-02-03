@@ -1,7 +1,7 @@
 ---
 layout: product-page
-title: "Glassdoor Scraper - Jobs & Company Reviews Data Extraction"
-description: "Extract job listings, company reviews, salaries, interview reviews, and employer data from Glassdoor. Power your HR tech and recruitment platforms."
+title: "Glassdoor Scraper: Jobs, Salaries & Reviews"
+description: "Extract 10M+ job listings, company reviews, salary data from Glassdoor. Track compensation trends, interview experiences. HR tech data. JSON/CSV export."
 keywords: "Glassdoor scraper, job scraper, company reviews scraper, salary data extraction, interview reviews scraper"
 order: 5
 ---

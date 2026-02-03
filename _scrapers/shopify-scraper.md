@@ -1,7 +1,7 @@
 ---
 layout: product-page
-title: "Shopify Store Scraper - E-commerce Data Extraction"
-description: "Extract product data, prices, reviews, and inventory from Shopify stores. Scrape any Shopify-powered e-commerce store with our specialized scraper."
+title: "Shopify Store Scraper: Products & Inventory Data"
+description: "Extract data from any Shopify store (2M+ stores). Get products, prices, inventory, reviews. Track variants, collections. Real-time updates. JSON/CSV export."
 keywords: "Shopify scraper, Shopify store scraper, e-commerce scraper, Shopify data extraction"
 order: 9
 ---

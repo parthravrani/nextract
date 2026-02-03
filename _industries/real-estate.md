@@ -1,10 +1,10 @@
 ---
 layout: default
-title: "Real Estate Data Scraping | Zillow, Realtor.com API"
-description: "Extract property listings, Zestimate values, market trends from Zillow, Realtor.com, Redfin, Trulia, Apartments.com. Real estate scraping API. ."
+title: "Real Estate Data Solutions: Zillow, Realtor & Redfin Intelligence"
+description: "Extract property listings, Zestimate values, market trends from Zillow, Realtor.com, Redfin. Real estate intelligence API. Real-time data. Start free trial."
 keywords: "real estate scraping, Zillow scraping API, Realtor.com data extraction, Redfin scraping, Trulia data, property listings scraping, Zestimate scraping, real estate market data, rental data extraction"
 category: "Real Estate"
-og_description: "Real estate data scraping: Zillow, Realtor.com, Redfin, Trulia. Property listings, prices, market trends. ."
+og_description: "Extract property listings, Zestimate values, market trends from Zillow, Realtor.com, Redfin. Real estate intelligence API. Real-time data. Start free trial."
 twitter_description: "Real estate scraping: Extract data from Zillow, Realtor.com, Redfin. Property listings, prices, market intelligence. Start free."
 ---
 

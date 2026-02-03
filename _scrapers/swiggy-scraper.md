@@ -1,7 +1,7 @@
 ---
 layout: product-page
-title: "Swiggy Scraper - Food Delivery Data Extraction"
-description: "Extract restaurant data, menus, prices, reviews, and delivery information from Swiggy. Power your food delivery intelligence with Swiggy data."
+title: "Swiggy Restaurant Scraper: Menus & Delivery Zones"
+description: "Extract 200K+ restaurant menus across 500+ Indian cities. Track prices, delivery times, surge pricing. Menu updates every 4 hours. JSON format."
 keywords: "Swiggy scraper, food delivery scraper, restaurant scraper, Swiggy data extraction"
 order: 12
 ---

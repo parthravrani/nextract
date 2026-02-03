@@ -1,7 +1,7 @@
 ---
 layout: product-page
-title: "Car Rental Data Scraping Services"
-description: "Extract car rental prices, availability, vehicle details, and booking data from car rental platforms. Power your mobility tech with comprehensive rental intelligence."
+title: "Car Rental Data Extraction: Prices & Availability"
+description: "Extract rental data from Hertz, Avis, Enterprise, Turo. Track prices, availability, vehicle details. Real-time booking data. Mobility intelligence. JSON format."
 keywords: "car rental scraping, vehicle rental data, car rental prices, mobility data extraction, rental intelligence"
 order: 10
 ---

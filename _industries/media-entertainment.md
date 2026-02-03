@@ -1,10 +1,10 @@
 ---
 layout: default
-title: "Media & Entertainment Data Scraping | Social Media API"
-description: "Extract social media data, content, trends from Twitter, Instagram, YouTube, TikTok, Reddit, Netflix, Spotify. Media scraping API. ."
+title: "Media & Entertainment Data: Twitter, YouTube, TikTok & Netflix Intelligence"
+description: "Extract social media data, content, trends from Twitter, Instagram, YouTube, TikTok, Netflix. Media intelligence API. Real-time data. Start free trial."
 keywords: "media data scraping, social media scraping API, Twitter scraping, Instagram data extraction, YouTube scraping, TikTok scraping, Reddit data extraction, entertainment data scraping, content aggregation"
 category: "Media & Entertainment"
-og_description: "Media & entertainment scraping: Twitter, Instagram, YouTube, TikTok, Reddit. Social media monitoring, content extraction. ."
+og_description: "Extract social media data, content, trends from Twitter, Instagram, YouTube, TikTok, Netflix. Media intelligence API. Real-time data. Start free trial."
 twitter_description: "Media scraping: Extract data from Twitter, Instagram, YouTube, TikTok. Social media monitoring, content trends. Start free."
 ---
 

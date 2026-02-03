@@ -1,0 +1,107 @@
+---
+layout: default
+title: "Intelligence & Blog: Data Strategies & Guides"
+description: "Expert guides, strategies, and insights for e-commerce, quick commerce, and food delivery intelligence. Learn from data extraction experts."
+keywords: "data intelligence, e-commerce guides, quick commerce strategies, food delivery insights, web scraping guides"
+---
+
+<main>
+    <!-- Hero Section -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 via-white to-gray-50">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="text-center max-w-3xl mx-auto">
+                <div class="inline-flex items-center gap-2 bg-white border border-gray-200 px-4 py-2 mb-6">
+                    <div class="w-2 h-2 bg-blue-600 animate-pulse"></div>
+                    <span class="text-xs font-semibold text-gray-700">Intelligence • Guides • Strategies</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-6xl font-black text-gray-900 mb-6">
+                    Intelligence & Blog
+                </h1>
+                
+                <p class="text-xl text-gray-600 mb-8">
+                    Expert guides, strategies, and insights to master data-driven intelligence for e-commerce, quick commerce, and food delivery.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <!-- E-commerce Intelligence -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-black text-gray-900 mb-8 border-l-4 border-blue-600 pl-4">E-commerce Intelligence</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {% assign ecommerce_posts = site.blog | where_exp: "post", "post.category contains 'E-commerce'" %}
+                    {% for post in ecommerce_posts limit:6 %}
+                    <a href="{{ post.url }}" class="group block p-6 bg-white border border-gray-200 hover:border-blue-600 hover:shadow-lg transition-all">
+                        <div class="text-xs font-bold text-blue-600 uppercase mb-2">E-commerce</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600">{{ post.title | split: '|' | slice: 1 | join: '' | strip }}</h3>
+                        <p class="text-gray-600 text-sm mb-4">{{ post.description | truncate: 120 }}</p>
+                        <div class="flex items-center gap-2 text-blue-600 font-semibold text-sm">
+                            Read More <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Quick Commerce Intelligence -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-black text-gray-900 mb-8 border-l-4 border-orange-600 pl-4">Quick Commerce Intelligence</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {% assign quick_posts = site.blog | where_exp: "post", "post.category contains 'Quick Commerce'" %}
+                    {% for post in quick_posts limit:6 %}
+                    <a href="{{ post.url }}" class="group block p-6 bg-white border border-gray-200 hover:border-orange-600 hover:shadow-lg transition-all">
+                        <div class="text-xs font-bold text-orange-600 uppercase mb-2">Quick Commerce</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600">{{ post.title | split: '|' | slice: 1 | join: '' | strip }}</h3>
+                        <p class="text-gray-600 text-sm mb-4">{{ post.description | truncate: 120 }}</p>
+                        <div class="flex items-center gap-2 text-orange-600 font-semibold text-sm">
+                            Read More <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Food Delivery Intelligence -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-black text-gray-900 mb-8 border-l-4 border-green-600 pl-4">Food Delivery Intelligence</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {% assign food_posts = site.blog | where_exp: "post", "post.category contains 'Food Delivery'" %}
+                    {% for post in food_posts limit:6 %}
+                    <a href="{{ post.url }}" class="group block p-6 bg-white border border-gray-200 hover:border-green-600 hover:shadow-lg transition-all">
+                        <div class="text-xs font-bold text-green-600 uppercase mb-2">Food Delivery</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-600">{{ post.title | split: '|' | slice: 1 | join: '' | strip }}</h3>
+                        <p class="text-gray-600 text-sm mb-4">{{ post.description | truncate: 120 }}</p>
+                        <div class="flex items-center gap-2 text-green-600 font-semibold text-sm">
+                            Read More <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-6 max-w-4xl text-center">
+            <h2 class="text-4xl font-black mb-6">Ready to Implement These Strategies?</h2>
+            <p class="text-xl text-gray-300 mb-8">
+                Start extracting intelligence from your target platforms today with Nextract's powerful data extraction solutions.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="/contact/" class="px-8 py-4 bg-white text-gray-900 font-bold hover:bg-gray-100 transition-all inline-flex items-center gap-2">
+                    Start Free Trial
+                    <i class="ri-arrow-right-line"></i>
+                </a>
+                <a href="https://calendly.com/parthravrani/30min" target="_blank" class="px-8 py-4 border-2 border-white text-white font-bold hover:bg-white hover:text-gray-900 transition-all inline-flex items-center gap-2">
+                    <i class="ri-calendar-line"></i>
+                    Schedule Demo
+                </a>
+            </div>
+        </div>
+    </section>
+</main>

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "How a Restaurant Dominated Food Delivery"
-description: "Climbed from #12 to #3 ranking by analyzing 50 top restaurants across six months of data, increasing biryani orders by 65%."
+title: "#12 to #3 Ranking: Restaurant Delivery Optimization"
+description: "Restaurant climbed from #12 to #3 ranking by analyzing 50 top restaurants. 65% increase in biryani orders. Six months of competitive intelligence."
 category: "Restaurant"
 client: "Well-known Indian restaurant"
 ---

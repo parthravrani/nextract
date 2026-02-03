@@ -1,10 +1,10 @@
 ---
 layout: default
-title: "Manufacturing Data Scraping | Supply Chain & Vendor API"
-description: "Extract supply chain data, material pricing, vendor information from Alibaba, Global Sources, ThomasNet, IndiaMART. Manufacturing scraping API. ."
+title: "Manufacturing Data Solutions: Supply Chain & Alibaba Intelligence"
+description: "Extract supply chain data, material pricing, vendor info from Alibaba, Global Sources, ThomasNet. Manufacturing intelligence API. Real-time data. Start free."
 keywords: "manufacturing data scraping, supply chain scraping, material pricing extraction, vendor data scraping, Alibaba scraping, B2B marketplace scraping, manufacturing intelligence, supplier data extraction"
 category: "Manufacturing"
-og_description: "Manufacturing data scraping: Supply chain, material pricing, vendor data. Extract from Alibaba, Global Sources. ."
+og_description: "Extract supply chain data, material pricing, vendor info from Alibaba, Global Sources, ThomasNet. Manufacturing intelligence API. Real-time data. Start free."
 twitter_description: "Manufacturing scraping: Supply chain data, material pricing, vendor information. Alibaba, B2B marketplace extraction. Start free."
 ---
 

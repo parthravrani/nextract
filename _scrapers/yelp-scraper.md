@@ -1,7 +1,7 @@
 ---
 layout: product-page
-title: "Yelp Scraper - Business Reviews & Data Extraction"
-description: "Extract business listings, reviews, ratings, photos, and location data from Yelp. Power your local business intelligence and review monitoring."
+title: "Yelp Business Scraper: Reviews & Ratings Data"
+description: "Extract business listings, reviews, ratings, photos from Yelp. Track 100M+ reviews globally. Monitor reputation, analyze sentiment. JSON/CSV export."
 keywords: "Yelp scraper, Yelp reviews scraper, business data extraction, local business scraping, review scraping"
 order: 3
 ---

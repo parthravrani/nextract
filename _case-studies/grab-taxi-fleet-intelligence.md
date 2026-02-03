@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Grab Taxi Fleet Intelligence"
-description: "Real-time pricing and availability data delivered every 15 minutes across 3 major cities for strategic fleet management."
+title: "Grab Taxi Fleet Intelligence: Real-Time Pricing Data"
+description: "Real-time pricing and availability data every 15 minutes across 3 major cities. Strategic fleet management. 15-minute update intervals. Fleet optimization."
 category: "Transportation"
 client: "Transportation analytics firm"
 ---

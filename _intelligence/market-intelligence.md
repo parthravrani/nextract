@@ -1,7 +1,7 @@
 ---
 layout: product-page
-title: "Market Intelligence - Market Research & Competitive Analysis"
-description: "Transform market data into actionable insights. Market research, competitive analysis, trend identification, and strategic intelligence for business decisions."
+title: "Market Intelligence: Research & Competitive Analysis"
+description: "Transform market data into actionable insights. Market research, competitive analysis, trend identification. Strategic intelligence for decisions. Start free."
 keywords: "market intelligence, market research, competitive intelligence, market analysis, business intelligence, strategic intelligence"
 order: 3
 ---

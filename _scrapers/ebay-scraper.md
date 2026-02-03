@@ -1,7 +1,7 @@
 ---
 layout: product-page
-title: "eBay Scraper - Auction & Marketplace Data Extraction"
-description: "Extract product data, auction data, seller information, and marketplace intelligence from eBay. Power your e-commerce intelligence with eBay data."
+title: "eBay Auction Scraper: Products, Bids & Seller Data"
+description: "Extract eBay listings, auction bids, seller ratings across 20+ marketplaces. Track Buy-It-Now prices, shipping costs. Real-time auction monitoring. JSON format."
 keywords: "eBay scraper, eBay product scraper, auction scraper, marketplace scraper"
 order: 10
 ---

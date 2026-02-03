@@ -1,10 +1,10 @@
 ---
 layout: default
-title: "Energy & Utilities Data Scraping | Energy Prices API"
-description: "Extract energy prices, consumption data, regulatory filings from EIA, IEA, energy exchanges, utility platforms. Energy scraping API. ."
+title: "Energy & Utilities Data: Prices, Consumption & Market Intelligence"
+description: "Extract energy prices, consumption data, regulatory filings from EIA, IEA, energy exchanges. Energy intelligence API. Real-time data. Start free trial."
 keywords: "energy data scraping, utility data extraction, energy prices scraping, EIA data extraction, energy exchange scraping, regulatory data scraping, consumption data extraction, renewable energy scraping"
 category: "Energy & Utilities"
-og_description: "Energy & utilities data scraping: Energy prices, consumption data, regulatory filings. EIA, IEA, energy exchanges. ."
+og_description: "Extract energy prices, consumption data, regulatory filings from EIA, IEA, energy exchanges. Energy intelligence API. Real-time data. Start free trial."
 twitter_description: "Energy scraping: Extract energy prices, consumption data, regulatory filings. EIA, IEA, energy exchanges. Start free."
 ---
 

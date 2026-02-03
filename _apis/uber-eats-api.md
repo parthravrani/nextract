@@ -1,7 +1,7 @@
 ---
 layout: product-page
-title: "UberEats API - Food Delivery Data API"
-description: "RESTful API for extracting restaurant menus, prices, reviews, and delivery data from UberEats. Power your food tech platform."
+title: "Uber Eats API: Global Menu & Pricing Data"
+description: "Access restaurant data across 6,000+ cities in 45+ countries. Track dynamic pricing, delivery ETAs, pickup vs delivery trends. JSON format."
 keywords: "UberEats API, food delivery API, restaurant API, menu API, delivery API"
 order: 6
 ---

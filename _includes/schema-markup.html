@@ -1,0 +1,166 @@
+<!-- Schema.org Organization Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Nextract",
+  "alternateName": "Nextract Data Solutions",
+  "url": "https://nextract.dev",
+  "logo": "https://nextract.dev/assets/images/logo.png",
+  "description": "Professional web scraping API and custom data extraction services. Extract data from Amazon, e-commerce, food delivery, and quick commerce platforms worldwide.",
+  "foundingDate": "2023",
+  "email": "contact@nextract.dev",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "USA"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/nextract",
+    "https://twitter.com/nextract"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "250"
+  }
+}
+</script>
+
+<!-- Schema.org WebSite Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Nextract",
+  "url": "https://nextract.dev",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://nextract.dev/search?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<!-- Breadcrumb Markup (conditional based on page) -->
+{% if page.breadcrumbs %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {% for crumb in page.breadcrumbs %}
+    {
+      "@type": "ListItem",
+      "position": {{ forloop.index }},
+      "name": "{{ crumb.name }}",
+      "item": "https://nextract.dev{{ crumb.url }}"
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
+<!-- Service/Product Markup (for service and brand pages) -->
+{% if page.category and page.platform %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Web Scraping and Data Extraction",
+  "name": "{{ page.title }}",
+  "description": "{{ page.description }}",
+  "provider": {
+    "@type": "Organization",
+    "name": "Nextract"
+  },
+  "areaServed": "{{ page.region | default: 'Global' }}",
+  "category": "{{ page.category }}",
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/InStock",
+    "priceSpecification": {
+      "@type": "PriceSpecification",
+      "priceCurrency": "USD"
+    }
+  }
+}
+</script>
+{% endif %}
+
+<!-- SoftwareApplication Markup (for API pages) -->
+{% if page.layout == 'product-page' and page.title contains 'API' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "{{ page.title }}",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any",
+  "description": "{{ page.description }}",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "150"
+  }
+}
+</script>
+{% endif %}
+
+<!-- Article Markup (for case studies and blog posts) -->
+{% if page.category == 'case-study' or page.layout == 'post' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ page.title }}",
+  "description": "{{ page.description }}",
+  "image": "https://nextract.dev/assets/images/og-image.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "Nextract"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Nextract",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nextract.dev/assets/images/logo.png"
+    }
+  },
+  "datePublished": "{{ page.date | default: site.time | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified | default: site.time | date_to_xmlschema }}"
+}
+</script>
+{% endif %}
+
+<!-- FAQ Markup (if FAQs present on page) -->
+{% if page.faqs %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for faq in page.faqs %}
+    {
+      "@type": "Question",
+      "name": "{{ faq.question }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ faq.answer }}"
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}

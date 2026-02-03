@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Mobile-Only Restaurant Intelligence"
-description: "Built a real-time data pipeline from hidden app sources, achieving 92%+ precision in flagging suspicious rating shifts and 22% better supplier rates."
+title: "92% Precision: Mobile Restaurant Intelligence Case Study"
+description: "Real-time pipeline from mobile apps. 92% precision in flagging suspicious ratings, 22% better supplier rates. Rating fraud detection. Supplier optimization."
 category: "Mobile Intelligence"
 client: "Restaurant intelligence firm"
 ---

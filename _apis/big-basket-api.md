@@ -1,7 +1,7 @@
 ---
 layout: product-page
-title: "Big Basket API - Grocery Data Extraction API"
-description: "RESTful API for extracting grocery data, product information, prices, and delivery data from Big Basket. Power your grocery platform."
+title: "BigBasket Grocery API: Prices & Delivery Slots"
+description: "Extract 40K+ products from India's largest online grocery. Track BB Daily subscriptions, slot availability, private label pricing. Real-time data."
 keywords: "Big Basket API, grocery API, Big Basket scraping API, grocery data API"
 order: 10
 ---

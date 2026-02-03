@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Web Scraping Services by Industry | Nextract"
+title: "Web Scraping Services by Industry"
 description: "Industry-specific web scraping services: e-commerce, restaurant, hotel, real estate, finance, healthcare, and more. Custom data extraction solutions for every business need. Professional web scraping services tailored to your industry."
 keywords: "web scraping services, data scraping services, e-commerce scraping, restaurant data scraping, hotel scraping, real estate scraping, finance scraping, healthcare scraping, custom data extraction, industry-specific scraping, business data extraction, professional scraping services, custom web scraping, enterprise data services, industry data solutions, specialized scraping, tailored data extraction, business intelligence services, market research data, competitive intelligence services"
 og_description: "Industry-specific web scraping services. Extract data from e-commerce, restaurants, hotels, real estate, finance, and more. Custom solutions for your business. Professional data extraction services."
@@ -59,7 +59,7 @@ twitter_description: "Web scraping services for every industry. E-commerce, rest
                 {% assign services = site.services | sort: 'order' %}
                 {% for service in services %}
                 <a href="{{ service.url | relative_url }}" class="group p-10 border border-gray-200 hover:border-blue-600 transition-all bg-white hover:bg-gray-50 block no-underline">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4 no-underline">{{ service.title }}</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 no-underline">{{ service.title | remove: 'Nextract | ' }}</h3>
                     <p class="text-gray-600 leading-relaxed text-lg mb-6">{{ service.description }}</p>
                     <div class="flex items-center gap-2 text-blue-600 font-semibold group-hover:gap-4 transition-all">
                         <span>Learn More</span>

@@ -1,7 +1,7 @@
 ---
 layout: product-page
-title: "E-commerce Intelligence - Market Insights & Analytics"
-description: "Transform e-commerce data into actionable intelligence. Price intelligence, competitive analysis, market research, and product insights for e-commerce businesses."
+title: "E-commerce Intelligence: Market Insights & Competitive Analysis"
+description: "Transform e-commerce data into actionable intelligence. Price intelligence, competitive analysis, market research. Real-time insights. Start free trial."
 keywords: "e-commerce intelligence, price intelligence, competitive intelligence, market research, product intelligence, e-commerce analytics"
 order: 1
 ---

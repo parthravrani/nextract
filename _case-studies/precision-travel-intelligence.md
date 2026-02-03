@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Precision Travel Intelligence"
-description: "Comprehensive flight and hotel data extraction for strategic booking decisions with complete visibility into policies and availability."
+title: "Travel Intelligence: Flight & Hotel Data Extraction"
+description: "Flight and hotel data extraction for strategic booking. Complete visibility into policies and availability. 700K+ properties tracked. Booking intelligence."
 category: "Travel"
 client: "Corporate travel manager"
 ---

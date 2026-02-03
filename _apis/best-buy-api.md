@@ -1,7 +1,7 @@
 ---
 layout: product-page
-title: "Best Buy API - Electronics Product Data API"
-description: "RESTful API for extracting electronics product data, prices, reviews, and specifications from Best Buy. Power your electronics marketplace."
+title: "Best Buy Electronics API: Pricing & Specs"
+description: "Monitor 100K+ tech products. Track Geek Squad services, open-box deals, detailed specifications. Real-time pricing updates. JSON/CSV export."
 keywords: "Best Buy API, electronics API, product API, Best Buy scraping API, tech product API"
 order: 8
 ---

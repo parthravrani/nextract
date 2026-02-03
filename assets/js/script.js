@@ -48,6 +48,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Mobile menu collapsible sections
+    const mobileMenuToggles = document.querySelectorAll('.mobile-menu-toggle');
+    mobileMenuToggles.forEach(toggle => {
+        toggle.addEventListener('click', function() {
+            const content = this.nextElementSibling;
+            const icon = this.querySelector('i');
+            if (content) {
+                content.classList.toggle('hidden');
+                if (icon) {
+                    icon.classList.toggle('rotate-180');
+                }
+            }
+        });
+    });
+
     // Dropdown toggle (desktop) - handles all dropdowns
     const dropdownContainers = document.querySelectorAll('.dropdown-container');
     

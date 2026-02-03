@@ -1,7 +1,7 @@
 ---
 layout: product-page
-title: "Hotel Data Scraping Services"
-description: "Extract hotel prices, availability, reviews, amenities, and booking data from travel platforms. Real-time data for price intelligence and market research."
+title: "Hotel Data Extraction: Prices, Reviews & Availability"
+description: "Extract hotel data from Booking.com, Expedia, Airbnb. Track 700K+ properties, prices, availability, reviews. Real-time booking intelligence. JSON format."
 keywords: "hotel scraping, hotel data extraction, booking data, travel scraping, hotel price monitoring, accommodation data"
 order: 3
 ---

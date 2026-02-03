@@ -1,7 +1,7 @@
 ---
 layout: product-page
-title: "Zillow Scraper - Real Estate Data Extraction"
-description: "Extract property listings, prices, details, images, and market data from Zillow. Power your real estate tech with comprehensive property intelligence."
+title: "Zillow Property Scraper: Listings & Market Data"
+description: "Extract 110M+ property listings from Zillow. Get prices, Zestimates, price history, images. Track market trends nationwide. Real-time updates. JSON format."
 keywords: "Zillow scraper, property scraper, real estate data extraction, property listings scraper, housing market data"
 order: 4
 ---

@@ -1,7 +1,7 @@
 ---
 layout: product-page
-title: "SERP Scraper - Search Engine Results Data Extraction"
-description: "Extract search results, rankings, featured snippets, and SEO data from Google, Bing, and other search engines. Power your SEO and market research."
+title: "SERP Scraper: Google Rankings & SEO Data"
+description: "Extract Google search results, rankings, featured snippets. Track 100+ SERP elements. Monitor competitor positions. Multi-engine support. JSON format."
 keywords: "SERP scraper, Google scraper, search results scraper, SEO data extraction, search rankings scraper"
 order: 8
 ---

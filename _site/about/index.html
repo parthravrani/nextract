@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BB51Y9L2Z2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BB51Y9L2Z2');
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Meta Tags -->
-    <title>About Nextract | Web Scraping & Data Extraction Company | Nextract</title>
-    <meta name="title" content="About Nextract | Web Scraping & Data Extraction Company | Nextract">
-    <meta name="description" content="Nextract: A growing web scraping and data extraction company. Learn about our mission, values, and commitment to building reliable data solutions with integrity.">
-    <meta name="keywords" content="about nextract, web scraping company, data extraction company, about us, nextract team, web scraping company history, data extraction services company">
+    <title>About Us: Web Scraping & Data Extraction Company | Nextract</title>
+    <meta name="title" content="About Us: Web Scraping & Data Extraction Company | Nextract">
+    <meta name="description" content="Nextract: A growing web scraping and data extraction company. Learn about our mission, values, and commitment to building reliable data solutions with integrity. Professional data extraction services for businesses worldwide.">
+    <meta name="keywords" content="about nextract, web scraping company, data extraction company, about us, nextract team, web scraping company history, data extraction services company, web scraping business, data solutions company, enterprise data extraction, professional scraping services, data intelligence company, web data company, scraping service provider, data extraction experts, web scraping professionals, data solutions provider, enterprise scraping company">
     <meta name="author" content="Nextract">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="language" content="English">
@@ -42,8 +52,8 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.nextract.dev/about/">
-    <meta property="og:title" content="About Nextract | Web Scraping & Data Extraction Company | Nextract">
-    <meta property="og:description" content="About Nextract - A growing web scraping company building reliable data extraction solutions. Learn about our mission and values.">
+    <meta property="og:title" content="About Us: Web Scraping & Data Extraction Company | Nextract">
+    <meta property="og:description" content="About Nextract - A growing web scraping company building reliable data extraction solutions. Learn about our mission, values, and commitment to professional data services.">
     <meta property="og:image" content="https://www.nextract.dev/assets/images/og-image.jpg">
     <meta property="og:site_name" content="Nextract">
     <meta property="og:locale" content="en_US">
@@ -54,8 +64,8 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.nextract.dev/about/">
-    <meta name="twitter:title" content="About Nextract | Web Scraping & Data Extraction Company | Nextract">
-    <meta name="twitter:description" content="About Nextract: A growing web scraping company committed to building reliable data extraction solutions with integrity.">
+    <meta name="twitter:title" content="About Us: Web Scraping & Data Extraction Company | Nextract">
+    <meta name="twitter:description" content="About Nextract: A growing web scraping company committed to building reliable data extraction solutions with integrity. Professional data services.">
     <meta name="twitter:image" content="https://www.nextract.dev/assets/images/twitter-image.jpg">
     
     <!-- Structured Data (JSON-LD) -->
@@ -65,9 +75,9 @@
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "About Nextract | Web Scraping & Data Extraction Company | Nextract",
+      "name": "About Us: Web Scraping & Data Extraction Company | Nextract",
       "url": "https://www.nextract.dev/about/",
-      "description": "Nextract: A growing web scraping and data extraction company. Learn about our mission, values, and commitment to building reliable data solutions with integrity.",
+      "description": "Nextract: A growing web scraping and data extraction company. Learn about our mission, values, and commitment to building reliable data solutions with integrity. Professional data extraction services for businesses worldwide.",
       "inLanguage": "en-US",
       "isPartOf": {
         "@type": "WebSite",
@@ -78,8 +88,8 @@
         "@type": "Organization",
         "name": "Nextract"
       },
-      "datePublished": "2026-01-14",
-      "dateModified": "2026-01-14"
+      "datePublished": "2026-02-03",
+      "dateModified": "2026-02-03"
     }
     </script>
     
@@ -88,6 +98,30 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- BreadcrumbList Schema for all pages except homepage -->
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.nextract.dev/"
+        }
+      ]
+    }
+    </script>
     
     
     
@@ -105,6 +139,30 @@
     
     <!-- Custom Styles -->
     <style>
+        /* Force remove all list bullets */
+        .related-resources ul,
+        section[class*="related"] ul,
+        ul.list-none {
+            list-style: none !important;
+            list-style-type: none !important;
+            padding-left: 0 !important;
+            margin-left: 0 !important;
+        }
+        
+        .related-resources ul li,
+        section[class*="related"] ul li,
+        ul.list-none li {
+            list-style: none !important;
+            list-style-type: none !important;
+        }
+        
+        .related-resources ul li::before,
+        section[class*="related"] ul li::before,
+        ul.list-none li::before {
+            content: none !important;
+            display: none !important;
+        }
+        
         /* Fixed Color Palette */
         :root {
             --color-blue: #0052FF;
@@ -411,10 +469,18 @@
             text-decoration: none;
         }
         
+        /* Only underline inline text links on hover, not card/block links */
         .markdown-content a:hover,
-        .prose a:hover,
-        main a:hover {
+        .prose a:hover {
             text-decoration: underline;
+        }
+        
+        /* Prevent underlines on card-style block links */
+        main a.block:hover,
+        main a.block:hover *,
+        main a[class*="p-"]:hover *,
+        main a[class*="border"]:hover * {
+            text-decoration: none !important;
         }
 
         /* Accordion Styles */
@@ -707,20 +773,20 @@
     </style>
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>About Nextract Web Scraping &amp; Data Extraction Company | Nextract</title>
+<title>About Us: Web Scraping &amp; Data Extraction Company | Nextract</title>
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="About Nextract Web Scraping &amp; Data Extraction Company" />
+<meta property="og:title" content="About Us: Web Scraping &amp; Data Extraction Company" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Nextract: A growing web scraping and data extraction company. Learn about our mission, values, and commitment to building reliable data solutions with integrity." />
-<meta property="og:description" content="Nextract: A growing web scraping and data extraction company. Learn about our mission, values, and commitment to building reliable data solutions with integrity." />
-<link rel="canonical" href="http://0.0.0.0:4000/about/" />
-<meta property="og:url" content="http://0.0.0.0:4000/about/" />
+<meta name="description" content="Nextract: A growing web scraping and data extraction company. Learn about our mission, values, and commitment to building reliable data solutions with integrity. Professional data extraction services for businesses worldwide." />
+<meta property="og:description" content="Nextract: A growing web scraping and data extraction company. Learn about our mission, values, and commitment to building reliable data solutions with integrity. Professional data extraction services for businesses worldwide." />
+<link rel="canonical" href="http://localhost:4000/about/" />
+<meta property="og:url" content="http://localhost:4000/about/" />
 <meta property="og:site_name" content="Nextract" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="About Nextract Web Scraping &amp; Data Extraction Company" />
+<meta property="twitter:title" content="About Us: Web Scraping &amp; Data Extraction Company" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"Nextract: A growing web scraping and data extraction company. Learn about our mission, values, and commitment to building reliable data solutions with integrity.","headline":"About Nextract Web Scraping &amp; Data Extraction Company","name":"Nextract","url":"http://0.0.0.0:4000/about/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","description":"Nextract: A growing web scraping and data extraction company. Learn about our mission, values, and commitment to building reliable data solutions with integrity. Professional data extraction services for businesses worldwide.","headline":"About Us: Web Scraping &amp; Data Extraction Company","name":"Nextract","url":"http://localhost:4000/about/"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -751,202 +817,146 @@
             </div>
 
             <!-- Desktop Navigation -->
-            <nav class="hidden lg:flex items-center gap-1 flex-1 justify-center">
+            <nav class="hidden lg:flex items-center gap-2 flex-1 justify-center">
                 
-                <!-- Products Dropdown -->
-                <div class="nav-dropdown group relative">
-                    <button class="nav-link flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-gray-700 hover:text-blue-600 transition-all rounded-lg hover:bg-gray-50">
-                        Products
-                        <i class="ri-arrow-down-s-line text-base transition-transform group-hover:rotate-180"></i>
-                    </button>
-                    <div class="nav-dropdown-menu absolute top-full left-0 mt-2 w-[400px] bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                        <div class="p-8">
-                            <div class="mb-6 pb-4 border-b border-gray-100">
-                                <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wider">Our Products</h3>
-                            </div>
-                            <div class="space-y-2">
-                                <a href="/products/" class="flex items-start gap-4 p-4 rounded-xl hover:bg-blue-50 transition-all group/item border border-transparent hover:border-blue-100">
-                                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center group-hover/item:bg-blue-600 transition-colors">
-                                        <i class="ri-code-s-slash-line text-blue-600 group-hover/item:text-white text-xl"></i>
-                                    </div>
-                                    <div class="flex-1 pt-1">
-                                        <div class="font-bold text-gray-900 group-hover/item:text-blue-600 transition-colors text-base mb-1">API</div>
-                                        <div class="text-sm text-gray-500">Self-service web scraping API</div>
-                                    </div>
-                                </a>
-                                <a href="/scrapers/" class="flex items-start gap-4 p-4 rounded-xl hover:bg-purple-50 transition-all group/item border border-transparent hover:border-purple-100">
-                                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center group-hover/item:bg-purple-600 transition-colors">
-                                        <i class="ri-scissors-cut-line text-purple-600 group-hover/item:text-white text-xl"></i>
-                                    </div>
-                                    <div class="flex-1 pt-1">
-                                        <div class="font-bold text-gray-900 group-hover/item:text-purple-600 transition-colors text-base mb-1">Scrapers</div>
-                                        <div class="text-sm text-gray-500">Platform-specific scrapers</div>
-                                    </div>
-                                </a>
-                                <a href="/apis/" class="flex items-start gap-4 p-4 rounded-xl hover:bg-green-50 transition-all group/item border border-transparent hover:border-green-100">
-                                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center group-hover/item:bg-green-600 transition-colors">
-                                        <i class="ri-plug-line text-green-600 group-hover/item:text-white text-xl"></i>
-                                    </div>
-                                    <div class="flex-1 pt-1">
-                                        <div class="font-bold text-gray-900 group-hover/item:text-green-600 transition-colors text-base mb-1">APIs</div>
-                                        <div class="text-sm text-gray-500">Ready-to-use data APIs</div>
-                                    </div>
-                                </a>
-                                <a href="/datasets/" class="flex items-start gap-4 p-4 rounded-xl hover:bg-orange-50 transition-all group/item border border-transparent hover:border-orange-100">
-                                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center group-hover/item:bg-orange-600 transition-colors">
-                                        <i class="ri-database-2-line text-orange-600 group-hover/item:text-white text-xl"></i>
-                                    </div>
-                                    <div class="flex-1 pt-1">
-                                        <div class="font-bold text-gray-900 group-hover/item:text-orange-600 transition-colors text-base mb-1">Datasets</div>
-                                        <div class="text-sm text-gray-500">Pre-built data collections</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Services Dropdown -->
-                <div class="nav-dropdown group relative">
-                    <button class="nav-link flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-gray-700 hover:text-blue-600 transition-all rounded-lg hover:bg-gray-50">
-                        Services
-                        <i class="ri-arrow-down-s-line text-base transition-transform group-hover:rotate-180"></i>
-                    </button>
-                    <div class="nav-dropdown-menu absolute top-full left-0 mt-2 w-[360px] bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                        <div class="p-8">
-                            <div class="mb-6 pb-4 border-b border-gray-100">
-                                <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wider">Our Services</h3>
-                            </div>
-                            <div class="space-y-3">
-                                <a href="/services/" class="flex items-start gap-4 p-5 rounded-xl hover:bg-blue-50 transition-all group/item border border-transparent hover:border-blue-100">
-                                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center group-hover/item:bg-blue-600 transition-colors">
-                                        <i class="ri-service-line text-blue-600 group-hover/item:text-white text-xl"></i>
-                                    </div>
-                                    <div class="flex-1 pt-1">
-                                        <div class="font-bold text-gray-900 group-hover/item:text-blue-600 transition-colors text-base mb-1">All Services</div>
-                                        <div class="text-sm text-gray-500">Industry-specific scraping</div>
-                                    </div>
-                                </a>
-                                <a href="/solutions/" class="flex items-start gap-4 p-5 rounded-xl hover:bg-indigo-50 transition-all group/item border border-transparent hover:border-indigo-100">
-                                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-indigo-100 flex items-center justify-center group-hover/item:bg-indigo-600 transition-colors">
-                                        <i class="ri-tools-line text-indigo-600 group-hover/item:text-white text-xl"></i>
-                                    </div>
-                                    <div class="flex-1 pt-1">
-                                        <div class="font-bold text-gray-900 group-hover/item:text-indigo-600 transition-colors text-base mb-1">Custom Solutions</div>
-                                        <div class="text-sm text-gray-500">Tailored data extraction</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Industries -->
-                <a href="/industries/" class="nav-link px-4 py-2.5 text-sm font-semibold text-gray-700 hover:text-blue-600 transition-all rounded-lg hover:bg-gray-50">
-                    Industries
+                <!-- Scrava Link - Prominent -->
+                <a href="/scrava/" class="nav-link px-4 py-2.5 text-sm font-semibold text-gray-700 hover:text-orange-600 transition-all rounded-lg hover:bg-orange-50">
+                    Scrava
                 </a>
-
-                <!-- Resources Dropdown -->
+                
+                <!-- Products & Services Mega Menu -->
                 <div class="nav-dropdown group relative">
                     <button class="nav-link flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-gray-700 hover:text-blue-600 transition-all rounded-lg hover:bg-gray-50">
-                        Resources
+                        Products & Services
                         <i class="ri-arrow-down-s-line text-base transition-transform group-hover:rotate-180"></i>
                     </button>
-                    <div class="nav-dropdown-menu absolute top-full left-0 mt-2 w-[400px] bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                    <div class="nav-dropdown-menu absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[900px] bg-white rounded-2xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                         <div class="p-8">
-                            <div class="mb-6 pb-4 border-b border-gray-100">
-                                <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wider">Resources</h3>
-                            </div>
-                            <div class="space-y-2">
-                                <a href="/case-studies/" class="flex items-start gap-4 p-4 rounded-xl hover:bg-blue-50 transition-all group/item border border-transparent hover:border-blue-100">
-                                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center group-hover/item:bg-blue-600 transition-colors">
-                                        <i class="ri-file-list-3-line text-blue-600 group-hover/item:text-white text-xl"></i>
+                            <div class="grid grid-cols-3 gap-8">
+                                <!-- Column 1: Products -->
+                                <div>
+                                    <div class="mb-4 pb-3 border-b border-gray-100">
+                                        <h3 class="text-xs font-bold text-gray-900 uppercase tracking-wider">Products</h3>
                                     </div>
-                                    <div class="flex-1 pt-1">
-                                        <div class="font-bold text-gray-900 group-hover/item:text-blue-600 transition-colors text-base mb-1">Case Studies</div>
-                                        <div class="text-sm text-gray-500">Success stories</div>
+                                    <div class="space-y-2">
+                                        <a href="/products/" class="flex items-start gap-3 p-3 rounded-lg hover:bg-blue-50 transition-all group/item">
+                                            <i class="ri-code-s-slash-line text-blue-600 text-lg mt-0.5"></i>
+                                            <div>
+                                                <div class="font-bold text-gray-900 group-hover/item:text-blue-600 transition-colors text-sm mb-0.5">API</div>
+                                                <div class="text-xs text-gray-500">Web scraping API</div>
+                                            </div>
+                                        </a>
+                                        <a href="/scrapers/" class="flex items-start gap-3 p-3 rounded-lg hover:bg-purple-50 transition-all group/item">
+                                            <i class="ri-scissors-cut-line text-purple-600 text-lg mt-0.5"></i>
+                                            <div>
+                                                <div class="font-bold text-gray-900 group-hover/item:text-purple-600 transition-colors text-sm mb-0.5">Scrapers</div>
+                                                <div class="text-xs text-gray-500">Platform scrapers</div>
+                                            </div>
+                                        </a>
+                                        <a href="/apis/" class="flex items-start gap-3 p-3 rounded-lg hover:bg-green-50 transition-all group/item">
+                                            <i class="ri-plug-line text-green-600 text-lg mt-0.5"></i>
+                                            <div>
+                                                <div class="font-bold text-gray-900 group-hover/item:text-green-600 transition-colors text-sm mb-0.5">APIs</div>
+                                                <div class="text-xs text-gray-500">Ready-to-use APIs</div>
+                                            </div>
+                                        </a>
+                                        <a href="/datasets/" class="flex items-start gap-3 p-3 rounded-lg hover:bg-orange-50 transition-all group/item">
+                                            <i class="ri-database-2-line text-orange-600 text-lg mt-0.5"></i>
+                                            <div>
+                                                <div class="font-bold text-gray-900 group-hover/item:text-orange-600 transition-colors text-sm mb-0.5">Datasets</div>
+                                                <div class="text-xs text-gray-500">Pre-built data</div>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
-                                <a href="/intelligence/" class="flex items-start gap-4 p-4 rounded-xl hover:bg-purple-50 transition-all group/item border border-transparent hover:border-purple-100">
-                                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center group-hover/item:bg-purple-600 transition-colors">
-                                        <i class="ri-brain-line text-purple-600 group-hover/item:text-white text-xl"></i>
+                                </div>
+                                
+                                <!-- Column 2: Services & Solutions -->
+                                <div>
+                                    <div class="mb-4 pb-3 border-b border-gray-100">
+                                        <h3 class="text-xs font-bold text-gray-900 uppercase tracking-wider">Services</h3>
                                     </div>
-                                    <div class="flex-1 pt-1">
-                                        <div class="font-bold text-gray-900 group-hover/item:text-purple-600 transition-colors text-base mb-1">Intelligence</div>
-                                        <div class="text-sm text-gray-500">Data insights</div>
+                                    <div class="space-y-2 mb-6">
+                                        <a href="/services/" class="flex items-start gap-3 p-3 rounded-lg hover:bg-blue-50 transition-all group/item">
+                                            <i class="ri-service-line text-blue-600 text-lg mt-0.5"></i>
+                                            <div>
+                                                <div class="font-bold text-gray-900 group-hover/item:text-blue-600 transition-colors text-sm mb-0.5">All Services</div>
+                                                <div class="text-xs text-gray-500">Industry scraping</div>
+                                            </div>
+                                        </a>
+                                        <a href="/solutions/" class="flex items-start gap-3 p-3 rounded-lg hover:bg-indigo-50 transition-all group/item">
+                                            <i class="ri-tools-line text-indigo-600 text-lg mt-0.5"></i>
+                                            <div>
+                                                <div class="font-bold text-gray-900 group-hover/item:text-indigo-600 transition-colors text-sm mb-0.5">Custom Solutions</div>
+                                                <div class="text-xs text-gray-500">Tailored extraction</div>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
-                                <a href="/testimonials/" class="flex items-start gap-4 p-4 rounded-xl hover:bg-yellow-50 transition-all group/item border border-transparent hover:border-yellow-100">
-                                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-yellow-100 flex items-center justify-center group-hover/item:bg-yellow-600 transition-colors">
-                                        <i class="ri-star-line text-yellow-600 group-hover/item:text-white text-xl"></i>
+                                    <div class="mb-4 pb-3 border-b border-gray-100">
+                                        <h3 class="text-xs font-bold text-gray-900 uppercase tracking-wider">Solutions</h3>
                                     </div>
-                                    <div class="flex-1 pt-1">
-                                        <div class="font-bold text-gray-900 group-hover/item:text-yellow-600 transition-colors text-base mb-1">Testimonials</div>
-                                        <div class="text-sm text-gray-500">Client reviews</div>
+                                    <div class="space-y-2">
+                                        <a href="/e-commerce/" class="flex items-start gap-3 p-3 rounded-lg hover:bg-blue-50 transition-all group/item">
+                                            <i class="ri-shopping-cart-2-line text-blue-600 text-lg mt-0.5"></i>
+                                            <div>
+                                                <div class="font-bold text-gray-900 group-hover/item:text-blue-600 transition-colors text-sm mb-0.5">E-commerce</div>
+                                                <div class="text-xs text-gray-500">50+ platforms</div>
+                                            </div>
+                                        </a>
+                                        <a href="/quick-commerce/" class="flex items-start gap-3 p-3 rounded-lg hover:bg-orange-50 transition-all group/item">
+                                            <i class="ri-timer-flash-line text-orange-600 text-lg mt-0.5"></i>
+                                            <div>
+                                                <div class="font-bold text-gray-900 group-hover/item:text-orange-600 transition-colors text-sm mb-0.5">Quick Commerce</div>
+                                                <div class="text-xs text-gray-500">Blinkit, Zepto & more</div>
+                                            </div>
+                                        </a>
+                                        <a href="/food-delivery/" class="flex items-start gap-3 p-3 rounded-lg hover:bg-green-50 transition-all group/item">
+                                            <i class="ri-restaurant-line text-green-600 text-lg mt-0.5"></i>
+                                            <div>
+                                                <div class="font-bold text-gray-900 group-hover/item:text-green-600 transition-colors text-sm mb-0.5">Food Delivery</div>
+                                                <div class="text-xs text-gray-500">Zomato, Swiggy & more</div>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
-                                <a href="/faq/" class="flex items-start gap-4 p-4 rounded-xl hover:bg-green-50 transition-all group/item border border-transparent hover:border-green-100">
-                                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center group-hover/item:bg-green-600 transition-colors">
-                                        <i class="ri-question-line text-green-600 group-hover/item:text-white text-xl"></i>
+                                </div>
+                                
+                                <!-- Column 3: Industries & Resources -->
+                                <div>
+                                    <div class="mb-4 pb-3 border-b border-gray-100">
+                                        <h3 class="text-xs font-bold text-gray-900 uppercase tracking-wider">More</h3>
                                     </div>
-                                    <div class="flex-1 pt-1">
-                                        <div class="font-bold text-gray-900 group-hover/item:text-green-600 transition-colors text-base mb-1">FAQ</div>
-                                        <div class="text-sm text-gray-500">Common questions</div>
+                                    <div class="space-y-2 mb-6">
+                                        <a href="/industries/" class="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-all group/item">
+                                            <i class="ri-building-line text-gray-600 text-lg mt-0.5"></i>
+                                            <div>
+                                                <div class="font-bold text-gray-900 group-hover/item:text-gray-900 transition-colors text-sm mb-0.5">Industries</div>
+                                                <div class="text-xs text-gray-500">Industry focus</div>
+                                            </div>
+                                        </a>
+                                        <a href="/case-studies/" class="flex items-start gap-3 p-3 rounded-lg hover:bg-blue-50 transition-all group/item">
+                                            <i class="ri-file-list-3-line text-blue-600 text-lg mt-0.5"></i>
+                                            <div>
+                                                <div class="font-bold text-gray-900 group-hover/item:text-blue-600 transition-colors text-sm mb-0.5">Case Studies</div>
+                                                <div class="text-xs text-gray-500">Success stories</div>
+                                            </div>
+                                        </a>
+                                        <a href="/intelligence/" class="flex items-start gap-3 p-3 rounded-lg hover:bg-purple-50 transition-all group/item">
+                                            <i class="ri-brain-line text-purple-600 text-lg mt-0.5"></i>
+                                            <div>
+                                                <div class="font-bold text-gray-900 group-hover/item:text-purple-600 transition-colors text-sm mb-0.5">Intelligence</div>
+                                                <div class="text-xs text-gray-500">Data insights</div>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Company Dropdown -->
-                <div class="nav-dropdown group relative">
-                    <button class="nav-link flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-gray-700 hover:text-blue-600 transition-all rounded-lg hover:bg-gray-50 text-blue-600 bg-blue-50">
-                        Company
-                        <i class="ri-arrow-down-s-line text-base transition-transform group-hover:rotate-180"></i>
-                    </button>
-                    <div class="nav-dropdown-menu absolute top-full left-0 mt-2 w-[320px] bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                        <div class="p-8">
-                            <div class="mb-6 pb-4 border-b border-gray-100">
-                                <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wider">Company</h3>
-                            </div>
-                            <div class="space-y-2">
-                                <a href="/about/" class="flex items-center gap-4 p-4 rounded-xl hover:bg-blue-50 transition-all group/item border border-transparent hover:border-blue-100">
-                                    <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center group-hover/item:bg-blue-600 transition-colors">
-                                        <i class="ri-information-line text-blue-600 group-hover/item:text-white text-lg"></i>
+                                    <div class="pt-4 border-t border-gray-100">
+                                        <a href="/about/" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-all text-sm text-gray-600 hover:text-gray-900">
+                                            <i class="ri-information-line text-base"></i>
+                                            <span class="font-medium">About</span>
+                                        </a>
+                                        <a href="/contact/" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-all text-sm text-gray-600 hover:text-gray-900">
+                                            <i class="ri-mail-line text-base"></i>
+                                            <span class="font-medium">Contact</span>
+                                        </a>
                                     </div>
-                                    <span class="font-bold text-gray-900 group-hover/item:text-blue-600 transition-colors text-base">About Us</span>
-                                </a>
-                                <a href="/contact/" class="flex items-center gap-4 p-4 rounded-xl hover:bg-blue-50 transition-all group/item border border-transparent hover:border-blue-100">
-                                    <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center group-hover/item:bg-blue-600 transition-colors">
-                                        <i class="ri-mail-line text-blue-600 group-hover/item:text-white text-lg"></i>
-                                    </div>
-                                    <span class="font-bold text-gray-900 group-hover/item:text-blue-600 transition-colors text-base">Contact</span>
-                                </a>
-                            </div>
-                            <div class="mt-6 pt-6 border-t border-gray-100">
-                                <div class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-3">Legal</div>
-                                <div class="space-y-2">
-                                    <a href="/trust-security/" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-all text-sm text-gray-600 hover:text-gray-900">
-                                        <i class="ri-shield-check-line text-base"></i>
-                                        <span class="font-medium">Trust & Security</span>
-                                    </a>
-                                    <a href="/terms/" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-all text-sm text-gray-600 hover:text-gray-900">
-                                        <i class="ri-file-text-line text-base"></i>
-                                        <span class="font-medium">Terms</span>
-                                    </a>
-                                    <a href="/privacy/" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-all text-sm text-gray-600 hover:text-gray-900">
-                                        <i class="ri-lock-line text-base"></i>
-                                        <span class="font-medium">Privacy</span>
-                                    </a>
-                                    <a href="/sla/" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-all text-sm text-gray-600 hover:text-gray-900">
-                                        <i class="ri-time-line text-base"></i>
-                                        <span class="font-medium">SLA</span>
-                                    </a>
-                                    <a href="/compliance/" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-all text-sm text-gray-600 hover:text-gray-900">
-                                        <i class="ri-checkbox-circle-line text-base"></i>
-                                        <span class="font-medium">Compliance</span>
-                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -956,7 +966,7 @@
             </nav>
 
             <!-- Right Side Actions -->
-            <div class="hidden lg:flex items-center gap-3 flex-shrink-0">
+            <div class="hidden lg:flex items-center gap-3 flex-shrink-0 ml-auto">
                 <a href="/assets/deck/Nextract%20-%20Pitch%20Deck.pdf" download="Nextract-Pitch-Deck.pdf" class="px-4 py-2 border-2 border-gray-300 text-gray-700 font-semibold text-sm hover:border-gray-900 hover:text-gray-900 hover:bg-gray-50 transition-all inline-flex items-center gap-2 rounded-lg group">
                     <i class="ri-download-line"></i>
                     <span>Pitch Deck</span>
@@ -979,14 +989,14 @@
         .nav-dropdown:hover .nav-dropdown-menu {
             opacity: 1;
             visibility: visible;
-            transform: translateY(0);
+            transform: translate(-50%, 0);
         }
         
         /* Keep dropdown open when hovering over it */
         .nav-dropdown-menu:hover {
             opacity: 1 !important;
             visibility: visible !important;
-            transform: translateY(0) !important;
+            transform: translate(-50%, 0) !important;
         }
     </style>
 </header>
@@ -1005,59 +1015,55 @@
         </button>
     </div>
     
-    <nav class="flex flex-col space-y-6">
-        <!-- Products Section -->
+    <nav class="flex flex-col space-y-4">
+        <!-- Scrava - Prominent -->
+        <a href="/scrava/" class="block py-4 px-4 text-lg font-bold text-gray-900 hover:bg-orange-50 transition-colors rounded-lg">
+            <div class="flex items-center gap-3">
+                <i class="ri-amazon-line text-xl"></i>
+                <span>Scrava</span>
+            </div>
+        </a>
+        
+        <!-- Products & Services - Collapsible -->
         <div>
-            <a href="/products/" class="block py-4 px-4 text-lg font-bold text-gray-900 hover:bg-gray-50 transition-colors">
-                Products
-            </a>
-            <div class="pl-6 space-y-1">
-                <a href="/products/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors">API</a>
-                <a href="/scrapers/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors">Scrapers</a>
-                <a href="/apis/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors">APIs</a>
-                <a href="/datasets/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors">Datasets</a>
+            <button class="mobile-menu-toggle w-full flex items-center justify-between py-4 px-4 text-lg font-bold text-gray-900 hover:bg-gray-50 transition-colors rounded-lg">
+                <span>Products & Services</span>
+                <i class="ri-arrow-down-s-line transition-transform"></i>
+            </button>
+            <div class="mobile-menu-content hidden pl-6 space-y-1 mt-2">
+                <div class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 px-4">Products</div>
+                <a href="/products/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded">API</a>
+                <a href="/scrapers/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded">Scrapers</a>
+                <a href="/apis/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded">APIs</a>
+                <a href="/datasets/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded">Datasets</a>
+                
+                <div class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 mt-4 px-4">Services</div>
+                <a href="/services/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded">All Services</a>
+                <a href="/solutions/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded">Custom Solutions</a>
+                
+                <div class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 mt-4 px-4">Solutions</div>
+                <a href="/e-commerce/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded">E-commerce</a>
+                <a href="/quick-commerce/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded">Quick Commerce</a>
+                <a href="/food-delivery/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded">Food Delivery</a>
+                
+                <div class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 mt-4 px-4">More</div>
+                <a href="/industries/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded">Industries</a>
+                <a href="/case-studies/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded">Case Studies</a>
+                <a href="/intelligence/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded">Intelligence</a>
             </div>
         </div>
         
-        <!-- Services Section -->
+        <!-- Company -->
         <div>
-            <a href="/services/" class="block py-4 px-4 text-lg font-bold text-gray-900 hover:bg-gray-50 transition-colors">
-                Services
+            <a href="/about/" class="block py-4 px-4 text-lg font-bold text-gray-900 hover:bg-gray-50 transition-colors rounded-lg bg-gray-50 text-blue-600">
+                <div class="flex items-center gap-3">
+                    <i class="ri-information-line text-xl"></i>
+                    <span>Company</span>
+                </div>
             </a>
-            <div class="pl-6 space-y-1">
-                <a href="/services/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors">All Services</a>
-                <a href="/solutions/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors">Custom Solutions</a>
-            </div>
-        </div>
-        
-        <!-- Industries Section -->
-        <div>
-            <a href="/industries/" class="block py-4 px-4 text-lg font-bold text-gray-900 hover:bg-gray-50 transition-colors">
-                Industries
-            </a>
-        </div>
-        
-        <!-- Resources Section -->
-        <div>
-            <a href="/case-studies/" class="block py-4 px-4 text-lg font-bold text-gray-900 hover:bg-gray-50 transition-colors">
-                Resources
-            </a>
-            <div class="pl-6 space-y-1">
-                <a href="/case-studies/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors">Case Studies</a>
-                <a href="/intelligence/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors">Intelligence</a>
-                <a href="/testimonials/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors">Testimonials</a>
-                <a href="/faq/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors">FAQ</a>
-            </div>
-        </div>
-        
-        <!-- Company Section -->
-        <div>
-            <a href="/about/" class="block py-4 px-4 text-lg font-bold text-gray-900 hover:bg-gray-50 transition-colors bg-gray-50 text-blue-600">
-                Company
-            </a>
-            <div class="pl-6 space-y-1">
-                <a href="/about/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors bg-gray-50 text-blue-600 font-semibold">About Us</a>
-                <a href="/contact/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors">Contact</a>
+            <div class="pl-6 space-y-1 mt-2">
+                <a href="/about/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded bg-gray-50 text-blue-600 font-semibold">About</a>
+                <a href="/contact/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded">Contact</a>
             </div>
         </div>
         
@@ -1065,11 +1071,11 @@
         <div class="pt-4 border-t border-gray-200">
             <div class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-3 px-4">Legal</div>
             <div class="space-y-1">
-                <a href="/trust-security/" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors">Trust & Security</a>
-                <a href="/terms/" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors">Terms</a>
-                <a href="/privacy/" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors">Privacy</a>
-                <a href="/sla/" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors">SLA</a>
-                <a href="/compliance/" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors">Compliance</a>
+                <a href="/trust-security/" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded">Trust & Security</a>
+                <a href="/terms/" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded">Terms</a>
+                <a href="/privacy/" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded">Privacy</a>
+                <a href="/sla/" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded">SLA</a>
+                <a href="/compliance/" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded">Compliance</a>
             </div>
         </div>
         
@@ -1278,62 +1284,62 @@
                     
                     <li><a href="/scrapers/amazon-scraper/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-orange-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Amazon - Product Data Extraction</span>
+                        <span class="group-hover:translate-x-1 transition-transform">Amazon Product: Prices, Reviews & Seller Data</span>
                     </a></li>
                     
                     <li><a href="/scrapers/linkedin-scraper/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-orange-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">LinkedIn - Professional Network Data Extraction</span>
+                        <span class="group-hover:translate-x-1 transition-transform">LinkedIn: Profiles, Jobs & Company Data</span>
                     </a></li>
                     
                     <li><a href="/scrapers/yelp-scraper/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-orange-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Yelp - Business Reviews & Data Extraction</span>
+                        <span class="group-hover:translate-x-1 transition-transform">Yelp Business: Reviews & Ratings Data</span>
                     </a></li>
                     
                     <li><a href="/scrapers/zillow-scraper/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-orange-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Zillow - Real Estate Data Extraction</span>
+                        <span class="group-hover:translate-x-1 transition-transform">Zillow Property: Listings & Market Data</span>
                     </a></li>
                     
                     <li><a href="/scrapers/glassdoor-scraper/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-orange-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Glassdoor - Jobs & Company Reviews Data Extraction</span>
+                        <span class="group-hover:translate-x-1 transition-transform">Glassdoor: Jobs, Salaries & Reviews</span>
                     </a></li>
                     
                     <li><a href="/scrapers/tiktok-scraper/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-orange-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">TikTok - Video Content & Engagement Data Extraction</span>
+                        <span class="group-hover:translate-x-1 transition-transform">TikTok: Videos, Engagement & Trends</span>
                     </a></li>
                     
                     <li><a href="/scrapers/netflix-scraper/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-orange-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Netflix - Content & Streaming Data Extraction</span>
+                        <span class="group-hover:translate-x-1 transition-transform">Netflix Content: Movies, Shows & Ratings</span>
                     </a></li>
                     
                     <li><a href="/scrapers/serp-scraper/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-orange-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">SERP - Search Engine Results Data Extraction</span>
+                        <span class="group-hover:translate-x-1 transition-transform">SERP: Google Rankings & SEO Data</span>
                     </a></li>
                     
                     <li><a href="/scrapers/shopify-scraper/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-orange-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Shopify Store - E-commerce Data Extraction</span>
+                        <span class="group-hover:translate-x-1 transition-transform">Shopify Store: Products & Inventory Data</span>
                     </a></li>
                     
                     <li><a href="/scrapers/ebay-scraper/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-orange-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">eBay - Auction & Marketplace Data Extraction</span>
+                        <span class="group-hover:translate-x-1 transition-transform">eBay Auction: Products, Bids & Seller Data</span>
                     </a></li>
                     
                     <li><a href="/scrapers/blinkit-scraper/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-orange-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Blinkit - Quick Commerce Data Extraction</span>
+                        <span class="group-hover:translate-x-1 transition-transform">Blinkit Grocery: 10-Min Delivery Data</span>
                     </a></li>
                     
                     <li><a href="/scrapers/swiggy-scraper/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-orange-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Swiggy - Food Delivery Data Extraction</span>
+                        <span class="group-hover:translate-x-1 transition-transform">Swiggy Restaurant: Menus & Delivery Zones</span>
                     </a></li>
                     
                 </ul>
@@ -1351,62 +1357,62 @@
                     
                     <li><a href="/apis/amazon-api/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Amazon - Product Data Extraction</span>
+                        <span class="group-hover:translate-x-1 transition-transform">Amazon Product: Real-Time Pricing & Reviews</span>
                     </a></li>
                     
                     <li><a href="/apis/walmart-api/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Walmart - Product Data Extraction</span>
+                        <span class="group-hover:translate-x-1 transition-transform">Walmart Product: Real-Time Inventory & Pricing</span>
                     </a></li>
                     
                     <li><a href="/apis/airbnb-api/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Airbnb - Property Listings & Booking Data</span>
+                        <span class="group-hover:translate-x-1 transition-transform">Airbnb Property: Pricing & Availability Data</span>
                     </a></li>
                     
                     <li><a href="/apis/etsy-api/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Etsy - Handmade & Vintage Product Data</span>
+                        <span class="group-hover:translate-x-1 transition-transform">Etsy Marketplace: Handmade & Vintage Data</span>
                     </a></li>
                     
                     <li><a href="/apis/expedia-api/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Expedia - Travel & Booking Data</span>
+                        <span class="group-hover:translate-x-1 transition-transform">Expedia Travel: Hotels, Flights & Rentals</span>
                     </a></li>
                     
                     <li><a href="/apis/uber-eats-api/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">UberEats - Food Delivery Data</span>
+                        <span class="group-hover:translate-x-1 transition-transform">Uber Eats: Global Menu & Pricing Data</span>
                     </a></li>
                     
                     <li><a href="/apis/target-api/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Target - Retail Product Data Extraction</span>
+                        <span class="group-hover:translate-x-1 transition-transform">Target Product: Store Inventory & Pricing</span>
                     </a></li>
                     
                     <li><a href="/apis/best-buy-api/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Best Buy - Electronics Product Data</span>
+                        <span class="group-hover:translate-x-1 transition-transform">Best Buy Electronics: Pricing & Specs</span>
                     </a></li>
                     
                     <li><a href="/apis/zepto-api/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Zepto - Quick Commerce Data</span>
+                        <span class="group-hover:translate-x-1 transition-transform">Zepto Quick Commerce: 10-Min Delivery Data</span>
                     </a></li>
                     
                     <li><a href="/apis/big-basket-api/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Big Basket - Grocery Data Extraction</span>
+                        <span class="group-hover:translate-x-1 transition-transform">BigBasket Grocery: Prices & Delivery Slots</span>
                     </a></li>
                     
                     <li><a href="/apis/swiggy-api/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Swiggy - Food Delivery Data</span>
+                        <span class="group-hover:translate-x-1 transition-transform">Swiggy Menu: Live Prices & Delivery Times</span>
                     </a></li>
                     
                     <li><a href="/apis/doordash-api/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">DoorDash - Food Delivery Data</span>
+                        <span class="group-hover:translate-x-1 transition-transform">DoorDash Menu: Live Prices & Delivery Zones</span>
                     </a></li>
                     
                 </ul>
@@ -1427,72 +1433,72 @@
                     
                     <li><a href="/services/core-scraping-services/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Core Web Scraping - Enterprise Data Extraction</span>
+                        <span class="group-hover:translate-x-1 transition-transform">Enterprise Web Scraping: API, Crawler & AI Extraction</span>
                     </a></li>
                     
                     <li><a href="/services/e-commerce-scraping/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">E-commerce</span>
+                        <span class="group-hover:translate-x-1 transition-transform">E-commerce Data Extraction: Products, Prices & Reviews</span>
                     </a></li>
                     
                     <li><a href="/services/restaurant-scraping/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Restaurant</span>
+                        <span class="group-hover:translate-x-1 transition-transform">Restaurant Data Extraction: Menus, Prices & Reviews</span>
                     </a></li>
                     
                     <li><a href="/services/hotel-scraping/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Hotel</span>
+                        <span class="group-hover:translate-x-1 transition-transform">Hotel Data Extraction: Prices, Reviews & Availability</span>
                     </a></li>
                     
                     <li><a href="/services/real-estate-scraping/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Real Estate</span>
+                        <span class="group-hover:translate-x-1 transition-transform">Real Estate Data Extraction: Properties & Market Data</span>
                     </a></li>
                     
                     <li><a href="/services/finance-scraping/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Finance & Banking</span>
+                        <span class="group-hover:translate-x-1 transition-transform">Finance Data Extraction: Stocks, Banking & Market Data</span>
                     </a></li>
                     
                     <li><a href="/services/social-media-scraping/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Social Media</span>
+                        <span class="group-hover:translate-x-1 transition-transform">Social Media Data Extraction: Posts, Profiles & Engagement</span>
                     </a></li>
                     
                     <li><a href="/services/jobs-scraping/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Jobs & Recruitment</span>
+                        <span class="group-hover:translate-x-1 transition-transform">Jobs Data Extraction: Listings, Salaries & Companies</span>
                     </a></li>
                     
                     <li><a href="/services/travel-scraping/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Travel</span>
+                        <span class="group-hover:translate-x-1 transition-transform">Travel Data Extraction: Flights, Hotels & Rentals</span>
                     </a></li>
                     
                     <li><a href="/services/healthcare-scraping/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Healthcare</span>
+                        <span class="group-hover:translate-x-1 transition-transform">Healthcare Data Extraction: Drugs, Devices & Providers</span>
                     </a></li>
                     
                     <li><a href="/services/car-rental-scraping/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Car Rental</span>
+                        <span class="group-hover:translate-x-1 transition-transform">Car Rental Data Extraction: Prices & Availability</span>
                     </a></li>
                     
                     <li><a href="/services/mobile-app-scraping/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Mobile App Scraping - Android & iOS Data Extraction</span>
+                        <span class="group-hover:translate-x-1 transition-transform">Mobile App Data Extraction: Android, iOS & OTT</span>
                     </a></li>
                     
                     <li><a href="/services/automotive-scraping/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Automotive - Vehicle & Mobility Data</span>
+                        <span class="group-hover:translate-x-1 transition-transform">Automotive Data Extraction: Vehicles, EV & Ride-hailing</span>
                     </a></li>
                     
                     <li><a href="/services/emerging-niche-scraping/" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                         <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Emerging & Niche</span>
+                        <span class="group-hover:translate-x-1 transition-transform">Niche Market Data Extraction: Agriculture, Education & More</span>
                     </a></li>
                     
                 </ul>

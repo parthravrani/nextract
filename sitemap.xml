@@ -1,221 +1,47 @@
----
-layout: null
----
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  <url>
-    <loc>{{ site.canonical_url }}/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>{{ site.canonical_url }}/products/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>{{ site.canonical_url }}/solutions/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <!-- Solution Pages -->
-  <url>
-    <loc>{{ site.canonical_url }}/e-commerce/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>{{ site.canonical_url }}/quick-commerce/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>{{ site.canonical_url }}/food-delivery/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>{{ site.canonical_url }}/industries/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <!-- Industries Pages -->
-  {% for industry in site.industries %}
-  <url>
-    <loc>{{ site.canonical_url }}{{ industry.url }}</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  {% endfor %}
-  <url>
-    <loc>{{ site.canonical_url }}/case-studies/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>{{ site.canonical_url }}/testimonials/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>{{ site.canonical_url }}/faq/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- Case Studies Pages -->
-  {% for case_study in site.case-studies %}
-  <url>
-    <loc>{{ site.canonical_url }}{{ case_study.url }}</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  {% endfor %}
-  <url>
-    <loc>{{ site.canonical_url }}/about/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>{{ site.canonical_url }}/contact/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>{{ site.canonical_url }}/privacy/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>{{ site.canonical_url }}/terms/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>{{ site.canonical_url }}/sla/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>{{ site.canonical_url }}/compliance/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>{{ site.canonical_url }}/trust-security/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <!-- Services Pages -->
-  {% for service in site.services %}
-  <url>
-    <loc>{{ site.canonical_url }}{{ service.url }}</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  {% endfor %}
-  <!-- Scrapers Pages -->
-  {% for scraper in site.scrapers %}
-  <url>
-    <loc>{{ site.canonical_url }}{{ scraper.url }}</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  {% endfor %}
-  <!-- APIs Pages -->
-  {% for api in site.apis %}
-  <url>
-    <loc>{{ site.canonical_url }}{{ api.url }}</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  {% endfor %}
-  <!-- Intelligence Pages -->
-  {% for intelligence in site.intelligence %}
-  <url>
-    <loc>{{ site.canonical_url }}{{ intelligence.url }}</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  {% endfor %}
-  <!-- Datasets Pages -->
-  {% for dataset in site.datasets %}
-  <url>
-    <loc>{{ site.canonical_url }}{{ dataset.url }}</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  {% endfor %}
-  <!-- Solutions Pages -->
-  {% for solution in site.solutions %}
-  <url>
-    <loc>{{ site.canonical_url }}{{ solution.url }}</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  {% endfor %}
-  <!-- Services Overview -->
-  <url>
-    <loc>{{ site.canonical_url }}/services/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <!-- Scrapers Overview -->
-  <url>
-    <loc>{{ site.canonical_url }}/scrapers/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <!-- APIs Overview -->
-  <url>
-    <loc>{{ site.canonical_url }}/apis/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <!-- Intelligence Overview -->
-  <url>
-    <loc>{{ site.canonical_url }}/intelligence/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <!-- Datasets Overview -->
-  <url>
-    <loc>{{ site.canonical_url }}/datasets/</loc>
-    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-</urlset>
-
-
+<?xml version='1.0' encoding='utf-8'?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://nextract.dev/sitemap-main.xml</loc>
+    <lastmod>2026-02-03</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://nextract.dev/sitemap-categories.xml</loc>
+    <lastmod>2026-02-03</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://nextract.dev/sitemap-brands.xml</loc>
+    <lastmod>2026-02-03</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://nextract.dev/sitemap-geographic.xml</loc>
+    <lastmod>2026-02-03</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://nextract.dev/sitemap-services.xml</loc>
+    <lastmod>2026-02-03</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://nextract.dev/sitemap-apis.xml</loc>
+    <lastmod>2026-02-03</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://nextract.dev/sitemap-scrapers.xml</loc>
+    <lastmod>2026-02-03</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://nextract.dev/sitemap-case-studies.xml</loc>
+    <lastmod>2026-02-03</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://nextract.dev/sitemap-intelligence.xml</loc>
+    <lastmod>2026-02-03</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://nextract.dev/sitemap-industries.xml</loc>
+    <lastmod>2026-02-03</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://nextract.dev/sitemap-blog.xml</loc>
+    <lastmod>2026-02-03</lastmod>
+  </sitemap>
+</sitemapindex>

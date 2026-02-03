@@ -1,7 +1,7 @@
 ---
 layout: product-page
-title: "DoorDash API - Food Delivery Data API"
-description: "RESTful API for extracting restaurant data, menus, prices, reviews, and delivery information from DoorDash. Power your food delivery platform."
+title: "DoorDash Menu API: Live Prices & Delivery Zones"
+description: "Extract 450K+ restaurant menus across 4,000+ cities. Track DashPass pricing, delivery fees, ghost kitchen trends. Real-time updates. JSON format."
 keywords: "DoorDash API, food delivery API, restaurant API, DoorDash scraping API"
 order: 12
 ---

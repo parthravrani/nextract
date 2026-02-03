@@ -1,7 +1,7 @@
 ---
 layout: product-page
-title: "Swiggy API - Food Delivery Data API"
-description: "RESTful API for extracting restaurant data, menus, prices, reviews, and delivery information from Swiggy. Power your food delivery platform."
+title: "Swiggy Menu API: Live Prices & Delivery Times"
+description: "Access 200K+ restaurant menus updated every 4 hours. Track surge pricing, delivery zones across 500+ cities. JSON/CSV export. 99.7% uptime."
 keywords: "Swiggy API, food delivery API, restaurant API, Swiggy scraping API"
 order: 11
 ---

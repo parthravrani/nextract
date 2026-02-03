@@ -1,7 +1,7 @@
 ---
 layout: product-page
-title: "Zepto API - Quick Commerce Data API"
-description: "RESTful API for extracting grocery data, product information, prices, and delivery data from Zepto. Power your quick commerce platform."
+title: "Zepto Quick Commerce API: 10-Min Delivery Data"
+description: "Track 5,000+ groceries across dark stores. Monitor hyperlocal pricing, delivery zones. Analyze instant delivery trends in India. Real-time updates."
 keywords: "Zepto API, quick commerce API, grocery API, Zepto scraping API"
 order: 9
 ---

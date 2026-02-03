@@ -410,6 +410,30 @@
     
     <!-- Custom Styles -->
     <style>
+        /* Force remove all list bullets */
+        .related-resources ul,
+        section[class*="related"] ul,
+        ul.list-none {
+            list-style: none !important;
+            list-style-type: none !important;
+            padding-left: 0 !important;
+            margin-left: 0 !important;
+        }
+        
+        .related-resources ul li,
+        section[class*="related"] ul li,
+        ul.list-none li {
+            list-style: none !important;
+            list-style-type: none !important;
+        }
+        
+        .related-resources ul li::before,
+        section[class*="related"] ul li::before,
+        ul.list-none li::before {
+            content: none !important;
+            display: none !important;
+        }
+        
         /* Fixed Color Palette */
         :root {
             --color-blue: #0052FF;
@@ -716,10 +740,18 @@
             text-decoration: none;
         }
         
+        /* Only underline inline text links on hover, not card/block links */
         .markdown-content a:hover,
-        .prose a:hover,
-        main a:hover {
+        .prose a:hover {
             text-decoration: underline;
+        }
+        
+        /* Prevent underlines on card-style block links */
+        main a.block:hover,
+        main a.block:hover *,
+        main a[class*="p-"]:hover *,
+        main a[class*="border"]:hover * {
+            text-decoration: none !important;
         }
 
         /* Accordion Styles */

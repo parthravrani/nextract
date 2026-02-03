@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Turning Amazon Reviews Into Competitive Gold"
-description: "How we helped a brand outmaneuver competitors by analyzing 3,217 reviews and identifying critical market insights."
+title: "Amazon Reviews Analysis: 3,217 Reviews Analyzed"
+description: "Dairy brand outmaneuvered competitors by analyzing 3,217 Amazon reviews. Identified critical market insights. Product optimization based on sentiment data."
 category: "E-commerce"
 client: "Growing regional dairy company"
 ---
@@ -120,6 +120,22 @@ client: "Growing regional dairy company"
                 <p class="text-lg text-gray-600 leading-relaxed">
                     By leveraging our data extraction and analysis capabilities, the client was able to launch their product with a clear competitive advantage. They positioned themselves as "The Thoughtful $44 Alternative" - addressing the exact pain points that competitors were ignoring, all based on real customer feedback from thousands of reviews.
                 </p>
+            </div>
+
+            <!-- Tool Used -->
+            <div class="mb-20">
+                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Tool Used</div>
+                <div class="p-8 border-l-4 border-blue-600 bg-blue-50">
+                    <p class="text-lg text-gray-900 font-semibold mb-4">
+                        This case study was powered by <a href="/scrava/" class="text-blue-600 hover:text-blue-800 font-bold">Scrava</a>, Nextract's Amazon ASIN-based scraping API.
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        Scrava extracted 3,217 reviews with 99.7% success rate, automatically handling CAPTCHAs, rotating proxies, and Amazon's "Dog" page errors. The review data was then analyzed to identify critical market insights and competitive opportunities.
+                    </p>
+                    <a href="/scrava/" class="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-800">
+                        View Scrava Dashboard →
+                    </a>
+                </div>
             </div>
 
             <!-- Key Takeaways -->

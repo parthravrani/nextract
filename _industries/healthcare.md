@@ -1,10 +1,10 @@
 ---
 layout: default
-title: "Healthcare Data Scraping | Clinical Trials & Provider API"
-description: "Extract clinical trial data, medical research, provider information from ClinicalTrials.gov, PubMed, Healthgrades, Zocdoc. Healthcare scraping API. ."
+title: "Healthcare Data Solutions: Clinical Trials & Provider Intelligence"
+description: "Extract clinical trial data, medical research, provider info from ClinicalTrials.gov, PubMed. Healthcare intelligence API. Real-time data. Start free trial."
 keywords: "healthcare data scraping, clinical trial scraping, medical research data extraction, provider data scraping, ClinicalTrials.gov scraping, PubMed data extraction, healthcare intelligence, medical database scraping"
 category: "Healthcare"
-og_description: "Healthcare data scraping: Clinical trials, medical research, provider data. Extract from ClinicalTrials.gov, PubMed. ."
+og_description: "Extract clinical trial data, medical research, provider info from ClinicalTrials.gov, PubMed. Healthcare intelligence API. Real-time data. Start free trial."
 twitter_description: "Healthcare scraping: Clinical trials, medical research, provider data extraction. ClinicalTrials.gov, PubMed scraping. Start free."
 ---
 

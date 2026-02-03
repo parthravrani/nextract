@@ -1,7 +1,7 @@
 ---
 layout: product-page
-title: "Airbnb API - Property Listings & Booking Data API"
-description: "RESTful API for extracting property listings, prices, availability, reviews, and booking data from Airbnb. Power your travel tech platform."
+title: "Airbnb Property API: Pricing & Availability Data"
+description: "Extract 7M+ listings globally. Track dynamic pricing patterns, availability calendars, Superhost data. Monitor occupancy trends by location. JSON export."
 keywords: "Airbnb API, property API, accommodation API, booking API, travel API"
 order: 3
 ---
