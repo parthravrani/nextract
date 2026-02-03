@@ -21,3 +21,5 @@ Thumbs.db
 *~
 
 
+/batches
+/__pycache__
