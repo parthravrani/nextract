@@ -35,7 +35,7 @@ years_experience: 1  # Update with actual experience
 show_offers: false  # Set to true to show promotional offers (Black Friday, etc.)
 
 # SEO Settings
-canonical_url: "https://www.nextract.dev"
+canonical_url: "https://nextract.dev"
 og_image: "https://www.nextract.dev/og-image.jpg"
 twitter_image: "https://www.nextract.dev/twitter-image.jpg"
 

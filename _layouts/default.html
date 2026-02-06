@@ -40,7 +40,6 @@
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 
     <!-- Favicons -->
@@ -78,8 +77,8 @@
       "name": "Nextract",
       "alternateName": "Nextract",
       "legalName": "Nextract",
-      "url": "https://www.nextract.dev",
-      "logo": "https://www.nextract.dev/assets/images/logo.png",
+      "url": "https://nextract.dev",
+      "logo": "https://nextract.dev/assets/images/logo.png",
       "description": "Nextract is a modern data solutions company providing professional web scraping and data extraction services.",
       "email": "hello@nextract.dev",
       "telephone": "+91 85110-98799",
@@ -101,27 +100,17 @@
         "value": "10-50"
       },
       "areaServed": "Worldwide",
-      "serviceType": "Web Scraping API and Data Extraction Services",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "150"
-      }
+      "serviceType": "Web Scraping API and Data Extraction Services"
     }
     </script>
     
-    <!-- WebSite Schema with SearchAction -->
+    <!-- WebSite Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "{{ site.title }}",
-      "url": "{{ site.canonical_url }}",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "{{ site.canonical_url }}/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
+      "url": "{{ site.canonical_url }}"
     }
     </script>
     {% else %}
@@ -307,6 +296,51 @@
     }
     </script>
     {% endif %}
+    
+    {% if page.url == '/scrava/' %}
+    <!-- Product Schema for Scrava -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Scrava",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "20,000 Credits",
+          "price": "20.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "{{ site.canonical_url }}/scrava/#pricing"
+        },
+        {
+          "@type": "Offer",
+          "name": "75,000 Credits",
+          "price": "60.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "{{ site.canonical_url }}/scrava/#pricing"
+        },
+        {
+          "@type": "Offer",
+          "name": "170,000 Credits",
+          "price": "120.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "{{ site.canonical_url }}/scrava/#pricing"
+        }
+      ],
+      "description": "Amazon ASIN scraping API with dashboard. Processed 2.3M+ ASINs with 99.7% success rate. Handles CAPTCHAs, rotating proxies, Dog page errors automatically.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Nextract",
+        "url": "{{ site.canonical_url }}"
+      }
+    }
+    </script>
+    {% endif %}
     {% endif %}
     
     <!-- BreadcrumbList Schema for all pages except homepage -->
@@ -397,12 +431,10 @@
     </script>
     {% endif %}
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS (Compiled) -->
+    <link rel="stylesheet" href="{{ '/assets/css/tailwind.min.css' | relative_url }}">
     
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Remix Icons -->
