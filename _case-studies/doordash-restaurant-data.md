@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Unlocking Real-Time DoorDash Restaurant Data"
-description: "How we empowered a restaurant group with unfiltered access to operational insights, reducing errors by 72% and increasing upsells 3.5x."
+title: "72% Error Reduction: DoorDash Restaurant Operations"
+description: "Taco chain achieved 72% error reduction, 3.5x upsell increase using DoorDash operational insights. Real-time menu monitoring. Operational optimization."
 category: "Food Delivery"
 client: "Taco chain restaurant group"
 ---

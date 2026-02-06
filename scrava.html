@@ -97,79 +97,382 @@ twitter_description: "Scrava by Nextract - Amazon ASIN scraping API. 2.3M+ ASINs
             <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-4 text-center">Pricing</h2>
             <p class="text-center text-gray-600 mb-16">Launching February 13th</p>
             
-            <div class="grid md:grid-cols-2 gap-8 mb-16">
-                <!-- Core Plan -->
-                <div class="p-10 border-2 border-gray-200 bg-white hover:border-blue-600 transition-all flex flex-col">
-                    <div class="mb-6">
-                        <h3 class="text-3xl font-black text-gray-900 mb-4">Core Plan</h3>
-                        <p class="text-lg text-gray-600 leading-relaxed">
-                            Built for developers and small teams who know what they want and want to move fast.
-                        </p>
-                    </div>
-                    <div class="mb-6 pb-6 border-b border-gray-200">
-                        <div class="text-4xl font-black text-gray-900 mb-2">$0.24</div>
-                        <div class="text-lg text-gray-600">per 1,000 records</div>
-                    </div>
-                    <div class="space-y-3 mb-8 flex-grow">
-                        <div class="flex items-start gap-3">
-                            <i class="ri-check-line text-blue-600 text-xl mt-1"></i>
-                            <span class="text-gray-700">Full API access</span>
+            <div class="max-w-4xl mx-auto">
+                
+                <!-- Pricing Card with Slider -->
+                <div class="p-10 bg-white border-2 border-gray-200 rounded-2xl shadow-lg">
+                    <!-- Price Display -->
+                    <div class="mb-10">
+                        <div class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-3" id="credits-label">20,000 Credits</div>
+                        <div class="flex items-baseline gap-2">
+                            <div class="text-6xl font-black text-gray-900" id="selected-price">$20.00</div>
+                            <div class="text-xl text-gray-600">/ USD</div>
                         </div>
-                        <div class="flex items-start gap-3">
-                            <i class="ri-check-line text-blue-600 text-xl mt-1"></i>
-                            <span class="text-gray-700">Dashboard visibility</span>
+                        <div class="mt-2 text-sm text-gray-500" id="price-per-credit">$0.001 per credit</div>
+                    </div>
+                    
+                    <!-- Slider Container -->
+                    <div class="relative mb-12 py-8">
+                        <!-- Slider Track Background (positioned between label centers) -->
+                        <div class="relative h-3 bg-gray-200 rounded-full mb-8" id="slider-track" style="left: 12.5%; width: 75%;">
+                            <!-- Filled Track -->
+                            <div class="absolute h-3 bg-blue-600 rounded-full transition-all duration-300 ease-out" id="slider-fill" style="width: 0%;"></div>
+                            
+                            <!-- Slider Handle with Badge -->
+                            <div class="absolute top-1/2 -translate-y-1/2 transition-all duration-300 ease-out z-20 pointer-events-none" id="slider-handle-container" style="left: 0%;">
+                                <!-- Credits Badge -->
+                                <div id="slider-badge" class="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 px-5 py-2.5 bg-blue-600 text-white rounded-xl font-bold text-base whitespace-nowrap shadow-xl transition-colors duration-300">
+                                    <span id="slider-badge-credits">20,000</span>
+                                    <div id="slider-badge-arrow" class="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-r-[6px] border-t-[8px] border-transparent border-t-blue-600 transition-colors duration-300"></div>
+                                </div>
+                                
+                                <!-- Handle Circle -->
+                                <div class="w-8 h-8 bg-blue-600 rounded-full border-4 border-white shadow-xl flex items-center justify-center transition-transform" id="slider-handle">
+                                    <div class="flex gap-0.5">
+                                        <i class="ri-arrow-left-s-line text-white text-xs"></i>
+                                        <i class="ri-arrow-right-s-line text-white text-xs"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="flex items-start gap-3">
-                            <i class="ri-check-line text-blue-600 text-xl mt-1"></i>
-                            <span class="text-gray-700">Standard platform support</span>
+                        
+                        <!-- Slider Input (fully functional, positioned to match track) -->
+                        <input type="range" 
+                               id="credit-slider" 
+                               min="0" 
+                               max="3" 
+                               value="0" 
+                               step="1"
+                               class="absolute top-0 left-[12.5%] w-[75%] h-12 opacity-0 cursor-pointer z-30">
+                        
+                        <!-- Slider Labels (below the bar) -->
+                        <div class="flex justify-between mt-6 text-sm font-semibold text-gray-600">
+                            <div class="text-center flex-1">
+                                <div class="font-black text-gray-900">20K</div>
+                                <div class="text-xs text-gray-500 mt-1">$20.00</div>
+                            </div>
+                            <div class="text-center flex-1">
+                                <div class="font-black text-gray-900">75K</div>
+                                <div class="text-xs text-gray-500 mt-1">$60.00</div>
+                            </div>
+                            <div class="text-center flex-1">
+                                <div class="font-black text-gray-900">170K</div>
+                                <div class="text-xs text-gray-500 mt-1">$120.00</div>
+                            </div>
+                            <div class="text-center flex-1">
+                                <div class="font-black text-orange-600">Custom</div>
+                                <div class="text-xs text-gray-500 mt-1">Contact us</div>
+                            </div>
                         </div>
                     </div>
-                    <!-- <a href="/contact/?plan=core" class="group relative w-full px-6 py-4 bg-gray-900 text-white font-bold text-center overflow-hidden hover:bg-blue-600 transition-all">
+                    
+                    <!-- Package Details -->
+                    <div class="mb-8 pb-8 border-b border-gray-200">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">What's included</h3>
+                        <div class="grid md:grid-cols-2 gap-3">
+                            <div class="flex items-center gap-3">
+                                <i class="ri-check-line text-blue-600 text-xl flex-shrink-0"></i>
+                                <span class="font-semibold text-gray-900">Full API Access</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="ri-check-line text-blue-600 text-xl flex-shrink-0"></i>
+                                <span class="font-semibold text-gray-900">Dashboard Visibility</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="ri-check-line text-blue-600 text-xl flex-shrink-0"></i>
+                                <span class="font-semibold text-gray-900">Delivery Options</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="ri-check-line text-blue-600 text-xl flex-shrink-0"></i>
+                                <span class="font-semibold text-gray-900">Platform Support</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="ri-check-line text-blue-600 text-xl flex-shrink-0"></i>
+                                <span class="font-semibold text-gray-900">Auto CAPTCHA Handling</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="ri-check-line text-blue-600 text-xl flex-shrink-0"></i>
+                                <span class="font-semibold text-gray-900">Proxy Rotation</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="ri-check-line text-blue-600 text-xl flex-shrink-0"></i>
+                                <span class="font-semibold text-gray-900">Credits Never Expire</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="ri-customer-service-2-line text-orange-600 text-xl flex-shrink-0"></i>
+                                <a href="/contact/" class="font-semibold text-orange-600 hover:text-orange-700 transition-colors">Contact us for custom packages</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Additional Info -->
+                    <div class="mb-8 p-6 bg-blue-50 rounded-xl border border-blue-200">
+                        <div class="flex items-start gap-3">
+                            <i class="ri-information-line text-blue-600 text-2xl mt-1 flex-shrink-0"></i>
+                            <div>
+                                <div class="font-bold text-gray-900 mb-2">Credits never expire</div>
+                                <div class="text-sm text-gray-700">Your credits are valid indefinitely. Use them at your own pace with no expiration date.</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Button -->
+                    <a href="/contact/" class="group relative w-full px-8 py-5 bg-gray-900 text-white font-bold text-lg text-center overflow-hidden hover:bg-blue-600 transition-all block rounded-lg">
                         <span class="relative z-10 flex items-center justify-center gap-2">
-                            Subscribe
+                            Get Started with <span id="cta-credits">20,000 Credits</span>
                             <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
                         </span>
                         <div class="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-                    </a> -->
-                </div>
-
-                <!-- Advanced Plan -->
-                <div class="p-10 border-2 border-blue-600 bg-blue-50 hover:border-blue-700 transition-all flex flex-col">
-                    <div class="mb-6">
-                        <h3 class="text-3xl font-black text-gray-900 mb-4">Advanced Plan</h3>
-                        <p class="text-lg text-gray-600 leading-relaxed">
-                            Designed for teams running larger workloads or business-critical scraping.
-                        </p>
-                    </div>
-                    <div class="mb-6 pb-6 border-b border-gray-200">
-                        <div class="text-4xl font-black text-gray-900 mb-2">$0.34</div>
-                        <div class="text-lg text-gray-600">per 1,000 records</div>
-                    </div>
-                    <div class="space-y-3 mb-8 flex-grow">
-                        <div class="flex items-start gap-3">
-                            <i class="ri-check-line text-blue-600 text-xl mt-1"></i>
-                            <span class="text-gray-700">Everything in Core</span>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <i class="ri-check-line text-blue-600 text-xl mt-1"></i>
-                            <span class="text-gray-700 font-semibold">Team support from Nextract</span>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <i class="ri-check-line text-blue-600 text-xl mt-1"></i>
-                            <span class="text-gray-700">Help with setup, scaling, and edge cases</span>
-                        </div>
-                    </div>
-                    <!-- <a href="/contact/?plan=advanced" class="group relative w-full px-6 py-4 bg-blue-600 text-white font-bold text-center overflow-hidden hover:bg-blue-700 transition-all">
-                        <span class="relative z-10 flex items-center justify-center gap-2">
-                            Subscribe
-                            <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
-                        </span>
-                        <div class="absolute inset-0 bg-blue-700 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-                    </a> -->
+                    </a>
                 </div>
             </div>
         </div>
     </section>
+    
+    <style>
+        /* Custom Slider Styling */
+        #credit-slider {
+            -webkit-appearance: none;
+            appearance: none;
+            background: transparent;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 48px;
+            z-index: 30;
+            cursor: pointer;
+        }
+        
+        #credit-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 32px;
+            height: 32px;
+            background: transparent;
+            cursor: grab;
+        }
+        
+        #credit-slider::-webkit-slider-thumb:active {
+            cursor: grabbing;
+        }
+        
+        #credit-slider::-moz-range-thumb {
+            width: 32px;
+            height: 32px;
+            background: transparent;
+            border: none;
+            cursor: grab;
+        }
+        
+        #credit-slider::-moz-range-thumb:active {
+            cursor: grabbing;
+        }
+        
+        #slider-handle-container {
+            transform: translateX(-50%);
+            pointer-events: none;
+        }
+        
+        #slider-badge-credits {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        #selected-price {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        #price-per-credit {
+            transition: all 0.3s ease;
+        }
+    </style>
+    
+    <script>
+        // Credit package data
+        const creditPackages = [
+            { 
+                credits: '20,000', 
+                creditsRaw: 20000, 
+                price: '20.00', 
+                label: '20,000 Credits',
+                perCredit: '$0.001',
+                isCustom: false
+            },
+            { 
+                credits: '75,000', 
+                creditsRaw: 75000, 
+                price: '60.00', 
+                label: '75,000 Credits',
+                perCredit: '$0.0008',
+                isCustom: false
+            },
+            { 
+                credits: '1,70,000', 
+                creditsRaw: 170000, 
+                price: '120.00', 
+                label: '1,70,000 Credits',
+                perCredit: '$0.0007',
+                isCustom: false
+            },
+            {
+                credits: 'Custom',
+                creditsRaw: 0,
+                price: 'Custom',
+                label: 'Custom Package',
+                perCredit: 'Contact us',
+                isCustom: true
+            }
+        ];
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.getElementById('credit-slider');
+            const priceDisplay = document.getElementById('selected-price');
+            const creditsLabel = document.getElementById('credits-label');
+            const badgeCredits = document.getElementById('slider-badge-credits');
+            const badgeContainer = document.getElementById('slider-badge');
+            const badgeArrow = document.getElementById('slider-badge-arrow');
+            const handleContainer = document.getElementById('slider-handle-container');
+            const sliderFill = document.getElementById('slider-fill');
+            const pricePerCredit = document.getElementById('price-per-credit');
+            const ctaCredits = document.getElementById('cta-credits');
+            const ctaButton = document.querySelector('a[href="/contact/"]');
+            
+            function updateDisplay(value) {
+                const package = creditPackages[value];
+                // Calculate position: 0% at first label center, 100% at last label center
+                // Positions: 0=0%, 1=33.33%, 2=66.66%, 3=100%
+                const percentage = (value / 3) * 100;
+                
+                if (package.isCustom) {
+                    // Custom package styling
+                    priceDisplay.style.opacity = '0.7';
+                    priceDisplay.style.transform = 'scale(0.95)';
+                    
+                    setTimeout(() => {
+                        priceDisplay.textContent = 'Custom';
+                        priceDisplay.style.opacity = '1';
+                        priceDisplay.style.transform = 'scale(1)';
+                    }, 150);
+                    
+                    creditsLabel.textContent = 'Custom Package';
+                    badgeCredits.textContent = 'Custom';
+                    pricePerCredit.textContent = 'Contact us for pricing';
+                    
+                    // Change badge color to orange
+                    if (badgeContainer) {
+                        badgeContainer.classList.remove('bg-blue-600');
+                        badgeContainer.classList.add('bg-orange-600');
+                    }
+                    if (badgeArrow) {
+                        badgeArrow.classList.remove('border-t-blue-600');
+                        badgeArrow.classList.add('border-t-orange-600');
+                    }
+                    
+                    // Update handle color
+                    const handle = document.getElementById('slider-handle');
+                    if (handle) {
+                        handle.classList.remove('bg-blue-600');
+                        handle.classList.add('bg-orange-600');
+                    }
+                    
+                    // Update CTA button
+                    if (ctaCredits) {
+                        ctaCredits.textContent = 'Custom Package';
+                    }
+                } else {
+                    // Regular package styling
+                    priceDisplay.style.opacity = '0.7';
+                    priceDisplay.style.transform = 'scale(0.95)';
+                    
+                    setTimeout(() => {
+                        priceDisplay.textContent = '$' + package.price;
+                        priceDisplay.style.opacity = '1';
+                        priceDisplay.style.transform = 'scale(1)';
+                    }, 150);
+                    
+                    creditsLabel.textContent = package.label;
+                    badgeCredits.textContent = package.credits;
+                    pricePerCredit.textContent = package.perCredit + ' per credit';
+                    
+                    // Reset badge color to blue
+                    if (badgeContainer) {
+                        badgeContainer.classList.remove('bg-orange-600');
+                        badgeContainer.classList.add('bg-blue-600');
+                    }
+                    if (badgeArrow) {
+                        badgeArrow.classList.remove('border-t-orange-600');
+                        badgeArrow.classList.add('border-t-blue-600');
+                    }
+                    
+                    // Reset handle color
+                    const handle = document.getElementById('slider-handle');
+                    if (handle) {
+                        handle.classList.remove('bg-orange-600');
+                        handle.classList.add('bg-blue-600');
+                    }
+                    
+                    // Update CTA button
+                    if (ctaCredits) {
+                        ctaCredits.textContent = package.credits + ' Credits';
+                    }
+                }
+                
+                // Update slider fill and handle position with smooth transition
+                sliderFill.style.width = percentage + '%';
+                handleContainer.style.left = percentage + '%';
+            }
+            
+            // Initialize with first package
+            updateDisplay(0);
+            
+            // Handle slider input (real-time updates while dragging)
+            slider.addEventListener('input', function() {
+                updateDisplay(parseInt(this.value));
+            });
+            
+            // Handle slider change (when released)
+            slider.addEventListener('change', function() {
+                updateDisplay(parseInt(this.value));
+            });
+            
+            // Visual feedback on interaction
+            const sliderHandle = document.getElementById('slider-handle');
+            
+            slider.addEventListener('mousedown', function() {
+                document.body.style.cursor = 'grabbing';
+                if (sliderHandle) {
+                    sliderHandle.style.transform = 'scale(1.15)';
+                }
+            });
+            
+            slider.addEventListener('mouseup', function() {
+                document.body.style.cursor = '';
+                if (sliderHandle) {
+                    sliderHandle.style.transform = 'scale(1)';
+                }
+            });
+            
+            slider.addEventListener('mouseleave', function() {
+                document.body.style.cursor = '';
+                if (sliderHandle) {
+                    sliderHandle.style.transform = 'scale(1)';
+                }
+            });
+            
+            // Touch support for mobile
+            slider.addEventListener('touchstart', function() {
+                if (sliderHandle) {
+                    sliderHandle.style.transform = 'scale(1.15)';
+                }
+            });
+            
+            slider.addEventListener('touchend', function() {
+                if (sliderHandle) {
+                    sliderHandle.style.transform = 'scale(1)';
+                }
+            });
+        });
+    </script>
 
     <!-- Technical Insights Section -->
     <section class="py-20 bg-white">
