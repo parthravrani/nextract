@@ -59,6 +59,9 @@ GET /api/v1/target/inventory
 
 [Get Started](/contact/) with Target API today.
 
+## Related Solutions
 
-
-
+- **[Walmart API](/apis/walmart-api/)** — Real-time inventory & pricing from Walmart
+- **[Best Buy API](/apis/best-buy-api/)** — Product & pricing data from Best Buy
+- **[Amazon API](/apis/amazon-api/)** — Real-time pricing & reviews from Amazon
+- **[E-commerce Solutions](/e-commerce/)** — Complete e-commerce data extraction

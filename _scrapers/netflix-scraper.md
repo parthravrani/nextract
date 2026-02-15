@@ -50,6 +50,8 @@ Extract comprehensive Netflix content data including movies, TV shows, ratings, 
 
 [Contact us](/contact/) to get started with Netflix scraping.
 
+## Related Solutions
 
-
-
+- **[TikTok Scraper](/scrapers/tiktok-scraper/)** — Extract TikTok videos, engagement & trends
+- **[SERP Scraper](/scrapers/serp-scraper/)** — Google rankings & SEO data extraction
+- **[All Scrapers](/scrapers/)** — Browse all platform-specific scrapers

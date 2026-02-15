@@ -50,6 +50,8 @@ Extract comprehensive job and company data including listings, reviews, salaries
 
 [Contact us](/contact/) to get started with Glassdoor scraping.
 
+## Related Solutions
 
-
-
+- **[LinkedIn Scraper](/scrapers/linkedin-scraper/)** — Extract profiles, jobs & company data from LinkedIn
+- **[SERP Scraper](/scrapers/serp-scraper/)** — Google rankings & search results data
+- **[All Scrapers](/scrapers/)** — Browse all platform-specific scrapers

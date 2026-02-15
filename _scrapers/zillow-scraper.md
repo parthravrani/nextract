@@ -50,6 +50,9 @@ Extract comprehensive property data including listings, prices, details, images,
 
 [Contact us](/contact/) to get started with Zillow scraping.
 
+## Related Solutions
 
-
-
+- **[Airbnb API](/apis/airbnb-api/)** — Extract Airbnb listings, pricing & availability data
+- **[Expedia API](/apis/expedia-api/)** — Travel & hotel data extraction
+- **[LinkedIn Scraper](/scrapers/linkedin-scraper/)** — Professional network data for lead generation
+- **[All Scrapers](/scrapers/)** — Browse all platform-specific scrapers

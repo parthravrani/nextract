@@ -47,6 +47,10 @@ eBay.com (US), eBay.co.uk (UK), eBay.de (Germany), eBay.fr (France), eBay.it (It
 
 [Contact us](/contact/) to get started with eBay scraping.
 
+## Related Solutions
 
-
-
+- **[Amazon Scraper](/scrapers/amazon-scraper/)** — Extract Amazon products, pricing & reviews at scale
+- **[Amazon API](/apis/amazon-api/)** — RESTful API for programmatic Amazon data extraction
+- **[Shopify Scraper](/scrapers/shopify-scraper/)** — Monitor Shopify stores, products & pricing
+- **[Walmart API](/apis/walmart-api/)** — Real-time product data from Walmart
+- **[E-commerce Solutions](/e-commerce/)** — Complete e-commerce data extraction across all platforms

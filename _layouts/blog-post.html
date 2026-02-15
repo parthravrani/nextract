@@ -1,0 +1,244 @@
+---
+layout: default
+---
+
+<main>
+    <!-- Hero Section -->
+    <section class="py-20 bg-white border-b border-gray-200">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <!-- Breadcrumbs -->
+            <nav class="mb-8">
+                <a href="/" class="text-gray-600 hover:text-gray-900 transition-colors">Home</a>
+                <span class="mx-2 text-gray-400">/</span>
+                <a href="/blog/" class="text-gray-600 hover:text-gray-900 transition-colors">Blog</a>
+                <span class="mx-2 text-gray-400">/</span>
+                <span class="text-gray-900 font-semibold">{{ page.title }}</span>
+            </nav>
+
+            <!-- Category Badge -->
+            {% if page.category %}
+            <div class="mb-6">
+                <span class="inline-block px-4 py-2 bg-purple-100 text-purple-700 font-bold text-sm uppercase tracking-wider">
+                    {{ page.category }}
+                </span>
+            </div>
+            {% endif %}
+
+            <!-- Title -->
+            <h1 class="text-5xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">
+                {{ page.title }}
+            </h1>
+
+            <!-- Description -->
+            {% if page.description %}
+            <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                {{ page.description }}
+            </p>
+            {% endif %}
+
+            <!-- Meta Info -->
+            <div class="flex flex-wrap items-center gap-6 text-sm text-gray-500">
+                <div class="flex items-center gap-2">
+                    <i class="ri-calendar-line"></i>
+                    <span>{% if page.date %}{{ page.date | date: "%B %d, %Y" }}{% else %}Published{% endif %}</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="ri-user-line"></i>
+                    <span>Nextract Intelligence Team</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <article class="py-16 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="prose prose-lg max-w-none blog-content">
+                {{ content }}
+            </div>
+        </div>
+    </article>
+
+    <!-- Related Posts Section -->
+    {% assign related_posts = site.blog | where_exp: "post", "post.category == page.category and post.url != page.url" | limit: 3 %}
+    {% if related_posts.size > 0 %}
+    <section class="py-20 bg-white border-t border-gray-200">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="mb-12">
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-4">Related Articles</h2>
+                <p class="text-gray-600 text-lg">Continue exploring {{ page.category | downcase }} insights</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                {% for post in related_posts %}
+                <a href="{{ post.url | relative_url }}" class="group block p-8 bg-white border-2 border-gray-200 hover:border-purple-600 transition-all hover:shadow-xl hover:-translate-y-1 no-underline rounded-lg">
+                    <div class="text-xs font-bold text-purple-600 uppercase mb-4 tracking-wider">{{ post.category | default: "Blog" }}</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">{{ post.title }}</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">{{ post.description | truncate: 120 }}</p>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- CTA Section -->
+    {% include contact-section.html %}
+</main>
+
+<style>
+    /* Enhanced prose styling for blog posts */
+    .prose {
+        color: #374151;
+    }
+    
+    .prose h1 {
+        font-size: 3rem;
+        font-weight: 900;
+        color: #111827;
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+    }
+    
+    .prose h2 {
+        font-size: 2rem;
+        font-weight: 800;
+        color: #111827;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        line-height: 1.3;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #e5e7eb;
+    }
+    
+    .prose h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #111827;
+        margin-top: 2rem;
+        margin-bottom: 0.75rem;
+        line-height: 1.4;
+    }
+    
+    .prose h4 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #111827;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .prose p {
+        font-size: 1.125rem;
+        line-height: 1.75;
+        color: #4b5563;
+        margin-bottom: 1.5rem;
+    }
+    
+    .prose ul, .prose ol {
+        margin-left: 1.5rem;
+        margin-bottom: 1.5rem;
+        color: #4b5563;
+    }
+    
+    .prose li {
+        font-size: 1.125rem;
+        line-height: 1.75;
+        margin-bottom: 0.75rem;
+    }
+    
+    .prose ul li {
+        list-style-type: disc;
+    }
+    
+    .prose ol li {
+        list-style-type: decimal;
+    }
+    
+    .prose strong {
+        font-weight: 700;
+        color: #111827;
+    }
+    
+    .prose a {
+        color: #7c3aed;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.2s ease;
+    }
+    
+    .prose a:hover {
+        color: #6d28d9;
+        text-decoration: underline;
+    }
+    
+    .prose blockquote {
+        border-left: 4px solid #7c3aed;
+        padding-left: 1.5rem;
+        margin: 2rem 0;
+        font-style: italic;
+        color: #6b7280;
+    }
+    
+    .prose code {
+        background-color: #f3f4f6;
+        padding: 0.125rem 0.375rem;
+        border-radius: 0.25rem;
+        font-size: 0.875em;
+        color: #7c3aed;
+        font-weight: 600;
+    }
+    
+    .prose pre {
+        background-color: #1f2937;
+        color: #f9fafb;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        overflow-x: auto;
+        margin: 2rem 0;
+    }
+    
+    .prose pre code {
+        background-color: transparent;
+        padding: 0;
+        color: inherit;
+        font-weight: normal;
+    }
+    
+    .prose img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+        margin: 2rem 0;
+    }
+    
+    .prose table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 2rem 0;
+    }
+    
+    .prose th, .prose td {
+        padding: 0.75rem;
+        border: 1px solid #e5e7eb;
+        text-align: left;
+    }
+    
+    .prose th {
+        background-color: #f9fafb;
+        font-weight: 700;
+        color: #111827;
+    }
+    
+    .prose hr {
+        border: none;
+        border-top: 2px solid #e5e7eb;
+        margin: 3rem 0;
+    }
+    
+    /* Ensure proper spacing between sections */
+    .blog-content > *:first-child {
+        margin-top: 0;
+    }
+</style>

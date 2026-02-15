@@ -1,49 +1,3 @@
-<!-- Schema.org Organization Markup -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Nextract",
-  "alternateName": "Nextract Data Solutions",
-  "url": "https://nextract.dev",
-  "logo": "https://nextract.dev/assets/images/logo.png",
-  "description": "Professional web scraping API and custom data extraction services. Extract data from Amazon, e-commerce, food delivery, and quick commerce platforms worldwide.",
-  "foundingDate": "2023",
-  "email": "contact@nextract.dev",
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "USA"
-  },
-  "sameAs": [
-    "https://www.linkedin.com/company/nextract",
-    "https://twitter.com/nextract"
-  ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "250"
-  }
-}
-</script>
-
-<!-- Schema.org WebSite Markup -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Nextract",
-  "url": "https://nextract.dev",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": "https://nextract.dev/search?q={search_term_string}"
-    },
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
-
 <!-- Breadcrumb Markup (conditional based on page) -->
 {% if page.breadcrumbs %}
 <script type="application/ld+json">
@@ -75,7 +29,8 @@
   "description": "{{ page.description }}",
   "provider": {
     "@type": "Organization",
-    "name": "Nextract"
+    "name": "Nextract",
+    "url": "https://nextract.dev"
   },
   "areaServed": "{{ page.region | default: 'Global' }}",
   "category": "{{ page.category }}",
@@ -106,28 +61,24 @@
     "price": "0",
     "priceCurrency": "USD",
     "availability": "https://schema.org/InStock"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "150"
   }
 }
 </script>
 {% endif %}
 
 <!-- Article Markup (for case studies and blog posts) -->
-{% if page.category == 'case-study' or page.layout == 'post' %}
+{% if page.category == 'case-study' or page.layout == 'blog-post' %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "{{ page.title }}",
   "description": "{{ page.description }}",
-  "image": "https://nextract.dev/assets/images/og-image.jpg",
+  "image": "https://nextract.dev/assets/images/android-chrome-512x512.png",
   "author": {
     "@type": "Organization",
-    "name": "Nextract"
+    "name": "Nextract",
+    "url": "https://nextract.dev"
   },
   "publisher": {
     "@type": "Organization",

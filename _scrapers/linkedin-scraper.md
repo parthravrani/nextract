@@ -50,6 +50,9 @@ Extract comprehensive professional network data including profiles, job listings
 
 [Contact us](/contact/) to get started with LinkedIn scraping.
 
+## Related Solutions
 
-
-
+- **[Glassdoor Scraper](/scrapers/glassdoor-scraper/)** — Extract company reviews, salaries & interview data
+- **[SERP Scraper](/scrapers/serp-scraper/)** — Google rankings & SEO data extraction
+- **[Amazon Scraper](/scrapers/amazon-scraper/)** — Extract product data, pricing & reviews from Amazon
+- **[All Scrapers](/scrapers/)** — Browse all platform-specific scrapers

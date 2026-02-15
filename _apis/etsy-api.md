@@ -59,6 +59,9 @@ GET /api/v1/etsy/search
 
 [Get Started](/contact/) with Etsy API today.
 
+## Related Solutions
 
-
-
+- **[Shopify Scraper](/scrapers/shopify-scraper/)** — Monitor Shopify stores, products & pricing
+- **[Amazon API](/apis/amazon-api/)** — Real-time pricing & reviews from Amazon
+- **[eBay Scraper](/scrapers/ebay-scraper/)** — Auction data & seller intelligence from eBay
+- **[E-commerce Solutions](/e-commerce/)** — Complete e-commerce data extraction

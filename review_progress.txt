@@ -1,0 +1,33 @@
+MANUAL AI REVIEW PROGRESS
+==========================
+Total Batches: 619
+Batch Size: 20 records each
+Total Records: 12,370
+
+COMPLETED BATCHES:
+-------------------
+✓ Batch 001: 16 kept, 4 removed (medical, blog, travel, real estate)
+✓ Batch 002: 16 kept, 4 removed (automotive, real estate x3)
+
+REVIEW CRITERIA:
+----------------
+KEEP - E-commerce, Quick Commerce, Food Delivery:
+  • E-commerce: Product listings, marketplaces, retail stores, apparel, electronics, beauty
+  • Quick Commerce: Grocery delivery, supermarkets, convenience stores
+  • Food Delivery: Restaurants, food chains, cafes, delivery platforms
+
+REMOVE - Not relevant:
+  • Travel & Hospitality: Hotels, flights, bookings
+  • Jobs/HR/Recruitment: Job boards, recruitment platforms
+  • Medical/Pharmacy: Drug prices, medical data
+  • Real Estate: Property listings, real estate platforms
+  • Automotive: Car listings, automobile data
+  • Generic articles (unless specifically about e-commerce/grocery/food delivery)
+
+RUNNING TOTALS:
+--------------
+Batches Completed: 2/619 (0.3%)
+Total Kept: 32
+Total Removed: 8
+Estimated Total to Keep: ~10,000 (80%)
+Estimated Total to Remove: ~2,400 (20%)

@@ -43,6 +43,10 @@ Extract comprehensive product data, pricing, reviews, inventory, and store infor
 
 [Contact us](/contact/) to get started with Shopify scraping.
 
+## Related Solutions
 
-
-
+- **[Amazon Scraper](/scrapers/amazon-scraper/)** — Extract Amazon products, pricing & reviews at scale
+- **[eBay Scraper](/scrapers/ebay-scraper/)** — Extract auction data, bids & seller intelligence from eBay
+- **[Etsy API](/apis/etsy-api/)** — Product data from Etsy marketplace
+- **[E-commerce Solutions](/e-commerce/)** — Complete e-commerce data extraction across all platforms
+- **[Marketplace SEO Guide](/blog/marketplace-seo-optimization-guide/)** — How to optimize marketplace listings with data

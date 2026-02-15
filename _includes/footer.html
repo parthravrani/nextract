@@ -1,270 +1,115 @@
-<footer class="bg-gradient-to-b from-gray-900 to-black text-white py-32">
+<footer class="bg-gray-900 text-white py-20">
     <div class="container mx-auto px-6 max-w-7xl">
         <!-- Main Footer Content -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-24">
-            <!-- Company Info - Full width on mobile, spans 2 columns on desktop -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <!-- Company Info -->
             <div class="md:col-span-2 lg:col-span-1">
                 <div class="mb-8">
-                    <h3 class="text-3xl font-black mb-3 text-white">
+                    <h3 class="text-2xl font-bold mb-3 text-white">
                         Nextract
                     </h3>
-                    <p class="text-gray-300 mb-8 leading-relaxed text-sm">
+                    <p class="text-gray-400 mb-6 leading-relaxed text-sm">
                         The data partner for modern businesses. We handle the engineering so you can focus on scale.
                     </p>
                 </div>
                 
-                <!-- Quick Stats -->
-                <div class="grid grid-cols-2 gap-3 mb-8">
-                    <div class="p-5 bg-white/5 border border-white/10 hover:border-blue-600 transition-all group overflow-hidden">
-                        <div class="text-xl font-black text-blue-500 mb-1 group-hover:scale-105 transition-transform">Expert</div>
-                        <div class="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Solutions</div>
-                    </div>
-                    <div class="p-5 bg-white/5 border border-white/10 hover:border-blue-600 transition-all group overflow-hidden">
-                        <div class="text-xl font-black text-blue-500 mb-1 group-hover:scale-105 transition-transform">24/7</div>
-                        <div class="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Support</div>
-                    </div>
-                </div>
-                
                 <!-- Social Links -->
                 <div class="flex gap-3">
-                    <a href="{{ site.linkedin_url }}" target="_blank" class="w-11 h-11 border-2 border-gray-700 hover:border-blue-600 hover:bg-blue-600 hover:text-white flex items-center justify-center transition-all group">
-                        <i class="ri-linkedin-box-fill text-gray-400 group-hover:text-white transition-colors text-lg"></i>
+                    <a href="{{ site.linkedin_url }}" target="_blank" class="w-10 h-10 border border-gray-700 hover:border-blue-600 hover:bg-blue-600 flex items-center justify-center transition-colors">
+                        <i class="ri-linkedin-box-fill text-gray-400 hover:text-white text-lg"></i>
                     </a>
-                    <a href="{{ site.instagram_url }}" target="_blank" class="w-11 h-11 border-2 border-gray-700 hover:border-blue-600 hover:bg-blue-600 hover:text-white flex items-center justify-center transition-all group">
-                        <i class="ri-instagram-line text-gray-400 group-hover:text-white transition-colors text-lg"></i>
+                    <a href="{{ site.instagram_url }}" target="_blank" class="w-10 h-10 border border-gray-700 hover:border-blue-600 hover:bg-blue-600 flex items-center justify-center transition-colors">
+                        <i class="ri-instagram-line text-gray-400 hover:text-white text-lg"></i>
                     </a>
                 </div>
             </div>
             
-            <!-- Products Section - Grouped together -->
+            <!-- Products Section -->
             <div>
-                <div class="text-xs font-bold text-blue-500 uppercase tracking-widest mb-6 flex items-center gap-2">
-                    <span class="w-1 h-4 bg-blue-600"></span>
+                <div class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-6">
                     Products
                 </div>
-                <ul class="space-y-2.5 mb-8">
-                    <li><a href="{{ '/products/' | relative_url }}" class="text-gray-300 hover:text-white transition-colors text-sm flex items-center gap-2 group font-medium">
-                        <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">All Products</span>
-                    </a></li>
-                </ul>
-                
-                <div class="text-xs font-bold text-orange-500 uppercase tracking-widest mb-6 flex items-center gap-2">
-                    <span class="w-1 h-4 bg-orange-600"></span>
-                    Scrapers
-                </div>
-                <ul class="space-y-2.5 mb-8">
-                    <li><a href="{{ '/scrapers/' | relative_url }}" class="text-gray-300 hover:text-white transition-colors text-sm flex items-center gap-2 group font-medium">
-                        <span class="opacity-0 group-hover:opacity-100 transition-opacity text-orange-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">All Scrapers</span>
-                    </a></li>
-                    {% assign all_scrapers = site.scrapers | sort: 'order' | limit: 6 %}
-                    {% for scraper in all_scrapers %}
-                    <li><a href="{{ scraper.url | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
-                        <span class="opacity-0 group-hover:opacity-100 transition-opacity text-orange-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">{{ scraper.title | remove: 'Nextract | ' | replace: ' Scraper', '' }}</span>
-                    </a></li>
-                    {% endfor %}
-                </ul>
-                
-                <div class="text-xs font-bold text-blue-500 uppercase tracking-widest mb-6 flex items-center gap-2">
-                    <span class="w-1 h-4 bg-blue-600"></span>
-                    APIs
-                </div>
                 <ul class="space-y-2.5">
-                    <li><a href="{{ '/apis/' | relative_url }}" class="text-gray-300 hover:text-white transition-colors text-sm flex items-center gap-2 group font-medium">
-                        <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">All APIs</span>
+                    <li><a href="{{ '/scrava/' | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm">
+                        Scrava
                     </a></li>
-                    {% assign all_apis = site.apis | sort: 'order' | limit: 6 %}
-                    {% for api in all_apis %}
-                    <li><a href="{{ api.url | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
-                        <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">{{ api.title | remove: 'Nextract | ' | replace: ' API', '' }}</span>
+                    <li><a href="{{ '/products/' | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm">
+                        Self-Service Products
                     </a></li>
-                    {% endfor %}
+                    <li><a href="{{ '/scrapers/' | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm">
+                        Scrapers
+                    </a></li>
+                    <li><a href="{{ '/apis/' | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm">
+                        APIs
+                    </a></li>
                 </ul>
             </div>
             
-            <!-- Services & Industries -->
+            <!-- Services -->
             <div>
-                <div class="text-xs font-bold text-blue-500 uppercase tracking-widest mb-6 flex items-center gap-2">
-                    <span class="w-1 h-4 bg-blue-600"></span>
+                <div class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-6">
                     Services
                 </div>
-                <ul class="space-y-2.5 mb-8">
-                    <li><a href="{{ '/services/' | relative_url }}" class="text-gray-300 hover:text-white transition-colors text-sm flex items-center gap-2 group font-medium">
-                        <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">All Services</span>
-                    </a></li>
-                    {% assign all_services = site.services | sort: 'order' | limit: 6 %}
-                    {% for service in all_services %}
-                    <li><a href="{{ service.url | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
-                        <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">{{ service.title | remove: 'Nextract | ' | replace: ' Services', '' | replace: ' Data Scraping', '' }}</span>
-                    </a></li>
-                    {% endfor %}
-                </ul>
-                
-                <div class="text-xs font-bold text-orange-500 uppercase tracking-widest mb-6 flex items-center gap-2">
-                    <span class="w-1 h-4 bg-orange-600"></span>
-                    Industries
-                </div>
                 <ul class="space-y-2.5">
-                    <li><a href="{{ '/industries/' | relative_url }}" class="text-gray-300 hover:text-white transition-colors text-sm flex items-center gap-2 group font-medium">
-                        <span class="opacity-0 group-hover:opacity-100 transition-opacity text-orange-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">All Industries</span>
+                    <li><a href="{{ '/solutions/' | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm">
+                        Custom Solutions
                     </a></li>
-                    {% assign all_industries = site.industries | sort: 'order' | limit: 6 %}
-                    {% for industry in all_industries %}
-                    <li><a href="{{ industry.url | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
-                        <span class="opacity-0 group-hover:opacity-100 transition-opacity text-orange-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">{{ industry.category }}</span>
+                    <li><a href="{{ '/services/' | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm">
+                        Industry Services
                     </a></li>
-                    {% endfor %}
+                    <li><a href="{{ '/amazon/' | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm">
+                        Amazon
+                    </a></li>
+                    <li><a href="{{ '/e-commerce/' | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm">
+                        E-commerce
+                    </a></li>
+                    <li><a href="{{ '/quick-commerce/' | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm">
+                        Quick Commerce
+                    </a></li>
+                    <li><a href="{{ '/food-delivery/' | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm">
+                        Food Delivery
+                    </a></li>
                 </ul>
             </div>
             
-            <!-- Company, Resources & Legal -->
+            <!-- Company & Resources -->
             <div>
-                <div class="text-xs font-bold text-blue-500 uppercase tracking-widest mb-6 flex items-center gap-2">
-                    <span class="w-1 h-4 bg-blue-600"></span>
+                <div class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-6">
                     Company
                 </div>
                 <ul class="space-y-2.5 mb-8">
-                    <li><a href="{{ '/about/' | relative_url }}" class="text-gray-300 hover:text-white transition-colors text-sm flex items-center gap-2 group font-medium">
-                        <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">About Us</span>
+                    <li><a href="{{ '/about/' | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm">
+                        About
                     </a></li>
-                    <li><a href="{{ '/products/' | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
-                        <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Products</span>
-                    </a></li>
-                    <li><a href="{{ '/solutions/' | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
-                        <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Solutions</span>
-                    </a></li>
-                    <li><a href="{{ '/contact/' | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
-                        <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Contact</span>
+                    <li><a href="{{ '/contact/' | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm">
+                        Contact
                     </a></li>
                 </ul>
                 
-                <div class="text-xs font-bold text-orange-500 uppercase tracking-widest mb-6 flex items-center gap-2">
-                    <span class="w-1 h-4 bg-orange-600"></span>
+                <div class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-6">
                     Resources
                 </div>
-                <ul class="space-y-2.5 mb-8">
-                    <li><a href="{{ '/case-studies/' | relative_url }}" class="text-gray-300 hover:text-white transition-colors text-sm flex items-center gap-2 group font-medium">
-                        <span class="opacity-0 group-hover:opacity-100 transition-opacity text-orange-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Case Studies</span>
-                    </a></li>
-                    <li><a href="{{ '/intelligence/' | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
-                        <span class="opacity-0 group-hover:opacity-100 transition-opacity text-orange-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Intelligence</span>
-                    </a></li>
-                    <li><a href="{{ '/datasets/' | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
-                        <span class="opacity-0 group-hover:opacity-100 transition-opacity text-orange-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Datasets</span>
-                    </a></li>
-                    <li><a href="{{ '/testimonials/' | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
-                        <span class="opacity-0 group-hover:opacity-100 transition-opacity text-orange-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Testimonials</span>
-                    </a></li>
-                    <li><a href="{{ '/faq/' | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
-                        <span class="opacity-0 group-hover:opacity-100 transition-opacity text-orange-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">FAQ</span>
-                    </a></li>
-                </ul>
-                
-                <div class="text-xs font-bold text-blue-500 uppercase tracking-widest mb-6 flex items-center gap-2">
-                    <span class="w-1 h-4 bg-blue-600"></span>
-                    Legal
-                </div>
                 <ul class="space-y-2.5">
-                    <li><a href="{{ '/trust-security/' | relative_url }}" class="text-gray-300 hover:text-white transition-colors text-sm flex items-center gap-2 group font-medium">
-                        <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Trust & Security</span>
+                    <li><a href="{{ '/blog/' | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm">
+                        Blog
                     </a></li>
-                    <li><a href="{{ '/terms/' | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
-                        <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Terms</span>
-                    </a></li>
-                    <li><a href="{{ '/privacy/' | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
-                        <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Privacy</span>
-                    </a></li>
-                    <li><a href="{{ '/sla/' | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
-                        <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">SLA</span>
-                    </a></li>
-                    <li><a href="{{ '/compliance/' | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
-                        <span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>
-                        <span class="group-hover:translate-x-1 transition-transform">Compliance</span>
+                    <li><a href="{{ '/case-studies/' | relative_url }}" class="text-gray-400 hover:text-white transition-colors text-sm">
+                        Case Studies
                     </a></li>
                 </ul>
             </div>
         </div>
         
-        <!-- Contact Info Bar -->
-        <div class="border-t border-gray-800 pt-16 pb-16">
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="flex items-start gap-4 group">
-                    <div class="w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg">
-                        <i class="ri-mail-line text-white text-xl"></i>
-                    </div>
-                    <div>
-                        <div class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Email</div>
-                        <a href="mailto:hello@nextract.dev" class="text-white hover:text-blue-400 transition-colors text-lg font-bold">hello@nextract.dev</a>
-                    </div>
+        <!-- Bottom Bar -->
+        <div class="pt-8 border-t border-gray-800">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="text-sm text-gray-400">
+                    © {{ 'now' | date: "%Y" }} Nextract. All rights reserved.
                 </div>
-                <div class="flex items-start gap-4 group">
-                    <div class="w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg">
-                        <i class="ri-phone-line text-white text-xl"></i>
-                    </div>
-                    <div>
-                        <div class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Phone</div>
-                        <a href="tel:+918511098799" class="text-white hover:text-blue-400 transition-colors text-lg font-bold">+91 85110-98799</a>
-                    </div>
-                </div>
-                <div class="flex items-start gap-4 group">
-                    <div class="w-14 h-14 bg-gradient-to-br from-orange-600 to-orange-700 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg">
-                        <i class="ri-map-pin-line text-white text-xl"></i>
-                    </div>
-                    <div>
-                        <div class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Address</div>
-                        <div class="text-white text-lg font-bold">B-1308, Eastface, Ahmedabad, Gujarat 380058</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Compliance Badges Section -->
-        <div class="border-t border-gray-800 pt-10 pb-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="text-gray-400 text-sm font-medium">
-                    <p>&copy; {{ 'now' | date: "%Y" }} Nextract - A Data Solutions Company. All Rights Reserved.</p>
-                </div>
-                <!-- Compliance Badges -->
-                <div class="flex flex-col items-end gap-3">
-                    <div class="flex flex-wrap items-center justify-end gap-4">
-                        <div class="flex items-center gap-2 text-gray-300 px-3 py-1.5 bg-gray-800/50 border border-gray-700 rounded-lg">
-                            <div class="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                            <span class="font-semibold text-xs">Working Towards GDPR</span>
-                        </div>
-                        <div class="flex items-center gap-2 text-gray-300 px-3 py-1.5 bg-gray-800/50 border border-gray-700 rounded-lg">
-                            <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
-                            <span class="font-semibold text-xs">Security Best Practices</span>
-                        </div>
-                        <div class="flex items-center gap-2 text-gray-300 px-3 py-1.5 bg-gray-800/50 border border-gray-700 rounded-lg">
-                            <div class="w-2 h-2 bg-green-500 rounded-full"></div>
-                            <span class="font-semibold text-xs">Ethical Practices</span>
-                        </div>
-                    </div>
-                    <!-- Compliance Disclaimer - Small Text Below -->
-                    <p class="text-[9px] text-gray-600 leading-tight max-w-[320px] text-right opacity-70">
-                        We're committed to security and compliance. Working towards certifications.
-                    </p>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="{{ '/terms/' | relative_url }}" class="text-sm text-gray-400 hover:text-white transition-colors">Terms</a>
+                    <a href="{{ '/privacy/' | relative_url }}" class="text-sm text-gray-400 hover:text-white transition-colors">Privacy</a>
+                    <a href="{{ '/trust-security/' | relative_url }}" class="text-sm text-gray-400 hover:text-white transition-colors">Security</a>
                 </div>
             </div>
         </div>

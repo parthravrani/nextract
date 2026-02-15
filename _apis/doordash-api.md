@@ -59,6 +59,10 @@ GET /api/v1/doordash/search
 
 [Get Started](/contact/) with DoorDash API today.
 
+## Related Solutions
 
-
-
+- **[Uber Eats API](/apis/uber-eats-api/)** — Food delivery data from Uber Eats
+- **[Swiggy API](/apis/swiggy-api/)** — Restaurant data from Swiggy platform
+- **[Swiggy Scraper](/scrapers/swiggy-scraper/)** — Restaurant menus & delivery data
+- **[Yelp Scraper](/scrapers/yelp-scraper/)** — Business reviews & ratings data
+- **[Food Delivery Solutions](/food-delivery/)** — Complete food delivery data extraction

@@ -1,77 +1,198 @@
 ---
 layout: default
-title: "Web Scraping Services by Industry"
-description: "Industry-specific web scraping services: e-commerce, restaurant, hotel, real estate, finance, healthcare, and more. Custom data extraction solutions for every business need. Professional web scraping services tailored to your industry."
-keywords: "web scraping services, data scraping services, e-commerce scraping, restaurant data scraping, hotel scraping, real estate scraping, finance scraping, healthcare scraping, custom data extraction, industry-specific scraping, business data extraction, professional scraping services, custom web scraping, enterprise data services, industry data solutions, specialized scraping, tailored data extraction, business intelligence services, market research data, competitive intelligence services"
-og_description: "Industry-specific web scraping services. Extract data from e-commerce, restaurants, hotels, real estate, finance, and more. Custom solutions for your business. Professional data extraction services."
-twitter_description: "Web scraping services for every industry. E-commerce, restaurant, hotel, real estate, finance, healthcare. Custom solutions available. Professional data extraction services."
+title: "Data Extraction Services by Industry"
+description: "Industry-specific data extraction services. E-commerce, quick commerce, food delivery, travel, real estate, and more. Tailored solutions for your sector."
+keywords: "data extraction services, industry-specific scraping, e-commerce scraping, travel data extraction"
+og_description: "Industry-specific data extraction services. Tailored solutions for e-commerce, travel, real estate, and more."
+twitter_description: "Data extraction services for every industry. Professional, reliable, tailored."
 ---
 
 <main>
     <!-- Hero Section -->
-    <section class="min-h-[80vh] flex items-center justify-center relative overflow-hidden bg-white">
-        <div class="absolute inset-0 overflow-hidden">
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 blur-[100px] animate-pulse"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-600/10 blur-[100px] animate-pulse" style="animation-delay: 1s;"></div>
-        </div>
-        
-        <div class="container mx-auto px-6 max-w-7xl relative z-10">
-            <div class="max-w-5xl mx-auto text-center">
-                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-6">Services</div>
-                <h1 class="text-6xl md:text-8xl font-black text-gray-900 mb-8 leading-[0.9] tracking-tight">
-                    Industry-Specific<br/>
-                    <span class="bg-gradient-to-r from-blue-600 to-orange-600 bg-clip-text text-transparent">Scraping Services</span>
+    <section class="py-32 md:py-40 bg-white">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="max-w-4xl">
+                <p class="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-8">Industry Services</p>
+                
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-8 leading-tight">
+                    Data extraction services by industry.
                 </h1>
-                <p class="text-2xl md:text-3xl text-gray-600 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
-                    Tailored data extraction solutions for every industry.<br/>
-                    <span class="font-semibold text-gray-900">From e-commerce to healthcare, we've got you covered.</span>
+                
+                <p class="text-xl md:text-2xl text-gray-600 mb-10 leading-relaxed max-w-3xl">
+                    Tailored data extraction solutions designed for the unique requirements and challenges of your industry.
                 </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-                    <a href="/contact/" class="group relative px-10 py-5 bg-gray-900 text-white font-bold text-lg overflow-hidden">
-                        <span class="relative z-10 flex items-center gap-2">
-                            Get Custom Quote
-                            <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
-                        </span>
-                        <div class="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                
+                <div class="flex flex-col sm:flex-row gap-4 mb-16">
+                    <a href="/contact/" class="inline-flex items-center justify-center px-8 py-4 bg-gray-900 text-white font-semibold hover:bg-gray-800 transition-colors">
+                        Request Consultation
+                        <i class="ri-arrow-right-line ml-2"></i>
                     </a>
-                    <a href="/solutions/" class="px-10 py-5 border-2 border-gray-900 text-gray-900 font-bold text-lg hover:bg-gray-900 hover:text-white transition-all">
-                        View Solutions
-                    </a>
-                    <a href="{{ '/assets/deck/Nextract - Pitch Deck.pdf' | relative_url }}" download="Nextract-Pitch-Deck.pdf" class="px-10 py-5 border-2 border-gray-900 text-gray-900 font-bold text-lg hover:bg-gray-900 hover:text-white transition-all inline-flex items-center gap-2">
-                        <i class="ri-download-line"></i>
-                        Pitch Deck
+                    <a href="/solutions/" class="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-900 text-gray-900 font-semibold hover:bg-gray-900 hover:text-white transition-colors">
+                        View Custom Solutions
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Grid -->
-    <section class="py-32 bg-white">
-        <div class="container mx-auto px-6 max-w-7xl">
-            <div class="mb-20">
-                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Our Services</div>
-                <h2 class="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-tight">Comprehensive<br/></h2>
-                <p class="text-xl text-gray-600 max-w-3xl">Specialized scraping services designed for your industry's unique data needs.</p>
+    <!-- Main Industries -->
+    <section class="py-32 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="max-w-3xl mb-20">
+                <p class="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-6">Industries</p>
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">
+                    Proven expertise across sectors.
+                </h2>
             </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {% assign services = site.services | sort: 'order' %}
-                {% for service in services %}
-                <a href="{{ service.url | relative_url }}" class="group p-10 border border-gray-200 hover:border-blue-600 transition-all bg-white hover:bg-gray-50 block no-underline">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4 no-underline">{{ service.title | remove: 'Nextract | ' }}</h3>
-                    <p class="text-gray-600 leading-relaxed text-lg mb-6">{{ service.description }}</p>
-                    <div class="flex items-center gap-2 text-blue-600 font-semibold group-hover:gap-4 transition-all">
-                        <span>Learn More</span>
-                        <i class="ri-arrow-right-line"></i>
-                    </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <a href="/e-commerce/" class="group block p-10 bg-white hover:bg-gray-50 border border-gray-100 hover:border-blue-600 transition-all">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-600">E-commerce</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Product monitoring, pricing intelligence, competitor analysis across 50+ platforms.</p>
+                    <span class="text-blue-600 font-semibold inline-flex items-center">
+                        Learn more
+                        <i class="ri-arrow-right-line ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </span>
                 </a>
-                {% endfor %}
+
+                <a href="/quick-commerce/" class="group block p-10 bg-white hover:bg-gray-50 border border-gray-100 hover:border-orange-600 transition-all">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 group-hover:text-orange-600">Quick Commerce</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Grocery inventory, delivery zones, real-time pricing for 10-minute delivery platforms.</p>
+                    <span class="text-orange-600 font-semibold inline-flex items-center">
+                        Learn more
+                        <i class="ri-arrow-right-line ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </span>
+                </a>
+
+                <a href="/food-delivery/" class="group block p-10 bg-white hover:bg-gray-50 border border-gray-100 hover:border-green-600 transition-all">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 group-hover:text-green-600">Food Delivery</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Menu intelligence, restaurant data, reviews, and market trends across platforms.</p>
+                    <span class="text-green-600 font-semibold inline-flex items-center">
+                        Learn more
+                        <i class="ri-arrow-right-line ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </span>
+                </a>
+
+                <div class="p-10 bg-white border border-gray-100">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Travel & Hospitality</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Flight prices, hotel rates, availability, and booking intelligence.</p>
+                </div>
+
+                <div class="p-10 bg-white border border-gray-100">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Real Estate</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Property listings, market trends, pricing, and valuation data.</p>
+                </div>
+
+                <div class="p-10 bg-white border border-gray-100">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">B2B Intelligence</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Company data, contact enrichment, lead generation, and market research.</p>
+                </div>
+
+                <div class="p-10 bg-white border border-gray-100">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Finance & Markets</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Stock data, market intelligence, financial news, and alternative data.</p>
+                </div>
+
+                <div class="p-10 bg-white border border-gray-100">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Healthcare</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Medical device data, pharmaceutical intelligence, provider information.</p>
+                </div>
+
+                <div class="p-10 bg-white border border-gray-100">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Custom Industries</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Don't see your industry? We build custom solutions for any sector.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- What We Deliver -->
+    <section class="py-32 bg-white">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="max-w-3xl mb-20">
+                <p class="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-6">What You Get</p>
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">
+                    Complete data extraction services.
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Data Extraction</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="ri-check-line text-green-600 text-xl flex-shrink-0 mt-1"></i>
+                            <div>
+                                <div class="font-semibold text-gray-900">Custom Data Pipelines</div>
+                                <div class="text-gray-600">Built specifically for your requirements</div>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ri-check-line text-green-600 text-xl flex-shrink-0 mt-1"></i>
+                            <div>
+                                <div class="font-semibold text-gray-900">Clean, Structured Data</div>
+                                <div class="text-gray-600">Ready for analysis and integration</div>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ri-check-line text-green-600 text-xl flex-shrink-0 mt-1"></i>
+                            <div>
+                                <div class="font-semibold text-gray-900">Flexible Delivery</div>
+                                <div class="text-gray-600">API, database, cloud storage, or webhook</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Ongoing Support</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="ri-check-line text-green-600 text-xl flex-shrink-0 mt-1"></i>
+                            <div>
+                                <div class="font-semibold text-gray-900">24/7 Monitoring</div>
+                                <div class="text-gray-600">Proactive maintenance and alerts</div>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ri-check-line text-green-600 text-xl flex-shrink-0 mt-1"></i>
+                            <div>
+                                <div class="font-semibold text-gray-900">Dedicated Support</div>
+                                <div class="text-gray-600">Direct access to engineers</div>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ri-check-line text-green-600 text-xl flex-shrink-0 mt-1"></i>
+                            <div>
+                                <div class="font-semibold text-gray-900">Regular Updates</div>
+                                <div class="text-gray-600">Adaptation to website changes</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+                    </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-32 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-4xl text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">Let's discuss your industry needs.</h2>
+            <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
+                Schedule a consultation to explore how we can help extract the data you need.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/contact/" class="inline-flex items-center justify-center px-8 py-4 bg-gray-900 text-white font-semibold hover:bg-gray-800 transition-colors">
+                    Request Consultation
+                </a>
+                <a href="https://calendly.com/parthravrani/30min" target="_blank" class="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-900 text-gray-900 font-semibold hover:bg-gray-900 hover:text-white transition-colors">
+                    <i class="ri-calendar-line mr-2"></i>
+                    Book a Call
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     {% include contact-section.html %}
 </main>
-

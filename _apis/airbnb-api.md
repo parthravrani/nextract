@@ -59,6 +59,8 @@ GET /api/v1/airbnb/search
 
 [Get Started](/contact/) with Airbnb API today.
 
+## Related Solutions
 
-
-
+- **[Expedia API](/apis/expedia-api/)** — Travel & hotel data extraction
+- **[Zillow Scraper](/scrapers/zillow-scraper/)** — Property listings & market data from Zillow
+- **[All APIs](/apis/)** — Browse all data extraction APIs

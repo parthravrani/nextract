@@ -59,6 +59,9 @@ GET /api/v1/bestbuy/inventory
 
 [Get Started](/contact/) with Best Buy API today.
 
+## Related Solutions
 
-
-
+- **[Walmart API](/apis/walmart-api/)** — Real-time inventory & pricing from Walmart
+- **[Target API](/apis/target-api/)** — Extract product data from Target.com
+- **[Amazon API](/apis/amazon-api/)** — Real-time pricing & reviews from Amazon
+- **[E-commerce Solutions](/e-commerce/)** — Complete e-commerce data extraction

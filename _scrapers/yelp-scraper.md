@@ -50,6 +50,9 @@ Extract comprehensive business data including listings, reviews, ratings, photos
 
 [Contact us](/contact/) to get started with Yelp scraping.
 
+## Related Solutions
 
-
-
+- **[DoorDash API](/apis/doordash-api/)** — Extract DoorDash restaurant menus & data
+- **[Swiggy Scraper](/scrapers/swiggy-scraper/)** — Restaurant menus & delivery data from Swiggy
+- **[Food Delivery Solutions](/food-delivery/)** — Complete food delivery data extraction
+- **[All Scrapers](/scrapers/)** — Browse all platform-specific scrapers

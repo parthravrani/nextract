@@ -59,6 +59,10 @@ GET /api/v1/walmart/inventory
 
 [Get Started](/contact/) with Walmart API today.
 
+## Related Solutions
 
-
-
+- **[Amazon API](/apis/amazon-api/)** — Real-time pricing & reviews from Amazon marketplaces
+- **[Amazon Scraper](/scrapers/amazon-scraper/)** — Full Amazon product data extraction with anti-bot bypass
+- **[Target API](/apis/target-api/)** — Extract product data from Target.com
+- **[Best Buy API](/apis/best-buy-api/)** — Real-time product & pricing data from Best Buy
+- **[E-commerce Solutions](/e-commerce/)** — Complete e-commerce data extraction across all platforms

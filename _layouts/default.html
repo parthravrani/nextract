@@ -15,8 +15,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Meta Tags -->
-    <title>{% if page.title %}{{ page.title }} | Nextract{% else %}Nextract | Modern Data Solutions & Extraction{% endif %}</title>
-    <meta name="title" content="{% if page.title %}{{ page.title }} | Nextract{% else %}Nextract | Modern Data Solutions & Extraction{% endif %}">
+    <title>{% if page.title %}{{ page.title }}{% else %}Nextract — Web Scraping API & Data Extraction Services{% endif %}</title>
+    <meta name="title" content="{% if page.title %}{{ page.title }}{% else %}Nextract — Web Scraping API & Data Extraction Services{% endif %}">
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
     <meta name="author" content="{{ site.title }}">
@@ -25,10 +25,7 @@
     <meta name="revisit-after" content="7 days">
     <meta name="googlebot" content="index, follow">
     <meta name="bingbot" content="index, follow">
-    <meta name="geo.region" content="IN-GJ">
-    <meta name="geo.placename" content="Ahmedabad">
-    <meta name="geo.position" content="23.0225;72.5714">
-    <meta name="ICBM" content="23.0225, 72.5714">
+    <!-- Geo tags removed — targeting global audience -->
     
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ site.canonical_url }}{{ page.url }}">
@@ -51,9 +48,9 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site.canonical_url }}{{ page.url }}">
-    <meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} | Enterprise Web Scraping & Data Extraction Services{% endif %}">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}Nextract — Web Scraping API & Data Extraction Services{% endif %}">
     <meta property="og:description" content="{% if page.og_description %}{{ page.og_description }}{% else %}{{ page.description | default: site.description }}{% endif %}">
-    <meta property="og:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.canonical_url }}/assets/images/og-image.jpg{% endif %}">
+    <meta property="og:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.og_image }}{% endif %}">
     <meta property="og:site_name" content="{{ site.title }}">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="en_US">
@@ -63,9 +60,9 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="{{ site.canonical_url }}{{ page.url }}">
-    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} | Enterprise Web Scraping & Data Extraction Services{% endif %}">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}Nextract — Web Scraping API & Data Extraction Services{% endif %}">
     <meta name="twitter:description" content="{% if page.twitter_description %}{{ page.twitter_description }}{% else %}{{ page.description | default: site.description }}{% endif %}">
-    <meta name="twitter:image" content="{% if page.twitter_image %}{{ page.twitter_image }}{% else %}{{ site.canonical_url }}/assets/images/twitter-image.jpg{% endif %}">
+    <meta name="twitter:image" content="{% if page.twitter_image %}{{ page.twitter_image }}{% else %}{{ site.twitter_image }}{% endif %}">
     
     <!-- Structured Data (JSON-LD) -->
     {% if page.url == '/' %}
@@ -427,6 +424,38 @@
           }
         }
       ]
+    }
+    </script>
+    {% endif %}
+    
+    <!-- Article Schema for Blog Posts -->
+    {% if page.layout == 'blog-post' %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "{{ page.title }}",
+      "description": "{{ page.description }}",
+      "image": "https://nextract.dev/assets/images/android-chrome-512x512.png",
+      "author": {
+        "@type": "Organization",
+        "name": "Nextract",
+        "url": "https://nextract.dev"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Nextract",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://nextract.dev/assets/images/logo.png"
+        }
+      },
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "dateModified": "{{ page.last_modified | default: page.date | date_to_xmlschema }}",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ site.canonical_url }}{{ page.url }}"
+      }
     }
     </script>
     {% endif %}
@@ -885,6 +914,7 @@
         .blur-\[100px\] {
             border-radius: 50% !important;
         }
+        
         
         /* Exception for button hover effect */
         .modern-btn::before {

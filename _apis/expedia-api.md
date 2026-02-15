@@ -59,6 +59,8 @@ GET /api/v1/expedia/packages
 
 [Get Started](/contact/) with Expedia API today.
 
+## Related Solutions
 
-
-
+- **[Airbnb API](/apis/airbnb-api/)** — Property listings, pricing & availability from Airbnb
+- **[Zillow Scraper](/scrapers/zillow-scraper/)** — Property listings & market data
+- **[All APIs](/apis/)** — Browse all data extraction APIs

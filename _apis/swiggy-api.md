@@ -59,6 +59,9 @@ GET /api/v1/swiggy/search
 
 [Get Started](/contact/) with Swiggy API today.
 
+## Related Solutions
 
-
-
+- **[Swiggy Scraper](/scrapers/swiggy-scraper/)** — Restaurant menus & delivery zones from Swiggy
+- **[DoorDash API](/apis/doordash-api/)** — Food delivery data from DoorDash
+- **[Uber Eats API](/apis/uber-eats-api/)** — Food delivery data from Uber Eats
+- **[Food Delivery Solutions](/food-delivery/)** — Complete food delivery data extraction

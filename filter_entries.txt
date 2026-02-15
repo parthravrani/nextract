@@ -1,0 +1,45 @@
+Entries to REMOVE (Based on Manual AI Review):
+
+1. Travel & Hospitality:
+   - Hotel, flight, airbnb, booking sites, travel portals
+   - Examples: 123milhas.com, aa.com, Agoda, Airbnb
+
+2. Job/HR/Recruitment:
+   - Job boards, recruitment platforms, HR software
+   - Examples: 15Five, Glassdoor, Indeed, LinkedIn
+
+3. Medical/Healthcare/Pharmacy:
+   - Drug prices, medical data, pharmacy information
+   - Examples: 1MG, pharmacies, medical stores
+
+4. Real Estate/Property:
+   - Property listings, real estate platforms
+   - Examples: 99acres, Zillow, apartments, property sites
+
+5. Automotive:
+   - Car data, automotive listings
+   - Examples: Car rental, automobile sites
+
+6. Generic Articles/Blogs:
+   - Non-specific content articles
+   - Examples: "3 steps to...", "5 ways to..."
+
+Entries to KEEP (E-commerce, Quick Commerce, Food Delivery):
+
+1. E-commerce:
+   - Product data scraping (apparel, electronics, beauty)
+   - Marketplace platforms (Amazon, eBay, Walmart, Target, Shopify, 11street)
+   - Retail stores and chains
+   - Online shopping platforms
+
+2. Quick Commerce:
+   - Grocery delivery services
+   - Supermarket data scraping
+   - Quick commerce platforms (Blinkit, Zepto, Instacart, Grofers)
+   - Dark stores, rapid delivery
+
+3. Food Delivery:
+   - Restaurant menu data
+   - Food chains (McDonald's, Subway, Pizza places)
+   - Food delivery platforms (Swiggy, Zomato, DoorDash, Uber Eats)
+   - Restaurant data scraping

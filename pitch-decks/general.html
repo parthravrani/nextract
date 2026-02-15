@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nextract - General Pitch Deck</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        @media print {
+            .slide {
+                page-break-after: always;
+                page-break-inside: avoid;
+                break-after: page;
+                break-inside: avoid;
+                min-height: 794px;
+                height: auto;
+            }
+            .slide-content {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            * {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .slide {
+            width: 100%;
+            min-height: 794px;
+            height: auto;
+            padding: 40px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            background: white;
+            page-break-after: always;
+            page-break-inside: avoid;
+            break-after: page;
+            break-inside: avoid;
+            box-sizing: border-box;
+        }
+        .slide-content {
+            width: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+        .slide-section {
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+        .slide-dark {
+            background: #111827;
+            color: white;
+        }
+        .slide-blue {
+            background: #2563EB;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Slide 1: Title -->
+    <div class="slide slide-dark">
+        <div class="slide-content">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="mb-6">
+                    <h1 class="text-7xl font-black mb-3">NEXTRACT</h1>
+                    <p class="text-2xl text-gray-300 font-light">A Data Solutions Company</p>
+                </div>
+                <div class="mt-12 pt-6 border-t border-gray-700">
+                    <p class="text-lg text-gray-400">Enterprise Web Scraping & Data Extraction API</p>
+                    <p class="text-base text-gray-500 mt-3">hello@nextract.dev | www.nextract.dev</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 2: The Problem -->
+    <div class="slide">
+        <div class="slide-content">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">The Problem</div>
+                <h2 class="text-5xl font-black text-gray-900 mb-8 leading-tight">Businesses Need Data<br/>But Can't Access It</h2>
+                
+                <div class="grid md:grid-cols-2 gap-6 slide-section">
+                    <div class="p-6 border-l-4 border-blue-600">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">$150K+ Wasted Annually</h3>
+                        <p class="text-gray-600 text-base">Companies waste resources on failed scraping attempts and unreliable data sources</p>
+                    </div>
+                    <div class="p-6 border-l-4 border-orange-600">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">67% Failure Rate</h3>
+                        <p class="text-gray-600 text-base">Most in-house scraping solutions fail due to anti-bot measures and IP blocks</p>
+                    </div>
+                    <div class="p-6 border-l-4 border-blue-600">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">3.2x Slower Development</h3>
+                        <p class="text-gray-600 text-base">Building reliable scraping infrastructure takes months, delaying time-to-market</p>
+                    </div>
+                    <div class="p-6 border-l-4 border-orange-600">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">89% Quality Issues</h3>
+                        <p class="text-gray-600 text-base">Data quality problems lead to poor business decisions and lost opportunities</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 3: The Solution -->
+    <div class="slide slide-blue">
+        <div class="slide-content">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-xs font-bold text-blue-300 uppercase tracking-widest mb-4">The Solution</div>
+                <h2 class="text-5xl font-black mb-8 leading-tight">Product + Service<br/>Complete </h2>
+                
+                <div class="grid md:grid-cols-2 gap-6 slide-section">
+                    <div class="bg-white/10 backdrop-blur-sm p-6 border border-white/20">
+                        <div class="text-xs font-bold text-blue-300 uppercase tracking-widest mb-3">Product</div>
+                        <div class="text-4xl font-black mb-3">01</div>
+                        <h3 class="text-xl font-bold mb-3">Self-Service API</h3>
+                        <p class="text-white/90 text-base mb-3">Developer-friendly REST API for instant data extraction</p>
+                        <ul class="text-white/80 space-y-1 text-xs">
+                            <li>• Pay-per-request pricing</li>
+                            <li>• Instant integration</li>
+                            <li>• Full documentation</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-6 border border-white/20">
+                        <div class="text-xs font-bold text-orange-300 uppercase tracking-widest mb-3">Service</div>
+                        <div class="text-4xl font-black mb-3">02</div>
+                        <h3 class="text-xl font-bold mb-3">Custom Scraping Solutions</h3>
+                        <p class="text-white/90 text-base mb-3">Tailored solutions built specifically for your needs</p>
+                        <ul class="text-white/80 space-y-1 text-xs">
+                            <li>• Dedicated engineering team</li>
+                            <li>• Custom data pipelines</li>
+                            <li>• Ongoing maintenance & support</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-6 border border-white/20">
+                        <div class="text-4xl font-black mb-3">03</div>
+                        <h3 class="text-xl font-bold mb-3">Managed Data Feeds</h3>
+                        <p class="text-white/90 text-base">Turnkey solutions with scheduled delivery and monitoring</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-6 border border-white/20">
+                        <div class="text-4xl font-black mb-3">04</div>
+                        <h3 class="text-xl font-bold mb-3">Consulting & Strategy</h3>
+                        <p class="text-white/90 text-base">Expert guidance on data extraction strategy and implementation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 4: Market Opportunity -->
+    <div class="slide">
+        <div class="slide-content">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">Market Opportunity</div>
+                <h2 class="text-5xl font-black text-gray-900 mb-8 leading-tight">$7.1B Market<br/>Growing at 18.4% CAGR</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8 slide-section">
+                    <div>
+                        <div class="text-5xl font-black text-blue-600 mb-3">$7.1B</div>
+                        <p class="text-lg text-gray-600 mb-6">Global Web Scraping Market Size (2024)</p>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-2 h-2 bg-blue-600"></div>
+                                <span class="text-gray-700 text-sm">18.4% CAGR through 2030</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-2 h-2 bg-blue-600"></div>
+                                <span class="text-gray-700 text-sm">$20B+ projected by 2030</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-2 h-2 bg-orange-600"></div>
+                                <span class="text-gray-700 text-sm">500M+ websites globally</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Target Segments</h3>
+                        <div class="space-y-3">
+                            <div class="p-3 border border-gray-200">
+                                <div class="font-bold text-gray-900 mb-1 text-sm">E-commerce & Retail</div>
+                                <div class="text-gray-600 text-xs">Price intelligence, competitor monitoring</div>
+                            </div>
+                            <div class="p-3 border border-gray-200">
+                                <div class="font-bold text-gray-900 mb-1 text-sm">Financial Services</div>
+                                <div class="text-gray-600 text-xs">Market data, news aggregation</div>
+                            </div>
+                            <div class="p-3 border border-gray-200">
+                                <div class="font-bold text-gray-900 mb-1 text-sm">Real Estate</div>
+                                <div class="text-gray-600 text-xs">Property listings, market analysis</div>
+                            </div>
+                            <div class="p-3 border border-gray-200">
+                                <div class="font-bold text-gray-900 mb-1 text-sm">Travel & Hospitality</div>
+                                <div class="text-gray-600 text-xs">Pricing, availability, reviews</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5: Competitive Advantage -->
+    <div class="slide slide-dark">
+        <div class="slide-content">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-sm font-bold text-blue-400 uppercase tracking-widest mb-6">Competitive Advantage</div>
+                <h2 class="text-7xl font-black mb-12 leading-tight">Why Nextract Wins</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8 mt-12">
+                    <div class="p-8 bg-white/5 border border-white/10">
+                        <div class="text-5xl font-black text-blue-400 mb-4">High</div>
+                        <h3 class="text-2xl font-bold mb-4">Uptime SLA</h3>
+                        <p class="text-white/80">Professional reliability with guaranteed uptime</p>
+                    </div>
+                    <div class="p-8 bg-white/5 border border-white/10">
+                        <div class="text-5xl font-black text-orange-400 mb-4">10x</div>
+                        <h3 class="text-2xl font-bold mb-4">Faster Delivery</h3>
+                        <p class="text-white/80">Advanced infrastructure delivers data 10x faster than competitors</p>
+                    </div>
+                    <div class="p-8 bg-white/5 border border-white/10">
+                        <div class="text-5xl font-black text-blue-400 mb-4">8 Years</div>
+                        <h3 class="text-2xl font-bold mb-4">Experience</h3>
+                        <p class="text-white/80">Proven track record with Growing Client Base across 45+ countries</p>
+                    </div>
+                    <div class="p-8 bg-white/5 border border-white/10">
+                        <div class="text-5xl font-black text-orange-400 mb-4">24/7</div>
+                        <h3 class="text-2xl font-bold mb-4">Support</h3>
+                        <p class="text-white/80">Dedicated support team with average 5-minute response time</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 6: Traction -->
+    <div class="slide">
+        <div class="slide-content">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-6">Traction</div>
+                <h2 class="text-7xl font-black text-gray-900 mb-12 leading-tight">Proven Results</h2>
+                
+                <div class="grid md:grid-cols-2 gap-12 mt-12">
+                    <div>
+                        <div class="text-6xl font-black text-blue-600 mb-8">Growing</div>
+                        <p class="text-2xl font-bold text-gray-900 mb-4">Active Clients</p>
+                        <p class="text-gray-600 text-lg mb-8">Including Fortune 500 companies and fast-growing startups</p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div class="w-3 h-3 bg-blue-600"></div>
+                                <span class="text-gray-700">45+ countries served</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-3 h-3 bg-blue-600"></div>
+                                <span class="text-gray-700">4.9/5 average rating</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-3 h-3 bg-orange-600"></div>
+                                <span class="text-gray-700">98% customer satisfaction</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold text-gray-900 mb-6">Key Wins</h3>
+                        <div class="space-y-4">
+                            <div class="p-6 border-l-4 border-blue-600 bg-gray-50">
+                                <div class="font-bold text-gray-900 mb-2">E-commerce Giant</div>
+                                <div class="text-gray-600">$500K ARR contract for price intelligence</div>
+                            </div>
+                            <div class="p-6 border-l-4 border-orange-600 bg-gray-50">
+                                <div class="font-bold text-gray-900 mb-2">Travel Platform</div>
+                                <div class="text-gray-600">$200K ARR for real-time availability data</div>
+                            </div>
+                            <div class="p-6 border-l-4 border-blue-600 bg-gray-50">
+                                <div class="font-bold text-gray-900 mb-2">Financial Services</div>
+                                <div class="text-gray-600">$300K ARR for market data aggregation</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 7: Business Model -->
+    <div class="slide">
+        <div class="slide-content">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">Business Model</div>
+                <h2 class="text-5xl font-black text-gray-900 mb-8 leading-tight">Dual Revenue Model</h2>
+            
+                <div class="grid md:grid-cols-2 gap-6 slide-section">
+                    <div class="p-6 border-4 border-blue-600 bg-blue-50">
+                        <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-3">Product Revenue</div>
+                        <div class="text-3xl font-black text-blue-600 mb-3">API Usage</div>
+                        <p class="text-gray-700 text-base mb-3">Pay-per-request pricing model</p>
+                        <div class="text-2xl font-bold text-gray-900 mb-1">$0.01 - $0.10</div>
+                        <div class="text-gray-600 text-xs mb-4">per request</div>
+                    </div>
+                    <div class="p-6 border-4 border-orange-600 bg-orange-50">
+                        <div class="text-xs font-bold text-orange-600 uppercase tracking-widest mb-3">Service Revenue</div>
+                        <div class="text-3xl font-black text-orange-600 mb-3">Custom Solutions</div>
+                        <p class="text-gray-700 text-base mb-3">Tailored development & consulting</p>
+                        <div class="text-2xl font-bold text-gray-900 mb-1">$50K - $500K+</div>
+                        <div class="text-gray-600 text-xs mb-4">per project</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 8: E-commerce Focus -->
+    <div class="slide">
+        <div class="slide-content">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">E-commerce Solutions</div>
+                <h2 class="text-5xl font-black text-gray-900 mb-8 leading-tight">E-commerce Data<br/>Intelligence</h2>
+                
+                <div class="grid md:grid-cols-2 gap-6 slide-section">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">What We Extract</h3>
+                        <div class="space-y-2">
+                            <div class="p-3 border-l-4 border-blue-600">
+                                <div class="font-bold text-gray-900 text-sm mb-0.5">Price Intelligence</div>
+                                <div class="text-gray-600 text-xs">Real-time monitoring across 50+ platforms</div>
+                            </div>
+                            <div class="p-3 border-l-4 border-orange-600">
+                                <div class="font-bold text-gray-900 text-sm mb-0.5">Product Data</div>
+                                <div class="text-gray-600 text-xs">Complete catalogs: titles, descriptions, specs</div>
+                            </div>
+                            <div class="p-3 border-l-4 border-blue-600">
+                                <div class="font-bold text-gray-900 text-sm mb-0.5">Reviews & Ratings</div>
+                                <div class="text-gray-600 text-xs">Sentiment analysis and insights</div>
+                            </div>
+                            <div class="p-3 border-l-4 border-orange-600">
+                                <div class="font-bold text-gray-900 text-sm mb-0.5">Inventory Tracking</div>
+                                <div class="text-gray-600 text-xs">Stock levels and availability</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Key Platforms</h3>
+                        <div class="space-y-2 mb-4">
+                            <div class="p-3 border border-gray-200">
+                                <div class="font-bold text-gray-900 text-sm">Amazon (US, UK, DE, IN)</div>
+                            </div>
+                            <div class="p-3 border border-gray-200">
+                                <div class="font-bold text-gray-900 text-sm">Flipkart, Walmart, eBay</div>
+                            </div>
+                            <div class="p-3 border border-gray-200">
+                                <div class="font-bold text-gray-900 text-sm">Etsy, Shopify Stores</div>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-blue-50 border-l-4 border-blue-600">
+                            <div class="text-xs font-bold text-blue-600 mb-1">Use Cases</div>
+                            <div class="text-gray-700 text-xs">Dynamic pricing • Product research • Competitive intelligence</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 9: Quick Commerce Focus -->
+    <div class="slide slide-dark">
+        <div class="slide-content">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-xs font-bold text-blue-400 uppercase tracking-widest mb-4">Quick Commerce Solutions</div>
+                <h2 class="text-5xl font-black mb-8 leading-tight">Quick Commerce<br/>Data Platform</h2>
+                
+                <div class="grid md:grid-cols-2 gap-6 slide-section">
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">What We Extract</h3>
+                        <div class="space-y-2">
+                            <div class="p-3 bg-white/5 border border-white/10">
+                                <div class="font-bold text-sm mb-0.5">Restaurant Data</div>
+                                <div class="text-white/70 text-xs">Menus, prices, ratings, delivery times</div>
+                            </div>
+                            <div class="p-3 bg-white/5 border border-white/10">
+                                <div class="font-bold text-sm mb-0.5">Delivery Zones</div>
+                                <div class="text-white/70 text-xs">Street-level mapping and coverage</div>
+                            </div>
+                            <div class="p-3 bg-white/5 border border-white/10">
+                                <div class="font-bold text-sm mb-0.5">Grocery Products</div>
+                                <div class="text-white/70 text-xs">Product catalogs and availability</div>
+                            </div>
+                            <div class="p-3 bg-white/5 border border-white/10">
+                                <div class="font-bold text-sm mb-0.5">Fleet Data</div>
+                                <div class="text-white/70 text-xs">Delivery partner intelligence</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">Key Platforms</h3>
+                        <div class="space-y-2 mb-4">
+                            <div class="p-3 bg-white/5 border border-white/10">
+                                <div class="font-bold text-sm">DoorDash, Uber Eats</div>
+                            </div>
+                            <div class="p-3 bg-white/5 border border-white/10">
+                                <div class="font-bold text-sm">Swiggy, Zomato</div>
+                            </div>
+                            <div class="p-3 bg-white/5 border border-white/10">
+                                <div class="font-bold text-sm">Blinkit, Zepto, BigBasket</div>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-white/5 border border-white/20">
+                            <div class="text-xs font-bold text-orange-400 mb-1">Use Cases</div>
+                            <div class="text-white/80 text-xs">Restaurant intelligence • Zone optimization • Market expansion</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 10: Contact -->
+    <div class="slide slide-dark">
+        <div class="slide-content">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-7xl font-black mb-12 leading-tight">Let's Build<br/>The Future of Data</h2>
+        
+                <div class="mt-12 space-y-6">
+                    <div>
+                        <div class="text-2xl font-bold mb-2">Email</div>
+                        <div class="text-xl text-blue-400">hello@nextract.dev</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold mb-2">Website</div>
+                        <div class="text-xl text-blue-400">www.nextract.dev</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold mb-2">Phone</div>
+                        <div class="text-xl text-gray-300">+91 85110-98799</div>
+                    </div>
+                </div>
+
+                <div class="mt-16 pt-8 border-t border-gray-700">
+                    <p class="text-gray-400">Thank you for your time</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+

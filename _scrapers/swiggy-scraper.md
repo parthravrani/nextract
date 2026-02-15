@@ -43,6 +43,9 @@ Extract comprehensive food delivery data including restaurant menus, prices, rev
 
 [Contact us](/contact/) to get started with Swiggy scraping.
 
+## Related Solutions
 
-
-
+- **[Swiggy API](/apis/swiggy-api/)** — RESTful API for Swiggy restaurant data extraction
+- **[DoorDash API](/apis/doordash-api/)** — Extract DoorDash restaurant menus & delivery data
+- **[Uber Eats API](/apis/uber-eats-api/)** — Food delivery data from Uber Eats
+- **[Food Delivery Solutions](/food-delivery/)** — Complete food delivery data extraction

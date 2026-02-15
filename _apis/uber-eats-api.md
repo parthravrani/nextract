@@ -59,6 +59,9 @@ GET /api/v1/ubereats/search
 
 [Get Started](/contact/) with UberEats API today.
 
+## Related Solutions
 
-
-
+- **[DoorDash API](/apis/doordash-api/)** — Restaurant menus & delivery data from DoorDash
+- **[Swiggy API](/apis/swiggy-api/)** — Restaurant data from Swiggy
+- **[Yelp Scraper](/scrapers/yelp-scraper/)** — Business reviews & ratings data
+- **[Food Delivery Solutions](/food-delivery/)** — Complete food delivery data extraction

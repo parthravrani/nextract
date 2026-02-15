@@ -51,6 +51,9 @@ Extract comprehensive search engine results data including organic results, paid
 
 [Contact us](/contact/) to get started with SERP scraping.
 
+## Related Solutions
 
-
-
+- **[Amazon Scraper](/scrapers/amazon-scraper/)** — Extract Amazon product data, pricing & reviews
+- **[LinkedIn Scraper](/scrapers/linkedin-scraper/)** — Professional network data extraction
+- **[Marketplace SEO Guide](/blog/marketplace-seo-optimization-guide/)** — How to optimize marketplace listings with data
+- **[All Scrapers](/scrapers/)** — Browse all platform-specific scrapers

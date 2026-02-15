@@ -59,6 +59,10 @@ GET /api/v1/zepto/search
 
 [Get Started](/contact/) with Zepto API today.
 
+## Related Solutions
 
-
+- **[Blinkit Scraper](/scrapers/blinkit-scraper/)** — Quick commerce grocery data from Blinkit
+- **[Big Basket API](/apis/big-basket-api/)** — Grocery product data from Big Basket
+- **[Swiggy Scraper](/scrapers/swiggy-scraper/)** — Restaurant menus & delivery data
+- **[Quick Commerce Solutions](/quick-commerce/)** — Complete quick commerce data extraction
 

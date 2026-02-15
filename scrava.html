@@ -9,46 +9,33 @@ twitter_description: "Scrava by Nextract - Amazon ASIN scraping API. 2.3M+ ASINs
 
 <main>
     <!-- Hero Section -->
-    <section class="min-h-[80vh] flex items-center justify-center relative overflow-hidden bg-white">
-        <div class="absolute inset-0 overflow-hidden">
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 blur-[100px] animate-pulse"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-600/10 blur-[100px] animate-pulse" style="animation-delay: 1s;"></div>
-        </div>
-        
-        <div class="container mx-auto px-6 max-w-7xl relative z-10">
-            <div class="max-w-5xl mx-auto text-center">
-                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-8">Product</div>
+    <section class="py-32 md:py-40 bg-white">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="max-w-4xl mx-auto text-center">
+                <p class="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-8">Product</p>
                 
-                <!-- Logo and Title Section -->
                 <div class="mb-8">
-                    <div class="flex flex-col items-center justify-center mb-8">
-                        <!-- Logo with enhanced styling -->
-                        <div class="mb-6 relative">
-                            <div class="absolute inset-0 bg-blue-600/20 blur-3xl rounded-full animate-pulse"></div>
-                            <img src="{{ '/assets/images/scrava.png' | relative_url }}" alt="Scrava Logo" class="relative h-28 md:h-40 w-auto drop-shadow-2xl transform hover:scale-105 transition-transform duration-300">
-                        </div>
-                        <!-- Title -->
-                        <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 leading-[0.9] tracking-tight mb-4">
-                            Scrava
-                        </h1>
-                        <p class="text-xl md:text-2xl text-gray-700 mb-2 max-w-3xl mx-auto font-medium leading-relaxed">
-                            <span class="text-gray-600">by</span> <span class="font-bold text-gray-900">Nextract</span>
-                        </p>
-                    </div>
+                    <img src="{{ '/assets/images/scrava.png' | relative_url }}" alt="Scrava Logo" class="h-24 md:h-32 mx-auto mb-8">
                 </div>
                 
-                <p class="text-2xl md:text-3xl text-gray-600 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4 leading-tight">
+                    Scrava
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-gray-600 mb-4 leading-relaxed">
+                    <span class="text-gray-500">by</span> <span class="font-semibold text-gray-900">Nextract</span>
+                </p>
+                
+                <p class="text-xl md:text-2xl text-gray-600 mb-10 leading-relaxed max-w-3xl mx-auto">
                     Amazon ASIN scraping, built to handle the hard parts.
                 </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12">
-                    <a href="#pricing" class="group relative px-10 py-5 bg-gray-900 text-white font-bold text-lg overflow-hidden">
-                        <span class="relative z-10 flex items-center gap-2">
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+                    <a href="#pricing" class="inline-flex items-center justify-center px-8 py-4 bg-gray-900 text-white font-semibold hover:bg-gray-800 transition-colors">
                             View Pricing
-                            <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
-                        </span>
-                        <div class="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                        <i class="ri-arrow-right-line ml-2"></i>
                     </a>
-                    <a href="/contact/" class="px-10 py-5 border-2 border-gray-900 text-gray-900 font-bold text-lg hover:bg-gray-900 hover:text-white transition-all">
+                    <a href="/contact/" class="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-900 text-gray-900 font-semibold hover:bg-gray-900 hover:text-white transition-colors">
                         Get Started
                     </a>
                 </div>
@@ -57,16 +44,16 @@ twitter_description: "Scrava by Nextract - Amazon ASIN scraping API. 2.3M+ ASINs
     </section>
 
     <!-- Intro Section -->
-    <section class="py-20 bg-white">
+    <section class="py-32 bg-gray-50">
         <div class="container mx-auto px-6 max-w-4xl">
-            <div class="prose prose-lg max-w-none">
-                <p class="text-xl text-gray-700 leading-relaxed mb-8">
+            <div class="space-y-8">
+                <p class="text-xl text-gray-600 leading-relaxed">
                     We built Scrava to solve the proxy-management headache we faced in-house. After processing 2.3M+ Amazon ASINs with a 99.7% success rate, we know what breaks and how to fix it automatically.
                 </p>
-                <p class="text-xl text-gray-700 leading-relaxed mb-8">
+                <p class="text-xl text-gray-600 leading-relaxed">
                     You get a simple API to fetch Amazon data by ASIN and a dashboard to view, monitor, and manage your usage — all backed by Nextract's scraping infrastructure that handles CAPTCHAs, rotating proxies, and "Dog" page errors automatically.
                 </p>
-                <p class="text-xl text-gray-700 leading-relaxed font-semibold">
+                <p class="text-xl text-gray-600 leading-relaxed font-semibold">
                     Right now, Scrava is focused on doing one thing extremely well: <span class="text-gray-900">Amazon ASIN scraping at scale, with predictable pricing.</span>
                 </p>
             </div>
@@ -74,17 +61,17 @@ twitter_description: "Scrava by Nextract - Amazon ASIN scraping API. 2.3M+ ASINs
     </section>
 
     <!-- What You Get Section -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-32 bg-white">
         <div class="container mx-auto px-6 max-w-4xl">
-            <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-8">What you get</h2>
-            <div class="prose prose-lg max-w-none">
-                <p class="text-xl text-gray-700 leading-relaxed mb-6">
+            <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">What you get</h2>
+            <div class="space-y-6">
+                <p class="text-xl text-gray-600 leading-relaxed">
                     Scrava gives you access to a production-ready Amazon Scraper API with a clean dashboard to track requests, records, and usage in real time.
                 </p>
-                <p class="text-xl text-gray-700 leading-relaxed mb-6">
+                <p class="text-xl text-gray-600 leading-relaxed">
                     You can run up to <strong class="text-gray-900">5 concurrent requests</strong>, making it suitable for ongoing data pipelines, research, or internal tooling.
                 </p>
-                <p class="text-xl text-gray-700 leading-relaxed">
+                <p class="text-xl text-gray-600 leading-relaxed">
                     The core scraping capabilities remain the same across plans — the difference is the level of support and collaboration you get.
                 </p>
             </div>
@@ -92,23 +79,28 @@ twitter_description: "Scrava by Nextract - Amazon ASIN scraping API. 2.3M+ ASINs
     </section>
 
     <!-- Pricing Section -->
-    <section id="pricing" class="py-20 bg-white">
+    <section id="pricing" class="py-32 bg-gray-50">
         <div class="container mx-auto px-6 max-w-6xl">
-            <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-4 text-center">Pricing</h2>
-            <p class="text-center text-gray-600 mb-16">Launching February 13th</p>
+            <div class="mb-20 text-center">
+                <p class="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-6">Pricing</p>
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+                    Simple, transparent pricing.
+                </h2>
+                <p class="text-gray-600">Launching February 13th</p>
+            </div>
             
             <div class="max-w-4xl mx-auto">
                 
                 <!-- Pricing Card with Slider -->
-                <div class="p-10 bg-white border-2 border-gray-200 rounded-2xl shadow-lg">
+                <div class="p-10 bg-white border border-gray-100">
                     <!-- Price Display -->
                     <div class="mb-10">
-                        <div class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-3" id="credits-label">20,000 Credits</div>
+                        <div class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3" id="credits-label">20,000 Credits</div>
                         <div class="flex items-baseline gap-2">
-                            <div class="text-6xl font-black text-gray-900" id="selected-price">$20.00</div>
-                            <div class="text-xl text-gray-600">/ USD</div>
+                            <div class="text-5xl font-bold text-gray-900" id="selected-price">$20.00</div>
+                            <div class="text-xl text-gray-600">USD</div>
                         </div>
-                        <div class="mt-2 text-sm text-gray-500" id="price-per-credit">$0.001 per credit</div>
+                        <div class="mt-2 text-sm text-gray-600" id="price-per-credit">$0.001 per credit</div>
                     </div>
                     
                     <!-- Slider Container -->
@@ -168,61 +160,60 @@ twitter_description: "Scrava by Nextract - Amazon ASIN scraping API. 2.3M+ ASINs
                     
                     <!-- Package Details -->
                     <div class="mb-8 pb-8 border-b border-gray-200">
-                        <h3 class="text-lg font-bold text-gray-900 mb-4">What's included</h3>
-                        <div class="grid md:grid-cols-2 gap-3">
+                        <h3 class="text-lg font-bold text-gray-900 mb-6">What's included</h3>
+                        <div class="grid md:grid-cols-2 gap-4">
                             <div class="flex items-center gap-3">
-                                <i class="ri-check-line text-blue-600 text-xl flex-shrink-0"></i>
-                                <span class="font-semibold text-gray-900">Full API Access</span>
+                                <i class="ri-check-line text-green-600 text-xl flex-shrink-0"></i>
+                                <span class="text-gray-600">Full API Access</span>
                             </div>
                             <div class="flex items-center gap-3">
-                                <i class="ri-check-line text-blue-600 text-xl flex-shrink-0"></i>
-                                <span class="font-semibold text-gray-900">Dashboard Visibility</span>
+                                <i class="ri-check-line text-green-600 text-xl flex-shrink-0"></i>
+                                <span class="text-gray-600">Dashboard Visibility</span>
                             </div>
                             <div class="flex items-center gap-3">
-                                <i class="ri-check-line text-blue-600 text-xl flex-shrink-0"></i>
-                                <span class="font-semibold text-gray-900">Delivery Options</span>
+                                <i class="ri-check-line text-green-600 text-xl flex-shrink-0"></i>
+                                <span class="text-gray-600">Delivery Options</span>
                             </div>
                             <div class="flex items-center gap-3">
-                                <i class="ri-check-line text-blue-600 text-xl flex-shrink-0"></i>
-                                <span class="font-semibold text-gray-900">Platform Support</span>
+                                <i class="ri-check-line text-green-600 text-xl flex-shrink-0"></i>
+                                <span class="text-gray-600">Platform Support</span>
                             </div>
                             <div class="flex items-center gap-3">
-                                <i class="ri-check-line text-blue-600 text-xl flex-shrink-0"></i>
-                                <span class="font-semibold text-gray-900">Auto CAPTCHA Handling</span>
+                                <i class="ri-check-line text-green-600 text-xl flex-shrink-0"></i>
+                                <span class="text-gray-600">Auto CAPTCHA Handling</span>
                             </div>
                             <div class="flex items-center gap-3">
-                                <i class="ri-check-line text-blue-600 text-xl flex-shrink-0"></i>
-                                <span class="font-semibold text-gray-900">Proxy Rotation</span>
+                                <i class="ri-check-line text-green-600 text-xl flex-shrink-0"></i>
+                                <span class="text-gray-600">Proxy Rotation</span>
                             </div>
                             <div class="flex items-center gap-3">
-                                <i class="ri-check-line text-blue-600 text-xl flex-shrink-0"></i>
-                                <span class="font-semibold text-gray-900">Credits Never Expire</span>
+                                <i class="ri-check-line text-green-600 text-xl flex-shrink-0"></i>
+                                <span class="text-gray-600">Credits Never Expire</span>
                             </div>
                             <div class="flex items-center gap-3">
                                 <i class="ri-customer-service-2-line text-orange-600 text-xl flex-shrink-0"></i>
-                                <a href="/contact/" class="font-semibold text-orange-600 hover:text-orange-700 transition-colors">Contact us for custom packages</a>
+                                <a href="/contact/" class="text-orange-600 hover:text-orange-700 transition-colors">Contact for custom packages</a>
                             </div>
                         </div>
                     </div>
                     
                     <!-- Additional Info -->
-                    <div class="mb-8 p-6 bg-blue-50 rounded-xl border border-blue-200">
+                    <div class="mb-8 p-6 bg-blue-50 border border-blue-200">
                         <div class="flex items-start gap-3">
-                            <i class="ri-information-line text-blue-600 text-2xl mt-1 flex-shrink-0"></i>
+                            <i class="ri-information-line text-blue-600 text-2xl flex-shrink-0"></i>
                             <div>
-                                <div class="font-bold text-gray-900 mb-2">Credits never expire</div>
-                                <div class="text-sm text-gray-700">Your credits are valid indefinitely. Use them at your own pace with no expiration date.</div>
+                                <div class="font-semibold text-gray-900 mb-2">Credits never expire</div>
+                                <div class="text-sm text-gray-600">Your credits are valid indefinitely. Use them at your own pace with no expiration date.</div>
                             </div>
                         </div>
                     </div>
                     
                     <!-- CTA Button -->
-                    <a href="/contact/" class="group relative w-full px-8 py-5 bg-gray-900 text-white font-bold text-lg text-center overflow-hidden hover:bg-blue-600 transition-all block rounded-lg">
-                        <span class="relative z-10 flex items-center justify-center gap-2">
+                    <a href="/contact/" class="block w-full px-8 py-4 bg-gray-900 text-white font-semibold text-center hover:bg-gray-800 transition-colors">
+                        <span class="flex items-center justify-center gap-2">
                             Get Started with <span id="cta-credits">20,000 Credits</span>
-                            <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
+                            <i class="ri-arrow-right-line"></i>
                         </span>
-                        <div class="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
                     </a>
                 </div>
             </div>
@@ -475,98 +466,112 @@ twitter_description: "Scrava by Nextract - Amazon ASIN scraping API. 2.3M+ ASINs
     </script>
 
     <!-- Technical Insights Section -->
-    <section class="py-20 bg-white">
+    <section class="py-32 bg-white">
         <div class="container mx-auto px-6 max-w-4xl">
-            <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-8">Technical Insights</h2>
-            <div class="prose prose-lg max-w-none">
-                <p class="text-xl text-gray-700 leading-relaxed mb-6">
+            <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">Technical Insights</h2>
+            <div class="space-y-6 mb-8">
+                <p class="text-xl text-gray-600 leading-relaxed">
                     Amazon's anti-scraping measures are constantly evolving. We've processed 2.3M+ ASINs and learned exactly what breaks. Here's what Scrava handles automatically:
                 </p>
-                <ul class="text-xl text-gray-700 leading-relaxed space-y-4 mb-8">
-                    <li class="flex items-start gap-3">
-                        <span class="text-blue-600 font-black mt-1">→</span>
-                        <span><strong class="text-gray-900">CAPTCHAs:</strong> Automatically solved using our CAPTCHA-solving infrastructure. No manual intervention needed.</span>
+            </div>
+            <ul class="space-y-6">
+                <li class="flex items-start gap-4">
+                    <span class="text-blue-600 font-black text-2xl flex-shrink-0">→</span>
+                    <div>
+                        <strong class="text-gray-900 text-lg">CAPTCHAs:</strong>
+                        <span class="text-gray-600 text-lg"> Automatically solved using our CAPTCHA-solving infrastructure. No manual intervention needed.</span>
+                    </div>
                     </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-blue-600 font-black mt-1">→</span>
-                        <span><strong class="text-gray-900">Rotating Proxies:</strong> We maintain a pool of residential and datacenter proxies that rotate automatically to avoid IP blocks.</span>
+                <li class="flex items-start gap-4">
+                    <span class="text-blue-600 font-black text-2xl flex-shrink-0">→</span>
+                    <div>
+                        <strong class="text-gray-900 text-lg">Rotating Proxies:</strong>
+                        <span class="text-gray-600 text-lg"> We maintain a pool of residential and datacenter proxies that rotate automatically to avoid IP blocks.</span>
+                    </div>
                     </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-blue-600 font-black mt-1">→</span>
-                        <span><strong class="text-gray-900">"Dog" Page Errors:</strong> When Amazon shows the "Sorry, we just need to make sure you're not a robot" page, Scrava automatically retries with different strategies until it succeeds.</span>
+                <li class="flex items-start gap-4">
+                    <span class="text-blue-600 font-black text-2xl flex-shrink-0">→</span>
+                    <div>
+                        <strong class="text-gray-900 text-lg">"Dog" Page Errors:</strong>
+                        <span class="text-gray-600 text-lg"> When Amazon shows the "Sorry, we just need to make sure you're not a robot" page, Scrava automatically retries with different strategies until it succeeds.</span>
+                    </div>
                     </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-blue-600 font-black mt-1">→</span>
-                        <span><strong class="text-gray-900">Rate Limiting:</strong> Built-in rate limiting prevents triggering Amazon's anti-bot systems while maintaining high throughput.</span>
+                <li class="flex items-start gap-4">
+                    <span class="text-blue-600 font-black text-2xl flex-shrink-0">→</span>
+                    <div>
+                        <strong class="text-gray-900 text-lg">Rate Limiting:</strong>
+                        <span class="text-gray-600 text-lg"> Built-in rate limiting prevents triggering Amazon's anti-bot systems while maintaining high throughput.</span>
+                    </div>
                     </li>
                 </ul>
-                <p class="text-xl text-gray-700 leading-relaxed font-semibold">
+            <p class="text-xl text-gray-600 leading-relaxed font-semibold mt-8">
                     Result: <span class="text-gray-900">99.7% success rate across 2.3M+ ASIN extractions.</span>
                 </p>
-            </div>
         </div>
     </section>
 
     <!-- Custom Section -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-32 bg-gray-50">
         <div class="container mx-auto px-6 max-w-4xl">
-            <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-8">Need something custom?</h2>
-            <div class="prose prose-lg max-w-none">
-                <p class="text-xl text-gray-700 leading-relaxed mb-6">
+            <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">Need something custom?</h2>
+            <div class="space-y-6">
+                <p class="text-xl text-gray-600 leading-relaxed">
                     If your requirements go beyond standard Amazon scraping — different data points, delivery formats, higher concurrency, or fully managed workflows — we handle that too.
                 </p>
-                <p class="text-xl text-gray-700 leading-relaxed">
-                    For custom use cases, <a href="/contact/" class="text-blue-600 font-semibold hover:underline">get in touch with us</a> and we'll design a solution around your needs.
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    For custom use cases, <a href="/contact/" class="text-blue-600 font-semibold hover:text-blue-700">get in touch with us</a> and we'll design a solution around your needs.
                 </p>
             </div>
         </div>
     </section>
 
     <!-- Related Resources Section -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-8">Related Resources</h2>
-            <div class="prose prose-lg max-w-none">
-                <p class="text-xl text-gray-700 leading-relaxed mb-6">
+    <section class="py-32 bg-white">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="max-w-3xl mb-20">
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">Related Resources</h2>
+                <p class="text-xl text-gray-600 leading-relaxed">
                     Learn more about Amazon data extraction and see how brands use Scrava to drive results:
                 </p>
-                <div class="grid md:grid-cols-3 gap-6 mt-8">
-                    <a href="/apis/amazon-api/" class="p-6 border-2 border-gray-200 hover:border-blue-600 transition-all bg-white group">
-                        <div class="text-blue-600 font-black text-2xl mb-3 group-hover:translate-x-2 transition-transform inline-block">→</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">Amazon API</h3>
-                        <p class="text-gray-600">RESTful API for Amazon product data extraction. Real-time pricing, reviews, and seller information.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <a href="/amazon/" class="group block p-10 bg-gray-50 hover:bg-white border border-gray-100 hover:border-orange-600 transition-all">
+                    <div class="text-orange-600 font-black text-2xl mb-4 group-hover:translate-x-2 transition-transform">→</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600">Amazon Data Hub</h3>
+                    <p class="text-gray-600 leading-relaxed">Complete guide to Amazon data extraction. Product data, pricing, reviews, seller info.</p>
                     </a>
-                    <a href="/case-studies/amazon-pricing-intelligence-25-percent-revenue/" class="p-6 border-2 border-gray-200 hover:border-blue-600 transition-all bg-white group">
-                        <div class="text-blue-600 font-black text-2xl mb-3 group-hover:translate-x-2 transition-transform inline-block">→</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">25% Revenue Boost Case Study</h3>
-                        <p class="text-gray-600">How a D2C brand increased revenue 25% in 3 months using Amazon pricing intelligence.</p>
+                <a href="/amazon/pricing-intelligence/" class="group block p-10 bg-gray-50 hover:bg-white border border-gray-100 hover:border-orange-600 transition-all">
+                    <div class="text-orange-600 font-black text-2xl mb-4 group-hover:translate-x-2 transition-transform">→</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600">Pricing Intelligence</h3>
+                    <p class="text-gray-600 leading-relaxed">Monitor competitor prices, track Buy Box winners, optimize pricing strategy.</p>
                     </a>
-                    <a href="/blog/amazon-pricing-strategies-2026/" class="p-6 border-2 border-gray-200 hover:border-blue-600 transition-all bg-white group">
-                        <div class="text-blue-600 font-black text-2xl mb-3 group-hover:translate-x-2 transition-transform inline-block">→</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">Amazon Pricing Strategies 2026</h3>
-                        <p class="text-gray-600">Latest strategies for Amazon price monitoring and competitive intelligence in 2026.</p>
+                <a href="/amazon/product-research/" class="group block p-10 bg-gray-50 hover:bg-white border border-gray-100 hover:border-orange-600 transition-all">
+                    <div class="text-orange-600 font-black text-2xl mb-4 group-hover:translate-x-2 transition-transform">→</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600">Product Research</h3>
+                    <p class="text-gray-600 leading-relaxed">Discover trending products, analyze market gaps, identify opportunities.</p>
                     </a>
-                </div>
+                <a href="/blog/amazon-pricing-strategies-2026/" class="group block p-10 bg-gray-50 hover:bg-white border border-gray-100 hover:border-blue-600 transition-all">
+                    <div class="text-blue-600 font-black text-2xl mb-4 group-hover:translate-x-2 transition-transform">→</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600">Amazon Pricing Strategies</h3>
+                    <p class="text-gray-600 leading-relaxed">Latest strategies for Amazon price monitoring and competitive intelligence.</p>
+                    </a>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="py-20 bg-white">
+    <section class="py-32 bg-gray-50">
         <div class="container mx-auto px-6 max-w-4xl text-center">
-            <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-8">Ready to get started?</h2>
-            <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">Ready to get started?</h2>
+            <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
                 Start scraping Amazon data at scale with Scrava. Simple API, clean dashboard, predictable pricing.
             </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="/contact/" class="group relative px-10 py-5 bg-gray-900 text-white font-bold text-lg overflow-hidden">
-                    <span class="relative z-10 flex items-center gap-2">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/contact/" class="inline-flex items-center justify-center px-8 py-4 bg-gray-900 text-white font-semibold hover:bg-gray-800 transition-colors">
                         Get Started
-                        <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
-                    </span>
-                    <div class="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                    <i class="ri-arrow-right-line ml-2"></i>
                 </a>
-                <a href="#pricing" class="px-10 py-5 border-2 border-gray-900 text-gray-900 font-bold text-lg hover:bg-gray-900 hover:text-white transition-all">
+                <a href="#pricing" class="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-900 text-gray-900 font-semibold hover:bg-gray-900 hover:text-white transition-colors">
                     View Pricing
                 </a>
             </div>

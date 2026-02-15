@@ -43,6 +43,9 @@ Extract comprehensive grocery and quick commerce data including products, prices
 
 [Contact us](/contact/) to get started with Blinkit scraping.
 
+## Related Solutions
 
-
-
+- **[Zepto API](/apis/zepto-api/)** — Extract grocery data from Zepto quick commerce
+- **[Swiggy Scraper](/scrapers/swiggy-scraper/)** — Restaurant menus & delivery data from Swiggy
+- **[Big Basket API](/apis/big-basket-api/)** — Grocery product data from Big Basket
+- **[Quick Commerce Solutions](/quick-commerce/)** — Complete quick commerce data extraction

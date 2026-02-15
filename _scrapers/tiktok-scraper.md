@@ -50,6 +50,9 @@ Extract comprehensive TikTok data including videos, user profiles, engagement me
 
 [Contact us](/contact/) to get started with TikTok scraping.
 
+## Related Solutions
 
-
-
+- **[Netflix Scraper](/scrapers/netflix-scraper/)** — Extract movies, shows & ratings data
+- **[LinkedIn Scraper](/scrapers/linkedin-scraper/)** — Professional network data extraction
+- **[Yelp Scraper](/scrapers/yelp-scraper/)** — Business reviews & ratings data
+- **[All Scrapers](/scrapers/)** — Browse all platform-specific scrapers

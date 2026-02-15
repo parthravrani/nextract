@@ -59,6 +59,9 @@ GET /api/v1/bigbasket/search
 
 [Get Started](/contact/) with Big Basket API today.
 
+## Related Solutions
 
-
-
+- **[Blinkit Scraper](/scrapers/blinkit-scraper/)** — Quick commerce grocery data from Blinkit
+- **[Zepto API](/apis/zepto-api/)** — Grocery data from Zepto quick commerce
+- **[Swiggy API](/apis/swiggy-api/)** — Restaurant data from Swiggy
+- **[Quick Commerce Solutions](/quick-commerce/)** — Complete quick commerce data extraction

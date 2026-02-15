@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASIN Product Dashboard | Nextract</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        /* Match main site color palette */
+        :root {
+            --color-blue: #0052FF;
+            --color-blue-dark: #0045D6;
+            --color-blue-light: #E6F0FF;
+            --color-orange: #FF6B35;
+            --color-orange-dark: #E55A2B;
+            --color-gray-light: #F5F5F5;
+            --color-gray-border: #E5E7EB;
+            --color-gray-text: #6B7280;
+            --color-gray-dark: #1F2937;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF;
+            color: var(--color-gray-dark);
+        }
+        
+        /* Sharp corners throughout - match main site */
+        * {
+            border-radius: 0 !important;
+        }
+        
+        /* Exception for decorative blur elements */
+        .blur-\[100px\],
+        .blur-3xl {
+            border-radius: 50% !important;
+        }
+        
+        /* Exception for icon circles - match main site pattern */
+        .rounded-full {
+            border-radius: 50% !important;
+        }
+        
+        /* Exception for icon containers - match main site (rounded-2xl) */
+        .rounded-2xl {
+            border-radius: 0.75rem !important;
+        }
+        
+        /* Match main site card styling */
+        .product-card {
+            background-color: #FFFFFF;
+            border: 1px solid var(--color-gray-border);
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            border-color: var(--color-blue);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transform: translateY(-4px);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .tab-btn.active {
+            border-bottom-color: var(--color-blue);
+            color: var(--color-blue);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+        }
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            background-color: white;
+            margin: 2rem;
+            padding: 0;
+            max-width: 90vw;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        .comparison-table {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            width: 100%;
+        }
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        .comparison-table th,
+        .comparison-table td {
+            vertical-align: top;
+            text-align: left;
+            white-space: normal;
+            word-wrap: break-word;
+            padding: 1.25rem;
+            border: 1px solid #E5E7EB;
+        }
+        .comparison-table th:first-child,
+        .comparison-table td:first-child {
+            background-color: #F9FAFB;
+            font-weight: 900;
+            min-width: 200px;
+            width: 200px;
+        }
+        .comparison-table thead th:first-child {
+            background-color: #F3F4F6;
+        }
+        .comparison-table th:not(:first-child),
+        .comparison-table td:not(:first-child) {
+            min-width: 300px;
+            width: auto;
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-slide-in {
+            animation: slideIn 0.3s ease-out;
+        }
+        
+        /* View Toggle Buttons */
+        .view-toggle-btn {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            position: relative;
+        }
+        .view-toggle-btn.active {
+            background-color: white;
+            color: var(--color-gray-dark);
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+        }
+        .view-toggle-btn:not(.active) {
+            color: var(--color-gray-text);
+        }
+        .view-toggle-btn:not(.active):hover {
+            color: var(--color-gray-dark);
+        }
+        
+        /* Export Dropdown */
+        #export-dropdown {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .export-option {
+            transition: all 0.2s ease;
+        }
+        .export-option:hover {
+            background-color: var(--color-gray-light);
+        }
+        .export-option:active {
+            background-color: #E5E7EB;
+        }
+        
+        /* List View Item */
+        .product-list-item {
+            transition: all 0.3s ease;
+        }
+        .product-list-item:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        /* Toast Notifications */
+        .toast-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            pointer-events: none;
+        }
+        .toast {
+            background: white;
+            border: 2px solid;
+            padding: 16px 20px;
+            min-width: 320px;
+            max-width: 420px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            pointer-events: auto;
+            animation: toastSlideIn 0.3s ease-out;
+            position: relative;
+        }
+        .toast.success {
+            border-color: #10B981;
+        }
+        .toast.error {
+            border-color: #EF4444;
+        }
+        .toast.info {
+            border-color: #3B82F6;
+        }
+        .toast.warning {
+            border-color: #F59E0B;
+        }
+        .toast-icon {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        .toast.success .toast-icon {
+            color: #10B981;
+        }
+        .toast.error .toast-icon {
+            color: #EF4444;
+        }
+        .toast.info .toast-icon {
+            color: #3B82F6;
+        }
+        .toast.warning .toast-icon {
+            color: #F59E0B;
+        }
+        .toast-content {
+            flex: 1;
+        }
+        .toast-title {
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+        .toast.success .toast-title {
+            color: #059669;
+        }
+        .toast.error .toast-title {
+            color: #DC2626;
+        }
+        .toast.info .toast-title {
+            color: #2563EB;
+        }
+        .toast.warning .toast-title {
+            color: #D97706;
+        }
+        .toast-message {
+            font-size: 13px;
+            color: #6B7280;
+            line-height: 1.4;
+        }
+        .toast-close {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9CA3AF;
+            transition: color 0.2s;
+        }
+        .toast-close:hover {
+            color: #374151;
+        }
+        @keyframes toastSlideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .toast.hiding {
+            animation: toastSlideOut 0.3s ease-in forwards;
+        }
+        @keyframes toastSlideOut {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <!-- Toast Container -->
+    <div id="toast-container" class="toast-container"></div>
+    <!-- Animated Background -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 blur-[100px] animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-600/10 blur-[100px] animate-pulse" style="animation-delay: 1s;"></div>
+    </div>
+
+    <div class="relative z-10 min-h-screen py-8">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <!-- Header -->
+            <div class="mb-8">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-6">
+                    <!-- Left: Logo and Title -->
+                    <div class="flex items-center gap-6">
+                        <img src="assets/images/logo.png" alt="Nextract Logo" class="h-12 md:h-16 w-auto">
+                        <div>
+                            <h1 class="text-4xl md:text-5xl font-black text-gray-900 leading-tight">
+                                ASIN Product <span class="bg-gradient-to-r from-blue-600 to-orange-600 bg-clip-text text-transparent">Dashboard</span>
+                            </h1>
+                            <p class="text-sm md:text-base text-gray-500 mt-1">
+                                Scrape product data using ASIN - Single, Batch, or Bulk Upload
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Right: Nextract Branding -->
+                    <div class="text-right">
+                        <p class="text-xs md:text-sm text-gray-600 font-bold">
+                            Nextract
+                        </p>
+                        <p class="text-xs text-gray-400">
+                            A Data Solutions Company
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Bar -->
+            <div class="mb-6 flex flex-wrap items-center justify-between gap-4">
+                <!-- Simple Tabs -->
+                <div class="flex gap-2 border-b border-gray-200">
+                    <button class="tab-btn active px-6 py-3 font-bold text-sm transition-all border-b-2 border-transparent hover:border-blue-600 hover:text-blue-600" data-tab="single">
+                        <i class="ri-search-line mr-2"></i>Single ASIN
+                    </button>
+                    <button class="tab-btn px-6 py-3 font-bold text-sm transition-all border-b-2 border-transparent hover:border-orange-600 hover:text-orange-600 text-gray-600" data-tab="batch">
+                        <i class="ri-list-check mr-2"></i>Batch Search
+                    </button>
+                    <button class="tab-btn px-6 py-3 font-bold text-sm transition-all border-b-2 border-transparent hover:border-green-600 hover:text-green-600 text-gray-600" data-tab="bulk">
+                        <i class="ri-upload-cloud-line mr-2"></i>Bulk Upload
+                    </button>
+                </div>
+                
+                <!-- Comparison Button -->
+                <div class="flex items-center gap-4">
+                    <button id="compare-btn" class="hidden px-6 py-2 bg-orange-600 text-white font-bold hover:bg-orange-700 transition-all flex items-center gap-2">
+                        <i class="ri-bar-chart-line"></i>
+                        Compare Selected (<span id="compare-count">0</span>)
+                    </button>
+                    <button id="clear-all-btn" class="hidden px-4 py-2 bg-gray-200 text-gray-700 font-bold hover:bg-gray-300 transition-all">
+                        Clear All
+                    </button>
+                </div>
+            </div>
+
+            <!-- Main Card -->
+            <div class="bg-white border border-gray-100 shadow-xl overflow-hidden hover:shadow-2xl hover:border-blue-600 transition-all">
+                <!-- Search Sections -->
+                <div class="p-8 md:p-12">
+                    <!-- Single Search Tab -->
+                    <div id="single-tab" class="tab-content active">
+                        <label for="asin-input" class="block text-sm font-bold text-blue-600 mb-4 uppercase tracking-widest">
+                            Enter ASIN
+                        </label>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <input 
+                                type="text" 
+                                id="asin-input" 
+                                placeholder="e.g., B0DBQ2L8XY" 
+                                class="flex-1 px-6 py-5 border border-gray-200 focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-lg font-semibold hover:border-gray-300 transition-all bg-white"
+                            >
+                            <button 
+                                id="search-btn" 
+                                class="group relative px-10 py-5 bg-gray-900 text-white font-bold text-lg overflow-hidden"
+                            >
+                                <span class="relative z-10 flex items-center gap-2">
+                                    <i class="ri-search-line"></i>
+                                    Search
+                                </span>
+                                <div class="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                            </button>
+                            <button 
+                                id="check-status-btn" 
+                                class="px-10 py-5 border-2 border-gray-900 text-gray-900 font-bold text-lg hover:bg-gray-900 hover:text-white transition-all"
+                            >
+                                <i class="ri-refresh-line mr-2"></i>
+                                Check Status
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Batch Search Tab -->
+                    <div id="batch-tab" class="tab-content">
+                        <label for="batch-asin-input" class="block text-sm font-bold text-blue-600 mb-4 uppercase tracking-widest">
+                            Enter Multiple ASINs (one per line)
+                        </label>
+                        <textarea 
+                            id="batch-asin-input" 
+                            rows="8"
+                            placeholder="B0DBQ2L8XY&#10;B08XYZ1234&#10;B09ABC5678&#10;..." 
+                            class="w-full px-6 py-5 border border-gray-200 focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 text-base font-semibold font-mono hover:border-gray-300 transition-all bg-white"
+                        ></textarea>
+                        <div class="flex gap-4 mt-4">
+                            <button 
+                                id="batch-search-btn" 
+                                class="group relative px-10 py-5 bg-gray-900 text-white font-bold text-lg overflow-hidden"
+                            >
+                                <span class="relative z-10 flex items-center gap-2">
+                                    <i class="ri-search-line"></i>
+                                    Search All
+                                </span>
+                                <div class="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                            </button>
+                            <button 
+                                id="batch-status-btn" 
+                                class="px-10 py-5 border-2 border-gray-900 text-gray-900 font-bold text-lg hover:bg-gray-900 hover:text-white transition-all"
+                            >
+                                <i class="ri-refresh-line mr-2"></i>
+                                Check All Status
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Bulk Upload Tab -->
+                    <div id="bulk-tab" class="tab-content">
+                        <label class="block text-sm font-bold text-blue-600 mb-4 uppercase tracking-widest">
+                            Upload CSV/TXT File with ASINs
+                        </label>
+                        <div class="border-2 border-dashed border-gray-200 p-12 text-center hover:border-blue-600 transition-all bg-gray-50 hover:bg-white border-gray-200">
+                            <input 
+                                type="file" 
+                                id="bulk-file-input" 
+                                accept=".csv,.txt"
+                                class="hidden"
+                            >
+                            <div class="mb-4">
+                                <i class="ri-upload-cloud-2-line text-6xl text-gray-400"></i>
+                            </div>
+                            <p class="text-lg font-bold text-gray-700 mb-2">Drag & Drop your file here</p>
+                            <p class="text-sm text-gray-500 mb-4">or</p>
+                            <button 
+                                id="upload-btn" 
+                                class="px-8 py-3 bg-blue-600 text-white font-bold hover:bg-blue-700 transition-all"
+                            >
+                                <i class="ri-folder-open-line mr-2"></i>Browse Files
+                            </button>
+                            <p class="text-xs text-gray-400 mt-4">Supported formats: CSV, TXT (one ASIN per line)</p>
+                        </div>
+                        <div id="file-info" class="hidden mt-4 p-4 bg-blue-50 border border-blue-200">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <i class="ri-file-line text-blue-600 text-xl"></i>
+                                    <div>
+                                        <p class="font-bold text-gray-900" id="file-name"></p>
+                                        <p class="text-sm text-gray-600" id="file-count"></p>
+                                    </div>
+                                </div>
+                                <button id="remove-file-btn" class="text-red-600 hover:text-red-700">
+                                    <i class="ri-close-circle-line text-xl"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 mt-4">
+                            <button 
+                                id="bulk-search-btn" 
+                                class="group relative px-10 py-5 bg-gray-900 text-white font-bold text-lg overflow-hidden"
+                            >
+                                <span class="relative z-10 flex items-center gap-2">
+                                    <i class="ri-search-line"></i>
+                                    Process File
+                                </span>
+                                <div class="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                            </button>
+                            <button 
+                                id="bulk-status-btn" 
+                                class="px-10 py-5 border-2 border-gray-900 text-gray-900 font-bold text-lg hover:bg-gray-900 hover:text-white transition-all"
+                            >
+                                <i class="ri-refresh-line mr-2"></i>
+                                Check Status
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Status Display -->
+                <div id="status-display" class="px-8 md:px-12 pb-8 hidden">
+                    <div id="status-card" class="p-6 border-2 transition-all">
+                        <div class="flex items-center gap-4">
+                            <div id="status-icon" class="w-12 h-12 rounded-full flex items-center justify-center text-2xl"></div>
+                            <div class="flex-1">
+                                <div id="status-title" class="text-lg font-bold mb-1"></div>
+                                <div id="status-message" class="text-sm text-gray-600"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results List Section -->
+                <div id="results-section" class="hidden border-t border-gray-200">
+                    <div class="p-8 md:p-12">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
+                                    <i class="ri-file-list-line text-blue-600"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900">Product Results</h3>
+                                <span id="results-count" class="text-sm font-bold text-gray-500"></span>
+                            </div>
+                            <div class="flex gap-3 items-center">
+                                <!-- View Toggle -->
+                                <div class="flex bg-gray-100 p-1">
+                                    <button id="card-view-btn" class="view-toggle-btn active px-5 py-2.5 font-bold text-sm transition-all bg-white text-gray-900 shadow-sm" data-view="card">
+                                        <i class="ri-grid-line mr-2"></i>Card
+                                    </button>
+                                    <button id="list-view-btn" class="view-toggle-btn px-5 py-2.5 font-bold text-sm transition-all text-gray-600 hover:text-gray-900" data-view="list">
+                                        <i class="ri-list-check mr-2"></i>List
+                                    </button>
+                                </div>
+                                
+                                <!-- Export Dropdown -->
+                                <div class="relative">
+                                    <button id="export-btn" class="px-5 py-2.5 border-2 border-gray-900 text-gray-900 font-bold text-sm hover:bg-gray-900 hover:text-white transition-all flex items-center gap-2">
+                                        <i class="ri-download-line"></i>
+                                        Export
+                                        <i class="ri-arrow-down-s-line text-xs"></i>
+                                    </button>
+                                    <div id="export-dropdown" class="hidden absolute right-0 mt-2 bg-white border-2 border-gray-900 shadow-lg z-50 min-w-[200px]">
+                                        <button class="export-option w-full text-left px-5 py-3.5 hover:bg-gray-50 transition-all flex items-center gap-3 border-b border-gray-200" data-format="csv">
+                                            <i class="ri-file-text-line text-lg text-blue-600"></i>
+                                            <span class="font-bold text-gray-900">CSV</span>
+                                        </button>
+                                        <button class="export-option w-full text-left px-5 py-3.5 hover:bg-gray-50 transition-all flex items-center gap-3 border-b border-gray-200" data-format="xlsx">
+                                            <i class="ri-file-excel-line text-lg text-green-600"></i>
+                                            <span class="font-bold text-gray-900">XLSX</span>
+                                        </button>
+                                        <button class="export-option w-full text-left px-5 py-3.5 hover:bg-gray-50 transition-all flex items-center gap-3" data-format="json">
+                                            <i class="ri-code-s-slash-line text-lg text-orange-600"></i>
+                                            <span class="font-bold text-gray-900">JSON</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <button id="select-all-btn" class="px-4 py-2 bg-gray-100 text-gray-700 font-bold hover:bg-gray-200 transition-all text-sm">
+                                Select All
+                                </button>
+                                <button id="deselect-all-btn" class="px-4 py-2 bg-gray-100 text-gray-700 font-bold hover:bg-gray-200 transition-all text-sm">
+                                    Deselect All
+                                </button>
+                            </div>
+                        </div>
+                        <div id="results-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Detail Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <div class="sticky top-0 bg-white border-b border-gray-200 p-6 flex items-center justify-between z-10">
+                <h2 class="text-2xl font-black text-gray-900">Product Details</h2>
+                <button id="close-modal" class="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-all">
+                    <i class="ri-close-line text-xl"></i>
+                </button>
+            </div>
+            <div id="modal-content" class="p-8"></div>
+        </div>
+    </div>
+
+    <!-- Comparison Modal -->
+    <div id="comparison-modal" class="modal">
+        <div class="modal-content" style="max-width: 95vw;">
+            <div class="sticky top-0 bg-white border-b border-gray-200 p-6 flex items-center justify-between z-10">
+                <h2 class="text-2xl font-black text-gray-900">Product Comparison</h2>
+                <button id="close-comparison-modal" class="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-all">
+                    <i class="ri-close-line text-xl"></i>
+                </button>
+            </div>
+            <div id="comparison-content" class="p-8 comparison-table"></div>
+        </div>
+    </div>
+
+    <script>
+        const API_KEY = '74b0bd1c-e38e-46bd-8bf5-1302686454cc';
+        const API_BASE_URL = 'https://sakshi.getnextract.com/gripit/api/v1/asin/product';
+        
+        // DOM Elements
+        const asinInput = document.getElementById('asin-input');
+        const searchBtn = document.getElementById('search-btn');
+        const checkStatusBtn = document.getElementById('check-status-btn');
+        const statusDisplay = document.getElementById('status-display');
+        const statusCard = document.getElementById('status-card');
+        const statusIcon = document.getElementById('status-icon');
+        const statusTitle = document.getElementById('status-title');
+        const statusMessage = document.getElementById('status-message');
+        const resultsSection = document.getElementById('results-section');
+        const resultsList = document.getElementById('results-list');
+        const resultsCount = document.getElementById('results-count');
+        const compareBtn = document.getElementById('compare-btn');
+        const compareCount = document.getElementById('compare-count');
+        const clearAllBtn = document.getElementById('clear-all-btn');
+        const productModal = document.getElementById('product-modal');
+        const comparisonModal = document.getElementById('comparison-modal');
+        const cardViewBtn = document.getElementById('card-view-btn');
+        const listViewBtn = document.getElementById('list-view-btn');
+        const exportBtn = document.getElementById('export-btn');
+        const exportDropdown = document.getElementById('export-dropdown');
+        
+        // State
+        let allProducts = [];
+        let selectedProducts = new Set(); // Stores product indices, not ASINs
+        let currentAsin = '';
+        let batchAsins = [];
+        let bulkAsins = [];
+        let runningRequests = new Map();
+        let currentView = 'card'; // 'card' or 'list'
+
+        // Tab Switching
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tab = btn.dataset.tab;
+                document.querySelectorAll('.tab-btn').forEach(b => {
+                    b.classList.remove('active', 'text-blue-600', 'text-orange-600', 'text-green-600');
+                    b.classList.add('text-gray-600');
+                });
+                btn.classList.add('active');
+                btn.classList.remove('text-gray-600');
+                if (tab === 'single') {
+                    btn.classList.add('text-blue-600');
+                } else if (tab === 'batch') {
+                    btn.classList.add('text-orange-600');
+                } else if (tab === 'bulk') {
+                    btn.classList.add('text-green-600');
+                }
+                
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                document.getElementById(`${tab}-tab`).classList.add('active');
+            });
+        });
+
+        // View Toggle (Card/List)
+        cardViewBtn.addEventListener('click', () => {
+            currentView = 'card';
+            cardViewBtn.classList.add('active', 'bg-white', 'text-gray-900', 'shadow-sm');
+            cardViewBtn.classList.remove('text-gray-600', 'hover:text-gray-900');
+            listViewBtn.classList.remove('active', 'bg-white', 'text-gray-900', 'shadow-sm');
+            listViewBtn.classList.add('text-gray-600', 'hover:text-gray-900');
+            displayResultsList();
+        });
+
+        listViewBtn.addEventListener('click', () => {
+            currentView = 'list';
+            listViewBtn.classList.add('active', 'bg-white', 'text-gray-900', 'shadow-sm');
+            listViewBtn.classList.remove('text-gray-600', 'hover:text-gray-900');
+            cardViewBtn.classList.remove('active', 'bg-white', 'text-gray-900', 'shadow-sm');
+            cardViewBtn.classList.add('text-gray-600', 'hover:text-gray-900');
+            displayResultsList();
+        });
+
+        // Export Dropdown
+        exportBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            exportDropdown.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!exportBtn.contains(e.target) && !exportDropdown.contains(e.target)) {
+                exportDropdown.classList.add('hidden');
+            }
+        });
+
+        document.querySelectorAll('.export-option').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const format = btn.dataset.format;
+                // Placeholder for export functionality
+                alert(`Export as ${format.toUpperCase()} - Feature coming soon!`);
+                exportDropdown.classList.add('hidden');
+            });
+        });
+
+        // File Upload
+        const uploadBtn = document.getElementById('upload-btn');
+        const bulkFileInput = document.getElementById('bulk-file-input');
+        const fileInfo = document.getElementById('file-info');
+        const fileName = document.getElementById('file-name');
+        const fileCount = document.getElementById('file-count');
+        const removeFileBtn = document.getElementById('remove-file-btn');
+
+        uploadBtn.addEventListener('click', () => bulkFileInput.click());
+        
+        bulkFileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    const text = event.target.result;
+                    bulkAsins = text.split('\n')
+                        .map(line => line.trim())
+                        .filter(line => line.length > 0 && line.match(/^B[0-9A-Z]{9}$/));
+                    fileName.textContent = file.name;
+                    fileCount.textContent = `${bulkAsins.length} ASINs found`;
+                    fileInfo.classList.remove('hidden');
+                };
+                reader.readAsText(file);
+            }
+        });
+
+        removeFileBtn.addEventListener('click', () => {
+            bulkFileInput.value = '';
+            bulkAsins = [];
+            fileInfo.classList.add('hidden');
+        });
+
+        // Toast Notification Function
+        function showToast(type, title, message, duration = 5000) {
+            const toastContainer = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+            
+            const icons = {
+                success: '<i class="ri-checkbox-circle-fill"></i>',
+                error: '<i class="ri-error-warning-fill"></i>',
+                info: '<i class="ri-information-line"></i>',
+                warning: '<i class="ri-alert-line"></i>'
+            };
+            
+            toast.innerHTML = `
+                <div class="toast-icon">${icons[type] || icons.info}</div>
+                <div class="toast-content">
+                    <div class="toast-title">${escapeHtml(title)}</div>
+                    ${message ? `<div class="toast-message">${escapeHtml(message)}</div>` : ''}
+                </div>
+                <div class="toast-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            `;
+            
+            toastContainer.appendChild(toast);
+            
+            // Close button
+            const closeBtn = toast.querySelector('.toast-close');
+            const removeToast = () => {
+                toast.classList.add('hiding');
+                setTimeout(() => {
+                    if (toast.parentNode) {
+                        toast.parentNode.removeChild(toast);
+                    }
+                }, 300);
+            };
+            
+            closeBtn.addEventListener('click', removeToast);
+            
+            // Auto dismiss
+            if (duration > 0) {
+                setTimeout(removeToast, duration);
+            }
+            
+            return toast;
+        }
+
+        // Status Display Function (for RUNNING states only)
+        function updateStatusDisplay(data) {
+            const status = data.status || 'UNKNOWN';
+            const statusMsg = data.statusMessage || '';
+            
+            // Hide status display for SUCCEEDED (toast will be shown in checkStatus)
+            if (status === 'SUCCEEDED') {
+                statusDisplay.classList.add('hidden');
+                return; // Don't show toast here, it will be shown in checkStatus with elapsed time
+            } else if (status === 'FAILED' || status === 'ERROR') {
+                statusDisplay.classList.add('hidden');
+                showToast('error', 'Request Failed', statusMsg, 5000);
+            } else if (status === 'RUNNING' || status === 'IN_PROGRESS' || status === 'PROCESSING') {
+                // Keep status display for RUNNING states
+                statusDisplay.classList.remove('hidden');
+                statusCard.className = 'p-6 border-2 transition-all bg-blue-50 border-blue-500';
+                statusIcon.className = 'w-12 h-12 rounded-full flex items-center justify-center text-2xl bg-blue-100 text-blue-600';
+                statusIcon.innerHTML = '<i class="ri-loader-4-line animate-spin"></i>';
+                statusTitle.textContent = 'Status: RUNNING';
+                statusTitle.className = 'text-lg font-bold mb-1 text-blue-700';
+                statusMessage.className = 'text-sm text-blue-600';
+                statusMessage.textContent = statusMsg;
+            } else {
+                statusDisplay.classList.remove('hidden');
+                statusCard.className = 'p-6 border-2 transition-all bg-gray-50 border-gray-500';
+                statusIcon.className = 'w-12 h-12 rounded-full flex items-center justify-center text-2xl bg-gray-100 text-gray-600';
+                statusIcon.innerHTML = '<i class="ri-information-line"></i>';
+                statusTitle.textContent = `Status: ${status}`;
+                statusTitle.className = 'text-lg font-bold mb-1 text-gray-700';
+                statusMessage.className = 'text-sm text-gray-600';
+                statusMessage.textContent = statusMsg;
+            }
+        }
+
+        // Single Search
+        searchBtn.addEventListener('click', async () => {
+            const asin = asinInput.value.trim() || 'w';
+            currentAsin = asin;
+            await startSearch(asin);
+        });
+
+        checkStatusBtn.addEventListener('click', async () => {
+            const asin = asinInput.value.trim() || 'w';
+            await checkStatus(asin);
+        });
+
+        // Batch Search
+        document.getElementById('batch-search-btn').addEventListener('click', async () => {
+            const text = document.getElementById('batch-asin-input').value.trim();
+            batchAsins = text.split('\n')
+                .map(line => line.trim())
+                .filter(line => line.length > 0);
+            
+            if (batchAsins.length === 0) {
+                alert('Please enter at least one ASIN');
+                return;
+            }
+            
+            for (const asin of batchAsins) {
+                await startSearch(asin || 'w');
+                await new Promise(resolve => setTimeout(resolve, 500)); // Delay between requests
+            }
+        });
+
+        document.getElementById('batch-status-btn').addEventListener('click', async () => {
+            const text = document.getElementById('batch-asin-input').value.trim();
+            batchAsins = text.split('\n')
+                .map(line => line.trim())
+                .filter(line => line.length > 0);
+            
+            for (const asin of batchAsins) {
+                await checkStatus(asin || 'w');
+                await new Promise(resolve => setTimeout(resolve, 500));
+            }
+        });
+
+        // Bulk Search
+        document.getElementById('bulk-search-btn').addEventListener('click', async () => {
+            if (bulkAsins.length === 0) {
+                alert('Please upload a file first');
+                return;
+            }
+            
+            for (const asin of bulkAsins) {
+                await startSearch(asin || 'w');
+                await new Promise(resolve => setTimeout(resolve, 500));
+            }
+        });
+
+        document.getElementById('bulk-status-btn').addEventListener('click', async () => {
+            if (bulkAsins.length === 0) {
+                alert('Please upload a file first');
+                return;
+            }
+            
+            for (const asin of bulkAsins) {
+                await checkStatus(asin || 'w');
+                await new Promise(resolve => setTimeout(resolve, 500));
+            }
+        });
+
+        // Start Search Function
+        async function startSearch(asin) {
+            const originalContent = searchBtn.innerHTML;
+            searchBtn.innerHTML = '<span class="relative z-10 flex items-center gap-2"><i class="ri-loader-4-line animate-spin"></i> Requesting...</span>';
+
+            try {
+                const url = `${API_BASE_URL}?asin=${encodeURIComponent(asin)}&action=start`;
+                await fetch(url, {
+                    method: 'GET',
+                    headers: { 'X-API-Key': API_KEY }
+                });
+
+                showToast('info', 'Request Submitted', `ASIN: ${asin}`, 3000);
+                
+                searchBtn.innerHTML = originalContent;
+                runningRequests.set(asin, Date.now());
+                
+                setTimeout(() => checkStatus(asin), 1000);
+            } catch (error) {
+                console.error('Error:', error);
+                showToast('error', 'Request Failed', 'Failed to submit request. Please try again.', 5000);
+                searchBtn.innerHTML = originalContent;
+            }
+        }
+
+        // Check Status Function
+        async function checkStatus(asin) {
+            const originalContent = checkStatusBtn.innerHTML;
+            checkStatusBtn.innerHTML = '<span class="relative z-10 flex items-center justify-center gap-2"><i class="ri-loader-4-line animate-spin"></i> Checking...</span>';
+
+            try {
+                const url = `${API_BASE_URL}?asin=${encodeURIComponent(asin)}&action=status`;
+                const response = await fetch(url, {
+                    method: 'GET',
+                    headers: { 'X-API-Key': API_KEY }
+                });
+
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+                const data = await response.json();
+                updateStatusDisplay(data);
+                checkStatusBtn.innerHTML = originalContent;
+                
+                if (data.status === 'SUCCEEDED') {
+                    const startTime = runningRequests.get(asin);
+                    let message = data.statusMessage || 'Request completed successfully';
+                    if (startTime) {
+                        const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+                        message = `${message} (Completed in ${elapsed}s)`;
+                        runningRequests.delete(asin);
+                    }
+                    showToast('success', 'Request Completed', message, 4000);
+                    setTimeout(() => fetchAndDisplayResults(asin), 500);
+                } else if (data.status === 'RUNNING' || data.status === 'IN_PROGRESS' || data.status === 'PROCESSING') {
+                    setTimeout(() => checkStatus(asin), 2000);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                let errorMessage = 'Unknown error occurred';
+                if (error.message && error.message.includes('access control')) {
+                    errorMessage = 'CORS Error: The API server does not allow browser requests.';
+                } else if (error.message) {
+                    errorMessage = error.message;
+                }
+                showToast('error', 'Status Check Failed', errorMessage, 5000);
+                checkStatusBtn.innerHTML = originalContent;
+            }
+        }
+
+        // Fetch and Display Results
+        async function fetchAndDisplayResults(asin) {
+            try {
+                //const url = `${API_BASE_URL}?asin=${encodeURIComponent(asin)}&action=results`;
+                const url = 'https://api.apify.com/v2/datasets/OojgM2LteQKaEXerk/items?token=apify_api_Ze2hUNbvWM0m45R70oR4bMNg0JRn4I3D3oTo';
+                const response = await fetch(url, {
+                    method: 'GET',
+                    //headers: { 'X-API-Key': API_KEY }
+                });
+
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+                const data = await response.json();
+                
+                // Handle different response structures
+                let products = [];
+                if (Array.isArray(data)) {
+                    // Direct array response - this is what Apify returns
+                    products = data;
+                } else if (data.items && Array.isArray(data.items)) {
+                    // Response with items property
+                    products = data.items;
+                } else if (data.data && Array.isArray(data.data)) {
+                    // Response with data property
+                    products = data.data;
+                } else if (data.results && Array.isArray(data.results)) {
+                    // Response with results property
+                    products = data.results;
+                } else if (data) {
+                    // Single object, wrap in array
+                    products = [data];
+                }
+                
+                // Add ALL products to the list - NO duplicate filtering
+                products.forEach(product => {
+                    if (product) {
+                        allProducts.push(product);
+                    }
+                });
+                
+                displayResultsList();
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+
+        // Display Results List
+        function displayResultsList() {
+            if (allProducts.length === 0) return;
+            
+            resultsSection.classList.remove('hidden');
+            resultsCount.textContent = `${allProducts.length} Product${allProducts.length > 1 ? 's' : ''}`;
+            compareBtn.classList.remove('hidden');
+            clearAllBtn.classList.remove('hidden');
+            
+            resultsList.innerHTML = '';
+            
+            if (currentView === 'card') {
+                resultsList.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6';
+                allProducts.forEach((product, index) => {
+                    const card = createResultCard(product, index);
+                    resultsList.appendChild(card);
+                });
+            } else {
+                resultsList.className = 'space-y-4';
+                allProducts.forEach((product, index) => {
+                    const listItem = createResultListItem(product, index);
+                    resultsList.appendChild(listItem);
+                });
+            }
+            
+            updateCompareButton();
+        }
+
+        // Create Result Card
+        function createResultCard(product, index) {
+            const card = document.createElement('div');
+            card.className = 'product-card overflow-hidden shadow-lg animate-slide-in';
+            card.dataset.asin = product.asin;
+            card.dataset.index = index;
+            
+            const isSelected = selectedProducts.has(index);
+            
+            card.innerHTML = `
+                <div class="p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <input 
+                                type="checkbox" 
+                                class="w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-500 compare-checkbox"
+                                data-index="${index}"
+                                ${isSelected ? 'checked' : ''}
+                            >
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 font-bold text-xs">ASIN</span>
+                            <span class="font-mono text-sm text-gray-600">${product.asin || 'N/A'}</span>
+                        </div>
+                        ${product.url ? `
+                            <a href="${product.url}" target="_blank" class="text-blue-600 hover:text-blue-700">
+                                <i class="ri-external-link-line text-lg"></i>
+                            </a>
+                        ` : ''}
+                    </div>
+                    
+                    ${product.thumbnailImage ? `
+                        <div class="mb-4 overflow-hidden bg-gray-50 border border-gray-100">
+                            <img src="${product.thumbnailImage}" alt="${escapeHtml(product.title || '')}" 
+                                 class="w-full h-48 object-contain" 
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'200\' height=\'200\'%3E%3Crect fill=\'%23f3f4f6\' width=\'200\' height=\'200\'/%3E%3Ctext fill=\'%239ca3af\' font-family=\'sans-serif\' font-size=\'14\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\'%3EImage%3C/text%3E%3C/svg%3E'">
+                        </div>
+                    ` : ''}
+                    
+                    <h3 class="text-lg font-black text-gray-900 mb-3 line-clamp-2 leading-tight">
+                        ${escapeHtml(product.title || 'N/A')}
+                    </h3>
+                    
+                    <div class="space-y-3 mb-4">
+                        ${product.brand ? `
+                            <div class="flex items-center gap-2 text-sm">
+                                <span class="font-bold text-gray-500">Brand:</span>
+                                <span class="text-gray-700">${escapeHtml(product.brand)}</span>
+                            </div>
+                        ` : ''}
+                        
+                        ${product.price ? `
+                            <div class="flex items-center gap-2">
+                                <span class="text-2xl font-black text-gray-900">
+                                    ${product.price.currency || '₹'}${formatNumber(product.price.value)}
+                                </span>
+                                ${product.listPrice && product.listPrice.value !== product.price.value ? `
+                                    <span class="text-sm text-gray-500 line-through">
+                                        ${product.listPrice.currency || '₹'}${formatNumber(product.listPrice.value)}
+                                    </span>
+                                    <span class="px-2 py-1 bg-green-100 text-green-700 font-bold text-xs rounded">
+                                        ${Math.round((1 - product.price.value / product.listPrice.value) * 100)}% OFF
+                                    </span>
+                                ` : ''}
+                            </div>
+                        ` : ''}
+                        
+                        ${product.stars ? `
+                            <div class="flex items-center gap-2">
+                                <div class="flex text-yellow-500">${generateStars(product.stars)}</div>
+                                <span class="text-sm font-bold text-gray-700">${product.stars}</span>
+                                ${product.reviewsCount ? `
+                                    <span class="text-xs text-gray-500">(${formatNumber(product.reviewsCount)} reviews)</span>
+                                ` : ''}
+                            </div>
+                        ` : ''}
+                        
+                        <div class="flex items-center gap-2">
+                            ${product.inStock ? `
+                                <i class="ri-checkbox-circle-fill text-green-600"></i>
+                                <span class="text-sm font-bold text-green-700">In Stock</span>
+                            ` : `
+                                <i class="ri-close-circle-fill text-red-600"></i>
+                                <span class="text-sm font-bold text-red-700">Out of Stock</span>
+                            `}
+                        </div>
+                    </div>
+                    
+                    <button 
+                        class="view-details-btn w-full px-4 py-3 bg-gray-900 text-white font-bold hover:bg-blue-600 transition-all group relative overflow-hidden"
+                        data-asin="${product.asin}"
+                    >
+                        <span class="relative z-10 flex items-center justify-center gap-2">
+                            <i class="ri-eye-line"></i>View Full Details
+                        </span>
+                        <div class="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                    </button>
+                </div>
+            `;
+            
+            // Add event listeners
+            const checkbox = card.querySelector('.compare-checkbox');
+            checkbox.addEventListener('change', (e) => {
+                if (e.target.checked) {
+                    selectedProducts.add(index);
+                } else {
+                    selectedProducts.delete(index);
+                }
+                updateCompareButton();
+            });
+            
+            const viewBtn = card.querySelector('.view-details-btn');
+            viewBtn.addEventListener('click', () => {
+                showProductDetails(product);
+            });
+            
+            return card;
+        }
+
+        // Create Result List Item (for list view)
+        function createResultListItem(product, index) {
+            const item = document.createElement('div');
+            item.className = 'product-list-item bg-white border border-gray-100 p-6 hover:border-blue-600 transition-all animate-slide-in';
+            item.dataset.asin = product.asin;
+            item.dataset.index = index;
+            
+            const isSelected = selectedProducts.has(index);
+            
+            item.innerHTML = `
+                <div class="flex items-start gap-6">
+                    <div class="flex items-center gap-4 flex-shrink-0">
+                        <input 
+                            type="checkbox" 
+                            class="w-5 h-5 text-blue-600 focus:ring-2 focus:ring-blue-500 compare-checkbox"
+                            data-index="${index}"
+                            ${isSelected ? 'checked' : ''}
+                        >
+                        ${product.thumbnailImage ? `
+                            <div class="w-24 h-24 border border-gray-100 overflow-hidden bg-gray-50 flex-shrink-0">
+                                <img src="${product.thumbnailImage}" alt="${escapeHtml(product.title || '')}" 
+                                     class="w-full h-full object-contain" 
+                                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'200\' height=\'200\'%3E%3Crect fill=\'%23f3f4f6\' width=\'200\' height=\'200\'/%3E%3Ctext fill=\'%239ca3af\' font-family=\'sans-serif\' font-size=\'14\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\'%3EImage%3C/text%3E%3C/svg%3E'">
+                            </div>
+                        ` : '<div class="w-24 h-24 bg-gray-100 border border-gray-200 flex items-center justify-center flex-shrink-0"><i class="ri-image-line text-gray-400 text-2xl"></i></div>'}
+                    </div>
+                    
+                    <div class="flex-1 min-w-0">
+                        <div class="flex items-start justify-between gap-4 mb-3">
+                            <div class="flex-1 min-w-0">
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2 leading-snug">${escapeHtml(product.title || 'N/A')}</h3>
+                                <div class="flex items-center gap-3 flex-wrap">
+                                    <span class="px-2 py-1 bg-blue-100 text-blue-700 font-bold text-xs">ASIN</span>
+                                    <span class="font-mono text-sm text-gray-600">${product.asin || 'N/A'}</span>
+                                    ${product.brand ? `<span class="text-sm text-gray-600"><span class="font-bold">Brand:</span> ${escapeHtml(product.brand)}</span>` : ''}
+                                </div>
+                            </div>
+                            ${product.url ? `
+                                <a href="${product.url}" target="_blank" class="text-blue-600 hover:text-blue-700 flex-shrink-0">
+                                    <i class="ri-external-link-line text-xl"></i>
+                                </a>
+                            ` : ''}
+                        </div>
+                        
+                        <div class="grid md:grid-cols-4 gap-4">
+                            ${product.price ? `
+                                <div>
+                                    <div class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Price</div>
+                                    <div class="text-2xl font-black text-gray-900">${product.price.currency || '₹'}${formatNumber(product.price.value)}</div>
+                                    ${product.listPrice && product.listPrice.value !== product.price.value ? `
+                                        <div class="text-sm text-gray-500 line-through">${product.listPrice.currency || '₹'}${formatNumber(product.listPrice.value)}</div>
+                                        <div class="text-xs font-bold text-green-600">${Math.round((1 - product.price.value / product.listPrice.value) * 100)}% OFF</div>
+                                    ` : ''}
+                                </div>
+                            ` : ''}
+                            
+                            ${product.stars ? `
+                                <div>
+                                    <div class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Rating</div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-lg font-black text-gray-900">${product.stars}</span>
+                                        <div class="flex text-yellow-500 text-sm">${generateStars(product.stars)}</div>
+                                    </div>
+                                    ${product.reviewsCount ? `<div class="text-xs text-gray-600">${formatNumber(product.reviewsCount)} reviews</div>` : ''}
+                                </div>
+                            ` : ''}
+                            
+                            <div>
+                                <div class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Stock</div>
+                                ${product.inStock ? `
+                                    <div class="flex items-center gap-2">
+                                        <i class="ri-checkbox-circle-fill text-green-600"></i>
+                                        <span class="text-sm font-bold text-green-700">In Stock</span>
+                                    </div>
+                                ` : `
+                                    <div class="flex items-center gap-2">
+                                        <i class="ri-close-circle-fill text-red-600"></i>
+                                        <span class="text-sm font-bold text-red-700">Out of Stock</span>
+                                    </div>
+                                `}
+                            </div>
+                            
+                            <div class="flex items-end">
+                                <button 
+                                    class="view-details-btn px-6 py-2 bg-gray-900 text-white font-bold hover:bg-blue-600 transition-all group relative overflow-hidden"
+                                    data-index="${index}"
+                                >
+                                    <span class="relative z-10 flex items-center gap-2">
+                                        <i class="ri-eye-line"></i>View Details
+                                    </span>
+                                    <div class="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            // Add event listeners
+            const checkbox = item.querySelector('.compare-checkbox');
+            checkbox.addEventListener('change', (e) => {
+                if (e.target.checked) {
+                    selectedProducts.add(index);
+                } else {
+                    selectedProducts.delete(index);
+                }
+                updateCompareButton();
+            });
+            
+            const viewBtn = item.querySelector('.view-details-btn');
+            viewBtn.addEventListener('click', () => {
+                showProductDetails(product);
+            });
+            
+            return item;
+        }
+
+        // Show Product Details Modal
+        function showProductDetails(product) {
+            const modalContent = document.getElementById('modal-content');
+            modalContent.innerHTML = createProductDetailsHTML(product);
+            productModal.classList.add('active');
+        }
+
+        // Create Product Details HTML (reusing existing function)
+        function createProductDetailsHTML(product) {
+            // This will be a simplified version of the existing detailed view
+            // For now, I'll create a comprehensive view
+            return `
+                <div class="space-y-8">
+                    <!-- Header -->
+                    <div class="mb-6">
+                        <h2 class="text-3xl font-black text-gray-900 mb-4">${escapeHtml(product.title || 'N/A')}</h2>
+                        <div class="flex items-center gap-4 text-sm">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 font-bold rounded">ASIN: ${product.asin || 'N/A'}</span>
+                            ${product.brand ? `<span class="px-3 py-1 bg-gray-100 text-gray-700 font-semibold rounded">Brand: ${escapeHtml(product.brand)}</span>` : ''}
+                            ${product.url ? `<a href="${product.url}" target="_blank" class="group relative px-6 py-3 bg-gray-900 text-white font-bold overflow-hidden inline-flex items-center gap-2">
+                                <span class="relative z-10 flex items-center gap-2">
+                                    <i class="ri-external-link-line"></i> View on Amazon
+                                </span>
+                                <div class="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                            </a>` : ''}
+                        </div>
+                    </div>
+
+                    <!-- Images -->
+                    ${product.thumbnailImage || (product.galleryThumbnails && product.galleryThumbnails.length > 0) ? `
+                    <div class="mb-8">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <i class="ri-image-line text-blue-600"></i> Product Images
+                        </h3>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            ${product.thumbnailImage ? `
+                                <div class="border border-gray-100 overflow-hidden bg-white hover:border-blue-600 transition-all">
+                                    <img src="${product.thumbnailImage}" alt="Thumbnail" class="w-full h-48 object-contain bg-gray-50" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'200\' height=\'200\'%3E%3Crect fill=\'%23f3f4f6\' width=\'200\' height=\'200\'/%3E%3Ctext fill=\'%239ca3af\' font-family=\'sans-serif\' font-size=\'14\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\'%3EImage%3C/text%3E%3C/svg%3E'">
+                                </div>
+                            ` : ''}
+                            ${product.galleryThumbnails && product.galleryThumbnails.length > 0 ? product.galleryThumbnails.slice(0, 7).map(img => `
+                                <div class="border border-gray-100 overflow-hidden bg-white hover:border-blue-600 transition-all">
+                                    <img src="${img}" alt="Gallery" class="w-full h-48 object-contain bg-gray-50" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'200\' height=\'200\'%3E%3Crect fill=\'%23f3f4f6\' width=\'200\' height=\'200\'/%3E%3Ctext fill=\'%239ca3af\' font-family=\'sans-serif\' font-size=\'14\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\'%3EImage%3C/text%3E%3C/svg%3E'">
+                                </div>
+                            `).join('') : ''}
+                        </div>
+                    </div>
+                    ` : ''}
+
+                    <!-- Price and Stock -->
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div class="p-6 bg-blue-50 border border-blue-200 hover:border-blue-600 transition-all">
+                            <div class="text-sm font-bold text-blue-600 uppercase tracking-wider mb-3">Pricing</div>
+                            ${product.price ? `
+                                <div class="text-3xl font-black text-gray-900 mb-2">
+                                    ${product.price.currency || '₹'}${formatNumber(product.price.value)}
+                                </div>
+                            ` : ''}
+                            ${product.listPrice && product.price && product.listPrice.value !== product.price.value ? `
+                                <div class="text-lg text-gray-500 line-through mb-1">${product.listPrice.currency || '₹'}${formatNumber(product.listPrice.value)}</div>
+                                <div class="text-sm font-bold text-green-600">
+                                    ${Math.round((1 - product.price.value / product.listPrice.value) * 100)}% OFF
+                                </div>
+                            ` : ''}
+                        </div>
+                        <div class="p-6 bg-green-50 border border-green-200 hover:border-green-600 transition-all">
+                            <div class="text-sm font-bold text-green-600 uppercase tracking-wider mb-3">Stock Status</div>
+                            <div class="flex items-center gap-3">
+                                ${product.inStock ? `
+                                    <i class="ri-checkbox-circle-fill text-green-600 text-2xl"></i>
+                                    <div>
+                                        <div class="text-xl font-bold text-green-700">In Stock</div>
+                                        ${product.inStockText ? `<div class="text-sm text-green-600">${escapeHtml(product.inStockText)}</div>` : ''}
+                                    </div>
+                                ` : `
+                                    <i class="ri-close-circle-fill text-red-600 text-2xl"></i>
+                                    <div class="text-xl font-bold text-red-700">Out of Stock</div>
+                                `}
+                            </div>
+                            ${product.delivery ? `<div class="mt-3 text-sm text-gray-600 flex items-center gap-2"><i class="ri-truck-line"></i> ${escapeHtml(product.delivery)}</div>` : ''}
+                        </div>
+                    </div>
+
+                    <!-- Ratings -->
+                    ${product.stars || product.reviewsCount ? `
+                    <div class="mb-8 p-6 bg-gray-50 border border-gray-100">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <i class="ri-star-line text-yellow-500"></i> Ratings & Reviews
+                        </h3>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            ${product.stars ? `
+                                <div>
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <span class="text-3xl font-black text-gray-900">${product.stars}</span>
+                                        <div class="flex text-yellow-500">${generateStars(product.stars)}</div>
+                                    </div>
+                                    ${product.reviewsCount ? `<div class="text-sm text-gray-600">${formatNumber(product.reviewsCount)} reviews</div>` : ''}
+                                </div>
+                            ` : ''}
+                            ${product.starsBreakdown ? `
+                                <div class="md:col-span-2">
+                                    <div class="space-y-2">
+                                        ${Object.entries(product.starsBreakdown).map(([star, percentage]) => `
+                                            <div class="flex items-center gap-3">
+                                                <span class="text-sm font-bold w-12">${star.replace('star', '★')}</span>
+                                                <div class="flex-1 bg-gray-200 rounded-full h-2">
+                                                    <div class="bg-yellow-500 h-2 rounded-full" style="width: ${percentage * 100}%"></div>
+                                                </div>
+                                                <span class="text-sm text-gray-600 w-16 text-right">${Math.round(percentage * 100)}%</span>
+                                            </div>
+                                        `).join('')}
+                                    </div>
+                                </div>
+                            ` : ''}
+                        </div>
+                    </div>
+                    ` : ''}
+
+                    <!-- Features -->
+                    ${product.features && product.features.length > 0 ? `
+                    <div class="mb-8">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <i class="ri-list-check text-blue-600"></i> Key Features
+                        </h3>
+                        <div class="grid md:grid-cols-2 gap-3">
+                            ${product.features.slice(0, 10).map(feature => `
+                                <div class="flex items-start gap-3 p-4 bg-gray-50 border border-gray-100 hover:border-blue-600 transition-all">
+                                    <i class="ri-check-line text-green-600 mt-1 flex-shrink-0"></i>
+                                    <p class="text-sm text-gray-700 flex-1">${escapeHtml(feature)}</p>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    ` : ''}
+
+                    <!-- Attributes -->
+                    ${product.attributes && product.attributes.length > 0 ? `
+                    <div class="mb-8">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <i class="ri-information-line text-blue-600"></i> Product Attributes
+                        </h3>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            ${product.attributes.map(attr => `
+                                <div class="p-4 border border-gray-100 bg-white hover:border-blue-600 transition-all">
+                                    <div class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">${escapeHtml(attr.key || '')}</div>
+                                    <div class="text-sm text-gray-900">${escapeHtml(attr.value || 'N/A')}</div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    ` : ''}
+
+                    <!-- Category (Breadcrumbs) -->
+                    ${product.breadCrumbs ? `
+                    <div class="mb-8 p-6 bg-gray-50 border border-gray-100">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <i class="ri-folder-line text-blue-600"></i> Category
+                        </h3>
+                        <div class="text-gray-700">${escapeHtml(product.breadCrumbs)}</div>
+                    </div>
+                    ` : ''}
+
+                    <!-- Best Seller Ranks -->
+                    ${product.bestsellerRanks && product.bestsellerRanks.length > 0 ? `
+                    <div class="mb-8">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <i class="ri-trophy-line text-orange-600"></i> Best Seller Ranks
+                        </h3>
+                        <div class="space-y-3">
+                            ${product.bestsellerRanks.map(rank => `
+                                <div class="flex items-center gap-4 p-4 bg-orange-50 border border-orange-200 hover:border-orange-600 transition-all">
+                                    <div class="flex-shrink-0">
+                                        <span class="text-3xl font-black text-orange-600">#${rank.rank || 'N/A'}</span>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="font-bold text-gray-900 mb-1">${escapeHtml(rank.category || 'N/A')}</div>
+                                        ${rank.url ? `
+                                            <a href="${rank.url}" target="_blank" class="text-sm text-blue-600 hover:text-blue-700 font-semibold flex items-center gap-1">
+                                                <i class="ri-external-link-line"></i> View Category
+                                            </a>
+                                        ` : ''}
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    ` : ''}
+
+                    <!-- Variants -->
+                    ${product.variantDetails && product.variantDetails.length > 0 ? `
+                    <div class="mb-8">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <i class="ri-shopping-bag-line text-blue-600"></i> Available Variants
+                        </h3>
+                        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                            ${product.variantDetails.map(variant => `
+                                <div class="border border-gray-100 overflow-hidden bg-white hover:border-blue-600 transition-all hover:shadow-lg">
+                                    ${variant.thumbnail ? `
+                                        <div class="bg-gray-50 p-4">
+                                            <img src="${variant.thumbnail}" alt="${escapeHtml(variant.name || '')}" 
+                                                 class="w-full h-32 object-contain" 
+                                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'200\' height=\'200\'%3E%3Crect fill=\'%23f3f4f6\' width=\'200\' height=\'200\'/%3E%3Ctext fill=\'%239ca3af\' font-family=\'sans-serif\' font-size=\'14\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\'%3EImage%3C/text%3E%3C/svg%3E'">
+                                        </div>
+                                    ` : ''}
+                                    <div class="p-4">
+                                        <div class="font-bold text-sm text-gray-900 mb-1 line-clamp-2">${escapeHtml(variant.name || 'N/A')}</div>
+                                        <div class="text-xs text-gray-500 font-mono">ASIN: ${variant.asin || 'N/A'}</div>
+                                        ${variant.url ? `
+                                            <a href="${variant.url}" target="_blank" class="mt-2 text-xs text-blue-600 hover:text-blue-700 font-semibold flex items-center gap-1">
+                                                <i class="ri-external-link-line"></i> View
+                                            </a>
+                                        ` : ''}
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    ` : ''}
+
+                    <!-- Seller Information -->
+                    ${product.seller ? `
+                    <div class="mb-8 p-6 bg-gray-50 border border-gray-100">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <i class="ri-store-line text-blue-600"></i> Seller Information
+                        </h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <div class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-2">Seller Name</div>
+                                <div class="text-base font-bold text-gray-900">${escapeHtml(product.seller.name || 'N/A')}</div>
+                            </div>
+                            ${product.seller.averageRating ? `
+                                <div>
+                                    <div class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-2">Seller Rating</div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-lg font-black text-gray-900">${product.seller.averageRating}</span>
+                                        <div class="flex text-yellow-500">${generateStars(product.seller.averageRating)}</div>
+                                        ${product.seller.reviewsCount ? `<span class="text-sm text-gray-600">(${formatNumber(product.seller.reviewsCount)} reviews)</span>` : ''}
+                                    </div>
+                                </div>
+                            ` : ''}
+                            ${product.seller.url ? `
+                                <div class="md:col-span-2">
+                                    <a href="${product.seller.url}" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white font-bold hover:bg-blue-700 transition-all">
+                                        <i class="ri-external-link-line"></i> View Seller Profile
+                                    </a>
+                                </div>
+                            ` : ''}
+                        </div>
+                    </div>
+                    ` : ''}
+
+                    <!-- Delivery Information -->
+                    ${product.delivery ? `
+                    <div class="mb-8 p-6 bg-blue-50 border border-blue-200 rounded-xl">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <i class="ri-truck-line text-blue-600"></i> Delivery Information
+                        </h3>
+                        <div class="text-gray-700">${escapeHtml(product.delivery)}</div>
+                    </div>
+                    ` : ''}
+
+                    <!-- Additional Info -->
+                    <div class="grid md:grid-cols-2 gap-4">
+                        ${product.condition ? `
+                            <div class="p-4 bg-gray-50 border border-gray-100">
+                                <div class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Condition</div>
+                                <div class="text-gray-900 font-bold">${escapeHtml(product.condition)}</div>
+                            </div>
+                        ` : ''}
+                    </div>
+                </div>
+            `;
+        }
+
+        // Comparison Functions
+        function updateCompareButton() {
+            const count = selectedProducts.size;
+            compareCount.textContent = count;
+            if (count > 0) {
+                compareBtn.classList.remove('hidden');
+            } else {
+                compareBtn.classList.add('hidden');
+            }
+        }
+
+        compareBtn.addEventListener('click', () => {
+            if (selectedProducts.size < 2) {
+                alert('Please select at least 2 products to compare');
+                return;
+            }
+            showComparison();
+        });
+
+        document.getElementById('select-all-btn').addEventListener('click', () => {
+            allProducts.forEach((product, index) => {
+                selectedProducts.add(index);
+            });
+            document.querySelectorAll('.compare-checkbox').forEach(cb => cb.checked = true);
+            updateCompareButton();
+        });
+
+        document.getElementById('deselect-all-btn').addEventListener('click', () => {
+            selectedProducts.clear();
+            document.querySelectorAll('.compare-checkbox').forEach(cb => cb.checked = false);
+            updateCompareButton();
+        });
+
+        clearAllBtn.addEventListener('click', () => {
+            allProducts = [];
+            selectedProducts.clear();
+            resultsSection.classList.add('hidden');
+            compareBtn.classList.add('hidden');
+            clearAllBtn.classList.add('hidden');
+            resultsList.innerHTML = '';
+        });
+
+        function showComparison() {
+            const selected = allProducts.filter((p, index) => selectedProducts.has(index));
+            if (selected.length < 2) return;
+            
+            const comparisonContent = document.getElementById('comparison-content');
+            const fields = ['asin', 'title', 'brand', 'price', 'listPrice', 'stars', 'reviewsCount', 'inStock', 'seller'];
+            
+            let html = `
+                <div class="overflow-x-auto w-full">
+                    <table class="w-full" style="border-collapse: collapse;">
+                        <thead>
+                            <tr class="bg-gray-100">
+                                <th class="text-left font-black text-gray-900" style="min-width: 200px; width: 200px; padding: 1.25rem;">Attribute</th>
+                                ${selected.map((p, i) => `
+                                    <th class="text-center font-black text-gray-900 bg-gray-100" style="min-width: 300px; padding: 1.25rem;">
+                                        <div class="space-y-3">
+                                            ${p.thumbnailImage ? `
+                                                <div class="flex justify-center">
+                                                    <img src="${p.thumbnailImage}" alt="${escapeHtml(p.title || '')}" 
+                                                         class="w-28 h-28 object-contain border border-gray-200 bg-white">
+                                                </div>
+                                            ` : '<div class="w-28 h-28 mx-auto bg-gray-100 flex items-center justify-center border border-gray-200"><i class="ri-image-line text-gray-400 text-2xl"></i></div>'}
+                                            <div class="text-xs font-mono font-bold text-gray-600">${p.asin || 'N/A'}</div>
+                                        </div>
+                                    </th>
+                                `).join('')}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="font-black text-gray-900" style="min-width: 200px; width: 200px;">Title</td>
+                                ${selected.map(p => `<td class="text-sm leading-relaxed" style="min-width: 300px;">${escapeHtml(p.title || 'N/A')}</td>`).join('')}
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="font-black text-gray-900" style="min-width: 200px; width: 200px;">Brand</td>
+                                ${selected.map(p => `<td class="font-semibold" style="min-width: 300px;">${escapeHtml(p.brand || 'N/A')}</td>`).join('')}
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="font-black text-gray-900" style="min-width: 200px; width: 200px;">Price</td>
+                                ${selected.map(p => `<td style="min-width: 300px;">
+                                    <div class="space-y-1">
+                                        ${p.price ? `
+                                            <div class="text-xl font-black text-gray-900">${p.price.currency || '₹'}${formatNumber(p.price.value)}</div>
+                                        ` : '<div class="text-gray-500">N/A</div>'}
+                                        ${p.listPrice && p.price && p.listPrice.value !== p.price.value ? `
+                                            <div class="text-sm text-gray-500 line-through">${p.listPrice.currency || '₹'}${formatNumber(p.listPrice.value)}</div>
+                                            <div class="text-sm font-bold text-green-600">${Math.round((1 - p.price.value / p.listPrice.value) * 100)}% OFF</div>
+                                        ` : ''}
+                                    </div>
+                                </td>`).join('')}
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="font-black text-gray-900" style="min-width: 200px; width: 200px;">Rating</td>
+                                ${selected.map(p => `<td style="min-width: 300px;">
+                                    ${p.stars ? `
+                                        <div class="flex flex-col items-center gap-2">
+                                            <div class="flex items-center gap-2">
+                                                <span class="text-lg font-black text-gray-900">${p.stars}</span>
+                                                <div class="flex text-yellow-500 text-sm">${generateStars(p.stars)}</div>
+                                            </div>
+                                            ${p.reviewsCount ? `<div class="text-xs text-gray-600">${formatNumber(p.reviewsCount)} reviews</div>` : ''}
+                                        </div>
+                                    ` : '<div class="text-gray-500 text-center">N/A</div>'}
+                                </td>`).join('')}
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="font-black text-gray-900" style="min-width: 200px; width: 200px;">Stock Status</td>
+                                ${selected.map(p => `<td class="text-center" style="min-width: 300px;">
+                                    ${p.inStock ? `
+                                        <span class="inline-flex items-center gap-2 px-4 py-2 bg-green-100 text-green-700 font-bold">
+                                            <i class="ri-checkbox-circle-fill"></i> In Stock
+                                        </span>
+                                    ` : `
+                                        <span class="inline-flex items-center gap-2 px-4 py-2 bg-red-100 text-red-700 font-bold">
+                                            <i class="ri-close-circle-fill"></i> Out of Stock
+                                        </span>
+                                    `}
+                                </td>`).join('')}
+                            </tr>
+                            ${selected.some(p => p.breadCrumbs) ? `
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="font-black text-gray-900" style="min-width: 200px; width: 200px;">Category</td>
+                                ${selected.map(p => `<td class="text-sm text-gray-700" style="min-width: 300px;">${escapeHtml(p.breadCrumbs || 'N/A')}</td>`).join('')}
+                            </tr>
+                            ` : ''}
+                            ${selected.some(p => p.features && p.features.length > 0) ? `
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="font-black text-gray-900" style="min-width: 200px; width: 200px;">Key Features</td>
+                                ${selected.map(p => `<td style="min-width: 300px;">
+                                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                                        ${p.features && p.features.length > 0 ? p.features.slice(0, 5).map(f => `<li>${escapeHtml(f)}</li>`).join('') : '<li class="text-gray-500">N/A</li>'}
+                                    </ul>
+                                </td>`).join('')}
+                            </tr>
+                            ` : ''}
+                            ${selected.some(p => p.seller) ? `
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="font-black text-gray-900" style="min-width: 200px; width: 200px;">Seller</td>
+                                ${selected.map(p => `<td style="min-width: 300px;">
+                                    <div class="space-y-1">
+                                        <div class="font-semibold text-gray-900">${escapeHtml(p.seller?.name || 'N/A')}</div>
+                                        ${p.seller?.averageRating ? `
+                                            <div class="flex items-center gap-2 text-sm">
+                                                <span class="font-bold">${p.seller.averageRating}</span>
+                                                <div class="flex text-yellow-500 text-xs">${generateStars(p.seller.averageRating)}</div>
+                                            </div>
+                                        ` : ''}
+                                    </div>
+                                </td>`).join('')}
+                            </tr>
+                            ` : ''}
+                            ${selected.some(p => p.bestsellerRanks && p.bestsellerRanks.length > 0) ? `
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="font-black text-gray-900" style="min-width: 200px; width: 200px;">Best Seller Rank</td>
+                                ${selected.map(p => `<td style="min-width: 300px;">
+                                    ${p.bestsellerRanks && p.bestsellerRanks.length > 0 ? `
+                                        <div class="space-y-2">
+                                            ${p.bestsellerRanks.slice(0, 2).map(rank => `
+                                                <div class="text-sm">
+                                                    <span class="font-black text-orange-600">#${rank.rank}</span>
+                                                    <span class="text-gray-700 ml-2">${escapeHtml(rank.category || '')}</span>
+                                                </div>
+                                            `).join('')}
+                                        </div>
+                                    ` : '<div class="text-gray-500 text-sm">N/A</div>'}
+                                </td>`).join('')}
+                            </tr>
+                            ` : ''}
+                        </tbody>
+                    </table>
+                </div>
+            `;
+            
+            comparisonContent.innerHTML = html;
+            comparisonModal.classList.add('active');
+        }
+
+        // Modal Close Handlers
+        document.getElementById('close-modal').addEventListener('click', () => {
+            productModal.classList.remove('active');
+        });
+
+        document.getElementById('close-comparison-modal').addEventListener('click', () => {
+            comparisonModal.classList.remove('active');
+        });
+
+        productModal.addEventListener('click', (e) => {
+            if (e.target === productModal) {
+                productModal.classList.remove('active');
+            }
+        });
+
+        comparisonModal.addEventListener('click', (e) => {
+            if (e.target === comparisonModal) {
+                comparisonModal.classList.remove('active');
+            }
+        });
+
+        // Enter key support
+        asinInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                searchBtn.click();
+            }
+        });
+
+        // Utility Functions
+        function escapeHtml(text) {
+            if (!text) return 'N/A';
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function formatNumber(num) {
+            if (!num) return '0';
+            return new Intl.NumberFormat('en-IN').format(num);
+        }
+
+        function generateStars(rating) {
+            const fullStars = Math.floor(rating);
+            const hasHalfStar = rating % 1 >= 0.5;
+            let stars = '';
+            for (let i = 0; i < fullStars; i++) {
+                stars += '<i class="ri-star-fill"></i>';
+            }
+            if (hasHalfStar) {
+                stars += '<i class="ri-star-half-fill"></i>';
+            }
+            const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+            for (let i = 0; i < emptyStars; i++) {
+                stars += '<i class="ri-star-line"></i>';
+            }
+            return stars;
+        }
+    </script>
+
+    <!-- Footer -->
+    <footer class="relative z-10 mt-16 pb-8 text-center border-t border-gray-100 pt-8">
+        <div class="container mx-auto px-6">
+            <p class="text-xs text-gray-500" id="copyright-year">
+                © 2025 Nextract. All rights reserved.
+            </p>
+        </div>
+    </footer>
+    <script>
+        // Update copyright year
+        document.getElementById('copyright-year').textContent = `© ${new Date().getFullYear()} Nextract. All rights reserved.`;
+    </script>
+</body>
+</html>
