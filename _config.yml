@@ -11,7 +11,7 @@ description: >-
   Get clean, reliable data for price intelligence, lead generation, and market research.
   Turn web data into actionable business intelligence.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.nextract.dev" # the base hostname & protocol for your site
+url: "https://nextract.dev" # the base hostname & protocol for your site
 
 # Contact Information
 phone: "+91 85110-98799"
@@ -36,8 +36,8 @@ show_offers: false  # Set to true to show promotional offers (Black Friday, etc.
 
 # SEO Settings
 canonical_url: "https://nextract.dev"
-og_image: "https://www.nextract.dev/og-image.jpg"
-twitter_image: "https://www.nextract.dev/twitter-image.jpg"
+og_image: "https://nextract.dev/assets/images/og-image.jpg"
+twitter_image: "https://nextract.dev/assets/images/twitter-image.jpg"
 
 # Navigation
 navigation:

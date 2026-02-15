@@ -15,8 +15,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Meta Tags -->
-    <title>{% if page.title %}{{ page.title }} | Nextract{% else %}Nextract | Modern Data Solutions & Extraction{% endif %}</title>
-    <meta name="title" content="{% if page.title %}{{ page.title }} | Nextract{% else %}Nextract | Modern Data Solutions & Extraction{% endif %}">
+    <title>{% if page.title %}{{ page.title }}{% else %}Nextract | Modern Data Solutions & Extraction{% endif %}</title>
+    <meta name="title" content="{% if page.title %}{{ page.title }}{% else %}Nextract | Modern Data Solutions & Extraction{% endif %}">
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
     <meta name="author" content="{{ site.title }}">
@@ -51,7 +51,7 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site.canonical_url }}{{ page.url }}">
-    <meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} | Enterprise Web Scraping & Data Extraction Services{% endif %}">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }} | Enterprise Web Scraping & Data Extraction Services{% endif %}">
     <meta property="og:description" content="{% if page.og_description %}{{ page.og_description }}{% else %}{{ page.description | default: site.description }}{% endif %}">
     <meta property="og:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.canonical_url }}/assets/images/og-image.jpg{% endif %}">
     <meta property="og:site_name" content="{{ site.title }}">
@@ -63,7 +63,7 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="{{ site.canonical_url }}{{ page.url }}">
-    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} | Enterprise Web Scraping & Data Extraction Services{% endif %}">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }} | Enterprise Web Scraping & Data Extraction Services{% endif %}">
     <meta name="twitter:description" content="{% if page.twitter_description %}{{ page.twitter_description }}{% else %}{{ page.description | default: site.description }}{% endif %}">
     <meta name="twitter:image" content="{% if page.twitter_image %}{{ page.twitter_image }}{% else %}{{ site.canonical_url }}/assets/images/twitter-image.jpg{% endif %}">
     
@@ -119,7 +119,7 @@
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "{{ page.title }} | {{ site.title }}",
+      "name": "{{ page.title }}",
       "url": "{{ site.canonical_url }}{{ page.url }}",
       "description": "{{ page.description | default: site.description }}",
       "inLanguage": "en-US",
@@ -435,10 +435,12 @@
     <link rel="stylesheet" href="{{ '/assets/css/tailwind.min.css' | relative_url }}">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
     
     <!-- Remix Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"></noscript>
     
     <!-- Custom Styles -->
     <style>

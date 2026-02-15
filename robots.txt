@@ -32,7 +32,5 @@ Allow: /case-studies/
 Allow: /about/
 Allow: /contact/
 
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
 
 
