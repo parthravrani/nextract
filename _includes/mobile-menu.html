@@ -23,7 +23,7 @@
         
         <!-- Products & Services - Collapsible -->
         <div>
-            <button class="mobile-menu-toggle w-full flex items-center justify-between py-4 px-4 text-lg font-bold text-gray-900 hover:bg-gray-50 transition-colors rounded-lg{% if page.url == '/products/' or page.url contains '/scrapers/' or page.url contains '/apis/' or page.url contains '/datasets/' or page.url contains '/services/' or page.url contains '/solutions/' or page.url == '/e-commerce/' or page.url == '/quick-commerce/' or page.url == '/food-delivery/' or page.url contains '/industries/' %} bg-gray-50 text-blue-600{% endif %}">
+            <button class="mobile-menu-toggle w-full flex items-center justify-between py-4 px-4 text-lg font-bold text-gray-900 hover:bg-gray-50 transition-colors rounded-lg{% if page.url == '/products/' or page.url contains '/scrapers/' or page.url contains '/apis/' or page.url contains '/datasets/' or page.url contains '/services/' or page.url contains '/solutions/' or page.url == '/e-commerce/' or page.url == '/quick-commerce/' or page.url == '/food-delivery/' or page.url == '/web-scraping-services/' or page.url == '/custom-api-development/' or page.url == '/mobile-app-data-extraction/' or page.url == '/ai-data-solutions/' or page.url contains '/industries/' %} bg-gray-50 text-blue-600{% endif %}">
                 <span>Products & Services</span>
                 <i class="ri-arrow-down-s-line transition-transform"></i>
             </button>
@@ -34,7 +34,13 @@
                 <a href="/apis/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded{% if page.url contains '/apis/' %} bg-gray-50 text-blue-600 font-semibold{% endif %}">APIs</a>
                 <a href="/datasets/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded{% if page.url contains '/datasets/' %} bg-gray-50 text-blue-600 font-semibold{% endif %}">Datasets</a>
                 
-                <div class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 mt-4 px-4">Services</div>
+                <div class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 mt-4 px-4">Core Services</div>
+                <a href="/web-scraping-services/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded{% if page.url == '/web-scraping-services/' %} bg-gray-50 text-blue-600 font-semibold{% endif %}">Web Scraping</a>
+                <a href="/custom-api-development/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded{% if page.url == '/custom-api-development/' %} bg-gray-50 text-blue-600 font-semibold{% endif %}">Custom APIs</a>
+                <a href="/mobile-app-data-extraction/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded{% if page.url == '/mobile-app-data-extraction/' %} bg-gray-50 text-blue-600 font-semibold{% endif %}">Mobile App Data</a>
+                <a href="/ai-data-solutions/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded{% if page.url == '/ai-data-solutions/' %} bg-gray-50 text-blue-600 font-semibold{% endif %}">AI Data Processing</a>
+                
+                <div class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 mt-4 px-4">More Services</div>
                 <a href="/services/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded{% if page.url contains '/services/' %} bg-gray-50 text-blue-600 font-semibold{% endif %}">All Services</a>
                 <a href="/solutions/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded{% if page.url contains '/solutions/' %} bg-gray-50 text-blue-600 font-semibold{% endif %}">Custom Solutions</a>
                 

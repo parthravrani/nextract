@@ -149,14 +149,7 @@
         "name": "{{ site.title }}"
       },
       "areaServed": "Worldwide",
-      "description": "{{ page.description }}",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "{{ site.canonical_url }}{{ page.url }}"
-      }
+      "description": "{{ page.description }}"
     }
     </script>
     {% endif %}
@@ -209,22 +202,7 @@
         "url": "{{ site.canonical_url }}"
       },
       "areaServed": "Worldwide",
-      "description": "{{ page.description }}",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "{{ site.canonical_url }}{{ page.url }}"
-      },
-      "serviceArea": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": "23.0225",
-          "longitude": "72.5714"
-        }
-      }
+      "description": "{{ page.description }}"
     }
     </script>
     {% endif %}
@@ -243,22 +221,7 @@
         "url": "{{ site.canonical_url }}"
       },
       "areaServed": "Worldwide",
-      "description": "{{ page.description }}",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "{{ site.canonical_url }}{{ page.url }}"
-      },
-      "serviceArea": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": "23.0225",
-          "longitude": "72.5714"
-        }
-      }
+      "description": "{{ page.description }}"
     }
     </script>
     {% endif %}
@@ -277,22 +240,83 @@
         "url": "{{ site.canonical_url }}"
       },
       "areaServed": "Worldwide",
-      "description": "{{ page.description }}",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "{{ site.canonical_url }}{{ page.url }}"
+      "description": "{{ page.description }}"
+    }
+    </script>
+    {% endif %}
+    
+    {% if page.url == '/web-scraping-services/' %}
+    <!-- Service Schema for Web Scraping Services Page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Web Scraping & Data Extraction Service",
+      "name": "Web Scraping Services & Data Extraction",
+      "provider": {
+        "@type": "Organization",
+        "name": "{{ site.title }}",
+        "url": "{{ site.canonical_url }}"
       },
-      "serviceArea": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": "23.0225",
-          "longitude": "72.5714"
-        }
-      }
+      "areaServed": "Worldwide",
+      "description": "{{ page.description }}"
+    }
+    </script>
+    {% endif %}
+    
+    {% if page.url == '/custom-api-development/' %}
+    <!-- Service Schema for Custom API Development Page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Custom Data API Development Service",
+      "name": "Custom Data API Development & Integration",
+      "provider": {
+        "@type": "Organization",
+        "name": "{{ site.title }}",
+        "url": "{{ site.canonical_url }}"
+      },
+      "areaServed": "Worldwide",
+      "description": "{{ page.description }}"
+    }
+    </script>
+    {% endif %}
+    
+    {% if page.url == '/mobile-app-data-extraction/' %}
+    <!-- Service Schema for Mobile App Data Extraction Page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Mobile App Data Extraction Service",
+      "name": "Mobile App Data Extraction Service",
+      "provider": {
+        "@type": "Organization",
+        "name": "{{ site.title }}",
+        "url": "{{ site.canonical_url }}"
+      },
+      "areaServed": "Worldwide",
+      "description": "{{ page.description }}"
+    }
+    </script>
+    {% endif %}
+    
+    {% if page.url == '/ai-data-solutions/' %}
+    <!-- Service Schema for AI Data Solutions Page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "AI-Powered Data Processing & Enrichment Service",
+      "name": "AI-Powered Data Processing & Enrichment",
+      "provider": {
+        "@type": "Organization",
+        "name": "{{ site.title }}",
+        "url": "{{ site.canonical_url }}"
+      },
+      "areaServed": "Worldwide",
+      "description": "{{ page.description }}"
     }
     </script>
     {% endif %}
