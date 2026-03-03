@@ -35,7 +35,7 @@
                         Products
                         <i class="ri-arrow-down-s-line text-base transition-transform"></i>
                     </button>
-                    <div class="nav-dropdown-menu absolute top-full left-0 pt-2 w-64 bg-transparent z-50 pointer-events-none">
+                    <div class="nav-dropdown-menu absolute top-full left-0 pt-1 w-64 bg-transparent z-50 pointer-events-none">
                         <div class="bg-white rounded-xl shadow-xl border border-gray-100 pointer-events-auto p-4">
                             <div class="space-y-1">
                                 <a href="/products/" class="flex items-start gap-3 p-3 rounded-lg hover:bg-blue-50 transition-all">
@@ -56,14 +56,14 @@
                                     <i class="ri-plug-line text-green-600 text-lg mt-0.5 flex-shrink-0"></i>
                                     <div>
                                         <div class="font-bold text-gray-900 text-sm">APIs</div>
-                                        <div class="text-xs text-gray-500">Ready-to-use APIs</div>
+                                        <div class="text-xs text-gray-500">Custom data APIs</div>
                                     </div>
                                 </a>
                                 <a href="/datasets/" class="flex items-start gap-3 p-3 rounded-lg hover:bg-orange-50 transition-all">
                                     <i class="ri-database-2-line text-orange-600 text-lg mt-0.5 flex-shrink-0"></i>
                                     <div>
                                         <div class="font-bold text-gray-900 text-sm">Datasets</div>
-                                        <div class="text-xs text-gray-500">Pre-built data</div>
+                                        <div class="text-xs text-gray-500">Custom datasets</div>
                                     </div>
                                 </a>
                             </div>
@@ -73,11 +73,11 @@
                 
                 <!-- Services Dropdown (Merged Core Services + Services) -->
                 <div class="nav-dropdown group relative">
-                    <button class="nav-link flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-gray-700 hover:text-blue-600 transition-all rounded-lg hover:bg-gray-50{% if page.url == '/web-scraping-services/' or page.url == '/custom-api-development/' or page.url == '/mobile-app-data-extraction/' or page.url == '/ai-data-solutions/' or page.url contains '/services/' or page.url contains '/solutions/' %} text-blue-600 bg-blue-50{% endif %}">
+                    <button class="nav-link flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-gray-700 hover:text-blue-600 transition-all rounded-lg hover:bg-gray-50{% if page.url == '/web-scraping-services/' or page.url == '/custom-api-development/' or page.url == '/mobile-app-data-extraction/' or page.url == '/ai-data-solutions/' or page.url == '/ai-training-data/' or page.url contains '/services/' or page.url contains '/solutions/' %} text-blue-600 bg-blue-50{% endif %}">
                         Services
                         <i class="ri-arrow-down-s-line text-base transition-transform"></i>
                     </button>
-                    <div class="nav-dropdown-menu w-500 absolute top-full left-0 pt-2 bg-transparent z-50 pointer-events-none">
+                    <div class="nav-dropdown-menu w-500 absolute top-full left-0 pt-1 bg-transparent z-50 pointer-events-none">
                         <div class="bg-white rounded-xl shadow-xl border border-gray-100 pointer-events-auto p-5">
                             <div class="grid grid-cols-2 gap-6">
                                 <!-- Column 1: Core Services -->
@@ -119,6 +119,13 @@
                                 <div>
                                     <div class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">More Services</div>
                                     <div class="space-y-1">
+                                        <a href="/ai-training-data/" class="flex items-start gap-3 p-3 rounded-lg hover:bg-blue-50 transition-all">
+                                            <i class="ri-brain-line text-blue-600 text-lg mt-0.5 flex-shrink-0"></i>
+                                            <div>
+                                                <div class="font-bold text-gray-900 text-sm">AI Training Data</div>
+                                                <div class="text-xs text-gray-500">Datasets for LLMs & ML</div>
+                                            </div>
+                                        </a>
                                         <a href="/services/" class="flex items-start gap-3 p-3 rounded-lg hover:bg-blue-50 transition-all">
                                             <i class="ri-service-line text-blue-600 text-lg mt-0.5 flex-shrink-0"></i>
                                             <div>
@@ -142,34 +149,44 @@
                 
                 <!-- Solutions Dropdown -->
                 <div class="nav-dropdown group relative">
-                    <button class="nav-link flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-gray-700 hover:text-blue-600 transition-all rounded-lg hover:bg-gray-50{% if page.url == '/e-commerce/' or page.url == '/quick-commerce/' or page.url == '/food-delivery/' %} text-blue-600 bg-blue-50{% endif %}">
+                    <button class="nav-link flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-gray-700 hover:text-blue-600 transition-all rounded-lg hover:bg-gray-50{% if page.url == '/amazon/' or page.url == '/walmart/' or page.url == '/etsy/' or page.url == '/e-commerce/' or page.url == '/flipkart/' or page.url == '/ebay/' or page.url == '/quick-commerce/' or page.url == '/blinkit/' or page.url == '/zepto/' or page.url == '/swiggy-instamart/' or page.url == '/bigbasket/' or page.url == '/food-delivery/' or page.url == '/doordash/' or page.url == '/zomato/' or page.url == '/swiggy/' or page.url == '/ubereats/' %} text-blue-600 bg-blue-50{% endif %}">
                         Solutions
                         <i class="ri-arrow-down-s-line text-base transition-transform"></i>
                     </button>
-                    <div class="nav-dropdown-menu absolute top-full left-0 pt-2 w-64 bg-transparent z-50 pointer-events-none">
-                        <div class="bg-white rounded-xl shadow-xl border border-gray-100 pointer-events-auto p-4">
-                            <div class="space-y-1">
-                                <a href="/e-commerce/" class="flex items-start gap-3 p-3 rounded-lg hover:bg-blue-50 transition-all">
-                                    <i class="ri-shopping-cart-2-line text-blue-600 text-lg mt-0.5 flex-shrink-0"></i>
-                                    <div>
-                                        <div class="font-bold text-gray-900 text-sm">E-commerce</div>
-                                        <div class="text-xs text-gray-500">50+ platforms</div>
+                    <div class="nav-dropdown-menu absolute top-full left-0 pt-1 w-[500px] bg-transparent z-50 pointer-events-none">
+                        <div class="bg-white rounded-xl shadow-xl border border-gray-100 pointer-events-auto p-5">
+                            <div class="grid grid-cols-3 gap-6">
+                                <div>
+                                    <div class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">E-commerce</div>
+                                    <div class="space-y-1">
+                                        <a href="/amazon/" class="flex items-center gap-2 p-2 rounded-lg hover:bg-blue-50 transition-all text-sm font-medium text-gray-900">Amazon</a>
+                                        <a href="/walmart/" class="flex items-center gap-2 p-2 rounded-lg hover:bg-blue-50 transition-all text-sm font-medium text-gray-900">Walmart</a>
+                                        <a href="/etsy/" class="flex items-center gap-2 p-2 rounded-lg hover:bg-blue-50 transition-all text-sm font-medium text-gray-900">Etsy</a>
+                                        <a href="/flipkart/" class="flex items-center gap-2 p-2 rounded-lg hover:bg-blue-50 transition-all text-sm font-medium text-gray-900">Flipkart</a>
+                                        <a href="/ebay/" class="flex items-center gap-2 p-2 rounded-lg hover:bg-blue-50 transition-all text-sm font-medium text-gray-900">eBay</a>
+                                        <a href="/e-commerce/" class="flex items-center gap-2 p-2 rounded-lg hover:bg-blue-50 transition-all text-sm text-gray-500">All E-commerce →</a>
                                     </div>
-                                </a>
-                                <a href="/quick-commerce/" class="flex items-start gap-3 p-3 rounded-lg hover:bg-orange-50 transition-all">
-                                    <i class="ri-timer-flash-line text-orange-600 text-lg mt-0.5 flex-shrink-0"></i>
-                                    <div>
-                                        <div class="font-bold text-gray-900 text-sm">Quick Commerce</div>
-                                        <div class="text-xs text-gray-500">Blinkit, Zepto & more</div>
+                                </div>
+                                <div>
+                                    <div class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">Quick Commerce</div>
+                                    <div class="space-y-1">
+                                        <a href="/blinkit/" class="flex items-center gap-2 p-2 rounded-lg hover:bg-orange-50 transition-all text-sm font-medium text-gray-900">Blinkit</a>
+                                        <a href="/zepto/" class="flex items-center gap-2 p-2 rounded-lg hover:bg-orange-50 transition-all text-sm font-medium text-gray-900">Zepto</a>
+                                        <a href="/swiggy-instamart/" class="flex items-center gap-2 p-2 rounded-lg hover:bg-orange-50 transition-all text-sm font-medium text-gray-900">Swiggy Instamart</a>
+                                        <a href="/bigbasket/" class="flex items-center gap-2 p-2 rounded-lg hover:bg-orange-50 transition-all text-sm font-medium text-gray-900">BigBasket</a>
+                                        <a href="/quick-commerce/" class="flex items-center gap-2 p-2 rounded-lg hover:bg-orange-50 transition-all text-sm text-gray-500">All Quick Commerce →</a>
                                     </div>
-                                </a>
-                                <a href="/food-delivery/" class="flex items-start gap-3 p-3 rounded-lg hover:bg-green-50 transition-all">
-                                    <i class="ri-restaurant-line text-green-600 text-lg mt-0.5 flex-shrink-0"></i>
-                                    <div>
-                                        <div class="font-bold text-gray-900 text-sm">Food Delivery</div>
-                                        <div class="text-xs text-gray-500">Zomato, Swiggy & more</div>
+                                </div>
+                                <div>
+                                    <div class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">Food Delivery</div>
+                                    <div class="space-y-1">
+                                        <a href="/doordash/" class="flex items-center gap-2 p-2 rounded-lg hover:bg-green-50 transition-all text-sm font-medium text-gray-900">DoorDash</a>
+                                        <a href="/zomato/" class="flex items-center gap-2 p-2 rounded-lg hover:bg-green-50 transition-all text-sm font-medium text-gray-900">Zomato</a>
+                                        <a href="/swiggy/" class="flex items-center gap-2 p-2 rounded-lg hover:bg-green-50 transition-all text-sm font-medium text-gray-900">Swiggy</a>
+                                        <a href="/ubereats/" class="flex items-center gap-2 p-2 rounded-lg hover:bg-green-50 transition-all text-sm font-medium text-gray-900">Uber Eats</a>
+                                        <a href="/food-delivery/" class="flex items-center gap-2 p-2 rounded-lg hover:bg-green-50 transition-all text-sm text-gray-500">All Food Delivery →</a>
                                     </div>
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -181,7 +198,7 @@
                         More
                         <i class="ri-arrow-down-s-line text-base transition-transform"></i>
                     </button>
-                    <div class="nav-dropdown-menu absolute top-full left-0 pt-2 w-64 bg-transparent z-50 pointer-events-none">
+                    <div class="nav-dropdown-menu absolute top-full left-0 pt-1 w-64 bg-transparent z-50 pointer-events-none">
                         <div class="bg-white rounded-xl shadow-xl border border-gray-100 pointer-events-auto p-4">
                             <div class="space-y-1 mb-3">
                                 <a href="/industries/" class="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-all">
@@ -246,8 +263,8 @@
         .nav-dropdown-menu {
             opacity: 0;
             visibility: hidden;
-            transform: translateY(-10px);
-            transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+            transform: translateY(-8px);
+            transition: opacity 0.2s ease 0.12s, visibility 0.2s ease 0.12s, transform 0.2s ease 0.12s;
             pointer-events: none;
         }
         
@@ -257,38 +274,41 @@
             visibility: visible !important;
             transform: translateY(0) !important;
             pointer-events: auto !important;
+            transition-delay: 0s !important;
         }
         
         .nav-dropdown:hover .nav-link i {
             transform: rotate(180deg);
         }
         
-        /* Ensure menu items are clickable */
+        /* Ensure menu content is always clickable when visible */
+        .nav-dropdown-menu > div {
+            min-width: 100%;
+            pointer-events: auto;
+        }
+        
         .nav-dropdown-menu a {
             display: block;
             cursor: pointer;
             transition: all 0.2s ease;
             text-decoration: none;
+            color: inherit;
         }
         
-        /* Prevent layout collapse */
-        .nav-dropdown-menu > div {
-            min-width: 100%;
-        }
-        
-        /* Ensure proper spacing in 2-column layout */
         .nav-dropdown-menu .grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1.5rem;
         }
         
-        /* Fix for Services dropdown width */
         .nav-dropdown-menu.w-500 {
             width: 500px;
         }
         
-        /* Ensure proper spacing between items */
+        .nav-dropdown-menu.w-\[500px\] {
+            width: 500px;
+        }
+        
         .nav-dropdown-menu .space-y-1 > * + * {
             margin-top: 0.25rem;
         }

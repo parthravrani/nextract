@@ -35,6 +35,7 @@ years_experience: 1  # Update with actual experience
 show_offers: false  # Set to true to show promotional offers (Black Friday, etc.)
 
 # SEO Settings
+# canonical_url is non-www. Verify host (Netlify/Cloudflare/GitHub Pages) 301-redirects www.nextract.dev → nextract.dev to avoid split signals in GSC.
 canonical_url: "https://nextract.dev"
 og_image: "https://nextract.dev/assets/images/og-image.jpg"
 twitter_image: "https://nextract.dev/assets/images/twitter-image.jpg"
@@ -46,16 +47,16 @@ navigation:
     dropdown:
       - name: "API"
         link: "/products/"
-        description: "Self-service web scraping API"
+        description: "Web scraping API"
       - name: "Scrapers"
         link: "/scrapers/"
         description: "Platform-specific scrapers"
       - name: "APIs"
         link: "/apis/"
-        description: "Ready-to-use data APIs"
+        description: "Custom data APIs"
       - name: "Datasets"
         link: "/datasets/"
-        description: "Pre-built data collections"
+        description: "Custom datasets"
   - name: "Solutions"
     link: "#"
     dropdown:

@@ -47,7 +47,7 @@ GET /api/v1/doordash/search
 ## Documentation
 
 - **API Reference**: Complete API documentation with examples
-- **Code Samples**: Ready-to-use code samples in Python, Node.js, PHP, Ruby
+- **Code Samples**: Code samples in Python, Node.js, PHP, Ruby
 - **Webhooks**: Real-time data delivery via webhooks
 - **Rate Limits**: Transparent rate limiting and usage tracking
 

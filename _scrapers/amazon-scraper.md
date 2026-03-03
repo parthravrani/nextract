@@ -1,7 +1,7 @@
 ---
 layout: product-page
 title: "Amazon Product Scraper: Prices, Reviews & Seller Data"
-description: "Extract Amazon products without blocks. Get Pricing, Buy Box data, Reviews (50M+), Seller rankings. Auto-retry on failures. 99.9% success rate. JSON format."
+description: "Amazon product data, prices, reviews at scale. Extract product listings, Buy Box, seller data. Get sample data free. Custom pipelines for any Amazon marketplace."
 keywords: "Amazon scraper, Amazon product scraper, Amazon data extraction, Amazon price scraper, Amazon reviews scraper"
 order: 1
 ---
@@ -57,5 +57,25 @@ Amazon.com (US), Amazon.co.uk (UK), Amazon.de (Germany), Amazon.in (India), Amaz
   </a>
 </div>
 
+For a complete overview of our Amazon offerings including Scrava, APIs, and custom pipelines, see our [Amazon data solutions](/amazon/).
+
 [Contact us](/contact/) to get started with Amazon scraping.
+
+## Frequently Asked Questions
+
+### How do I get Amazon product data at scale?
+
+We offer multiple options: the Scrava API for ASIN-based scraping, custom scraping pipelines for bulk extraction, and custom APIs built for your real-time data needs. [Contact us](/contact/) to discuss your volume and requirements — we'll recommend the right approach and provide sample data.
+
+### Do you support all Amazon marketplaces?
+
+Yes. We support Amazon.com (US), Amazon.co.uk (UK), Amazon.de (Germany), Amazon.in (India), Amazon.ca (Canada), Amazon.fr (France), Amazon.it (Italy), Amazon.es (Spain), Amazon.com.au (Australia), Amazon.co.jp (Japan), and other regional marketplaces. Specify your target region when requesting a quote.
+
+### What format is Amazon data delivered in?
+
+Data is typically delivered in JSON, with options for CSV or Parquet for bulk datasets. Our APIs return structured JSON responses. Custom pipelines can output in any format your downstream systems require — JSONL, Parquet, or direct database load.
+
+### How is this different from the Amazon PA-API?
+
+The Amazon Product Advertising API (PA-API) has strict eligibility requirements, rate limits, and only covers product catalog data. Our scraping solutions extract the data you need — including pricing, reviews, seller information, and Buy Box data — without PA-API restrictions. We handle anti-bot measures and deliver data in your preferred format.
 

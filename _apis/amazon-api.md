@@ -8,7 +8,7 @@ order: 1
 
 # Amazon API
 
-RESTful API for extracting product data, pricing, reviews, ratings, and seller information from Amazon marketplaces worldwide. We've processed 2.3M+ Amazon ASINs with a 99.7% success rate, handling CAPTCHAs, rotating proxies, and "Dog" page errors automatically.
+RESTful API for extracting product data, pricing, reviews, ratings, and seller information from Amazon marketplaces worldwide. For a complete overview of our Amazon offerings including Scrava, custom pipelines, and datasets, see our [Amazon data solutions](/amazon/). We've processed 2.3M+ Amazon ASINs with a 99.7% success rate, handling CAPTCHAs, rotating proxies, and "Dog" page errors automatically.
 
 ## API Features
 
@@ -51,7 +51,7 @@ Amazon.com (US), Amazon.co.uk (UK), Amazon.de (Germany), Amazon.in (India), Amaz
 ## Documentation
 
 - **API Reference**: Complete API documentation with examples
-- **Code Samples**: Ready-to-use code samples in Python, Node.js, PHP, Ruby
+- **Code Samples**: Code samples in Python, Node.js, PHP, Ruby
 - **Webhooks**: Real-time data delivery via webhooks
 - **Rate Limits**: Transparent rate limiting and usage tracking
 

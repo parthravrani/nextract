@@ -1,14 +1,14 @@
 ---
 layout: product-page
-title: "Amazon Dataset - E-commerce Product Data"
-description: "Comprehensive Amazon product dataset with monthly refresh. Product data, prices, reviews, ratings, and seller information. Export as CSV, JSON, or Parquet."
-keywords: "Amazon dataset, Amazon product data, e-commerce dataset, product dataset, Amazon data export"
+title: "Amazon Dataset - Custom E-commerce Product Data"
+description: "Custom Amazon product datasets built for your research. Product data, prices, reviews, ratings, and seller information. Export as CSV, JSON, or Parquet."
+keywords: "Amazon dataset, Amazon product data, custom dataset, product dataset, Amazon data export"
 order: 1
 ---
 
 # Amazon Dataset
 
-Comprehensive product dataset from Amazon marketplaces worldwide. Monthly refresh ensures you always have the latest data.
+Custom product datasets from Amazon marketplaces worldwide, built to your specification. We collect the data you need and deliver on your schedule — one-time or recurring refresh.
 
 ## Dataset Contents
 
@@ -29,7 +29,7 @@ Comprehensive product dataset from Amazon marketplaces worldwide. Monthly refres
 
 - **Marketplaces**: Amazon.com (US), Amazon.co.uk (UK), Amazon.de (Germany), Amazon.in (India), Amazon.ca (Canada), Amazon.fr (France), Amazon.it (Italy), Amazon.es (Spain), Amazon.com.au (Australia), Amazon.co.jp (Japan), and more
 - **Categories**: All product categories across Amazon marketplaces
-- **Update Frequency**: Monthly refresh with latest data
+- **Update Frequency**: One-time or recurring delivery on your schedule
 
 ## Use Cases
 
@@ -46,7 +46,9 @@ Comprehensive product dataset from Amazon marketplaces worldwide. Monthly refres
 - **Historical Data**: Price history and trend data available
 - **Quality**: High data accuracy with quality assurance
 
-[Contact us](/contact/) to get access to the Amazon dataset.
+For a complete overview of our Amazon offerings including APIs, Scrava, and custom pipelines, see our [Amazon data solutions](/amazon/).
+
+[Contact us](/contact/) to request a custom Amazon dataset built for your needs.
 
 
 

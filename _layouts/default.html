@@ -321,6 +321,44 @@
     </script>
     {% endif %}
     
+    {% if page.url == '/amazon/' %}
+    <!-- Service Schema for Amazon Page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Amazon Data Extraction Service",
+      "name": "Amazon Product Data, Pricing & Reviews",
+      "provider": {
+        "@type": "Organization",
+        "name": "{{ site.title }}",
+        "url": "{{ site.canonical_url }}"
+      },
+      "areaServed": "Worldwide",
+      "description": "{{ page.description }}"
+    }
+    </script>
+    {% endif %}
+    
+    {% if page.url == '/ai-training-data/' %}
+    <!-- Service Schema for AI Training Data Page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "AI Training Data & Custom Dataset Service",
+      "name": "AI Training Data for LLMs & ML Models",
+      "provider": {
+        "@type": "Organization",
+        "name": "{{ site.title }}",
+        "url": "{{ site.canonical_url }}"
+      },
+      "areaServed": "Worldwide",
+      "description": "{{ page.description }}"
+    }
+    </script>
+    {% endif %}
+    
     {% if page.url == '/scrava/' %}
     <!-- Product Schema for Scrava -->
     <script type="application/ld+json">
@@ -415,7 +453,7 @@
           "name": "What is Nextract's web scraping API?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nextract provides enterprise-grade web scraping API and custom data extraction services. Our self-service API allows developers to extract data from any website at scale with reliable infrastructure."
+            "text": "Nextract provides enterprise-grade web scraping and custom data extraction services. We build custom APIs and datasets for your needs — no pre-built or ready-made products; every solution is designed and delivered for your use case."
           }
         },
         {
@@ -447,7 +485,7 @@
           "name": "How quickly can I get started with Nextract?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "You can start extracting data in minutes with our self-service API. No credit card required for free trial. For custom solutions, we typically deliver within 2-4 weeks."
+            "text": "We deliver custom solutions typically within 2-4 weeks. Request a consultation or sample data to get started; we'll scope your requirements and build the right data pipeline for you."
           }
         }
       ]
@@ -1101,7 +1139,7 @@
         }
     </style>
 
-    {% seo %}
+    {% seo title=false %}
 </head>
 <body class="antialiased">
     {% if site.show_offers %}
@@ -1207,11 +1245,13 @@
                     </div>
                     <div>
                         <label for="modal-interest" class="block text-sm font-bold text-gray-900 mb-2">I'm Interested In <span class="text-orange-600">*</span></label>
-                        <select id="modal-interest" name="interest" required class="w-full px-4 py-4 border border-gray-200 focus:outline-none focus:border-blue-600 transition-all text-gray-900">
+                            <select id="modal-interest" name="interest" required class="w-full px-4 py-4 border border-gray-200 focus:outline-none focus:border-blue-600 transition-all text-gray-900">
                             <option value="">Select an option</option>
                             <option value="api">Self-Service API</option>
                             <option value="custom">Custom Scraping Solutions</option>
                             <option value="managed">Managed Services</option>
+                            <option value="ai-training-data">AI Training Data</option>
+                            <option value="amazon-data">Amazon Data</option>
                             <option value="consulting">Consulting & Strategy</option>
                             <option value="other">Other</option>
                         </select>
