@@ -81,7 +81,7 @@
       "logo": "https://nextract.dev/assets/images/logo.png",
       "description": "Nextract is a modern data solutions company providing professional web scraping and data extraction services.",
       "email": "hello@nextract.dev",
-      "telephone": "+91 85110-98799",
+      "telephone": "{{ site.phone_sales }}",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "B-1308, Eastface",
@@ -1195,7 +1195,7 @@
     <!-- Floating Action Buttons -->
     <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
         <!-- WhatsApp Button -->
-        <a href="https://wa.me/918511098799?text=Hello%20Nextract,%20I%20would%20like%20to%20know%20more%20about%20your%20services" 
+        <a href="https://wa.me/{{ site.whatsapp_number }}?text=Hello%20Nextract,%20I%20would%20like%20to%20know%20more%20about%20your%20services" 
            target="_blank" 
            class="w-14 h-14 bg-[#25D366] text-white flex items-center justify-center shadow-lg hover:shadow-xl transition-all transform hover:scale-110 group"
            aria-label="Chat on WhatsApp">
