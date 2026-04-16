@@ -3,715 +3,1396 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nextract Pitch Deck</title>
+    <title>Nextract — External Data, Fully Managed</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
     <style>
-        @media print {
-            .slide {
-                page-break-after: always;
-                page-break-inside: avoid;
-                break-after: page;
-                break-inside: avoid;
-                min-height: 794px;
-                height: auto;
-            }
-            .slide-content {
-                page-break-inside: avoid;
-                break-inside: avoid;
-            }
-            body {
-                margin: 0;
-                padding: 0;
-            }
-            * {
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
+        :root {
+            --brand-blue: #2563EB;
+            --brand-blue-dark: #1D4ED8;
+            --brand-orange: #EA580C;
+            --ink: #0B1220;
+            --ink-soft: #111827;
+            --muted: #6B7280;
+            --line: #E5E7EB;
+            --cream: #FAFAF7;
         }
+
+        * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
         body {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
             margin: 0;
             padding: 0;
+            background: #F3F4F6;
+            color: var(--ink);
         }
+
+        .display { font-family: 'Space Grotesk', 'Inter', sans-serif; letter-spacing: -0.02em; }
+
+        /* Each slide = one A4 landscape page (297×210mm) */
         .slide {
-            width: 100%;
-            min-height: 794px;
-            height: auto;
-            padding: 40px 50px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
+            width: 297mm;
+            height: 210mm;
+            margin: 24px auto;
+            padding: 14mm 18mm;
             background: white;
-            page-break-after: always;
-            page-break-inside: avoid;
-            break-after: page;
-            break-inside: avoid;
             box-sizing: border-box;
-        }
-        .slide-content {
-            width: 100%;
-            flex: 1;
             display: flex;
             flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.15);
+            page-break-after: always;
+            break-after: page;
+        }
+        .slide--dark { background: var(--ink); color: white; }
+        .slide--cream { background: var(--cream); }
+        .slide--blue { background: var(--brand-blue); color: white; }
+        .slide--ink-accent { background: var(--ink); color: white; }
+
+        /* Slide frame: top eyebrow + title header, flexible body, bottom footer */
+        .slide-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 9mm; }
+        .slide-body { flex: 1; display: flex; flex-direction: column; min-height: 0; }
+        .slide-footer {
+            margin-top: auto;
+            padding-top: 5mm;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 9px;
+            color: var(--muted);
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        /* Non-cover slides: page-num + logo grouped together in the TOP-RIGHT corner.
+           Absolute-positioned so they take zero flow space — the body content
+           (left-aligned eyebrow / title / cards) fills the full page height from
+           the top padding, never colliding with the corner mark on the opposite side. */
+        .slide:not(.slide--cover) .slide-header {
+            position: absolute;
+            top: 11mm;
+            right: 18mm;
+            left: auto;
+            width: auto;
+            margin-bottom: 0;
+            z-index: 5;
+            gap: 14px;
+            flex-direction: row-reverse; /* visual order: [page-num · logo] with logo rightmost */
+            justify-content: flex-start;
+            pointer-events: none;
+        }
+        .slide:not(.slide--cover) .slide-body {
+            padding-top: 0;
+            flex: 1;
+            min-height: 0;
+        }
+        /* Keep the bottom footer visible with its contextual text */
+        .slide:not(.slide--cover) .slide-footer { display: flex; }
+
+        /* Logo in slide header */
+        .slide-logo { height: 26px; width: auto; display: block; }
+        .slide-logo--invert { filter: brightness(0) invert(1); opacity: 0.95; }
+        .slide-logo--lg { height: 52px; }
+
+        /* Compact stacked cards — used in tight landscape rows */
+        .mini-card {
+            padding: 14px 16px;
+            border: 1px solid var(--line);
+            background: white;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .mini-card .mini-icon {
+            width: 34px; height: 34px;
+            display: inline-flex; align-items: center; justify-content: center;
+            font-size: 16px;
+            margin-bottom: 2px;
+        }
+        .mini-card-dark {
+            padding: 14px 16px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.12);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .slide--dark .slide-footer, .slide--blue .slide-footer, .slide--ink-accent .slide-footer { color: rgba(255,255,255,0.5); }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--brand-blue);
+        }
+        .eyebrow::before {
+            content: "";
+            width: 24px;
+            height: 2px;
+            background: currentColor;
+        }
+        .slide--dark .eyebrow, .slide--blue .eyebrow, .slide--ink-accent .eyebrow { color: #93C5FD; }
+
+        .page-num {
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            color: var(--muted);
+        }
+        .slide--dark .page-num, .slide--blue .page-num, .slide--ink-accent .page-num { color: rgba(255,255,255,0.5); }
+
+        h1.hero-title {
+            font-size: 84px;
+            line-height: 0.95;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+        }
+        h2.section-title {
+            font-size: 40px;
+            line-height: 1.05;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: var(--ink);
+        }
+
+        /* Safety: every slide body is a constrained column that cannot overflow */
+        .slide-body > p, .slide-body > .lead {
+            font-size: 14px;
+            line-height: 1.55;
+            color: var(--muted);
+        }
+
+        /* Compact card variants used in 4- and 6-column landscape rows */
+        .c-card {
+            padding: 14px 16px;
+            border: 1px solid var(--line);
+            background: white;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .c-card .c-ico {
+            width: 32px; height: 32px;
+            display: inline-flex; align-items: center; justify-content: center;
+            font-size: 15px;
+            flex-shrink: 0;
+        }
+        .c-card .c-title {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.25;
+            color: var(--ink);
+        }
+        .c-card .c-desc {
+            font-size: 11.5px;
+            line-height: 1.45;
+            color: var(--muted);
+        }
+        .c-card-dark {
+            padding: 14px 16px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.12);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            color: white;
+        }
+        .c-card-dark .c-title { color: white; }
+        .c-card-dark .c-desc { color: rgba(255,255,255,0.7); }
+        .slide--dark h2.section-title, .slide--blue h2.section-title, .slide--ink-accent h2.section-title { color: white; }
+
+        /* Gradient headline effect — NOT using `background-clip: text` because
+           many PDF engines render the background box as a solid rectangle
+           instead of clipping it to the glyphs. A tiny JS pass at the bottom
+           of the page splits each `.accent-underline` phrase into per-letter
+           spans with interpolated blue→orange solid colors — which renders
+           identically on screen and in PDF (every glyph has a real color). */
+        .accent-underline {
+            color: var(--brand-blue); /* fallback before JS / if JS disabled */
+        }
+        .accent-underline > span { display: inline; }
+
+        .rule { height: 1px; background: var(--line); width: 100%; }
+        .slide--dark .rule, .slide--ink-accent .rule { background: rgba(255,255,255,0.12); }
+        .slide--blue .rule { background: rgba(255,255,255,0.25); }
+
+        /* Cards */
+        .card {
+            padding: 20px;
+            border: 1px solid var(--line);
+            background: white;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .card-dark {
+            padding: 20px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .card-accent-l {
+            padding: 18px 20px;
+            background: white;
+            border-left: 3px solid var(--brand-blue);
+            box-shadow: 0 1px 0 var(--line);
+        }
+        .card-accent-l--orange { border-left-color: var(--brand-orange); }
+        .card-accent-l--ink { border-left-color: var(--ink); }
+
+        .num-tag {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: var(--muted);
+        }
+        .slide--dark .num-tag, .slide--blue .num-tag, .slide--ink-accent .num-tag { color: rgba(255,255,255,0.5); }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            font-size: 10px;
+            font-weight: 700;
+            border: 1px solid var(--line);
+            background: white;
+            color: var(--ink);
+            border-radius: 999px;
+        }
+        .slide--dark .pill, .slide--blue .pill, .slide--ink-accent .pill {
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.18);
+            color: white;
+        }
+
+        .badge-blue { background: #DBEAFE; color: #1D4ED8; }
+        .badge-orange { background: #FFEDD5; color: #C2410C; }
+        .badge-indigo { background: #E0E7FF; color: #4338CA; }
+        .badge-emerald { background: #D1FAE5; color: #047857; }
+        .badge-rose { background: #FFE4E6; color: #BE123C; }
+        .badge-violet { background: #EDE9FE; color: #6D28D9; }
+
+        /* Cover ornamental grid */
+        .grid-bg {
+            position: absolute; inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+        }
+        .glow {
+            position: absolute;
+            width: 420px; height: 420px;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        /* Process stepper */
+        .step-circle {
+            width: 34px; height: 34px;
+            border-radius: 999px;
+            background: var(--brand-blue);
+            color: white;
+            display: inline-flex;
+            align-items: center;
             justify-content: center;
-            page-break-inside: avoid;
-            break-inside: avoid;
+            font-weight: 800;
+            font-size: 13px;
+            font-family: 'Space Grotesk', sans-serif;
+            flex-shrink: 0;
         }
-        .slide-section {
-            page-break-inside: avoid;
-            break-inside: avoid;
+
+        /* Tiny utility */
+        .kicker {
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
         }
-        .slide-dark {
-            background: #111827;
-            color: white;
-        }
-        .slide-blue {
-            background: #2563EB;
-            color: white;
+
+        /* Print */
+        @media print {
+            body { background: white; }
+            .slide {
+                margin: 0;
+                box-shadow: none;
+                page-break-after: always;
+                break-after: page;
+                width: 297mm;
+                height: 210mm;
+            }
+            * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            @page { size: A4 landscape; margin: 0; }
         }
     </style>
 </head>
-<body class="bg-white">
+<body>
 
-    <!-- Slide 1: Title -->
-    <div class="slide slide-dark">
-        <div class="slide-content">
-            <div class="max-w-4xl mx-auto text-center">
-                <div class="mb-6">
-                    <h1 class="text-7xl font-black mb-3">NEXTRACT</h1>
-                    <p class="text-2xl text-gray-300 font-light"></p>
-                </div>
-                <div class="mt-12 pt-6 border-t border-gray-700">
-                    <p class="text-lg text-gray-400">External Data, Fully Managed</p>
-                    <p class="text-base text-gray-500 mt-3">hello@nextract.dev | www.nextract.dev</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- ============================================ -->
+    <!-- SLIDE 01 · COVER                              -->
+    <!-- ============================================ -->
+    <section class="slide slide--dark slide--cover">
+        <div class="glow" style="background: #2563EB; top: -120px; left: -120px;"></div>
+        <div class="glow" style="background: #EA580C; bottom: -120px; right: -120px; opacity: 0.4;"></div>
+        <div class="grid-bg"></div>
 
-    <!-- Slide 2: The Problem -->
-    <div class="slide">
-        <div class="slide-content">
-            <div class="max-w-5xl mx-auto">
-                <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">The Problem</div>
-                <h2 class="text-5xl font-black text-gray-900 mb-8 leading-tight">Data Is Critical<br/>But Hard to Access</h2>
-                
-                <div class="grid md:grid-cols-2 gap-6 slide-section">
-                    <div class="p-6 border-l-4 border-blue-600">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Engineering Resources Wasted</h3>
-                        <p class="text-gray-600 text-base">Teams spend months building scraping infrastructure instead of focusing on core business</p>
-                    </div>
-                    <div class="p-6 border-l-4 border-orange-600">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Pipelines Break Constantly</h3>
-                        <p class="text-gray-600 text-base">Website changes, anti-bot measures, and IP blocks cause data feeds to fail</p>
-                    </div>
-                    <div class="p-6 border-l-4 border-blue-600">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Data Quality Issues</h3>
-                        <p class="text-gray-600 text-base">Unreliable data leads to poor business decisions and missed opportunities</p>
-                    </div>
-                    <div class="p-6 border-l-4 border-orange-600">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Maintenance Overhead</h3>
-                        <p class="text-gray-600 text-base">Ongoing monitoring, debugging, and updates drain time from strategic work</p>
-                    </div>
-                </div>
-            </div>
+        <div class="slide-header" style="position: relative; z-index: 2;">
+            <img src="assets/images/logo-header.png" alt="Nextract Data Solutions" class="slide-logo slide-logo--invert slide-logo--lg">
+            <div class="pill"><span class="w-1.5 h-1.5 rounded-full bg-orange-400"></span>Pitch Deck · 2026</div>
         </div>
-    </div>
 
-    <!-- Slide 3: The Solution -->
-    <div class="slide slide-blue">
-        <div class="slide-content">
-            <div class="max-w-5xl mx-auto">
-                <div class="text-xs font-bold text-blue-300 uppercase tracking-widest mb-4">The Solution</div>
-                <h2 class="text-5xl font-black mb-8 leading-tight">Fully Managed Data Solutions<br/>For Your Business</h2>
-                
-                <div class="grid md:grid-cols-2 gap-6 slide-section">
-                    <div class="bg-white/10 backdrop-blur-sm p-6 border border-white/20">
-                        <div class="text-xs font-bold text-orange-300 uppercase tracking-widest mb-3">Core Service</div>
-                        <div class="text-4xl font-black mb-3">01</div>
-                        <h3 class="text-xl font-bold mb-3">Custom Data Extraction</h3>
-                        <p class="text-white/90 text-base mb-3">Tailored solutions built specifically for your business needs</p>
-                        <ul class="text-white/80 space-y-1 text-xs">
-                            <li>• Dedicated engineering team</li>
-                            <li>• Custom data pipelines</li>
-                            <li>• End-to-end ownership</li>
-                        </ul>
-                    </div>
-                    <div class="bg-white/10 backdrop-blur-sm p-6 border border-white/20">
-                        <div class="text-xs font-bold text-blue-300 uppercase tracking-widest mb-3">Managed Service</div>
-                        <div class="text-4xl font-black mb-3">02</div>
-                        <h3 class="text-xl font-bold mb-3">Data Feeds & Monitoring</h3>
-                        <p class="text-white/90 text-base mb-3">Automated delivery with 24/7 monitoring and support</p>
-                        <ul class="text-white/80 space-y-1 text-xs">
-                            <li>• Scheduled data delivery</li>
-                            <li>• Quality assurance</li>
-                            <li>• Ongoing maintenance</li>
-                        </ul>
-                    </div>
-                    <div class="bg-white/10 backdrop-blur-sm p-6 border border-white/20">
-                        <div class="text-4xl font-black mb-3">03</div>
-                        <h3 class="text-xl font-bold mb-3">AI-Powered Processing</h3>
-                        <p class="text-white/90 text-base">Intelligent data enrichment, matching, and classification</p>
-                    </div>
-                    <div class="bg-white/10 backdrop-blur-sm p-6 border border-white/20">
-                        <div class="text-4xl font-black mb-3">04</div>
-                        <h3 class="text-xl font-bold mb-3">Consulting & Strategy</h3>
-                        <p class="text-white/90 text-base">Expert guidance on data strategy and implementation</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        <div class="slide-body" style="justify-content: center; position: relative; z-index: 2;">
+            <div class="kicker mb-6" style="color: #93C5FD;">Pitch Deck · Nextract Data Solutions</div>
+            <h1 class="display hero-title mb-6" style="font-size: 108px; line-height: 0.92;">
+                External Data,<br/>
+                <span class="accent-underline">Fully Managed.</span>
+            </h1>
+            <p class="text-xl text-white/75 max-w-3xl leading-relaxed mb-10">
+                We deliver custom-built, reliably-maintained data pipelines for teams that need real market intelligence — without building the scraping stack themselves.
+            </p>
 
-    <!-- Slide 3.5: Who This Is For -->
-    <div class="slide">
-        <div class="slide-content">
-            <div class="max-w-5xl mx-auto">
-                <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">Our Clients</div>
-                <h2 class="text-5xl font-black text-gray-900 mb-8 leading-tight">Who This Is For</h2>
-                
-                <div class="grid md:grid-cols-2 gap-6 slide-section">
-                    <div class="p-6 border-4 border-blue-600 bg-blue-50">
-                        <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-3">E-commerce & Retail</div>
-                        <h3 class="text-2xl font-black text-gray-900 mb-4">Marketplace Intelligence</h3>
-                        <div class="space-y-2 text-sm text-gray-700">
-                            <div class="flex items-start gap-2">
-                                <span class="text-blue-600 font-black">→</span>
-                                <span>Brands monitoring competitor pricing</span>
-                            </div>
-                            <div class="flex items-start gap-2">
-                                <span class="text-blue-600 font-black">→</span>
-                                <span>Retailers tracking product trends</span>
-                            </div>
-                            <div class="flex items-start gap-2">
-                                <span class="text-blue-600 font-black">→</span>
-                                <span>Analytics teams building dashboards</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="p-6 border-4 border-orange-600 bg-orange-50">
-                        <div class="text-xs font-bold text-orange-600 uppercase tracking-widest mb-3">Operations Leaders</div>
-                        <h3 class="text-2xl font-black text-gray-900 mb-4">Business Intelligence</h3>
-                        <div class="space-y-2 text-sm text-gray-700">
-                            <div class="flex items-start gap-2">
-                                <span class="text-orange-600 font-black">→</span>
-                                <span>Quick commerce optimizing zones</span>
-                            </div>
-                            <div class="flex items-start gap-2">
-                                <span class="text-orange-600 font-black">→</span>
-                                <span>Food delivery tracking menus</span>
-                            </div>
-                            <div class="flex items-start gap-2">
-                                <span class="text-orange-600 font-black">→</span>
-                                <span>Travel companies monitoring prices</span>
-                            </div>
-                        </div>
-                    </div>
+            <div class="rule mb-6"></div>
 
-                    <div class="p-6 border-2 border-gray-200">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Research Firms</h3>
-                        <p class="text-gray-600 text-sm">Market research teams needing comprehensive data across industries</p>
-                        </div>
-
-                    <div class="p-6 border-2 border-gray-200">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Product Teams</h3>
-                        <p class="text-gray-600 text-sm">Startups building data-driven products without in-house infrastructure</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 4: Industries We Serve -->
-    <div class="slide">
-        <div class="slide-content">
-            <div class="max-w-5xl mx-auto">
-                <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">Industries</div>
-                <h2 class="text-5xl font-black text-gray-900 mb-8 leading-tight">Who We Work With</h2>
-                
-                <div class="grid md:grid-cols-2 gap-8 slide-section">
-                    <div>
-                        <div class="space-y-3">
-                            <div class="p-4 border-l-4 border-blue-600 bg-blue-50">
-                                <div class="font-bold text-gray-900 mb-1 text-lg">E-commerce & Retail</div>
-                                <div class="text-gray-600 text-sm">Price intelligence, competitor monitoring, product research</div>
-                            </div>
-                            <div class="p-4 border-l-4 border-orange-600 bg-orange-50">
-                                <div class="font-bold text-gray-900 mb-1 text-lg">Quick Commerce & Grocery</div>
-                                <div class="text-gray-600 text-sm">Zone mapping, inventory tracking, delivery optimization</div>
-                            </div>
-                            <div class="p-4 border-l-4 border-blue-600 bg-blue-50">
-                                <div class="font-bold text-gray-900 mb-1 text-lg">Food Delivery & Restaurants</div>
-                                <div class="text-gray-600 text-sm">Menu monitoring, pricing analysis, market intelligence</div>
-                            </div>
-                            <div class="p-4 border-l-4 border-orange-600 bg-orange-50">
-                                <div class="font-bold text-gray-900 mb-1 text-lg">Travel & Hospitality</div>
-                                <div class="text-gray-600 text-sm">Pricing data, availability tracking, review analysis</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="space-y-3">
-                            <div class="p-4 border-l-4 border-blue-600 bg-blue-50">
-                                <div class="font-bold text-gray-900 mb-1 text-lg">Real Estate</div>
-                                <div class="text-gray-600 text-sm">Property listings, market trends, rental analysis</div>
-                            </div>
-                            <div class="p-4 border-l-4 border-orange-600 bg-orange-50">
-                                <div class="font-bold text-gray-900 mb-1 text-lg">Financial Services</div>
-                                <div class="text-gray-600 text-sm">Market data aggregation, news monitoring, compliance</div>
-                            </div>
-                            <div class="p-4 border-l-4 border-blue-600 bg-blue-50">
-                                <div class="font-bold text-gray-900 mb-1 text-lg">Market Research</div>
-                                <div class="text-gray-600 text-sm">Multi-source data collection, trend analysis, reporting</div>
-                            </div>
-                            <div class="p-4 border-l-4 border-orange-600 bg-orange-50">
-                                <div class="font-bold text-gray-900 mb-1 text-lg">SaaS & Startups</div>
-                                <div class="text-gray-600 text-sm">Data-driven products, competitive intelligence, lead gen</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 5: Pricing & Engagement -->
-    <div class="slide">
-        <div class="slide-content">
-            <div class="max-w-5xl mx-auto">
-                <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">Pricing</div>
-                <h2 class="text-5xl font-black text-gray-900 mb-8 leading-tight">Flexible Engagement Models</h2>
-            
-                <div class="grid md:grid-cols-2 gap-6 slide-section">
-                    <div class="p-8 border-4 border-blue-600 bg-blue-50">
-                        <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-3">One-Time Projects</div>
-                        <div class="text-3xl font-black text-blue-600 mb-3">Custom Build</div>
-                        <p class="text-gray-700 text-base mb-4">Fixed-price projects for specific data extraction needs</p>
-                        <ul class="text-gray-600 space-y-2 text-sm">
-                            <li>• Clear scope and deliverables</li>
-                            <li>• Fixed timeline and pricing</li>
-                            <li>• Sample data before commitment</li>
-                        </ul>
-                    </div>
-                    <div class="p-8 border-4 border-orange-600 bg-orange-50">
-                        <div class="text-xs font-bold text-orange-600 uppercase tracking-widest mb-3">Ongoing Services</div>
-                        <div class="text-3xl font-black text-orange-600 mb-3">Managed Data</div>
-                        <p class="text-gray-700 text-base mb-4">Monthly or annual retainers for continuous delivery</p>
-                        <ul class="text-gray-600 space-y-2 text-sm">
-                            <li>• Automated data feeds</li>
-                            <li>• 24/7 monitoring & support</li>
-                            <li>• Ongoing maintenance included</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="mt-8 p-8 bg-gray-50 border-2 border-gray-200 slide-section">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6">What's Included</h3>
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="space-y-3">
-                            <div class="flex items-start gap-3">
-                                <div class="text-blue-600 font-black text-xl">✓</div>
-                        <div>
-                                    <div class="font-bold text-gray-900">Custom Development</div>
-                                    <div class="text-gray-600 text-sm">Built specifically for your requirements</div>
-                                </div>
-                        </div>
-                            <div class="flex items-start gap-3">
-                                <div class="text-blue-600 font-black text-xl">✓</div>
-                        <div>
-                                    <div class="font-bold text-gray-900">Quality Assurance</div>
-                                    <div class="text-gray-600 text-sm">Validated data with 95%+ accuracy</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="space-y-3">
-                            <div class="flex items-start gap-3">
-                                <div class="text-blue-600 font-black text-xl">✓</div>
-                        <div>
-                                    <div class="font-bold text-gray-900">Reliable Delivery</div>
-                                    <div class="text-gray-600 text-sm">99.9% uptime with monitoring</div>
-                                </div>
-                        </div>
-                            <div class="flex items-start gap-3">
-                                <div class="text-blue-600 font-black text-xl">✓</div>
-                        <div>
-                                    <div class="font-bold text-gray-900">Ongoing Support</div>
-                                    <div class="text-gray-600 text-sm">Direct access to engineering team</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 6: Why Choose Us -->
-    <div class="slide slide-dark">
-        <div class="slide-content">
-                    <div class="max-w-5xl mx-auto">
-                        <div class="text-sm font-bold text-blue-400 uppercase tracking-widest mb-6">Why Choose Us</div>
-        </div>
-            <h2 class="text-7xl font-black mb-12 leading-tight">Why Nextract</h2>
-            
-            <div class="grid md:grid-cols-2 gap-8 mt-12">
-                <div class="p-8 bg-white/5 border border-white/10">
-                    <div class="text-5xl font-black text-blue-400 mb-4">8+</div>
-                    <h3 class="text-2xl font-bold mb-4">Years Experience</h3>
-                    <p class="text-white/80">Deep expertise in web scraping, data extraction, and anti-bot bypassing</p>
-                </div>
-                <div class="p-8 bg-white/5 border border-white/10">
-                    <div class="text-5xl font-black text-orange-400 mb-4">100%</div>
-                    <h3 class="text-2xl font-bold mb-4">Ownership</h3>
-                    <p class="text-white/80">We handle everything - you focus on your business, not data pipelines</p>
-                </div>
-                <div class="p-8 bg-white/5 border border-white/10">
-                    <div class="text-5xl font-black text-blue-400 mb-4">Fast</div>
-                    <h3 class="text-2xl font-bold mb-4">Delivery</h3>
-                    <p class="text-white/80">Sample data in 48-72 hours, full projects start within 1-2 weeks</p>
-                </div>
-                <div class="p-8 bg-white/5 border border-white/10">
-                    <div class="text-5xl font-black text-orange-400 mb-4">24/7</div>
-                    <h3 class="text-2xl font-bold mb-4">Support</h3>
-                    <p class="text-white/80">Direct access to engineering team ensuring your data never stops</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 7: What We Can Extract -->
-    <div class="slide">
-        <div class="slide-content">
-                    <div class="max-w-5xl mx-auto">
-                        <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-6">Technical Capabilities</div>
-        </div>
-            <h2 class="text-7xl font-black text-gray-900 mb-12 leading-tight">What We Can Extract</h2>
-            
-            <div class="grid md:grid-cols-2 gap-8 mt-12">
-                <div class="p-8 border-2 border-gray-200">
-                    <div class="text-sm font-bold text-blue-600 mb-4">E-COMMERCE & MARKETPLACES</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Product & Pricing Data</h3>
-                    <p class="text-gray-600 mb-6">Extract product details, prices, reviews, ratings, seller information, and inventory status</p>
-                    <div class="text-sm text-gray-600">
-                        Amazon, Flipkart, Walmart, eBay, Shopify stores
-                    </div>
-                </div>
-                <div class="p-8 border-2 border-gray-200">
-                    <div class="text-sm font-bold text-orange-600 mb-4">FOOD & QUICK COMMERCE</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Menu & Availability</h3>
-                    <p class="text-gray-600 mb-6">Track restaurant menus, prices, delivery zones, and product availability in real-time</p>
-                    <div class="text-sm text-gray-600">
-                        Zomato, Swiggy, DoorDash, Blinkit, Zepto
-                    </div>
-                </div>
-                <div class="p-8 border-2 border-gray-200">
-                    <div class="text-sm font-bold text-blue-600 mb-4">TRAVEL & HOSPITALITY</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Pricing & Reviews</h3>
-                    <p class="text-gray-600 mb-6">Monitor hotel prices, flight availability, booking trends, and customer reviews</p>
-                    <div class="text-sm text-gray-600">
-                        Booking.com, Airbnb, Expedia, TripAdvisor
-                    </div>
-                </div>
-                <div class="p-8 border-2 border-gray-200">
-                    <div class="text-sm font-bold text-orange-600 mb-4">MOBILE APPS & APIs</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">App Data Extraction</h3>
-                    <p class="text-gray-600 mb-6">Reverse-engineer mobile app APIs to extract data from iOS and Android applications</p>
-                    <div class="text-sm text-gray-600">
-                        Any mobile-only platform or app
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 8: Example Use Cases -->
-    <div class="slide slide-dark">
-        <div class="slide-content">
-                    <div class="max-w-5xl mx-auto">
-                        <div class="text-sm font-bold text-blue-400 uppercase tracking-widest mb-6">Example Projects</div>
-        </div>
-            <h2 class="text-7xl font-black mb-12 leading-tight">What We Can<br/>Build For You</h2>
-            
-            <div class="grid md:grid-cols-2 gap-8 mt-12">
-                <div class="p-8 bg-white/5 border border-white/10">
-                    <div class="text-sm font-bold text-orange-400 uppercase tracking-widest mb-4">E-commerce</div>
-                    <h3 class="text-2xl font-bold mb-4">Competitor Price Monitoring</h3>
-                    <p class="text-white/80 mb-4">Track competitor pricing across multiple marketplaces, get alerts on price changes, and optimize your pricing strategy</p>
-                    <div class="text-white/60 text-sm">
-                        • Multi-platform tracking<br/>
-                        • Real-time price alerts<br/>
-                        • Historical data analysis
-                    </div>
-                </div>
-                <div class="p-8 bg-white/5 border border-white/10">
-                    <div class="text-sm font-bold text-blue-400 uppercase tracking-widest mb-4">Quick Commerce</div>
-                    <h3 class="text-2xl font-bold mb-4">Delivery Zone Intelligence</h3>
-                    <p class="text-white/80 mb-4">Map serviceable areas, track competitor coverage, and identify expansion opportunities street-by-street</p>
-                    <div class="text-white/60 text-sm">
-                        • Geographic mapping<br/>
-                        • Availability tracking<br/>
-                        • Competitor analysis
-                    </div>
-                </div>
-                <div class="p-8 bg-white/5 border border-white/10">
-                    <div class="text-sm font-bold text-orange-400 uppercase tracking-widest mb-4">Food Delivery</div>
-                    <h3 class="text-2xl font-bold mb-4">Restaurant Menu Tracking</h3>
-                    <p class="text-white/80 mb-4">Monitor menu changes, pricing updates, and new dish launches across thousands of restaurants</p>
-                    <div class="text-white/60 text-sm">
-                        • Menu change detection<br/>
-                        • Price trend analysis<br/>
-                        • Market intelligence
-                    </div>
-                </div>
-                <div class="p-8 bg-white/5 border border-white/10">
-                    <div class="text-sm font-bold text-blue-400 uppercase tracking-widest mb-4">Market Research</div>
-                    <h3 class="text-2xl font-bold mb-4">Review Sentiment Analysis</h3>
-                    <p class="text-white/80 mb-4">Extract and analyze customer reviews to identify product gaps, pain points, and market opportunities</p>
-                    <div class="text-white/60 text-sm">
-                        • Multi-source extraction<br/>
-                        • AI sentiment analysis<br/>
-                        • Trend identification
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 9: How We Work -->
-    <div class="slide slide-blue">
-        <div class="slide-content">
-                    <div class="max-w-5xl mx-auto">
-                        <div class="text-sm font-bold text-blue-300 uppercase tracking-widest mb-6">Our Process</div>
-        </div>
-            <h2 class="text-7xl font-black mb-12 leading-tight">How We Work</h2>
-            
-            <div class="grid md:grid-cols-2 gap-8 mt-12">
-                <div class="bg-white/10 backdrop-blur-sm p-8 border border-white/20">
-                    <div class="text-5xl font-black mb-4">01</div>
-                    <h3 class="text-2xl font-bold mb-4">Discovery Call</h3>
-                    <div class="text-white/90">We understand your data needs, business goals, and technical requirements</div>
-                </div>
-                <div class="bg-white/10 backdrop-blur-sm p-8 border border-white/20">
-                    <div class="text-5xl font-black mb-4">02</div>
-                    <h3 class="text-2xl font-bold mb-4">Sample Delivery</h3>
-                    <div class="text-white/90">We provide sample data within 48-72 hours to validate feasibility and quality</div>
-                </div>
-                <div class="bg-white/10 backdrop-blur-sm p-8 border border-white/20">
-                    <div class="text-5xl font-black mb-4">03</div>
-                    <h3 class="text-2xl font-bold mb-4">Custom Build</h3>
-                    <div class="text-white/90">Our engineering team builds your custom solution with ongoing updates</div>
-                </div>
-                <div class="bg-white/10 backdrop-blur-sm p-8 border border-white/20">
-                    <div class="text-5xl font-black mb-4">04</div>
-                    <h3 class="text-2xl font-bold mb-4">Ongoing Delivery</h3>
-                    <div class="text-white/90">Reliable data delivery with 24/7 monitoring and support</div>
-                </div>
-            </div>
-
-            <div class="mt-12 p-8 bg-white/10 backdrop-blur-sm border border-white/20">
-                <h3 class="text-2xl font-bold mb-6">Engagement Models</h3>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <div class="text-white/80 mb-2">One-Time Projects</div>
-                        <div class="text-xl font-bold">Fixed-price custom data extraction projects</div>
-                    </div>
-                    <div>
-                        <div class="text-white/80 mb-2">Ongoing Retainers</div>
-                        <div class="text-xl font-bold">Monthly or annual managed data services</div>
-                    </div>
-                    <div>
-                        <div class="text-white/80 mb-2">Consultation</div>
-                        <div class="text-xl font-bold">Strategy and implementation guidance</div>
-                    </div>
-                    <div>
-                        <div class="text-white/80 mb-2">Custom Partnerships</div>
-                        <div class="text-xl font-bold">Tailored to your specific needs</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 10: Your Team -->
-    <div class="slide">
-        <div class="slide-content">
-                    <div class="max-w-5xl mx-auto">
-                        <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-6">Your Service Team</div>
-        </div>
-            <h2 class="text-7xl font-black text-gray-900 mb-12 leading-tight">Who You'll Work With</h2>
-            
-            <div class="grid md:grid-cols-2 gap-12 mt-12">
-                <div class="p-8 border-2 border-gray-200">
-                    <h3 class="text-3xl font-bold text-gray-900 mb-4">Parth Ravrani</h3>
-                    <div class="text-xl text-gray-600 mb-6">Founder & Your Primary Contact</div>
-                    <p class="text-gray-600 mb-4">8+ years specializing in complex web data extraction</p>
-                    <p class="text-gray-600 mb-4">Personally oversees every client project ensuring quality and reliability</p>
-                    <div class="flex gap-4 mt-6">
-                        <div class="text-sm text-gray-500">Direct access throughout your project</div>
-                    </div>
-                </div>
-                <div class="p-8 border-2 border-gray-200">
-                    <h3 class="text-3xl font-bold text-gray-900 mb-4">Dedicated Team</h3>
-                    <div class="space-y-4">
-                        <div>
-                            <div class="font-bold text-gray-900">Engineering Team</div>
-                            <div class="text-gray-600">15+ developers specializing in data extraction and custom pipelines</div>
-                        </div>
-                        <div>
-                            <div class="font-bold text-gray-900">Data Solutions</div>
-                            <div class="text-gray-600">ML engineers for AI-powered data processing and enrichment</div>
-                        </div>
-                        <div>
-                            <div class="font-bold text-gray-900">Support Team</div>
-                            <div class="text-gray-600">24/7 monitoring ensuring your data delivery never stops</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 11: Custom Solutions Detail -->
-    <div class="slide">
-        <div class="slide-content">
-                    <div class="max-w-5xl mx-auto">
-                        <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-6">Service Offering</div>
-        </div>
-            <h2 class="text-7xl font-black text-gray-900 mb-12 leading-tight">Our Capabilities</h2>
-            
-            <div class="mb-12 p-10 bg-gray-50 border-l-4 border-blue-600">
-                <p class="text-2xl text-gray-700 leading-relaxed">
-                    We deliver <strong class="text-gray-900">reliable external data</strong> through fully managed custom solutions—no infrastructure building required.
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-8 mt-12">
-                <div class="p-8 border-2 border-gray-200">
-                    <div class="text-5xl font-black text-blue-600 mb-4">01</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Web Scraping Services</h3>
-                    <p class="text-gray-600 mb-4">Scalable extraction from any website—products, pricing, reviews, listings</p>
-                    <ul class="text-gray-600 space-y-2 text-sm">
-                        <li>• E-commerce marketplaces</li>
-                        <li>• Business directories</li>
-                        <li>• Real estate listings</li>
-                    </ul>
-                </div>
-                <div class="p-8 border-2 border-gray-200">
-                    <div class="text-5xl font-black text-orange-600 mb-4">02</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Custom API Development</h3>
-                    <p class="text-gray-600 mb-4">On-demand data delivery via custom-built APIs for enterprise integration</p>
-                    <ul class="text-gray-600 space-y-2 text-sm">
-                        <li>• RESTful API endpoints</li>
-                        <li>• Automated data feeds</li>
-                        <li>• Real-time updates</li>
-                    </ul>
-                </div>
-                <div class="p-8 border-2 border-gray-200">
-                    <div class="text-5xl font-black text-blue-600 mb-4">03</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Mobile App Data Extraction</h3>
-                    <p class="text-gray-600 mb-4">Extract data from iOS and Android apps—food delivery, travel, quick commerce</p>
-                    <ul class="text-gray-600 space-y-2 text-sm">
-                        <li>• Reverse-engineered APIs</li>
-                        <li>• Real-time app data</li>
-                        <li>• 92%+ accuracy</li>
-                    </ul>
-                </div>
-                <div class="p-8 border-2 border-gray-200">
-                    <div class="text-5xl font-black text-orange-600 mb-4">04</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">AI Data Solutions</h3>
-                    <p class="text-gray-600 mb-4">Intelligent processing—product matching, sentiment analysis, classification</p>
-                    <ul class="text-gray-600 space-y-2 text-sm">
-                        <li>• Data enrichment</li>
-                        <li>• Automated categorization</li>
-                        <li>• Quality validation</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 13: Next Steps -->
-    <div class="slide slide-dark">
-        <div class="slide-content">
-                    <div class="max-w-4xl mx-auto text-center">
-                        <div class="text-sm font-bold text-blue-400 uppercase tracking-widest mb-6">Next Steps</div>
-        </div>
-            <h2 class="text-7xl font-black mb-12 leading-tight">Let's Get Started</h2>
-            
-            <div class="grid md:grid-cols-3 gap-8 mt-12 mb-12">
-                <div class="p-8 bg-white/5 border border-white/10 text-left">
-                    <div class="text-5xl font-black text-blue-400 mb-4">01</div>
-                    <h3 class="text-xl font-bold mb-4">Schedule Call</h3>
-                    <div class="text-white/80">15-30 minute discovery call to understand your needs</div>
-                </div>
-                <div class="p-8 bg-white/5 border border-white/10 text-left">
-                    <div class="text-5xl font-black text-orange-400 mb-4">02</div>
-                    <h3 class="text-xl font-bold mb-4">Sample Data</h3>
-                    <div class="text-white/80">We deliver sample data within 48-72 hours at no cost</div>
-                </div>
-                <div class="p-8 bg-white/5 border border-white/10 text-left">
-                    <div class="text-5xl font-black text-blue-400 mb-4">03</div>
-                    <h3 class="text-xl font-bold mb-4">Start Project</h3>
-                    <div class="text-white/80">Custom solution built and delivered on schedule</div>
-                </div>
-            </div>
-
-            <div class="mt-12 p-8 bg-white/5 border border-white/10 text-left">
-                <h3 class="text-2xl font-bold mb-6">What Happens Next?</h3>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <div class="font-bold text-white mb-2">✓ No upfront commitment</div>
-                        <div class="text-white/70">Free sample data to validate quality</div>
-                    </div>
-                    <div>
-                        <div class="font-bold text-white mb-2">✓ Fixed scope & pricing</div>
-                        <div class="text-white/70">Clear deliverables and timelines</div>
-                    </div>
-                    <div>
-                        <div class="font-bold text-white mb-2">✓ Dedicated support</div>
-                        <div class="text-white/70">Direct access to engineering team</div>
-                    </div>
-                    <div>
-                        <div class="font-bold text-white mb-2">✓ Fast turnaround</div>
-                        <div class="text-white/70">Most projects start within 1-2 weeks</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 14: Contact -->
-    <div class="slide">
-        <div class="slide-content">
-                    <div class="max-w-4xl mx-auto text-center">
-                        <h2 class="text-7xl font-black text-gray-900 mb-12 leading-tight">Let's Talk About<br/>Your Data Needs</h2>
-            
-                        <div class="mt-12 space-y-6">
-                            <div>
-                                <div class="text-2xl font-bold text-gray-900 mb-2">Email</div>
-                                <div class="text-xl text-blue-600">hello@nextract.dev</div>
-                            </div>
-        </div>
+            <div class="grid grid-cols-3 gap-6 text-sm">
                 <div>
-                    <div class="text-2xl font-bold text-gray-900 mb-2">Website</div>
-                    <div class="text-xl text-blue-600">www.nextract.dev</div>
+                    <div class="kicker mb-2" style="color: rgba(255,255,255,0.5);">Focus</div>
+                    <div class="font-semibold">E-commerce · Quick Commerce · Food Delivery</div>
                 </div>
                 <div>
-                    <div class="text-2xl font-bold text-gray-900 mb-2">Phone</div>
-                    <div class="text-xl text-gray-600">Sales: +91 74870-98799</div>
-                    <div class="text-xl text-gray-600">HR: +91 85110-98799</div>
+                    <div class="kicker mb-2" style="color: rgba(255,255,255,0.5);">Engagement</div>
+                    <div class="font-semibold">Custom Builds · Managed Retainers</div>
+                </div>
+                <div>
+                    <div class="kicker mb-2" style="color: rgba(255,255,255,0.5);">Contact</div>
+                    <div class="font-semibold">hello@nextract.dev</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide-footer" style="position: relative; z-index: 2;">
+            <span>nextract.dev</span>
+            <span>Confidential · For prospective clients</span>
+        </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- SLIDE 02 · WHAT WE DO (ONE-LINER)             -->
+    <!-- ============================================ -->
+    <section class="slide">
+        <div class="slide-header">
+            <img src="assets/images/logo-header.png" alt="Nextract" class="slide-logo">
+            <span class="page-num">02 / 14</span>
+        </div>
+
+        <div class="slide-body" style="justify-content: center;">
+            <span class="eyebrow mb-4">What we do</span>
+            <h2 class="display section-title mb-8" style="font-size: 56px;">
+                We&rsquo;re the data&nbsp;team<br/>
+                <span class="accent-underline">you didn&rsquo;t have to hire.</span>
+            </h2>
+
+            <p class="text-xl text-gray-700 leading-relaxed max-w-3xl mb-10">
+                Nextract builds and operates the external data infrastructure for brands, platforms and research teams — web scraping, custom APIs, mobile-app data, and AI-powered enrichment — delivered as a fully managed service.
+            </p>
+
+            <div class="grid grid-cols-3 gap-4 mt-4">
+                <div class="card-accent-l">
+                    <div class="num-tag">01 · Build</div>
+                    <div class="font-bold text-base">Custom-engineered pipelines</div>
+                    <div class="text-sm text-gray-600">Scoped, specced and shipped for your exact platforms and data points.</div>
+                </div>
+                <div class="card-accent-l card-accent-l--orange">
+                    <div class="num-tag">02 · Run</div>
+                    <div class="font-bold text-base">Monitored delivery</div>
+                    <div class="text-sm text-gray-600">Scheduled feeds into your warehouse, bucket or endpoint — we watch the health.</div>
+                </div>
+                <div class="card-accent-l card-accent-l--ink">
+                    <div class="num-tag">03 · Own</div>
+                    <div class="font-bold text-base">End-to-end accountability</div>
+                    <div class="text-sm text-gray-600">Sites change, anti-bot evolves, schemas drift. We fix it before you notice.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide-footer">
+            <span>Nextract · What we do</span>
+            <span>External Data, Fully Managed</span>
+        </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- SLIDE 03 · THE PROBLEM                        -->
+    <!-- ============================================ -->
+    <section class="slide slide--cream">
+        <div class="slide-header">
+            <img src="assets/images/logo-header.png" alt="Nextract" class="slide-logo">
+            <span class="page-num">03 / 14</span>
+        </div>
+
+        <div class="slide-body">
+            <span class="eyebrow mb-4" style="color: var(--brand-orange);">The problem</span>
+            <h2 class="display section-title mb-6" style="max-width: 620px;">
+                External data is critical.<br/>
+                Reliable external data is rare.
+            </h2>
+            <p class="text-lg text-gray-600 max-w-2xl mb-12 leading-relaxed">
+                Most teams we talk to have tried one of three things: a DIY scraping team, a generic API tool, or an offshore agency. All three tend to break in the same ways.
+            </p>
+
+            <div class="grid grid-cols-2 gap-5">
+                <div class="card" style="border-left: 3px solid var(--brand-blue);">
+                    <div class="flex items-center gap-2.5 mb-1">
+                        <i class="ri-code-box-line text-blue-600 text-xl"></i>
+                        <div class="kicker" style="color: var(--brand-blue);">DIY Infrastructure</div>
+                    </div>
+                    <div class="font-bold text-base">Engineering time disappears into scraping</div>
+                    <div class="text-sm text-gray-600">Proxy rotation, CAPTCHA, headless browsers, site changes. None of it is your product.</div>
+                </div>
+                <div class="card" style="border-left: 3px solid var(--brand-orange);">
+                    <div class="flex items-center gap-2.5 mb-1">
+                        <i class="ri-error-warning-line text-orange-600 text-xl"></i>
+                        <div class="kicker" style="color: var(--brand-orange);">Brittle pipelines</div>
+                    </div>
+                    <div class="font-bold text-base">Feeds break the week you need them most</div>
+                    <div class="text-sm text-gray-600">A launch, a promo, a board deck — and the pipeline silently stopped three days ago.</div>
+                </div>
+                <div class="card" style="border-left: 3px solid var(--brand-blue);">
+                    <div class="flex items-center gap-2.5 mb-1">
+                        <i class="ri-question-line text-blue-600 text-xl"></i>
+                        <div class="kicker" style="color: var(--brand-blue);">Data quality roulette</div>
+                    </div>
+                    <div class="font-bold text-base">You can&rsquo;t tell if the numbers are right</div>
+                    <div class="text-sm text-gray-600">Missing rows, stale fields, mismatched SKUs. Decisions get made on noisy inputs.</div>
+                </div>
+                <div class="card" style="border-left: 3px solid var(--brand-orange);">
+                    <div class="flex items-center gap-2.5 mb-1">
+                        <i class="ri-tools-line text-orange-600 text-xl"></i>
+                        <div class="kicker" style="color: var(--brand-orange);">Maintenance tax</div>
+                    </div>
+                    <div class="font-bold text-base">The scope never actually shrinks</div>
+                    <div class="text-sm text-gray-600">Every quarter adds a platform, a field, a region — and more infra no one wants to own.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide-footer">
+            <span>Nextract · The problem</span>
+            <span>Why teams switch to managed data</span>
+        </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- SLIDE 04 · OUR APPROACH                       -->
+    <!-- ============================================ -->
+    <section class="slide">
+        <div class="slide-header">
+            <img src="assets/images/logo-header.png" alt="Nextract" class="slide-logo">
+            <span class="page-num">04 / 14</span>
+        </div>
+
+        <div class="slide-body">
+            <span class="eyebrow mb-4">Our approach</span>
+            <h2 class="display section-title mb-4">
+                Nothing off-the-shelf.<br/>
+                <span class="accent-underline">Everything built for you.</span>
+            </h2>
+            <p class="text-lg text-gray-600 max-w-3xl mb-12 leading-relaxed">
+                We don&rsquo;t sell a generic scraper catalogue. Every engagement starts with the question, <em>&ldquo;what decision is this data supporting?&rdquo;</em> — and ends with a pipeline scoped to that answer.
+            </p>
+
+            <div class="grid grid-cols-3 gap-5 mb-10">
+                <div class="card" style="background: #F8FAFC;">
+                    <div class="w-11 h-11 flex items-center justify-center" style="background: #DBEAFE; color: #1D4ED8;">
+                        <i class="ri-compass-3-line text-xl"></i>
+                    </div>
+                    <div class="font-bold text-base mt-3">Custom by default</div>
+                    <div class="text-sm text-gray-600">Your target platforms, your data points, your delivery format. Nothing generic.</div>
+                </div>
+                <div class="card" style="background: #F8FAFC;">
+                    <div class="w-11 h-11 flex items-center justify-center" style="background: #FFEDD5; color: #C2410C;">
+                        <i class="ri-cpu-line text-xl"></i>
+                    </div>
+                    <div class="font-bold text-base mt-3">Fully managed operations</div>
+                    <div class="text-sm text-gray-600">We run the infrastructure, track health, and respond to breakage. You get data — not tickets.</div>
+                </div>
+                <div class="card" style="background: #F8FAFC;">
+                    <div class="w-11 h-11 flex items-center justify-center" style="background: #E0E7FF; color: #4338CA;">
+                        <i class="ri-shake-hands-line text-xl"></i>
+                    </div>
+                    <div class="font-bold text-base mt-3">Founder-led accountability</div>
+                    <div class="text-sm text-gray-600">Direct line to the person who scoped the build. No account-management layers.</div>
                 </div>
             </div>
 
-            <div class="mt-16 pt-8 border-t border-gray-200">
-                <p class="text-lg text-gray-700 mb-2">Ready to get reliable external data without building infrastructure?</p>
-                <p class="text-gray-500">Schedule a consultation to discuss your specific requirements</p>
+            <div class="rule mb-6"></div>
+
+            <div class="grid grid-cols-3 gap-8 text-sm">
+                <div>
+                    <div class="kicker text-gray-500 mb-2">Scope model</div>
+                    <div class="font-bold">Discovery → sample → scope → build</div>
+                    <div class="text-gray-500 mt-1">Nothing commits until you see real sample data.</div>
+                </div>
+                <div>
+                    <div class="kicker text-gray-500 mb-2">Tech posture</div>
+                    <div class="font-bold">Pragmatic · ethical · resilient</div>
+                    <div class="text-gray-500 mt-1">Public data, sensible access patterns, defensible techniques.</div>
+                </div>
+                <div>
+                    <div class="kicker text-gray-500 mb-2">Delivery posture</div>
+                    <div class="font-bold">Into your systems, not ours</div>
+                    <div class="text-gray-500 mt-1">S3, GCS, warehouse, webhook, custom API — your stack.</div>
+                </div>
             </div>
         </div>
-    </div>
 
+        <div class="slide-footer">
+            <span>Nextract · Approach</span>
+            <span>Custom by default</span>
+        </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- SLIDE 05 · WHAT WE BUILD (SERVICES)           -->
+    <!-- ============================================ -->
+    <section class="slide slide--cream">
+        <div class="slide-header">
+            <img src="assets/images/logo-header.png" alt="Nextract" class="slide-logo">
+            <span class="page-num">05 / 14</span>
+        </div>
+
+        <div class="slide-body">
+            <span class="eyebrow mb-4">What we build</span>
+            <h2 class="display section-title mb-4">Four capabilities. One&nbsp;team.</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mb-10 leading-relaxed">
+                Most engagements combine two or three of these into a single managed pipeline.
+            </p>
+
+            <div class="grid grid-cols-2 gap-5">
+                <div class="card" style="padding: 24px;">
+                    <div class="flex items-start justify-between mb-2">
+                        <div class="w-12 h-12 flex items-center justify-center" style="background: #DBEAFE; color: #1D4ED8;">
+                            <i class="ri-global-line text-2xl"></i>
+                        </div>
+                        <div class="num-tag">01</div>
+                    </div>
+                    <div class="font-bold text-xl mt-2">Web Scraping Services</div>
+                    <div class="text-sm text-gray-600 mb-3">Resilient extraction from marketplaces, directories, listings and long-tail sites.</div>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="pill">Amazon</span>
+                        <span class="pill">Flipkart</span>
+                        <span class="pill">Walmart</span>
+                        <span class="pill">Shopify</span>
+                        <span class="pill">+40 more</span>
+                    </div>
+                </div>
+
+                <div class="card" style="padding: 24px;">
+                    <div class="flex items-start justify-between mb-2">
+                        <div class="w-12 h-12 flex items-center justify-center" style="background: #D1FAE5; color: #047857;">
+                            <i class="ri-code-s-slash-line text-2xl"></i>
+                        </div>
+                        <div class="num-tag">02</div>
+                    </div>
+                    <div class="font-bold text-xl mt-2">Custom API Development</div>
+                    <div class="text-sm text-gray-600 mb-3">On-demand REST endpoints into any platform — built to integrate with your product.</div>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="pill">REST / GraphQL</span>
+                        <span class="pill">Webhooks</span>
+                        <span class="pill">Scheduled feeds</span>
+                    </div>
+                </div>
+
+                <div class="card" style="padding: 24px;">
+                    <div class="flex items-start justify-between mb-2">
+                        <div class="w-12 h-12 flex items-center justify-center" style="background: #EDE9FE; color: #6D28D9;">
+                            <i class="ri-smartphone-line text-2xl"></i>
+                        </div>
+                        <div class="num-tag">03</div>
+                    </div>
+                    <div class="font-bold text-xl mt-2">Mobile App Data Extraction</div>
+                    <div class="text-sm text-gray-600 mb-3">When the data only lives in the app — Blinkit, Zomato, Swiggy, Uber Eats, Instacart.</div>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="pill">iOS · Android</span>
+                        <span class="pill">App-API reversing</span>
+                        <span class="pill">Geo-resolved</span>
+                    </div>
+                </div>
+
+                <div class="card" style="padding: 24px;">
+                    <div class="flex items-start justify-between mb-2">
+                        <div class="w-12 h-12 flex items-center justify-center" style="background: #FFE4E6; color: #BE123C;">
+                            <i class="ri-brain-line text-2xl"></i>
+                        </div>
+                        <div class="num-tag">04</div>
+                    </div>
+                    <div class="font-bold text-xl mt-2">AI Data Solutions</div>
+                    <div class="text-sm text-gray-600 mb-3">Enrichment that turns raw extraction into usable intelligence.</div>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="pill">Product matching</span>
+                        <span class="pill">Sentiment</span>
+                        <span class="pill">Classification</span>
+                        <span class="pill">Dedup</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide-footer">
+            <span>Nextract · Services</span>
+            <span>Scraping · APIs · Mobile · AI</span>
+        </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- SLIDE 06 · WHERE WE GO DEEP (3 VERTICALS)     -->
+    <!-- ============================================ -->
+    <section class="slide">
+        <div class="slide-header">
+            <img src="assets/images/logo-header.png" alt="Nextract" class="slide-logo">
+            <span class="page-num">06 / 14</span>
+        </div>
+
+        <div class="slide-body">
+            <span class="eyebrow mb-4">Where we go deep</span>
+            <h2 class="display section-title mb-4">
+                Three verticals.<br/>
+                <span class="accent-underline">Real operator-grade depth.</span>
+            </h2>
+            <p class="text-lg text-gray-600 max-w-3xl mb-10 leading-relaxed">
+                We work across many industries — but we invest seriously in the data layers we think are under-served.
+            </p>
+
+            <div class="grid grid-cols-3 gap-5">
+                <!-- E-commerce -->
+                <div class="card" style="padding: 22px;">
+                    <div class="kicker" style="color: var(--brand-blue);">Vertical 01</div>
+                    <div class="display font-bold text-2xl mt-1">E-commerce &amp; Retail</div>
+                    <div class="text-sm text-gray-600 mt-2 mb-4">Marketplaces, D2C, brands and agencies — price, catalogue, reviews, Buy Box, share of search.</div>
+                    <div class="kicker text-gray-500 mb-2">Platforms</div>
+                    <div class="flex flex-wrap gap-1.5 mb-4">
+                        <span class="pill">Amazon</span>
+                        <span class="pill">Walmart</span>
+                        <span class="pill">Flipkart</span>
+                        <span class="pill">eBay</span>
+                        <span class="pill">Etsy</span>
+                        <span class="pill">Shopify</span>
+                    </div>
+                    <div class="kicker text-gray-500 mb-2">Typical buyers</div>
+                    <div class="text-sm text-gray-700">Brand managers · Pricing teams · Agencies · Analytics leads</div>
+                </div>
+
+                <!-- Quick Commerce -->
+                <div class="card" style="padding: 22px; border: 1px solid var(--brand-orange); box-shadow: 0 0 0 4px #FFF7ED;">
+                    <div class="kicker" style="color: var(--brand-orange);">Vertical 02 · Hero</div>
+                    <div class="display font-bold text-2xl mt-1">Quick Commerce</div>
+                    <div class="text-sm text-gray-600 mt-2 mb-4">Dark-store intelligence, delivery-zone mapping, stockouts and ETA benchmarking — data that only lives inside mobile apps.</div>
+                    <div class="kicker text-gray-500 mb-2">Platforms</div>
+                    <div class="flex flex-wrap gap-1.5 mb-4">
+                        <span class="pill">Blinkit</span>
+                        <span class="pill">Zepto</span>
+                        <span class="pill">Instamart</span>
+                        <span class="pill">BigBasket</span>
+                        <span class="pill">Instacart</span>
+                    </div>
+                    <div class="kicker text-gray-500 mb-2">Typical buyers</div>
+                    <div class="text-sm text-gray-700">FMCG brands · Ops leaders · Investors · Market researchers</div>
+                </div>
+
+                <!-- Food Delivery -->
+                <div class="card" style="padding: 22px;">
+                    <div class="kicker" style="color: var(--brand-blue);">Vertical 03</div>
+                    <div class="display font-bold text-2xl mt-1">Food Delivery</div>
+                    <div class="text-sm text-gray-600 mt-2 mb-4">Restaurant search rank, menu &amp; pricing shifts, ghost-kitchen mapping, market-entry scans.</div>
+                    <div class="kicker text-gray-500 mb-2">Platforms</div>
+                    <div class="flex flex-wrap gap-1.5 mb-4">
+                        <span class="pill">Zomato</span>
+                        <span class="pill">Swiggy</span>
+                        <span class="pill">DoorDash</span>
+                        <span class="pill">Uber Eats</span>
+                        <span class="pill">Deliveroo</span>
+                    </div>
+                    <div class="kicker text-gray-500 mb-2">Typical buyers</div>
+                    <div class="text-sm text-gray-700">Restaurant groups · Cloud kitchens · F&amp;B brands · PE / diligence</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide-footer">
+            <span>Nextract · Verticals</span>
+            <span>E-commerce · Quick Commerce · Food Delivery</span>
+        </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- SLIDE 07 · SPOTLIGHT · E-COMMERCE             -->
+    <!-- ============================================ -->
+    <section class="slide slide--cream">
+        <div class="slide-header">
+            <img src="assets/images/logo-header.png" alt="Nextract" class="slide-logo">
+            <span class="page-num">07 / 14</span>
+        </div>
+
+        <div class="slide-body">
+            <span class="kicker text-gray-500 block mb-1">Vertical spotlight · 01</span>
+            <span class="eyebrow mb-4">E-commerce &amp; Retail</span>
+            <h2 class="display section-title mb-3">
+                Built to answer the questions<br/>
+                merchandising &amp; pricing teams actually ask.
+            </h2>
+            <p class="text-base text-gray-600 max-w-2xl mb-8">
+                A sample of use cases we&rsquo;ve scoped and shipped — each one backed by a dedicated, monitored pipeline.
+            </p>
+
+            <div class="grid grid-cols-2 gap-4 mb-8">
+                <div class="card-accent-l">
+                    <div class="flex items-center justify-between mb-1">
+                        <div class="kicker" style="color: var(--brand-blue);">Amazon intelligence</div>
+                        <i class="ri-arrow-right-up-line text-gray-400"></i>
+                    </div>
+                    <div class="font-bold text-lg">Buy Box Monitoring</div>
+                    <div class="text-sm text-gray-600">Hourly tracking across your ASINs — know who won, at what price, and when you lost it.</div>
+                </div>
+                <div class="card-accent-l card-accent-l--orange">
+                    <div class="flex items-center justify-between mb-1">
+                        <div class="kicker" style="color: var(--brand-orange);">Promotional analytics</div>
+                        <i class="ri-arrow-right-up-line text-gray-400"></i>
+                    </div>
+                    <div class="font-bold text-lg">Promotional Velocity</div>
+                    <div class="text-sm text-gray-600">See which deals move volume, when discounts stop lifting sales, and where competitors are promoting.</div>
+                </div>
+                <div class="card-accent-l">
+                    <div class="flex items-center justify-between mb-1">
+                        <div class="kicker" style="color: var(--brand-blue);">Category intelligence</div>
+                        <i class="ri-arrow-right-up-line text-gray-400"></i>
+                    </div>
+                    <div class="font-bold text-lg">Share of Search</div>
+                    <div class="text-sm text-gray-600">Track how often your brand surfaces across category queries vs. every competitor in the set.</div>
+                </div>
+                <div class="card-accent-l card-accent-l--orange">
+                    <div class="flex items-center justify-between mb-1">
+                        <div class="kicker" style="color: var(--brand-orange);">Brand protection</div>
+                        <i class="ri-arrow-right-up-line text-gray-400"></i>
+                    </div>
+                    <div class="font-bold text-lg">Private-Label Monitoring</div>
+                    <div class="text-sm text-gray-600">Spot copycats, unauthorised sellers and private-label encroachment before they eat margin.</div>
+                </div>
+                <div class="card-accent-l card-accent-l--ink">
+                    <div class="flex items-center justify-between mb-1">
+                        <div class="kicker" style="color: var(--ink);">Digital shelf</div>
+                        <i class="ri-arrow-right-up-line text-gray-400"></i>
+                    </div>
+                    <div class="font-bold text-lg">FMCG Digital Shelf</div>
+                    <div class="text-sm text-gray-600">Availability, content compliance and ranking for every SKU on every retailer that matters.</div>
+                </div>
+                <div class="card-accent-l card-accent-l--ink">
+                    <div class="flex items-center justify-between mb-1">
+                        <div class="kicker" style="color: var(--ink);">Catalogue &amp; reviews</div>
+                        <i class="ri-arrow-right-up-line text-gray-400"></i>
+                    </div>
+                    <div class="font-bold text-lg">Catalogue &amp; Review Intelligence</div>
+                    <div class="text-sm text-gray-600">Clean catalogues, enriched attributes, and structured review signal — ready for analytics.</div>
+                </div>
+            </div>
+
+            <div class="rule mb-4"></div>
+            <div class="text-xs text-gray-500 font-semibold">Sample outputs: CSV / Parquet to S3, GCS, Snowflake, BigQuery · REST API · webhook alerts on change events.</div>
+        </div>
+
+        <div class="slide-footer">
+            <span>Nextract · E-commerce use cases</span>
+            <span>Pipelines already built &amp; deployable</span>
+        </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- SLIDE 08 · SPOTLIGHT · QUICK COMMERCE         -->
+    <!-- ============================================ -->
+    <section class="slide slide--ink-accent">
+        <div class="glow" style="background: #EA580C; top: -120px; right: -80px; opacity: 0.35;"></div>
+
+        <div class="slide-header" style="position: relative; z-index: 2;">
+            <img src="assets/images/logo-header.png" alt="Nextract" class="slide-logo slide-logo--invert">
+            <span class="page-num">08 / 14</span>
+        </div>
+
+        <div class="slide-body" style="position: relative; z-index: 2;">
+            <span class="kicker block mb-1" style="color: rgba(255,255,255,0.5);">Vertical spotlight · 02</span>
+            <span class="eyebrow mb-4" style="color: #FDBA74;">Quick Commerce</span>
+            <h2 class="display section-title mb-3">
+                The data lives inside the app.<br/>
+                <span style="color: #FDBA74;">We know how to get it out.</span>
+            </h2>
+            <p class="text-base text-white/70 max-w-2xl mb-8">
+                Blinkit, Zepto, Instamart, BigBasket — everything is behind a geo-locked mobile surface. Our Quick Commerce pipelines resolve real pincodes, real dark stores, real inventory.
+            </p>
+
+            <div class="grid grid-cols-2 gap-4 mb-8">
+                <div class="card-dark">
+                    <div class="flex items-center gap-2 mb-1">
+                        <span class="w-2 h-2 rounded-full bg-orange-400"></span>
+                        <div class="kicker" style="color: #FDBA74;">Dark-store intel</div>
+                    </div>
+                    <div class="font-bold text-lg">Dark-Store Intelligence</div>
+                    <div class="text-sm text-white/65">Map every dark store by pincode. Track SKU assortment, share and stock level per location.</div>
+                </div>
+                <div class="card-dark">
+                    <div class="flex items-center gap-2 mb-1">
+                        <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+                        <div class="kicker" style="color: #93C5FD;">Geo coverage</div>
+                    </div>
+                    <div class="font-bold text-lg">Delivery-Zone Mapping</div>
+                    <div class="text-sm text-white/65">Street-level serviceability per platform. Compare coverage, spot white spaces, size the gap.</div>
+                </div>
+                <div class="card-dark">
+                    <div class="flex items-center gap-2 mb-1">
+                        <span class="w-2 h-2 rounded-full bg-orange-400"></span>
+                        <div class="kicker" style="color: #FDBA74;">Availability</div>
+                    </div>
+                    <div class="font-bold text-lg">Competitor Stockout Monitoring</div>
+                    <div class="text-sm text-white/65">Catch stockouts the hour they happen — for you, and for every brand fighting for the same shelf.</div>
+                </div>
+                <div class="card-dark">
+                    <div class="flex items-center gap-2 mb-1">
+                        <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+                        <div class="kicker" style="color: #93C5FD;">Performance</div>
+                    </div>
+                    <div class="font-bold text-lg">Delivery-ETA Benchmarking</div>
+                    <div class="text-sm text-white/65">Promised vs. actual delivery times by zone, hour and platform. Ops-grade SLA data.</div>
+                </div>
+            </div>
+
+            <div class="rule mb-4"></div>
+            <div class="grid grid-cols-3 gap-6 text-sm">
+                <div>
+                    <div class="kicker mb-1" style="color: rgba(255,255,255,0.5);">Resolution</div>
+                    <div class="font-semibold">Pincode-level</div>
+                </div>
+                <div>
+                    <div class="kicker mb-1" style="color: rgba(255,255,255,0.5);">Cadence</div>
+                    <div class="font-semibold">Up to hourly</div>
+                </div>
+                <div>
+                    <div class="kicker mb-1" style="color: rgba(255,255,255,0.5);">Delivery</div>
+                    <div class="font-semibold">API, webhook, warehouse</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide-footer" style="position: relative; z-index: 2;">
+            <span>Nextract · Quick Commerce</span>
+            <span>Mobile-only data · geo-resolved</span>
+        </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- SLIDE 09 · SPOTLIGHT · FOOD DELIVERY          -->
+    <!-- ============================================ -->
+    <section class="slide">
+        <div class="slide-header">
+            <img src="assets/images/logo-header.png" alt="Nextract" class="slide-logo">
+            <span class="page-num">09 / 14</span>
+        </div>
+
+        <div class="slide-body">
+            <span class="kicker text-gray-500 block mb-1">Vertical spotlight · 03</span>
+            <span class="eyebrow mb-4">Food Delivery</span>
+            <h2 class="display section-title mb-3">
+                From menu changes to ghost kitchens —<br/>
+                the full picture of a delivery market.
+            </h2>
+            <p class="text-base text-gray-600 max-w-2xl mb-8">
+                Our food-delivery pipelines combine consumer-app surface data, merchant-side signals, and AI enrichment.
+            </p>
+
+            <div class="grid grid-cols-2 gap-4 mb-8">
+                <div class="card-accent-l">
+                    <div class="kicker mb-1" style="color: var(--brand-blue);">Discovery</div>
+                    <div class="font-bold text-lg">Restaurant Search Ranking</div>
+                    <div class="text-sm text-gray-600">Where you rank on &ldquo;pizza&rdquo;, &ldquo;biryani&rdquo;, &ldquo;healthy&rdquo; — by city, hour, and platform.</div>
+                </div>
+                <div class="card-accent-l card-accent-l--orange">
+                    <div class="kicker mb-1" style="color: var(--brand-orange);">Menu intel</div>
+                    <div class="font-bold text-lg">Menu &amp; Sentiment Analysis</div>
+                    <div class="text-sm text-gray-600">Track menu additions, price changes, and what diners actually say about each dish.</div>
+                </div>
+                <div class="card-accent-l">
+                    <div class="kicker mb-1" style="color: var(--brand-blue);">Market mapping</div>
+                    <div class="font-bold text-lg">Ghost Kitchen Intelligence</div>
+                    <div class="text-sm text-gray-600">Identify virtual brands operating out of the same address. Size operators, not just restaurants.</div>
+                </div>
+                <div class="card-accent-l card-accent-l--orange">
+                    <div class="kicker mb-1" style="color: var(--brand-orange);">Expansion</div>
+                    <div class="font-bold text-lg">Food Delivery Market Entry</div>
+                    <div class="text-sm text-gray-600">For chains entering a new city: density, cuisine saturation, pricing bands, opportunity zones.</div>
+                </div>
+            </div>
+
+            <div class="rule mb-4"></div>
+            <div class="grid grid-cols-4 gap-4 text-center">
+                <div>
+                    <div class="display font-bold text-2xl" style="color: var(--brand-blue);">Zomato</div>
+                    <div class="text-xs text-gray-500 font-semibold mt-1">Consumer + merchant</div>
+                </div>
+                <div>
+                    <div class="display font-bold text-2xl" style="color: var(--brand-orange);">Swiggy</div>
+                    <div class="text-xs text-gray-500 font-semibold mt-1">App-side + web</div>
+                </div>
+                <div>
+                    <div class="display font-bold text-2xl" style="color: var(--brand-blue);">DoorDash</div>
+                    <div class="text-xs text-gray-500 font-semibold mt-1">Geo-resolved</div>
+                </div>
+                <div>
+                    <div class="display font-bold text-2xl" style="color: var(--brand-orange);">Uber Eats</div>
+                    <div class="text-xs text-gray-500 font-semibold mt-1">Multi-country</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide-footer">
+            <span>Nextract · Food Delivery</span>
+            <span>Menu · ranking · ghost kitchens · market entry</span>
+        </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- SLIDE 10 · BEYOND THE BIG THREE               -->
+    <!-- ============================================ -->
+    <section class="slide slide--cream">
+        <div class="slide-header">
+            <img src="assets/images/logo-header.png" alt="Nextract" class="slide-logo">
+            <span class="page-num">10 / 14</span>
+        </div>
+
+        <div class="slide-body">
+            <span class="eyebrow mb-4">Beyond the big three</span>
+            <h2 class="display section-title mb-3">Whatever the source, we&rsquo;ve probably built it.</h2>
+            <p class="text-base text-gray-600 max-w-2xl mb-10">
+                Outside our core verticals, these are the industries we&rsquo;re shipping pipelines into regularly.
+            </p>
+
+            <div class="grid grid-cols-3 gap-4">
+                <div class="card">
+                    <div class="flex items-center gap-2 mb-1">
+                        <i class="ri-flight-takeoff-line text-lg text-blue-600"></i>
+                        <div class="kicker text-gray-500">Industry</div>
+                    </div>
+                    <div class="font-bold text-base">Travel &amp; Hospitality</div>
+                    <div class="text-xs text-gray-600">Hotel pricing, OTAs, availability, reviews — Booking, Airbnb, Expedia, TripAdvisor.</div>
+                </div>
+                <div class="card">
+                    <div class="flex items-center gap-2 mb-1">
+                        <i class="ri-home-4-line text-lg text-orange-600"></i>
+                        <div class="kicker text-gray-500">Industry</div>
+                    </div>
+                    <div class="font-bold text-base">Real Estate</div>
+                    <div class="text-xs text-gray-600">Listings, rent trends, absorption, off-market signals. Zillow, 99acres, MagicBricks.</div>
+                </div>
+                <div class="card">
+                    <div class="flex items-center gap-2 mb-1">
+                        <i class="ri-bank-line text-lg text-blue-600"></i>
+                        <div class="kicker text-gray-500">Industry</div>
+                    </div>
+                    <div class="font-bold text-base">Financial Services</div>
+                    <div class="text-xs text-gray-600">Market data, regulatory filings, news monitoring, compliance extraction.</div>
+                </div>
+                <div class="card">
+                    <div class="flex items-center gap-2 mb-1">
+                        <i class="ri-bar-chart-box-line text-lg text-orange-600"></i>
+                        <div class="kicker text-gray-500">Industry</div>
+                    </div>
+                    <div class="font-bold text-base">Market Research</div>
+                    <div class="text-xs text-gray-600">Multi-source collection, cross-platform panels, custom datasets for analysts.</div>
+                </div>
+                <div class="card">
+                    <div class="flex items-center gap-2 mb-1">
+                        <i class="ri-briefcase-line text-lg text-blue-600"></i>
+                        <div class="kicker text-gray-500">Industry</div>
+                    </div>
+                    <div class="font-bold text-base">PE / Diligence</div>
+                    <div class="text-xs text-gray-600">Alternative data for investment theses, channel checks and diligence projects.</div>
+                </div>
+                <div class="card">
+                    <div class="flex items-center gap-2 mb-1">
+                        <i class="ri-rocket-line text-lg text-orange-600"></i>
+                        <div class="kicker text-gray-500">Industry</div>
+                    </div>
+                    <div class="font-bold text-base">SaaS &amp; Startups</div>
+                    <div class="text-xs text-gray-600">Data-backed products, lead enrichment, competitive intelligence at scale.</div>
+                </div>
+            </div>
+
+            <div class="mt-10 p-6 border border-dashed" style="border-color: var(--line); background: white;">
+                <div class="flex items-center gap-3 mb-2">
+                    <i class="ri-sparkling-2-line text-blue-600 text-xl"></i>
+                    <div class="font-bold text-base">Have a source we haven&rsquo;t listed?</div>
+                </div>
+                <div class="text-sm text-gray-600">If it&rsquo;s publicly accessible and legally scrape-able, we&rsquo;ve likely already solved a harder version of it. Start with a 20-minute scoping call — we&rsquo;ll tell you honestly if it&rsquo;s a fit.</div>
+            </div>
+        </div>
+
+        <div class="slide-footer">
+            <span>Nextract · Other industries</span>
+            <span>Travel · Real Estate · Finance · Research</span>
+        </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- SLIDE 11 · HOW WE WORK                        -->
+    <!-- ============================================ -->
+    <section class="slide">
+        <div class="slide-header">
+            <img src="assets/images/logo-header.png" alt="Nextract" class="slide-logo">
+            <span class="page-num">11 / 14</span>
+        </div>
+
+        <div class="slide-body">
+            <span class="eyebrow mb-4">How we work</span>
+            <h2 class="display section-title mb-3">
+                A process designed to<br/>
+                <span class="accent-underline">de-risk the first month.</span>
+            </h2>
+            <p class="text-base text-gray-600 max-w-2xl mb-10">
+                You never commit to a long build on a promise. You commit after seeing real sample data from your real target platform.
+            </p>
+
+            <div class="space-y-5 mb-10">
+                <div class="flex items-start gap-5">
+                    <div class="step-circle">01</div>
+                    <div class="flex-1 pb-5 border-b border-gray-200">
+                        <div class="flex items-center justify-between mb-1">
+                            <div class="font-bold text-lg">Discovery call</div>
+                            <div class="kicker text-gray-500">Day 0 · 30 min</div>
+                        </div>
+                        <div class="text-sm text-gray-600">We map the decision the data supports, the platforms involved, the fields you need, and the acceptable cadence.</div>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-5">
+                    <div class="step-circle" style="background: var(--brand-orange);">02</div>
+                    <div class="flex-1 pb-5 border-b border-gray-200">
+                        <div class="flex items-center justify-between mb-1">
+                            <div class="font-bold text-lg">Sample delivery</div>
+                            <div class="kicker text-gray-500">48–72 hours · no fee</div>
+                        </div>
+                        <div class="text-sm text-gray-600">Real data from your real targets — in your preferred format. You review quality before any commitment.</div>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-5">
+                    <div class="step-circle">03</div>
+                    <div class="flex-1 pb-5 border-b border-gray-200">
+                        <div class="flex items-center justify-between mb-1">
+                            <div class="font-bold text-lg">Scope &amp; build</div>
+                            <div class="kicker text-gray-500">1–3 weeks typical</div>
+                        </div>
+                        <div class="text-sm text-gray-600">Fixed-price project or retainer scope, a signed SOW, then engineering build with a single point of accountability.</div>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-5">
+                    <div class="step-circle" style="background: var(--brand-orange);">04</div>
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between mb-1">
+                            <div class="font-bold text-lg">Managed delivery</div>
+                            <div class="kicker text-gray-500">Ongoing</div>
+                        </div>
+                        <div class="text-sm text-gray-600">Feeds land in your stack on schedule. We monitor health, adapt to site changes, and surface issues before you notice them.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rule mb-4"></div>
+            <div class="text-sm text-gray-600">
+                <strong>Why it&rsquo;s different:</strong> most vendors sell the contract first and scope later. We invert it — <em>sample first, scope second, contract only when the data is clearly good.</em>
+            </div>
+        </div>
+
+        <div class="slide-footer">
+            <span>Nextract · Process</span>
+            <span>Sample → Scope → Build → Run</span>
+        </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- SLIDE 12 · WHY NEXTRACT                       -->
+    <!-- ============================================ -->
+    <section class="slide slide--blue">
+        <div class="slide-header" style="position: relative; z-index: 2;">
+            <img src="assets/images/logo-header.png" alt="Nextract" class="slide-logo slide-logo--invert">
+            <span class="page-num" style="color: rgba(255,255,255,0.6);">12 / 14</span>
+        </div>
+
+        <div class="slide-body" style="position: relative; z-index: 2;">
+            <span class="eyebrow mb-4" style="color: #FDBA74;">Why Nextract</span>
+            <h2 class="display section-title mb-4">Not just another scraping vendor.</h2>
+            <p class="text-lg text-white/85 max-w-2xl mb-10 leading-relaxed">
+                Four things that tend to be the actual reason teams stay with us after the first project.
+            </p>
+
+            <div class="grid grid-cols-2 gap-5 mb-10">
+                <div class="card-dark" style="padding: 24px; background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.18);">
+                    <div class="kicker" style="color: #FDBA74;">01 · Ownership</div>
+                    <div class="font-bold text-xl mt-1">Founder-run engagements</div>
+                    <div class="text-sm text-white/80">The person who scopes your build is the person accountable when something breaks — not an account layer two levels removed.</div>
+                </div>
+                <div class="card-dark" style="padding: 24px; background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.18);">
+                    <div class="kicker" style="color: #FDBA74;">02 · Depth</div>
+                    <div class="font-bold text-xl mt-1">Real vertical fluency</div>
+                    <div class="text-sm text-white/80">We&rsquo;ve shipped pipelines into the same categories for years. We know the edge cases your first vendor didn&rsquo;t warn you about.</div>
+                </div>
+                <div class="card-dark" style="padding: 24px; background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.18);">
+                    <div class="kicker" style="color: #FDBA74;">03 · Honesty</div>
+                    <div class="font-bold text-xl mt-1">Sample before contract</div>
+                    <div class="text-sm text-white/80">If the data isn&rsquo;t good, we tell you — and we&rsquo;d rather walk away from a bad-fit build than ship a fragile one.</div>
+                </div>
+                <div class="card-dark" style="padding: 24px; background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.18);">
+                    <div class="kicker" style="color: #FDBA74;">04 · Integration</div>
+                    <div class="font-bold text-xl mt-1">Delivered into your stack</div>
+                    <div class="text-sm text-white/80">S3, GCS, Snowflake, BigQuery, your own API, Slack, webhooks. You don&rsquo;t log into a portal to get value.</div>
+                </div>
+            </div>
+
+            <div class="rule mb-5"></div>
+            <div class="grid grid-cols-3 gap-6 text-sm">
+                <div>
+                    <div class="kicker mb-1" style="color: rgba(255,255,255,0.6);">Posture</div>
+                    <div class="font-semibold">Ethical · public-data first</div>
+                </div>
+                <div>
+                    <div class="kicker mb-1" style="color: rgba(255,255,255,0.6);">Feedback loop</div>
+                    <div class="font-semibold">Direct line to engineering</div>
+                </div>
+                <div>
+                    <div class="kicker mb-1" style="color: rgba(255,255,255,0.6);">Scope philosophy</div>
+                    <div class="font-semibold">Small wins before big bets</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide-footer" style="position: relative; z-index: 2; color: rgba(255,255,255,0.7);">
+            <span>Nextract · Why us</span>
+            <span>Ownership · Depth · Honesty · Integration</span>
+        </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- SLIDE 13 · ENGAGEMENT & PRICING               -->
+    <!-- ============================================ -->
+    <section class="slide">
+        <div class="slide-header">
+            <img src="assets/images/logo-header.png" alt="Nextract" class="slide-logo">
+            <span class="page-num">13 / 14</span>
+        </div>
+
+        <div class="slide-body">
+            <span class="eyebrow mb-4">Engagement &amp; pricing</span>
+            <h2 class="display section-title mb-3">
+                Two ways to start.<br/>
+                <span class="accent-underline">Both de-risked.</span>
+            </h2>
+            <p class="text-base text-gray-600 max-w-2xl mb-10">
+                Everything is quoted after discovery + sample — never from a generic rate card.
+            </p>
+
+            <div class="grid grid-cols-2 gap-5 mb-8">
+                <div class="card" style="padding: 28px; border: 2px solid var(--brand-blue); background: white; box-shadow: 0 0 0 6px #EFF6FF;">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="kicker" style="color: var(--brand-blue);">Option 01</div>
+                        <span class="pill badge-blue" style="background: #DBEAFE; color: #1D4ED8; border-color: transparent;">Fixed scope</span>
+                    </div>
+                    <div class="display font-bold text-2xl mb-1">Custom Build</div>
+                    <div class="text-sm text-gray-500 mb-5">One-time engagements with a fixed SOW and defined deliverable.</div>
+
+                    <div class="space-y-2 text-sm text-gray-700 mb-5">
+                        <div class="flex items-start gap-2"><i class="ri-check-line text-blue-600 mt-0.5"></i><span>Fixed price, fixed timeline, fixed scope</span></div>
+                        <div class="flex items-start gap-2"><i class="ri-check-line text-blue-600 mt-0.5"></i><span>Sample data delivered before SOW is signed</span></div>
+                        <div class="flex items-start gap-2"><i class="ri-check-line text-blue-600 mt-0.5"></i><span>Delivered to your warehouse / bucket / endpoint</span></div>
+                        <div class="flex items-start gap-2"><i class="ri-check-line text-blue-600 mt-0.5"></i><span>30-day warranty post-delivery</span></div>
+                    </div>
+
+                    <div class="rule mb-3"></div>
+                    <div class="text-xs text-gray-500">Best for: one-time research datasets, diligence projects, backfills, category mapping studies.</div>
+                </div>
+
+                <div class="card" style="padding: 28px; border: 2px solid var(--brand-orange); background: white; box-shadow: 0 0 0 6px #FFF7ED;">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="kicker" style="color: var(--brand-orange);">Option 02</div>
+                        <span class="pill" style="background: #FFEDD5; color: #C2410C; border-color: transparent;">Retainer · most popular</span>
+                    </div>
+                    <div class="display font-bold text-2xl mb-1">Managed Data</div>
+                    <div class="text-sm text-gray-500 mb-5">Continuous feeds with ongoing monitoring, maintenance and support.</div>
+
+                    <div class="space-y-2 text-sm text-gray-700 mb-5">
+                        <div class="flex items-start gap-2"><i class="ri-check-line text-orange-600 mt-0.5"></i><span>Monthly or annual retainer with defined SLOs</span></div>
+                        <div class="flex items-start gap-2"><i class="ri-check-line text-orange-600 mt-0.5"></i><span>Active monitoring + site-change adaptation included</span></div>
+                        <div class="flex items-start gap-2"><i class="ri-check-line text-orange-600 mt-0.5"></i><span>Dedicated channel with engineering</span></div>
+                        <div class="flex items-start gap-2"><i class="ri-check-line text-orange-600 mt-0.5"></i><span>Scope can expand without re-contracting</span></div>
+                    </div>
+
+                    <div class="rule mb-3"></div>
+                    <div class="text-xs text-gray-500">Best for: pricing intel, digital-shelf monitoring, geo dashboards, ongoing competitive tracking.</div>
+                </div>
+            </div>
+
+            <div class="rule mb-4"></div>
+            <div class="flex items-center justify-between text-sm">
+                <div>
+                    <span class="font-bold text-gray-900">Also available:</span>
+                    <span class="text-gray-600 ml-2">Strategy consulting · embedded data-engineer engagements · custom partnerships.</span>
+                </div>
+                <div class="kicker text-gray-500">Ask about the <span style="color: var(--brand-blue);">pilot sprint</span></div>
+            </div>
+        </div>
+
+        <div class="slide-footer">
+            <span>Nextract · Pricing</span>
+            <span>Custom Build · Managed Data · Consulting</span>
+        </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- SLIDE 14 · LET'S TALK                         -->
+    <!-- ============================================ -->
+    <section class="slide slide--dark slide--cover">
+        <div class="glow" style="background: #2563EB; top: -140px; right: -140px; opacity: 0.45;"></div>
+        <div class="glow" style="background: #EA580C; bottom: -140px; left: -140px; opacity: 0.35;"></div>
+        <div class="grid-bg"></div>
+
+        <div class="slide-header" style="position: relative; z-index: 2;">
+            <img src="assets/images/logo-header.png" alt="Nextract Data Solutions" class="slide-logo slide-logo--invert">
+            <span class="page-num" style="color: rgba(255,255,255,0.5);">14 / 14</span>
+        </div>
+
+        <div class="slide-body" style="position: relative; z-index: 2; justify-content: center;">
+            <span class="eyebrow mb-6" style="color: #FDBA74;">Next steps</span>
+            <h2 class="display mb-8" style="font-size: 68px; font-weight: 800; letter-spacing: -0.03em; line-height: 1;">
+                Let&rsquo;s get<br/>
+                <span class="accent-underline">sample data in your hands.</span>
+            </h2>
+
+            <p class="text-lg text-white/75 max-w-2xl mb-10 leading-relaxed">
+                A 30-minute scoping call, a no-fee sample from your real targets within 72 hours, and honest feedback on whether we&rsquo;re the right team for the job.
+            </p>
+
+            <div class="grid grid-cols-3 gap-5 mb-10">
+                <div class="card-dark" style="padding: 22px;">
+                    <div class="num-tag">01</div>
+                    <div class="font-bold text-base mt-1">Schedule call</div>
+                    <div class="text-sm text-white/65">30 min · discovery &amp; scope</div>
+                </div>
+                <div class="card-dark" style="padding: 22px;">
+                    <div class="num-tag">02</div>
+                    <div class="font-bold text-base mt-1">Receive sample</div>
+                    <div class="text-sm text-white/65">Real data · 48–72 hours · no fee</div>
+                </div>
+                <div class="card-dark" style="padding: 22px;">
+                    <div class="num-tag">03</div>
+                    <div class="font-bold text-base mt-1">Start project</div>
+                    <div class="text-sm text-white/65">SOW signed · build begins</div>
+                </div>
+            </div>
+
+            <div class="rule mb-6"></div>
+
+            <div class="grid grid-cols-3 gap-6">
+                <div>
+                    <div class="kicker mb-2" style="color: rgba(255,255,255,0.5);">Email</div>
+                    <div class="font-bold text-lg">hello@nextract.dev</div>
+                </div>
+                <div>
+                    <div class="kicker mb-2" style="color: rgba(255,255,255,0.5);">Web</div>
+                    <div class="font-bold text-lg">nextract.dev</div>
+                </div>
+                <div>
+                    <div class="kicker mb-2" style="color: rgba(255,255,255,0.5);">Sales</div>
+                    <div class="font-bold text-lg">+91 74870 98799</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide-footer" style="position: relative; z-index: 2;">
+            <span>External Data, Fully Managed</span>
+            <span>© Nextract Data Solutions</span>
+        </div>
+    </section>
+
+    <script>
+        /* Per-letter blue→orange color interpolation for `.accent-underline`
+           headlines. Each glyph gets a real solid color, so the gradient
+           effect renders identically on screen and in printed/exported PDFs
+           (no fragile `background-clip: text` required). */
+        (function paintAccentHeadlines() {
+            var BLUE = [37, 99, 235];    // #2563EB (var(--brand-blue))
+            var ORANGE = [234, 88, 12];  // #EA580C (var(--brand-orange))
+
+            function mix(a, b, t) {
+                return Math.round(a + (b - a) * t);
+            }
+
+            function paint(el) {
+                if (el.dataset.accentPainted === '1') return;
+                var text = el.textContent;
+                var chars = Array.from(text);
+                var printable = chars.filter(function (c) { return c.trim().length > 0; });
+                var n = printable.length;
+                if (n === 0) return;
+
+                var idx = 0;
+                var html = chars.map(function (c) {
+                    if (!c.trim()) return c;
+                    var t = n > 1 ? idx / (n - 1) : 0;
+                    idx++;
+                    var r = mix(BLUE[0], ORANGE[0], t);
+                    var g = mix(BLUE[1], ORANGE[1], t);
+                    var b = mix(BLUE[2], ORANGE[2], t);
+                    return '<span style="color: rgb(' + r + ',' + g + ',' + b + ')">' + c + '</span>';
+                }).join('');
+
+                el.innerHTML = html;
+                el.dataset.accentPainted = '1';
+            }
+
+            function run() {
+                document.querySelectorAll('.accent-underline').forEach(paint);
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', run);
+            } else {
+                run();
+            }
+            /* Also re-run right before print just in case the browser is
+               exporting the PDF before DOMContentLoaded finished painting. */
+            window.addEventListener('beforeprint', run);
+        })();
+    </script>
 </body>
 </html>
-
