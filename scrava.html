@@ -1,580 +1,837 @@
 ---
 layout: default
-title: "Amazon ASIN Scraping API — 99.7% Success Rate"
-description: "Amazon ASIN scraping API with dashboard. 99.7% success rate across 2.3M+ ASINs. Handles CAPTCHAs, rotating proxies, Dog page errors automatically. Get sample data free."
-keywords: "amazon scraper api, amazon scraping, amazon data extraction, amazon product data, amazon api, scrava, ASIN scraping"
-og_description: "Amazon ASIN scraping API. 99.7% success rate across 2.3M+ ASINs. Handles CAPTCHAs, proxies, Dog page errors automatically. Get sample data free."
-twitter_description: "Amazon ASIN scraping API. 99.7% success rate. 2.3M+ ASINs processed. Auto CAPTCHA handling. Get sample data free."
+title: "Scrava — Amazon Scraping API. Built to Handle the Hard Parts."
+description: "Production-grade Amazon scraping API + dashboard. 99.7% success across 2.3M+ ASINs. Handles CAPTCHAs, proxies, Dog pages automatically. Pay in USD or INR. Credits never expire."
+keywords: "amazon scraper api, amazon scraping api, amazon scraping, amazon asin api, scrava, amazon data extraction, amazon product api, amazon price scraper, india amazon api"
+og_description: "Scrava — an Amazon-first scraping API & dashboard. 99.7% success. 2.3M+ ASINs. Auto CAPTCHA, proxy rotation, Dog-page retries. USD/INR billing. Credits never expire."
+twitter_description: "Amazon scraping API that doesn't break. 99.7% success · 2.3M+ ASINs · auto-CAPTCHA · USD/INR billing · credits never expire."
+canonical_url: "https://nextract.dev/scrava/"
 ---
 
 <main>
     <!-- Hero Section -->
-    <section class="min-h-[80vh] flex items-center justify-center relative overflow-hidden bg-white">
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden bg-white">
         <div class="absolute inset-0 overflow-hidden">
             <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 blur-[100px] animate-pulse"></div>
             <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-600/10 blur-[100px] animate-pulse" style="animation-delay: 1s;"></div>
         </div>
-        
+
         <div class="container mx-auto px-6 max-w-7xl relative z-10">
             <div class="max-w-5xl mx-auto text-center">
-                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-8">Product</div>
-                
-                <!-- Logo and Title Section -->
-                <div class="mb-8">
-                    <div class="flex flex-col items-center justify-center mb-8">
-                        <!-- Logo with enhanced styling -->
-                        <div class="mb-6 relative">
-                            <div class="absolute inset-0 bg-blue-600/20 blur-3xl rounded-full animate-pulse"></div>
-                            <img src="{{ '/assets/images/scrava.png' | relative_url }}" alt="Scrava Logo" class="relative h-28 md:h-40 w-auto drop-shadow-2xl transform hover:scale-105 transition-transform duration-300">
-                        </div>
-                        <!-- Title -->
-                        <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 leading-[0.9] tracking-tight mb-4">
-                            Scrava
-                        </h1>
-                        <p class="text-xl md:text-2xl text-gray-700 mb-2 max-w-3xl mx-auto font-medium leading-relaxed">
-                            <span class="text-gray-600">by</span> <span class="font-bold text-gray-900">Nextract</span>
-                        </p>
-                    </div>
+                <div class="inline-flex items-center gap-3 bg-white/70 backdrop-blur-md border border-gray-200 px-6 py-3 mb-8 hover:bg-white/90 transition-all">
+                    <img src="{{ '/assets/images/scrava.png' | relative_url }}" alt="" class="w-5 h-5 object-contain" aria-hidden="true">
+                    <span class="text-sm font-semibold text-gray-900">A Nextract product &middot; Amazon scraping API</span>
                 </div>
-                
-                <p class="text-2xl md:text-3xl text-gray-600 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
-                    Amazon ASIN scraping, built to handle the hard parts.
+
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-8 leading-[1.1] tracking-tight">
+                    Amazon scraping,<br/>
+                    <span class="bg-gradient-to-r from-blue-600 to-orange-600 bg-clip-text text-transparent">that doesn't break.</span>
+                </h1>
+
+                <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+                    An Amazon-first scraping API built on top of 2.3M+ real ASIN extractions.<br/>
+                    <span class="font-semibold text-gray-900">Send an ASIN. Get clean JSON. Everything between is our problem.</span>
                 </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12">
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
                     <a href="#pricing" class="group relative px-10 py-5 bg-gray-900 text-white font-bold text-lg overflow-hidden">
                         <span class="relative z-10 flex items-center gap-2">
-                            View Pricing
+                            See Pricing
                             <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
                         </span>
                         <div class="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
                     </a>
                     <a href="/contact/" class="px-10 py-5 border-2 border-gray-900 text-gray-900 font-bold text-lg hover:bg-gray-900 hover:text-white transition-all">
-                        Get Started
+                        Get a Free Sample
                     </a>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-center gap-12 text-sm font-semibold">
+                    <div class="flex items-center gap-3">
+                        <i class="ri-shield-check-line text-blue-600 text-xl"></i>
+                        <span class="text-gray-600">99.7% Success Rate</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="ri-database-2-line text-blue-600 text-xl"></i>
+                        <span class="text-gray-600">2.3M+ ASINs Processed</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="ri-time-line text-blue-600 text-xl"></i>
+                        <span class="text-gray-600">Credits Never Expire</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Intro Section -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <div class="prose prose-lg max-w-none">
-                <p class="text-xl text-gray-700 leading-relaxed mb-8">
-                    We built Scrava to solve the proxy-management headache we faced in-house. After processing 2.3M+ Amazon ASINs with a 99.7% success rate, we know what breaks and how to fix it automatically.
-                </p>
-                <p class="text-xl text-gray-700 leading-relaxed mb-8">
-                    You get a simple API to fetch Amazon data by ASIN and a dashboard to view, monitor, and manage your usage — all backed by Nextract's scraping infrastructure that handles CAPTCHAs, rotating proxies, and "Dog" page errors automatically.
-                </p>
-                <p class="text-xl text-gray-700 leading-relaxed font-semibold">
-                    Right now, Scrava is focused on doing one thing extremely well: <span class="text-gray-900">Amazon ASIN scraping at scale, with predictable pricing.</span>
-                </p>
-                <p class="text-xl text-gray-700 leading-relaxed mt-8">
-                    For a complete Amazon data solution including custom pipelines, APIs, and datasets, see our <a href="/amazon/" class="text-blue-600 font-semibold hover:text-blue-700 underline">Amazon data solutions</a>.
-                </p>
+    <!-- Dashboard Preview Section -->
+    <section class="py-32 bg-white">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="mb-16 text-center">
+                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">The Dashboard</div>
+                <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">Not Just an API.<br/>A Full Control Plane.</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Every Scrava plan ships with a dashboard. Monitor live jobs, watch credits in real time, switch marketplaces, preview results &mdash; no code required to kick the tyres.</p>
+            </div>
+
+            <!-- Mac-style browser window with real dashboard screenshot -->
+            <div class="scrava-mac max-w-5xl mx-auto">
+                <!-- Mac browser chrome -->
+                <div class="scrava-mac__chrome">
+                    <div class="scrava-mac__dots">
+                        <span class="scrava-mac__dot" style="background:#FF5F57;"></span>
+                        <span class="scrava-mac__dot" style="background:#FEBC2E;"></span>
+                        <span class="scrava-mac__dot" style="background:#28C840;"></span>
+                    </div>
+                    <div class="scrava-mac__url">
+                        <i class="ri-lock-line"></i>
+                        <span>scrava.getnextract.com/scraper/amazon-products/results</span>
+                    </div>
+                    <div class="scrava-mac__actions">
+                        <i class="ri-download-line"></i>
+                        <i class="ri-more-line"></i>
+                    </div>
+                </div>
+
+                <!-- Screenshot (cropped via aspect-ratio to hide empty bottom area) -->
+                <div class="scrava-mac__frame">
+                    <img src="{{ '/assets/images/scrava/dashboard-results.png' | relative_url }}"
+                         alt="Scrava dashboard showing Amazon product results, pricing and ratings in real time"
+                         loading="lazy">
+                </div>
+            </div>
+
+            <!-- Feature row below mockup -->
+            <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto mt-16">
+                <div class="text-center">
+                    <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-eye-line text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Live Job Monitoring</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">See every ASIN fetch in real time &mdash; success, retry, failure.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-coin-line text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Credit Visibility</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Running balance, consumption trend and alerts before you hit zero.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 rounded-full bg-orange-50 flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-key-2-line text-orange-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">API Key Management</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Rotate keys per environment, scope access, revoke in a click.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 rounded-full bg-orange-50 flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-test-tube-line text-orange-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">No-Code Try Mode</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Paste an ASIN, click Search, inspect the result &mdash; before writing a line of code.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- What You Get Section -->
-    <section class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-8">What you get</h2>
-            <div class="prose prose-lg max-w-none">
-                <p class="text-xl text-gray-700 leading-relaxed mb-6">
-                    Scrava gives you access to a production-ready Amazon Scraper API with a clean dashboard to track requests, records, and usage in real time.
-                </p>
-                <p class="text-xl text-gray-700 leading-relaxed mb-6">
-                    You can run up to <strong class="text-gray-900">5 concurrent requests</strong>, making it suitable for ongoing data pipelines, research, or internal tooling.
-                </p>
-                <p class="text-xl text-gray-700 leading-relaxed">
-                    The core scraping capabilities remain the same across plans — the difference is the level of support and collaboration you get.
-                </p>
+    <!-- Why Scrava Section -->
+    <section class="py-32 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="mb-16 text-center">
+                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Why Scrava</div>
+                <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">Amazon-First.<br/>Production-Grade.</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We pulled Scrava out of Nextract's own scraping stack after two years of running production Amazon pipelines for real clients. Every piece is battle-tested.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="group p-10 bg-white border border-gray-200 hover:border-blue-600 transition-all hover:shadow-xl">
+                    <div class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                        <i class="ri-tools-line text-blue-600 group-hover:text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Built by Operators</h3>
+                    <p class="text-gray-600 leading-relaxed">Every retry policy, proxy pool and parse rule has been shaped by real client workloads &mdash; not a lab demo.</p>
+                </div>
+
+                <div class="group p-10 bg-white border border-gray-200 hover:border-orange-600 transition-all hover:shadow-xl">
+                    <div class="w-14 h-14 rounded-full bg-orange-50 flex items-center justify-center mb-6 group-hover:bg-orange-600 transition-colors">
+                        <i class="ri-focus-3-line text-orange-600 group-hover:text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Obsessively Amazon</h3>
+                    <p class="text-gray-600 leading-relaxed">Not a "scrape anything" framework. Tuned specifically for Amazon's anti-bot behaviour on US and IN marketplaces today.</p>
+                </div>
+
+                <div class="group p-10 bg-white border border-gray-200 hover:border-blue-600 transition-all hover:shadow-xl">
+                    <div class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                        <i class="ri-price-tag-3-line text-blue-600 group-hover:text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Predictable Pricing</h3>
+                    <p class="text-gray-600 leading-relaxed">One flat rate per credit. Proxies, CAPTCHA solving and retries included. Credits never expire &mdash; buy what you need.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-32 bg-white">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="mb-16 text-center">
+                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">How It Works</div>
+                <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">Send an ASIN.<br/>Get Clean JSON.</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Three steps between your request and structured data you can pipe straight into a dashboard.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
+                <div class="space-y-8">
+                    <div class="flex items-start gap-6">
+                        <div class="flex-shrink-0 w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center">
+                            <span class="text-blue-600 font-black text-lg">01</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">You POST an ASIN</h3>
+                            <p class="text-gray-600 leading-relaxed">One ASIN per request or batch thousands. Pick the marketplace (US, IN) and the data points you want back.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-6">
+                        <div class="flex-shrink-0 w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center">
+                            <span class="text-blue-600 font-black text-lg">02</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">Scrava Does the Hard Part</h3>
+                            <p class="text-gray-600 leading-relaxed">Proxy rotation, CAPTCHA solving, Dog-page retries, throttling and parsing &mdash; all behind one API call.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-6">
+                        <div class="flex-shrink-0 w-14 h-14 rounded-full bg-orange-50 flex items-center justify-center">
+                            <span class="text-orange-600 font-black text-lg">03</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">You Get Structured JSON</h3>
+                            <p class="text-gray-600 leading-relaxed">Title, price, seller, ranks, star breakdown, AI review summary, variants, A+ content, high-res images &mdash; normalised and typed.</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-6 border-t border-gray-200">
+                        <a href="/contact/" class="inline-flex items-center gap-2 text-blue-600 font-bold hover:underline">
+                            Get an API key
+                            <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-gray-900 text-gray-100 p-6 md:p-8 font-mono text-[13px] leading-relaxed overflow-auto max-h-[560px]">
+                    <div class="flex items-center gap-2 mb-4 pb-4 border-b border-white/10">
+                        <span class="w-3 h-3 rounded-full bg-red-400/80"></span>
+                        <span class="w-3 h-3 rounded-full bg-yellow-400/80"></span>
+                        <span class="w-3 h-3 rounded-full bg-green-400/80"></span>
+                        <span class="ml-3 text-xs text-gray-400">POST /v1/asin &middot; Amazon.in</span>
+                    </div>
+<pre class="whitespace-pre"><span class="text-gray-500"># Fetch one ASIN</span>
+curl -X POST https://api.scrava.dev/v1/asin \
+  -H <span class="text-green-300">"Authorization: Bearer $KEY"</span> \
+  -d <span class="text-green-300">'{"asin":"B09GYPYYBQ","marketplace":"IN"}'</span>
+
+<span class="text-gray-500"># Response (trimmed)</span>
+<span class="text-blue-300">{</span>
+  <span class="text-orange-300">"asin"</span>: <span class="text-green-300">"B09GYPYYBQ"</span>,
+  <span class="text-orange-300">"title"</span>: <span class="text-green-300">"Marshall Stanmore III..."</span>,
+  <span class="text-orange-300">"brand"</span>: <span class="text-green-300">"Marshall"</span>,
+  <span class="text-orange-300">"price"</span>: <span class="text-blue-200">37999</span>,
+  <span class="text-orange-300">"list_price"</span>: <span class="text-blue-200">41999</span>,
+  <span class="text-orange-300">"currency"</span>: <span class="text-green-300">"INR"</span>,
+  <span class="text-orange-300">"in_stock"</span>: <span class="text-purple-300">true</span>,
+  <span class="text-orange-300">"stars"</span>: <span class="text-blue-200">4.4</span>,
+  <span class="text-orange-300">"reviews_count"</span>: <span class="text-blue-200">892</span>,
+  <span class="text-orange-300">"stars_breakdown"</span>: <span class="text-blue-300">{</span>
+    <span class="text-orange-300">"5star"</span>: <span class="text-blue-200">0.75</span>,
+    <span class="text-orange-300">"4star"</span>: <span class="text-blue-200">0.12</span>,
+    <span class="text-orange-300">"3star"</span>: <span class="text-blue-200">0.04</span>
+  <span class="text-blue-300">}</span>,
+  <span class="text-orange-300">"bestseller_ranks"</span>: <span class="text-blue-300">[</span>
+    <span class="text-blue-300">{</span> <span class="text-orange-300">"rank"</span>: <span class="text-blue-200">7858</span>, <span class="text-orange-300">"category"</span>: <span class="text-green-300">"Electronics"</span> <span class="text-blue-300">}</span>
+  <span class="text-blue-300">]</span>,
+  <span class="text-orange-300">"seller"</span>: <span class="text-green-300">"Clicktech Retail Pvt Ltd"</span>,
+  <span class="text-orange-300">"variants"</span>: <span class="text-blue-200">3</span>,
+  <span class="text-orange-300">"ai_review_summary"</span>: <span class="text-green-300">"Praised for sound..."</span>
+<span class="text-blue-300">}</span></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Points Section -->
+    <section class="py-32 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="mb-16 text-center">
+                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">What Comes Back</div>
+                <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">Every Amazon Field<br/>You've Ever Asked For</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">One ASIN in, a single structured JSON out. Everything below comes from one request &mdash; no extra endpoints, no extra cost.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="p-10 bg-white border border-gray-200 hover:border-blue-600 transition-all hover:shadow-xl">
+                    <div class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-6">
+                        <i class="ri-shopping-bag-3-line text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Core Product</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center gap-2"><i class="ri-check-line text-blue-600"></i>Title, ASIN, Brand</li>
+                        <li class="flex items-center gap-2"><i class="ri-check-line text-blue-600"></i>Breadcrumbs</li>
+                        <li class="flex items-center gap-2"><i class="ri-check-line text-blue-600"></i>Description &amp; bullets</li>
+                        <li class="flex items-center gap-2"><i class="ri-check-line text-blue-600"></i>50+ attribute fields</li>
+                    </ul>
+                </div>
+
+                <div class="p-10 bg-white border border-gray-200 hover:border-blue-600 transition-all hover:shadow-xl">
+                    <div class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-6">
+                        <i class="ri-price-tag-3-line text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Pricing &amp; Stock</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center gap-2"><i class="ri-check-line text-blue-600"></i>Price, list price, MRP</li>
+                        <li class="flex items-center gap-2"><i class="ri-check-line text-blue-600"></i>In-stock flag &amp; text</li>
+                        <li class="flex items-center gap-2"><i class="ri-check-line text-blue-600"></i>Delivery ETA</li>
+                        <li class="flex items-center gap-2"><i class="ri-check-line text-blue-600"></i>Offers &amp; conditions</li>
+                    </ul>
+                </div>
+
+                <div class="p-10 bg-white border border-gray-200 hover:border-orange-600 transition-all hover:shadow-xl">
+                    <div class="w-14 h-14 rounded-full bg-orange-50 flex items-center justify-center mb-6">
+                        <i class="ri-star-line text-orange-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Reviews &amp; Ratings</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center gap-2"><i class="ri-check-line text-orange-600"></i>Stars &amp; review count</li>
+                        <li class="flex items-center gap-2"><i class="ri-check-line text-orange-600"></i>1&ndash;5 star breakdown</li>
+                        <li class="flex items-center gap-2"><i class="ri-check-line text-orange-600"></i>Top &amp; international reviews</li>
+                        <li class="flex items-center gap-2"><i class="ri-check-line text-orange-600"></i>AI review summary</li>
+                    </ul>
+                </div>
+
+                <div class="p-10 bg-white border border-gray-200 hover:border-blue-600 transition-all hover:shadow-xl">
+                    <div class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-6">
+                        <i class="ri-award-line text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Seller &amp; Ranking</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center gap-2"><i class="ri-check-line text-blue-600"></i>Seller name, ID, rating</li>
+                        <li class="flex items-center gap-2"><i class="ri-check-line text-blue-600"></i>Ships from</li>
+                        <li class="flex items-center gap-2"><i class="ri-check-line text-blue-600"></i>Bestseller ranks</li>
+                        <li class="flex items-center gap-2"><i class="ri-check-line text-blue-600"></i>Amazon's Choice badge</li>
+                    </ul>
+                </div>
+
+                <div class="p-10 bg-white border border-gray-200 hover:border-orange-600 transition-all hover:shadow-xl">
+                    <div class="w-14 h-14 rounded-full bg-orange-50 flex items-center justify-center mb-6">
+                        <i class="ri-image-2-line text-orange-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Media &amp; Rich Content</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center gap-2"><i class="ri-check-line text-orange-600"></i>Gallery, high-res images</li>
+                        <li class="flex items-center gap-2"><i class="ri-check-line text-orange-600"></i>Videos &amp; A+ content</li>
+                        <li class="flex items-center gap-2"><i class="ri-check-line text-orange-600"></i>Brand story</li>
+                        <li class="flex items-center gap-2"><i class="ri-check-line text-orange-600"></i>Product comparison</li>
+                    </ul>
+                </div>
+
+                <div class="p-10 bg-white border border-gray-200 hover:border-blue-600 transition-all hover:shadow-xl">
+                    <div class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-6">
+                        <i class="ri-layout-grid-line text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Variants &amp; Catalogue</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center gap-2"><i class="ri-check-line text-blue-600"></i>Full variant list + ASINs</li>
+                        <li class="flex items-center gap-2"><i class="ri-check-line text-blue-600"></i>Variant attributes</li>
+                        <li class="flex items-center gap-2"><i class="ri-check-line text-blue-600"></i>Monthly purchase volume</li>
+                        <li class="flex items-center gap-2"><i class="ri-check-line text-blue-600"></i>Visit-store link</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="text-center mt-12 text-gray-500">Reviews, Q&amp;A and search-results endpoints available on request. <a href="/contact/" class="text-blue-600 font-semibold hover:underline">Need a custom field? Ask &rarr;</a></p>
+        </div>
+    </section>
+
+    <!-- Hard Parts Section -->
+    <section class="py-32 bg-white">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="mb-16 text-center">
+                <div class="text-sm font-bold text-orange-600 uppercase tracking-widest mb-4">The Hard Parts</div>
+                <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">Things That Break<br/>DIY Scrapers &mdash; We Handle</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <div class="group p-10 bg-gray-50 border border-gray-200 hover:border-blue-600 transition-all hover:shadow-xl">
+                    <div class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                        <i class="ri-robot-line text-blue-600 group-hover:text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">CAPTCHAs</h3>
+                    <p class="text-gray-600 leading-relaxed">Solved automatically by our in-house CAPTCHA layer. No queues, no manual retries, no third-party fees tacked onto your bill.</p>
+                </div>
+
+                <div class="group p-10 bg-gray-50 border border-gray-200 hover:border-blue-600 transition-all hover:shadow-xl">
+                    <div class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                        <i class="ri-shuffle-line text-blue-600 group-hover:text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Rotating Proxies</h3>
+                    <p class="text-gray-600 leading-relaxed">Residential &amp; datacentre pool rotated per-request, geo-routed to your marketplace. Zero proxy management on your side.</p>
+                </div>
+
+                <div class="group p-10 bg-gray-50 border border-gray-200 hover:border-orange-600 transition-all hover:shadow-xl">
+                    <div class="w-14 h-14 rounded-full bg-orange-50 flex items-center justify-center mb-6 group-hover:bg-orange-600 transition-colors">
+                        <i class="ri-error-warning-line text-orange-600 group-hover:text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Dog-Page Errors</h3>
+                    <p class="text-gray-600 leading-relaxed">Amazon's "Sorry, we just need to make sure you're not a robot" screen is auto-detected and retried with different fingerprints until the real page loads.</p>
+                </div>
+
+                <div class="group p-10 bg-gray-50 border border-gray-200 hover:border-orange-600 transition-all hover:shadow-xl">
+                    <div class="w-14 h-14 rounded-full bg-orange-50 flex items-center justify-center mb-6 group-hover:bg-orange-600 transition-colors">
+                        <i class="ri-speed-up-line text-orange-600 group-hover:text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Rate Limiting &amp; Retries</h3>
+                    <p class="text-gray-600 leading-relaxed">Per-IP, per-session and per-marketplace throttling keeps you below Amazon's bot thresholds while an exponential-backoff retry layer recovers from transient failures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketplaces Section -->
+    <section class="py-32 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="mb-16 text-center">
+                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Marketplaces</div>
+                <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">Amazon US &amp; India Today.<br/>More on the Way.</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We launched with the two marketplaces we know coldest. UK, DE, CA and AE are actively being added &mdash; ask and we'll prioritise yours.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                <div class="p-8 bg-white border border-gray-200 text-center">
+                    <div class="text-4xl mb-3">&#x1F1FA;&#x1F1F8;</div>
+                    <div class="font-bold text-gray-900">Amazon.com</div>
+                    <div class="text-xs text-green-600 font-bold uppercase tracking-wider mt-2">Live</div>
+                </div>
+                <div class="p-8 bg-white border border-gray-200 text-center">
+                    <div class="text-4xl mb-3">&#x1F1EE;&#x1F1F3;</div>
+                    <div class="font-bold text-gray-900">Amazon.in</div>
+                    <div class="text-xs text-green-600 font-bold uppercase tracking-wider mt-2">Live</div>
+                </div>
+                <div class="p-8 bg-white border border-gray-200 text-center opacity-70">
+                    <div class="text-4xl mb-3">&#x1F1EC;&#x1F1E7;</div>
+                    <div class="font-bold text-gray-900">Amazon.co.uk</div>
+                    <div class="text-xs text-orange-600 font-bold uppercase tracking-wider mt-2">Beta</div>
+                </div>
+                <div class="p-8 bg-white border border-gray-200 text-center opacity-70">
+                    <div class="text-4xl mb-3">&#x1F1E9;&#x1F1EA;</div>
+                    <div class="font-bold text-gray-900">Amazon.de</div>
+                    <div class="text-xs text-orange-600 font-bold uppercase tracking-wider mt-2">Beta</div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Pricing Section -->
-    <section id="pricing" class="py-20 bg-white">
-        <div class="container mx-auto px-6 max-w-6xl">
-            <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-4 text-center">Pricing</h2>
-            <p class="text-center text-gray-600 mb-16">Launching February 13th</p>
-            
-            <div class="max-w-4xl mx-auto">
-                
-                <!-- Pricing Card with Slider -->
-                <div class="p-10 bg-white border-2 border-gray-200 rounded-2xl shadow-lg">
-                    <!-- Price Display -->
-                    <div class="mb-10">
-                        <div class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-3" id="credits-label">20,000 Credits</div>
-                        <div class="flex items-baseline gap-2">
-                            <div class="text-6xl font-black text-gray-900" id="selected-price">$20.00</div>
-                            <div class="text-xl text-gray-600">/ USD</div>
-                        </div>
-                        <div class="mt-2 text-sm text-gray-500" id="price-per-credit">$0.001 per credit</div>
-                    </div>
-                    
-                    <!-- Slider Container -->
-                    <div class="relative mb-12 py-8">
-                        <!-- Slider Track Background (positioned between label centers) -->
-                        <div class="relative h-3 bg-gray-200 rounded-full mb-8" id="slider-track" style="left: 12.5%; width: 75%;">
-                            <!-- Filled Track -->
-                            <div class="absolute h-3 bg-blue-600 rounded-full transition-all duration-300 ease-out" id="slider-fill" style="width: 0%;"></div>
-                            
-                            <!-- Slider Handle with Badge -->
-                            <div class="absolute top-1/2 -translate-y-1/2 transition-all duration-300 ease-out z-20 pointer-events-none" id="slider-handle-container" style="left: 0%;">
-                                <!-- Credits Badge -->
-                                <div id="slider-badge" class="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 px-5 py-2.5 bg-blue-600 text-white rounded-xl font-bold text-base whitespace-nowrap shadow-xl transition-colors duration-300">
-                                    <span id="slider-badge-credits">20,000</span>
-                                    <div id="slider-badge-arrow" class="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-r-[6px] border-t-[8px] border-transparent border-t-blue-600 transition-colors duration-300"></div>
-                                </div>
-                                
-                                <!-- Handle Circle -->
-                                <div class="w-8 h-8 bg-blue-600 rounded-full border-4 border-white shadow-xl flex items-center justify-center transition-transform" id="slider-handle">
-                                    <div class="flex gap-0.5">
-                                        <i class="ri-arrow-left-s-line text-white text-xs"></i>
-                                        <i class="ri-arrow-right-s-line text-white text-xs"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Slider Input (fully functional, positioned to match track) -->
-                        <input type="range" 
-                               id="credit-slider" 
-                               min="0" 
-                               max="3" 
-                               value="0" 
-                               step="1"
-                               class="absolute top-0 left-[12.5%] w-[75%] h-12 opacity-0 cursor-pointer z-30">
-                        
-                        <!-- Slider Labels (below the bar) -->
-                        <div class="flex justify-between mt-6 text-sm font-semibold text-gray-600">
-                            <div class="text-center flex-1">
-                                <div class="font-black text-gray-900">20K</div>
-                                <div class="text-xs text-gray-500 mt-1">$20.00</div>
-                            </div>
-                            <div class="text-center flex-1">
-                                <div class="font-black text-gray-900">75K</div>
-                                <div class="text-xs text-gray-500 mt-1">$60.00</div>
-                            </div>
-                            <div class="text-center flex-1">
-                                <div class="font-black text-gray-900">170K</div>
-                                <div class="text-xs text-gray-500 mt-1">$120.00</div>
-                            </div>
-                            <div class="text-center flex-1">
-                                <div class="font-black text-orange-600">Custom</div>
-                                <div class="text-xs text-gray-500 mt-1">Contact us</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Package Details -->
-                    <div class="mb-8 pb-8 border-b border-gray-200">
-                        <h3 class="text-lg font-bold text-gray-900 mb-4">What's included</h3>
-                        <div class="grid md:grid-cols-2 gap-3">
-                            <div class="flex items-center gap-3">
-                                <i class="ri-check-line text-blue-600 text-xl flex-shrink-0"></i>
-                                <span class="font-semibold text-gray-900">Full API Access</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <i class="ri-check-line text-blue-600 text-xl flex-shrink-0"></i>
-                                <span class="font-semibold text-gray-900">Dashboard Visibility</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <i class="ri-check-line text-blue-600 text-xl flex-shrink-0"></i>
-                                <span class="font-semibold text-gray-900">Delivery Options</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <i class="ri-check-line text-blue-600 text-xl flex-shrink-0"></i>
-                                <span class="font-semibold text-gray-900">Platform Support</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <i class="ri-check-line text-blue-600 text-xl flex-shrink-0"></i>
-                                <span class="font-semibold text-gray-900">Auto CAPTCHA Handling</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <i class="ri-check-line text-blue-600 text-xl flex-shrink-0"></i>
-                                <span class="font-semibold text-gray-900">Proxy Rotation</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <i class="ri-check-line text-blue-600 text-xl flex-shrink-0"></i>
-                                <span class="font-semibold text-gray-900">Credits Never Expire</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <i class="ri-customer-service-2-line text-orange-600 text-xl flex-shrink-0"></i>
-                                <a href="/contact/" class="font-semibold text-orange-600 hover:text-orange-700 transition-colors">Contact us for custom packages</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Additional Info -->
-                    <div class="mb-8 p-6 bg-blue-50 rounded-xl border border-blue-200">
-                        <div class="flex items-start gap-3">
-                            <i class="ri-information-line text-blue-600 text-2xl mt-1 flex-shrink-0"></i>
-                            <div>
-                                <div class="font-bold text-gray-900 mb-2">Credits never expire</div>
-                                <div class="text-sm text-gray-700">Your credits are valid indefinitely. Use them at your own pace with no expiration date.</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- CTA Button -->
-                    <a href="/contact/" class="group relative w-full px-8 py-5 bg-gray-900 text-white font-bold text-lg text-center overflow-hidden hover:bg-blue-600 transition-all block rounded-lg">
-                        <span class="relative z-10 flex items-center justify-center gap-2">
-                            Get Started with <span id="cta-credits">20,000 Credits</span>
-                            <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
-                        </span>
-                        <div class="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-                    </a>
+    <section id="pricing" class="py-32 bg-white">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="mb-12 text-center">
+                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Pricing</div>
+                <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">Simple Credit Packs.<br/>Credits Never Expire.</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Three packs to get you started. Proxies, CAPTCHA solving and retries all included. Pay in USD or INR &mdash; your credits are yours until you use them.</p>
+            </div>
+
+            <!-- Currency toggle -->
+            <div class="flex items-center justify-center mb-16">
+                <div class="inline-flex items-center bg-gray-100 p-1" role="tablist" aria-label="Currency">
+                    <button type="button" id="cur-usd" class="px-6 py-2.5 text-sm font-bold transition-colors" aria-pressed="false">
+                        <span class="inline-flex items-center gap-2"><i class="ri-money-dollar-circle-line"></i> USD</span>
+                    </button>
+                    <button type="button" id="cur-inr" class="px-6 py-2.5 text-sm font-bold transition-colors" aria-pressed="false">
+                        <span class="inline-flex items-center gap-2"><i class="ri-money-rupee-circle-line"></i> INR</span>
+                    </button>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <style>
-        /* Custom Slider Styling */
-        #credit-slider {
-            -webkit-appearance: none;
-            appearance: none;
-            background: transparent;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 48px;
-            z-index: 30;
-            cursor: pointer;
-        }
-        
-        #credit-slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 32px;
-            height: 32px;
-            background: transparent;
-            cursor: grab;
-        }
-        
-        #credit-slider::-webkit-slider-thumb:active {
-            cursor: grabbing;
-        }
-        
-        #credit-slider::-moz-range-thumb {
-            width: 32px;
-            height: 32px;
-            background: transparent;
-            border: none;
-            cursor: grab;
-        }
-        
-        #credit-slider::-moz-range-thumb:active {
-            cursor: grabbing;
-        }
-        
-        #slider-handle-container {
-            transform: translateX(-50%);
-            pointer-events: none;
-        }
-        
-        #slider-badge-credits {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        #selected-price {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        #price-per-credit {
-            transition: all 0.3s ease;
-        }
-    </style>
-    
-    <script>
-        // Credit package data
-        const creditPackages = [
-            { 
-                credits: '20,000', 
-                creditsRaw: 20000, 
-                price: '20.00', 
-                label: '20,000 Credits',
-                perCredit: '$0.001',
-                isCustom: false
-            },
-            { 
-                credits: '75,000', 
-                creditsRaw: 75000, 
-                price: '60.00', 
-                label: '75,000 Credits',
-                perCredit: '$0.0008',
-                isCustom: false
-            },
-            { 
-                credits: '1,70,000', 
-                creditsRaw: 170000, 
-                price: '120.00', 
-                label: '1,70,000 Credits',
-                perCredit: '$0.0007',
-                isCustom: false
-            },
-            {
-                credits: 'Custom',
-                creditsRaw: 0,
-                price: 'Custom',
-                label: 'Custom Package',
-                perCredit: 'Contact us',
-                isCustom: true
-            }
-        ];
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            const slider = document.getElementById('credit-slider');
-            const priceDisplay = document.getElementById('selected-price');
-            const creditsLabel = document.getElementById('credits-label');
-            const badgeCredits = document.getElementById('slider-badge-credits');
-            const badgeContainer = document.getElementById('slider-badge');
-            const badgeArrow = document.getElementById('slider-badge-arrow');
-            const handleContainer = document.getElementById('slider-handle-container');
-            const sliderFill = document.getElementById('slider-fill');
-            const pricePerCredit = document.getElementById('price-per-credit');
-            const ctaCredits = document.getElementById('cta-credits');
-            const ctaButton = document.querySelector('a[href="/contact/"]');
-            
-            function updateDisplay(value) {
-                const package = creditPackages[value];
-                // Calculate position: 0% at first label center, 100% at last label center
-                // Positions: 0=0%, 1=33.33%, 2=66.66%, 3=100%
-                const percentage = (value / 3) * 100;
-                
-                if (package.isCustom) {
-                    // Custom package styling
-                    priceDisplay.style.opacity = '0.7';
-                    priceDisplay.style.transform = 'scale(0.95)';
-                    
-                    setTimeout(() => {
-                        priceDisplay.textContent = 'Custom';
-                        priceDisplay.style.opacity = '1';
-                        priceDisplay.style.transform = 'scale(1)';
-                    }, 150);
-                    
-                    creditsLabel.textContent = 'Custom Package';
-                    badgeCredits.textContent = 'Custom';
-                    pricePerCredit.textContent = 'Contact us for pricing';
-                    
-                    // Change badge color to orange
-                    if (badgeContainer) {
-                        badgeContainer.classList.remove('bg-blue-600');
-                        badgeContainer.classList.add('bg-orange-600');
-                    }
-                    if (badgeArrow) {
-                        badgeArrow.classList.remove('border-t-blue-600');
-                        badgeArrow.classList.add('border-t-orange-600');
-                    }
-                    
-                    // Update handle color
-                    const handle = document.getElementById('slider-handle');
-                    if (handle) {
-                        handle.classList.remove('bg-blue-600');
-                        handle.classList.add('bg-orange-600');
-                    }
-                    
-                    // Update CTA button
-                    if (ctaCredits) {
-                        ctaCredits.textContent = 'Custom Package';
-                    }
-                } else {
-                    // Regular package styling
-                    priceDisplay.style.opacity = '0.7';
-                    priceDisplay.style.transform = 'scale(0.95)';
-                    
-                    setTimeout(() => {
-                        priceDisplay.textContent = '$' + package.price;
-                        priceDisplay.style.opacity = '1';
-                        priceDisplay.style.transform = 'scale(1)';
-                    }, 150);
-                    
-                    creditsLabel.textContent = package.label;
-                    badgeCredits.textContent = package.credits;
-                    pricePerCredit.textContent = package.perCredit + ' per credit';
-                    
-                    // Reset badge color to blue
-                    if (badgeContainer) {
-                        badgeContainer.classList.remove('bg-orange-600');
-                        badgeContainer.classList.add('bg-blue-600');
-                    }
-                    if (badgeArrow) {
-                        badgeArrow.classList.remove('border-t-orange-600');
-                        badgeArrow.classList.add('border-t-blue-600');
-                    }
-                    
-                    // Reset handle color
-                    const handle = document.getElementById('slider-handle');
-                    if (handle) {
-                        handle.classList.remove('bg-orange-600');
-                        handle.classList.add('bg-blue-600');
-                    }
-                    
-                    // Update CTA button
-                    if (ctaCredits) {
-                        ctaCredits.textContent = package.credits + ' Credits';
-                    }
-                }
-                
-                // Update slider fill and handle position with smooth transition
-                sliderFill.style.width = percentage + '%';
-                handleContainer.style.left = percentage + '%';
-            }
-            
-            // Initialize with first package
-            updateDisplay(0);
-            
-            // Handle slider input (real-time updates while dragging)
-            slider.addEventListener('input', function() {
-                updateDisplay(parseInt(this.value));
-            });
-            
-            // Handle slider change (when released)
-            slider.addEventListener('change', function() {
-                updateDisplay(parseInt(this.value));
-            });
-            
-            // Visual feedback on interaction
-            const sliderHandle = document.getElementById('slider-handle');
-            
-            slider.addEventListener('mousedown', function() {
-                document.body.style.cursor = 'grabbing';
-                if (sliderHandle) {
-                    sliderHandle.style.transform = 'scale(1.15)';
-                }
-            });
-            
-            slider.addEventListener('mouseup', function() {
-                document.body.style.cursor = '';
-                if (sliderHandle) {
-                    sliderHandle.style.transform = 'scale(1)';
-                }
-            });
-            
-            slider.addEventListener('mouseleave', function() {
-                document.body.style.cursor = '';
-                if (sliderHandle) {
-                    sliderHandle.style.transform = 'scale(1)';
-                }
-            });
-            
-            // Touch support for mobile
-            slider.addEventListener('touchstart', function() {
-                if (sliderHandle) {
-                    sliderHandle.style.transform = 'scale(1.15)';
-                }
-            });
-            
-            slider.addEventListener('touchend', function() {
-                if (sliderHandle) {
-                    sliderHandle.style.transform = 'scale(1)';
-                }
-            });
-        });
-    </script>
 
-    <!-- Technical Insights Section -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-8">Technical Insights</h2>
-            <div class="prose prose-lg max-w-none">
-                <p class="text-xl text-gray-700 leading-relaxed mb-6">
-                    Amazon's anti-scraping measures are constantly evolving. We've processed 2.3M+ ASINs and learned exactly what breaks. Here's what Scrava handles automatically:
-                </p>
-                <ul class="text-xl text-gray-700 leading-relaxed space-y-4 mb-8">
-                    <li class="flex items-start gap-3">
-                        <span class="text-blue-600 font-black mt-1">→</span>
-                        <span><strong class="text-gray-900">CAPTCHAs:</strong> Automatically solved using our CAPTCHA-solving infrastructure. No manual intervention needed.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-blue-600 font-black mt-1">→</span>
-                        <span><strong class="text-gray-900">Rotating Proxies:</strong> We maintain a pool of residential and datacenter proxies that rotate automatically to avoid IP blocks.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-blue-600 font-black mt-1">→</span>
-                        <span><strong class="text-gray-900">"Dog" Page Errors:</strong> When Amazon shows the "Sorry, we just need to make sure you're not a robot" page, Scrava automatically retries with different strategies until it succeeds.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-blue-600 font-black mt-1">→</span>
-                        <span><strong class="text-gray-900">Rate Limiting:</strong> Built-in rate limiting prevents triggering Amazon's anti-bot systems while maintaining high throughput.</span>
-                    </li>
-                </ul>
-                <p class="text-xl text-gray-700 leading-relaxed font-semibold">
-                    Result: <span class="text-gray-900">99.7% success rate across 2.3M+ ASIN extractions.</span>
-                </p>
-            </div>
-        </div>
-    </section>
+            <!-- Pricing cards -->
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-8 items-stretch">
+                <!-- Starter -->
+                <div class="p-10 bg-white border border-gray-200 hover:border-blue-600 transition-all hover:shadow-xl flex flex-col">
+                    <div class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">Starter</div>
+                    <div class="flex items-baseline gap-2 mb-2">
+                        <span class="text-5xl font-black text-gray-900" data-price-usd>$20</span>
+                        <span class="text-5xl font-black text-gray-900 hidden" data-price-inr>&#8377;1,699</span>
+                    </div>
+                    <div class="text-sm text-gray-500 mb-8">
+                        <span data-price-usd>$0.001 per credit &middot; one-time</span>
+                        <span data-price-inr class="hidden">&#8377;0.085 per credit &middot; one-time</span>
+                    </div>
+                    <div class="pb-6 mb-6 border-b border-gray-200">
+                        <div class="text-3xl font-black text-blue-600 leading-none mb-1">20,000</div>
+                        <div class="text-xs font-bold text-gray-500 uppercase tracking-widest">credits included</div>
+                    </div>
+                    <ul class="space-y-3 text-sm text-gray-600 mb-10 flex-1">
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-blue-600 mt-0.5"></i>Full API access</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-blue-600 mt-0.5"></i>Dashboard &amp; usage visibility</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-blue-600 mt-0.5"></i>Auto CAPTCHA + rotating proxies</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-blue-600 mt-0.5"></i>Up to 5 concurrent requests</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-blue-600 mt-0.5"></i>US + IN marketplaces</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-blue-600 mt-0.5"></i>Email support</li>
+                    </ul>
+                    <a href="/contact/" class="block w-full px-6 py-4 text-center border-2 border-gray-900 text-gray-900 font-bold hover:bg-gray-900 hover:text-white transition-all">Get Starter</a>
+                </div>
 
-    <!-- Custom Section -->
-    <section class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-8">Need something custom?</h2>
-            <div class="prose prose-lg max-w-none">
-                <p class="text-xl text-gray-700 leading-relaxed mb-6">
-                    If your requirements go beyond standard Amazon scraping — different data points, delivery formats, higher concurrency, or fully managed workflows — we handle that too.
-                </p>
-                <p class="text-xl text-gray-700 leading-relaxed">
-                    For custom use cases, <a href="/contact/" class="text-blue-600 font-semibold hover:underline">get in touch with us</a> and we'll design a solution around your needs.
-                </p>
-            </div>
-        </div>
-    </section>
+                <!-- Growth (highlighted) -->
+                <div class="relative p-10 bg-gray-900 text-white border border-gray-900 shadow-2xl flex flex-col">
+                    <div class="absolute -top-3 right-6 px-3 py-1.5 bg-orange-600 text-white text-[10px] font-black uppercase tracking-widest whitespace-nowrap shadow-lg">Most Popular</div>
+                    <div class="text-sm font-bold text-blue-400 uppercase tracking-widest mb-4">Growth</div>
+                    <div class="flex items-baseline gap-2 mb-2">
+                        <span class="text-5xl font-black text-white" data-price-usd>$60</span>
+                        <span class="text-5xl font-black text-white hidden" data-price-inr>&#8377;4,999</span>
+                    </div>
+                    <div class="text-sm text-gray-400 mb-8">
+                        <span data-price-usd>$0.0008 per credit &middot; one-time</span>
+                        <span data-price-inr class="hidden">&#8377;0.067 per credit &middot; one-time</span>
+                    </div>
+                    <div class="pb-6 mb-6 border-b border-white/10">
+                        <div class="text-3xl font-black text-orange-400 leading-none mb-1">75,000</div>
+                        <div class="text-xs font-bold text-gray-500 uppercase tracking-widest">credits included</div>
+                    </div>
+                    <ul class="space-y-3 text-sm text-gray-300 mb-10 flex-1">
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-400 mt-0.5"></i>Everything in Starter</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-400 mt-0.5"></i>Priority fetch queue</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-400 mt-0.5"></i>Slack / WhatsApp support</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-400 mt-0.5"></i>Webhook + S3 delivery</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-400 mt-0.5"></i>Reviews endpoint (trial)</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-400 mt-0.5"></i>Monthly usage review</li>
+                    </ul>
+                    <a href="/contact/" class="block w-full px-6 py-4 text-center bg-white text-gray-900 font-bold hover:bg-blue-600 hover:text-white transition-all">Get Growth</a>
+                </div>
 
-    <!-- Related Resources Section -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-8">Related Resources</h2>
-            <div class="prose prose-lg max-w-none">
-                <p class="text-xl text-gray-700 leading-relaxed mb-6">
-                    Learn more about Amazon data extraction and see how brands use Scrava to drive results:
-                </p>
-                <div class="grid md:grid-cols-3 gap-6 mt-8">
-                    <a href="/apis/amazon-api/" class="p-6 border-2 border-gray-200 hover:border-blue-600 transition-all bg-white group">
-                        <div class="text-blue-600 font-black text-2xl mb-3 group-hover:translate-x-2 transition-transform inline-block">→</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">Amazon API</h3>
-                        <p class="text-gray-600">RESTful API for Amazon product data extraction. Real-time pricing, reviews, and seller information.</p>
-                    </a>
-                    <a href="/case-studies/amazon-pricing-intelligence-25-percent-revenue/" class="p-6 border-2 border-gray-200 hover:border-blue-600 transition-all bg-white group">
-                        <div class="text-blue-600 font-black text-2xl mb-3 group-hover:translate-x-2 transition-transform inline-block">→</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">25% Revenue Boost Case Study</h3>
-                        <p class="text-gray-600">How a D2C brand increased revenue 25% in 3 months using Amazon pricing intelligence.</p>
-                    </a>
-                    <a href="/blog/amazon-pricing-strategies-2026/" class="p-6 border-2 border-gray-200 hover:border-blue-600 transition-all bg-white group">
-                        <div class="text-blue-600 font-black text-2xl mb-3 group-hover:translate-x-2 transition-transform inline-block">→</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">Amazon Pricing Strategies 2026</h3>
-                        <p class="text-gray-600">Latest strategies for Amazon price monitoring and competitive intelligence in 2026.</p>
-                    </a>
+                <!-- Scale -->
+                <div class="p-10 bg-white border border-gray-200 hover:border-orange-600 transition-all hover:shadow-xl flex flex-col">
+                    <div class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">Scale</div>
+                    <div class="flex items-baseline gap-2 mb-2">
+                        <span class="text-5xl font-black text-gray-900" data-price-usd>$120</span>
+                        <span class="text-5xl font-black text-gray-900 hidden" data-price-inr>&#8377;9,999</span>
+                    </div>
+                    <div class="text-sm text-gray-500 mb-8">
+                        <span data-price-usd>$0.0007 per credit &middot; one-time</span>
+                        <span data-price-inr class="hidden">&#8377;0.058 per credit &middot; one-time</span>
+                    </div>
+                    <div class="pb-6 mb-6 border-b border-gray-200">
+                        <div class="text-3xl font-black text-orange-600 leading-none mb-1">1,70,000</div>
+                        <div class="text-xs font-bold text-gray-500 uppercase tracking-widest">credits included</div>
+                    </div>
+                    <ul class="space-y-3 text-sm text-gray-600 mb-10 flex-1">
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-600 mt-0.5"></i>Everything in Growth</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-600 mt-0.5"></i>Higher concurrency (10+)</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-600 mt-0.5"></i>Reviews endpoint included</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-600 mt-0.5"></i>S3 / warehouse delivery</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-600 mt-0.5"></i>Dedicated engineer on-call</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-600 mt-0.5"></i>Uptime commitments</li>
+                    </ul>
+                    <a href="/contact/" class="block w-full px-6 py-4 text-center border-2 border-gray-900 text-gray-900 font-bold hover:bg-gray-900 hover:text-white transition-all">Get Scale</a>
                 </div>
             </div>
+
+            <!-- Enterprise row -->
+            <div class="max-w-6xl mx-auto p-10 bg-gray-50 border border-gray-200 flex flex-col md:flex-row md:items-center gap-8 justify-between">
+                <div>
+                    <div class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-2">Enterprise</div>
+                    <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Need more? Let's build it.</h3>
+                    <p class="text-gray-600 max-w-2xl">Millions of ASINs, extra marketplaces, dedicated proxy pools, SLAs, private deployment &mdash; priced against your actual volume and invoiced monthly.</p>
+                </div>
+                <a href="/contact/" class="px-8 py-4 bg-gray-900 text-white font-bold hover:bg-blue-600 transition-colors whitespace-nowrap inline-flex items-center gap-2 self-start md:self-auto">
+                    Talk to sales
+                    <i class="ri-arrow-right-line"></i>
+                </a>
+            </div>
+
+            <!-- Trust row -->
+            <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 text-center">
+                <div class="flex items-center justify-center gap-3"><i class="ri-infinity-line text-blue-600 text-xl"></i><span class="text-sm font-semibold text-gray-700">Credits never expire</span></div>
+                <div class="flex items-center justify-center gap-3"><i class="ri-shield-check-line text-blue-600 text-xl"></i><span class="text-sm font-semibold text-gray-700">99.7% success rate</span></div>
+                <div class="flex items-center justify-center gap-3"><i class="ri-exchange-dollar-line text-orange-600 text-xl"></i><span class="text-sm font-semibold text-gray-700">USD or INR billing</span></div>
+                <div class="flex items-center justify-center gap-3"><i class="ri-customer-service-2-line text-orange-600 text-xl"></i><span class="text-sm font-semibold text-gray-700">Human support</span></div>
+            </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-6 max-w-4xl text-center">
-            <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-8">Ready to get started?</h2>
-            <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-                Start scraping Amazon data at scale with Scrava. Simple API, clean dashboard, predictable pricing.
-            </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="/contact/" class="group relative px-10 py-5 bg-gray-900 text-white font-bold text-lg overflow-hidden">
-                    <span class="relative z-10 flex items-center gap-2">
-                        Get Started
-                        <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
-                    </span>
-                    <div class="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-                </a>
-                <a href="#pricing" class="px-10 py-5 border-2 border-gray-900 text-gray-900 font-bold text-lg hover:bg-gray-900 hover:text-white transition-all">
-                    View Pricing
-                </a>
+    <!-- Scrava vs DIY Section -->
+    <section class="py-32 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="mb-16 text-center">
+                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Why Not DIY?</div>
+                <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">Building This In-House<br/>Is a $30K Problem</h2>
+            </div>
+
+            <div class="max-w-6xl mx-auto overflow-x-auto">
+                <table class="w-full text-left border-collapse bg-white border border-gray-200">
+                    <thead>
+                        <tr class="text-xs uppercase tracking-widest text-gray-500 border-b border-gray-200">
+                            <th class="p-6 font-bold">&nbsp;</th>
+                            <th class="p-6 font-bold">Roll Your Own</th>
+                            <th class="p-6 font-bold">Generic API</th>
+                            <th class="p-6 font-bold text-blue-600">Scrava</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm">
+                        <tr class="border-b border-gray-100">
+                            <td class="p-6 font-bold text-gray-900">Amazon-tuned parse rules</td>
+                            <td class="p-6 text-gray-600">You build them</td>
+                            <td class="p-6 text-gray-600">Mostly generic</td>
+                            <td class="p-6 text-gray-900 font-semibold">Amazon-only</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 bg-gray-50">
+                            <td class="p-6 font-bold text-gray-900">CAPTCHA handling</td>
+                            <td class="p-6 text-gray-600">Third-party cost</td>
+                            <td class="p-6 text-gray-600">Charged per solve</td>
+                            <td class="p-6 text-gray-900 font-semibold">Included</td>
+                        </tr>
+                        <tr class="border-b border-gray-100">
+                            <td class="p-6 font-bold text-gray-900">Dog-page recovery</td>
+                            <td class="p-6 text-gray-600">Manual</td>
+                            <td class="p-6 text-gray-600">Often fails silently</td>
+                            <td class="p-6 text-gray-900 font-semibold">Auto-retry</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 bg-gray-50">
+                            <td class="p-6 font-bold text-gray-900">Credit expiry</td>
+                            <td class="p-6 text-gray-600">&mdash;</td>
+                            <td class="p-6 text-gray-600">Monthly expiry</td>
+                            <td class="p-6 text-gray-900 font-semibold">Never</td>
+                        </tr>
+                        <tr class="border-b border-gray-100">
+                            <td class="p-6 font-bold text-gray-900">INR billing</td>
+                            <td class="p-6 text-gray-600">N/A</td>
+                            <td class="p-6 text-gray-600">USD only</td>
+                            <td class="p-6 text-gray-900 font-semibold">Included</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-bold text-gray-900">Humans who care</td>
+                            <td class="p-6 text-gray-600">You</td>
+                            <td class="p-6 text-gray-600">Ticket queue</td>
+                            <td class="p-6 text-gray-900 font-semibold">Real team</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-32 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="mb-16 text-center">
+                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">FAQ</div>
+                <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">Straight Answers.</h2>
+            </div>
+
+            <div class="divide-y divide-gray-200 border-y border-gray-200">
+                <details class="group py-8">
+                    <summary class="flex items-center justify-between cursor-pointer list-none">
+                        <span class="text-lg font-bold text-gray-900">What's a "credit"?</span>
+                        <i class="ri-add-line text-2xl text-gray-500 group-open:rotate-45 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed">One successful ASIN fetch = one credit. Failed requests (after all auto-retries) are not billed. Review-page and search-page calls may use multiple credits &mdash; we'll always tell you up-front.</p>
+                </details>
+
+                <details class="group py-8">
+                    <summary class="flex items-center justify-between cursor-pointer list-none">
+                        <span class="text-lg font-bold text-gray-900">Do credits expire?</span>
+                        <i class="ri-add-line text-2xl text-gray-500 group-open:rotate-45 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed">Never. Buy a pack, use it at your own pace. No monthly burn, no rollover drama.</p>
+                </details>
+
+                <details class="group py-8">
+                    <summary class="flex items-center justify-between cursor-pointer list-none">
+                        <span class="text-lg font-bold text-gray-900">Can I pay in INR?</span>
+                        <i class="ri-add-line text-2xl text-gray-500 group-open:rotate-45 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed">Yes. Indian customers are billed in INR, international customers in USD. Toggle the pricing card to see your currency, or we'll auto-detect based on your location.</p>
+                </details>
+
+                <details class="group py-8">
+                    <summary class="flex items-center justify-between cursor-pointer list-none">
+                        <span class="text-lg font-bold text-gray-900">What concurrency do I get?</span>
+                        <i class="ri-add-line text-2xl text-gray-500 group-open:rotate-45 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed">Up to 5 concurrent requests on standard packages. Custom packages scale to 50+ concurrency with dedicated proxy pools &mdash; <a href="/contact/" class="text-blue-600 font-semibold hover:underline">talk to us</a>.</p>
+                </details>
+
+                <details class="group py-8">
+                    <summary class="flex items-center justify-between cursor-pointer list-none">
+                        <span class="text-lg font-bold text-gray-900">Can I scrape reviews or search results?</span>
+                        <i class="ri-add-line text-2xl text-gray-500 group-open:rotate-45 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed">Review and search-page scraping are available on request as add-on endpoints. They typically use more credits per call because of pagination &mdash; we'll quote against your actual volume.</p>
+                </details>
+
+                <details class="group py-8">
+                    <summary class="flex items-center justify-between cursor-pointer list-none">
+                        <span class="text-lg font-bold text-gray-900">What's the data freshness?</span>
+                        <i class="ri-add-line text-2xl text-gray-500 group-open:rotate-45 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed">Real-time at the moment of the API call &mdash; you're hitting Amazon live, not a cached mirror. For recurring monitoring, we can schedule fetches at any cadence you want.</p>
+                </details>
+
+                <details class="group py-8">
+                    <summary class="flex items-center justify-between cursor-pointer list-none">
+                        <span class="text-lg font-bold text-gray-900">When are non-Amazon platforms coming?</span>
+                        <i class="ri-add-line text-2xl text-gray-500 group-open:rotate-45 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed">Flipkart, Meesho and Myntra are in the roadmap for E-commerce. Blinkit, Zepto, Instamart and BigBasket are queued for Quick Commerce. If any of these are urgent, we already deliver them as custom pipelines today via <a href="/amazon/" class="text-blue-600 font-semibold hover:underline">Nextract</a>.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-32 bg-gray-900 text-white">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="text-sm font-bold text-blue-400 uppercase tracking-widest mb-4">Get Started</div>
+                <h2 class="text-5xl md:text-7xl font-black mb-8 leading-tight text-white">Send Us Five ASINs.<br/>Get Clean Data Back.</h2>
+                <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">No signup, no card, no scope call &mdash; just a real sample against your real target ASINs. Usually back within 24 hours.</p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="/contact/" class="px-10 py-5 bg-white text-gray-900 font-bold text-lg hover:bg-blue-600 hover:text-white transition-colors inline-flex items-center gap-2">
+                        Request Sample Data
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                    <a href="#pricing" class="px-10 py-5 border-2 border-white/30 text-white font-bold text-lg hover:bg-white/10 transition-colors">
+                        View Pricing
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     {% include contact-section.html %}
 </main>
+
+<script>
+(function () {
+    function detectCurrency() {
+        try {
+            var saved = localStorage.getItem('scrava-currency');
+            if (saved === 'USD' || saved === 'INR') return saved;
+        } catch (e) {}
+        try {
+            var tz = (Intl.DateTimeFormat().resolvedOptions().timeZone || '');
+            if (tz === 'Asia/Kolkata' || tz === 'Asia/Calcutta') return 'INR';
+        } catch (e) {}
+        var lang = (navigator.language || '').toLowerCase();
+        if (/^(en-in|hi|bn|te|mr|ta|gu|kn|ml|or|pa|ur|as|ne)/.test(lang)) return 'INR';
+        return 'USD';
+    }
+
+    var curUsdBtn = document.getElementById('cur-usd');
+    var curInrBtn = document.getElementById('cur-inr');
+    if (!curUsdBtn || !curInrBtn) return;
+
+    function applyCurrency(cur) {
+        var showUsd = cur === 'USD';
+        document.querySelectorAll('[data-price-usd]').forEach(function (el) {
+            el.classList.toggle('hidden', !showUsd);
+        });
+        document.querySelectorAll('[data-price-inr]').forEach(function (el) {
+            el.classList.toggle('hidden', showUsd);
+        });
+        curUsdBtn.classList.toggle('active', showUsd);
+        curInrBtn.classList.toggle('active', !showUsd);
+        curUsdBtn.setAttribute('aria-pressed', showUsd);
+        curInrBtn.setAttribute('aria-pressed', !showUsd);
+    }
+
+    function setCurrency(cur, persist) {
+        if (persist !== false) {
+            try { localStorage.setItem('scrava-currency', cur); } catch (e) {}
+        }
+        applyCurrency(cur);
+    }
+
+    curUsdBtn.addEventListener('click', function () { setCurrency('USD'); });
+    curInrBtn.addEventListener('click', function () { setCurrency('INR'); });
+
+    applyCurrency(detectCurrency());
+})();
+</script>
+
+<style>
+    /* Currency toggle active state */
+    #cur-usd, #cur-inr { color: #6B7280; }
+    #cur-usd.active, #cur-inr.active { background: #111827; color: #FFFFFF; }
+
+    /* FAQ native marker cleanup */
+    details > summary { list-style: none; }
+    details > summary::-webkit-details-marker { display: none; }
+
+    /* Modern dark browser mockup (flat, Linear/Vercel-style) */
+    .scrava-mac {
+        background: #0B0F17;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow:
+            0 0 0 1px rgba(255, 255, 255, 0.04),
+            0 30px 60px -20px rgba(15, 23, 42, 0.45),
+            0 18px 36px -18px rgba(15, 23, 42, 0.35);
+    }
+    .scrava-mac__chrome {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 12px 16px;
+        background: #0B0F17;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .scrava-mac__dots { display: flex; gap: 7px; flex-shrink: 0; }
+    .scrava-mac__dot {
+        width: 11px;
+        height: 11px;
+        border-radius: 9999px;
+        display: inline-block;
+    }
+    .scrava-mac__url {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        padding: 6px 14px;
+        font-size: 12px;
+        color: #9CA3AF;
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        max-width: 460px;
+        margin: 0 auto;
+        letter-spacing: 0.01em;
+    }
+    .scrava-mac__url i { color: #6B7280; font-size: 11px; }
+    .scrava-mac__actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: #6B7280;
+        flex-shrink: 0;
+    }
+    .scrava-mac__actions i { font-size: 14px; }
+
+    /* Image frame: crop bottom empty area via aspect-ratio + object-position */
+    .scrava-mac__frame {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1024 / 400;
+        overflow: hidden;
+        background: #0B0F17;
+    }
+    .scrava-mac__frame img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        object-position: top center;
+    }
+</style>
