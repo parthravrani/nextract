@@ -24,10 +24,19 @@
             <!-- Desktop Navigation -->
             <nav class="hidden lg:flex items-center gap-2 flex-1 justify-center">
                 
-                <!-- Scrava Link - Prominent -->
-                <a href="/scrava/" class="nav-link px-4 py-2.5 text-sm font-semibold text-gray-700 hover:text-orange-600 transition-all rounded-lg hover:bg-orange-50{% if page.url == '/scrava/' %} text-orange-600 bg-orange-50{% endif %}">
-                    Scrava
-                </a>
+                <!-- Scrava + Pricing -->
+                <div class="nav-dropdown group relative">
+                    <button type="button" class="nav-link flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-gray-700 hover:text-orange-600 transition-all rounded-lg hover:bg-orange-50{% if page.url == '/scrava/' or page.url == '/scrava-pricing/' %} text-orange-600 bg-orange-50{% endif %}">
+                        Scrava
+                        <i class="ri-arrow-down-s-line text-base transition-transform"></i>
+                    </button>
+                    <div class="nav-dropdown-menu scrava-menu absolute top-full left-0 pt-1 bg-transparent z-50 pointer-events-none">
+                        <div class="bg-white rounded-xl shadow-xl border border-gray-100 pointer-events-auto py-2 min-w-[220px]">
+                            <a href="/scrava/" class="block px-4 py-2.5 mx-1 text-sm font-semibold text-gray-800 rounded-lg hover:bg-orange-50 hover:text-orange-700 transition-colors{% if page.url == '/scrava/' %} text-orange-600 bg-orange-50{% endif %}">Overview</a>
+                            <a href="/scrava-pricing/" class="block px-4 py-2.5 mx-1 text-sm font-semibold text-gray-800 rounded-lg hover:bg-orange-50 hover:text-orange-700 transition-colors{% if page.url == '/scrava-pricing/' %} text-orange-600 bg-orange-50{% endif %}">Pricing</a>
+                        </div>
+                    </div>
+                </div>
                 
                 <!-- Products Dropdown -->
                 <div class="nav-dropdown group relative">
@@ -437,6 +446,7 @@
         .nav-dropdown-menu.products-mega  { width: 800px; }
         .nav-dropdown-menu.services-mega  { width: 840px; }
         .nav-dropdown-menu.more-mega      { width: 600px; }
+        .nav-dropdown-menu.scrava-menu    { width: auto; min-width: 220px; }
 
         /* Center Products/Services/Solutions mega menus horizontally under the button */
         .nav-dropdown-menu.products-mega,

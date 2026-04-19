@@ -1,0 +1,856 @@
+---
+layout: default
+title: Scrava Pricing
+description: Compare Scrava plans and choose how you consume Amazon product data — Excel exports, API-only, or full dashboard.
+permalink: /scrava-pricing/
+---
+
+<main>
+    <!-- ══════════════════════════════ HERO (aligned with scrava.html) ══════════════════════════════ -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden bg-white">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 blur-[100px] animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-600/10 blur-[100px] animate-pulse" style="animation-delay: 1s;"></div>
+        </div>
+
+        <div class="container mx-auto px-6 max-w-7xl relative z-10">
+            <div class="max-w-5xl mx-auto text-center">
+                <div class="inline-flex items-center gap-3 bg-white/70 backdrop-blur-md border border-gray-200 px-6 py-3 mb-8 hover:bg-white/90 transition-all">
+                    <img src="{{ '/assets/images/scrava.png' | relative_url }}" alt="" class="w-5 h-5 object-contain" aria-hidden="true">
+                    <span class="text-sm font-semibold text-gray-900">Scrava India &middot; Transparent pricing</span>
+                </div>
+
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-8 leading-[1.1] tracking-tight">
+                    Pick a <span class="bg-gradient-to-r from-blue-600 to-orange-600 bg-clip-text text-transparent">volume tier</span>,<br/>
+                    then how you consume.
+                </h1>
+
+                <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+                    Three tiers share the same credit model. Your monthly price depends on <span class="font-semibold text-gray-900">tier volume</span> and <span class="font-semibold text-gray-900">delivery mode</span> &mdash; Excel, API, or the full dashboard.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+                    <a href="#plans" class="group relative px-10 py-5 bg-gray-900 text-white font-bold text-lg overflow-hidden">
+                        <span class="relative z-10 flex items-center gap-2">
+                            Jump to plans
+                            <i class="ri-arrow-down-line group-hover:translate-y-0.5 transition-transform"></i>
+                        </span>
+                        <div class="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                    </a>
+                    <a href="/scrava/" class="px-10 py-5 border-2 border-gray-900 text-gray-900 font-bold text-lg hover:bg-gray-900 hover:text-white transition-all">
+                        Back to Scrava
+                    </a>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-center gap-12 text-sm font-semibold">
+                    <div class="flex items-center gap-3">
+                        <i class="ri-price-tag-3-line text-blue-600 text-xl"></i>
+                        <span class="text-gray-600">From &#8377;999 / month</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="ri-coin-line text-blue-600 text-xl"></i>
+                        <span class="text-gray-600">5 credits per product</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="ri-refresh-line text-orange-600 text-xl"></i>
+                        <span class="text-gray-600">Monthly INR billing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════ HOW IT WORKS ══════════════════════════════ -->
+    <section class="py-32 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="mb-16 text-center">
+                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">How it works</div>
+                <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">Two decisions.<br/>One price.</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Pick a volume tier, pick a delivery surface. Everything else &mdash; credits-per-product, proxies, and anti-blocking &mdash; is shared across tiers.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="group p-10 bg-white border border-gray-200 hover:border-blue-600 transition-all hover:shadow-xl">
+                    <div class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                        <span class="text-blue-600 font-black text-lg group-hover:text-white transition-colors">01</span>
+                    </div>
+                    <div class="text-xs font-black text-gray-400 uppercase tracking-widest mb-2">Volume</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Choose a tier</h3>
+                    <p class="text-gray-600 leading-relaxed">Starter, Growth, or Scale sets your monthly credits, concurrency, and depth of intelligence.</p>
+                </div>
+
+                <div class="group p-10 bg-white border border-gray-200 hover:border-blue-600 transition-all hover:shadow-xl">
+                    <div class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                        <span class="text-blue-600 font-black text-lg group-hover:text-white transition-colors">02</span>
+                    </div>
+                    <div class="text-xs font-black text-gray-400 uppercase tracking-widest mb-2">Delivery</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Pick a surface</h3>
+                    <p class="text-gray-600 leading-relaxed">Excel Lite, API Developer, or Dashboard Pro &mdash; same Amazon.in data, delivered where your team works.</p>
+                </div>
+
+                <div class="group p-10 bg-white border border-gray-200 hover:border-orange-600 transition-all hover:shadow-xl">
+                    <div class="w-14 h-14 rounded-full bg-orange-50 flex items-center justify-center mb-6 group-hover:bg-orange-600 transition-colors">
+                        <span class="text-orange-600 font-black text-lg group-hover:text-white transition-colors">03</span>
+                    </div>
+                    <div class="text-xs font-black text-gray-400 uppercase tracking-widest mb-2">Ship</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Ship work</h3>
+                    <p class="text-gray-600 leading-relaxed">Credits accrue monthly at your tier. History, alerts, and automation scale with Growth and Scale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════ PLANS ══════════════════════════════ -->
+    <section id="plans" class="py-32 bg-white scroll-mt-28">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="mb-12 text-center">
+                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Plans</div>
+                <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">Three tiers.<br/>Three ways to consume.</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Pick a delivery mode below &mdash; tier prices update live. Every plan includes Amazon.in coverage and the same core data.</p>
+            </div>
+
+            <!-- Delivery mode toggle -->
+            <div class="flex items-center justify-center mb-20">
+                <div class="inline-flex items-center bg-gray-100 p-1" role="tablist" aria-label="Delivery mode">
+                    <button type="button" class="scrava-pp-mode px-5 py-2.5 text-sm font-bold transition-colors" data-mode="excel" aria-pressed="true">
+                        <span class="inline-flex items-center gap-2"><i class="ri-file-excel-2-line"></i> Excel Lite</span>
+                    </button>
+                    <button type="button" class="scrava-pp-mode px-5 py-2.5 text-sm font-bold transition-colors" data-mode="api" aria-pressed="false">
+                        <span class="inline-flex items-center gap-2"><i class="ri-code-s-slash-line"></i> API Developer</span>
+                    </button>
+                    <button type="button" class="scrava-pp-mode px-5 py-2.5 text-sm font-bold transition-colors" data-mode="dashboard" aria-pressed="false">
+                        <span class="inline-flex items-center gap-2"><i class="ri-dashboard-3-line"></i> Dashboard Pro</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Plan cards -->
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
+
+                <!-- STARTER -->
+                <div class="p-10 bg-white border border-gray-200 hover:border-blue-600 transition-all hover:shadow-xl flex flex-col">
+                    <div class="flex items-center justify-between mb-6">
+                        <div>
+                            <div class="text-sm font-bold text-gray-500 uppercase tracking-widest">Starter</div>
+                            <div class="text-xs font-bold text-gray-400 uppercase tracking-widest mt-2">20k credits / month</div>
+                        </div>
+                        <div class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-black uppercase tracking-widest">Solo sellers</div>
+                    </div>
+                    <div class="flex items-end gap-2 mb-2">
+                        <span class="text-5xl font-black text-gray-900 tabular-nums" data-plan-price="starter">&#8377;999</span>
+                        <span class="text-sm font-bold text-gray-500 mb-1">/mo</span>
+                    </div>
+                    <div class="text-sm text-gray-500 mb-8">
+                        <span class="hidden" data-plan-note="starter" data-mode="excel">Excel Lite &middot; scheduled file delivery</span>
+                        <span class="hidden" data-plan-note="starter" data-mode="api">API Developer &middot; endpoints for your stack</span>
+                        <span class="hidden" data-plan-note="starter" data-mode="dashboard">Dashboard Pro &middot; full UI + alerts</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-6 leading-relaxed">Solo sellers &amp; light monitoring. Catalogue visibility without engineering.</p>
+                    <div class="border-t border-gray-100 pt-6 mb-6 space-y-3">
+                        <div class="flex items-center gap-3 text-sm text-gray-800"><i class="ri-coin-line text-blue-600"></i><span><span class="font-black">20,000 credits</span> / month</span></div>
+                        <div class="flex items-center gap-3 text-sm text-gray-800"><i class="ri-stack-line text-blue-600"></i><span>~4,000 product fetches</span></div>
+                        <div class="flex items-center gap-3 text-sm text-gray-800"><i class="ri-speed-up-line text-blue-600"></i><span>1 concurrent request</span></div>
+                    </div>
+                    <ul class="space-y-3 text-sm text-gray-700 mb-10 flex-1">
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-blue-600 mt-0.5 flex-shrink-0"></i>Title, ASIN, SKU basics</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-blue-600 mt-0.5 flex-shrink-0"></i>Current &amp; original pricing</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-blue-600 mt-0.5 flex-shrink-0"></i>7-day history window</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-blue-600 mt-0.5 flex-shrink-0"></i>Email alerts on price drops</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-blue-600 mt-0.5 flex-shrink-0"></i>Rotating proxies</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-blue-600 mt-0.5 flex-shrink-0"></i>Ticket support</li>
+                    </ul>
+                    <a href="/contact/" class="block w-full px-6 py-4 text-center border-2 border-gray-900 text-gray-900 font-bold hover:bg-gray-900 hover:text-white transition-all">Start Starter</a>
+                </div>
+
+                <!-- GROWTH (featured / dark) -->
+                <div class="relative p-10 bg-gray-900 text-white border border-gray-900 shadow-2xl flex flex-col">
+                    <div class="absolute -top-3 right-6 px-3 py-1.5 bg-orange-600 text-white text-[10px] font-black uppercase tracking-widest whitespace-nowrap shadow-lg">Most Popular</div>
+                    <div class="flex items-center justify-between mb-6">
+                        <div>
+                            <div class="text-sm font-bold text-blue-400 uppercase tracking-widest">Growth</div>
+                            <div class="text-xs font-bold text-gray-500 uppercase tracking-widest mt-2">75k credits / month</div>
+                        </div>
+                        <div class="px-3 py-1 bg-white/10 text-white text-xs font-black uppercase tracking-widest">Teams</div>
+                    </div>
+                    <div class="flex items-end gap-2 mb-2">
+                        <span class="text-5xl font-black text-white tabular-nums" data-plan-price="growth">&#8377;2,999</span>
+                        <span class="text-sm font-bold text-gray-400 mb-1">/mo</span>
+                    </div>
+                    <div class="text-sm text-gray-400 mb-8">
+                        <span class="hidden" data-plan-note="growth" data-mode="excel">Excel Lite &middot; scheduled file delivery</span>
+                        <span class="hidden" data-plan-note="growth" data-mode="api">API Developer &middot; endpoints for your stack</span>
+                        <span class="hidden" data-plan-note="growth" data-mode="dashboard">Dashboard Pro &middot; full UI + alerts</span>
+                    </div>
+                    <p class="text-sm text-gray-300 mb-6 leading-relaxed">Growing catalogues &amp; integrations. Richer signals and more history.</p>
+                    <div class="border-t border-white/10 pt-6 mb-6 space-y-3">
+                        <div class="flex items-center gap-3 text-sm text-gray-200"><i class="ri-coin-line text-orange-400"></i><span><span class="font-black text-white">75,000 credits</span> / month</span></div>
+                        <div class="flex items-center gap-3 text-sm text-gray-200"><i class="ri-stack-line text-orange-400"></i><span>~15,000 product fetches</span></div>
+                        <div class="flex items-center gap-3 text-sm text-gray-200"><i class="ri-speed-up-line text-orange-400"></i><span>1 concurrent request</span></div>
+                    </div>
+                    <ul class="space-y-3 text-sm text-gray-200 mb-10 flex-1">
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-400 mt-0.5 flex-shrink-0"></i>+ Category / rank data</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-400 mt-0.5 flex-shrink-0"></i>+ Coupons &amp; deals tracking</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-400 mt-0.5 flex-shrink-0"></i>+ Exact inventory quantities</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-400 mt-0.5 flex-shrink-0"></i>30-day history window</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-400 mt-0.5 flex-shrink-0"></i>Email + Slack alerts &middot; Buy Box loss warnings</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-400 mt-0.5 flex-shrink-0"></i>+ CAPTCHA solving &middot; Webhooks</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-400 mt-0.5 flex-shrink-0"></i>Reviews endpoint (trial access)</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-400 mt-0.5 flex-shrink-0"></i>WhatsApp / Slack support</li>
+                    </ul>
+                    <a href="/contact/" class="block w-full px-6 py-4 text-center bg-white text-gray-900 font-bold hover:bg-blue-600 hover:text-white transition-all">Start Growth</a>
+                </div>
+
+                <!-- SCALE -->
+                <div class="p-10 bg-white border border-gray-200 hover:border-orange-600 transition-all hover:shadow-xl flex flex-col">
+                    <div class="flex items-center justify-between mb-6">
+                        <div>
+                            <div class="text-sm font-bold text-gray-500 uppercase tracking-widest">Scale</div>
+                            <div class="text-xs font-bold text-gray-400 uppercase tracking-widest mt-2">170k credits / month</div>
+                        </div>
+                        <div class="px-3 py-1 bg-orange-50 text-orange-700 text-xs font-black uppercase tracking-widest">Ops-ready</div>
+                    </div>
+                    <div class="flex items-end gap-2 mb-2">
+                        <span class="text-5xl font-black text-gray-900 tabular-nums" data-plan-price="scale">&#8377;5,999</span>
+                        <span class="text-sm font-bold text-gray-500 mb-1">/mo</span>
+                    </div>
+                    <div class="text-sm text-gray-500 mb-8">
+                        <span class="hidden" data-plan-note="scale" data-mode="excel">Excel Lite &middot; scheduled file delivery</span>
+                        <span class="hidden" data-plan-note="scale" data-mode="api">API Developer &middot; endpoints for your stack</span>
+                        <span class="hidden" data-plan-note="scale" data-mode="dashboard">Dashboard Pro &middot; full UI + alerts</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-6 leading-relaxed">High volume &amp; automation. Full data richness with speed for large operations.</p>
+                    <div class="border-t border-gray-100 pt-6 mb-6 space-y-3">
+                        <div class="flex items-center gap-3 text-sm text-gray-800"><i class="ri-coin-line text-orange-600"></i><span><span class="font-black">170,000 credits</span> / month</span></div>
+                        <div class="flex items-center gap-3 text-sm text-gray-800"><i class="ri-stack-line text-orange-600"></i><span>~34,000 product fetches</span></div>
+                        <div class="flex items-center gap-3 text-sm text-gray-800"><i class="ri-speed-up-line text-orange-600"></i><span>5 concurrent &middot; high speed</span></div>
+                    </div>
+                    <ul class="space-y-3 text-sm text-gray-700 mb-10 flex-1">
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-600 mt-0.5 flex-shrink-0"></i>+ Weight / dimensions data</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-600 mt-0.5 flex-shrink-0"></i>+ Shadow price detection</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-600 mt-0.5 flex-shrink-0"></i>+ Restock predictor</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-600 mt-0.5 flex-shrink-0"></i>Unlimited history</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-600 mt-0.5 flex-shrink-0"></i>WhatsApp + webhooks &middot; MAP violation alerts</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-600 mt-0.5 flex-shrink-0"></i>+ Browser fingerprinting</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-600 mt-0.5 flex-shrink-0"></i>Direct S3 / warehouse sync</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-600 mt-0.5 flex-shrink-0"></i>99.9% uptime &middot; dedicated engineer</li>
+                    </ul>
+                    <a href="/contact/" class="block w-full px-6 py-4 text-center border-2 border-gray-900 text-gray-900 font-bold hover:bg-gray-900 hover:text-white transition-all">Start Scale</a>
+                </div>
+            </div>
+
+            <p class="text-center text-sm text-gray-500 max-w-3xl mx-auto mt-16 leading-relaxed">
+                All prices are monthly (INR). Same credit pool and Amazon.in data across modes &mdash; only the delivery surface and monthly volume change.
+                <a href="#compare" class="text-blue-600 font-semibold hover:underline ml-1">See full feature comparison &darr;</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════ FULL COMPARISON ══════════════════════════════ -->
+    <section id="compare" class="py-32 bg-gray-50 scroll-mt-28">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="mb-16 text-center">
+                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Full comparison</div>
+                <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">Every feature,<br/>side by side.</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Plan headers stay pinned as you scroll. Prices appear per delivery mode at the top; feature rows describe what's included at each tier.</p>
+            </div>
+
+            <div class="scrava-pricing-outer max-w-6xl mx-auto bg-white border border-gray-200 shadow-sm">
+                <div class="scrava-pricing-x-scroll">
+                <table class="scrava-pricing-compare w-full min-w-[820px] border-separate border-spacing-0 text-sm">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="scrava-plan-th scrava-plan-th--label text-left w-[28%] min-w-[200px] px-6 md:px-8">
+                                <span class="text-[11px] font-black uppercase tracking-widest text-gray-400">Feature</span>
+                            </th>
+                            <th scope="col" class="scrava-plan-th text-center w-[24%] min-w-[180px] px-5">
+                                <div class="flex flex-col items-center text-center gap-1.5">
+                                    <span class="inline-flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest text-gray-400">
+                                        <span class="w-1.5 h-1.5 bg-blue-600"></span> Tier 1
+                                    </span>
+                                    <span class="text-lg md:text-xl font-black text-gray-900">Starter</span>
+                                    <span class="text-[11px] text-gray-500 tabular-nums">20,000 credits / mo</span>
+                                </div>
+                            </th>
+                            <th scope="col" class="scrava-plan-th scrava-plan-th--featured text-center w-[24%] min-w-[180px] px-5">
+                                <div class="flex flex-col items-center text-center gap-1.5">
+                                    <span class="inline-flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest text-blue-100">
+                                        Most popular &middot; Tier 2
+                                    </span>
+                                    <span class="text-lg md:text-xl font-black text-white">Growth</span>
+                                    <span class="text-[11px] text-blue-100 tabular-nums">75,000 credits / mo</span>
+                                </div>
+                            </th>
+                            <th scope="col" class="scrava-plan-th text-center w-[24%] min-w-[180px] px-5">
+                                <div class="flex flex-col items-center text-center gap-1.5">
+                                    <span class="inline-flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest text-gray-400">
+                                        <span class="w-1.5 h-1.5 bg-orange-600"></span> Tier 3
+                                    </span>
+                                    <span class="text-lg md:text-xl font-black text-gray-900">Scale</span>
+                                    <span class="text-[11px] text-gray-500 tabular-nums">170,000 credits / mo</span>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-800">
+
+                        <!-- Monthly price -->
+                        <tr class="scrava-group-row">
+                            <td colspan="4" class="px-6 md:px-8">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
+                                        <i class="ri-price-tag-3-line text-blue-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs font-black uppercase tracking-widest text-gray-900">Monthly price by delivery mode</div>
+                                        <div class="text-[11px] text-gray-500">Same data, different surface</div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 md:px-8 font-semibold text-gray-900 leading-snug">
+                                <span class="inline-flex items-center gap-2"><i class="ri-file-excel-2-line text-green-600"></i>Excel <span class="text-gray-400 font-black">Lite</span></span>
+                            </td>
+                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base">&#8377;999</td>
+                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base bg-blue-50/40">&#8377;2,999</td>
+                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base">&#8377;5,999</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 md:px-8 font-semibold text-gray-900 leading-snug">
+                                <span class="inline-flex items-center gap-2"><i class="ri-code-s-slash-line text-blue-600"></i>API <span class="text-gray-400 font-black">Developer</span></span>
+                            </td>
+                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base">&#8377;1,350</td>
+                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base bg-blue-50/40">&#8377;3,999</td>
+                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base">&#8377;7,999</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 md:px-8 font-semibold text-gray-900 leading-snug">
+                                <span class="inline-flex items-center gap-2"><i class="ri-dashboard-3-line text-orange-600"></i>Dashboard <span class="text-gray-400 font-black">Pro</span></span>
+                            </td>
+                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base">&#8377;1,699</td>
+                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base bg-blue-50/40">&#8377;4,999</td>
+                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base">&#8377;9,999</td>
+                        </tr>
+
+                        <!-- Volume & platform -->
+                        <tr class="scrava-group-row">
+                            <td colspan="4" class="px-6 md:px-8">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-orange-50 flex items-center justify-center flex-shrink-0">
+                                        <i class="ri-stack-line text-orange-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs font-black uppercase tracking-widest text-gray-900">Volume &amp; platform</div>
+                                        <div class="text-[11px] text-gray-500">Credits, concurrency, and marketplace</div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 md:px-8 font-medium text-gray-900 leading-snug">Credits / month</td>
+                            <td class="px-5 text-center tabular-nums font-semibold">20,000</td>
+                            <td class="px-5 text-center tabular-nums font-semibold bg-blue-50/40">75,000</td>
+                            <td class="px-5 text-center tabular-nums font-semibold">170,000</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 md:px-8 font-medium text-gray-900 leading-snug">~Product fetches / mo</td>
+                            <td class="px-5 text-center tabular-nums">~4,000</td>
+                            <td class="px-5 text-center tabular-nums bg-blue-50/40">~15,000</td>
+                            <td class="px-5 text-center tabular-nums">~34,000</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 md:px-8 font-medium text-gray-900 leading-snug">Credit / product</td>
+                            <td class="px-5 text-center text-gray-700" colspan="3">
+                                <span class="inline-flex items-center gap-2"><span class="font-black text-gray-900">5 credits</span><span class="text-xs text-gray-500">&middot; all tiers</span></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 md:px-8 font-medium text-gray-900 leading-snug">Concurrency</td>
+                            <td class="px-5 text-center text-sm">1 <span class="text-gray-500 text-xs">(sequential)</span></td>
+                            <td class="px-5 text-center text-sm bg-blue-50/40">1 <span class="text-gray-500 text-xs">(sequential)</span></td>
+                            <td class="px-5 text-center text-sm font-black">5 <span class="text-gray-500 text-xs font-normal">(high speed)</span></td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 md:px-8 font-medium text-gray-900 leading-snug">Marketplace</td>
+                            <td class="px-5 text-center text-gray-700" colspan="3">
+                                <span class="inline-flex items-center gap-2"><span class="font-black text-gray-900">India</span><span class="text-xs text-gray-500">&middot; Amazon.in</span></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 md:px-8 font-medium text-gray-900 leading-snug">Success / uptime</td>
+                            <td class="px-5 text-center text-xs leading-relaxed">Pay for success only</td>
+                            <td class="px-5 text-center text-xs leading-relaxed bg-blue-50/40">Pay for success only</td>
+                            <td class="px-5 text-center text-xs font-black">99.9% uptime commitment</td>
+                        </tr>
+
+                        <!-- Data richness -->
+                        <tr class="scrava-group-row">
+                            <td colspan="4" class="px-6 md:px-8">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
+                                        <i class="ri-database-2-line text-blue-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs font-black uppercase tracking-widest text-gray-900">Data richness</div>
+                                        <div class="text-[11px] text-gray-500">What's extracted per product</div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 md:px-8 font-medium text-gray-900 leading-snug">Product identification</td>
+                            <td class="px-5 text-center text-xs leading-relaxed">Title, ASIN, SKU</td>
+                            <td class="px-5 text-center text-xs leading-relaxed bg-blue-50/40">+ Category / rank</td>
+                            <td class="px-5 text-center text-xs leading-relaxed">+ Weight / dimensions</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 md:px-8 font-medium text-gray-900 leading-snug">Dynamic pricing</td>
+                            <td class="px-5 text-center text-xs leading-relaxed">Current &amp; original</td>
+                            <td class="px-5 text-center text-xs leading-relaxed bg-blue-50/40">+ Coupons / deals</td>
+                            <td class="px-5 text-center text-xs leading-relaxed">+ Shadow price detection</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 md:px-8 font-medium text-gray-900 leading-snug">Inventory intelligence</td>
+                            <td class="px-5 text-center text-xs leading-relaxed">In-stock status</td>
+                            <td class="px-5 text-center text-xs leading-relaxed bg-blue-50/40">+ Exact quantities</td>
+                            <td class="px-5 text-center text-xs leading-relaxed">+ Restock predictor</td>
+                        </tr>
+
+                        <!-- Monitoring -->
+                        <tr class="scrava-group-row">
+                            <td colspan="4" class="px-6 md:px-8">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-orange-50 flex items-center justify-center flex-shrink-0">
+                                        <i class="ri-notification-3-line text-orange-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs font-black uppercase tracking-widest text-gray-900">Monitoring</div>
+                                        <div class="text-[11px] text-gray-500">History, alerts, and intelligence warnings</div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 md:px-8 font-medium text-gray-900 leading-snug">Historical retention</td>
+                            <td class="px-5 text-center text-xs">7-day window</td>
+                            <td class="px-5 text-center text-xs bg-blue-50/40">30-day window</td>
+                            <td class="px-5 text-center text-xs font-black">Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 md:px-8 font-medium text-gray-900 leading-snug">Alerts &amp; notifications</td>
+                            <td class="px-5 text-center text-xs">Email</td>
+                            <td class="px-5 text-center text-xs bg-blue-50/40">Email + Slack</td>
+                            <td class="px-5 text-center text-xs font-black">WhatsApp + webhooks</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 md:px-8 font-medium text-gray-900 leading-snug">Intelligence warnings</td>
+                            <td class="px-5 text-center text-xs">Price drops</td>
+                            <td class="px-5 text-center text-xs bg-blue-50/40">+ Buy Box loss</td>
+                            <td class="px-5 text-center text-xs">+ MAP violations</td>
+                        </tr>
+
+                        <!-- Technical -->
+                        <tr class="scrava-group-row">
+                            <td colspan="4" class="px-6 md:px-8">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-green-50 flex items-center justify-center flex-shrink-0">
+                                        <i class="ri-tools-line text-green-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs font-black uppercase tracking-widest text-gray-900">Technical</div>
+                                        <div class="text-[11px] text-gray-500">Anti-blocking, endpoints, and delivery</div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 md:px-8 font-medium text-gray-900 leading-snug">Anti-blocking</td>
+                            <td class="px-5 text-center text-xs">Rotating proxies</td>
+                            <td class="px-5 text-center text-xs bg-blue-50/40">+ CAPTCHA solving</td>
+                            <td class="px-5 text-center text-xs">+ Browser fingerprinting</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 md:px-8 font-medium text-gray-900 leading-snug">Reviews endpoint</td>
+                            <td class="px-5 text-center text-gray-400">&mdash;</td>
+                            <td class="px-5 text-center text-xs bg-blue-50/40">Trial access</td>
+                            <td class="px-5 text-center text-xs font-black">Full integration</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 md:px-8 font-medium text-gray-900 leading-snug">Cloud delivery</td>
+                            <td class="px-5 text-center text-xs">Email / CSV</td>
+                            <td class="px-5 text-center text-xs bg-blue-50/40">+ Webhooks</td>
+                            <td class="px-5 text-center text-xs font-black">Direct S3 / warehouse sync</td>
+                        </tr>
+
+                        <!-- Support -->
+                        <tr class="scrava-group-row">
+                            <td colspan="4" class="px-6 md:px-8">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
+                                        <i class="ri-customer-service-2-line text-blue-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs font-black uppercase tracking-widest text-gray-900">Support</div>
+                                        <div class="text-[11px] text-gray-500">How we show up for you</div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 md:px-8 font-medium text-gray-900 leading-snug">Support level</td>
+                            <td class="px-5 text-center text-xs leading-relaxed">Ticket support</td>
+                            <td class="px-5 text-center text-xs leading-relaxed bg-blue-50/40">WhatsApp / Slack</td>
+                            <td class="px-5 text-center text-xs font-black leading-relaxed">Dedicated engineer</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
+            <p class="text-center text-sm text-gray-500 max-w-2xl mx-auto mt-12 leading-relaxed">All prices are monthly (INR). Credits follow your tier; delivery mode changes how you access the same underlying Amazon.in product data.</p>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════ DELIVERY MODES ══════════════════════════════ -->
+    <section class="py-32 bg-white">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="mb-16 text-center">
+                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Delivery modes</div>
+                <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">Same intelligence.<br/>Different surfaces.</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Lite is for teams that live in spreadsheets. Developer is for engineers wiring APIs. Pro unlocks the full Scrava dashboard experience.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="group p-10 bg-white border border-gray-200 hover:border-green-600 transition-all hover:shadow-xl flex flex-col">
+                    <div class="w-14 h-14 rounded-full bg-green-50 flex items-center justify-center mb-6 group-hover:bg-green-600 transition-colors">
+                        <i class="ri-file-excel-2-line text-green-600 group-hover:text-white text-2xl transition-colors"></i>
+                    </div>
+                    <div class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">Lowest price &middot; from &#8377;999/mo</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Excel <span class="text-gray-400">Lite</span></h3>
+                    <p class="text-sm text-gray-500 mb-4">Scheduled or on-demand file delivery</p>
+                    <p class="text-gray-600 leading-relaxed mb-6">Best for catalog managers and analysts who want clean exports without touching code. Lowest monthly price per tier.</p>
+                    <ul class="text-sm text-gray-700 space-y-2.5 mt-auto">
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-green-600 flex-shrink-0 mt-0.5"></i>File-based workflows</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-green-600 flex-shrink-0 mt-0.5"></i>Reporting &amp; handoffs</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-green-600 flex-shrink-0 mt-0.5"></i>Zero engineering required</li>
+                    </ul>
+                </div>
+
+                <div class="group p-10 bg-white border border-gray-200 hover:border-blue-600 transition-all hover:shadow-xl flex flex-col">
+                    <div class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                        <i class="ri-code-s-slash-line text-blue-600 group-hover:text-white text-2xl transition-colors"></i>
+                    </div>
+                    <div class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">Middle tier &middot; from &#8377;1,350/mo</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">API <span class="text-gray-400">Developer</span></h3>
+                    <p class="text-sm text-gray-500 mb-4">Endpoints for your stack</p>
+                    <p class="text-gray-600 leading-relaxed mb-6">Integrate product intelligence into your own apps, ETL, or data warehouse &mdash; without the full dashboard subscription.</p>
+                    <ul class="text-sm text-gray-700 space-y-2.5 mt-auto">
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-blue-600 flex-shrink-0 mt-0.5"></i>Automation-first teams</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-blue-600 flex-shrink-0 mt-0.5"></i>Pipelines &amp; backends</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-blue-600 flex-shrink-0 mt-0.5"></i>Clean JSON, documented</li>
+                    </ul>
+                </div>
+
+                <div class="group p-10 bg-white border border-gray-200 hover:border-orange-600 transition-all hover:shadow-xl flex flex-col">
+                    <div class="w-14 h-14 rounded-full bg-orange-50 flex items-center justify-center mb-6 group-hover:bg-orange-600 transition-colors">
+                        <i class="ri-dashboard-3-line text-orange-600 group-hover:text-white text-2xl transition-colors"></i>
+                    </div>
+                    <div class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">Full stack &middot; from &#8377;1,699/mo</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Dashboard <span class="text-gray-400">Pro</span></h3>
+                    <p class="text-sm text-gray-500 mb-4">Full control plane</p>
+                    <p class="text-gray-600 leading-relaxed mb-6">Includes UI, job history, alerting, and richer export paths &mdash; ideal when operators and engineers share one workspace.</p>
+                    <ul class="text-sm text-gray-700 space-y-2.5 mt-auto">
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-600 flex-shrink-0 mt-0.5"></i>Alerts &amp; monitoring</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-600 flex-shrink-0 mt-0.5"></i>Team visibility</li>
+                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-600 flex-shrink-0 mt-0.5"></i>One pane of glass</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════ PERSONAS (Which combo) ══════════════════════════════ -->
+    <section class="py-32 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="mb-16 text-center">
+                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Recommendations</div>
+                <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">Which combo<br/>should I pick?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Start with your role &mdash; then tune the tier if you need more credits, concurrency, or history.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Small seller -->
+                <div class="p-10 bg-white border border-gray-200 hover:border-blue-600 transition-all hover:shadow-xl flex flex-col">
+                    <div class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-6">
+                        <i class="ri-user-line text-blue-600 text-2xl"></i>
+                    </div>
+                    <div class="text-[11px] font-black uppercase tracking-widest text-gray-400 mb-2">I am a</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Small seller</h3>
+                    <p class="text-gray-600 leading-relaxed mb-8">You want simple catalogue visibility without building software.</p>
+
+                    <div class="bg-gray-50 border border-gray-100 p-6 mb-6">
+                        <div class="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-3">Suggested combo</div>
+                        <div class="text-lg font-black text-gray-900 mb-3">Excel Starter</div>
+                        <div class="flex items-baseline gap-1 tabular-nums">
+                            <span class="text-3xl font-black text-blue-600">&#8377;999</span>
+                            <span class="text-sm font-bold text-gray-500">/mo</span>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-gray-600 mt-auto leading-relaxed">Track the catalog with straightforward exports and pay-for-success economics.</p>
+                </div>
+
+                <!-- Developer / tech team (featured) -->
+                <div class="relative p-10 pt-12 bg-white border-2 border-blue-600 shadow-xl flex flex-col">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1.5 bg-blue-600 text-white text-[10px] font-black uppercase tracking-widest whitespace-nowrap shadow-lg">Best overall fit</div>
+                    <div class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-6">
+                        <i class="ri-code-s-slash-line text-blue-600 text-2xl"></i>
+                    </div>
+                    <div class="text-[11px] font-black uppercase tracking-widest text-blue-600 mb-2">I am a</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Developer / tech team</h3>
+                    <p class="text-gray-600 leading-relaxed mb-8">You are wiring product data into internal tools or a data lake.</p>
+
+                    <div class="bg-blue-50 border border-blue-100 p-6 mb-6">
+                        <div class="text-[10px] font-black uppercase tracking-widest text-blue-600 mb-3">Suggested combo</div>
+                        <div class="text-lg font-black text-gray-900 mb-3">API Growth</div>
+                        <div class="flex items-baseline gap-1 tabular-nums">
+                            <span class="text-3xl font-black text-blue-600">&#8377;3,999</span>
+                            <span class="text-sm font-bold text-gray-500">/mo</span>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-gray-600 mt-auto leading-relaxed">Enough credits for meaningful pipelines, plus Slack alerts when things move.</p>
+                </div>
+
+                <!-- Agency / brand -->
+                <div class="p-10 bg-white border border-gray-200 hover:border-orange-600 transition-all hover:shadow-xl flex flex-col">
+                    <div class="w-14 h-14 rounded-full bg-orange-50 flex items-center justify-center mb-6">
+                        <i class="ri-building-line text-orange-600 text-2xl"></i>
+                    </div>
+                    <div class="text-[11px] font-black uppercase tracking-widest text-gray-400 mb-2">I am a</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Agency / brand</h3>
+                    <p class="text-gray-600 leading-relaxed mb-8">You run campaigns and need speed, automation, and durable history.</p>
+
+                    <div class="bg-gray-50 border border-gray-100 p-6 mb-6">
+                        <div class="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-3">Suggested combo</div>
+                        <div class="text-lg font-black text-gray-900 mb-3">Dashboard Scale</div>
+                        <div class="flex items-baseline gap-1 tabular-nums">
+                            <span class="text-3xl font-black text-orange-600">&#8377;9,999</span>
+                            <span class="text-sm font-bold text-gray-500">/mo</span>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-gray-600 mt-auto leading-relaxed">High concurrency, unlimited history, and MAP-level warnings to protect margins.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════ WHY SCALE ══════════════════════════════ -->
+    <section class="py-32 bg-white">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="mb-16 text-center">
+                <div class="text-sm font-bold text-orange-600 uppercase tracking-widest mb-4">Why upgrade</div>
+                <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">Scale unlocks<br/>what tiers can't.</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Three things only Growth and Scale give you &mdash; beyond raw credits.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="group p-10 bg-gray-50 border border-gray-200 hover:border-blue-600 transition-all hover:shadow-xl">
+                    <div class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                        <i class="ri-flashlight-line text-blue-600 group-hover:text-white text-2xl transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Speed</h3>
+                    <p class="text-gray-600 leading-relaxed">Only <span class="font-black text-gray-900">Scale</span> unlocks 5 concurrent requests &mdash; large ASIN batches finish in minutes, not hours.</p>
+                </div>
+
+                <div class="group p-10 bg-gray-50 border border-gray-200 hover:border-orange-600 transition-all hover:shadow-xl">
+                    <div class="w-14 h-14 rounded-full bg-orange-50 flex items-center justify-center mb-6 group-hover:bg-orange-600 transition-colors">
+                        <i class="ri-history-line text-orange-600 group-hover:text-white text-2xl transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">History</h3>
+                    <p class="text-gray-600 leading-relaxed"><span class="font-black text-gray-900">Scale</span> keeps unlimited history for seasonal events and campaign post-mortems.</p>
+                </div>
+
+                <div class="group p-10 bg-gray-50 border border-gray-200 hover:border-green-600 transition-all hover:shadow-xl">
+                    <div class="w-14 h-14 rounded-full bg-green-50 flex items-center justify-center mb-6 group-hover:bg-green-600 transition-colors">
+                        <i class="ri-shield-check-line text-green-600 group-hover:text-white text-2xl transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Automation</h3>
+                    <p class="text-gray-600 leading-relaxed">Higher tiers add operational warnings like Buy Box loss and MAP violations, not just raw fields.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════ FINAL CTA ══════════════════════════════ -->
+    <section class="py-32 bg-gray-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/20 blur-[120px]"></div>
+            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-orange-600/20 blur-[120px]"></div>
+        </div>
+        <div class="container mx-auto px-6 max-w-7xl relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="text-sm font-bold text-blue-400 uppercase tracking-widest mb-6">Get started</div>
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-black mb-8 leading-[1.1] text-white">
+                    Start with five ASINs.<br/>
+                    <span class="text-blue-400">Upgrade only when you scale.</span>
+                </h2>
+                <p class="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">No signup, no card, no scope call. Send us a few real ASINs and we'll run them against your chosen tier and mode &mdash; usually back within 24 hours.</p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="/contact/" class="group px-10 py-5 bg-white text-gray-900 font-bold text-lg hover:bg-blue-600 hover:text-white transition-colors inline-flex items-center gap-2">
+                        Get a plan
+                        <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="#plans" class="px-10 py-5 border-2 border-white/30 text-white font-bold text-lg hover:bg-white/10 transition-colors inline-flex items-center gap-2">
+                        <i class="ri-arrow-up-line"></i>
+                        Back to plans
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+(function () {
+    var modeButtons = Array.prototype.slice.call(document.querySelectorAll('.scrava-pp-mode'));
+    if (!modeButtons.length) return;
+
+    var PRICES = {
+        excel:     { starter: '\u20B9999',    growth: '\u20B92,999', scale: '\u20B95,999' },
+        api:       { starter: '\u20B91,350',  growth: '\u20B93,999', scale: '\u20B97,999' },
+        dashboard: { starter: '\u20B91,699',  growth: '\u20B94,999', scale: '\u20B99,999' }
+    };
+
+    function detectMode() {
+        try {
+            var saved = localStorage.getItem('scrava-pp-mode');
+            if (saved === 'excel' || saved === 'api' || saved === 'dashboard') return saved;
+        } catch (e) {}
+        return 'excel';
+    }
+
+    function applyMode(mode) {
+        document.querySelectorAll('[data-plan-price]').forEach(function (el) {
+            var plan = el.getAttribute('data-plan-price');
+            if (PRICES[mode] && PRICES[mode][plan]) {
+                el.textContent = PRICES[mode][plan];
+            }
+        });
+        document.querySelectorAll('[data-plan-note]').forEach(function (el) {
+            el.classList.toggle('hidden', el.getAttribute('data-mode') !== mode);
+        });
+        modeButtons.forEach(function (btn) {
+            var active = btn.getAttribute('data-mode') === mode;
+            btn.classList.toggle('active', active);
+            btn.setAttribute('aria-pressed', active);
+        });
+    }
+
+    function setMode(mode) {
+        try { localStorage.setItem('scrava-pp-mode', mode); } catch (e) {}
+        applyMode(mode);
+    }
+
+    modeButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            setMode(btn.getAttribute('data-mode'));
+        });
+    });
+
+    applyMode(detectMode());
+})();
+</script>
+
+<style>
+    /* Plan-mode toggle buttons */
+    .scrava-pp-mode {
+        color: #6B7280;
+        background: transparent;
+    }
+    .scrava-pp-mode.active {
+        background: #111827;
+        color: #FFFFFF;
+    }
+
+    /*
+     * Horizontal scroll breaks position:sticky vs the viewport in most browsers.
+     * Only enable overflow-x on narrow viewports; desktop keeps overflow visible so thead sticks while scrolling the page.
+     */
+    .scrava-pricing-x-scroll {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    @media (min-width: 900px) {
+        .scrava-pricing-x-scroll {
+            overflow-x: visible;
+        }
+    }
+
+    .scrava-pricing-compare thead th.scrava-plan-th {
+        position: sticky;
+        top: 5rem;
+        z-index: 30;
+        background-color: #FFFFFF;
+        box-shadow: inset 0 -1px 0 0 rgb(229 231 235);
+        vertical-align: top;
+        padding-top: 0.875rem;
+        padding-bottom: 0.875rem;
+    }
+    .scrava-pricing-compare thead th.scrava-plan-th--featured {
+        background-color: #2563EB;
+        color: #FFFFFF;
+        z-index: 31;
+        box-shadow: inset 0 -1px 0 0 #2563EB, 0 6px 12px -6px rgba(37, 99, 235, 0.35);
+    }
+    .scrava-pricing-compare thead th.scrava-plan-th--label {
+        left: 0;
+        z-index: 50;
+        background-color: #F9FAFB;
+        box-shadow: 1px 0 0 0 rgb(229 231 235), inset 0 -1px 0 0 rgb(229 231 235);
+        text-align: left;
+    }
+    @media (max-width: 767px) {
+        .scrava-pricing-compare thead th.scrava-plan-th { top: 4.5rem; }
+    }
+
+    /* Sticky feature name column */
+    .scrava-pricing-compare tbody td:first-child {
+        position: sticky;
+        left: 0;
+        z-index: 20;
+        background-color: #FFFFFF;
+        box-shadow: 1px 0 0 0 rgb(243 244 246);
+    }
+
+    /* Data rows — uniform padding + border */
+    .scrava-pricing-compare tbody tr:not(.scrava-group-row) td {
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+        border-top: 1px solid rgb(243 244 246);
+    }
+
+    /* Group header rows */
+    .scrava-pricing-compare tbody tr.scrava-group-row td {
+        background-color: #F9FAFB;
+        padding-top: 1.75rem;
+        padding-bottom: 1rem;
+        box-shadow: 1px 0 0 0 rgb(229 231 235);
+    }
+    .scrava-pricing-compare tbody tr.scrava-group-row:not(:first-child) td {
+        border-top: 1px solid rgb(229 231 235);
+    }
+
+    /* Row hover polish */
+    .scrava-pricing-compare tbody tr:not(.scrava-group-row):hover td {
+        background-color: rgb(249 250 251 / 0.6);
+    }
+    .scrava-pricing-compare tbody tr:not(.scrava-group-row):hover td.bg-blue-50\/40 {
+        background-color: rgb(219 234 254 / 0.5);
+    }
+    .scrava-pricing-compare tbody tr:not(.scrava-group-row):hover td:first-child {
+        background-color: #FFFFFF;
+    }
+</style>

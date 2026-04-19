@@ -34,7 +34,7 @@ canonical_url: "https://nextract.dev/scrava/"
                 </p>
 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-                    <a href="#pricing" class="group relative px-10 py-5 bg-gray-900 text-white font-bold text-lg overflow-hidden">
+                    <a href="/scrava-pricing/" class="group relative px-10 py-5 bg-gray-900 text-white font-bold text-lg overflow-hidden">
                         <span class="relative z-10 flex items-center gap-2">
                             See Pricing
                             <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
@@ -431,132 +431,6 @@ curl -X POST https://api.scrava.dev/v1/asin \
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-32 bg-white">
-        <div class="container mx-auto px-6 max-w-7xl">
-            <div class="mb-12 text-center">
-                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Pricing</div>
-                <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">Simple Credit Packs.<br/>Credits Never Expire.</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Three packs to get you started. Proxies, CAPTCHA solving and retries all included. Pay in USD or INR &mdash; your credits are yours until you use them.</p>
-            </div>
-
-            <!-- Currency toggle -->
-            <div class="flex items-center justify-center mb-16">
-                <div class="inline-flex items-center bg-gray-100 p-1" role="tablist" aria-label="Currency">
-                    <button type="button" id="cur-usd" class="px-6 py-2.5 text-sm font-bold transition-colors" aria-pressed="false">
-                        <span class="inline-flex items-center gap-2"><i class="ri-money-dollar-circle-line"></i> USD</span>
-                    </button>
-                    <button type="button" id="cur-inr" class="px-6 py-2.5 text-sm font-bold transition-colors" aria-pressed="false">
-                        <span class="inline-flex items-center gap-2"><i class="ri-money-rupee-circle-line"></i> INR</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Pricing cards -->
-            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-8 items-stretch">
-                <!-- Starter -->
-                <div class="p-10 bg-white border border-gray-200 hover:border-blue-600 transition-all hover:shadow-xl flex flex-col">
-                    <div class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">Starter</div>
-                    <div class="flex items-baseline gap-2 mb-2">
-                        <span class="text-5xl font-black text-gray-900" data-price-usd>$20</span>
-                        <span class="text-5xl font-black text-gray-900 hidden" data-price-inr>&#8377;1,699</span>
-                    </div>
-                    <div class="text-sm text-gray-500 mb-8">
-                        <span data-price-usd>$0.001 per credit &middot; one-time</span>
-                        <span data-price-inr class="hidden">&#8377;0.085 per credit &middot; one-time</span>
-                    </div>
-                    <div class="pb-6 mb-6 border-b border-gray-200">
-                        <div class="text-3xl font-black text-blue-600 leading-none mb-1">20,000</div>
-                        <div class="text-xs font-bold text-gray-500 uppercase tracking-widest">credits included</div>
-                    </div>
-                    <ul class="space-y-3 text-sm text-gray-600 mb-10 flex-1">
-                        <li class="flex items-start gap-2"><i class="ri-check-line text-blue-600 mt-0.5"></i>Full API access</li>
-                        <li class="flex items-start gap-2"><i class="ri-check-line text-blue-600 mt-0.5"></i>Dashboard &amp; usage visibility</li>
-                        <li class="flex items-start gap-2"><i class="ri-check-line text-blue-600 mt-0.5"></i>Auto CAPTCHA + rotating proxies</li>
-                        <li class="flex items-start gap-2"><i class="ri-check-line text-blue-600 mt-0.5"></i>Up to 5 concurrent requests</li>
-                        <li class="flex items-start gap-2"><i class="ri-check-line text-blue-600 mt-0.5"></i>US + IN marketplaces</li>
-                        <li class="flex items-start gap-2"><i class="ri-check-line text-blue-600 mt-0.5"></i>Email support</li>
-                    </ul>
-                    <a href="/contact/" class="block w-full px-6 py-4 text-center border-2 border-gray-900 text-gray-900 font-bold hover:bg-gray-900 hover:text-white transition-all">Get Starter</a>
-                </div>
-
-                <!-- Growth (highlighted) -->
-                <div class="relative p-10 bg-gray-900 text-white border border-gray-900 shadow-2xl flex flex-col">
-                    <div class="absolute -top-3 right-6 px-3 py-1.5 bg-orange-600 text-white text-[10px] font-black uppercase tracking-widest whitespace-nowrap shadow-lg">Most Popular</div>
-                    <div class="text-sm font-bold text-blue-400 uppercase tracking-widest mb-4">Growth</div>
-                    <div class="flex items-baseline gap-2 mb-2">
-                        <span class="text-5xl font-black text-white" data-price-usd>$60</span>
-                        <span class="text-5xl font-black text-white hidden" data-price-inr>&#8377;4,999</span>
-                    </div>
-                    <div class="text-sm text-gray-400 mb-8">
-                        <span data-price-usd>$0.0008 per credit &middot; one-time</span>
-                        <span data-price-inr class="hidden">&#8377;0.067 per credit &middot; one-time</span>
-                    </div>
-                    <div class="pb-6 mb-6 border-b border-white/10">
-                        <div class="text-3xl font-black text-orange-400 leading-none mb-1">75,000</div>
-                        <div class="text-xs font-bold text-gray-500 uppercase tracking-widest">credits included</div>
-                    </div>
-                    <ul class="space-y-3 text-sm text-gray-300 mb-10 flex-1">
-                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-400 mt-0.5"></i>Everything in Starter</li>
-                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-400 mt-0.5"></i>Priority fetch queue</li>
-                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-400 mt-0.5"></i>Slack / WhatsApp support</li>
-                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-400 mt-0.5"></i>Webhook + S3 delivery</li>
-                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-400 mt-0.5"></i>Reviews endpoint (trial)</li>
-                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-400 mt-0.5"></i>Monthly usage review</li>
-                    </ul>
-                    <a href="/contact/" class="block w-full px-6 py-4 text-center bg-white text-gray-900 font-bold hover:bg-blue-600 hover:text-white transition-all">Get Growth</a>
-                </div>
-
-                <!-- Scale -->
-                <div class="p-10 bg-white border border-gray-200 hover:border-orange-600 transition-all hover:shadow-xl flex flex-col">
-                    <div class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">Scale</div>
-                    <div class="flex items-baseline gap-2 mb-2">
-                        <span class="text-5xl font-black text-gray-900" data-price-usd>$120</span>
-                        <span class="text-5xl font-black text-gray-900 hidden" data-price-inr>&#8377;9,999</span>
-                    </div>
-                    <div class="text-sm text-gray-500 mb-8">
-                        <span data-price-usd>$0.0007 per credit &middot; one-time</span>
-                        <span data-price-inr class="hidden">&#8377;0.058 per credit &middot; one-time</span>
-                    </div>
-                    <div class="pb-6 mb-6 border-b border-gray-200">
-                        <div class="text-3xl font-black text-orange-600 leading-none mb-1">1,70,000</div>
-                        <div class="text-xs font-bold text-gray-500 uppercase tracking-widest">credits included</div>
-                    </div>
-                    <ul class="space-y-3 text-sm text-gray-600 mb-10 flex-1">
-                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-600 mt-0.5"></i>Everything in Growth</li>
-                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-600 mt-0.5"></i>Higher concurrency (10+)</li>
-                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-600 mt-0.5"></i>Reviews endpoint included</li>
-                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-600 mt-0.5"></i>S3 / warehouse delivery</li>
-                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-600 mt-0.5"></i>Dedicated engineer on-call</li>
-                        <li class="flex items-start gap-2"><i class="ri-check-line text-orange-600 mt-0.5"></i>Uptime commitments</li>
-                    </ul>
-                    <a href="/contact/" class="block w-full px-6 py-4 text-center border-2 border-gray-900 text-gray-900 font-bold hover:bg-gray-900 hover:text-white transition-all">Get Scale</a>
-                </div>
-            </div>
-
-            <!-- Enterprise row -->
-            <div class="max-w-6xl mx-auto p-10 bg-gray-50 border border-gray-200 flex flex-col md:flex-row md:items-center gap-8 justify-between">
-                <div>
-                    <div class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-2">Enterprise</div>
-                    <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Need more? Let's build it.</h3>
-                    <p class="text-gray-600 max-w-2xl">Millions of ASINs, extra marketplaces, dedicated proxy pools, SLAs, private deployment &mdash; priced against your actual volume and invoiced monthly.</p>
-                </div>
-                <a href="/contact/" class="px-8 py-4 bg-gray-900 text-white font-bold hover:bg-blue-600 transition-colors whitespace-nowrap inline-flex items-center gap-2 self-start md:self-auto">
-                    Talk to sales
-                    <i class="ri-arrow-right-line"></i>
-                </a>
-            </div>
-
-            <!-- Trust row -->
-            <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 text-center">
-                <div class="flex items-center justify-center gap-3"><i class="ri-infinity-line text-blue-600 text-xl"></i><span class="text-sm font-semibold text-gray-700">Credits never expire</span></div>
-                <div class="flex items-center justify-center gap-3"><i class="ri-shield-check-line text-blue-600 text-xl"></i><span class="text-sm font-semibold text-gray-700">99.7% success rate</span></div>
-                <div class="flex items-center justify-center gap-3"><i class="ri-exchange-dollar-line text-orange-600 text-xl"></i><span class="text-sm font-semibold text-gray-700">USD or INR billing</span></div>
-                <div class="flex items-center justify-center gap-3"><i class="ri-customer-service-2-line text-orange-600 text-xl"></i><span class="text-sm font-semibold text-gray-700">Human support</span></div>
-            </div>
-        </div>
-    </section>
-
     <!-- Scrava vs DIY Section -->
     <section class="py-32 bg-gray-50">
         <div class="container mx-auto px-6 max-w-7xl">
@@ -648,7 +522,7 @@ curl -X POST https://api.scrava.dev/v1/asin \
                         <span class="text-lg font-bold text-gray-900">Can I pay in INR?</span>
                         <i class="ri-add-line text-2xl text-gray-500 group-open:rotate-45 transition-transform"></i>
                     </summary>
-                    <p class="mt-4 text-gray-600 leading-relaxed">Yes. Indian customers are billed in INR, international customers in USD. Toggle the pricing card to see your currency, or we'll auto-detect based on your location.</p>
+                    <p class="mt-4 text-gray-600 leading-relaxed">Yes. Indian customers are billed in INR, international customers in USD. See <a href="/scrava-pricing/" class="text-blue-600 font-semibold hover:underline">Scrava pricing</a> for plans and modes, or we'll auto-detect based on your location.</p>
                 </details>
 
                 <details class="group py-8">
@@ -698,7 +572,7 @@ curl -X POST https://api.scrava.dev/v1/asin \
                         Request Sample Data
                         <i class="ri-arrow-right-line"></i>
                     </a>
-                    <a href="#pricing" class="px-10 py-5 border-2 border-white/30 text-white font-bold text-lg hover:bg-white/10 transition-colors">
+                    <a href="/scrava-pricing/" class="px-10 py-5 border-2 border-white/30 text-white font-bold text-lg hover:bg-white/10 transition-colors">
                         View Pricing
                     </a>
                 </div>
@@ -709,59 +583,7 @@ curl -X POST https://api.scrava.dev/v1/asin \
     {% include contact-section.html %}
 </main>
 
-<script>
-(function () {
-    function detectCurrency() {
-        try {
-            var saved = localStorage.getItem('scrava-currency');
-            if (saved === 'USD' || saved === 'INR') return saved;
-        } catch (e) {}
-        try {
-            var tz = (Intl.DateTimeFormat().resolvedOptions().timeZone || '');
-            if (tz === 'Asia/Kolkata' || tz === 'Asia/Calcutta') return 'INR';
-        } catch (e) {}
-        var lang = (navigator.language || '').toLowerCase();
-        if (/^(en-in|hi|bn|te|mr|ta|gu|kn|ml|or|pa|ur|as|ne)/.test(lang)) return 'INR';
-        return 'USD';
-    }
-
-    var curUsdBtn = document.getElementById('cur-usd');
-    var curInrBtn = document.getElementById('cur-inr');
-    if (!curUsdBtn || !curInrBtn) return;
-
-    function applyCurrency(cur) {
-        var showUsd = cur === 'USD';
-        document.querySelectorAll('[data-price-usd]').forEach(function (el) {
-            el.classList.toggle('hidden', !showUsd);
-        });
-        document.querySelectorAll('[data-price-inr]').forEach(function (el) {
-            el.classList.toggle('hidden', showUsd);
-        });
-        curUsdBtn.classList.toggle('active', showUsd);
-        curInrBtn.classList.toggle('active', !showUsd);
-        curUsdBtn.setAttribute('aria-pressed', showUsd);
-        curInrBtn.setAttribute('aria-pressed', !showUsd);
-    }
-
-    function setCurrency(cur, persist) {
-        if (persist !== false) {
-            try { localStorage.setItem('scrava-currency', cur); } catch (e) {}
-        }
-        applyCurrency(cur);
-    }
-
-    curUsdBtn.addEventListener('click', function () { setCurrency('USD'); });
-    curInrBtn.addEventListener('click', function () { setCurrency('INR'); });
-
-    applyCurrency(detectCurrency());
-})();
-</script>
-
 <style>
-    /* Currency toggle active state */
-    #cur-usd, #cur-inr { color: #6B7280; }
-    #cur-usd.active, #cur-inr.active { background: #111827; color: #FFFFFF; }
-
     /* FAQ native marker cleanup */
     details > summary { list-style: none; }
     details > summary::-webkit-details-marker { display: none; }

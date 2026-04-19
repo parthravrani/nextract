@@ -13,13 +13,20 @@
     </div>
     
     <nav class="flex flex-col space-y-4">
-        <!-- Scrava - Prominent -->
-        <a href="/scrava/" class="block py-4 px-4 text-lg font-bold text-gray-900 hover:bg-orange-50 transition-colors rounded-lg{% if page.url == '/scrava/' %} bg-orange-50 text-orange-600{% endif %}">
-            <div class="flex items-center gap-3">
-                <i class="ri-amazon-line text-xl"></i>
-                <span>Scrava</span>
+        <!-- Scrava + Pricing -->
+        <div>
+            <button type="button" class="mobile-menu-toggle w-full flex items-center justify-between py-4 px-4 text-lg font-bold text-gray-900 hover:bg-orange-50 transition-colors rounded-lg{% if page.url == '/scrava/' or page.url == '/scrava-pricing/' %} bg-orange-50 text-orange-600{% endif %}">
+                <div class="flex items-center gap-3">
+                    <i class="ri-amazon-line text-xl"></i>
+                    <span>Scrava</span>
+                </div>
+                <i class="ri-arrow-down-s-line transition-transform"></i>
+            </button>
+            <div class="mobile-menu-content hidden pl-6 space-y-1 mt-2">
+                <a href="/scrava/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded{% if page.url == '/scrava/' %} bg-orange-50 text-orange-600 font-semibold{% endif %}">Overview</a>
+                <a href="/scrava-pricing/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded{% if page.url == '/scrava-pricing/' %} bg-orange-50 text-orange-600 font-semibold{% endif %}">Pricing</a>
             </div>
-        </a>
+        </div>
         
         <!-- Products & Services - Collapsible -->
         <div>
