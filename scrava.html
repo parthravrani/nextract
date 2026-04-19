@@ -1,10 +1,10 @@
 ---
 layout: default
 title: "Scrava — Amazon Scraping API. Built to Handle the Hard Parts."
-description: "Production-grade Amazon scraping API + dashboard. 99.7% success across 2.3M+ ASINs. Handles CAPTCHAs, proxies, Dog pages automatically. Pay in USD or INR. Credits never expire."
+description: "Production-grade Amazon scraping API + dashboard. 99.7% success across 2.3M+ ASINs. Handles CAPTCHAs, proxies, Dog pages automatically. Monthly subscription credits (INR or USD) — transparent tiers, fresh allowance every billing cycle."
 keywords: "amazon scraper api, amazon scraping api, amazon scraping, amazon asin api, scrava, amazon data extraction, amazon product api, amazon price scraper, india amazon api"
-og_description: "Scrava — an Amazon-first scraping API & dashboard. 99.7% success. 2.3M+ ASINs. Auto CAPTCHA, proxy rotation, Dog-page retries. USD/INR billing. Credits never expire."
-twitter_description: "Amazon scraping API that doesn't break. 99.7% success · 2.3M+ ASINs · auto-CAPTCHA · USD/INR billing · credits never expire."
+og_description: "Scrava — an Amazon-first scraping API & dashboard. 99.7% success. 2.3M+ ASINs. Auto CAPTCHA, proxy rotation, Dog-page retries. Monthly plans in INR or USD — your tier credit pool refreshes at every renewal."
+twitter_description: "Amazon scraping API that doesn't break. 99.7% success · 2.3M+ ASINs · auto-CAPTCHA · monthly subscription credits · INR or USD billing."
 canonical_url: "https://nextract.dev/scrava/"
 ---
 
@@ -56,8 +56,8 @@ canonical_url: "https://nextract.dev/scrava/"
                         <span class="text-gray-600">2.3M+ ASINs Processed</span>
                     </div>
                     <div class="flex items-center gap-3">
-                        <i class="ri-time-line text-blue-600 text-xl"></i>
-                        <span class="text-gray-600">Credits Never Expire</span>
+                        <i class="ri-calendar-line text-blue-600 text-xl"></i>
+                        <span class="text-gray-600">Monthly subscription credits</span>
                     </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@ canonical_url: "https://nextract.dev/scrava/"
             <div class="mb-16 text-center">
                 <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">The Dashboard</div>
                 <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">Not Just an API.<br/>A Full Control Plane.</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Every Scrava plan ships with a dashboard. Monitor live jobs, watch credits in real time, switch marketplaces, preview results &mdash; no code required to kick the tyres.</p>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Every Scrava plan ships with a dashboard. Monitor live jobs, watch credits in real time, switch marketplaces, preview results &mdash; you can kick the tyres without writing code.</p>
             </div>
 
             <!-- Mac-style browser window with real dashboard screenshot -->
@@ -165,7 +165,7 @@ canonical_url: "https://nextract.dev/scrava/"
                         <i class="ri-price-tag-3-line text-blue-600 group-hover:text-white text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Predictable Pricing</h3>
-                    <p class="text-gray-600 leading-relaxed">One flat rate per credit. Proxies, CAPTCHA solving and retries included. Credits never expire &mdash; buy what you need.</p>
+                    <p class="text-gray-600 leading-relaxed">One flat rate per credit. Proxies, CAPTCHA solving and retries included. Plans are monthly subscriptions &mdash; each billing cycle starts with your full tier credit allowance again, so capacity is always predictable.</p>
                 </div>
             </div>
         </div>
@@ -266,7 +266,7 @@ curl -X POST https://api.scrava.dev/v1/asin \
             <div class="mb-16 text-center">
                 <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">What Comes Back</div>
                 <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">Every Amazon Field<br/>You've Ever Asked For</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">One ASIN in, a single structured JSON out. Everything below comes from one request &mdash; no extra endpoints, no extra cost.</p>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">One ASIN in, a single structured JSON out. Everything below comes from one request &mdash; one endpoint, one predictable charge.</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -367,7 +367,7 @@ curl -X POST https://api.scrava.dev/v1/asin \
                         <i class="ri-robot-line text-blue-600 group-hover:text-white text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">CAPTCHAs</h3>
-                    <p class="text-gray-600 leading-relaxed">Solved automatically by our in-house CAPTCHA layer. No queues, no manual retries, no third-party fees tacked onto your bill.</p>
+                    <p class="text-gray-600 leading-relaxed">Solved automatically by our in-house CAPTCHA layer &mdash; without queueing, without manual retries, and without third-party solve fees on your invoice.</p>
                 </div>
 
                 <div class="group p-10 bg-gray-50 border border-gray-200 hover:border-blue-600 transition-all hover:shadow-xl">
@@ -469,10 +469,10 @@ curl -X POST https://api.scrava.dev/v1/asin \
                             <td class="p-6 text-gray-900 font-semibold">Auto-retry</td>
                         </tr>
                         <tr class="border-b border-gray-100 bg-gray-50">
-                            <td class="p-6 font-bold text-gray-900">Credit expiry</td>
+                            <td class="p-6 font-bold text-gray-900">Monthly credit allowance</td>
                             <td class="p-6 text-gray-600">&mdash;</td>
-                            <td class="p-6 text-gray-600">Monthly expiry</td>
-                            <td class="p-6 text-gray-900 font-semibold">Never</td>
+                            <td class="p-6 text-gray-600">Varies by vendor</td>
+                            <td class="p-6 text-gray-900 font-semibold">Full tier pool refreshes each billing month</td>
                         </tr>
                         <tr class="border-b border-gray-100">
                             <td class="p-6 font-bold text-gray-900">INR billing</td>
@@ -511,10 +511,10 @@ curl -X POST https://api.scrava.dev/v1/asin \
 
                 <details class="group py-8">
                     <summary class="flex items-center justify-between cursor-pointer list-none">
-                        <span class="text-lg font-bold text-gray-900">Do credits expire?</span>
+                        <span class="text-lg font-bold text-gray-900">How do monthly credits work?</span>
                         <i class="ri-add-line text-2xl text-gray-500 group-open:rotate-45 transition-transform"></i>
                     </summary>
-                    <p class="mt-4 text-gray-600 leading-relaxed">Never. Buy a pack, use it at your own pace. No monthly burn, no rollover drama.</p>
+                    <p class="mt-4 text-gray-600 leading-relaxed">Scrava is built around monthly subscriptions: every renewal restores your full tier credit pool for the coming period, so you always know the capacity you are working with. Only successful fetches (after retries) draw credits. See <a href="/scrava-pricing/" class="text-blue-600 font-semibold hover:underline">Scrava pricing</a> for tiers and delivery modes.</p>
                 </details>
 
                 <details class="group py-8">
@@ -530,7 +530,7 @@ curl -X POST https://api.scrava.dev/v1/asin \
                         <span class="text-lg font-bold text-gray-900">What concurrency do I get?</span>
                         <i class="ri-add-line text-2xl text-gray-500 group-open:rotate-45 transition-transform"></i>
                     </summary>
-                    <p class="mt-4 text-gray-600 leading-relaxed">Up to 5 concurrent requests on standard packages. Custom packages scale to 50+ concurrency with dedicated proxy pools &mdash; <a href="/contact/" class="text-blue-600 font-semibold hover:underline">talk to us</a>.</p>
+                    <p class="mt-4 text-gray-600 leading-relaxed">Up to 5 concurrent requests on standard subscription tiers. Enterprise engagements can scale to 50+ concurrency with dedicated proxy pools &mdash; <a href="/contact/" class="text-blue-600 font-semibold hover:underline">talk to us</a>.</p>
                 </details>
 
                 <details class="group py-8">
@@ -566,7 +566,7 @@ curl -X POST https://api.scrava.dev/v1/asin \
             <div class="max-w-4xl mx-auto text-center">
                 <div class="text-sm font-bold text-blue-400 uppercase tracking-widest mb-4">Get Started</div>
                 <h2 class="text-5xl md:text-7xl font-black mb-8 leading-tight text-white">Send Us Five ASINs.<br/>Get Clean Data Back.</h2>
-                <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">No signup, no card, no scope call &mdash; just a real sample against your real target ASINs. Usually back within 24 hours.</p>
+                <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">Send a handful of target ASINs first &mdash; we return a real sample, usually within 24 hours, before sign-up, card, or a scope call.</p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                     <a href="/contact/" class="px-10 py-5 bg-white text-gray-900 font-bold text-lg hover:bg-blue-600 hover:text-white transition-colors inline-flex items-center gap-2">
                         Request Sample Data
