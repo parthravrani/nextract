@@ -123,6 +123,15 @@ layout: default
         background: radial-gradient(ellipse 80% 70% at 15% 25%, rgba(59, 130, 246, 0.18), transparent 55%),
             radial-gradient(ellipse 50% 40% at 90% 80%, rgba(251, 146, 60, 0.1), transparent 50%);
     }
+    /* Light: tight tagline per design; dark: readable line-height + contrast */
+    .scrava-co__by-nextract {
+        line-height: 0.5;
+    }
+    .scrava-co--dark .scrava-co__by-nextract {
+        line-height: 1.35;
+        letter-spacing: 0.02em;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+    }
 </style>
 
 <main class="scrava-co__shell {% if page.checkout_theme == 'dark' %}scrava-co--dark{% endif %}">
@@ -136,7 +145,7 @@ layout: default
                         <img src="{{ '/assets/images/scrava.png' | relative_url }}" alt="Scrava Logo" class="h-16 w-auto object-contain shrink-0">
                         <div class="flex min-w-0 flex-col justify-center -mt-1">
                             <span class="font-['Montserrat',sans-serif] text-4xl font-bold leading-tight {% if page.checkout_theme == 'dark' %}text-white{% else %}text-slate-900{% endif %}">SCRAVA</span>
-                            <span class="font-['Quicksand',sans-serif] text-sm {% if page.checkout_theme == 'dark' %}text-neutral-300{% else %}text-slate-500{% endif %}" style="line-height: 0.5;">by Nextract</span>
+                            <span class="scrava-co__by-nextract font-['Quicksand',sans-serif] text-sm {% if page.checkout_theme == 'dark' %}text-slate-200{% else %}text-slate-500{% endif %}">by Nextract</span>
                         </div>
                     </div>
                     {% if page.badge %}
@@ -173,9 +182,9 @@ layout: default
                         </dd>
                     </div>
                     {% if page.fetches_line %}
-                    <div class="flex items-start gap-3 pl-1 text-sm {% if page.checkout_theme == 'dark' %}text-slate-400{% else %}text-slate-500{% endif %}">
-                        <i class="ri-information-line mt-0.5 text-lg text-slate-400" aria-hidden="true"></i>
-                        <span>{{ page.fetches_line }}</span>
+                    <div class="flex items-start gap-3 text-sm {% if page.checkout_theme == 'dark' %}rounded-xl bg-white/5 px-3 py-3 text-slate-200 ring-1 ring-white/10{% else %}pl-1 text-slate-500{% endif %}">
+                        <i class="ri-information-line mt-0.5 shrink-0 text-lg {% if page.checkout_theme == 'dark' %}text-slate-300{% else %}text-slate-400{% endif %}" aria-hidden="true"></i>
+                        <span class="{% if page.checkout_theme == 'dark' %}font-medium text-slate-100{% endif %}">{{ page.fetches_line }}</span>
                     </div>
                     {% endif %}
                 </dl>
