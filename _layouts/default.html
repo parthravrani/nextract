@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth{% if page.minimal %} scrava-minimal-page{% endif %}">
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BB51Y9L2Z2"></script>
@@ -1141,8 +1141,8 @@
 
     {% seo title=false %}
 </head>
-<body class="antialiased">
-    {% if site.show_offers %}
+<body class="antialiased{% if page.minimal %} scrava-minimal-page{% endif %}">
+    {% if site.show_offers and page.minimal != true %}
     <!-- Black Friday Ticker Banner -->
     <div class="sticky top-0 left-0 right-0 bg-gradient-to-r from-orange-600 to-red-600 text-white py-2.5 overflow-hidden z-50 shadow-lg">
         <div class="marquee-container">
@@ -1179,8 +1179,10 @@
     </div>
     {% endif %}
     
+    {% unless page.minimal %}
     {% include header.html %}
     {% include mobile-menu.html %}
+    {% endunless %}
     
     {% if page.layout == 'product-page' %}
         {{ content }}
@@ -1190,8 +1192,11 @@
         {{ content }}
     {% endif %}
 
+    {% unless page.minimal %}
     {% include footer.html %}
+    {% endunless %}
     
+    {% unless page.minimal %}
     <!-- Floating Action Buttons -->
     <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
         <!-- WhatsApp Button -->
@@ -1278,7 +1283,10 @@
             </div>
         </div>
     </div>
+    {% endunless %}
     
+    {% unless page.minimal %}
     <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
+    {% endunless %}
 </body>
 </html>

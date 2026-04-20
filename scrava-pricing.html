@@ -144,7 +144,7 @@ permalink: /scrava-pricing/
                         <span class="hidden" data-plan-note="starter" data-mode="dashboard">Dashboard Pro &middot; full UI + alerts</span>
                     </div>
                     <p class="mt-3 text-sm text-gray-600 mb-6 leading-snug grow min-h-0">Solo sellers &amp; light monitoring. Catalogue visibility without engineering.</p>
-                    <a href="/contact/" class="mt-auto shrink-0 block w-full px-4 py-3 text-center text-sm border-2 border-gray-900 text-gray-900 font-bold hover:bg-gray-900 hover:text-white transition-all">Start Starter</a>
+                    <a href="{{ '/scrava/subscribe/starter/' | relative_url }}" class="mt-auto shrink-0 block w-full px-4 py-3 text-center text-sm border-2 border-gray-900 text-gray-900 font-bold hover:bg-gray-900 hover:text-white transition-all no-underline">Start Starter</a>
                 </div>
 
                 <!-- GROWTH (featured / dark) -->
@@ -169,7 +169,7 @@ permalink: /scrava-pricing/
                         <span class="hidden" data-plan-note="growth" data-mode="dashboard">Dashboard Pro &middot; full UI + alerts</span>
                     </div>
                     <p class="mt-3 text-sm text-gray-300 mb-6 leading-snug grow min-h-0">Growing catalogues &amp; integrations. Richer signals and more history.</p>
-                    <a href="/contact/" class="mt-auto shrink-0 block w-full px-4 py-3 text-center text-sm bg-white text-gray-900 font-bold hover:bg-blue-600 hover:text-white transition-all">Start Growth</a>
+                    <a href="{{ '/scrava/subscribe/growth/' | relative_url }}" class="mt-auto shrink-0 block w-full px-4 py-3 text-center text-sm border-0 bg-white text-gray-900 font-bold hover:bg-blue-600 hover:text-white transition-all no-underline">Start Growth</a>
                 </div>
 
                 <!-- SCALE -->
@@ -189,7 +189,7 @@ permalink: /scrava-pricing/
                         <span class="hidden" data-plan-note="scale" data-mode="dashboard">Dashboard Pro &middot; full UI + alerts</span>
                     </div>
                     <p class="mt-3 text-sm text-gray-600 mb-6 leading-snug grow min-h-0">High volume &amp; automation. Full data richness with speed for large operations.</p>
-                    <a href="/contact/" class="mt-auto shrink-0 block w-full px-4 py-3 text-center text-sm border-2 border-gray-900 text-gray-900 font-bold hover:bg-gray-900 hover:text-white transition-all">Start Scale</a>
+                    <a href="{{ '/scrava/subscribe/scale/' | relative_url }}" class="mt-auto shrink-0 block w-full px-4 py-3 text-center text-sm border-2 border-gray-900 text-gray-900 font-bold hover:bg-gray-900 hover:text-white transition-all no-underline">Start Scale</a>
                 </div>
 
                 <!-- ELITE -->
@@ -209,7 +209,7 @@ permalink: /scrava-pricing/
                         <span class="hidden" data-plan-note="elite" data-mode="dashboard">Dashboard Pro &middot; full UI + strategy support</span>
                     </div>
                     <p class="mt-3 text-sm text-gray-600 mb-6 leading-snug grow min-h-0">Large brands, aggregators &amp; agencies. Scale-tier intelligence with <span class="font-black text-gray-900">10 parallel</span> and Strategy Partner support.</p>
-                    <a href="/contact/" class="mt-auto shrink-0 relative z-10 inline-flex w-full items-center justify-center px-4 py-3 text-center text-sm font-bold text-white no-underline bg-blue-600 border-2 border-blue-700 shadow-sm hover:bg-blue-700 hover:text-white hover:no-underline transition-colors">Start Elite</a>
+                    <a href="{{ '/scrava/subscribe/elite/' | relative_url }}" class="mt-auto shrink-0 relative z-10 inline-flex w-full items-center justify-center px-4 py-3 text-center text-sm font-bold text-white no-underline bg-blue-600 border-2 border-blue-700 shadow-sm hover:bg-blue-700 hover:text-white transition-colors">Start Elite</a>
                 </div>
             </div>
 
@@ -712,7 +712,192 @@ permalink: /scrava-pricing/
             </div>
         </div>
     </section>
+
+    <!-- Razorpay subscription (modal): one overlay; close only when click is outside #scrava-rzp-panel (not pointer-events-none, so iframe/options stay clickable) -->
+    <div id="scrava-rzp-modal" class="fixed inset-0 z-[200] hidden" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="scrava-rzp-modal-title">
+        <div
+            class="scrava-rzp-backdrop flex min-h-full items-center justify-center bg-gray-900/60 p-4 backdrop-blur-sm sm:p-6"
+            role="presentation"
+        >
+            <div
+                id="scrava-rzp-panel"
+                class="relative z-10 flex w-full max-w-md flex-col rounded-lg border border-gray-200 bg-white p-6 shadow-2xl sm:p-8"
+                role="document"
+            >
+                <div class="flex shrink-0 items-start justify-between gap-4">
+                    <div class="min-w-0 flex-1">
+                        <h3 id="scrava-rzp-modal-title" class="text-xl font-black text-gray-900">Subscribe</h3>
+                        <p class="mt-2 text-sm text-gray-600">Complete your Razorpay subscription for the selected tier.</p>
+                    </div>
+                    <button type="button" class="scrava-rzp-close flex h-10 w-10 shrink-0 items-center justify-center text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-900" aria-label="Close">
+                        <i class="ri-close-line text-2xl" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div id="scrava-rzp-widget-root" class="scrava-rzp-widget-root mt-6 w-full min-w-0"></div>
+            </div>
+        </div>
+    </div>
 </main>
+
+<script>
+(function () {
+    var RZP_SUBSCRIPTION_IDS = {
+        starter: 'pl_SfQrHAwWgd9SDu',
+        growth: 'pl_SfYqSvN0p147MC',
+        scale: 'pl_SfYvX5aiq5FRiK',
+        elite: 'pl_SfYwSHyBDg3aST'
+    };
+    var RZP_TIER_LABELS = { starter: 'Starter', growth: 'Growth', scale: 'Scale', elite: 'Elite' };
+
+    var modal = document.getElementById('scrava-rzp-modal');
+    var widgetRoot = document.getElementById('scrava-rzp-widget-root');
+    var titleEl = document.getElementById('scrava-rzp-modal-title');
+    var panel = document.getElementById('scrava-rzp-panel');
+
+    function clearRzpWidget() {
+        if (!widgetRoot) return;
+        var iframes = widgetRoot.querySelectorAll('iframe');
+        for (var i = 0; i < iframes.length; i++) {
+            if (iframes[i]._scravaCancelResize) {
+                try { iframes[i]._scravaCancelResize(); } catch (e) {}
+            }
+            var u = iframes[i].getAttribute('data-scrava-rzp-blob');
+            if (u) {
+                try { URL.revokeObjectURL(u); } catch (e2) {}
+            }
+        }
+        while (widgetRoot.firstChild) widgetRoot.removeChild(widgetRoot.firstChild);
+    }
+
+    function rzpIframeHtml(buttonId) {
+        return (
+            '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">' +
+            '<meta name="viewport" content="width=device-width,initial-scale=1">' +
+            '<style>' +
+            'html,body{margin:0;padding:0;overflow-x:hidden;overflow-y:visible;-webkit-text-size-adjust:100%}' +
+            'body{min-width:0}' +
+            'form{display:block;width:100%;max-width:100%;margin:0;padding:0;box-sizing:border-box}' +
+            '</style></head><body>' +
+            '<form><script src="https://cdn.razorpay.com/static/widget/subscription-button.js" ' +
+            'data-subscription_button_id="' + buttonId + '" data-button_theme="rzp-dark-standard" async><\/script></form>' +
+            '</body></html>'
+        );
+    }
+
+    function resizeRzpIframe(iframe) {
+        try {
+            var doc = iframe.contentDocument || (iframe.contentWindow && iframe.contentWindow.document);
+            if (!doc || !doc.body) return;
+            var h = Math.max(
+                doc.body.scrollHeight,
+                doc.documentElement ? doc.documentElement.scrollHeight : 0,
+                doc.body.offsetHeight
+            );
+            if (h > 0) {
+                iframe.style.height = h + 'px';
+                iframe.style.minHeight = h + 'px';
+            }
+        } catch (e) {}
+    }
+
+    function wireRzpIframeResize(iframe) {
+        var timers = [];
+        var cancelled = false;
+        function schedule() {
+            if (cancelled) return;
+            resizeRzpIframe(iframe);
+        }
+        [0, 50, 150, 350, 700, 1500, 2500].forEach(function (ms) {
+            timers.push(setTimeout(schedule, ms));
+        });
+        var ro = null;
+        try {
+            var doc = iframe.contentDocument || (iframe.contentWindow && iframe.contentWindow.document);
+            if (doc && doc.body && typeof ResizeObserver !== 'undefined') {
+                ro = new ResizeObserver(schedule);
+                ro.observe(doc.body);
+            }
+        } catch (e) {}
+        iframe._scravaCancelResize = function () {
+            cancelled = true;
+            for (var i = 0; i < timers.length; i++) clearTimeout(timers[i]);
+            if (ro) try { ro.disconnect(); } catch (e2) {}
+        };
+    }
+
+    function mountRzpSubscription(tier) {
+        var buttonId = RZP_SUBSCRIPTION_IDS[tier];
+        if (!buttonId || !widgetRoot) return;
+        clearRzpWidget();
+        var html = rzpIframeHtml(buttonId);
+        var blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+        var blobUrl = URL.createObjectURL(blob);
+        var iframe = document.createElement('iframe');
+        iframe.setAttribute('title', 'Razorpay subscription');
+        iframe.setAttribute('data-scrava-rzp-blob', blobUrl);
+        iframe.setAttribute('loading', 'eager');
+        iframe.className = 'block w-full max-w-full border-0 align-top';
+        iframe.style.overflow = 'hidden';
+        iframe.style.minHeight = '120px';
+        iframe.src = blobUrl;
+        iframe.addEventListener('load', function () {
+            resizeRzpIframe(iframe);
+            wireRzpIframeResize(iframe);
+        });
+        widgetRoot.appendChild(iframe);
+    }
+
+    function openRzpModal(tier) {
+        if (!modal || !titleEl) return;
+        var label = RZP_TIER_LABELS[tier] || tier;
+        titleEl.textContent = 'Subscribe — ' + label;
+        mountRzpSubscription(tier);
+        modal.classList.remove('hidden');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        try {
+            var closeBtn = modal.querySelector('.scrava-rzp-close');
+            if (closeBtn) closeBtn.focus();
+        } catch (e) {}
+    }
+
+    function closeRzpModal() {
+        if (!modal) return;
+        clearRzpWidget();
+        modal.classList.add('hidden');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.scrava-rzp-open').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var tier = btn.getAttribute('data-rzp-tier');
+            if (tier) openRzpModal(tier);
+        });
+    });
+
+    if (modal) {
+        var backdrop = modal.querySelector('.scrava-rzp-backdrop');
+        if (backdrop) {
+            backdrop.addEventListener('click', function (e) {
+                if (panel && panel.contains(e.target)) return;
+                closeRzpModal();
+            });
+        }
+        if (panel) {
+            panel.addEventListener('click', function (e) {
+                e.stopPropagation();
+            });
+        }
+        modal.querySelectorAll('.scrava-rzp-close').forEach(function (el) {
+            el.addEventListener('click', function () { closeRzpModal(); });
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') closeRzpModal();
+        });
+    }
+})();
+</script>
 
 <script>
 (function () {

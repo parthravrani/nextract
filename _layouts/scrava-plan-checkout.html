@@ -1,0 +1,209 @@
+---
+layout: default
+---
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap");
+    .scrava-co {
+        --co-bg: #f4f6fb;
+        --co-surface: #ffffff;
+        --co-ink: #0f172a;
+        --co-muted: #64748b;
+        --co-line: #e2e8f0;
+        --co-blue: #2563eb;
+        --co-orange: #ea580c;
+    }
+    body.scrava-minimal-page {
+        overflow-x: hidden;
+        background: var(--co-bg);
+    }
+    .scrava-co__shell {
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        background: var(--co-bg);
+    }
+    .scrava-co__grid {
+        flex: 1 1 auto;
+        min-height: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    @media (min-width: 1024px) {
+        .scrava-co__grid {
+            grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+            align-items: stretch;
+        }
+    }
+    .scrava-co__story {
+        position: relative;
+        padding: clamp(1.75rem, 4vw, 3rem);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow-y: auto;
+    }
+    .scrava-co__story-inner {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-width: 28rem;
+    }
+    .scrava-co__glow {
+        pointer-events: none;
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+    }
+    .scrava-co__glow::before {
+        content: "";
+        position: absolute;
+        width: 140%;
+        height: 60%;
+        top: -20%;
+        left: -20%;
+        background: radial-gradient(ellipse 80% 70% at 20% 30%, rgba(37, 99, 235, 0.12), transparent 55%),
+            radial-gradient(ellipse 60% 50% at 80% 70%, rgba(234, 88, 12, 0.08), transparent 50%);
+    }
+    .scrava-co__checkout {
+        padding: clamp(1.75rem, 4vw, 3rem);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--co-surface);
+        border-top: 1px solid var(--co-line);
+        overflow-y: auto;
+    }
+    @media (min-width: 1024px) {
+        .scrava-co__checkout {
+            border-top: none;
+            border-left: 1px solid var(--co-line);
+            box-shadow: -24px 0 48px -32px rgba(15, 23, 42, 0.08);
+        }
+    }
+    .scrava-co__card {
+        width: 100%;
+        max-width: 26rem;
+    }
+    .scrava-co__rzp {
+        margin-top: 1.75rem;
+        padding: 1.25rem;
+        border-radius: 0.75rem;
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+    }
+    .scrava-co__rzp form {
+        width: 100%;
+        max-width: 100%;
+    }
+    .scrava-co__tier-pill {
+        display: inline-flex;
+        align-items: center;
+        margin-top: 1rem;
+        padding: 0.35rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.6875rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        background: rgba(37, 99, 235, 0.1);
+        color: #1d4ed8;
+        border: 1px solid rgba(37, 99, 235, 0.2);
+    }
+    .scrava-co--dark .scrava-co__tier-pill {
+        background: rgba(59, 130, 246, 0.15);
+        color: #93c5fd;
+        border-color: rgba(59, 130, 246, 0.35);
+    }
+    /* Dark plan (Growth) */
+    .scrava-co--dark .scrava-co__story {
+        background: linear-gradient(165deg, #0c1222 0%, #111827 45%, #0f172a 100%);
+    }
+    .scrava-co--dark .scrava-co__glow::before {
+        background: radial-gradient(ellipse 80% 70% at 15% 25%, rgba(59, 130, 246, 0.18), transparent 55%),
+            radial-gradient(ellipse 50% 40% at 90% 80%, rgba(251, 146, 60, 0.1), transparent 50%);
+    }
+</style>
+
+<main class="scrava-co__shell {% if page.checkout_theme == 'dark' %}scrava-co--dark{% endif %}">
+    <div class="scrava-co__grid">
+        <!-- Plan story -->
+        <section class="scrava-co__story {% unless page.checkout_theme == 'dark' %}border-b border-slate-200/80 lg:border-b-0{% endunless %}">
+            <div class="scrava-co__glow" aria-hidden="true"></div>
+            <div class="scrava-co__story-inner">
+                <header class="mb-8">
+                    <div class="flex items-center gap-4">
+                        <img src="{{ '/assets/images/scrava.png' | relative_url }}" alt="Scrava Logo" class="h-16 w-auto object-contain shrink-0">
+                        <div class="flex min-w-0 flex-col justify-center -mt-1">
+                            <span class="font-['Montserrat',sans-serif] text-4xl font-bold leading-tight {% if page.checkout_theme == 'dark' %}text-white{% else %}text-slate-900{% endif %}">SCRAVA</span>
+                            <span class="font-['Quicksand',sans-serif] text-sm {% if page.checkout_theme == 'dark' %}text-neutral-300{% else %}text-slate-500{% endif %}" style="line-height: 0.5;">by Nextract</span>
+                        </div>
+                    </div>
+                    {% if page.badge %}
+                    <span class="scrava-co__tier-pill mt-4 inline-flex">{{ page.badge }}</span>
+                    {% endif %}
+                </header>
+
+                <h1 class="text-[1.65rem] font-black leading-[1.15] tracking-tight sm:text-3xl lg:text-[1.85rem] xl:text-4xl {% if page.checkout_theme == 'dark' %}text-white{% else %}text-slate-900{% endif %}">
+                    {{ page.plan_heading | default: page.title }}
+                </h1>
+
+                <p class="mt-4 text-[15px] leading-relaxed {% if page.checkout_theme == 'dark' %}text-slate-300{% else %}text-slate-600{% endif %}">
+                    {{ page.plan_intro }}
+                </p>
+
+                <dl class="mt-8 space-y-4">
+                    <div class="flex gap-4 rounded-xl {% if page.checkout_theme == 'dark' %}bg-white/5 ring-1 ring-white/10{% else %}bg-white/90 shadow-sm ring-1 ring-slate-200/80{% endif %} p-4">
+                        <dt class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg {% if page.checkout_theme == 'dark' %}bg-blue-500/20 text-blue-300{% else %}bg-blue-50 text-blue-600{% endif %}">
+                            <i class="ri-stack-line text-xl" aria-hidden="true"></i>
+                        </dt>
+                        <dd class="min-w-0 text-sm leading-snug {% if page.checkout_theme == 'dark' %}text-slate-200{% else %}text-slate-700{% endif %}">
+                            <span class="block text-xs font-bold uppercase tracking-wide {% if page.checkout_theme == 'dark' %}text-slate-400{% else %}text-slate-500{% endif %}">Monthly volume</span>
+                            <span class="mt-0.5 block font-semibold {% if page.checkout_theme == 'dark' %}text-white{% else %}text-slate-900{% endif %}">{{ page.credits_line }}</span>
+                        </dd>
+                    </div>
+                    <div class="flex gap-4 rounded-xl {% if page.checkout_theme == 'dark' %}bg-white/5 ring-1 ring-white/10{% else %}bg-white/90 shadow-sm ring-1 ring-slate-200/80{% endif %} p-4">
+                        <dt class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg {% if page.checkout_theme == 'dark' %}bg-orange-500/15 text-orange-300{% else %}bg-orange-50 text-orange-600{% endif %}">
+                            <i class="ri-price-tag-3-line text-xl" aria-hidden="true"></i>
+                        </dt>
+                        <dd class="min-w-0 text-sm leading-snug {% if page.checkout_theme == 'dark' %}text-slate-200{% else %}text-slate-700{% endif %}">
+                            <span class="block text-xs font-bold uppercase tracking-wide {% if page.checkout_theme == 'dark' %}text-slate-400{% else %}text-slate-500{% endif %}">Starting price</span>
+                            <span class="mt-0.5 block font-semibold {% if page.checkout_theme == 'dark' %}text-white{% else %}text-slate-900{% endif %}">{{ page.price_line }}</span>
+                            <span class="mt-1 block text-xs {% if page.checkout_theme == 'dark' %}text-slate-400{% else %}text-slate-500{% endif %}">Excel Lite. API &amp; Dashboard rates on the pricing page.</span>
+                        </dd>
+                    </div>
+                    {% if page.fetches_line %}
+                    <div class="flex items-start gap-3 pl-1 text-sm {% if page.checkout_theme == 'dark' %}text-slate-400{% else %}text-slate-500{% endif %}">
+                        <i class="ri-information-line mt-0.5 text-lg text-slate-400" aria-hidden="true"></i>
+                        <span>{{ page.fetches_line }}</span>
+                    </div>
+                    {% endif %}
+                </dl>
+
+                <p class="mt-8 text-xs leading-relaxed {% if page.checkout_theme == 'dark' %}text-slate-500{% else %}text-slate-500{% endif %}">
+                    Payments are processed by Razorpay. You&rsquo;ll receive Scrava onboarding details after a successful subscription.
+                </p>
+            </div>
+        </section>
+
+        <!-- Razorpay -->
+        <section class="scrava-co__checkout" aria-labelledby="scrava-co-pay-title">
+            <div class="scrava-co__card">
+                <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400">Step 1</p>
+                <h2 id="scrava-co-pay-title" class="mt-2 text-xl font-black tracking-tight text-slate-900 sm:text-2xl">Choose &amp; pay</h2>
+                <p class="mt-2 text-sm leading-relaxed text-slate-600">Select your delivery mode (Excel, API, or Dashboard), then complete payment on Razorpay.</p>
+
+                <div class="scrava-co__rzp scrava-rzp-inline">
+                    <form class="scrava-rzp-form">
+                        <script src="https://cdn.razorpay.com/static/widget/subscription-button.js" data-subscription_button_id="{{ page.subscription_button_id }}" data-button_theme="rzp-dark-standard" async></script>
+                    </form>
+                </div>
+
+                <p class="mt-6 flex items-center justify-center gap-2 text-center text-[11px] text-slate-400">
+                    <i class="ri-lock-2-line text-base" aria-hidden="true"></i>
+                    Encrypted checkout &middot; INR subscriptions
+                </p>
+            </div>
+        </section>
+    </div>
+</main>
