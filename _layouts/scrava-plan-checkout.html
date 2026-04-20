@@ -110,42 +110,60 @@ layout: default
         color: #1d4ed8;
         border: 1px solid rgba(37, 99, 235, 0.2);
     }
-    .scrava-co--dark .scrava-co__tier-pill {
-        background: rgba(59, 130, 246, 0.15);
-        color: #93c5fd;
-        border-color: rgba(59, 130, 246, 0.35);
+    .scrava-co__stars-deco {
+        pointer-events: none;
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
     }
-    /* Dark plan (Growth) */
-    .scrava-co--dark .scrava-co__story {
-        background: linear-gradient(165deg, #0c1222 0%, #111827 45%, #0f172a 100%);
+    .scrava-co__stars-deco i {
+        position: absolute;
+        color: rgba(245, 158, 11, 0.22);
+        filter: drop-shadow(0 4px 12px rgba(245, 158, 11, 0.15));
     }
-    .scrava-co--dark .scrava-co__glow::before {
-        background: radial-gradient(ellipse 80% 70% at 15% 25%, rgba(59, 130, 246, 0.18), transparent 55%),
-            radial-gradient(ellipse 50% 40% at 90% 80%, rgba(251, 146, 60, 0.1), transparent 50%);
+    .scrava-co__stars-deco .scrava-co__star-1 {
+        right: 6%;
+        top: 10%;
+        font-size: 3.25rem;
+        animation: scrava-co-star-twinkle 3.8s ease-in-out infinite;
     }
-    /* Light: tight tagline per design; dark: readable line-height + contrast */
-    .scrava-co__by-nextract {
-        line-height: 0.5;
+    .scrava-co__stars-deco .scrava-co__star-2 {
+        right: 16%;
+        top: 32%;
+        font-size: 1.25rem;
+        transform: rotate(18deg);
+        animation: scrava-co-star-twinkle 4.2s ease-in-out infinite 0.3s;
     }
-    .scrava-co--dark .scrava-co__by-nextract {
-        line-height: 1.35;
-        letter-spacing: 0.02em;
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+    .scrava-co__stars-deco .scrava-co__star-3 {
+        left: 8%;
+        bottom: 18%;
+        font-size: 0.9rem;
+        color: rgba(59, 130, 246, 0.22);
+        animation: scrava-co-star-twinkle 4.8s ease-in-out infinite 0.6s;
+    }
+    @keyframes scrava-co-star-twinkle {
+        0%, 100% { opacity: 0.55; }
+        50% { opacity: 0.95; }
     }
 </style>
 
-<main class="scrava-co__shell {% if page.checkout_theme == 'dark' %}scrava-co--dark{% endif %}">
+<main class="scrava-co__shell">
     <div class="scrava-co__grid">
         <!-- Plan story -->
-        <section class="scrava-co__story {% unless page.checkout_theme == 'dark' %}border-b border-slate-200/80 lg:border-b-0{% endunless %}">
+        <section class="scrava-co__story border-b border-slate-200/80 lg:border-b-0">
             <div class="scrava-co__glow" aria-hidden="true"></div>
+            <div class="scrava-co__stars-deco" aria-hidden="true">
+                <i class="ri-star-fill scrava-co__star-1"></i>
+                <i class="ri-star-fill scrava-co__star-2"></i>
+                <i class="ri-star-fill scrava-co__star-3"></i>
+            </div>
             <div class="scrava-co__story-inner">
                 <header class="mb-8">
                     <div class="flex items-center gap-4">
                         <img src="{{ '/assets/images/scrava.png' | relative_url }}" alt="Scrava Logo" class="h-16 w-auto object-contain shrink-0">
                         <div class="flex min-w-0 flex-col justify-center -mt-1">
-                            <span class="font-['Montserrat',sans-serif] text-4xl font-bold leading-tight {% if page.checkout_theme == 'dark' %}text-white{% else %}text-slate-900{% endif %}">SCRAVA</span>
-                            <span class="scrava-co__by-nextract font-['Quicksand',sans-serif] text-sm {% if page.checkout_theme == 'dark' %}text-slate-200{% else %}text-slate-500{% endif %}">by Nextract</span>
+                            <span class="font-['Montserrat',sans-serif] text-4xl font-bold leading-tight text-slate-900">SCRAVA</span>
+                            <span class="font-['Quicksand',sans-serif] text-sm text-slate-500" style="line-height: 0.5;">by Nextract</span>
                         </div>
                     </div>
                     {% if page.badge %}
@@ -153,43 +171,43 @@ layout: default
                     {% endif %}
                 </header>
 
-                <h1 class="text-[1.65rem] font-black leading-[1.15] tracking-tight sm:text-3xl lg:text-[1.85rem] xl:text-4xl {% if page.checkout_theme == 'dark' %}text-white{% else %}text-slate-900{% endif %}">
+                <h1 class="text-[1.65rem] font-black leading-[1.15] tracking-tight text-slate-900 sm:text-3xl lg:text-[1.85rem] xl:text-4xl">
                     {{ page.plan_heading | default: page.title }}
                 </h1>
 
-                <p class="mt-4 text-[15px] leading-relaxed {% if page.checkout_theme == 'dark' %}text-slate-300{% else %}text-slate-600{% endif %}">
+                <p class="mt-4 text-[15px] leading-relaxed text-slate-600">
                     {{ page.plan_intro }}
                 </p>
 
                 <dl class="mt-8 space-y-4">
-                    <div class="flex gap-4 rounded-xl {% if page.checkout_theme == 'dark' %}bg-white/5 ring-1 ring-white/10{% else %}bg-white/90 shadow-sm ring-1 ring-slate-200/80{% endif %} p-4">
-                        <dt class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg {% if page.checkout_theme == 'dark' %}bg-blue-500/20 text-blue-300{% else %}bg-blue-50 text-blue-600{% endif %}">
+                    <div class="flex gap-4 rounded-xl bg-white/90 p-4 shadow-sm ring-1 ring-slate-200/80">
+                        <dt class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-600">
                             <i class="ri-stack-line text-xl" aria-hidden="true"></i>
                         </dt>
-                        <dd class="min-w-0 text-sm leading-snug {% if page.checkout_theme == 'dark' %}text-slate-200{% else %}text-slate-700{% endif %}">
-                            <span class="block text-xs font-bold uppercase tracking-wide {% if page.checkout_theme == 'dark' %}text-slate-400{% else %}text-slate-500{% endif %}">Monthly volume</span>
-                            <span class="mt-0.5 block font-semibold {% if page.checkout_theme == 'dark' %}text-white{% else %}text-slate-900{% endif %}">{{ page.credits_line }}</span>
+                        <dd class="min-w-0 text-sm leading-snug text-slate-700">
+                            <span class="block text-xs font-bold uppercase tracking-wide text-slate-500">Monthly volume</span>
+                            <span class="mt-0.5 block font-semibold text-slate-900">{{ page.credits_line }}</span>
                         </dd>
                     </div>
-                    <div class="flex gap-4 rounded-xl {% if page.checkout_theme == 'dark' %}bg-white/5 ring-1 ring-white/10{% else %}bg-white/90 shadow-sm ring-1 ring-slate-200/80{% endif %} p-4">
-                        <dt class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg {% if page.checkout_theme == 'dark' %}bg-orange-500/15 text-orange-300{% else %}bg-orange-50 text-orange-600{% endif %}">
+                    <div class="flex gap-4 rounded-xl bg-white/90 p-4 shadow-sm ring-1 ring-slate-200/80">
+                        <dt class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-orange-50 text-orange-600">
                             <i class="ri-price-tag-3-line text-xl" aria-hidden="true"></i>
                         </dt>
-                        <dd class="min-w-0 text-sm leading-snug {% if page.checkout_theme == 'dark' %}text-slate-200{% else %}text-slate-700{% endif %}">
-                            <span class="block text-xs font-bold uppercase tracking-wide {% if page.checkout_theme == 'dark' %}text-slate-400{% else %}text-slate-500{% endif %}">Starting price</span>
-                            <span class="mt-0.5 block font-semibold {% if page.checkout_theme == 'dark' %}text-white{% else %}text-slate-900{% endif %}">{{ page.price_line }}</span>
-                            <span class="mt-1 block text-xs {% if page.checkout_theme == 'dark' %}text-slate-400{% else %}text-slate-500{% endif %}">Excel Lite. API &amp; Dashboard rates on the pricing page.</span>
+                        <dd class="min-w-0 text-sm leading-snug text-slate-700">
+                            <span class="block text-xs font-bold uppercase tracking-wide text-slate-500">Starting price</span>
+                            <span class="mt-0.5 block font-semibold text-slate-900">{{ page.price_line }}</span>
+                            <span class="mt-1 block text-xs text-slate-500">Excel Lite. API &amp; Dashboard rates on the pricing page.</span>
                         </dd>
                     </div>
                     {% if page.fetches_line %}
-                    <div class="flex items-start gap-3 text-sm {% if page.checkout_theme == 'dark' %}rounded-xl bg-white/5 px-3 py-3 text-slate-200 ring-1 ring-white/10{% else %}pl-1 text-slate-500{% endif %}">
-                        <i class="ri-information-line mt-0.5 shrink-0 text-lg {% if page.checkout_theme == 'dark' %}text-slate-300{% else %}text-slate-400{% endif %}" aria-hidden="true"></i>
-                        <span class="{% if page.checkout_theme == 'dark' %}font-medium text-slate-100{% endif %}">{{ page.fetches_line }}</span>
+                    <div class="flex items-start gap-3 pl-1 text-sm text-slate-500">
+                        <i class="ri-information-line mt-0.5 shrink-0 text-lg text-slate-400" aria-hidden="true"></i>
+                        <span>{{ page.fetches_line }}</span>
                     </div>
                     {% endif %}
                 </dl>
 
-                <p class="mt-8 text-xs leading-relaxed {% if page.checkout_theme == 'dark' %}text-slate-500{% else %}text-slate-500{% endif %}">
+                <p class="mt-8 text-xs leading-relaxed text-slate-500">
                     Payments are processed by Razorpay. You&rsquo;ll receive Scrava onboarding details after a successful subscription.
                 </p>
             </div>
