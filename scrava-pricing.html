@@ -17,11 +17,6 @@ permalink: /scrava-pricing/
 
         <div class="container mx-auto px-6 max-w-7xl relative z-10">
             <div class="max-w-5xl mx-auto text-center">
-                <div class="inline-flex items-center gap-3 bg-white/70 backdrop-blur-md border border-gray-200 px-6 py-3 mb-8 hover:bg-white/90 transition-all">
-                    <img src="{{ '/assets/images/scrava.png' | relative_url }}" alt="" class="w-5 h-5 object-contain" aria-hidden="true">
-                    <span class="text-sm font-semibold text-gray-900">Scrava India &middot; Transparent pricing</span>
-                </div>
-
                 <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-8 leading-[1.1] tracking-tight">
                     Pick a <span class="bg-gradient-to-r from-blue-600 to-orange-600 bg-clip-text text-transparent">volume tier</span>,<br/>
                     then how you consume.
@@ -108,16 +103,7 @@ permalink: /scrava-pricing/
             <div class="mb-12 text-center">
                 <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Plans</div>
                 <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">Four tiers.<br/>Three ways to consume.</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Pick a delivery mode below &mdash; tier prices update live. Every plan includes Amazon.in coverage and the same core data.</p>
-            </div>
-
-            <!-- Currency toggle -->
-            <div class="flex flex-col items-center justify-center gap-2 mb-10">
-                <span class="text-[11px] font-black uppercase tracking-widest text-gray-400">Currency</span>
-                <div class="inline-flex items-center bg-gray-100 p-1" role="group" aria-label="Display currency">
-                    <button type="button" class="scrava-pp-currency px-5 py-2.5 text-sm font-bold transition-colors" data-currency="inr" aria-pressed="true">INR</button>
-                    <button type="button" class="scrava-pp-currency px-5 py-2.5 text-sm font-bold transition-colors" data-currency="usd" aria-pressed="false">USD</button>
-                </div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Pick a delivery mode below &mdash; tier prices update live. Amounts are shown in INR or USD automatically from your region.</p>
             </div>
 
             <!-- Delivery mode toggle -->
@@ -918,7 +904,6 @@ permalink: /scrava-pricing/
 <script>
 (function () {
     var modeButtons = Array.prototype.slice.call(document.querySelectorAll('.scrava-pp-mode'));
-    var currencyButtons = Array.prototype.slice.call(document.querySelectorAll('.scrava-pp-currency'));
     if (!modeButtons.length) return;
 
     var PRICES_INR_NUM = {
@@ -977,8 +962,8 @@ permalink: /scrava-pricing/
     }
 
     /**
-     * First-visit default before any saved toggle: India-oriented signals → INR, otherwise USD.
-     * Uses device timezone + locale immediately; optional IP country refines when fetch succeeds.
+     * Automatic display currency: India-oriented signals → INR, otherwise USD.
+     * Uses device timezone + locale immediately; IP country refines when fetch succeeds.
      */
     function inferCurrencySync() {
         try {
@@ -995,20 +980,7 @@ permalink: /scrava-pricing/
         return 'usd';
     }
 
-    function detectCurrency() {
-        try {
-            var saved = localStorage.getItem('scrava-pp-currency');
-            if (saved === 'inr' || saved === 'usd') return saved;
-        } catch (e) {}
-        return inferCurrencySync();
-    }
-
     function tryRefineCurrencyFromGeo() {
-        try {
-            if (localStorage.getItem('scrava-pp-currency')) return;
-        } catch (e) {
-            return;
-        }
         if (typeof fetch !== 'function') return;
         fetch('https://ipwho.is/', { cache: 'no-store', credentials: 'omit' })
             .then(function (r) {
@@ -1016,11 +988,6 @@ permalink: /scrava-pricing/
             })
             .then(function (data) {
                 if (!data || data.success === false) return;
-                try {
-                    if (localStorage.getItem('scrava-pp-currency')) return;
-                } catch (e2) {
-                    return;
-                }
                 var cc = (data.country_code || '').toUpperCase();
                 var next = cc === 'IN' ? 'inr' : 'usd';
                 if (next !== activeCurrency) {
@@ -1072,12 +1039,6 @@ permalink: /scrava-pricing/
             btn.setAttribute('aria-pressed', on);
         });
 
-        currencyButtons.forEach(function (btn) {
-            var on = btn.getAttribute('data-currency') === cur;
-            btn.classList.toggle('active', on);
-            btn.setAttribute('aria-pressed', on);
-        });
-
         toggleCurrencyCopy(cur === 'usd');
     }
 
@@ -1087,40 +1048,26 @@ permalink: /scrava-pricing/
         applyAll();
     }
 
-    function setCurrency(currency) {
-        activeCurrency = currency === 'usd' ? 'usd' : 'inr';
-        try { localStorage.setItem('scrava-pp-currency', activeCurrency); } catch (e) {}
-        applyAll();
-    }
-
     modeButtons.forEach(function (btn) {
         btn.addEventListener('click', function () {
             setMode(btn.getAttribute('data-mode'));
         });
     });
 
-    currencyButtons.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            setCurrency(btn.getAttribute('data-currency'));
-        });
-    });
-
     activeMode = detectMode();
-    activeCurrency = detectCurrency();
+    activeCurrency = inferCurrencySync();
     applyAll();
     tryRefineCurrencyFromGeo();
 })();
 </script>
 
 <style>
-    /* Plan-mode + currency toggle buttons */
-    .scrava-pp-mode,
-    .scrava-pp-currency {
+    /* Plan-mode toggle buttons */
+    .scrava-pp-mode {
         color: #6B7280;
         background: transparent;
     }
-    .scrava-pp-mode.active,
-    .scrava-pp-currency.active {
+    .scrava-pp-mode.active {
         background: #111827;
         color: #FFFFFF;
     }
