@@ -1137,14 +1137,120 @@
                 gap: 0.5rem;
             }
         }
+
+        /* Scrava + Scrava pricing: site header scrolls away; in-page subnav stays at top */
+        body.scrava-subnav-header-mode #site-offer-banner {
+            position: relative !important;
+            top: auto !important;
+        }
+        body.scrava-subnav-header-mode #main-header {
+            position: relative !important;
+            top: auto !important;
+            /* Above .scrava-subnav (45) so desktop mega menus are not covered by the sticky subnav */
+            z-index: 50;
+        }
+        body.scrava-subnav-header-mode .scrava-subnav {
+            top: 0 !important;
+            z-index: 45;
+        }
+        body.scrava-subnav-header-mode main section[id].scroll-mt-32 {
+            scroll-margin-top: 4.5rem !important;
+        }
+        body.scrava-subnav-header-mode .scrava-pricing-compare thead th.scrava-plan-th {
+            top: 3.25rem !important;
+        }
+        @media (max-width: 767px) {
+            body.scrava-subnav-header-mode .scrava-pricing-compare thead th.scrava-plan-th {
+                top: 3rem !important;
+            }
+        }
+
+        /* Scrava subnav: lock logo dimensions (matches hero w-5 h-5) so wide assets never stretch layout */
+        .scrava-subnav__brand img {
+            width: 1.25rem !important;
+            height: 1.25rem !important;
+            max-width: 1.25rem !important;
+            max-height: 1.25rem !important;
+            object-fit: contain;
+        }
+
+        /*
+          Scrava subnav section links: plain CSS so spacing and “pill” affordance survive the
+          committed tailwind.min.css purge and HTML minifiers that remove whitespace between </a><a>.
+        */
+        .scrava-subnav-links {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 0.5rem;
+            min-width: 0;
+            flex: 1 1 0%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            padding-top: 0.125rem;
+            padding-bottom: 0.125rem;
+            margin-left: -0.25rem;
+            margin-right: -0.25rem;
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+        }
+
+        @media (min-width: 640px) {
+            .scrava-subnav-links {
+                gap: 0.75rem;
+            }
+        }
+
+        .scrava-subnav__link {
+            display: inline-flex;
+            align-items: center;
+            flex-shrink: 0;
+            white-space: nowrap;
+            border-radius: 0.5rem;
+            padding: 0.5rem 0.75rem;
+            font-size: 0.75rem;
+            line-height: 1.25rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+            color: #4b5563;
+        }
+
+        .scrava-subnav__link:hover {
+            color: #111827;
+            background-color: #f9fafb;
+            border-color: #e5e7eb;
+        }
+
+        @media (min-width: 640px) {
+            .scrava-subnav__link {
+                padding: 0.5rem 0.875rem;
+                font-size: 0.875rem;
+            }
+        }
+
+        .scrava-subnav__link[href="/contact/"],
+        .scrava-subnav__link[href="#contact-shared"] {
+            color: #2563eb;
+        }
+
+        .scrava-subnav__link[href="/contact/"]:hover,
+        .scrava-subnav__link[href="#contact-shared"]:hover {
+            color: #1d4ed8;
+            background-color: #eff6ff;
+            border-color: #bfdbfe;
+        }
     </style>
 
     {% seo title=false %}
 </head>
-<body class="antialiased{% if page.minimal %} scrava-minimal-page{% endif %}">
+<body class="antialiased{% if page.minimal %} scrava-minimal-page{% endif %}{% if page.scrava_subnav_header %} scrava-subnav-header-mode{% endif %}">
     {% if site.show_offers and page.minimal != true %}
     <!-- Black Friday Ticker Banner -->
-    <div class="sticky top-0 left-0 right-0 bg-gradient-to-r from-orange-600 to-red-600 text-white py-2.5 overflow-hidden z-50 shadow-lg">
+    <div id="site-offer-banner" class="sticky top-0 left-0 right-0 bg-gradient-to-r from-orange-600 to-red-600 text-white py-2.5 overflow-hidden z-50 shadow-lg">
         <div class="marquee-container">
             <div class="marquee-content">
                 <span class="inline-flex items-center gap-4 mx-8 whitespace-nowrap">

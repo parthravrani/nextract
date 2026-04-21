@@ -1,13 +1,15 @@
 ---
 layout: default
+scrava_subnav_header: true
 title: Scrava Pricing
 description: "Compare Scrava Starter, Growth, Scale, and Elite monthly plans — Excel exports, API-only, or full dashboard. Each billing cycle starts with your full tier credit allowance again."
 permalink: /scrava-pricing/
 ---
 
 <main>
+    {% include scrava-subnav.html %}
     <!-- ══════════════════════════════ HERO (aligned with scrava.html) ══════════════════════════════ -->
-    <section class="min-h-screen flex items-center justify-center relative overflow-hidden bg-white">
+    <section id="pricing-overview" class="min-h-screen flex items-center justify-center relative overflow-hidden bg-white scroll-mt-32">
         <div class="absolute inset-0 overflow-hidden">
             <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 blur-[100px] animate-pulse"></div>
             <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-600/10 blur-[100px] animate-pulse" style="animation-delay: 1s;"></div>
@@ -45,7 +47,7 @@ permalink: /scrava-pricing/
                 <div class="flex flex-wrap items-center justify-center gap-12 text-sm font-semibold">
                     <div class="flex items-center gap-3">
                         <i class="ri-price-tag-3-line text-blue-600 text-xl"></i>
-                        <span class="text-gray-600">From &#8377;999 / month</span>
+                        <span class="text-gray-600">From <span data-price-key="excel.starter">&#8377;999</span> / month</span>
                     </div>
                     <div class="flex items-center gap-3">
                         <i class="ri-coin-line text-blue-600 text-xl"></i>
@@ -53,7 +55,7 @@ permalink: /scrava-pricing/
                     </div>
                     <div class="flex items-center gap-3">
                         <i class="ri-refresh-line text-orange-600 text-xl"></i>
-                        <span class="text-gray-600">Monthly INR billing</span>
+                        <span class="text-gray-600">Monthly plans</span>
                     </div>
                 </div>
             </div>
@@ -61,7 +63,7 @@ permalink: /scrava-pricing/
     </section>
 
     <!-- ══════════════════════════════ HOW IT WORKS ══════════════════════════════ -->
-    <section class="py-32 bg-gray-50">
+    <section id="how-pricing-works" class="py-32 bg-gray-50 scroll-mt-32">
         <div class="container mx-auto px-6 max-w-7xl">
             <div class="mb-16 text-center">
                 <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">How it works</div>
@@ -101,12 +103,21 @@ permalink: /scrava-pricing/
     </section>
 
     <!-- ══════════════════════════════ PLANS ══════════════════════════════ -->
-    <section id="plans" class="py-32 bg-white scroll-mt-28">
+    <section id="plans" class="py-32 bg-white scroll-mt-32">
         <div class="container mx-auto px-4 sm:px-6 max-w-[90rem]">
             <div class="mb-12 text-center">
                 <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Plans</div>
                 <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">Four tiers.<br/>Three ways to consume.</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">Pick a delivery mode below &mdash; tier prices update live. Every plan includes Amazon.in coverage and the same core data.</p>
+            </div>
+
+            <!-- Currency toggle -->
+            <div class="flex flex-col items-center justify-center gap-2 mb-10">
+                <span class="text-[11px] font-black uppercase tracking-widest text-gray-400">Currency</span>
+                <div class="inline-flex items-center bg-gray-100 p-1" role="group" aria-label="Display currency">
+                    <button type="button" class="scrava-pp-currency px-5 py-2.5 text-sm font-bold transition-colors" data-currency="inr" aria-pressed="true">INR</button>
+                    <button type="button" class="scrava-pp-currency px-5 py-2.5 text-sm font-bold transition-colors" data-currency="usd" aria-pressed="false">USD</button>
+                </div>
             </div>
 
             <!-- Delivery mode toggle -->
@@ -214,14 +225,16 @@ permalink: /scrava-pricing/
             </div>
 
             <p class="text-center text-sm text-gray-500 max-w-3xl mx-auto mt-16 leading-relaxed">
-                All prices are monthly (INR). Same credit pool and Amazon.in data across modes &mdash; only the delivery surface and monthly volume change.
+                <span class="scrava-footnote-pricing-inr">All prices are monthly in INR.</span>
+                <span class="scrava-footnote-pricing-usd hidden">All prices are monthly in USD.</span>
+                Same credit pool and Amazon.in data across modes &mdash; only the delivery surface and monthly volume change.
                 <a href="#compare" class="text-blue-600 font-semibold hover:underline ml-1">See full feature comparison &darr;</a>
             </p>
         </div>
     </section>
 
     <!-- ══════════════════════════════ FULL COMPARISON ══════════════════════════════ -->
-    <section id="compare" class="py-32 bg-gray-50 scroll-mt-28">
+    <section id="compare" class="py-32 bg-gray-50 scroll-mt-32">
         <div class="container mx-auto px-6 max-w-7xl">
             <div class="mb-16 text-center">
                 <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Full comparison</div>
@@ -295,28 +308,28 @@ permalink: /scrava-pricing/
                             <td class="px-6 md:px-8 font-semibold text-gray-900 leading-snug">
                                 <span class="inline-flex items-center gap-2"><i class="ri-file-excel-2-line text-green-600"></i>Excel <span class="text-gray-400 font-black">Lite</span></span>
                             </td>
-                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base">&#8377;999</td>
-                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base bg-blue-50/40">&#8377;2,999</td>
-                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base">&#8377;5,999</td>
-                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base">&#8377;14,999</td>
+                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base"><span data-price-key="excel.starter">&#8377;999</span></td>
+                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base bg-blue-50/40"><span data-price-key="excel.growth">&#8377;2,999</span></td>
+                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base"><span data-price-key="excel.scale">&#8377;5,999</span></td>
+                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base"><span data-price-key="excel.elite">&#8377;14,999</span></td>
                         </tr>
                         <tr>
                             <td class="px-6 md:px-8 font-semibold text-gray-900 leading-snug">
                                 <span class="inline-flex items-center gap-2"><i class="ri-code-s-slash-line text-blue-600"></i>API <span class="text-gray-400 font-black">Developer</span></span>
                             </td>
-                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base">&#8377;1,350</td>
-                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base bg-blue-50/40">&#8377;3,999</td>
-                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base">&#8377;7,999</td>
-                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base">&#8377;19,999</td>
+                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base"><span data-price-key="api.starter">&#8377;1,350</span></td>
+                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base bg-blue-50/40"><span data-price-key="api.growth">&#8377;3,999</span></td>
+                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base"><span data-price-key="api.scale">&#8377;7,999</span></td>
+                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base"><span data-price-key="api.elite">&#8377;19,999</span></td>
                         </tr>
                         <tr>
                             <td class="px-6 md:px-8 font-semibold text-gray-900 leading-snug">
                                 <span class="inline-flex items-center gap-2"><i class="ri-dashboard-3-line text-orange-600"></i>Dashboard <span class="text-gray-400 font-black">Pro</span></span>
                             </td>
-                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base">&#8377;1,699</td>
-                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base bg-blue-50/40">&#8377;4,999</td>
-                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base">&#8377;9,999</td>
-                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base">&#8377;24,999</td>
+                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base"><span data-price-key="dashboard.starter">&#8377;1,699</span></td>
+                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base bg-blue-50/40"><span data-price-key="dashboard.growth">&#8377;4,999</span></td>
+                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base"><span data-price-key="dashboard.scale">&#8377;9,999</span></td>
+                            <td class="px-5 text-center tabular-nums font-black text-gray-900 text-base"><span data-price-key="dashboard.elite">&#8377;24,999</span></td>
                         </tr>
 
                         <!-- Volume & platform -->
@@ -508,12 +521,15 @@ permalink: /scrava-pricing/
                 </div>
             </div>
 
-            <p class="text-center text-sm text-gray-500 max-w-2xl mx-auto mt-12 leading-relaxed">All prices are monthly (INR). Credits follow your tier; delivery mode changes how you access the same underlying Amazon.in product data.</p>
+            <p class="text-center text-sm text-gray-500 max-w-2xl mx-auto mt-12 leading-relaxed">
+                <span class="scrava-footnote-compare-inr">All prices are monthly in INR.</span>
+                <span class="scrava-footnote-compare-usd hidden">All prices are monthly in USD.</span>
+                Credits follow your tier; delivery mode changes how you access the same underlying Amazon.in product data.</p>
         </div>
     </section>
 
     <!-- ══════════════════════════════ DELIVERY MODES ══════════════════════════════ -->
-    <section class="py-32 bg-white">
+    <section id="delivery-modes" class="py-32 bg-white scroll-mt-32">
         <div class="container mx-auto px-6 max-w-7xl">
             <div class="mb-16 text-center">
                 <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Delivery modes</div>
@@ -526,7 +542,7 @@ permalink: /scrava-pricing/
                     <div class="w-14 h-14 rounded-full bg-green-50 flex items-center justify-center mb-6 group-hover:bg-green-600 transition-colors">
                         <i class="ri-file-excel-2-line text-green-600 group-hover:text-white text-2xl transition-colors"></i>
                     </div>
-                    <div class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">Lowest price &middot; from &#8377;999/mo</div>
+                    <div class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">Lowest price &middot; from <span data-price-key="excel.starter">&#8377;999</span>/mo</div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Excel <span class="text-gray-400">Lite</span></h3>
                     <p class="text-sm text-gray-500 mb-4">Scheduled or on-demand file delivery</p>
                     <p class="text-gray-600 leading-relaxed mb-6">Best for catalog managers and analysts who want clean exports without touching code. Lowest monthly price per tier.</p>
@@ -541,7 +557,7 @@ permalink: /scrava-pricing/
                     <div class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
                         <i class="ri-code-s-slash-line text-blue-600 group-hover:text-white text-2xl transition-colors"></i>
                     </div>
-                    <div class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">Middle tier &middot; from &#8377;1,350/mo</div>
+                    <div class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">Middle tier &middot; from <span data-price-key="api.starter">&#8377;1,350</span>/mo</div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">API <span class="text-gray-400">Developer</span></h3>
                     <p class="text-sm text-gray-500 mb-4">Endpoints for your stack</p>
                     <p class="text-gray-600 leading-relaxed mb-6">Integrate product intelligence into your own apps, ETL, or data warehouse &mdash; without the full dashboard subscription.</p>
@@ -556,7 +572,7 @@ permalink: /scrava-pricing/
                     <div class="w-14 h-14 rounded-full bg-orange-50 flex items-center justify-center mb-6 group-hover:bg-orange-600 transition-colors">
                         <i class="ri-dashboard-3-line text-orange-600 group-hover:text-white text-2xl transition-colors"></i>
                     </div>
-                    <div class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">Full stack &middot; from &#8377;1,699/mo</div>
+                    <div class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">Full stack &middot; from <span data-price-key="dashboard.starter">&#8377;1,699</span>/mo</div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Dashboard <span class="text-gray-400">Pro</span></h3>
                     <p class="text-sm text-gray-500 mb-4">Full control plane</p>
                     <p class="text-gray-600 leading-relaxed mb-6">Includes UI, job history, alerting, and richer export paths &mdash; ideal when operators and engineers share one workspace.</p>
@@ -571,7 +587,7 @@ permalink: /scrava-pricing/
     </section>
 
     <!-- ══════════════════════════════ PERSONAS (Which combo) ══════════════════════════════ -->
-    <section class="py-32 bg-gray-50">
+    <section id="recommendations" class="py-32 bg-gray-50 scroll-mt-32">
         <div class="container mx-auto px-6 max-w-7xl">
             <div class="mb-16 text-center">
                 <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Recommendations</div>
@@ -593,7 +609,7 @@ permalink: /scrava-pricing/
                         <div class="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-3">Suggested combo</div>
                         <div class="text-lg font-black text-gray-900 mb-3">Excel Starter</div>
                         <div class="flex items-baseline gap-1 tabular-nums">
-                            <span class="text-3xl font-black text-blue-600">&#8377;999</span>
+                            <span class="text-3xl font-black text-blue-600" data-price-key="excel.starter">&#8377;999</span>
                             <span class="text-sm font-bold text-gray-500">/mo</span>
                         </div>
                     </div>
@@ -615,7 +631,7 @@ permalink: /scrava-pricing/
                         <div class="text-[10px] font-black uppercase tracking-widest text-blue-600 mb-3">Suggested combo</div>
                         <div class="text-lg font-black text-gray-900 mb-3">API Growth</div>
                         <div class="flex items-baseline gap-1 tabular-nums">
-                            <span class="text-3xl font-black text-blue-600">&#8377;3,999</span>
+                            <span class="text-3xl font-black text-blue-600" data-price-key="api.growth">&#8377;3,999</span>
                             <span class="text-sm font-bold text-gray-500">/mo</span>
                         </div>
                     </div>
@@ -636,7 +652,7 @@ permalink: /scrava-pricing/
                         <div class="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-3">Suggested combo</div>
                         <div class="text-lg font-black text-gray-900 mb-3">Dashboard Scale</div>
                         <div class="flex items-baseline gap-1 tabular-nums">
-                            <span class="text-3xl font-black text-orange-600">&#8377;9,999</span>
+                            <span class="text-3xl font-black text-orange-600" data-price-key="dashboard.scale">&#8377;9,999</span>
                             <span class="text-sm font-bold text-gray-500">/mo</span>
                         </div>
                     </div>
@@ -648,7 +664,7 @@ permalink: /scrava-pricing/
     </section>
 
     <!-- ══════════════════════════════ WHY SCALE ══════════════════════════════ -->
-    <section class="py-32 bg-white">
+    <section id="why-upgrade" class="py-32 bg-white scroll-mt-32">
         <div class="container mx-auto px-6 max-w-7xl">
             <div class="mb-16 text-center">
                 <div class="text-sm font-bold text-orange-600 uppercase tracking-widest mb-4">Why upgrade</div>
@@ -685,7 +701,7 @@ permalink: /scrava-pricing/
     </section>
 
     <!-- ══════════════════════════════ FINAL CTA ══════════════════════════════ -->
-    <section class="py-32 bg-gray-900 text-white relative overflow-hidden">
+    <section id="get-started-pricing" class="py-32 bg-gray-900 text-white relative overflow-hidden scroll-mt-32">
         <div class="absolute inset-0 pointer-events-none">
             <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/20 blur-[120px]"></div>
             <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-orange-600/20 blur-[120px]"></div>
@@ -902,13 +918,55 @@ permalink: /scrava-pricing/
 <script>
 (function () {
     var modeButtons = Array.prototype.slice.call(document.querySelectorAll('.scrava-pp-mode'));
+    var currencyButtons = Array.prototype.slice.call(document.querySelectorAll('.scrava-pp-currency'));
     if (!modeButtons.length) return;
 
-    var PRICES = {
-        excel:     { starter: '\u20B9999',    growth: '\u20B92,999', scale: '\u20B95,999', elite: '\u20B914,999' },
-        api:       { starter: '\u20B91,350',  growth: '\u20B93,999', scale: '\u20B97,999', elite: '\u20B919,999' },
-        dashboard: { starter: '\u20B91,699',  growth: '\u20B94,999', scale: '\u20B99,999', elite: '\u20B924,999' }
+    var PRICES_INR_NUM = {
+        excel:     { starter: 999,    growth: 2999, scale: 5999, elite: 14999 },
+        api:       { starter: 1350,  growth: 3999, scale: 7999, elite: 19999 },
+        dashboard: { starter: 1699,  growth: 4999, scale: 9999, elite: 24999 }
     };
+
+    /** Fixed USD list prices by delivery mode and tier (monthly). */
+    var PRICES_USD_NUM = {
+        excel:     { starter: 20,   growth: 60,   scale: 120,  elite: 300 },
+        api:       { starter: 27,   growth: 80,   scale: 160,  elite: 400 },
+        dashboard: { starter: 34,   growth: 100,  scale: 200,  elite: 500 }
+    };
+
+    var activeMode = 'excel';
+    var activeCurrency = 'inr';
+
+    function formatInr(n) {
+        return '\u20B9' + Number(n).toLocaleString('en-IN');
+    }
+
+    function formatUsdList(n) {
+        return '$' + Number(n).toLocaleString('en-US');
+    }
+
+    function formatPlanPrice(mode, plan, currency) {
+        if (currency === 'usd') {
+            var u = PRICES_USD_NUM[mode] && PRICES_USD_NUM[mode][plan];
+            return u != null ? formatUsdList(u) : '';
+        }
+        var r = PRICES_INR_NUM[mode] && PRICES_INR_NUM[mode][plan];
+        return r != null ? formatInr(r) : '';
+    }
+
+    function formatFromKey(key, currency) {
+        if (!key || typeof key !== 'string') return null;
+        var parts = key.split('.');
+        if (parts.length !== 2) return null;
+        var delivery = parts[0];
+        var tier = parts[1];
+        if (currency === 'usd') {
+            var u = PRICES_USD_NUM[delivery] && PRICES_USD_NUM[delivery][tier];
+            return u != null ? formatUsdList(u) : null;
+        }
+        var n = PRICES_INR_NUM[delivery] && PRICES_INR_NUM[delivery][tier];
+        return n != null ? formatInr(n) : null;
+    }
 
     function detectMode() {
         try {
@@ -918,26 +976,121 @@ permalink: /scrava-pricing/
         return 'excel';
     }
 
-    function applyMode(mode) {
-        document.querySelectorAll('[data-plan-price]').forEach(function (el) {
-            var plan = el.getAttribute('data-plan-price');
-            if (PRICES[mode] && PRICES[mode][plan]) {
-                el.textContent = PRICES[mode][plan];
+    /**
+     * First-visit default before any saved toggle: India-oriented signals → INR, otherwise USD.
+     * Uses device timezone + locale immediately; optional IP country refines when fetch succeeds.
+     */
+    function inferCurrencySync() {
+        try {
+            var tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+            if (tz === 'Asia/Kolkata' || tz === 'Asia/Calcutta') return 'inr';
+        } catch (e) {}
+        try {
+            var langs = navigator.languages || [navigator.language];
+            for (var i = 0; i < langs.length; i++) {
+                var l = (langs[i] || '').toLowerCase();
+                if (l === 'en-in' || l.endsWith('-in')) return 'inr';
             }
+        } catch (e2) {}
+        return 'usd';
+    }
+
+    function detectCurrency() {
+        try {
+            var saved = localStorage.getItem('scrava-pp-currency');
+            if (saved === 'inr' || saved === 'usd') return saved;
+        } catch (e) {}
+        return inferCurrencySync();
+    }
+
+    function tryRefineCurrencyFromGeo() {
+        try {
+            if (localStorage.getItem('scrava-pp-currency')) return;
+        } catch (e) {
+            return;
+        }
+        if (typeof fetch !== 'function') return;
+        fetch('https://ipwho.is/', { cache: 'no-store', credentials: 'omit' })
+            .then(function (r) {
+                return r.ok ? r.json() : null;
+            })
+            .then(function (data) {
+                if (!data || data.success === false) return;
+                try {
+                    if (localStorage.getItem('scrava-pp-currency')) return;
+                } catch (e2) {
+                    return;
+                }
+                var cc = (data.country_code || '').toUpperCase();
+                var next = cc === 'IN' ? 'inr' : 'usd';
+                if (next !== activeCurrency) {
+                    activeCurrency = next;
+                    applyAll();
+                }
+            })
+            .catch(function () {});
+    }
+
+    function toggleCurrencyCopy(isUsd) {
+        document.querySelectorAll('.scrava-footnote-pricing-inr').forEach(function (el) {
+            el.classList.toggle('hidden', isUsd);
         });
-        document.querySelectorAll('[data-plan-note]').forEach(function (el) {
-            el.classList.toggle('hidden', el.getAttribute('data-mode') !== mode);
+        document.querySelectorAll('.scrava-footnote-pricing-usd').forEach(function (el) {
+            el.classList.toggle('hidden', !isUsd);
         });
-        modeButtons.forEach(function (btn) {
-            var active = btn.getAttribute('data-mode') === mode;
-            btn.classList.toggle('active', active);
-            btn.setAttribute('aria-pressed', active);
+        document.querySelectorAll('.scrava-footnote-compare-inr').forEach(function (el) {
+            el.classList.toggle('hidden', isUsd);
+        });
+        document.querySelectorAll('.scrava-footnote-compare-usd').forEach(function (el) {
+            el.classList.toggle('hidden', !isUsd);
         });
     }
 
+    function applyAll() {
+        var mode = activeMode;
+        var cur = activeCurrency;
+
+        document.querySelectorAll('[data-plan-price]').forEach(function (el) {
+            var plan = el.getAttribute('data-plan-price');
+            var text = formatPlanPrice(mode, plan, cur);
+            if (text) el.textContent = text;
+        });
+
+        document.querySelectorAll('[data-price-key]').forEach(function (el) {
+            var key = el.getAttribute('data-price-key');
+            var text = formatFromKey(key, cur);
+            if (text != null) el.textContent = text;
+        });
+
+        document.querySelectorAll('[data-plan-note]').forEach(function (el) {
+            el.classList.toggle('hidden', el.getAttribute('data-mode') !== mode);
+        });
+
+        modeButtons.forEach(function (btn) {
+            var on = btn.getAttribute('data-mode') === mode;
+            btn.classList.toggle('active', on);
+            btn.setAttribute('aria-pressed', on);
+        });
+
+        currencyButtons.forEach(function (btn) {
+            var on = btn.getAttribute('data-currency') === cur;
+            btn.classList.toggle('active', on);
+            btn.setAttribute('aria-pressed', on);
+        });
+
+        toggleCurrencyCopy(cur === 'usd');
+    }
+
     function setMode(mode) {
+        activeMode = mode;
         try { localStorage.setItem('scrava-pp-mode', mode); } catch (e) {}
-        applyMode(mode);
+        applyAll();
+    }
+
+    function setCurrency(currency) {
+        activeCurrency = currency === 'usd' ? 'usd' : 'inr';
+        try { localStorage.setItem('scrava-pp-currency', activeCurrency); } catch (e) {}
+        applyAll();
     }
 
     modeButtons.forEach(function (btn) {
@@ -946,17 +1099,28 @@ permalink: /scrava-pricing/
         });
     });
 
-    applyMode(detectMode());
+    currencyButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            setCurrency(btn.getAttribute('data-currency'));
+        });
+    });
+
+    activeMode = detectMode();
+    activeCurrency = detectCurrency();
+    applyAll();
+    tryRefineCurrencyFromGeo();
 })();
 </script>
 
 <style>
-    /* Plan-mode toggle buttons */
-    .scrava-pp-mode {
+    /* Plan-mode + currency toggle buttons */
+    .scrava-pp-mode,
+    .scrava-pp-currency {
         color: #6B7280;
         background: transparent;
     }
-    .scrava-pp-mode.active {
+    .scrava-pp-mode.active,
+    .scrava-pp-currency.active {
         background: #111827;
         color: #FFFFFF;
     }
