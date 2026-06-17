@@ -1,0 +1,530 @@
+---
+layout: default
+title: "Pricing — Nextract Commerce Data Platform"
+description: "Simple, credit-based pricing for Nextract. Four volume tiers, three delivery modes — Excel, API, or Dashboard. First month free — 5,000 credits, no card required."
+keywords: "nextract pricing, commerce data api pricing, marketplace data pricing, amazon data api price, blinkit data api price, ecommerce data pricing"
+og_description: "Credit-based pricing for Nextract. Four tiers, Excel/API/Dashboard delivery. First month free — 5,000 credits included."
+permalink: /pricing/
+---
+
+<style>
+/* ═══════════ PRICING PAGE TOKENS ═══════════ */
+:root {
+  --dk:     #09090b; --dk1: #0f0f12;
+  --dk-b:   rgba(255,255,255,0.07);
+  --dk-txt: #f4f4f5; --dk-mut: #71717a; --dk-dim: #3f3f46;
+  --lt:     #ffffff; --lt1: #fafafa;
+  --lt-b:   #e4e4e7; --lt-txt: #09090b; --lt-mut: #71717a;
+  --blue:   #3b82f6; --orange: #f97316; --green: #22c55e;
+}
+.nx-wrap  { max-width:1280px; margin:0 auto; padding:0 1.5rem; }
+.nx-label { font-size:10px; font-weight:800; letter-spacing:0.18em; text-transform:uppercase; }
+.nx-h2    { font-size:clamp(2rem,4vw,3rem); font-weight:900; line-height:1; letter-spacing:-0.04em; }
+.nx-grad  {
+  background: linear-gradient(110deg,var(--blue) 0%,#8b5cf6 48%,var(--orange) 100%);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+}
+.orb { position:absolute; border-radius:50%; pointer-events:none; filter:blur(80px); }
+.orb-blue   { background:radial-gradient(circle,rgba(59,130,246,0.2) 0%,transparent 70%); }
+.orb-orange { background:radial-gradient(circle,rgba(249,115,22,0.15) 0%,transparent 70%); }
+.nx-grid-bg {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.024) 1px, transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,0.024) 1px,transparent 1px);
+  background-size:80px 80px;
+}
+.btn-dk-primary {
+  display:inline-flex; align-items:center; gap:8px;
+  padding:0.9rem 1.8rem;
+  background:#f4f4f5; color:#09090b;
+  font-weight:800; font-size:0.84rem; border-radius:6px;
+  transition:background 0.2s,transform 0.2s; text-decoration:none;
+}
+.btn-dk-primary:hover { background:#ffffff; transform:translateY(-1px); color:#09090b; text-decoration:none; }
+.btn-dk-ghost {
+  display:inline-flex; align-items:center; gap:8px;
+  padding:0.9rem 1.8rem;
+  border:1px solid rgba(255,255,255,0.15); color:rgba(255,255,255,0.65);
+  font-weight:700; font-size:0.84rem; border-radius:6px;
+  transition:border-color 0.2s,color 0.2s; text-decoration:none;
+}
+.btn-dk-ghost:hover { border-color:rgba(255,255,255,0.45); color:white; text-decoration:none; }
+.btn-lt-primary {
+  display:inline-flex; align-items:center; gap:8px;
+  padding:0.9rem 1.8rem;
+  background:#09090b; color:#f4f4f5;
+  font-weight:800; font-size:0.84rem; border-radius:6px;
+  transition:background 0.2s,transform 0.2s; text-decoration:none;
+}
+.btn-lt-primary:hover { background:#27272a; transform:translateY(-1px); color:#f4f4f5; text-decoration:none; }
+.btn-lt-ghost {
+  display:inline-flex; align-items:center; gap:8px;
+  padding:0.9rem 1.8rem;
+  border:1px solid #d4d4d8; color:#52525b;
+  font-weight:700; font-size:0.84rem; border-radius:6px;
+  transition:border-color 0.2s,color 0.2s; text-decoration:none;
+}
+.btn-lt-ghost:hover { border-color:#09090b; color:#09090b; text-decoration:none; }
+
+/* ── Mode toggle ─────────────────────────── */
+.pp-toggle {
+  display:inline-flex; align-items:center;
+  background:var(--lt-b); padding:4px; border-radius:8px; gap:2px;
+}
+.pp-mode {
+  display:inline-flex; align-items:center; gap:6px;
+  padding:0.55rem 1.1rem;
+  font-size:12px; font-weight:700; letter-spacing:0.02em;
+  color:var(--lt-mut); background:transparent; border:none;
+  border-radius:6px; cursor:pointer; transition:all 0.15s; white-space:nowrap;
+}
+.pp-mode.active { background:#ffffff; color:var(--lt-txt); box-shadow:0 1px 4px rgba(0,0,0,0.1); }
+
+/* ── Plan cards ──────────────────────────── */
+.pp-cards { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--lt-b); border:1px solid var(--lt-b); }
+@media(max-width:960px){ .pp-cards { grid-template-columns:1fr 1fr; } }
+@media(max-width:540px){ .pp-cards { grid-template-columns:1fr; } }
+
+.pp-card {
+  background:var(--lt); padding:2rem 1.75rem;
+  display:flex; flex-direction:column;
+  position:relative; transition:background 0.2s;
+}
+.pp-card:hover { background:var(--lt1); }
+.pp-card.featured { background:var(--dk); }
+.pp-card.featured:hover { background:#0f0f14; }
+.pp-card-badge {
+  position:absolute; top:-13px; left:50%; transform:translateX(-50%);
+  font-size:9px; font-weight:900; letter-spacing:0.12em; text-transform:uppercase;
+  background:var(--blue); color:#fff; padding:0.22rem 0.7rem; white-space:nowrap;
+}
+.pp-tier { font-size:10px; font-weight:900; letter-spacing:0.18em; text-transform:uppercase; margin-bottom:0.25rem; }
+.pp-credits { font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--lt-mut); margin-bottom:1.25rem; }
+.featured .pp-credits { color:var(--dk-dim); }
+.pp-price { font-size:2.4rem; font-weight:900; letter-spacing:-0.04em; line-height:1; margin-bottom:0.2rem; }
+.pp-trial { font-size:11px; color:var(--lt-mut); margin-bottom:1.1rem; }
+.featured .pp-trial { color:var(--dk-mut); }
+.pp-desc { font-size:0.8rem; color:var(--lt-mut); line-height:1.65; flex:1; margin-bottom:1.5rem; }
+.featured .pp-desc { color:var(--dk-mut); }
+.pp-cta { display:block; text-align:center; padding:0.75rem 1rem; font-size:12px; font-weight:800; letter-spacing:0.04em; text-decoration:none; border-radius:4px; transition:all 0.2s; }
+.pp-cta-lt { border:1.5px solid var(--lt-txt); color:var(--lt-txt); }
+.pp-cta-lt:hover { background:var(--lt-txt); color:#fff; text-decoration:none; }
+.pp-cta-dk { background:var(--lt); color:var(--lt-txt); }
+.pp-cta-dk:hover { background:var(--blue); color:#fff; text-decoration:none; }
+.pp-cta-blue { background:var(--blue); color:#fff; border:1.5px solid var(--blue); }
+.pp-cta-blue:hover { background:#2563eb; text-decoration:none; }
+
+/* ── Compare table ───────────────────────── */
+.pp-compare { width:100%; border-collapse:collapse; font-size:13px; }
+.pp-compare thead th {
+  padding:1.25rem 1rem; text-align:center;
+  font-size:12px; font-weight:900; letter-spacing:-0.01em;
+  border-bottom:2px solid var(--lt-b);
+  position:sticky; top:64px; z-index:10;
+  background:var(--lt);
+  box-shadow:0 1px 0 var(--lt-b), 0 4px 12px rgba(0,0,0,0.04);
+}
+.pp-compare thead th:first-child { text-align:left; }
+.pp-compare thead th.feat-col { background:#f3f7fe; color:var(--blue); border-bottom-color:var(--blue); }
+.pp-compare tr.group-row td {
+  padding:1rem 1rem 0.4rem;
+  font-size:9px; font-weight:900; letter-spacing:0.14em; text-transform:uppercase;
+  color:var(--lt-mut); background:var(--lt1); border-top:1px solid var(--lt-b);
+}
+.pp-compare tbody tr:not(.group-row) td {
+  padding:0.85rem 1rem; border-bottom:1px solid var(--lt-b);
+  color:var(--lt-txt);
+}
+.pp-compare tbody tr:not(.group-row) td:first-child { font-weight:600; font-size:13px; color:var(--lt-txt); }
+.pp-compare tbody tr:not(.group-row) td:not(:first-child) { text-align:center; color:var(--lt-mut); }
+.pp-compare tbody td.feat-col { background:rgba(59,130,246,0.04); }
+.pp-compare .chk { color:var(--green); font-size:16px; }
+.pp-compare .dash { color:var(--lt-dim); }
+
+/* ── FAQ ─────────────────────────────────── */
+.pp-faq details { border-bottom:1px solid var(--lt-b); }
+.pp-faq summary {
+  display:flex; align-items:center; justify-content:space-between; gap:1rem;
+  padding:1.3rem 0; cursor:pointer; list-style:none;
+  font-size:0.92rem; font-weight:700; color:var(--lt-txt);
+}
+.pp-faq summary::-webkit-details-marker { display:none; }
+.pp-faq summary i { color:var(--lt-mut); font-size:18px; flex-shrink:0; transition:transform 0.2s; }
+.pp-faq details[open] summary i { transform:rotate(180deg); }
+.pp-faq details p { font-size:0.85rem; color:var(--lt-mut); line-height:1.75; padding-bottom:1.3rem; margin:0; }
+
+@media(max-width:700px){
+  .pp-compare-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .pp-compare { min-width:640px; }
+}
+@keyframes nx-pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.3;transform:scale(0.7)} }
+.nx-live { width:7px;height:7px;background:var(--green);border-radius:50%;display:inline-block;animation:nx-pulse 2s ease-in-out infinite;box-shadow:0 0 6px var(--green); }
+</style>
+
+<main>
+
+<!-- ═══════════════════════════════════════════
+     HERO — DARK
+═══════════════════════════════════════════ -->
+<section style="background:var(--dk);padding:8rem 0 6rem;position:relative;overflow:hidden;">
+    <div class="orb orb-blue"   style="width:700px;height:700px;top:50%;left:50%;transform:translate(-80%,-50%);opacity:0.8;"></div>
+    <div class="orb orb-orange" style="width:500px;height:500px;top:50%;left:50%;transform:translate(15%,-50%);opacity:0.7;"></div>
+    <div class="nx-grid-bg" style="position:absolute;inset:0;opacity:0.5;pointer-events:none;"></div>
+
+    <div class="nx-wrap" style="position:relative;z-index:1;text-align:center;">
+        <p class="nx-label" style="color:var(--dk-mut);margin-bottom:1.25rem;">Pricing</p>
+        <h1 style="font-size:clamp(3rem,7vw,6rem);font-weight:900;line-height:1;letter-spacing:-0.05em;color:var(--dk-txt);margin-bottom:1.5rem;">
+            Simple pricing.<br/><span class="nx-grad">Honest credits.</span>
+        </h1>
+        <p style="font-size:1rem;color:var(--dk-mut);max-width:30rem;margin:0 auto 2.5rem;line-height:1.7;">
+            Four volume tiers. Three delivery modes — Excel, API, or Dashboard. Your first month includes 5,000 free credits — no card required.
+        </p>
+        <div style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--green);border:1px solid rgba(34,197,94,0.2);padding:0.4rem 1rem;background:rgba(34,197,94,0.06);border-radius:4px;">
+            <span class="nx-live"></span> First month free — 5,000 credits, no card required
+        </div>
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     PLANS — LIGHT
+═══════════════════════════════════════════ -->
+<section id="plans" style="background:var(--lt1);padding:5rem 0;border-top:1px solid var(--lt-b);">
+    <div class="nx-wrap">
+
+        <div style="text-align:center;margin-bottom:3rem;">
+            <p class="nx-label" style="color:var(--lt-mut);margin-bottom:0.75rem;">Plans</p>
+            <h2 class="nx-h2" style="color:var(--lt-txt);margin-bottom:1rem;">Four tiers. Three surfaces.</h2>
+            <p style="font-size:0.88rem;color:var(--lt-mut);max-width:32rem;margin:0 auto 2rem;">
+                Switch delivery mode — prices update instantly. All plans include managed proxies, anti-blocking, and honest credits: 5 per e-commerce fetch, 10 per quick commerce fetch.
+            </p>
+
+            <!-- Mode toggle -->
+            <div class="pp-toggle" role="tablist">
+                <button class="pp-mode active" data-mode="excel" aria-pressed="true"><i class="ri-file-excel-2-line"></i> Excel / Files</button>
+                <button class="pp-mode" data-mode="api"   aria-pressed="false"><i class="ri-code-s-slash-line"></i> API</button>
+                <button class="pp-mode" data-mode="dashboard" aria-pressed="false"><i class="ri-dashboard-3-line"></i> Dashboard</button>
+            </div>
+        </div>
+
+        <!-- Plan cards -->
+        <div class="pp-cards" style="margin-bottom:1rem;">
+
+            <!-- Starter -->
+            <div class="pp-card">
+                <div class="pp-tier" style="color:var(--lt-mut);">Starter</div>
+                <div class="pp-credits">20k credits / mo</div>
+                <div class="pp-price" style="color:var(--lt-txt);" data-plan-price="starter">₹999</div>
+                <div class="pp-trial" data-trial-note>30-day trial</div>
+                <div class="pp-desc">Solo sellers &amp; light monitoring. Catalogue visibility without engineering.</div>
+                <a href="https://app.getnextract.com/register?mode=excel&tier=starter" data-register-tier="starter" class="pp-cta pp-cta-lt">Start Starter</a>
+            </div>
+
+            <!-- Growth — featured -->
+            <div class="pp-card featured" style="position:relative;">
+                <div class="pp-card-badge">Most popular</div>
+                <div class="pp-tier" style="color:var(--blue);">Growth</div>
+                <div class="pp-credits">75k credits / mo</div>
+                <div class="pp-price" style="color:var(--dk-txt);" data-plan-price="growth">₹2,999</div>
+                <div class="pp-trial" data-trial-note>30-day trial</div>
+                <div class="pp-desc">Growing catalogues &amp; integrations. Richer signals and more history.</div>
+                <a href="https://app.getnextract.com/register?mode=excel&tier=growth" data-register-tier="growth" class="pp-cta pp-cta-dk">Start Growth</a>
+            </div>
+
+            <!-- Scale -->
+            <div class="pp-card">
+                <div class="pp-tier" style="color:var(--orange);">Scale</div>
+                <div class="pp-credits">170k credits / mo</div>
+                <div class="pp-price" style="color:var(--lt-txt);" data-plan-price="scale">₹5,999</div>
+                <div class="pp-trial" data-trial-note>30-day trial</div>
+                <div class="pp-desc">High volume &amp; automation. Full data richness with speed for large operations.</div>
+                <a href="https://app.getnextract.com/register?mode=excel&tier=scale" data-register-tier="scale" class="pp-cta pp-cta-lt">Start Scale</a>
+            </div>
+
+            <!-- Elite -->
+            <div class="pp-card">
+                <div class="pp-tier" style="color:var(--blue);">Elite</div>
+                <div class="pp-credits">450k credits / mo</div>
+                <div class="pp-price" style="color:var(--lt-txt);" data-plan-price="elite">₹14,999</div>
+                <div class="pp-trial" data-trial-note>30-day trial</div>
+                <div class="pp-desc">Large brands, aggregators &amp; agencies. Maximum parallelism and strategy support.</div>
+                <a href="https://app.getnextract.com/register?mode=excel&tier=elite" data-register-tier="elite" class="pp-cta pp-cta-blue">Start Elite</a>
+            </div>
+
+        </div>
+
+        <p style="font-size:11px;color:var(--lt-mut);text-align:center;margin-bottom:0;">
+            <span class="pp-footnote-inr">Prices in INR per month.</span>
+            <span class="pp-footnote-usd" style="display:none;">Prices in USD per month.</span>
+            Credits reset each billing cycle. Upgrade anytime — no lock-in.
+        </p>
+
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     COMPARE TABLE — LIGHT
+═══════════════════════════════════════════ -->
+<section id="compare" style="background:var(--lt);padding:5rem 0;border-top:1px solid var(--lt-b);">
+    <div class="nx-wrap">
+
+        <div style="text-align:center;margin-bottom:3rem;">
+            <p class="nx-label" style="color:var(--lt-mut);margin-bottom:0.75rem;">Compare</p>
+            <h2 class="nx-h2" style="color:var(--lt-txt);">Every feature, side by side.</h2>
+        </div>
+
+        <div class="pp-compare-wrap">
+            <table class="pp-compare">
+                <thead>
+                    <tr>
+                        <th style="text-align:left;width:28%;min-width:160px;padding:1.25rem 1rem;font-size:10px;font-weight:900;letter-spacing:0.14em;text-transform:uppercase;color:var(--lt-mut);border-bottom:2px solid var(--lt-b);">Feature</th>
+                        <th>Starter<br/><span style="font-size:10px;font-weight:600;color:var(--lt-mut);">20k credits</span></th>
+                        <th class="feat-col">Growth<br/><span style="font-size:10px;font-weight:600;">75k credits</span></th>
+                        <th>Scale<br/><span style="font-size:10px;font-weight:600;color:var(--lt-mut);">170k credits</span></th>
+                        <th>Elite<br/><span style="font-size:10px;font-weight:600;color:var(--lt-mut);">450k credits</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="group-row"><td colspan="5">Credits &amp; volume</td></tr>
+                    <tr>
+                        <td>Monthly credits</td>
+                        <td>20,000</td><td class="feat-col" style="font-weight:700;color:var(--blue);">75,000</td><td>170,000</td><td>450,000</td>
+                    </tr>
+                    <tr>
+                        <td>~Product fetches / mo</td>
+                        <td>~4,000</td><td class="feat-col" style="font-weight:700;color:var(--blue);">~15,000</td><td>~34,000</td><td>~90,000</td>
+                    </tr>
+                    <tr>
+                        <td>Parallel jobs</td>
+                        <td>1</td><td class="feat-col" style="font-weight:700;color:var(--blue);">3</td><td>5</td><td>10</td>
+                    </tr>
+                    <tr>
+                        <td>Credits per fetch</td>
+                        <td colspan="4" style="text-align:center;color:var(--lt-mut);">5 e-commerce · 10 quick commerce</td>
+                    </tr>
+
+                    <tr class="group-row"><td colspan="5">Data &amp; fields</td></tr>
+                    <tr>
+                        <td>Core fields (price, title, BSR)</td>
+                        <td><i class="ri-check-line chk"></i></td><td class="feat-col"><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Buy Box &amp; seller data</td>
+                        <td><i class="ri-check-line chk"></i></td><td class="feat-col"><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Extended intelligence (reviews, Q&amp;A, variations)</td>
+                        <td><span class="dash">—</span></td><td class="feat-col"><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Historical snapshots</td>
+                        <td>7 days</td><td class="feat-col" style="font-weight:700;color:var(--blue);">30 days</td><td>90 days</td><td>180 days</td>
+                    </tr>
+
+                    <tr class="group-row"><td colspan="5">Delivery surfaces</td></tr>
+                    <tr>
+                        <td>Excel / scheduled file exports</td>
+                        <td><i class="ri-check-line chk"></i></td><td class="feat-col"><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td>
+                    </tr>
+                    <tr>
+                        <td>REST API access</td>
+                        <td><span class="dash">—</span></td><td class="feat-col"><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Full dashboard UI</td>
+                        <td><span class="dash">—</span></td><td class="feat-col"><span class="dash">—</span></td><td><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Alerts &amp; schedules</td>
+                        <td><span class="dash">—</span></td><td class="feat-col"><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td>
+                    </tr>
+
+                    <tr class="group-row"><td colspan="5">Support &amp; onboarding</td></tr>
+                    <tr>
+                        <td>Email support</td>
+                        <td><i class="ri-check-line chk"></i></td><td class="feat-col"><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Priority support</td>
+                        <td><span class="dash">—</span></td><td class="feat-col"><span class="dash">—</span></td><td><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Strategy partner / onboarding call</td>
+                        <td><span class="dash">—</span></td><td class="feat-col"><span class="dash">—</span></td><td><span class="dash">—</span></td><td><i class="ri-check-line chk"></i></td>
+                    </tr>
+
+                    <tr class="group-row"><td colspan="5">Infrastructure (all tiers)</td></tr>
+                    <tr>
+                        <td>Managed proxies &amp; anti-blocking</td>
+                        <td colspan="4" style="text-align:center;"><i class="ri-check-line chk"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Platforms covered</td>
+                        <td colspan="4" style="text-align:center;color:var(--lt-mut);">Amazon, Flipkart, Blinkit, Zepto, Instamart, BigBasket, JioMart, Croma +more</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     FAQ — LIGHT
+═══════════════════════════════════════════ -->
+<section style="background:var(--lt1);padding:5rem 0;border-top:1px solid var(--lt-b);">
+    <div class="nx-wrap" style="max-width:700px;">
+        <div style="text-align:center;margin-bottom:3rem;">
+            <p class="nx-label" style="color:var(--lt-mut);margin-bottom:0.75rem;">FAQ</p>
+            <h2 class="nx-h2" style="color:var(--lt-txt);">Common questions.</h2>
+        </div>
+
+        <div class="pp-faq">
+            <details open>
+                <summary>What are credits and how do they work? <i class="ri-arrow-down-s-line"></i></summary>
+                <p>E-commerce fetches (Amazon, Flipkart, Croma, Reliance Digital) cost 5 credits each. Quick commerce fetches (Blinkit, Zepto, Instamart, and more) cost 10 credits each. Your monthly allowance resets at the start of each billing cycle. Unused credits don't roll over — pick a tier that matches your typical volume.</p>
+            </details>
+            <details>
+                <summary>What's the difference between Excel, API, and Dashboard? <i class="ri-arrow-down-s-line"></i></summary>
+                <p>Same data, different delivery. Excel mode sends scheduled spreadsheet exports to your inbox. API mode gives you REST endpoints for your stack. Dashboard mode unlocks the full Nextract UI with charts, alerts, and job management. Price varies by surface because each has different infrastructure cost.</p>
+            </details>
+            <details>
+                <summary>Do I get a free trial? <i class="ri-arrow-down-s-line"></i></summary>
+                <p>Yes. Your first month includes 5,000 free credits — no card required. This gives you enough to explore the platform and validate data quality before committing to a paid plan. After the first month, choose the tier that fits your volume.</p>
+            </details>
+            <details>
+                <summary>Can I switch tiers or modes later? <i class="ri-arrow-down-s-line"></i></summary>
+                <p>Absolutely. Upgrade or change delivery mode anytime from your account settings. Changes take effect on your next billing cycle, or immediately for upgrades depending on your plan.</p>
+            </details>
+            <details>
+                <summary>What marketplaces do you support? <i class="ri-arrow-down-s-line"></i></summary>
+                <p>Amazon, Flipkart, Blinkit, Zepto, Swiggy Instamart, BigBasket, JioMart, and Croma. We're actively adding more — <a href="{{ '/contact/' | relative_url }}" style="color:var(--blue);font-weight:700;">request a platform</a> and we'll reply within 48 hours.</p>
+            </details>
+            <details>
+                <summary>Is there a contract or lock-in? <i class="ri-arrow-down-s-line"></i></summary>
+                <p>No. All plans are month-to-month. Cancel anytime from your dashboard. No hidden fees, no annual commitments.</p>
+            </details>
+            <details>
+                <summary>How does billing work for international customers? <i class="ri-arrow-down-s-line"></i></summary>
+                <p>Indian customers are billed in INR via Razorpay. International customers see USD-equivalent pricing and can pay via card. Contact us for enterprise invoicing or custom arrangements.</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     FINAL CTA — DARK
+═══════════════════════════════════════════ -->
+<section style="background:var(--dk);padding:8rem 0;position:relative;overflow:hidden;">
+    <div class="orb orb-blue"   style="width:800px;height:800px;top:50%;left:50%;transform:translate(-80%,-50%);opacity:0.8;"></div>
+    <div class="orb orb-orange" style="width:600px;height:600px;top:50%;left:50%;transform:translate(10%,-50%);opacity:0.7;"></div>
+    <div class="nx-grid-bg" style="position:absolute;inset:0;opacity:0.5;pointer-events:none;"></div>
+
+    <div class="nx-wrap" style="position:relative;z-index:1;text-align:center;">
+        <p class="nx-label" style="color:var(--dk-mut);margin-bottom:1rem;">Ready?</p>
+        <h2 style="font-size:clamp(2.5rem,6vw,5rem);font-weight:900;letter-spacing:-0.05em;color:var(--dk-txt);line-height:1;margin-bottom:1.5rem;">
+            Start free.<br/><span class="nx-grad">Scale when ready.</span>
+        </h2>
+        <p style="font-size:1rem;color:var(--dk-mut);max-width:28rem;margin:0 auto 2.5rem;line-height:1.7;">
+            5,000 credits free your first month — no card required. Explore, validate, then pick the tier that fits.
+        </p>
+        <div style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:0.75rem;">
+            <a href="https://app.getnextract.com/register" class="btn-dk-primary">
+                <span>Create free account</span>
+                <i class="ri-arrow-right-line"></i>
+            </a>
+            <a href="{{ '/contact/' | relative_url }}" class="btn-dk-ghost">Talk to us</a>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<script>
+(function () {
+    var modeButtons = Array.prototype.slice.call(document.querySelectorAll('.pp-mode'));
+    if (!modeButtons.length) return;
+
+    var PRICES_INR = {
+        excel:     { starter: 999,   growth: 2999,  scale: 5999,  elite: 14999 },
+        api:       { starter: 1350,  growth: 3999,  scale: 7999,  elite: 19999 },
+        dashboard: { starter: 1699,  growth: 4999,  scale: 9999,  elite: 24999 }
+    };
+    var PRICES_USD = {
+        excel:     { starter: 20,  growth: 60,  scale: 120, elite: 300 },
+        api:       { starter: 27,  growth: 80,  scale: 160, elite: 400 },
+        dashboard: { starter: 34,  growth: 100, scale: 200, elite: 500 }
+    };
+    var TRIAL_DAYS = { excel: 30, api: 14, dashboard: 7 };
+    var REGISTER_BASE = 'https://app.getnextract.com/register';
+
+    var activeMode = 'excel';
+    var activeCurrency = 'inr';
+
+    function fmt(n, cur) {
+        return cur === 'usd'
+            ? '$' + Number(n).toLocaleString('en-US')
+            : '\u20B9' + Number(n).toLocaleString('en-IN');
+    }
+
+    function applyAll() {
+        document.querySelectorAll('[data-plan-price]').forEach(function (el) {
+            var tier = el.getAttribute('data-plan-price');
+            var table = activeCurrency === 'usd' ? PRICES_USD : PRICES_INR;
+            var val = table[activeMode] && table[activeMode][tier];
+            if (val != null) el.textContent = fmt(val, activeCurrency);
+        });
+        document.querySelectorAll('[data-trial-note]').forEach(function (el) {
+            el.textContent = TRIAL_DAYS[activeMode] + '-day trial';
+        });
+        document.querySelectorAll('[data-register-tier]').forEach(function (el) {
+            el.href = REGISTER_BASE + '?mode=' + activeMode + '&tier=' + el.getAttribute('data-register-tier');
+        });
+        modeButtons.forEach(function (btn) {
+            var on = btn.getAttribute('data-mode') === activeMode;
+            btn.classList.toggle('active', on);
+            btn.setAttribute('aria-pressed', on);
+        });
+        var inrEl = document.querySelector('.pp-footnote-inr');
+        var usdEl = document.querySelector('.pp-footnote-usd');
+        if (inrEl) inrEl.style.display = activeCurrency === 'usd' ? 'none' : '';
+        if (usdEl) usdEl.style.display = activeCurrency === 'usd' ? '' : 'none';
+    }
+
+    function setMode(m) {
+        activeMode = m;
+        try { localStorage.setItem('nx-pp-mode', m); } catch (e) {}
+        applyAll();
+    }
+
+    modeButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () { setMode(btn.getAttribute('data-mode')); });
+    });
+
+    try {
+        var saved = localStorage.getItem('nx-pp-mode');
+        if (saved === 'excel' || saved === 'api' || saved === 'dashboard') activeMode = saved;
+    } catch (e) {}
+
+    try {
+        var tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+        if (tz !== 'Asia/Kolkata' && tz !== 'Asia/Calcutta') activeCurrency = 'usd';
+    } catch (e) {}
+
+    applyAll();
+
+    if (typeof fetch === 'function') {
+        fetch('https://ipwho.is/', { cache: 'no-store', credentials: 'omit' })
+            .then(function (r) { return r.ok ? r.json() : null; })
+            .then(function (d) {
+                if (!d || d.success === false) return;
+                var next = (d.country_code || '').toUpperCase() === 'IN' ? 'inr' : 'usd';
+                if (next !== activeCurrency) { activeCurrency = next; applyAll(); }
+            })
+            .catch(function () {});
+    }
+})();
+</script>

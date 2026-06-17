@@ -375,7 +375,7 @@
           "price": "20.00",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
-          "url": "{{ site.canonical_url }}/scrava-pricing/"
+          "url": "{{ site.canonical_url }}/pricing/"
         },
         {
           "@type": "Offer",
@@ -383,7 +383,7 @@
           "price": "60.00",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
-          "url": "{{ site.canonical_url }}/scrava-pricing/"
+          "url": "{{ site.canonical_url }}/pricing/"
         },
         {
           "@type": "Offer",
@@ -391,7 +391,7 @@
           "price": "120.00",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
-          "url": "{{ site.canonical_url }}/scrava-pricing/"
+          "url": "{{ site.canonical_url }}/pricing/"
         }
       ],
       "description": "Amazon ASIN scraping API with dashboard. Processed 2.3M+ ASINs with 99.7% success rate. Handles CAPTCHAs, rotating proxies, Dog page errors automatically.",
@@ -1156,11 +1156,11 @@
         body.scrava-subnav-header-mode main section[id].scroll-mt-32 {
             scroll-margin-top: 4.5rem !important;
         }
-        body.scrava-subnav-header-mode .scrava-pricing-compare thead th.scrava-plan-th {
+        body.scrava-subnav-header-mode .pricing-compare thead th.scrava-plan-th {
             top: 3.25rem !important;
         }
         @media (max-width: 767px) {
-            body.scrava-subnav-header-mode .scrava-pricing-compare thead th.scrava-plan-th {
+            body.scrava-subnav-header-mode .pricing-compare thead th.scrava-plan-th {
                 top: 3rem !important;
             }
         }
@@ -1305,17 +1305,6 @@
     {% unless page.minimal %}
     <!-- Floating Action Buttons -->
     <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
-        <!-- WhatsApp Button -->
-        <a href="https://wa.me/{{ site.whatsapp_number }}?text=Hello%20Nextract,%20I%20would%20like%20to%20know%20more%20about%20your%20services" 
-           target="_blank" 
-           class="w-14 h-14 bg-[#25D366] text-white flex items-center justify-center shadow-lg hover:shadow-xl transition-all transform hover:scale-110 group"
-           aria-label="Chat on WhatsApp">
-            <i class="ri-whatsapp-line text-2xl"></i>
-            <span class="absolute right-full mr-3 px-3 py-1.5 bg-gray-900 text-white text-sm font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                Chat on WhatsApp
-            </span>
-        </a>
-        
         <!-- Chat Button -->
         <button id="chat-button" 
                 class="w-14 h-14 bg-blue-600 text-white flex items-center justify-center shadow-lg hover:shadow-xl transition-all transform hover:scale-110 group"

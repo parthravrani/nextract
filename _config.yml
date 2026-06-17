@@ -1,5 +1,5 @@
 # Welcome to Jekyll!
-# Nextract - Enterprise Web Scraping & Data Extraction Services
+# Nextract - Commerce Intelligence Platform
 
 # Site settings
 title: "Nextract"
@@ -7,9 +7,7 @@ name: "Nextract"
 short_name: "Nextract"
 email: "hello@nextract.dev"
 description: >-
-  Nextract - A Modern Data Solutions Company providing Professional web scraping and data extraction services. 
-  Get clean, reliable data for price intelligence, lead generation, and market research.
-  Turn web data into actionable business intelligence.
+  Nextract is a commerce intelligence platform. Track prices, stock, rankings, and competitor activity across Amazon, Flipkart, Blinkit, Zepto, and 30+ marketplaces — via dashboard, API, or Excel. First month free.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://nextract.dev" # the base hostname & protocol for your site
 

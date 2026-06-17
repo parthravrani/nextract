@@ -1,158 +1,87 @@
 ---
 layout: default
-title: "Web Scraping Service for Any Website"
-description: "Professional web scraping service for Amazon, LinkedIn, Zillow, and any website. Custom data extraction solutions built for your business needs."
-keywords: "web scraping service, web scraper service, website scraping service, data scraping service, professional web scraping, web scraping company, web scraping solutions, custom web scraping service, managed web scraping, scraping service provider"
-og_description: "Web scraping service for any website. Professional custom data extraction solutions for Amazon, LinkedIn, Zillow, and more."
-twitter_description: "Professional web scraping service. Custom data extraction from Amazon, LinkedIn, Yelp, Zillow, and any website."
+title: "E-commerce Data Scrapers — Nextract"
+description: "Managed e-commerce scrapers for Amazon, Flipkart, Zepto, Blinkit and 30+ platforms. Get structured product data without building or maintaining your own scrapers."
+keywords: "ecommerce scrapers, product data scraper, Amazon scraper, Flipkart scraper, managed scrapers, web scraper API, data extraction"
+permalink: /scrapers/
+og_title: "E-commerce Data Scrapers — Nextract"
+og_description: "Managed scraper infrastructure for 30+ platforms. You get clean structured data — we handle the scrapers."
 ---
 
-<main>
-    <!-- Hero Section -->
-    <section class="min-h-[80vh] flex items-center justify-center relative overflow-hidden bg-white">
-        <div class="absolute inset-0 overflow-hidden">
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 blur-[100px] animate-pulse"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-600/10 blur-[100px] animate-pulse" style="animation-delay: 1s;"></div>
-        </div>
-        
-        <div class="container mx-auto px-6 max-w-7xl relative z-10">
-            <div class="max-w-5xl mx-auto text-center">
-                <div class="text-sm font-bold text-orange-600 uppercase tracking-widest mb-6">Web Scraping Services</div>
-                <h1 class="text-6xl md:text-8xl font-black text-gray-900 mb-8 leading-[0.9] tracking-tight">
-                    Custom Scraping<br/>
-                    <span class="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">For Any Platform</span>
-                </h1>
-                <p class="text-2xl md:text-3xl text-gray-600 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
-                    We build custom scrapers for the platforms that matter to you.<br/>
-                    <span class="font-semibold text-gray-900">Tailored solutions, reliable delivery.</span>
-                </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-                    <a href="/contact/" class="group relative px-10 py-5 bg-gray-900 text-white font-bold text-lg overflow-hidden">
-                        <span class="relative z-10 flex items-center gap-2">
-                            Request Consultation
-                            <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
-                        </span>
-                        <div class="absolute inset-0 bg-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-                    </a>
-                    <a href="/contact/" class="px-10 py-5 border-2 border-gray-900 text-gray-900 font-bold text-lg hover:bg-gray-900 hover:text-white transition-all">
-                        Request Sample Data
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+{% include sol-styles.html %}
 
-    <!-- Platforms We Scrape -->
-    <section class="py-32 bg-white">
-        <div class="container mx-auto px-6 max-w-7xl">
-            <div class="mb-20">
-                <div class="text-sm font-bold text-orange-600 uppercase tracking-widest mb-4">Platforms We Extract From</div>
-                <h2 class="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-tight">Every Platform<br/>Handled Differently</h2>
-                <p class="text-xl text-gray-600 max-w-3xl">Each platform requires specialized techniques. We build custom scrapers that handle anti-bot measures, authentication, and data structures unique to each site.</p>
+<!-- HERO -->
+<section style="background:radial-gradient(ellipse at 80% 10%, rgba(249,115,22,0.18) 0%, transparent 55%),#111113;color:#fff;padding:7rem 0 5rem;position:relative;">
+    <div class="nx-wrap" style="position:relative;z-index:1;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#52525b;margin-bottom:1.25rem;">Nextract / Scrapers</div>
+        <h1 style="font-size:clamp(2.2rem,4.5vw,3.5rem);font-weight:900;line-height:1.1;letter-spacing:-0.03em;max-width:720px;margin-bottom:1.25rem;">
+            Commerce data scrapers —<br/>
+            <span style="background:linear-gradient(135deg,#f97316,#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">managed, so you don't have to.</span>
+        </h1>
+        <p style="font-size:1.05rem;color:#d4d4d8;max-width:600px;line-height:1.8;margin-bottom:2.5rem;">
+            Building and maintaining scrapers for e-commerce platforms is a full-time job. Nextract is managed scraping infrastructure — you get structured, clean data from 30+ marketplaces via API or Dashboard, without writing a single scraper.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem;">
+            <a href="https://app.getnextract.com/register" class="btn-dk-primary">Start free — first month included <i class="ri-arrow-right-line"></i></a>
+            <a href="{{ '/apis/' | relative_url }}" class="btn-dk-ghost">View API docs →</a>
+        </div>
+        <p style="font-size:11.5px;color:#52525b;">5,000 credits free your first month · No card required</p>
+    </div>
+</section>
+
+<!-- WHY MANAGED -->
+<section style="background:#fff;padding:5rem 0;">
+    <div class="nx-wrap">
+        <div class="nx-label">DIY scrapers vs Nextract</div>
+        <h2 class="nx-h2" style="max-width:480px;margin-bottom:2.5rem;">Stop building scrapers. Start using data.</h2>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+            <div style="padding:2rem;border:1px solid #fca5a5;border-radius:12px;background:#fff5f5;">
+                <div style="font-size:10px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:#ef4444;margin-bottom:1.25rem;">DIY scrapers</div>
+                {% assign pains = "Breaks every time a platform updates~IP bans and rate limiting headaches~Parser maintenance is a full-time role~No reliability or freshness guarantees~Schema inconsistencies across platforms~You pay for infra even when nothing's running" | split: "~" %}
+                {% for pain in pains %}
+                <div style="display:flex;align-items:flex-start;gap:0.6rem;font-size:0.86rem;color:#7f1d1d;margin-bottom:0.6rem;line-height:1.5;">
+                    <i class="ri-close-line" style="color:#ef4444;font-size:1rem;flex-shrink:0;margin-top:0.05rem;"></i>
+                    {{ pain }}
+                </div>
+                {% endfor %}
             </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {% assign scrapers = site.scrapers | sort: 'order' %}
-                {% for scraper in scrapers %}
-                <a href="{{ scraper.url | relative_url }}" class="group p-10 border border-gray-200 hover:border-orange-600 transition-all bg-white hover:bg-gray-50 block no-underline">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4 no-underline">{{ scraper.title | remove: 'Nextract | ' }}</h3>
-                    <p class="text-gray-600 leading-relaxed text-lg mb-6">{{ scraper.description }}</p>
-                    <div class="flex items-center gap-2 text-orange-600 font-semibold group-hover:gap-4 transition-all">
-                        <span>Learn More</span>
-                        <i class="ri-arrow-right-line"></i>
-                    </div>
-                </a>
+            <div style="padding:2rem;border:1px solid rgba(59,130,246,0.3);border-radius:12px;background:rgba(59,130,246,0.03);">
+                <div style="font-size:10px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:#3b82f6;margin-bottom:1.25rem;">Nextract managed</div>
+                {% assign wins = "Auto-adapts when platforms change~Built-in rate limiting and IP rotation~Zero maintenance on your side~Freshness SLAs with alerts~Consistent schema across all platforms~Pay only for what you extract" | split: "~" %}
+                {% for win in wins %}
+                <div style="display:flex;align-items:flex-start;gap:0.6rem;font-size:0.86rem;color:#1e3a5f;margin-bottom:0.6rem;line-height:1.5;">
+                    <i class="ri-check-line" style="color:#3b82f6;font-size:1rem;flex-shrink:0;margin-top:0.05rem;"></i>
+                    {{ win }}
+                </div>
                 {% endfor %}
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- What We Build -->
-    <section class="py-32 bg-gray-50">
-        <div class="container mx-auto px-6 max-w-7xl">
-            <div class="mb-20">
-                <div class="text-sm font-bold text-orange-600 uppercase tracking-widest mb-4">What We Build</div>
-                <h2 class="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-tight">Custom Scraping<br/>Solutions</h2>
-                <p class="text-xl text-gray-600 max-w-3xl">Generic scrapers break easily. We build custom solutions designed specifically for your target platforms and data requirements.</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="p-10 border-2 border-orange-600 bg-white">
-                    <div class="text-4xl font-black text-orange-600 mb-6">01</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">One-Time Extraction</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">Need data right now? We extract exactly what you need from your target platforms and deliver it clean and structured for your systems.</p>
-                    <ul class="space-y-2 text-gray-700">
-                        <li class="flex items-start gap-2">
-                            <span class="text-orange-600 font-black">→</span>
-                            <span>Custom data extraction</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-orange-600 font-black">→</span>
-                            <span>CSV, JSON, or database delivery</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-orange-600 font-black">→</span>
-                            <span>Clean, validated data</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="p-10 border-2 border-blue-600 bg-white">
-                    <div class="text-4xl font-black text-blue-600 mb-6">02</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Ongoing Monitoring</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">Need continuous data? We set up automated scraping that runs on your schedule with 24/7 monitoring and maintenance.</p>
-                    <ul class="space-y-2 text-gray-700">
-                        <li class="flex items-start gap-2">
-                            <span class="text-blue-600 font-black">→</span>
-                            <span>Scheduled automated scraping</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-blue-600 font-black">→</span>
-                            <span>Real-time data delivery</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-blue-600 font-black">→</span>
-                            <span>Automatic updates & fixes</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+<!-- PLATFORMS -->
+<section style="background:#fafafa;padding:4rem 0;border-top:1px solid #e4e4e7;">
+    <div class="nx-wrap">
+        <div class="nx-label">Platforms covered</div>
+        <h2 class="nx-h2" style="max-width:480px;margin-bottom:1.75rem;">30+ marketplaces, one API.</h2>
+        <div style="display:flex;flex-wrap:wrap;gap:0.75rem;">
+            {% assign platforms = "Amazon~Flipkart~eBay~Walmart~Etsy~Blinkit~Zepto~Swiggy Instamart~BigBasket~JioMart~Myntra~Nykaa~Meesho~Croma~Doordash~UberEats~Swiggy~Zomato" | split: "~" %}
+            {% for p in platforms %}
+            <span style="padding:0.45rem 1rem;background:#fff;border:1px solid #e4e4e7;border-radius:999px;font-size:0.83rem;color:#3f3f46;font-weight:600;">{{ p }}</span>
+            {% endfor %}
+            <span style="padding:0.45rem 1rem;background:#f3f4f6;border:1px solid #e4e4e7;border-radius:999px;font-size:0.83rem;color:#6b7280;font-style:italic;">+ more on request</span>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- How It Works -->
-    <section class="py-32 bg-white">
-        <div class="container mx-auto px-6 max-w-7xl">
-            <div class="mb-20">
-                <div class="text-sm font-bold text-orange-600 uppercase tracking-widest mb-4">Process</div>
-                <h2 class="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-tight">How We Build<br/>Your Scraper</h2>
-            </div>
-            
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="p-8 border-l-4 border-orange-600">
-                    <div class="text-4xl font-black text-orange-600 mb-4">01</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Understand Needs</h3>
-                    <p class="text-gray-600">We understand what data you need and from which platforms</p>
-                </div>
-                <div class="p-8 border-l-4 border-blue-600">
-                    <div class="text-4xl font-black text-blue-600 mb-4">02</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Sample Data</h3>
-                    <p class="text-gray-600">We deliver sample data within 48-72 hours to validate quality</p>
-                </div>
-                <div class="p-8 border-l-4 border-orange-600">
-                    <div class="text-4xl font-black text-orange-600 mb-4">03</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Build Solution</h3>
-                    <p class="text-gray-600">We build your custom scraper with monitoring and error handling</p>
-                </div>
-                <div class="p-8 border-l-4 border-blue-600">
-                    <div class="text-4xl font-black text-blue-600 mb-4">04</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Deliver Data</h3>
-                    <p class="text-gray-600">Reliable data delivery with ongoing maintenance and support</p>
-                </div>
-            </div>
+<!-- CTA -->
+<section style="background:#111113;padding:5rem 0;">
+    <div class="nx-wrap" style="text-align:center;">
+        <h2 style="font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;letter-spacing:-0.03em;color:#f4f4f5;margin-bottom:1rem;">Get data, not scrapers.</h2>
+        <p style="color:#71717a;font-size:0.95rem;margin-bottom:2rem;max-width:420px;margin-left:auto;margin-right:auto;line-height:1.7;">5,000 credits free your first month. API included.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;">
+            <a href="https://app.getnextract.com/register" class="btn-dk-primary">Start free <i class="ri-arrow-right-line"></i></a>
+            <a href="{{ '/enterprise/' | relative_url }}" class="btn-dk-ghost">Custom scraping projects</a>
         </div>
-    </section>
-
-    <!-- CTA Section -->
-    {% include contact-section.html %}
-</main>
+    </div>
+</section>

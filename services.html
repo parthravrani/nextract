@@ -1,77 +1,89 @@
 ---
 layout: default
-title: "Web Scraping Services by Industry"
-description: "Industry-specific web scraping services: e-commerce, restaurant, hotel, real estate, finance, healthcare, and more. Custom data extraction solutions for every business need. Professional web scraping services tailored to your industry."
-keywords: "web scraping services, data scraping services, e-commerce scraping, restaurant data scraping, hotel scraping, real estate scraping, finance scraping, healthcare scraping, custom data extraction, industry-specific scraping, business data extraction, professional scraping services, custom web scraping, enterprise data services, industry data solutions, specialized scraping, tailored data extraction, business intelligence services, market research data, competitive intelligence services"
-og_description: "Industry-specific web scraping services. Extract data from e-commerce, restaurants, hotels, real estate, finance, and more. Custom solutions for your business. Professional data extraction services."
-twitter_description: "Web scraping services for every industry. E-commerce, restaurant, hotel, real estate, finance, healthcare. Custom solutions available. Professional data extraction services."
+title: "Commerce Data Services — Nextract"
+description: "Nextract provides commerce data services for brands, D2C sellers, and FMCG teams. Price tracking, catalogue monitoring, competitor analysis — via SaaS platform or enterprise contract."
+keywords: "commerce data services, ecommerce data service, product data services, price tracking service, competitor monitoring service"
+permalink: /services/
+og_title: "Commerce Data Services — Nextract"
+og_description: "Price tracking, catalogue monitoring, and competitor intelligence for e-commerce teams. SaaS platform or custom enterprise."
 ---
 
-<main>
-    <!-- Hero Section -->
-    <section class="min-h-[80vh] flex items-center justify-center relative overflow-hidden bg-white">
-        <div class="absolute inset-0 overflow-hidden">
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 blur-[100px] animate-pulse"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-600/10 blur-[100px] animate-pulse" style="animation-delay: 1s;"></div>
+{% include sol-styles.html %}
+
+<!-- HERO -->
+<section style="background:radial-gradient(ellipse at 80% 10%, rgba(59,130,246,0.18) 0%, transparent 55%),#111113;color:#fff;padding:7rem 0 5rem;position:relative;">
+    <div class="nx-wrap" style="position:relative;z-index:1;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#52525b;margin-bottom:1.25rem;">Nextract / Services</div>
+        <h1 style="font-size:clamp(2.2rem,4.5vw,3.5rem);font-weight:900;line-height:1.1;letter-spacing:-0.03em;max-width:720px;margin-bottom:1.25rem;">
+            Commerce data services —<br/>
+            <span style="background:linear-gradient(135deg,#3b82f6,#f97316);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">platform or custom.</span>
+        </h1>
+        <p style="font-size:1.05rem;color:#d4d4d8;max-width:600px;line-height:1.8;margin-bottom:2.5rem;">
+            Nextract delivers structured commerce data across 30+ marketplaces. Use the self-serve SaaS platform for price tracking, catalogue monitoring, and share of search — or work with us on a custom enterprise data contract.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem;">
+            <a href="https://app.getnextract.com/register" class="btn-dk-primary">Start free — first month included <i class="ri-arrow-right-line"></i></a>
+            <a href="{{ '/enterprise/' | relative_url }}" class="btn-dk-ghost">Enterprise solutions →</a>
         </div>
-        
-        <div class="container mx-auto px-6 max-w-7xl relative z-10">
-            <div class="max-w-5xl mx-auto text-center">
-                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-6">Services</div>
-                <h1 class="text-6xl md:text-8xl font-black text-gray-900 mb-8 leading-[0.9] tracking-tight">
-                    Industry-Specific<br/>
-                    <span class="bg-gradient-to-r from-blue-600 to-orange-600 bg-clip-text text-transparent">Scraping Services</span>
-                </h1>
-                <p class="text-2xl md:text-3xl text-gray-600 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
-                    Tailored data extraction solutions for every industry.<br/>
-                    <span class="font-semibold text-gray-900">From e-commerce to healthcare, we've got you covered.</span>
-                </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-                    <a href="/contact/" class="group relative px-10 py-5 bg-gray-900 text-white font-bold text-lg overflow-hidden">
-                        <span class="relative z-10 flex items-center gap-2">
-                            Get Custom Quote
-                            <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
-                        </span>
-                        <div class="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-                    </a>
-                    <a href="/solutions/" class="px-10 py-5 border-2 border-gray-900 text-gray-900 font-bold text-lg hover:bg-gray-900 hover:text-white transition-all">
-                        View Solutions
-                    </a>
-                    <a href="{{ '/assets/deck/Nextract - Pitch Deck.pdf' | relative_url }}" download="Nextract-Pitch-Deck.pdf" class="px-10 py-5 border-2 border-gray-900 text-gray-900 font-bold text-lg hover:bg-gray-900 hover:text-white transition-all inline-flex items-center gap-2">
-                        <i class="ri-download-line"></i>
-                        Pitch Deck
-                    </a>
-                </div>
+        <p style="font-size:11.5px;color:#52525b;">5,000 credits free your first month · No card required</p>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section style="background:#fff;padding:5rem 0;">
+    <div class="nx-wrap">
+        <div class="nx-label">What Nextract covers</div>
+        <h2 class="nx-h2" style="max-width:480px;margin-bottom:2.5rem;">Four core data services. One platform.</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.25rem;">
+            <div style="padding:1.5rem;border:1px solid #e4e4e7;border-radius:10px;">
+                <i class="ri-price-tag-3-line" style="font-size:1.4rem;color:#3b82f6;margin-bottom:0.75rem;display:block;"></i>
+                <div style="font-weight:700;margin-bottom:0.4rem;">Price Intelligence</div>
+                <div style="font-size:0.85rem;color:#71717a;line-height:1.6;">Track competitor prices and your own across Amazon, Flipkart, Zepto, Blinkit, and 25+ more. Get alerted on changes instantly.</div>
+                <a href="{{ '/buy-box-monitoring/' | relative_url }}" style="font-size:0.8rem;font-weight:700;color:#3b82f6;text-decoration:none;display:inline-flex;align-items:center;gap:0.3rem;margin-top:0.75rem;">Learn more <i class="ri-arrow-right-line"></i></a>
+            </div>
+            <div style="padding:1.5rem;border:1px solid #e4e4e7;border-radius:10px;">
+                <i class="ri-store-line" style="font-size:1.4rem;color:#f97316;margin-bottom:0.75rem;display:block;"></i>
+                <div style="font-weight:700;margin-bottom:0.4rem;">Catalogue Monitoring</div>
+                <div style="font-size:0.85rem;color:#71717a;line-height:1.6;">Monitor product listing quality, image changes, description edits, and category shifts across all your platforms.</div>
+                <a href="{{ '/catalogue-monitoring/' | relative_url }}" style="font-size:0.8rem;font-weight:700;color:#3b82f6;text-decoration:none;display:inline-flex;align-items:center;gap:0.3rem;margin-top:0.75rem;">Learn more <i class="ri-arrow-right-line"></i></a>
+            </div>
+            <div style="padding:1.5rem;border:1px solid #e4e4e7;border-radius:10px;">
+                <i class="ri-search-line" style="font-size:1.4rem;color:#8b5cf6;margin-bottom:0.75rem;display:block;"></i>
+                <div style="font-weight:700;margin-bottom:0.4rem;">Share of Search</div>
+                <div style="font-size:0.85rem;color:#71717a;line-height:1.6;">See exactly how much of the search results your brand owns — and where competitors are gaining ground.</div>
+                <a href="{{ '/share-of-search/' | relative_url }}" style="font-size:0.8rem;font-weight:700;color:#3b82f6;text-decoration:none;display:inline-flex;align-items:center;gap:0.3rem;margin-top:0.75rem;">Learn more <i class="ri-arrow-right-line"></i></a>
+            </div>
+            <div style="padding:1.5rem;border:1px solid #e4e4e7;border-radius:10px;">
+                <i class="ri-flashlight-line" style="font-size:1.4rem;color:#22c55e;margin-bottom:0.75rem;display:block;"></i>
+                <div style="font-weight:700;margin-bottom:0.4rem;">FMCG Digital Shelf</div>
+                <div style="font-size:0.85rem;color:#71717a;line-height:1.6;">Pincode-level availability, delivery ETAs, and dark store coverage for quick commerce platforms.</div>
+                <a href="{{ '/fmcg-digital-shelf/' | relative_url }}" style="font-size:0.8rem;font-weight:700;color:#3b82f6;text-decoration:none;display:inline-flex;align-items:center;gap:0.3rem;margin-top:0.75rem;">Learn more <i class="ri-arrow-right-line"></i></a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Services Grid -->
-    <section class="py-32 bg-white">
-        <div class="container mx-auto px-6 max-w-7xl">
-            <div class="mb-20">
-                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Our Services</div>
-                <h2 class="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-tight">Comprehensive<br/></h2>
-                <p class="text-xl text-gray-600 max-w-3xl">Specialized scraping services designed for your industry's unique data needs.</p>
+<!-- ENTERPRISE NOTE -->
+<section style="background:#111113;padding:3.5rem 0;">
+    <div class="nx-wrap">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:2rem;">
+            <div>
+                <div style="font-size:10px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:#52525b;margin-bottom:0.5rem;">Custom requirements?</div>
+                <div style="font-size:1.05rem;font-weight:700;color:#f4f4f5;max-width:480px;line-height:1.5;">Need custom schemas, managed delivery, or a specific platform not in the standard coverage? Enterprise contracts are available.</div>
             </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {% assign services = site.services | sort: 'order' %}
-                {% for service in services %}
-                <a href="{{ service.url | relative_url }}" class="group p-10 border border-gray-200 hover:border-blue-600 transition-all bg-white hover:bg-gray-50 block no-underline">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4 no-underline">{{ service.title | remove: 'Nextract | ' }}</h3>
-                    <p class="text-gray-600 leading-relaxed text-lg mb-6">{{ service.description }}</p>
-                    <div class="flex items-center gap-2 text-blue-600 font-semibold group-hover:gap-4 transition-all">
-                        <span>Learn More</span>
-                        <i class="ri-arrow-right-line"></i>
-                    </div>
-                </a>
-                {% endfor %}
-            </div>
+            <a href="{{ '/enterprise/' | relative_url }}" class="btn-dk-primary" style="flex-shrink:0;">Enterprise solutions <i class="ri-arrow-right-line"></i></a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- CTA Section -->
-    {% include contact-section.html %}
-</main>
-
+<!-- CTA -->
+<section style="background:#fafafa;padding:5rem 0;border-top:1px solid #e4e4e7;">
+    <div class="nx-wrap" style="text-align:center;">
+        <h2 style="font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:900;letter-spacing:-0.03em;color:#18181b;margin-bottom:1rem;">Start with the platform.</h2>
+        <p style="color:#71717a;font-size:0.95rem;margin-bottom:2rem;max-width:400px;margin-left:auto;margin-right:auto;line-height:1.7;">5,000 credits free your first month. No card required.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;">
+            <a href="https://app.getnextract.com/register" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.9rem 2rem;background:#18181b;color:#fff;font-weight:700;font-size:0.95rem;border-radius:6px;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='#3b82f6'" onmouseout="this.style.background='#18181b'">Start free <i class="ri-arrow-right-line"></i></a>
+            <a href="{{ '/pricing/' | relative_url }}" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.9rem 2rem;background:#fff;color:#18181b;border:1.5px solid #e4e4e7;font-weight:700;font-size:0.95rem;border-radius:6px;text-decoration:none;">View pricing</a>
+        </div>
+    </div>
+</section>

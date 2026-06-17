@@ -1,663 +1,352 @@
-<header id="main-header" class="bg-white border-b border-gray-100 shadow-sm sticky z-40 backdrop-blur-sm bg-white/95" style="top: {% if site.show_offers %}40px{% else %}0{% endif %};">
-    <div class="container mx-auto px-4 lg:px-6 max-w-7xl">
-        
-        <!-- Main Navbar -->
-        <div class="flex items-center justify-between h-20">
-            
-            <!-- Logo -->
-            <div class="flex-shrink-0">
-                <a href="{{ '/' | relative_url }}" class="flex items-center gap-3 cursor-pointer group">
-                    <div class="relative">
-                        <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Nextract Logo" class="h-10 w-auto transition-transform group-hover:scale-105">
+<style>
+/* ── NAV BASE ──────────────────────────────────── */
+#nx-nav {
+    position: sticky;
+    top: {% if site.show_offers %}40px{% else %}0{% endif %};
+    z-index: 100;
+    background: #ffffff;
+    border-bottom: 1px solid #e4e4e7;
+}
+.nx-nav-inner {
+    max-width: 1280px; margin: 0 auto; padding: 0 1.5rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px; gap: 2rem;
+}
+
+/* ── LOGO ─────────────────────────────────────── */
+.nx-logo {
+    display: inline-flex; align-items: center; gap: 10px;
+    text-decoration: none; flex-shrink: 0;
+}
+.nx-logo img { height: 28px; width: auto; }
+.nx-logo-txt {
+    font-size: 1.1rem; font-weight: 900; color: #09090b;
+    letter-spacing: -0.03em; line-height: 1;
+}
+
+/* ── DESKTOP NAV ──────────────────────────────── */
+.nx-nav-links {
+    display: flex; align-items: center; gap: 0.25rem;
+    flex: 1; justify-content: center;
+}
+@media(max-width:1024px){ .nx-nav-links { display: none; } }
+
+.nx-nav-item { position: relative; }
+.nx-nav-btn {
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 0.45rem 0.8rem;
+    font-size: 13px; font-weight: 700;
+    color: #52525b;
+    background: transparent; border: none; cursor: pointer;
+    letter-spacing: 0.01em;
+    transition: color 0.15s;
+    white-space: nowrap;
+    text-decoration: none;
+}
+.nx-nav-btn:hover, .nx-nav-item:hover > .nx-nav-btn { color: #09090b; }
+.nx-nav-btn .nx-chevron { font-size: 12px; transition: transform 0.2s; }
+.nx-nav-item:hover .nx-chevron { transform: rotate(180deg); }
+
+/* ── DROPDOWNS ────────────────────────────────── */
+.nx-drop {
+    position: absolute; top: 100%; left: 50%;
+    background: #ffffff; border: 1px solid #e4e4e7;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+    padding: 0.5rem;
+    padding-top: calc(0.5rem + 10px);
+    margin-top: -10px;
+    min-width: 200px; width: max-content;
+    opacity: 0; visibility: hidden; pointer-events: none;
+    transform: translateX(-50%) translateY(-6px);
+    transition: opacity 0.18s, visibility 0.18s, transform 0.18s;
+}
+.nx-drop.wide { min-width: 680px; }
+.nx-drop.xl   { min-width: 820px; }
+.nx-nav-item:hover .nx-drop {
+    opacity: 1; visibility: visible; pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+/* Mega menu: clamp so it never overflows the viewport */
+#nx-solutions-drop {
+    max-width: min(820px, calc(100vw - 2rem));
+}
+.nx-drop-link {
+    display: flex; align-items: flex-start; gap: 10px;
+    padding: 0.6rem 0.75rem;
+    text-decoration: none; border-radius: 2px;
+    transition: background 0.15s;
+}
+.nx-drop-link:hover { background: #f4f4f5; }
+.nx-drop-link .nx-di {
+    width: 28px; height: 28px; border-radius: 6px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px;
+}
+.nx-drop-link .nx-dt { display: block; font-size: 12.5px; font-weight: 700; color: #09090b; line-height: 1.2; }
+.nx-drop-link .nx-ds { display: block; font-size: 11px; color: #71717a; margin-top: 2px; line-height: 1.4; }
+.nx-drop-divider { border: none; border-top: 1px solid #e4e4e7; margin: 0.35rem 0.5rem; }
+.nx-drop-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+.nx-drop-grid3 { display: grid; grid-template-columns: 1.1fr 1fr 1fr; gap: 0; }
+.nx-drop-col { padding: 0.25rem; }
+.nx-drop-col-head { font-size: 9.5px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: #a1a1aa; padding: 0.5rem 0.75rem 0.25rem; }
+.nx-drop-flat {
+    display: flex; align-items: center; gap: 6px;
+    padding: 0.42rem 0.75rem; font-size: 12.5px; font-weight: 600;
+    color: #52525b; text-decoration: none; border-radius: 2px;
+    transition: background 0.15s, color 0.15s;
+}
+.nx-drop-flat:hover { background: #f4f4f5; color: #09090b; }
+.nx-drop-flat .dot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
+/* Enterprise link in nav */
+.nx-ent-link {
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 0.45rem 0.8rem;
+    font-size: 13px; font-weight: 700;
+    color: #b45309;
+    background: transparent; border: none;
+    text-decoration: none;
+    transition: color 0.15s;
+    white-space: nowrap;
+}
+.nx-ent-link:hover { color: #92400e; text-decoration: none; }
+
+/* ── RIGHT ACTIONS ────────────────────────────── */
+.nx-actions {
+    display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0;
+}
+@media(max-width:1024px){ .nx-actions { display: none; } }
+.nx-login {
+    padding: 0.45rem 0.9rem;
+    font-size: 13px; font-weight: 700;
+    color: #71717a;
+    text-decoration: none; transition: color 0.15s;
+}
+.nx-login:hover { color: #09090b; }
+.nx-cta {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 0.5rem 1.1rem;
+    background: #09090b; color: #f4f4f5;
+    font-size: 13px; font-weight: 800;
+    border-radius: 6px;
+    transition: background 0.2s, transform 0.2s;
+    text-decoration: none;
+}
+.nx-cta:hover { background: #27272a; transform: translateY(-1px); color: #f4f4f5; text-decoration: none; }
+.nx-cta span, .nx-cta i { position: relative; z-index: 1; }
+
+/* ── MOBILE TOGGLE ────────────────────────────── */
+.nx-mob-btn {
+    display: none; align-items: center; justify-content: center;
+    width: 38px; height: 38px;
+    background: #f4f4f5; border: 1px solid #e4e4e7;
+    cursor: pointer; color: #09090b; font-size: 18px;
+    transition: background 0.15s;
+}
+.nx-mob-btn:hover { background: #e4e4e7; }
+@media(max-width:1024px){ .nx-mob-btn { display: flex; } }
+
+/* ── MOBILE MENU ──────────────────────────────── */
+#nx-mob {
+    display: none;
+    background: #ffffff;
+    border-top: 1px solid #e4e4e7;
+    padding: 1rem 1.5rem 1.5rem;
+}
+#nx-mob.open { display: block; }
+.nx-mob-section { margin-bottom: 1.25rem; }
+.nx-mob-head { font-size: 9.5px; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: #a1a1aa; margin-bottom: 0.4rem; padding: 0 0.25rem; }
+.nx-mob-link {
+    display: flex; align-items: center; gap: 8px;
+    padding: 0.55rem 0.5rem; font-size: 13.5px; font-weight: 600;
+    color: #52525b; text-decoration: none;
+    border-bottom: 1px solid #f4f4f5;
+    transition: color 0.15s;
+}
+.nx-mob-link:hover { color: #09090b; }
+.nx-mob-actions { display: flex; flex-direction: column; gap: 0.5rem; padding-top: 1rem; border-top: 1px solid #e4e4e7; }
+.nx-mob-cta-sec {
+    padding: 0.75rem 1rem; text-align: center;
+    border: 1px solid #d4d4d8; color: #52525b;
+    font-size: 13.5px; font-weight: 700; text-decoration: none;
+    transition: border-color 0.15s, color 0.15s;
+}
+.nx-mob-cta-sec:hover { border-color: #09090b; color: #09090b; }
+.nx-mob-cta-pri {
+    padding: 0.75rem 1rem; text-align: center;
+    background: #09090b; color: #f4f4f5;
+    font-size: 13.5px; font-weight: 800; text-decoration: none;
+    transition: background 0.15s;
+}
+.nx-mob-cta-pri:hover { background: #3b82f6; color: white; }
+</style>
+
+<header id="nx-nav">
+    <div class="nx-nav-inner">
+
+        <!-- Logo -->
+        <a href="{{ '/' | relative_url }}" class="nx-logo">
+            <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Nextract" loading="eager">
+            <span class="nx-logo-txt">Nextract</span>
+        </a>
+        <!-- Desktop nav -->
+        <nav class="nx-nav-links" aria-label="Main navigation">
+
+            <!-- Solutions mega menu -->
+            <div class="nx-nav-item">
+                <button class="nx-nav-btn" type="button">
+                    Solutions <i class="ri-arrow-down-s-line nx-chevron"></i>
+                </button>
+                <div class="nx-drop xl nx-drop-grid3" id="nx-solutions-drop">
+                    <!-- Col 1: SaaS use cases -->
+                    <div class="nx-drop-col" style="border-right:1px solid #f0f0f0;">
+                        <div class="nx-drop-col-head">SaaS Platform</div>
+                        <a href="{{ '/buy-box-monitoring/' | relative_url }}" class="nx-drop-link">
+                            <span class="nx-di" style="background:rgba(59,130,246,0.1);color:#3b82f6;"><i class="ri-price-tag-3-line"></i></span>
+                            <span><span class="nx-dt">Price Intelligence</span><span class="nx-ds">Buy Box, competitor prices, alerts</span></span>
+                        </a>
+                        <a href="{{ '/catalogue-monitoring/' | relative_url }}" class="nx-drop-link">
+                            <span class="nx-di" style="background:rgba(249,115,22,0.1);color:#f97316;"><i class="ri-store-line"></i></span>
+                            <span><span class="nx-dt">Catalogue Monitoring</span><span class="nx-ds">Listings, ratings, content changes</span></span>
+                        </a>
+                        <a href="{{ '/share-of-search/' | relative_url }}" class="nx-drop-link">
+                            <span class="nx-di" style="background:rgba(139,92,246,0.1);color:#8b5cf6;"><i class="ri-search-line"></i></span>
+                            <span><span class="nx-dt">Share of Search</span><span class="nx-ds">Keyword rankings, brand visibility</span></span>
+                        </a>
+                        <a href="{{ '/fmcg-digital-shelf/' | relative_url }}" class="nx-drop-link">
+                            <span class="nx-di" style="background:rgba(34,197,94,0.1);color:#22c55e;"><i class="ri-flashlight-line"></i></span>
+                            <span><span class="nx-dt">FMCG Digital Shelf</span><span class="nx-ds">PIN-level quick commerce data</span></span>
+                        </a>
+                        <hr class="nx-drop-divider">
+                        <a href="{{ '/solutions/' | relative_url }}" class="nx-drop-flat" style="color:#3b82f6;font-weight:700;font-size:11.5px;">All use cases <i class="ri-arrow-right-line" style="font-size:10px;"></i></a>
+                        <a href="{{ '/products/' | relative_url }}" class="nx-drop-flat" style="color:#52525b;font-size:11.5px;">Platform overview <i class="ri-arrow-right-line" style="font-size:10px;"></i></a>
                     </div>
-                    <div>
-                        <h3 class="text-xl font-black tracking-tight text-gray-900 group-hover:text-blue-600 transition-colors">
-                            Nextract
-                        </h3>
-                        <p class="text-[10px] font-bold text-gray-400 group-hover:text-blue-500 transition-colors uppercase tracking-widest -mt-1">
-                            A Data Solutions Company
-                        </p>
+                    <!-- Col 2: Platforms -->
+                    <div class="nx-drop-col" style="border-right:1px solid #f0f0f0;">
+                        <div class="nx-drop-col-head">Platforms</div>
+                        <a href="{{ '/amazon/' | relative_url }}" class="nx-drop-flat"><span class="dot" style="background:#f97316;"></span>Amazon</a>
+                        <a href="{{ '/flipkart/' | relative_url }}" class="nx-drop-flat"><span class="dot" style="background:#3b82f6;"></span>Flipkart</a>
+                        <a href="{{ '/blinkit/' | relative_url }}" class="nx-drop-flat"><span class="dot" style="background:#f59e0b;"></span>Blinkit</a>
+                        <a href="{{ '/zepto/' | relative_url }}" class="nx-drop-flat"><span class="dot" style="background:#8b5cf6;"></span>Zepto</a>
+                        <a href="{{ '/swiggy-instamart/' | relative_url }}" class="nx-drop-flat"><span class="dot" style="background:#ef4444;"></span>Swiggy Instamart</a>
+                        <a href="{{ '/bigbasket/' | relative_url }}" class="nx-drop-flat"><span class="dot" style="background:#22c55e;"></span>BigBasket</a>
+                        <a href="{{ '/walmart/' | relative_url }}" class="nx-drop-flat"><span class="dot" style="background:#1d4ed8;"></span>Walmart</a>
+                        <hr class="nx-drop-divider">
+                        <a href="{{ '/quick-commerce/' | relative_url }}" class="nx-drop-flat" style="color:#3b82f6;font-weight:700;font-size:11.5px;">All platforms <i class="ri-arrow-right-line" style="font-size:10px;"></i></a>
                     </div>
-                </a>
+                    <!-- Col 3: Data & Custom -->
+                    <div class="nx-drop-col">
+                        <div class="nx-drop-col-head">Data &amp; Custom</div>
+                        <a href="{{ '/intelligence/' | relative_url }}" class="nx-drop-flat"><span class="dot" style="background:#3b82f6;"></span>Commerce Intelligence</a>
+                        <a href="{{ '/datasets/' | relative_url }}" class="nx-drop-flat"><span class="dot" style="background:#8b5cf6;"></span>Datasets</a>
+                        <a href="{{ '/web-scraping-services/' | relative_url }}" class="nx-drop-flat"><span class="dot" style="background:#71717a;"></span>Web Scraping</a>
+                        <a href="{{ '/ai-training-data/' | relative_url }}" class="nx-drop-flat"><span class="dot" style="background:#22c55e;"></span>AI Training Data</a>
+                        <a href="{{ '/mobile-app-data-extraction/' | relative_url }}" class="nx-drop-flat"><span class="dot" style="background:#f97316;"></span>Mobile App Data</a>
+                        <hr class="nx-drop-divider">
+                        <a href="{{ '/enterprise/' | relative_url }}" class="nx-drop-flat" style="color:#b45309;font-weight:700;font-size:11.5px;"><i class="ri-building-line" style="font-size:12px;"></i> Enterprise solutions <i class="ri-arrow-right-line" style="font-size:10px;"></i></a>
+                    </div>
+                </div>
             </div>
 
-            <!-- Desktop Navigation -->
-            <nav class="hidden lg:flex items-center gap-2 flex-1 justify-center">
-                
-                <!-- Scrava + Pricing -->
-                <div class="nav-dropdown group relative">
-                    <button type="button" class="nav-link flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-gray-700 hover:text-orange-600 transition-all rounded-lg hover:bg-orange-50{% if page.url == '/scrava/' or page.url == '/scrava-pricing/' %} text-orange-600 bg-orange-50{% endif %}">
-                        Scrava
-                        <i class="ri-arrow-down-s-line text-base transition-transform"></i>
-                    </button>
-                    <div class="nav-dropdown-menu scrava-menu absolute top-full left-0 pt-1 bg-transparent z-50 pointer-events-none">
-                        <div class="bg-white rounded-xl shadow-xl border border-gray-100 pointer-events-auto py-2 min-w-[220px]">
-                            <a href="/scrava/" class="block px-4 py-2.5 mx-1 text-sm font-semibold text-gray-800 rounded-lg hover:bg-orange-50 hover:text-orange-700 transition-colors{% if page.url == '/scrava/' %} text-orange-600 bg-orange-50{% endif %}">Overview</a>
-                            <a href="/scrava-pricing/" class="block px-4 py-2.5 mx-1 text-sm font-semibold text-gray-800 rounded-lg hover:bg-orange-50 hover:text-orange-700 transition-colors{% if page.url == '/scrava-pricing/' %} text-orange-600 bg-orange-50{% endif %}">Pricing</a>
-                        </div>
-                    </div>
+            <!-- Pricing -->
+            <a href="{{ '/pricing/' | relative_url }}" class="nx-nav-btn">Pricing</a>
+
+            <!-- API -->
+            <a href="{{ '/apis/' | relative_url }}" class="nx-nav-btn">API</a>
+
+            <!-- Enterprise -->
+            <a href="{{ '/enterprise/' | relative_url }}" class="nx-ent-link">Enterprise</a>
+
+            <!-- Company -->
+            <div class="nx-nav-item">
+                <button class="nx-nav-btn" type="button">
+                    Company <i class="ri-arrow-down-s-line nx-chevron"></i>
+                </button>
+                <div class="nx-drop" style="min-width:220px;">
+                    <a href="{{ '/about/' | relative_url }}" class="nx-drop-flat"><span class="dot" style="background:#a1a1aa;"></span>About</a>
+                    <a href="{{ '/industries/' | relative_url }}" class="nx-drop-flat"><span class="dot" style="background:#a1a1aa;"></span>Who uses Nextract</a>
+                    <a href="{{ '/case-studies/' | relative_url }}" class="nx-drop-flat"><span class="dot" style="background:#3b82f6;"></span>Case studies</a>
+                    <a href="{{ '/contact/' | relative_url }}" class="nx-drop-flat"><span class="dot" style="background:#a1a1aa;"></span>Contact</a>
+                    <hr class="nx-drop-divider">
+                    <a href="{{ '/faq/' | relative_url }}" class="nx-drop-flat"><span class="dot" style="background:#a1a1aa;"></span>FAQ</a>
+                    <a href="{{ '/trust-security/' | relative_url }}" class="nx-drop-flat"><span class="dot" style="background:#22c55e;"></span>Trust &amp; Security</a>
                 </div>
-                
-                <!-- Products Dropdown -->
-                <div class="nav-dropdown group relative">
-                    <button class="nav-link flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-gray-700 hover:text-blue-600 transition-all rounded-lg hover:bg-gray-50{% if page.url == '/products/' or page.url contains '/scrapers/' or page.url contains '/apis/' or page.url contains '/datasets/' %} text-blue-600 bg-blue-50{% endif %}">
-                        Products
-                        <i class="ri-arrow-down-s-line text-base transition-transform"></i>
-                    </button>
-                    <div class="nav-dropdown-menu products-mega absolute top-full pt-1 bg-transparent z-50 pointer-events-none">
-                        <div class="bg-white rounded-xl shadow-2xl border border-gray-100 pointer-events-auto p-6">
-                            <div class="grid grid-cols-3 gap-8">
-                                <!-- Scrapers Column -->
-                                <div>
-                                    <a href="/scrapers/" class="mega-eyebrow-link inline-flex items-center gap-1.5 mb-1" style="color:#7c3aed;">
-                                        <span class="mega-eyebrow" style="color:#7c3aed;"><i class="ri-scissors-cut-line"></i> Scrapers</span>
-                                        <i class="ri-arrow-right-s-line mega-eyebrow-arrow"></i>
-                                    </a>
-                                    <div class="text-[11px] text-gray-500 mb-3">Custom scrapers for any platform</div>
-                                    <div class="space-y-0.5 mb-3">
-                                        <a href="/scrapers/amazon-scraper/" class="mega-item"><span class="mega-dot" style="background:#c4b5fd;"></span>Amazon<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/scrapers/ebay-scraper/" class="mega-item"><span class="mega-dot" style="background:#c4b5fd;"></span>eBay<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/scrapers/shopify-scraper/" class="mega-item"><span class="mega-dot" style="background:#c4b5fd;"></span>Shopify<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/scrapers/blinkit-scraper/" class="mega-item"><span class="mega-dot" style="background:#c4b5fd;"></span>Blinkit<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/scrapers/swiggy-scraper/" class="mega-item"><span class="mega-dot" style="background:#c4b5fd;"></span>Swiggy<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/scrapers/linkedin-scraper/" class="mega-item"><span class="mega-dot" style="background:#c4b5fd;"></span>LinkedIn<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/scrapers/yelp-scraper/" class="mega-item"><span class="mega-dot" style="background:#c4b5fd;"></span>Yelp<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/scrapers/tiktok-scraper/" class="mega-item"><span class="mega-dot" style="background:#c4b5fd;"></span>TikTok<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                    </div>
-                                    <a href="/scrapers/" class="mega-view-all" style="color:#7c3aed; background:#f5f3ff;">
-                                        See all scrapers <i class="ri-arrow-right-line"></i>
-                                    </a>
-                                </div>
-
-                                <!-- APIs Column -->
-                                <div>
-                                    <a href="/apis/" class="mega-eyebrow-link inline-flex items-center gap-1.5 mb-1" style="color:#059669;">
-                                        <span class="mega-eyebrow" style="color:#059669;"><i class="ri-plug-line"></i> APIs</span>
-                                        <i class="ri-arrow-right-s-line mega-eyebrow-arrow"></i>
-                                    </a>
-                                    <div class="text-[11px] text-gray-500 mb-3">Custom APIs for your data needs</div>
-                                    <div class="space-y-0.5 mb-3">
-                                        <a href="/apis/amazon-api/" class="mega-item"><span class="mega-dot" style="background:#86efac;"></span>Amazon API<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/apis/walmart-api/" class="mega-item"><span class="mega-dot" style="background:#86efac;"></span>Walmart API<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/apis/target-api/" class="mega-item"><span class="mega-dot" style="background:#86efac;"></span>Target API<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/apis/best-buy-api/" class="mega-item"><span class="mega-dot" style="background:#86efac;"></span>Best Buy API<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/apis/doordash-api/" class="mega-item"><span class="mega-dot" style="background:#86efac;"></span>DoorDash API<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/apis/uber-eats-api/" class="mega-item"><span class="mega-dot" style="background:#86efac;"></span>Uber Eats API<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/apis/swiggy-api/" class="mega-item"><span class="mega-dot" style="background:#86efac;"></span>Swiggy API<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/apis/airbnb-api/" class="mega-item"><span class="mega-dot" style="background:#86efac;"></span>Airbnb API<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                    </div>
-                                    <a href="/apis/" class="mega-view-all" style="color:#059669; background:#ecfdf5;">
-                                        See all APIs <i class="ri-arrow-right-line"></i>
-                                    </a>
-                                </div>
-
-                                <!-- Datasets + Featured Column -->
-                                <div>
-                                    <a href="/datasets/" class="mega-eyebrow-link inline-flex items-center gap-1.5 mb-1" style="color:#ea580c;">
-                                        <span class="mega-eyebrow" style="color:#ea580c;"><i class="ri-database-2-line"></i> Datasets</span>
-                                        <i class="ri-arrow-right-s-line mega-eyebrow-arrow"></i>
-                                    </a>
-                                    <div class="text-[11px] text-gray-500 mb-3">Custom datasets, built to spec</div>
-                                    <div class="space-y-0.5 mb-3">
-                                        <a href="/datasets/amazon-dataset/" class="mega-item"><span class="mega-dot" style="background:#fdba74;"></span>Amazon<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/datasets/blinkit-dataset/" class="mega-item"><span class="mega-dot" style="background:#fdba74;"></span>Blinkit<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/datasets/zomato-dataset/" class="mega-item"><span class="mega-dot" style="background:#fdba74;"></span>Zomato<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/datasets/netflix-dataset/" class="mega-item"><span class="mega-dot" style="background:#fdba74;"></span>Netflix<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/datasets/zillow-dataset/" class="mega-item"><span class="mega-dot" style="background:#fdba74;"></span>Zillow<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/datasets/indeed-dataset/" class="mega-item"><span class="mega-dot" style="background:#fdba74;"></span>Indeed<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                    </div>
-                                    <a href="/datasets/" class="mega-view-all" style="color:#ea580c; background:#fff7ed;">
-                                        See all datasets <i class="ri-arrow-right-line"></i>
-                                    </a>
-
-                                    <a href="/products/" class="mega-feature-row mt-4">
-                                        <span class="mega-feature-ico" style="background:#dbeafe; color:#2563eb;"><i class="ri-code-s-slash-line"></i></span>
-                                        <span class="mega-feature-body">
-                                            <span class="mega-feature-title">Scraping API</span>
-                                            <span class="mega-feature-sub">Custom data pipelines</span>
-                                        </span>
-                                        <i class="ri-arrow-right-line mega-feature-arrow"></i>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="mega-bottom">
-                                <div class="text-gray-500">Need a platform we don't list?</div>
-                                <a href="/contact/"><span>We build custom pipelines</span><i class="ri-arrow-right-line"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Services Dropdown -->
-                <div class="nav-dropdown group relative">
-                    <button class="nav-link flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-gray-700 hover:text-blue-600 transition-all rounded-lg hover:bg-gray-50{% if page.url == '/web-scraping-services/' or page.url == '/custom-api-development/' or page.url == '/mobile-app-data-extraction/' or page.url == '/ai-data-solutions/' or page.url == '/ai-training-data/' or page.url contains '/services/' %} text-blue-600 bg-blue-50{% endif %}">
-                        Services
-                        <i class="ri-arrow-down-s-line text-base transition-transform"></i>
-                    </button>
-                    <div class="nav-dropdown-menu services-mega absolute top-full pt-1 bg-transparent z-50 pointer-events-none">
-                        <div class="bg-white rounded-xl shadow-2xl border border-gray-100 pointer-events-auto p-6">
-                            <div class="grid grid-cols-3 gap-8">
-                                <!-- Column 1: Core Services -->
-                                <div>
-                                    <div class="mega-eyebrow mb-3" style="color:#2563eb;"><i class="ri-stack-line"></i> Core Services</div>
-                                    <div class="space-y-0.5">
-                                        <a href="/web-scraping-services/" class="mega-item mega-item--icon">
-                                            <span class="mega-ico" style="background:#dbeafe; color:#2563eb;"><i class="ri-global-line"></i></span>
-                                            Web Scraping
-                                            <i class="ri-arrow-right-s-line mega-arrow"></i>
-                                        </a>
-                                        <a href="/custom-api-development/" class="mega-item mega-item--icon">
-                                            <span class="mega-ico" style="background:#dcfce7; color:#059669;"><i class="ri-code-s-slash-line"></i></span>
-                                            Custom APIs
-                                            <i class="ri-arrow-right-s-line mega-arrow"></i>
-                                        </a>
-                                        <a href="/mobile-app-data-extraction/" class="mega-item mega-item--icon">
-                                            <span class="mega-ico" style="background:#f3e8ff; color:#7c3aed;"><i class="ri-smartphone-line"></i></span>
-                                            Mobile App Data
-                                            <i class="ri-arrow-right-s-line mega-arrow"></i>
-                                        </a>
-                                        <a href="/ai-data-solutions/" class="mega-item mega-item--icon">
-                                            <span class="mega-ico" style="background:#fce7f3; color:#db2777;"><i class="ri-brain-line"></i></span>
-                                            AI Data Processing
-                                            <i class="ri-arrow-right-s-line mega-arrow"></i>
-                                        </a>
-                                        <a href="/ai-training-data/" class="mega-item mega-item--icon">
-                                            <span class="mega-ico" style="background:#e0e7ff; color:#4f46e5;"><i class="ri-database-2-line"></i></span>
-                                            AI Training Data
-                                            <i class="ri-arrow-right-s-line mega-arrow"></i>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <!-- Column 2: By Industry -->
-                                <div>
-                                    <div class="mega-eyebrow mb-3" style="color:#ea580c;"><i class="ri-building-2-line"></i> By Industry</div>
-                                    <div class="space-y-0.5">
-                                        <a href="/services/e-commerce-scraping/" class="mega-item"><span class="mega-dot" style="background:#fdba74;"></span>E-commerce<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/services/restaurant-scraping/" class="mega-item"><span class="mega-dot" style="background:#fdba74;"></span>Restaurant & Food<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/services/travel-scraping/" class="mega-item"><span class="mega-dot" style="background:#fdba74;"></span>Travel<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/services/hotel-scraping/" class="mega-item"><span class="mega-dot" style="background:#fdba74;"></span>Hotel & Hospitality<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/services/real-estate-scraping/" class="mega-item"><span class="mega-dot" style="background:#fdba74;"></span>Real Estate<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/services/jobs-scraping/" class="mega-item"><span class="mega-dot" style="background:#fdba74;"></span>Jobs & Recruitment<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/services/finance-scraping/" class="mega-item"><span class="mega-dot" style="background:#fdba74;"></span>Finance<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/services/healthcare-scraping/" class="mega-item"><span class="mega-dot" style="background:#fdba74;"></span>Healthcare<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                    </div>
-                                </div>
-
-                                <!-- Column 3: Specialized + Featured -->
-                                <div>
-                                    <div class="mega-eyebrow mb-3" style="color:#059669;"><i class="ri-sparkling-2-line"></i> Specialized</div>
-                                    <div class="space-y-0.5 mb-4">
-                                        <a href="/services/social-media-scraping/" class="mega-item"><span class="mega-dot" style="background:#86efac;"></span>Social Media<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/services/automotive-scraping/" class="mega-item"><span class="mega-dot" style="background:#86efac;"></span>Automotive<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/services/car-rental-scraping/" class="mega-item"><span class="mega-dot" style="background:#86efac;"></span>Car Rental<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/services/mobile-app-scraping/" class="mega-item"><span class="mega-dot" style="background:#86efac;"></span>Mobile App<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/services/emerging-niche-scraping/" class="mega-item"><span class="mega-dot" style="background:#86efac;"></span>Emerging Niches<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                    </div>
-                                    <a href="/services/" class="mega-feature-row mt-4">
-                                        <span class="mega-feature-ico" style="background:#e0e7ff; color:#4f46e5;"><i class="ri-service-line"></i></span>
-                                        <span class="mega-feature-body">
-                                            <span class="mega-feature-title">Browse all services</span>
-                                            <span class="mega-feature-sub">14 specialized services</span>
-                                        </span>
-                                        <i class="ri-arrow-right-line mega-feature-arrow"></i>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="mega-bottom">
-                                <div class="text-gray-500">Have a problem that doesn't fit a box?</div>
-                                <a href="/contact/"><span>Talk to an engineer</span><i class="ri-arrow-right-line"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Solutions Dropdown -->
-                <div class="nav-dropdown group relative">
-                    <button class="nav-link flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-gray-700 hover:text-blue-600 transition-all rounded-lg hover:bg-gray-50{% if page.url == '/amazon/' or page.url == '/walmart/' or page.url == '/etsy/' or page.url == '/e-commerce/' or page.url == '/flipkart/' or page.url == '/ebay/' or page.url == '/quick-commerce/' or page.url == '/blinkit/' or page.url == '/zepto/' or page.url == '/swiggy-instamart/' or page.url == '/bigbasket/' or page.url == '/food-delivery/' or page.url == '/doordash/' or page.url == '/zomato/' or page.url == '/swiggy/' or page.url == '/ubereats/' or page.url == '/buy-box-monitoring/' or page.url == '/share-of-search/' or page.url == '/catalogue-monitoring/' or page.url == '/review-intelligence/' or page.url == '/competitor-stockout-monitoring/' or page.url == '/dark-store-intelligence/' or page.url == '/fmcg-digital-shelf/' or page.url == '/private-label-monitoring/' or page.url == '/delivery-zone-mapping/' or page.url == '/promotional-velocity/' or page.url == '/ghost-kitchen-intelligence/' or page.url == '/restaurant-search-ranking/' or page.url == '/delivery-eta-benchmarking/' or page.url == '/food-delivery-market-entry/' or page.url == '/menu-sentiment-analysis/' %} text-blue-600 bg-blue-50{% endif %}">
-                        Solutions
-                        <i class="ri-arrow-down-s-line text-base transition-transform"></i>
-                    </button>
-                    <div class="nav-dropdown-menu solutions-mega absolute top-full pt-1 bg-transparent z-50 pointer-events-none">
-                        <div class="bg-white rounded-xl shadow-2xl border border-gray-100 pointer-events-auto p-6">
-                            <div class="grid grid-cols-3 gap-8">
-                                <!-- E-commerce Column -->
-                                <div>
-                                    <a href="/e-commerce/" class="mega-eyebrow-link inline-flex items-center gap-1 mb-1" style="color:#2563eb;">
-                                        <span class="mega-eyebrow" style="color:#2563eb;"><i class="ri-shopping-cart-2-line"></i> E-commerce</span>
-                                        <i class="ri-arrow-right-s-line mega-eyebrow-arrow"></i>
-                                    </a>
-                                    <div class="text-[11px] text-gray-500 mb-3">Amazon, Flipkart, Walmart & more</div>
-
-                                    <div class="mega-subeyebrow mb-1.5 px-2">Platforms</div>
-                                    <div class="space-y-0.5 mb-4">
-                                        <a href="/amazon/" class="mega-item"><span class="mega-dot" style="background:#93c5fd;"></span>Amazon<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/flipkart/" class="mega-item"><span class="mega-dot" style="background:#93c5fd;"></span>Flipkart<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/walmart/" class="mega-item"><span class="mega-dot" style="background:#93c5fd;"></span>Walmart<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/ebay/" class="mega-item"><span class="mega-dot" style="background:#93c5fd;"></span>eBay<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/etsy/" class="mega-item"><span class="mega-dot" style="background:#93c5fd;"></span>Etsy<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                    </div>
-
-                                    <div class="mega-subeyebrow mb-1.5 px-2">Use Cases</div>
-                                    <div class="space-y-0.5">
-                                        <a href="/buy-box-monitoring/" class="mega-item"><span class="mega-dot" style="background:#bfdbfe;"></span>Buy Box Monitoring<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/share-of-search/" class="mega-item"><span class="mega-dot" style="background:#bfdbfe;"></span>Share of Search<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/catalogue-monitoring/" class="mega-item"><span class="mega-dot" style="background:#bfdbfe;"></span>Catalogue Monitoring<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/review-intelligence/" class="mega-item"><span class="mega-dot" style="background:#bfdbfe;"></span>Review Intelligence<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/competitor-stockout-monitoring/" class="mega-item"><span class="mega-dot" style="background:#bfdbfe;"></span>Stockout Monitoring<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                    </div>
-                                </div>
-
-                                <!-- Quick Commerce Column -->
-                                <div>
-                                    <a href="/quick-commerce/" class="mega-eyebrow-link inline-flex items-center gap-1 mb-1" style="color:#ea580c;">
-                                        <span class="mega-eyebrow" style="color:#ea580c;"><i class="ri-flashlight-line"></i> Quick Commerce</span>
-                                        <i class="ri-arrow-right-s-line mega-eyebrow-arrow"></i>
-                                    </a>
-                                    <div class="text-[11px] text-gray-500 mb-3">Blinkit, Zepto, Instamart & more</div>
-
-                                    <div class="mega-subeyebrow mb-1.5 px-2">Platforms</div>
-                                    <div class="space-y-0.5 mb-4">
-                                        <a href="/blinkit/" class="mega-item"><span class="mega-dot" style="background:#fdba74;"></span>Blinkit<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/zepto/" class="mega-item"><span class="mega-dot" style="background:#fdba74;"></span>Zepto<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/swiggy-instamart/" class="mega-item"><span class="mega-dot" style="background:#fdba74;"></span>Swiggy Instamart<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/bigbasket/" class="mega-item"><span class="mega-dot" style="background:#fdba74;"></span>BigBasket<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                    </div>
-
-                                    <div class="mega-subeyebrow mb-1.5 px-2">Use Cases</div>
-                                    <div class="space-y-0.5">
-                                        <a href="/dark-store-intelligence/" class="mega-item"><span class="mega-dot" style="background:#fed7aa;"></span>Dark Store Intelligence<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/fmcg-digital-shelf/" class="mega-item"><span class="mega-dot" style="background:#fed7aa;"></span>FMCG Digital Shelf<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/private-label-monitoring/" class="mega-item"><span class="mega-dot" style="background:#fed7aa;"></span>Private Label Monitoring<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/delivery-zone-mapping/" class="mega-item"><span class="mega-dot" style="background:#fed7aa;"></span>Delivery Zone Mapping<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/promotional-velocity/" class="mega-item"><span class="mega-dot" style="background:#fed7aa;"></span>Promotional Velocity<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                    </div>
-                                </div>
-
-                                <!-- Food Delivery Column -->
-                                <div>
-                                    <a href="/food-delivery/" class="mega-eyebrow-link inline-flex items-center gap-1 mb-1" style="color:#059669;">
-                                        <span class="mega-eyebrow" style="color:#059669;"><i class="ri-restaurant-line"></i> Food Delivery</span>
-                                        <i class="ri-arrow-right-s-line mega-eyebrow-arrow"></i>
-                                    </a>
-                                    <div class="text-[11px] text-gray-500 mb-3">Zomato, Swiggy, DoorDash & more</div>
-
-                                    <div class="mega-subeyebrow mb-1.5 px-2">Platforms</div>
-                                    <div class="space-y-0.5 mb-4">
-                                        <a href="/zomato/" class="mega-item"><span class="mega-dot" style="background:#86efac;"></span>Zomato<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/swiggy/" class="mega-item"><span class="mega-dot" style="background:#86efac;"></span>Swiggy<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/doordash/" class="mega-item"><span class="mega-dot" style="background:#86efac;"></span>DoorDash<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/ubereats/" class="mega-item"><span class="mega-dot" style="background:#86efac;"></span>Uber Eats<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                    </div>
-
-                                    <div class="mega-subeyebrow mb-1.5 px-2">Use Cases</div>
-                                    <div class="space-y-0.5">
-                                        <a href="/ghost-kitchen-intelligence/" class="mega-item"><span class="mega-dot" style="background:#bbf7d0;"></span>Ghost Kitchen Intelligence<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/restaurant-search-ranking/" class="mega-item"><span class="mega-dot" style="background:#bbf7d0;"></span>Restaurant Search Ranking<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/delivery-eta-benchmarking/" class="mega-item"><span class="mega-dot" style="background:#bbf7d0;"></span>Delivery ETA Benchmarking<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/food-delivery-market-entry/" class="mega-item"><span class="mega-dot" style="background:#bbf7d0;"></span>Market Entry Intelligence<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/menu-sentiment-analysis/" class="mega-item"><span class="mega-dot" style="background:#bbf7d0;"></span>Menu Sentiment Analysis<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="mega-bottom">
-                                <div class="text-gray-500">Don't see your platform or use case?</div>
-                                <a href="/contact/"><span>Request a custom solution</span><i class="ri-arrow-right-line"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- More Dropdown -->
-                <div class="nav-dropdown group relative">
-                    <button class="nav-link flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-gray-700 hover:text-blue-600 transition-all rounded-lg hover:bg-gray-50{% if page.url contains '/industries/' or page.url contains '/case-studies/' or page.url contains '/intelligence/' or page.url == '/about/' or page.url == '/contact/' or page.url == '/faq/' or page.url == '/testimonials/' or page.url == '/compliance/' or page.url == '/trust-security/' %} text-blue-600 bg-blue-50{% endif %}">
-                        More
-                        <i class="ri-arrow-down-s-line text-base transition-transform"></i>
-                    </button>
-                    <div class="nav-dropdown-menu more-mega absolute top-full right-0 pt-1 bg-transparent z-50 pointer-events-none">
-                        <div class="bg-white rounded-xl shadow-2xl border border-gray-100 pointer-events-auto p-6">
-                            <div class="grid grid-cols-2 gap-8">
-                                <!-- Column 1: Resources -->
-                                <div>
-                                    <div class="mega-eyebrow mb-3" style="color:#7c3aed;"><i class="ri-book-open-line"></i> Resources</div>
-                                    <div class="space-y-0.5">
-                                        <a href="/intelligence/" class="mega-item mega-item--icon">
-                                            <span class="mega-ico" style="background:#f3e8ff; color:#7c3aed;"><i class="ri-brain-line"></i></span>
-                                            Intelligence
-                                            <i class="ri-arrow-right-s-line mega-arrow"></i>
-                                        </a>
-                                        <a href="/case-studies/" class="mega-item mega-item--icon">
-                                            <span class="mega-ico" style="background:#dbeafe; color:#2563eb;"><i class="ri-file-list-3-line"></i></span>
-                                            Case Studies
-                                            <i class="ri-arrow-right-s-line mega-arrow"></i>
-                                        </a>
-                                        <a href="/industries/" class="mega-item mega-item--icon">
-                                            <span class="mega-ico" style="background:#dcfce7; color:#059669;"><i class="ri-building-line"></i></span>
-                                            Industries
-                                            <i class="ri-arrow-right-s-line mega-arrow"></i>
-                                        </a>
-                                        <a href="/testimonials/" class="mega-item mega-item--icon">
-                                            <span class="mega-ico" style="background:#ffedd5; color:#ea580c;"><i class="ri-chat-quote-line"></i></span>
-                                            Testimonials
-                                            <i class="ri-arrow-right-s-line mega-arrow"></i>
-                                        </a>
-                                        <a href="/faq/" class="mega-item mega-item--icon">
-                                            <span class="mega-ico" style="background:#f3f4f6; color:#4b5563;"><i class="ri-question-line"></i></span>
-                                            FAQ
-                                            <i class="ri-arrow-right-s-line mega-arrow"></i>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <!-- Column 2: Company + Trust -->
-                                <div>
-                                    <div class="mega-eyebrow mb-3" style="color:#2563eb;"><i class="ri-building-4-line"></i> Company</div>
-                                    <div class="space-y-0.5 mb-5">
-                                        <a href="/about/" class="mega-item"><span class="mega-dot" style="background:#93c5fd;"></span>About Nextract<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/contact/" class="mega-item"><span class="mega-dot" style="background:#93c5fd;"></span>Contact<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="{{ '/assets/deck/Nextract - Pitch Deck.pdf' | relative_url }}" download="Nextract-Pitch-Deck.pdf" class="mega-item"><i class="ri-download-line" style="color:#6b7280; font-size:13px;"></i>Pitch Deck <span class="text-[10px] text-gray-400 ml-1">PDF</span><i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                    </div>
-
-                                    <div class="mega-eyebrow mb-3" style="color:#059669;"><i class="ri-shield-check-line"></i> Trust</div>
-                                    <div class="space-y-0.5">
-                                        <a href="/trust-security/" class="mega-item"><span class="mega-dot" style="background:#86efac;"></span>Trust & Security<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/compliance/" class="mega-item"><span class="mega-dot" style="background:#86efac;"></span>Compliance<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                        <a href="/sla/" class="mega-item"><span class="mega-dot" style="background:#86efac;"></span>SLA<i class="ri-arrow-right-s-line mega-arrow"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="mega-bottom">
-                                <div class="text-gray-500">Ready to get started?</div>
-                                <a href="/contact/"><span>Book a call</span><i class="ri-arrow-right-line"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </nav>
-
-            <!-- Right Side Actions -->
-            <div class="hidden lg:flex items-center gap-3 flex-shrink-0 ml-auto">
-                <a href="{{ '/assets/deck/Nextract - Pitch Deck.pdf' | relative_url }}" download="Nextract-Pitch-Deck.pdf" class="px-4 py-2 border-2 border-gray-300 text-gray-700 font-semibold text-sm hover:border-gray-900 hover:text-gray-900 hover:bg-gray-50 transition-all inline-flex items-center gap-2 rounded-lg group">
-                    <i class="ri-download-line"></i>
-                    <span>Pitch Deck</span>
-                </a>
-                <a href="/contact/" class="px-5 py-2.5 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold text-sm hover:from-blue-700 hover:to-blue-800 transition-all inline-flex items-center gap-2 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 group">
-                    <span>Get Started</span>
-                    <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
-                </a>
             </div>
 
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="lg:hidden p-2.5 hover:bg-gray-50 transition-colors rounded-lg group">
-                <i class="ri-menu-3-line text-2xl text-gray-900 group-hover:text-blue-600 transition-colors"></i>
-            </button>
+        </nav>
+
+        <!-- Right actions -->
+        <div class="nx-actions">
+            <a href="https://app.getnextract.com/login" class="nx-login">Log in</a>
+            <a href="https://app.getnextract.com/register" class="nx-cta">
+                <span>Start free</span>
+                <i class="ri-arrow-right-line"></i>
+            </a>
         </div>
+
+        <!-- Mobile toggle -->
+        <button class="nx-mob-btn" id="nx-mob-toggle" aria-label="Open menu" aria-expanded="false">
+            <i class="ri-menu-3-line" id="nx-mob-ico"></i>
+        </button>
+
     </div>
 
-    <!-- CSS for dropdown hover persistence -->
-    <style>
-        .nav-dropdown-menu {
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-8px);
-            transition: opacity 0.2s ease 0.12s, visibility 0.2s ease 0.12s, transform 0.2s ease 0.12s;
-            pointer-events: none;
-        }
-        
-        .nav-dropdown:hover .nav-dropdown-menu,
-        .nav-dropdown-menu:hover {
-            opacity: 1 !important;
-            visibility: visible !important;
-            transform: translateY(0) !important;
-            pointer-events: auto !important;
-            transition-delay: 0s !important;
-        }
-        
-        .nav-dropdown:hover .nav-link i {
-            transform: rotate(180deg);
-        }
-        
-        /* Ensure menu content is always clickable when visible */
-        .nav-dropdown-menu > div {
-            min-width: 100%;
-            pointer-events: auto;
-        }
-        
-        .nav-dropdown-menu a {
-            cursor: pointer;
-            transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .nav-dropdown-menu .grid { display: grid; }
-
-        .nav-dropdown-menu .space-y-1 > * + * {
-            margin-top: 0.25rem;
-        }
-
-        /* Mega menu widths */
-        .nav-dropdown-menu.solutions-mega { width: 920px; }
-        .nav-dropdown-menu.products-mega  { width: 800px; }
-        .nav-dropdown-menu.services-mega  { width: 840px; }
-        .nav-dropdown-menu.more-mega      { width: 600px; }
-        .nav-dropdown-menu.scrava-menu    { width: auto; min-width: 220px; }
-
-        /* Center Products/Services/Solutions mega menus horizontally under the button */
-        .nav-dropdown-menu.products-mega,
-        .nav-dropdown-menu.services-mega,
-        .nav-dropdown-menu.solutions-mega {
-            left: 50%;
-            transform: translateX(-50%) translateY(-8px);
-        }
-        .nav-dropdown:hover .nav-dropdown-menu.products-mega,
-        .nav-dropdown-menu.products-mega:hover,
-        .nav-dropdown:hover .nav-dropdown-menu.services-mega,
-        .nav-dropdown-menu.services-mega:hover,
-        .nav-dropdown:hover .nav-dropdown-menu.solutions-mega,
-        .nav-dropdown-menu.solutions-mega:hover {
-            transform: translateX(-50%) translateY(0) !important;
-        }
-
-        /* Row-hover affordance on item links */
-        .mega-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.4rem 0.55rem;
-            border-radius: 6px;
-            font-size: 13px;
-            font-weight: 500;
-            color: #1f2937;
-            line-height: 1.25;
-            position: relative;
-        }
-        .mega-item .mega-dot {
-            display: inline-block;
-            width: 5px;
-            height: 5px;
-            border-radius: 999px;
-            background: #d1d5db;
-            flex-shrink: 0;
-            transition: background 0.15s ease, transform 0.15s ease;
-        }
-        .mega-item:hover {
-            background: #f8fafc;
-            color: #111827;
-        }
-        .mega-item:hover .mega-dot { transform: scale(1.8); }
-        .mega-item .mega-arrow {
-            margin-left: auto;
-            opacity: 0;
-            transform: translateX(-4px);
-            transition: opacity 0.15s ease, transform 0.15s ease;
-            color: #9ca3af;
-            font-size: 12px;
-        }
-        .mega-item:hover .mega-arrow {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        /* Variant: item with a small colored icon tile (used for Core Services) */
-        .mega-item--icon { padding: 0.35rem 0.55rem 0.35rem 0.4rem; }
-        .mega-item--icon .mega-ico {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 22px;
-            height: 22px;
-            border-radius: 6px;
-            font-size: 12px;
-            flex-shrink: 0;
-        }
-        .mega-item--icon .mega-ico i { line-height: 1; }
-
-        /* Featured inline row (compact highlight CTA used at the bottom of a column) */
-        .mega-feature-row {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 10px 12px;
-            border-radius: 8px;
-            background: #f8fafc;
-            border: 1px solid #e5e7eb;
-            transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
-        }
-        .mega-feature-row:hover {
-            background: #f1f5f9;
-            border-color: #cbd5e1;
-            transform: translateY(-1px);
-        }
-        .mega-feature-row .mega-feature-ico {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 28px;
-            height: 28px;
-            border-radius: 7px;
-            flex-shrink: 0;
-            font-size: 14px;
-        }
-        .mega-feature-row .mega-feature-body { min-width: 0; line-height: 1.2; }
-        .mega-feature-row .mega-feature-title {
-            display: block;
-            font-weight: 700;
-            color: #111827;
-            font-size: 12.5px;
-        }
-        .mega-feature-row .mega-feature-sub {
-            display: block;
-            font-size: 11px;
-            color: #6b7280;
-            margin-top: 1px;
-        }
-        .mega-feature-row .mega-feature-arrow {
-            margin-left: auto;
-            color: #9ca3af;
-            font-size: 14px;
-            transition: transform 0.15s ease, color 0.15s ease;
-        }
-        .mega-feature-row:hover .mega-feature-arrow {
-            color: #111827;
-            transform: translateX(2px);
-        }
-
-        /* Section eyebrow (colored column title) */
-        .mega-eyebrow {
-            font-size: 10.5px;
-            font-weight: 800;
-            letter-spacing: 0.09em;
-            text-transform: uppercase;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .mega-eyebrow i { font-size: 14px; }
-        .mega-eyebrow .mega-eyebrow-arrow {
-            opacity: 0;
-            transform: translateX(-3px);
-            transition: opacity 0.15s ease, transform 0.15s ease;
-            font-size: 11px;
-        }
-        .mega-eyebrow-link:hover .mega-eyebrow-arrow {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        /* Sub-eyebrow (platforms / use cases headers) */
-        .mega-subeyebrow {
-            font-size: 9.5px;
-            font-weight: 800;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: #9ca3af;
-        }
-
-        /* "View all" link style */
-        .mega-view-all {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            padding: 6px 10px;
-            font-size: 11.5px;
-            font-weight: 700;
-            border-radius: 6px;
-            transition: background 0.15s ease, gap 0.15s ease;
-        }
-        .mega-view-all:hover { gap: 8px; }
-
-        /* Card icon wrapper used in Services/Core and More items */
-        .mega-icon-box {
-            width: 32px;
-            height: 32px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            font-size: 15px;
-        }
-
-        /* Bottom CTA strip */
-        .mega-bottom {
-            margin-top: 18px;
-            padding-top: 14px;
-            border-top: 1px solid #f1f5f9;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-size: 12px;
-        }
-        .mega-bottom a {
-            font-weight: 700;
-            color: #111827;
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            transition: color 0.15s ease, gap 0.15s ease;
-        }
-        .mega-bottom a:hover {
-            color: #2563eb;
-            gap: 8px;
-        }
-
-        /* Keep mega menus inside the viewport on narrower desktops */
-        @media (max-width: 1280px) {
-            .nav-dropdown-menu.solutions-mega { width: 860px; }
-            .nav-dropdown-menu.services-mega  { width: 780px; }
-            .nav-dropdown-menu.products-mega  { width: 740px; }
-            .nav-dropdown-menu.more-mega      { width: 560px; }
-        }
-        @media (max-width: 1100px) {
-            .nav-dropdown-menu.solutions-mega { width: 760px; }
-            .nav-dropdown-menu.services-mega  { width: 720px; }
-            .nav-dropdown-menu.products-mega  { width: 700px; }
-        }
-    </style>
+    <!-- Mobile menu -->
+    <div id="nx-mob" role="dialog" aria-label="Mobile navigation">
+        <div class="nx-mob-section">
+            <div class="nx-mob-head">SaaS Platform</div>
+            <a href="{{ '/buy-box-monitoring/' | relative_url }}" class="nx-mob-link"><i class="ri-price-tag-3-line" style="color:#3b82f6;font-size:15px;"></i> Price Intelligence</a>
+            <a href="{{ '/catalogue-monitoring/' | relative_url }}" class="nx-mob-link"><i class="ri-store-line" style="color:#f97316;font-size:15px;"></i> Catalogue Monitoring</a>
+            <a href="{{ '/share-of-search/' | relative_url }}" class="nx-mob-link"><i class="ri-search-line" style="color:#8b5cf6;font-size:15px;"></i> Share of Search</a>
+            <a href="{{ '/fmcg-digital-shelf/' | relative_url }}" class="nx-mob-link"><i class="ri-flashlight-line" style="color:#22c55e;font-size:15px;"></i> FMCG Digital Shelf</a>
+            <a href="{{ '/solutions/' | relative_url }}" class="nx-mob-link" style="color:#3b82f6;font-weight:700;">All use cases →</a>
+        </div>
+        <div class="nx-mob-section">
+            <div class="nx-mob-head">Platforms</div>
+            <a href="{{ '/amazon/' | relative_url }}" class="nx-mob-link"><i class="ri-store-2-line" style="color:#f97316;font-size:15px;"></i> Amazon</a>
+            <a href="{{ '/flipkart/' | relative_url }}" class="nx-mob-link"><i class="ri-store-2-line" style="color:#3b82f6;font-size:15px;"></i> Flipkart</a>
+            <a href="{{ '/blinkit/' | relative_url }}" class="nx-mob-link"><i class="ri-flashlight-line" style="color:#f59e0b;font-size:15px;"></i> Blinkit</a>
+            <a href="{{ '/zepto/' | relative_url }}" class="nx-mob-link"><i class="ri-flashlight-line" style="color:#8b5cf6;font-size:15px;"></i> Zepto</a>
+            <a href="{{ '/quick-commerce/' | relative_url }}" class="nx-mob-link" style="color:#3b82f6;font-weight:700;">All platforms →</a>
+        </div>
+        <div class="nx-mob-section">
+            <div class="nx-mob-head">Data &amp; Custom</div>
+            <a href="{{ '/intelligence/' | relative_url }}" class="nx-mob-link"><i class="ri-bar-chart-grouped-line" style="color:#3b82f6;font-size:15px;"></i> Commerce Intelligence</a>
+            <a href="{{ '/datasets/' | relative_url }}" class="nx-mob-link"><i class="ri-database-2-line" style="color:#8b5cf6;font-size:15px;"></i> Datasets</a>
+            <a href="{{ '/web-scraping-services/' | relative_url }}" class="nx-mob-link"><i class="ri-code-s-slash-line" style="color:#71717a;font-size:15px;"></i> Web Scraping</a>
+            <a href="{{ '/ai-training-data/' | relative_url }}" class="nx-mob-link"><i class="ri-brain-line" style="color:#22c55e;font-size:15px;"></i> AI Training Data</a>
+            <a href="{{ '/enterprise/' | relative_url }}" class="nx-mob-link" style="color:#b45309;font-weight:700;"><i class="ri-building-line" style="color:#b45309;font-size:15px;"></i> Enterprise solutions →</a>
+        </div>
+        <div class="nx-mob-section">
+            <div class="nx-mob-head">Nextract</div>
+            <a href="{{ '/products/' | relative_url }}" class="nx-mob-link"><i class="ri-layout-grid-line" style="color:#3b82f6;font-size:15px;"></i> Platform overview</a>
+            <a href="{{ '/pricing/' | relative_url }}" class="nx-mob-link"><i class="ri-price-tag-line" style="color:#52525b;font-size:15px;"></i> Pricing</a>
+            <a href="{{ '/apis/' | relative_url }}" class="nx-mob-link"><i class="ri-code-s-slash-line" style="color:#52525b;font-size:15px;"></i> API</a>
+            <a href="{{ '/case-studies/' | relative_url }}" class="nx-mob-link"><i class="ri-file-list-3-line" style="color:#52525b;font-size:15px;"></i> Case studies</a>
+            <a href="{{ '/about/' | relative_url }}" class="nx-mob-link"><i class="ri-information-line" style="color:#52525b;font-size:15px;"></i> About</a>
+            <a href="{{ '/faq/' | relative_url }}" class="nx-mob-link"><i class="ri-question-line" style="color:#52525b;font-size:15px;"></i> FAQ</a>
+            <a href="{{ '/contact/' | relative_url }}" class="nx-mob-link"><i class="ri-mail-line" style="color:#52525b;font-size:15px;"></i> Contact</a>
+        </div>
+        <div class="nx-mob-actions">
+            <a href="https://app.getnextract.com/login" class="nx-mob-cta-sec">Log in</a>
+            <a href="https://app.getnextract.com/register" class="nx-mob-cta-pri">Start free →</a>
+        </div>
+    </div>
 </header>
+
+<script>
+(function(){
+    var nav = document.getElementById('nx-nav');
+    var toggle = document.getElementById('nx-mob-toggle');
+    var mob = document.getElementById('nx-mob');
+    var ico = document.getElementById('nx-mob-ico');
+    var open = false;
+
+    // Mobile toggle
+    toggle.addEventListener('click', function(){
+        open = !open;
+        mob.classList.toggle('open', open);
+        ico.className = open ? 'ri-close-line' : 'ri-menu-3-line';
+        toggle.setAttribute('aria-expanded', open);
+    });
+})();
+</script>

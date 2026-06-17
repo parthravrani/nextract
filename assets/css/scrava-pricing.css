@@ -1,0 +1,98 @@
+/* Scrava pricing — Nextract theme */
+
+.scrava-pricing-hero {
+  background-color: #fff;
+  background-image: radial-gradient(circle, #d1d5db 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.scrava-pp-mode {
+  color: #6b7280;
+  background: transparent;
+  border-radius: 0.5rem;
+}
+.scrava-pp-mode.active {
+  background: #111827;
+  color: #fff;
+}
+
+.scrava-pricing-x-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+@media (min-width: 1120px) {
+  .scrava-pricing-x-scroll {
+    overflow-x: visible;
+  }
+}
+
+.scrava-pricing-compare thead th.scrava-plan-th {
+  position: sticky;
+  top: 5rem;
+  z-index: 30;
+  background-color: #fff;
+  box-shadow: inset 0 -1px 0 0 rgb(229 231 235);
+  vertical-align: top;
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+}
+.scrava-pricing-compare thead th.scrava-plan-th--featured {
+  background-color: #2563eb;
+  color: #fff;
+  z-index: 31;
+  box-shadow: inset 0 -1px 0 0 #2563eb, 0 6px 12px -6px rgba(37, 99, 235, 0.35);
+}
+.scrava-pricing-compare thead th.scrava-plan-th--label {
+  left: 0;
+  z-index: 50;
+  background-color: #f9fafb;
+  box-shadow: 1px 0 0 0 rgb(229 231 235), inset 0 -1px 0 0 rgb(229 231 235);
+  text-align: left;
+}
+@media (max-width: 767px) {
+  .scrava-pricing-compare thead th.scrava-plan-th {
+    top: 4.5rem;
+  }
+}
+
+.scrava-pricing-compare tbody td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 20;
+  background-color: #fff;
+  box-shadow: 1px 0 0 0 rgb(243 244 246);
+}
+
+.scrava-pricing-compare tbody tr:not(.scrava-group-row) td {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-top: 1px solid rgb(243 244 246);
+}
+
+.scrava-pricing-compare tbody tr.scrava-group-row td {
+  background-color: #f9fafb;
+  padding-top: 1.75rem;
+  padding-bottom: 1rem;
+  box-shadow: 1px 0 0 0 rgb(229 231 235);
+}
+.scrava-pricing-compare tbody tr.scrava-group-row:not(:first-child) td {
+  border-top: 1px solid rgb(229 231 235);
+}
+
+.scrava-pricing-compare tbody tr:not(.scrava-group-row):hover td {
+  background-color: rgb(249 250 251 / 0.6);
+}
+.scrava-pricing-compare tbody tr:not(.scrava-group-row):hover td:first-child {
+  background-color: #fff;
+}
+
+.scrava-faq details summary {
+  list-style: none;
+  cursor: pointer;
+}
+.scrava-faq details summary::-webkit-details-marker {
+  display: none;
+}
+.scrava-faq details[open] .scrava-faq-chevron {
+  transform: rotate(180deg);
+}

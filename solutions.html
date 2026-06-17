@@ -1,188 +1,312 @@
 ---
 layout: default
-title: "Custom Web Scraping Solutions & Managed Services"
-description: "Tailored web scraping solutions, managed data services, and expert consulting. Custom-built data extraction for enterprises. Dedicated team, 24/7 support. Get quote. Professional custom data extraction services."
-keywords: "custom web scraping, custom data extraction, managed web scraping services, data as a service, DaaS, enterprise data solutions, custom scraping development, web scraping consulting, data extraction consulting, managed data services, enterprise scraping solutions, tailored data extraction, custom scraping development, white-label scraping, dedicated scraping team, enterprise data services, custom API development, managed scraping infrastructure, data pipeline development, enterprise data consulting"
-og_description: "Custom web scraping solutions built for your business. Managed services, expert consulting, dedicated team. Professional data extraction services for enterprises."
-twitter_description: "Custom web scraping solutions & managed services. Tailored data extraction for enterprises. Dedicated team, 24/7 support. Professional custom data services."
+title: "Solutions — Commerce Intelligence for Every Team | Nextract"
+description: "Price intelligence, catalogue monitoring, share of search, Buy Box tracking, FMCG digital shelf — Nextract covers every commerce use case across Amazon, Flipkart, Blinkit, Zepto and more."
+keywords: "price intelligence india, catalogue monitoring amazon, share of search ecommerce, buy box tracking api, fmcg digital shelf, quick commerce data, amazon competitor tracking india"
+og_description: "Commerce intelligence use cases — price monitoring, catalogue tracking, share of search, FMCG digital shelf. One platform, every marketplace."
+permalink: /solutions/
 ---
 
+<style>
+:root {
+  --dk:#09090b; --dk1:#0f0f12; --dk-b:rgba(255,255,255,0.07);
+  --dk-txt:#f4f4f5; --dk-mut:#71717a; --dk-dim:#3f3f46;
+  --lt:#ffffff; --lt1:#fafafa; --lt-b:#e4e4e7;
+  --lt-txt:#09090b; --lt-mut:#71717a;
+  --blue:#3b82f6; --orange:#f97316; --green:#22c55e;
+}
+.nx-wrap  { max-width:1280px; margin:0 auto; padding:0 1.5rem; }
+.nx-label { font-size:10px; font-weight:800; letter-spacing:0.18em; text-transform:uppercase; }
+.nx-h2    { font-size:clamp(2rem,4vw,3rem); font-weight:900; line-height:1; letter-spacing:-0.04em; }
+.nx-grad  { background:linear-gradient(110deg,var(--blue) 0%,#8b5cf6 48%,var(--orange) 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.orb { position:absolute; border-radius:50%; pointer-events:none; filter:blur(80px); }
+.orb-blue   { background:radial-gradient(circle,rgba(59,130,246,0.2) 0%,transparent 70%); }
+.orb-orange { background:radial-gradient(circle,rgba(249,115,22,0.15) 0%,transparent 70%); }
+.nx-grid-bg { background-image:linear-gradient(rgba(255,255,255,0.024) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.024) 1px,transparent 1px); background-size:80px 80px; }
+.btn-dk-primary { display:inline-flex; align-items:center; gap:8px; padding:0.9rem 1.8rem; background:#f4f4f5; color:#09090b; font-weight:800; font-size:0.84rem; border-radius:6px; transition:background 0.2s,transform 0.2s; text-decoration:none; }
+.btn-dk-primary:hover { background:#fff; transform:translateY(-1px); color:#09090b; text-decoration:none; }
+.btn-dk-ghost  { display:inline-flex; align-items:center; gap:8px; padding:0.9rem 1.8rem; border:1px solid rgba(255,255,255,0.15); color:rgba(255,255,255,0.65); font-weight:700; font-size:0.84rem; border-radius:6px; transition:border-color 0.2s,color 0.2s; text-decoration:none; }
+.btn-dk-ghost:hover { border-color:rgba(255,255,255,0.45); color:#fff; text-decoration:none; }
+.btn-lt-primary { display:inline-flex; align-items:center; gap:8px; padding:0.9rem 1.8rem; background:#09090b; color:#f4f4f5; font-weight:800; font-size:0.84rem; border-radius:6px; transition:background 0.2s,transform 0.2s; text-decoration:none; }
+.btn-lt-primary:hover { background:#27272a; transform:translateY(-1px); color:#f4f4f5; text-decoration:none; }
+.btn-lt-ghost  { display:inline-flex; align-items:center; gap:8px; padding:0.9rem 1.8rem; border:1px solid var(--lt-b); color:var(--lt-mut); font-weight:700; font-size:0.84rem; border-radius:6px; transition:border-color 0.2s,color 0.2s; text-decoration:none; }
+.btn-lt-ghost:hover { border-color:var(--lt-txt); color:var(--lt-txt); text-decoration:none; }
+
+/* Solution cards */
+.sol-card {
+  background:var(--lt); border:1px solid var(--lt-b); border-radius:8px;
+  padding:2rem 1.75rem; display:flex; flex-direction:column; gap:0.75rem;
+  text-decoration:none; transition:border-color 0.2s,box-shadow 0.2s,transform 0.2s;
+}
+.sol-card:hover { border-color:var(--blue); box-shadow:0 4px 24px rgba(0,0,0,0.06); transform:translateY(-2px); text-decoration:none; }
+.sol-card-num  { font-size:10px; font-weight:900; letter-spacing:0.14em; text-transform:uppercase; }
+.sol-card-title { font-size:1.1rem; font-weight:900; color:var(--lt-txt); letter-spacing:-0.02em; line-height:1.2; }
+.sol-card-body  { font-size:0.83rem; color:var(--lt-mut); line-height:1.7; flex:1; }
+.sol-card-link  { font-size:11px; font-weight:800; letter-spacing:0.06em; text-transform:uppercase; display:inline-flex; align-items:center; gap:4px; }
+
+/* How it works steps */
+.hiw-step { display:flex; gap:1.5rem; align-items:flex-start; padding:2rem 0; border-bottom:1px solid var(--dk-b); }
+.hiw-step:last-child { border-bottom:none; }
+.hiw-num { width:40px; height:40px; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:900; letter-spacing:0.04em; }
+.hiw-title { font-size:1rem; font-weight:800; color:var(--dk-txt); margin-bottom:0.35rem; }
+.hiw-body  { font-size:0.84rem; color:var(--dk-mut); line-height:1.65; }
+
+/* Platform tag */
+.ptag { display:inline-flex; align-items:center; gap:5px; font-size:10px; font-weight:700; color:var(--lt-mut); border:1px solid var(--lt-b); padding:0.22rem 0.55rem; border-radius:4px; }
+</style>
+
 <main>
-    <!-- Hero Section -->
-    <section class="min-h-[80vh] flex items-center justify-center relative overflow-hidden bg-white">
-        <div class="absolute inset-0 overflow-hidden">
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 blur-[100px] animate-pulse"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-600/10 blur-[100px] animate-pulse" style="animation-delay: 1s;"></div>
+
+<!-- ═══════════════════════════════════════════
+     HERO — DARK
+═══════════════════════════════════════════ -->
+<section style="background:var(--dk);padding:8rem 0 6rem;position:relative;overflow:hidden;">
+    <div class="orb orb-blue"   style="width:700px;height:700px;top:50%;left:50%;transform:translate(-80%,-50%);opacity:0.8;"></div>
+    <div class="orb orb-orange" style="width:500px;height:500px;top:50%;left:50%;transform:translate(15%,-50%);opacity:0.7;"></div>
+    <div class="nx-grid-bg" style="position:absolute;inset:0;opacity:0.5;pointer-events:none;"></div>
+
+    <div class="nx-wrap" style="position:relative;z-index:1;text-align:center;">
+        <p class="nx-label" style="color:var(--dk-mut);margin-bottom:1.25rem;">Solutions</p>
+        <h1 style="font-size:clamp(3rem,7vw,6rem);font-weight:900;line-height:1;letter-spacing:-0.05em;color:var(--dk-txt);margin-bottom:1.5rem;">
+            Commerce intelligence<br/><span class="nx-grad">for every use case.</span>
+        </h1>
+        <p style="font-size:1rem;color:var(--dk-mut);max-width:30rem;margin:0 auto 2.5rem;line-height:1.7;">
+            Price, stock, ranking, Buy Box, catalogue — every signal you need to compete on the Indian digital shelf, across every platform.
+        </p>
+        <div style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:0.75rem;">
+            <a href="https://app.getnextract.com/register" class="btn-dk-primary">Start free — first month included <i class="ri-arrow-right-line"></i></a>
+            <a href="{{ '/contact/' | relative_url }}" class="btn-dk-ghost">Talk to us</a>
         </div>
-        
-        <div class="container mx-auto px-6 max-w-7xl relative z-10">
-            <div class="max-w-5xl mx-auto text-center">
-                <div class="text-sm font-bold text-orange-600 uppercase tracking-widest mb-6">Services</div>
-                <h1 class="text-6xl md:text-8xl font-black text-gray-900 mb-8 leading-[0.9] tracking-tight">
-                    Custom<br/>
-                    <span class="bg-gradient-to-r from-orange-600 to-orange-600 bg-clip-text text-transparent">Solutions</span>
-                </h1>
-                <p class="text-2xl md:text-3xl text-gray-600 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
-                    Tailored scraping solutions built specifically for your needs.<br/>
-                    <span class="font-semibold text-gray-900">Dedicated team, ongoing support, Professional.</span>
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     SOLUTIONS GRID — LIGHT
+═══════════════════════════════════════════ -->
+<section style="background:var(--lt1);padding:5rem 0;border-top:1px solid var(--lt-b);">
+    <div class="nx-wrap">
+
+        <div style="margin-bottom:3rem;">
+            <p class="nx-label" style="color:var(--lt-mut);margin-bottom:0.75rem;">Use cases</p>
+            <h2 class="nx-h2" style="color:var(--lt-txt);">What teams use Nextract for.</h2>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;" class="sol-grid">
+
+            <a href="{{ '/buy-box-monitoring/' | relative_url }}" class="sol-card">
+                <div class="sol-card-num" style="color:var(--blue);">01</div>
+                <div class="sol-card-title">Price Intelligence</div>
+                <div class="sol-card-body">Track competitor prices in real time. Monitor Buy Box ownership, identify pricing gaps, and feed repricing engines automatically. React before you lose the sale.</div>
+                <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin:0.25rem 0;">
+                    <span class="ptag"><i class="ri-price-tag-3-line"></i> Buy Box</span>
+                    <span class="ptag"><i class="ri-line-chart-line"></i> Price history</span>
+                    <span class="ptag"><i class="ri-alert-line"></i> Alerts</span>
+                </div>
+                <div class="sol-card-link" style="color:var(--blue);">Learn more <i class="ri-arrow-right-line"></i></div>
+            </a>
+
+            <a href="{{ '/catalogue-monitoring/' | relative_url }}" class="sol-card">
+                <div class="sol-card-num" style="color:var(--orange);">02</div>
+                <div class="sol-card-title">Catalogue Monitoring</div>
+                <div class="sol-card-body">Track availability, content accuracy, ratings and reviews across every marketplace listing. Catch suppressed listings, content drift, and stock-outs before they impact your rank.</div>
+                <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin:0.25rem 0;">
+                    <span class="ptag"><i class="ri-store-line"></i> Availability</span>
+                    <span class="ptag"><i class="ri-file-text-line"></i> Content audit</span>
+                    <span class="ptag"><i class="ri-star-line"></i> Ratings</span>
+                </div>
+                <div class="sol-card-link" style="color:var(--orange);">Learn more <i class="ri-arrow-right-line"></i></div>
+            </a>
+
+            <a href="{{ '/share-of-search/' | relative_url }}" class="sol-card">
+                <div class="sol-card-num" style="color:#8b5cf6;">03</div>
+                <div class="sol-card-title">Share of Search</div>
+                <div class="sol-card-body">Keyword rankings, listing density, brand visibility — know exactly where you stand against competitors on every search result page. Track organic and sponsored positions.</div>
+                <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin:0.25rem 0;">
+                    <span class="ptag"><i class="ri-search-line"></i> Keyword rank</span>
+                    <span class="ptag"><i class="ri-bar-chart-line"></i> Brand share</span>
+                    <span class="ptag"><i class="ri-focus-3-line"></i> Sponsored</span>
+                </div>
+                <div class="sol-card-link" style="color:#8b5cf6;">Learn more <i class="ri-arrow-right-line"></i></div>
+            </a>
+
+            <a href="{{ '/fmcg-digital-shelf/' | relative_url }}" class="sol-card">
+                <div class="sol-card-num" style="color:var(--green);">04</div>
+                <div class="sol-card-title">FMCG Digital Shelf</div>
+                <div class="sol-card-body">PIN-level stock, shelf position, and promo detection across Blinkit, Zepto, Instamart, and BigBasket. Built for FMCG brands that need dark store–level visibility.</div>
+                <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin:0.25rem 0;">
+                    <span class="ptag"><i class="ri-map-pin-line"></i> PIN-level</span>
+                    <span class="ptag"><i class="ri-flashlight-line"></i> Dark stores</span>
+                    <span class="ptag"><i class="ri-timer-line"></i> ETA tracking</span>
+                </div>
+                <div class="sol-card-link" style="color:var(--green);">Learn more <i class="ri-arrow-right-line"></i></div>
+            </a>
+
+            <div class="sol-card" style="cursor:default;">
+                <div class="sol-card-num" style="color:var(--blue);">05</div>
+                <div class="sol-card-title">Competitor Intelligence</div>
+                <div class="sol-card-body">Track your category in full — new entrants, assortment changes, pricing moves, rating velocity. Spot threats and opportunities before they move the needle against you.</div>
+                <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin:0.25rem 0;">
+                    <span class="ptag"><i class="ri-eye-line"></i> Category view</span>
+                    <span class="ptag"><i class="ri-user-search-line"></i> Competitor ASINs</span>
+                    <span class="ptag"><i class="ri-trophy-line"></i> Rank delta</span>
+                </div>
+                <div class="sol-card-link" style="color:var(--blue);">Coming soon <i class="ri-time-line"></i></div>
+            </div>
+
+            <div class="sol-card" style="cursor:default;">
+                <div class="sol-card-num" style="color:var(--orange);">06</div>
+                <div class="sol-card-title">Custom Data Pipelines</div>
+                <div class="sol-card-body">Need a marketplace or data type we don't cover yet? We build custom integrations for enterprise teams — describe your use case and we'll scope it with you within 48 hours.</div>
+                <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin:0.25rem 0;">
+                    <span class="ptag"><i class="ri-tools-line"></i> Custom build</span>
+                    <span class="ptag"><i class="ri-code-s-slash-line"></i> API delivery</span>
+                    <span class="ptag"><i class="ri-customer-service-2-line"></i> Managed</span>
+                </div>
+                <a href="{{ '/contact/' | relative_url }}" class="sol-card-link" style="color:var(--orange);">Request a build <i class="ri-arrow-right-line"></i></a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     PLATFORMS COVERED — LIGHT
+═══════════════════════════════════════════ -->
+<section style="background:var(--lt);padding:5rem 0;border-top:1px solid var(--lt-b);">
+    <div class="nx-wrap">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;" class="plat-grid">
+            <div>
+                <p class="nx-label" style="color:var(--lt-mut);margin-bottom:1rem;">Coverage</p>
+                <h2 class="nx-h2" style="color:var(--lt-txt);margin-bottom:1.25rem;">Every shelf.<br/>Every platform.</h2>
+                <p style="font-size:0.88rem;color:var(--lt-mut);line-height:1.75;margin-bottom:1.5rem;">
+                    One integration covers the full Indian commerce landscape — e-commerce giants, quick commerce apps, and electronics/lifestyle retail. Same API, same schema, same credit model across all of them.
                 </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 mb-8">
-                    <a href="/contact/" class="group relative px-10 py-5 bg-gray-900 text-white font-bold text-lg overflow-hidden">
-                        <span class="relative z-10 flex items-center gap-2">
-                            Get Custom Quote
-                            <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
-                        </span>
-                        <div class="absolute inset-0 bg-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-                    </a>
-                    <a href="/products/" class="px-10 py-5 border-2 border-gray-900 text-gray-900 font-bold text-lg hover:bg-gray-900 hover:text-white transition-all">
-                        View Self-Service API
-                    </a>
+                <a href="{{ '/contact/' | relative_url }}" style="font-size:11px;font-weight:800;color:var(--blue);letter-spacing:0.06em;text-transform:uppercase;display:inline-flex;align-items:center;gap:4px;">Request a platform <i class="ri-add-line"></i></a>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--lt-b);border:1px solid var(--lt-b);">
+                <div style="background:var(--lt);padding:1.25rem 1.5rem;display:flex;align-items:center;gap:0.75rem;">
+                    <i class="ri-shopping-cart-line" style="font-size:16px;color:var(--blue);flex-shrink:0;"></i>
+                    <div><div style="font-size:0.82rem;font-weight:800;color:var(--lt-txt);">Amazon</div><div style="font-size:10px;color:var(--lt-mut);font-weight:600;">E-commerce</div></div>
                 </div>
-                <div class="mt-8 p-6 bg-orange-50 border-l-4 border-orange-600 max-w-3xl mx-auto">
-                    <p class="text-lg text-gray-700">
-                        <strong class="text-gray-900">Prefer self-service?</strong> Check out our <a href="/products/" class="text-orange-600 font-semibold">self-service API</a> for instant access and pay-as-you-go pricing.
-                    </p>
+                <div style="background:var(--lt);padding:1.25rem 1.5rem;display:flex;align-items:center;gap:0.75rem;">
+                    <i class="ri-shopping-bag-line" style="font-size:16px;color:var(--blue);flex-shrink:0;"></i>
+                    <div><div style="font-size:0.82rem;font-weight:800;color:var(--lt-txt);">Flipkart</div><div style="font-size:10px;color:var(--lt-mut);font-weight:600;">E-commerce</div></div>
+                </div>
+                <div style="background:var(--lt);padding:1.25rem 1.5rem;display:flex;align-items:center;gap:0.75rem;">
+                    <i class="ri-flashlight-line" style="font-size:16px;color:var(--green);flex-shrink:0;"></i>
+                    <div><div style="font-size:0.82rem;font-weight:800;color:var(--lt-txt);">Blinkit</div><div style="font-size:10px;color:var(--lt-mut);font-weight:600;">Quick commerce</div></div>
+                </div>
+                <div style="background:var(--lt);padding:1.25rem 1.5rem;display:flex;align-items:center;gap:0.75rem;">
+                    <i class="ri-timer-flash-line" style="font-size:16px;color:var(--green);flex-shrink:0;"></i>
+                    <div><div style="font-size:0.82rem;font-weight:800;color:var(--lt-txt);">Zepto</div><div style="font-size:10px;color:var(--lt-mut);font-weight:600;">Quick commerce</div></div>
+                </div>
+                <div style="background:var(--lt);padding:1.25rem 1.5rem;display:flex;align-items:center;gap:0.75rem;">
+                    <i class="ri-bike-line" style="font-size:16px;color:var(--green);flex-shrink:0;"></i>
+                    <div><div style="font-size:0.82rem;font-weight:800;color:var(--lt-txt);">Swiggy Instamart</div><div style="font-size:10px;color:var(--lt-mut);font-weight:600;">Quick commerce</div></div>
+                </div>
+                <div style="background:var(--lt);padding:1.25rem 1.5rem;display:flex;align-items:center;gap:0.75rem;">
+                    <i class="ri-store-line" style="font-size:16px;color:var(--green);flex-shrink:0;"></i>
+                    <div><div style="font-size:0.82rem;font-weight:800;color:var(--lt-txt);">BigBasket</div><div style="font-size:10px;color:var(--lt-mut);font-weight:600;">Grocery</div></div>
+                </div>
+                <div style="background:var(--lt);padding:1.25rem 1.5rem;display:flex;align-items:center;gap:0.75rem;">
+                    <i class="ri-store-3-line" style="font-size:16px;color:var(--blue);flex-shrink:0;"></i>
+                    <div><div style="font-size:0.82rem;font-weight:800;color:var(--lt-txt);">JioMart</div><div style="font-size:10px;color:var(--lt-mut);font-weight:600;">E-commerce</div></div>
+                </div>
+                <div style="background:var(--lt);padding:1.25rem 1.5rem;display:flex;align-items:center;gap:0.75rem;">
+                    <i class="ri-computer-line" style="font-size:16px;color:var(--orange);flex-shrink:0;"></i>
+                    <div><div style="font-size:0.82rem;font-weight:800;color:var(--lt-txt);">Croma</div><div style="font-size:10px;color:var(--lt-mut);font-weight:600;">Electronics</div></div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Solutions -->
-    <section class="py-32 bg-white">
-        <div class="container mx-auto px-6 max-w-7xl">
-            <div class="mb-12 p-10 bg-gray-50 border-l-4 border-orange-600">
-                <h3 class="text-3xl font-bold text-gray-900 mb-4">Custom Scraping Solutions</h3>
-                <p class="text-lg text-gray-700 mb-6">
-                    Not every data need fits a standard API. Our custom solutions are built specifically for your unique requirements, with dedicated engineering teams and ongoing support.
+
+<!-- ═══════════════════════════════════════════
+     HOW IT FITS — DARK
+═══════════════════════════════════════════ -->
+<section style="background:var(--dk);padding:5rem 0;position:relative;overflow:hidden;">
+    <div class="orb orb-blue" style="width:500px;height:500px;top:0;right:0;transform:translate(30%,-30%);opacity:0.6;"></div>
+    <div class="nx-grid-bg" style="position:absolute;inset:0;opacity:0.5;pointer-events:none;"></div>
+
+    <div class="nx-wrap" style="position:relative;z-index:1;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;" class="hiw-grid">
+            <div>
+                <p class="nx-label" style="color:var(--dk-mut);margin-bottom:1rem;">How it works</p>
+                <h2 class="nx-h2" style="color:var(--dk-txt);margin-bottom:1.5rem;">Data in.<br/>Decisions out.</h2>
+                <p style="font-size:0.88rem;color:var(--dk-mut);line-height:1.75;margin-bottom:2rem;">
+                    Nextract sits between you and the marketplaces. We handle the crawling, parsing, normalisation, and delivery — you get clean, structured data in whichever format your team already uses.
                 </p>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <div class="font-bold text-gray-900 mb-2">What We Build:</div>
-                        <ul class="text-gray-600 space-y-2">
-                            <li>• Custom data pipelines for complex sources</li>
-                            <li>• Enterprise integrations with your systems</li>
-                            <li>• Mobile app data extraction solutions</li>
-                            <li>• White-label platforms for your customers</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <div class="font-bold text-gray-900 mb-2">What You Get:</div>
-                        <ul class="text-gray-600 space-y-2">
-                            <li>• Dedicated engineering team</li>
-                            <li>• 24/7 monitoring & maintenance</li>
-                            <li>• Custom reporting & dashboards</li>
-                            <li>• Ongoing optimization & support</li>
-                        </ul>
-                    </div>
+                <div style="display:flex;flex-wrap:wrap;gap:0.65rem;">
+                    <a href="https://app.getnextract.com/register" class="btn-dk-primary">Start free <i class="ri-arrow-right-line"></i></a>
+                    <a href="{{ '/apis/' | relative_url }}" class="btn-dk-ghost">API docs</a>
                 </div>
             </div>
-
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="group p-10 border border-gray-200 hover:border-orange-600 transition-all bg-white hover:bg-gray-50">
-                    <div class="text-5xl font-black text-orange-600 mb-6">01</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Custom Development</h3>
-                    <p class="text-gray-600 leading-relaxed text-lg mb-6">Tailor-made extraction from any website, handling anti-bot measures and complex JavaScript.</p>
-                    <ul class="space-y-3 text-gray-600">
-                        <li class="flex items-center gap-2">
-                            <div class="w-1.5 h-1.5 bg-orange-600"></div>
-                            <span>Any data source</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <div class="w-1.5 h-1.5 bg-orange-600"></div>
-                            <span>High Data Quality</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <div class="w-1.5 h-1.5 bg-orange-600"></div>
-                            <span>Multiple delivery options</span>
-                        </li>
-                    </ul>
+            <div>
+                <div class="hiw-step">
+                    <div class="hiw-num" style="background:rgba(59,130,246,0.12);color:var(--blue);">01</div>
+                    <div>
+                        <div class="hiw-title">Connect once</div>
+                        <div class="hiw-body">One API key, one schema. Works across Amazon, Flipkart, Blinkit, Zepto, and every other covered platform without separate integrations.</div>
+                    </div>
                 </div>
-
-                <div class="group p-10 border-2 border-orange-600 bg-white hover:bg-gray-50 transition-all">
-                    <div class="text-xs font-bold text-orange-600 mb-4">POPULAR</div>
-                    <div class="text-5xl font-black text-orange-600 mb-6">02</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Managed Services</h3>
-                    <p class="text-gray-600 leading-relaxed text-lg mb-6">We handle everything: infrastructure, monitoring, maintenance, and optimization.</p>
-                    <ul class="space-y-3 text-gray-600">
-                        <li class="flex items-center gap-2">
-                            <div class="w-1.5 h-1.5 bg-orange-600"></div>
-                            <span>24/7 monitoring</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <div class="w-1.5 h-1.5 bg-orange-600"></div>
-                            <span>Automatic updates</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <div class="w-1.5 h-1.5 bg-orange-600"></div>
-                            <span>Performance optimization</span>
-                        </li>
-                    </ul>
+                <div class="hiw-step">
+                    <div class="hiw-num" style="background:rgba(249,115,22,0.1);color:var(--orange);">02</div>
+                    <div>
+                        <div class="hiw-title">Query or schedule</div>
+                        <div class="hiw-body">Make real-time API calls for instant data, run bulk catalogue jobs asynchronously, or set up cron-style scheduled fetches and receive Excel files automatically.</div>
+                    </div>
                 </div>
-
-                <div class="group p-10 border border-gray-200 hover:border-orange-600 transition-all bg-white hover:bg-gray-50">
-                    <div class="text-5xl font-black text-orange-600 mb-6">03</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Consulting & Strategy</h3>
-                    <p class="text-gray-600 leading-relaxed text-lg mb-6">Expert guidance on data extraction strategy, architecture, and best practices.</p>
-                    <ul class="space-y-3 text-gray-600">
-                        <li class="flex items-center gap-2">
-                            <div class="w-1.5 h-1.5 bg-orange-600"></div>
-                            <span>Data strategy consulting</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <div class="w-1.5 h-1.5 bg-orange-600"></div>
-                            <span>Architecture design</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <div class="w-1.5 h-1.5 bg-orange-600"></div>
-                            <span>Best practices & training</span>
-                        </li>
-                    </ul>
+                <div class="hiw-step">
+                    <div class="hiw-num" style="background:rgba(34,197,94,0.1);color:var(--green);">03</div>
+                    <div>
+                        <div class="hiw-title">Act on clean data</div>
+                        <div class="hiw-body">Every response is normalised JSON — same field names, same formats, regardless of platform. Pipe it into your BI tool, warehouse, dashboard, or repricing engine.</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-    
-    <!-- Use Cases -->
-    <section class="py-32 bg-gray-50">
-        <div class="container mx-auto px-6 max-w-7xl">
-            <div class="mb-20">
-                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Use Cases</div>
-                <h2 class="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-tight">Common<br/>Applications</h2>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="p-8 border border-gray-200 hover:border-blue-600 transition-all group">
-                    <div class="text-4xl font-black text-blue-600 mb-4 group-hover:scale-110 transition-transform inline-block">→</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Price Intelligence</h3>
-                    <p class="text-gray-600">Monitor competitor pricing in real-time</p>
-                </div>
-                <div class="p-8 border border-gray-200 hover:border-blue-600 transition-all group">
-                    <div class="text-4xl font-black text-blue-600 mb-4 group-hover:scale-110 transition-transform inline-block">→</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Lead Generation</h3>
-                    <p class="text-gray-600">Extract contact information at scale</p>
-                </div>
-                <div class="p-8 border border-gray-200 hover:border-blue-600 transition-all group">
-                    <div class="text-4xl font-black text-blue-600 mb-4 group-hover:scale-110 transition-transform inline-block">→</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Market Research</h3>
-                    <p class="text-gray-600">Gather market insights and trends</p>
-                </div>
-                <div class="p-8 border border-gray-200 hover:border-orange-600 transition-all group">
-                    <div class="text-4xl font-black text-orange-600 mb-4 group-hover:scale-110 transition-transform inline-block">→</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Product Monitoring</h3>
-                    <p class="text-gray-600">Track product availability and reviews</p>
-                </div>
-                <div class="p-8 border border-gray-200 hover:border-blue-600 transition-all group">
-                    <div class="text-4xl font-black text-blue-600 mb-4 group-hover:scale-110 transition-transform inline-block">→</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Content Aggregation</h3>
-                    <p class="text-gray-600">Collect content from multiple sources</p>
-                </div>
-                <div class="p-8 border border-gray-200 hover:border-orange-600 transition-all group">
-                    <div class="text-4xl font-black text-orange-600 mb-4 group-hover:scale-110 transition-transform inline-block">→</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Brand Monitoring</h3>
-                    <p class="text-gray-600">Track brand mentions and sentiment</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
 
-    {% include contact-section.html %}
+
+<!-- ═══════════════════════════════════════════
+     FINAL CTA — DARK
+═══════════════════════════════════════════ -->
+<section style="background:var(--dk1);padding:7rem 0;position:relative;overflow:hidden;border-top:1px solid var(--dk-b);">
+    <div class="orb orb-orange" style="width:600px;height:600px;top:50%;left:50%;transform:translate(10%,-50%);opacity:0.7;"></div>
+    <div class="nx-grid-bg" style="position:absolute;inset:0;opacity:0.5;pointer-events:none;"></div>
+
+    <div class="nx-wrap" style="position:relative;z-index:1;text-align:center;">
+        <p class="nx-label" style="color:var(--dk-mut);margin-bottom:1rem;">Get started</p>
+        <h2 style="font-size:clamp(2.5rem,6vw,5rem);font-weight:900;letter-spacing:-0.05em;color:var(--dk-txt);line-height:1;margin-bottom:1.5rem;">
+            Start tracking.<br/><span class="nx-grad">Today.</span>
+        </h2>
+        <p style="font-size:1rem;color:var(--dk-mut);max-width:26rem;margin:0 auto 2.5rem;line-height:1.7;">
+            5,000 credits free your first month — no card required. Or tell us your use case and we'll help you get set up.
+        </p>
+        <div style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:0.75rem;">
+            <a href="https://app.getnextract.com/register" class="btn-dk-primary">Start free <i class="ri-arrow-right-line"></i></a>
+            <a href="{{ '/contact/' | relative_url }}" class="btn-dk-ghost">Talk to us</a>
+            <a href="{{ '/pricing/' | relative_url }}" class="btn-dk-ghost">View pricing</a>
+        </div>
+    </div>
+</section>
+
 </main>
+
+<style>
+@media(max-width:860px){
+    .sol-grid   { grid-template-columns:1fr 1fr !important; }
+    .plat-grid  { grid-template-columns:1fr !important; }
+    .hiw-grid   { grid-template-columns:1fr !important; }
+}
+@media(max-width:540px){
+    .sol-grid { grid-template-columns:1fr !important; }
+}
+.sol-card,.sol-card:hover,.sol-card:focus { text-decoration:none !important; }
+.sol-card .sol-card-title { color:var(--lt-txt) !important; }
+</style>

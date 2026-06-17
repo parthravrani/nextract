@@ -1,184 +1,193 @@
 ---
 layout: default
-title: "Web Scraping Case Studies & Success Stories"
-description: "Real client success stories: 61% reduction in failed deliveries, #12 to #3 ranking improvement, 72% error reduction. See how Nextract delivers results."
-keywords: "web scraping case studies, data extraction case studies, success stories, client testimonials, web scraping results, data scraping case studies, e-commerce scraping case studies"
-og_description: "Nextract case studies: Real results from real clients. 61% delivery improvement, ranking boosts, error reduction. See success stories."
-twitter_description: "Web scraping case studies with real results. 61% delivery improvement, ranking boosts. See how clients succeed with Nextract."
+title: "How Teams Use Nextract — Commerce Intelligence in Action"
+description: "See how FMCG brands, D2C sellers, category managers, and analytics teams use Nextract to track prices, stock, and competitor activity across 30+ marketplaces."
+keywords: "nextract case studies, commerce intelligence use cases, ecommerce data examples, price tracking results, FMCG data intelligence, D2C competitor monitoring"
+permalink: /case-studies/
+og_title: "How Teams Use Nextract"
+og_description: "Real use cases: how FMCG brands, D2C sellers, and analytics teams use Nextract for price tracking, catalogue monitoring, and competitor intelligence."
 ---
 
-<main>
-    <!-- Hero Section -->
-    <section class="min-h-[60vh] flex items-center justify-center relative overflow-hidden bg-white">
-        <div class="absolute inset-0 overflow-hidden">
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 blur-[100px] animate-pulse"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-600/10 blur-[100px] animate-pulse" style="animation-delay: 1s;"></div>
-        </div>
-        
-        <div class="container mx-auto px-6 max-w-7xl relative z-10">
-            <div class="max-w-5xl mx-auto text-center">
-                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-6">Case Studies</div>
-                <h1 class="text-6xl md:text-8xl font-black text-gray-900 mb-8 leading-[0.9] tracking-tight">
-                    Real Results<br/>
-                    <span class="bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent">Real Impact</span>
-                </h1>
-                <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
-                    See how we've helped businesses unlock competitive advantages<br/>
-                    <span class="font-semibold text-gray-900">through data intelligence.</span>
-                </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-                    <a href="/contact/" class="group relative px-10 py-5 bg-gray-900 text-white font-bold text-lg overflow-hidden">
-                        <span class="relative z-10 flex items-center gap-2">
-                            Get Similar Results
-                            <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
-                        </span>
-                        <div class="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-                    </a>
-                    <a href="/testimonials/" class="px-10 py-5 border-2 border-gray-900 text-gray-900 font-bold text-lg hover:bg-gray-900 hover:text-white transition-all">
-                        Read Testimonials
-                    </a>
+{% include sol-styles.html %}
+
+<style>
+.cs-card {
+    border: 1px solid #e4e4e7;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+.cs-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.07); border-color: #c4c4ca; }
+.cs-card-body { padding: 1.75rem; flex: 1; }
+.cs-tag {
+    display: inline-flex; align-items: center;
+    font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 0.2rem 0.65rem; border-radius: 999px;
+    background: #f4f4f5; color: #52525b; border: 1px solid #e4e4e7;
+}
+.cs-stats {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    border-top: 1px solid #f0f0f0;
+}
+.cs-stat {
+    padding: 1rem 0.75rem;
+    text-align: center;
+    border-right: 1px solid #f0f0f0;
+}
+.cs-stat:last-child { border-right: none; }
+.cs-stat-num {
+    font-size: 1.6rem; font-weight: 900; letter-spacing: -0.04em;
+    color: #09090b; line-height: 1;
+}
+.cs-stat-word {
+    font-size: 0.78rem; font-weight: 700; letter-spacing: 0.01em;
+    color: #09090b; line-height: 1.2;
+}
+.cs-stat-lbl {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.06em;
+    text-transform: uppercase; color: #a1a1aa; margin-top: 0.3rem;
+}
+.cs-accent { color: var(--blue); }
+</style>
+
+<!-- HERO -->
+<section style="background:var(--dk);color:#fff;padding:7rem 0 5rem;position:relative;">
+    <div style="background:radial-gradient(ellipse at 70% 20%, rgba(59,130,246,0.18) 0%, transparent 55%),var(--dk);position:absolute;inset:0;"></div>
+    <div class="nx-wrap" style="position:relative;z-index:1;">
+        <div class="nx-label" style="color:#52525b;">Use cases</div>
+        <h1 style="font-size:clamp(2.4rem,5vw,3.8rem);font-weight:900;line-height:1.1;letter-spacing:-0.03em;max-width:720px;margin-bottom:1.25rem;">
+            How teams use<br/>
+            <span class="nx-grad">Nextract in practice.</span>
+        </h1>
+        <p style="font-size:1.05rem;color:#d4d4d8;max-width:580px;line-height:1.8;">
+            From FMCG brands tracking shelf presence to D2C sellers watching competitor pricing — here's how different teams put Nextract's commerce data to work.
+        </p>
+    </div>
+</section>
+
+<!-- USE CASES -->
+<section style="background:#fafafa;padding:5rem 0;">
+    <div class="nx-wrap">
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem;">
+
+            <!-- Case 1: FMCG brand -->
+            <div class="cs-card">
+                <div class="cs-card-body">
+                    <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:1rem;flex-wrap:wrap;">
+                        <span class="cs-tag">FMCG Brand</span>
+                        <span class="cs-tag">Quick Commerce</span>
+                    </div>
+                    <h3 style="font-size:1rem;font-weight:800;color:#09090b;line-height:1.35;margin-bottom:0.75rem;">"We found out our product was out of stock on Zepto in 3 cities — before our distributor did."</h3>
+                    <p style="font-size:0.845rem;color:#71717a;line-height:1.72;">An FMCG personal care brand uses Nextract's digital shelf monitoring to track pincode-level availability across Blinkit, Zepto, and Swiggy Instamart daily. Stock alerts are routed directly to the supply chain team's Slack channel — no manual checking.</p>
+                </div>
+                <div class="cs-stats">
+                    <div class="cs-stat"><div class="cs-stat-num cs-accent">3</div><div class="cs-stat-lbl">Platforms</div></div>
+                    <div class="cs-stat"><div class="cs-stat-word">Daily</div><div class="cs-stat-lbl">Refresh</div></div>
+                    <div class="cs-stat"><div class="cs-stat-word">API</div><div class="cs-stat-lbl">Delivery</div></div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Case Studies Grid -->
-    <section class="py-32 bg-white">
-        <div class="container mx-auto px-6 max-w-7xl">
-            <div class="grid md:grid-cols-2 gap-8">
-                
-                <!-- Case Study 1: Amazon Reviews -->
-                <a href="/case-studies/amazon-reviews-competitive-gold/" class="group block p-10 border border-gray-200 hover:border-blue-600 transition-all bg-white hover:bg-gray-50 no-underline">
-                    <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">E-commerce</div>
-                    <h2 class="text-3xl font-black text-gray-900 mb-4 no-underline">Turning Amazon Reviews Into Competitive Gold</h2>
-                    <p class="text-lg text-gray-600 mb-6">How We Helped a Brand Outmaneuver Competitors Without Guesswork</p>
-                    <div class="pt-6 border-t border-gray-200 flex items-center justify-between">
-                        <div>
-                            <div class="text-xs text-gray-600 mb-2">Client:</div>
-                            <div class="text-sm font-semibold text-gray-900">Growing regional dairy company</div>
-                        </div>
-                        <span class="text-blue-600 font-bold text-sm group-hover:translate-x-1 transition-transform">Read Story →</span>
+            <!-- Case 2: D2C brand -->
+            <div class="cs-card">
+                <div class="cs-card-body">
+                    <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:1rem;flex-wrap:wrap;">
+                        <span class="cs-tag">D2C Brand</span>
+                        <span class="cs-tag">Price Intelligence</span>
                     </div>
-                </a>
-
-                <!-- Case Study 2: Grab Taxi -->
-                <a href="/case-studies/grab-taxi-fleet-intelligence/" class="group block p-10 border border-gray-200 hover:border-blue-600 transition-all bg-white hover:bg-gray-50 no-underline">
-                    <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Transportation</div>
-                    <h2 class="text-3xl font-black text-gray-900 mb-4 no-underline">Grab Taxi Fleet Intelligence</h2>
-                    <p class="text-lg text-gray-600 mb-6">Real-Time Pricing & Availability Delivered Every 15 Minutes</p>
-                    <div class="pt-6 border-t border-gray-200 flex items-center justify-between">
-                        <div>
-                            <div class="text-xs text-gray-600 mb-2">Client:</div>
-                            <div class="text-sm font-semibold text-gray-900">Transportation analytics firm</div>
-                        </div>
-                        <span class="text-blue-600 font-bold text-sm group-hover:translate-x-1 transition-transform">Read Story →</span>
-                    </div>
-                </a>
-
-                <!-- Case Study 3: Travel Intelligence -->
-                <a href="/case-studies/precision-travel-intelligence/" class="group block p-10 border border-gray-200 hover:border-orange-600 transition-all bg-white hover:bg-gray-50 no-underline">
-                    <div class="text-sm font-bold text-orange-600 uppercase tracking-widest mb-4">Travel</div>
-                    <h2 class="text-3xl font-black text-gray-900 mb-4 no-underline">Precision Travel Intelligence</h2>
-                    <p class="text-lg text-gray-600 mb-6">How We Delivered Comprehensive Flight & Hotel Data for Strategic Booking Decisions</p>
-                    <div class="pt-6 border-t border-gray-200 flex items-center justify-between">
-                        <div>
-                            <div class="text-xs text-gray-600 mb-2">Client:</div>
-                            <div class="text-sm font-semibold text-gray-900">Corporate travel manager</div>
-                        </div>
-                        <span class="text-orange-600 font-bold text-sm group-hover:translate-x-1 transition-transform">Read Story →</span>
-                    </div>
-                </a>
-
-                <!-- Case Study 4: Quick Commerce -->
-                <a href="/case-studies/quick-commerce-delivery-zones/" class="group block p-10 border border-gray-200 hover:border-blue-600 transition-all bg-white hover:bg-gray-50 no-underline">
-                    <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Quick Commerce</div>
-                    <h2 class="text-3xl font-black text-gray-900 mb-4 no-underline">Cracking the Code of Quick Commerce Delivery Zones</h2>
-                    <p class="text-lg text-gray-600 mb-6">How We Helped a Grocery Startup Avoid Failed Deliveries with Street-Level Intelligence</p>
-                    <div class="pt-6 border-t border-gray-200 flex items-center justify-between">
-                        <div>
-                            <div class="text-xs text-gray-600 mb-2">Client:</div>
-                            <div class="text-sm font-semibold text-gray-900">Grocery delivery startup</div>
-                        </div>
-                        <span class="text-blue-600 font-bold text-sm group-hover:translate-x-1 transition-transform">Read Story →</span>
-                    </div>
-                </a>
-
-                <!-- Case Study 5: DoorDash -->
-                <a href="/case-studies/doordash-restaurant-data/" class="group block p-10 border border-gray-200 hover:border-orange-600 transition-all bg-white hover:bg-gray-50 no-underline">
-                    <div class="text-sm font-bold text-orange-600 uppercase tracking-widest mb-4">Food Delivery</div>
-                    <h2 class="text-3xl font-black text-gray-900 mb-4 no-underline">Unlocking Real-Time DoorDash Restaurant Data</h2>
-                    <p class="text-lg text-gray-600 mb-6">How We Empowered a Restaurant Group with Unfiltered Access to Operational Insights</p>
-                    <div class="pt-6 border-t border-gray-200 flex items-center justify-between">
-                        <div>
-                            <div class="text-xs text-gray-600 mb-2">Client:</div>
-                            <div class="text-sm font-semibold text-gray-900">Taco chain restaurant group</div>
-                        </div>
-                        <span class="text-orange-600 font-bold text-sm group-hover:translate-x-1 transition-transform">Read Story →</span>
-                    </div>
-                </a>
-
-                <!-- Case Study 6: Restaurant Delivery -->
-                <a href="/case-studies/restaurant-dominated-delivery/" class="group block p-10 border border-gray-200 hover:border-blue-600 transition-all bg-white hover:bg-gray-50 no-underline">
-                    <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Restaurant</div>
-                    <h2 class="text-3xl font-black text-gray-900 mb-4 no-underline">How a Restaurant Dominated Food Delivery</h2>
-                    <p class="text-lg text-gray-600 mb-6">Climbed from #12 to #3 by Reading Between the Reviews</p>
-                    <div class="pt-6 border-t border-gray-200 flex items-center justify-between">
-                        <div>
-                            <div class="text-xs text-gray-600 mb-2">Client:</div>
-                            <div class="text-sm font-semibold text-gray-900">Well-known Indian restaurant</div>
-                        </div>
-                        <span class="text-blue-600 font-bold text-sm group-hover:translate-x-1 transition-transform">Read Story →</span>
-                    </div>
-                </a>
-
-                <!-- Case Study 7: Hunger Station -->
-                <a href="/case-studies/mobile-restaurant-intelligence/" class="group block p-10 border border-gray-200 hover:border-orange-600 transition-all bg-white hover:bg-gray-50 no-underline">
-                    <div class="text-sm font-bold text-orange-600 uppercase tracking-widest mb-4">Mobile Intelligence</div>
-                    <h2 class="text-3xl font-black text-gray-900 mb-4 no-underline">Mobile-Only Restaurant Intelligence</h2>
-                    <p class="text-lg text-gray-600 mb-6">How We Built a Real-Time Data Pipeline from Hidden App Sources</p>
-                    <div class="pt-6 border-t border-gray-200 flex items-center justify-between">
-                        <div>
-                            <div class="text-xs text-gray-600 mb-2">Client:</div>
-                            <div class="text-sm font-semibold text-gray-900">Restaurant intelligence firm</div>
-                        </div>
-                        <span class="text-orange-600 font-bold text-sm group-hover:translate-x-1 transition-transform">Read Story →</span>
-                    </div>
-                </a>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="py-32 pb-40 bg-gray-900 text-white">
-        <div class="container mx-auto px-6 max-w-7xl">
-            <div class="mb-20">
-                <div class="text-sm font-bold text-blue-400 uppercase tracking-widest mb-4">Impact</div>
-                <h2 class="text-5xl md:text-7xl font-black mb-6 leading-tight">Results That<br/>Speak</h2>
-            </div>
-            
-            <div class="grid grid-cols-2 gap-12 md:gap-16">
-                <div class="flex flex-col">
-                    <div class="text-7xl md:text-8xl font-black text-blue-600 mb-3 leading-none">61%</div>
-                    <div class="text-gray-400 text-lg">Reduction in Failed Deliveries</div>
+                    <h3 style="font-size:1rem;font-weight:800;color:#09090b;line-height:1.35;margin-bottom:0.75rem;">"We repriced 400 SKUs every Monday morning based on Friday's competitive data."</h3>
+                    <p style="font-size:0.845rem;color:#71717a;line-height:1.72;">A D2C kitchenware brand pulls weekly competitor pricing via the Nextract API and feeds it into their internal pricing tool. Their pricing team reviews and applies changes — without building or maintaining any scraper infrastructure.</p>
                 </div>
-                <div class="flex flex-col">
-                    <div class="text-7xl md:text-8xl font-black mb-3 leading-none whitespace-nowrap">
-                        <span class="text-blue-600">#12</span><span class="text-orange-600">→#3</span>
-                    </div>
-                    <div class="text-gray-400 text-lg">Ranking Improvement</div>
-                </div>
-                <div class="flex flex-col">
-                    <div class="text-7xl md:text-8xl font-black text-orange-600 mb-3 leading-none">72%</div>
-                    <div class="text-gray-400 text-lg">Drop in Errors</div>
-                </div>
-                <div class="flex flex-col">
-                    <div class="text-7xl md:text-8xl font-black text-orange-600 mb-3 leading-none">3.5x</div>
-                    <div class="text-gray-400 text-lg">Upsell Increase</div>
+                <div class="cs-stats">
+                    <div class="cs-stat"><div class="cs-stat-num cs-accent">400+</div><div class="cs-stat-lbl">SKUs tracked</div></div>
+                    <div class="cs-stat"><div class="cs-stat-word">Weekly</div><div class="cs-stat-lbl">Reports</div></div>
+                    <div class="cs-stat"><div class="cs-stat-word">Excel</div><div class="cs-stat-lbl">Delivery</div></div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    {% include contact-section.html %}
-</main>
+            <!-- Case 3: Category manager -->
+            <div class="cs-card">
+                <div class="cs-card-body">
+                    <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:1rem;flex-wrap:wrap;">
+                        <span class="cs-tag">Category Manager</span>
+                        <span class="cs-tag">Amazon · Flipkart</span>
+                    </div>
+                    <h3 style="font-size:1rem;font-weight:800;color:#09090b;line-height:1.35;margin-bottom:0.75rem;">"Share of search finally became a number we could bring into a review meeting."</h3>
+                    <p style="font-size:0.845rem;color:#71717a;line-height:1.72;">A category manager at a FMCG distributor uses Nextract's share-of-search tracking to report brand keyword rankings weekly in leadership reviews. Trend visibility replaced manual screenshot collections.</p>
+                </div>
+                <div class="cs-stats">
+                    <div class="cs-stat"><div class="cs-stat-num cs-accent">2</div><div class="cs-stat-lbl">Platforms</div></div>
+                    <div class="cs-stat"><div class="cs-stat-num cs-accent">60+</div><div class="cs-stat-lbl">Keywords</div></div>
+                    <div class="cs-stat"><div class="cs-stat-word">Dashboard</div><div class="cs-stat-lbl">Delivery</div></div>
+                </div>
+            </div>
+
+            <!-- Case 4: Analytics team -->
+            <div class="cs-card">
+                <div class="cs-card-body">
+                    <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:1rem;flex-wrap:wrap;">
+                        <span class="cs-tag">Analytics Team</span>
+                        <span class="cs-tag">Enterprise</span>
+                    </div>
+                    <h3 style="font-size:1rem;font-weight:800;color:#09090b;line-height:1.35;margin-bottom:0.75rem;">"We replaced a 3-person data ops task with a scheduled Nextract feed into our warehouse."</h3>
+                    <p style="font-size:0.845rem;color:#71717a;line-height:1.72;">A data team at a retail analytics firm receives daily structured data directly to their S3 bucket via Nextract's enterprise delivery. Their Looker dashboards refresh automatically — no manual data pulls.</p>
+                </div>
+                <div class="cs-stats">
+                    <div class="cs-stat"><div class="cs-stat-word">S3</div><div class="cs-stat-lbl">Destination</div></div>
+                    <div class="cs-stat"><div class="cs-stat-num cs-accent">8+</div><div class="cs-stat-lbl">Platforms</div></div>
+                    <div class="cs-stat"><div class="cs-stat-word">Daily</div><div class="cs-stat-lbl">Refresh</div></div>
+                </div>
+            </div>
+
+            <!-- Case 5: Agency -->
+            <div class="cs-card">
+                <div class="cs-card-body">
+                    <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:1rem;flex-wrap:wrap;">
+                        <span class="cs-tag">Retail Agency</span>
+                        <span class="cs-tag">Multi-brand</span>
+                    </div>
+                    <h3 style="font-size:1rem;font-weight:800;color:#09090b;line-height:1.35;margin-bottom:0.75rem;">"We now include competitive pricing benchmarks in every client report — automatically."</h3>
+                    <p style="font-size:0.845rem;color:#71717a;line-height:1.72;">A retail media agency uses Nextract's API to pull competitor data for 12 brand clients, generating automated Excel reports per client each Monday. One subscription replaces individual scraper projects per client.</p>
+                </div>
+                <div class="cs-stats">
+                    <div class="cs-stat"><div class="cs-stat-num cs-accent">12</div><div class="cs-stat-lbl">Brand clients</div></div>
+                    <div class="cs-stat"><div class="cs-stat-word">Weekly</div><div class="cs-stat-lbl">Reports</div></div>
+                    <div class="cs-stat"><div class="cs-stat-word">API</div><div class="cs-stat-lbl">Delivery</div></div>
+                </div>
+            </div>
+
+            <!-- Case 6: ML team -->
+            <div class="cs-card">
+                <div class="cs-card-body">
+                    <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:1rem;flex-wrap:wrap;">
+                        <span class="cs-tag">AI / ML Team</span>
+                        <span class="cs-tag">Enterprise</span>
+                    </div>
+                    <h3 style="font-size:1rem;font-weight:800;color:#09090b;line-height:1.35;margin-bottom:0.75rem;">"Training a pricing model needs price data — Nextract gave us a structured feed we could actually use."</h3>
+                    <p style="font-size:0.845rem;color:#71717a;line-height:1.72;">An ML team building an internal pricing model uses Nextract's enterprise delivery to receive structured price and product data in JSON Lines format. The consistent schema eliminated all pre-processing work.</p>
+                </div>
+                <div class="cs-stats">
+                    <div class="cs-stat"><div class="cs-stat-word">JSON</div><div class="cs-stat-lbl">Format</div></div>
+                    <div class="cs-stat"><div class="cs-stat-num cs-accent">5+</div><div class="cs-stat-lbl">Platforms</div></div>
+                    <div class="cs-stat"><div class="cs-stat-word">BigQuery</div><div class="cs-stat-lbl">Destination</div></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section style="background:var(--dk);padding:5rem 0;">
+    <div class="nx-wrap" style="text-align:center;">
+        <div class="nx-label" style="color:#52525b;text-align:center;margin-bottom:0.75rem;">Your use case</div>
+        <h2 style="font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;letter-spacing:-0.03em;color:#f4f4f5;margin-bottom:1rem;">What would you track?</h2>
+        <p style="color:#71717a;font-size:0.95rem;margin-bottom:2rem;max-width:420px;margin-left:auto;margin-right:auto;line-height:1.7;">Start with 5,000 free credits and see what the data looks like for your products.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;">
+            <a href="https://app.getnextract.com/register" class="btn-dk-primary">Start free — first month included <i class="ri-arrow-right-line"></i></a>
+            <a href="{{ '/enterprise/' | relative_url }}" class="btn-dk-ghost">Enterprise options</a>
+        </div>
+    </div>
+</section>

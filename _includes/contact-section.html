@@ -1,24 +1,25 @@
-<section id="contact-shared" class="py-32 bg-gray-900 text-white">
-    <div class="container mx-auto px-6 max-w-7xl text-center">
-        <h2 class="text-5xl md:text-7xl font-black mb-8 leading-tight">
-            <span class="text-gray-300">Ready to</span><br/>
-            <span class="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">Get Started?</span>
+<section id="contact-shared" style="background:#09090b;padding:7rem 0;position:relative;overflow:hidden;">
+    <div style="position:absolute;border-radius:50%;pointer-events:none;filter:blur(80px);width:600px;height:600px;top:50%;left:50%;transform:translate(-80%,-50%);background:radial-gradient(circle,rgba(59,130,246,0.18) 0%,transparent 70%);"></div>
+    <div style="position:absolute;border-radius:50%;pointer-events:none;filter:blur(80px);width:500px;height:500px;top:50%;left:50%;transform:translate(15%,-50%);background:radial-gradient(circle,rgba(249,115,22,0.12) 0%,transparent 70%);"></div>
+    <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.024) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.024) 1px,transparent 1px);background-size:80px 80px;opacity:0.5;pointer-events:none;"></div>
+
+    <div style="max-width:1280px;margin:0 auto;padding:0 1.5rem;position:relative;z-index:1;text-align:center;">
+        <p style="font-size:10px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#71717a;margin-bottom:1rem;">Ready?</p>
+        <h2 style="font-size:clamp(2.5rem,6vw,5rem);font-weight:900;line-height:1;letter-spacing:-0.05em;color:#f4f4f5;margin-bottom:1.5rem;">
+            Start free.<br/><span style="background:linear-gradient(110deg,#3b82f6 0%,#8b5cf6 48%,#f97316 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Scale when ready.</span>
         </h2>
-        <p class="text-xl text-gray-200 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Get in touch and we'll help you find the right solution for your data needs.
+        <p style="font-size:1rem;color:#71717a;max-width:26rem;margin:0 auto 2.5rem;line-height:1.7;">
+            5,000 credits free your first month — no card required. Or book a call and we'll walk you through your use case.
         </p>
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="/contact/" class="px-10 py-5 bg-white text-gray-900 font-bold text-lg hover:bg-blue-600 hover:text-white transition-all inline-flex items-center gap-2">
-                Contact Us
-                <i class="ri-arrow-right-line"></i>
+        <div style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:0.75rem;">
+            <a href="https://app.getnextract.com/register" style="display:inline-flex;align-items:center;gap:8px;padding:0.9rem 1.8rem;background:#f4f4f5;color:#09090b;font-weight:800;font-size:0.84rem;border-radius:6px;transition:background 0.2s;text-decoration:none;" onmouseover="this.style.background='#fff'" onmouseout="this.style.background='#f4f4f5'">
+                Create free account <i class="ri-arrow-right-line"></i>
             </a>
-            <a href="https://calendly.com/parthravrani/30min" target="_blank" class="px-10 py-5 border-2 border-white text-white font-bold text-lg hover:bg-white hover:text-gray-900 transition-all inline-flex items-center gap-2">
-                <i class="ri-calendar-line"></i>
-                Schedule a Call
+            <a href="{{ '/contact/' | relative_url }}" style="display:inline-flex;align-items:center;gap:8px;padding:0.9rem 1.8rem;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.65);font-weight:700;font-size:0.84rem;border-radius:6px;transition:border-color 0.2s,color 0.2s;text-decoration:none;" onmouseover="this.style.borderColor='rgba(255,255,255,0.45)';this.style.color='white'" onmouseout="this.style.borderColor='rgba(255,255,255,0.15)';this.style.color='rgba(255,255,255,0.65)'">
+                Talk to us
             </a>
-            <a href="{{ '/assets/deck/Nextract - Pitch Deck.pdf' | relative_url }}" download="Nextract-Pitch-Deck.pdf" class="px-10 py-5 border-2 border-white text-white font-bold text-lg hover:bg-white hover:text-gray-900 transition-all inline-flex items-center gap-2">
-                <i class="ri-download-line"></i>
-                Download Pitch Deck
+            <a href="{{ '/enterprise/' | relative_url }}" style="display:inline-flex;align-items:center;gap:8px;padding:0.9rem 1.8rem;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.65);font-weight:700;font-size:0.84rem;border-radius:6px;transition:border-color 0.2s,color 0.2s;text-decoration:none;" onmouseover="this.style.borderColor='rgba(255,255,255,0.45)';this.style.color='white'" onmouseout="this.style.borderColor='rgba(255,255,255,0.15)';this.style.color='rgba(255,255,255,0.65)'">
+                <i class="ri-building-line"></i> Enterprise solutions
             </a>
         </div>
     </div>

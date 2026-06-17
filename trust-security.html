@@ -1,98 +1,148 @@
 ---
 layout: default
-title: "Trust & Security"
-description: "Learn about Nextract's commitment to data security, privacy, compliance (GDPR, CCPA), and ethical web scraping practices."
+title: "Trust & Security — Nextract"
+description: "How Nextract handles data security, privacy, compliance, and ethical data practices. AWS and Cloudflare infrastructure. GDPR-aligned. Public marketplace data only."
+keywords: "nextract security, data privacy nextract, gdpr commerce data api, ethical data extraction india"
+og_description: "Nextract's commitment to security, privacy, compliance, and ethical data practices."
+permalink: /trust-security/
 ---
 
+<style>
+:root {
+  --dk:#09090b; --dk1:#0f0f12; --dk-b:rgba(255,255,255,0.07);
+  --dk-txt:#f4f4f5; --dk-mut:#71717a;
+  --lt:#ffffff; --lt1:#fafafa; --lt-b:#e4e4e7;
+  --lt-txt:#09090b; --lt-mut:#71717a;
+  --blue:#3b82f6; --orange:#f97316; --green:#22c55e;
+}
+.nx-wrap  { max-width:1280px; margin:0 auto; padding:0 1.5rem; }
+.nx-label { font-size:10px; font-weight:800; letter-spacing:0.18em; text-transform:uppercase; }
+.nx-grad  { background:linear-gradient(110deg,var(--blue) 0%,#8b5cf6 48%,var(--orange) 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.orb { position:absolute; border-radius:50%; pointer-events:none; filter:blur(80px); }
+.orb-blue { background:radial-gradient(circle,rgba(59,130,246,0.2) 0%,transparent 70%); }
+.nx-grid-bg { background-image:linear-gradient(rgba(255,255,255,0.024) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.024) 1px,transparent 1px); background-size:80px 80px; }
+
+.ts-card { background:var(--lt); border:1px solid var(--lt-b); border-radius:8px; padding:2rem 1.75rem; }
+.ts-icon { width:40px; height:40px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:18px; margin-bottom:1rem; flex-shrink:0; }
+.ts-title { font-size:1rem; font-weight:900; color:var(--lt-txt); letter-spacing:-0.02em; margin-bottom:0.5rem; }
+.ts-body  { font-size:0.83rem; color:var(--lt-mut); line-height:1.7; }
+
+.ts-pill { display:inline-flex; align-items:center; gap:6px; font-size:10px; font-weight:800; padding:0.3rem 0.75rem; border-radius:4px; }
+</style>
+
 <main>
-    <!-- Hero Section -->
-    <section class="min-h-[60vh] flex items-center justify-center relative overflow-hidden bg-white">
-        <div class="absolute inset-0 overflow-hidden">
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 blur-[100px] animate-pulse"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-600/10 blur-[100px] animate-pulse" style="animation-delay: 1s;"></div>
-        </div>
-        
-        <div class="container mx-auto px-6 max-w-7xl relative z-10">
-            <div class="max-w-5xl mx-auto text-center">
-                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-6">Security</div>
-                <h1 class="text-6xl md:text-8xl font-black text-gray-900 mb-8 leading-[0.9] tracking-tight">
-                    Trust &<br/>
-                    <span class="bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent">Security</span>
-                </h1>
-                <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
-                    A commitment to security and ethical practices<br/>
-                    <span class="font-semibold text-gray-900">you can rely on.</span>
-                </p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Content Section -->
-    <section class="py-32 bg-white">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <p class="text-center text-gray-600 mb-16 text-sm">Last updated: {{ 'now' | date: "%B %d, %Y" }}</p>
-            
-            <div class="space-y-12">
-                <div>
-                    <h2 class="text-3xl font-black text-gray-900 mb-6">Security, Privacy, and Compliance</h2>
-                    <p class="text-gray-600 leading-relaxed text-lg">At Nextract, we prioritize the security and integrity of your data. We adhere to stringent data protection practices, comply with all applicable legal standards, and maintain ethical web scraping procedures. This page outlines our commitment to safeguarding your information and ensuring responsible data acquisition.</p>
-                </div>
-                
-                <div>
-                    <h2 class="text-3xl font-black text-gray-900 mb-6">Data Privacy and Protection</h2>
-                    <p class="text-gray-600 leading-relaxed text-lg">We implement measures to protect your data. This includes following principles of GDPR and CCPA, data encryption during transmission, and secure data retention policies. We only store data as required by our contracts and policies, ensuring minimal retention for your security. <a href="{{ '/privacy/' | relative_url }}" class="text-blue-600 hover:underline font-semibold">Privacy Policy</a></p>
-                </div>
-                
-                <div>
-                    <h2 class="text-3xl font-black text-gray-900 mb-6">Commitment to Compliance</h2>
-                    <p class="text-gray-600 leading-relaxed text-lg mb-6">Our services are designed with data protection in mind, respecting the principles of GDPR and CCPA. We leverage the secure infrastructure of AWS and Cloudflare to ensure protection. We aim to follow all local and international data protection guidelines. <a href="{{ '/compliance/' | relative_url }}" class="text-blue-600 hover:underline font-semibold">Legal Compliance Details</a></p>
-                    
-                    <!-- Compliance Status Details -->
-                    <div class="bg-gray-50 border border-gray-200 rounded-xl p-8 mt-8">
-                        <h3 class="text-xl font-bold text-gray-900 mb-6">Current Progress</h3>
-                        <div class="space-y-6">
-                            <div class="flex items-start gap-4">
-                                <div class="flex-shrink-0 w-3 h-3 bg-yellow-500 rounded-full mt-2"></div>
-                                <div>
-                                    <h4 class="font-bold text-gray-900 mb-2">GDPR Commitment</h4>
-                                    <p class="text-gray-600 text-sm">Nextract is committed to data privacy. We are currently working towards full GDPR compliance, ensuring proper handling and protection of personal data according to international best practices.</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-4">
-                                <div class="flex-shrink-0 w-3 h-3 bg-blue-500 rounded-full mt-2"></div>
-                                <div>
-                                    <h4 class="font-bold text-gray-900 mb-2">Security Best Practices</h4>
-                                    <p class="text-gray-600 text-sm">We implement industry-standard security measures, including data encryption and secure infrastructure, to protect your information and ensure the integrity of our data services.</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-4">
-                                <div class="flex-shrink-0 w-3 h-3 bg-green-500 rounded-full mt-2"></div>
-                                <div>
-                                    <h4 class="font-bold text-gray-900 mb-2">Ethical Data Extraction</h4>
-                                    <p class="text-gray-600 text-sm">Our primary focus is on ethical web scraping. We respect platform guidelines, robots.txt, and focus on publicly available data extraction for legitimate business intelligence.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div>
-                    <h2 class="text-3xl font-black text-gray-900 mb-6">Ethical Web Scraping Practices</h2>
-                    <p class="text-gray-600 leading-relaxed text-lg">We are committed to ethical data acquisition. This includes respecting robots.txt files, adhering to website terms of use, and ensuring all data is collected responsibly and legally. <a href="{{ '/terms/' | relative_url }}" class="text-blue-600 hover:underline font-semibold">Terms of Service</a></p>
-                </div>
-                
-                <div>
-                    <h2 class="text-3xl font-black text-gray-900 mb-6">Service Reliability</h2>
-                    <p class="text-gray-600 leading-relaxed text-lg">We are committed to providing reliable data extraction services. We focus on consistent performance and high uptime for our clients. <a href="{{ '/sla/' | relative_url }}" class="text-blue-600 hover:underline font-semibold">SLA</a></p>
-                </div>
-                
-                <div>
-                    <h2 class="text-3xl font-black text-gray-900 mb-6">Contact Information</h2>
-                    <p class="text-gray-600 leading-relaxed text-lg">If you have any questions regarding our security, privacy, or compliance practices, please contact us at <a href="mailto:hello@nextract.dev" class="text-blue-600 hover:underline font-semibold">hello@nextract.dev</a></p>
+
+<!-- ═══════════════════════════════════════════
+     HERO — DARK
+═══════════════════════════════════════════ -->
+<section style="background:var(--dk);padding:8rem 0 6rem;position:relative;overflow:hidden;">
+    <div class="orb orb-blue" style="width:700px;height:700px;top:50%;left:50%;transform:translate(-80%,-50%);opacity:0.8;"></div>
+    <div style="position:absolute;border-radius:50%;pointer-events:none;filter:blur(80px);width:500px;height:500px;top:50%;left:50%;transform:translate(15%,-50%);background:radial-gradient(circle,rgba(249,115,22,0.15) 0%,transparent 70%);"></div>
+    <div class="nx-grid-bg" style="position:absolute;inset:0;opacity:0.5;pointer-events:none;"></div>
+
+    <div class="nx-wrap" style="position:relative;z-index:1;text-align:center;">
+        <p class="nx-label" style="color:var(--dk-mut);margin-bottom:1.25rem;">Trust & Security</p>
+        <h1 style="font-size:clamp(3rem,7vw,5.5rem);font-weight:900;line-height:1;letter-spacing:-0.05em;color:var(--dk-txt);margin-bottom:1.5rem;">
+            Built to be<br/><span class="nx-grad">trusted.</span>
+        </h1>
+        <p style="font-size:1rem;color:var(--dk-mut);max-width:30rem;margin:0 auto 2rem;line-height:1.7;">
+            How we protect your account, handle data responsibly, and operate as an ethical commerce intelligence platform.
+        </p>
+        <p style="font-size:11px;color:var(--dk-mut);">Last updated: {{ 'now' | date: "%B %d, %Y" }}</p>
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     STATUS PILLS — LIGHT
+═══════════════════════════════════════════ -->
+<section style="background:var(--lt1);padding:3rem 0;border-top:1px solid var(--lt-b);border-bottom:1px solid var(--lt-b);">
+    <div class="nx-wrap">
+        <div style="display:flex;align-items:center;flex-wrap:wrap;gap:0.75rem;justify-content:center;">
+            <div class="ts-pill" style="background:rgba(34,197,94,0.08);color:var(--green);border:1px solid rgba(34,197,94,0.2);"><i class="ri-checkbox-circle-line"></i> AWS infrastructure</div>
+            <div class="ts-pill" style="background:rgba(34,197,94,0.08);color:var(--green);border:1px solid rgba(34,197,94,0.2);"><i class="ri-checkbox-circle-line"></i> Cloudflare-protected</div>
+            <div class="ts-pill" style="background:rgba(34,197,94,0.08);color:var(--green);border:1px solid rgba(34,197,94,0.2);"><i class="ri-checkbox-circle-line"></i> HTTPS everywhere</div>
+            <div class="ts-pill" style="background:rgba(34,197,94,0.08);color:var(--green);border:1px solid rgba(34,197,94,0.2);"><i class="ri-checkbox-circle-line"></i> Public data only</div>
+            <div class="ts-pill" style="background:rgba(234,179,8,0.08);color:#a16207;border:1px solid rgba(234,179,8,0.2);"><i class="ri-time-line"></i> GDPR-aligned (in progress)</div>
         </div>
     </div>
-        </div>
-    </section>
+</section>
 
-    {% include contact-section.html %}
+
+<!-- ═══════════════════════════════════════════
+     CONTENT — LIGHT
+═══════════════════════════════════════════ -->
+<section style="background:var(--lt);padding:5rem 0;">
+    <div class="nx-wrap" style="max-width:900px;">
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;" class="ts-grid">
+
+            <div class="ts-card">
+                <div class="ts-icon" style="background:rgba(59,130,246,0.08);color:var(--blue);"><i class="ri-lock-line"></i></div>
+                <div class="ts-title">Account & API security</div>
+                <div class="ts-body">All API keys are scoped, rotatable, and transmitted over HTTPS only. Credentials are hashed at rest. Sessions are token-based with short expiry. You can revoke any key instantly from your dashboard.</div>
+            </div>
+
+            <div class="ts-card">
+                <div class="ts-icon" style="background:rgba(34,197,94,0.08);color:var(--green);"><i class="ri-shield-check-line"></i></div>
+                <div class="ts-title">Infrastructure</div>
+                <div class="ts-body">Nextract runs on AWS with Cloudflare in front for DDoS protection, WAF, and rate limiting. Data in transit is encrypted via TLS 1.2+. Storage is encrypted at rest using AES-256.</div>
+            </div>
+
+            <div class="ts-card">
+                <div class="ts-icon" style="background:rgba(249,115,22,0.08);color:var(--orange);"><i class="ri-eye-off-line"></i></div>
+                <div class="ts-title">Data privacy</div>
+                <div class="ts-body">We collect only what's necessary to operate the platform — your email, billing info, and API usage. We don't sell your data or share it with third parties outside of essential service providers. See our <a href="{{ '/privacy/' | relative_url }}" style="color:var(--blue);font-weight:700;">Privacy Policy</a>.</div>
+            </div>
+
+            <div class="ts-card">
+                <div class="ts-icon" style="background:rgba(139,92,246,0.08);color:#8b5cf6;"><i class="ri-scales-line"></i></div>
+                <div class="ts-title">Compliance</div>
+                <div class="ts-body">We follow GDPR principles for all user account data — lawful basis, data minimisation, and right to deletion. We are working toward full certification. For enterprise compliance questions, reach out directly. See <a href="{{ '/compliance/' | relative_url }}" style="color:var(--blue);font-weight:700;">compliance details</a>.</div>
+            </div>
+
+            <div class="ts-card">
+                <div class="ts-icon" style="background:rgba(59,130,246,0.08);color:var(--blue);"><i class="ri-database-line"></i></div>
+                <div class="ts-title">What data we collect</div>
+                <div class="ts-body">Nextract collects publicly available product data from marketplaces — prices, titles, stock status, rankings, and seller info. We do not collect personal consumer data. All sources are publicly accessible without authentication.</div>
+            </div>
+
+            <div class="ts-card">
+                <div class="ts-icon" style="background:rgba(34,197,94,0.08);color:var(--green);"><i class="ri-robot-line"></i></div>
+                <div class="ts-title">Ethical data practices</div>
+                <div class="ts-body">We respect platform guidelines, rate limits, and terms of service. Our crawlers use managed proxy rotation with human-like pacing — not brute-force scraping. We focus exclusively on publicly available commerce data for legitimate business intelligence.</div>
+            </div>
+
+        </div>
+
+        <!-- Reliability block -->
+        <div style="background:var(--lt1);border:1px solid var(--lt-b);border-radius:8px;padding:2rem 2.25rem;">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem;">
+                <div style="width:40px;height:40px;border-radius:8px;background:rgba(59,130,246,0.08);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;"><i class="ri-pulse-line"></i></div>
+                <div class="ts-title" style="margin:0;">Service reliability</div>
+            </div>
+            <div class="ts-body" style="margin-bottom:1rem;">We operate 24/7 crawl infrastructure with automated retries, failover, and alerting. API uptime is monitored continuously. For service level commitments, see our <a href="{{ '/sla/' | relative_url }}" style="color:var(--blue);font-weight:700;">SLA</a>.</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.65rem;">
+                <div class="ts-pill" style="background:rgba(34,197,94,0.06);color:var(--green);border:1px solid rgba(34,197,94,0.15);"><i class="ri-checkbox-circle-line"></i> 24/7 crawl monitoring</div>
+                <div class="ts-pill" style="background:rgba(34,197,94,0.06);color:var(--green);border:1px solid rgba(34,197,94,0.15);"><i class="ri-checkbox-circle-line"></i> Automated retries on failure</div>
+                <div class="ts-pill" style="background:rgba(34,197,94,0.06);color:var(--green);border:1px solid rgba(34,197,94,0.15);"><i class="ri-checkbox-circle-line"></i> Status page</div>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div style="margin-top:2rem;padding:1.5rem 2rem;border:1px solid var(--lt-b);border-radius:8px;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;justify-content:space-between;">
+            <div>
+                <div style="font-size:0.88rem;font-weight:800;color:var(--lt-txt);margin-bottom:0.25rem;">Security questions or concerns?</div>
+                <div style="font-size:0.82rem;color:var(--lt-mut);">Reach us at <a href="mailto:hello@nextract.dev" style="color:var(--blue);font-weight:700;">hello@nextract.dev</a> — we reply within 2 hours on business days.</div>
+            </div>
+            <a href="{{ '/contact/' | relative_url }}" style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:800;color:var(--blue);letter-spacing:0.04em;white-space:nowrap;">Contact us <i class="ri-arrow-right-line"></i></a>
+        </div>
+
+    </div>
+</section>
+
 </main>
+
+<style>
+@media(max-width:640px){ .ts-grid { grid-template-columns:1fr !important; } }
+</style>

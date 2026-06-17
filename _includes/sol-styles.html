@@ -1,0 +1,86 @@
+<style>
+/* ── base design tokens (shared across all solution pages) ── */
+:root {
+  --dk:     #09090b; --dk1: #0f0f12;
+  --dk-b:   rgba(255,255,255,0.07);
+  --dk-txt: #f4f4f5; --dk-mut: #71717a; --dk-dim: #3f3f46;
+  --lt:     #ffffff; --lt1: #fafafa;
+  --lt-b:   #e4e4e7; --lt-txt: #09090b; --lt-mut: #71717a;
+  --blue:   #3b82f6; --orange: #f97316; --green: #22c55e;
+}
+.nx-wrap  { max-width:1280px; margin:0 auto; padding:0 1.5rem; }
+.nx-label { font-size:10px; font-weight:800; letter-spacing:0.18em; text-transform:uppercase; }
+.nx-h2    { font-size:clamp(2rem,4vw,3rem); font-weight:900; line-height:1; letter-spacing:-0.04em; }
+.nx-grad  {
+  background: linear-gradient(110deg,var(--blue) 0%,#8b5cf6 48%,var(--orange) 100%);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+}
+.orb { position:absolute; border-radius:50%; pointer-events:none; filter:blur(80px); }
+.orb-blue   { background:radial-gradient(circle,rgba(59,130,246,0.2) 0%,transparent 70%); }
+.orb-orange { background:radial-gradient(circle,rgba(249,115,22,0.15) 0%,transparent 70%); }
+.nx-grid-bg {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.024) 1px, transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,0.024) 1px,transparent 1px);
+  background-size:80px 80px;
+}
+.btn-dk-primary {
+  display:inline-flex; align-items:center; gap:8px;
+  padding:0.9rem 1.8rem; background:#f4f4f5; color:#09090b;
+  font-weight:800; font-size:0.84rem; border-radius:6px;
+  transition:background 0.2s,transform 0.2s; text-decoration:none;
+}
+.btn-dk-primary:hover { background:#fff; transform:translateY(-1px); color:#09090b; text-decoration:none; }
+.btn-dk-ghost {
+  display:inline-flex; align-items:center; gap:8px;
+  padding:0.9rem 1.8rem; border:1px solid rgba(255,255,255,0.15); color:rgba(255,255,255,0.65);
+  font-weight:700; font-size:0.84rem; border-radius:6px;
+  transition:border-color 0.2s,color 0.2s; text-decoration:none;
+}
+.btn-dk-ghost:hover { border-color:rgba(255,255,255,0.45); color:#fff; text-decoration:none; }
+.btn-lt-ghost {
+  display:inline-flex; align-items:center; gap:8px;
+  padding:0.9rem 1.8rem; border:1px solid var(--lt-b); color:var(--lt-mut);
+  font-weight:700; font-size:0.84rem; border-radius:6px;
+  transition:border-color 0.2s,color 0.2s; text-decoration:none;
+}
+.btn-lt-ghost:hover { border-color:var(--lt-txt); color:var(--lt-txt); text-decoration:none; }
+
+/* ── solution-page component styles ── */
+.sol-card {
+  background: var(--lt);
+  border: 1px solid var(--lt-b);
+  padding: 1.75rem;
+  transition: border-color 0.2s;
+}
+.sol-card:hover { border-color: var(--blue); }
+.sol-icon {
+  width: 44px; height: 44px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem; margin-bottom: 1rem; flex-shrink: 0;
+}
+.sol-card-title { font-size: 0.9rem; font-weight: 800; color: var(--lt-txt); margin-bottom: 0.5rem; letter-spacing: -0.02em; }
+.sol-card-body  { font-size: 0.82rem; color: var(--lt-mut); line-height: 1.65; margin: 0; }
+
+.sol-who {
+  background: var(--lt1); border-left: 3px solid var(--blue);
+  padding: 1.5rem 1.75rem;
+}
+.sol-who-orange { border-left-color: var(--orange); }
+.sol-who-title { font-size: 0.9rem; font-weight: 800; color: var(--lt-txt); margin: 0 0 0.5rem; }
+.sol-who-body  { font-size: 0.82rem; color: var(--lt-mut); line-height: 1.65; margin: 0; }
+
+.sol-related {
+  display: block; padding: 1.25rem 1.5rem;
+  background: var(--lt); border: 1px solid var(--lt-b);
+  text-decoration: none; transition: border-color 0.2s;
+}
+.sol-related:hover { border-color: var(--blue); }
+.sol-related-tag   { font-size: 10px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; }
+.sol-related-title { font-size: 0.88rem; font-weight: 800; color: var(--lt-txt); margin: 0.4rem 0 0.3rem; }
+.sol-related-body  { font-size: 0.8rem; color: var(--lt-mut); margin: 0; line-height: 1.5; }
+
+@media (max-width: 767px) {
+  .sol-2col, .sol-3col { grid-template-columns: 1fr !important; }
+}
+</style>

@@ -1,0 +1,325 @@
+---
+layout: default
+title: "Enterprise Solutions — Nextract"
+description: "When the standard platform isn't enough. Custom schemas, managed pipelines, bulk delivery, and enterprise SLAs — built on the same commerce intelligence infrastructure."
+keywords: "enterprise data solutions, custom commerce data, managed data pipelines, B2B data, FMCG enterprise, e-commerce data enterprise"
+permalink: /enterprise/
+og_title: "Nextract Enterprise — Commerce Data at Any Scale"
+og_description: "Custom schemas, managed pipelines, bulk data delivery, and enterprise SLAs — built for teams who need more than a SaaS plan."
+---
+
+{% include sol-styles.html %}
+
+<style>
+/* ── Enterprise Page ─────────────────── */
+.ent-hero {
+    background:
+        radial-gradient(ellipse at 75% 10%, rgba(59,130,246,0.22) 0%, transparent 55%),
+        radial-gradient(ellipse at 65% 90%, rgba(249,115,22,0.15) 0%, transparent 50%),
+        var(--dk);
+    color: #fff;
+    padding: 7rem 0 6rem;
+    position: relative;
+}
+
+.ent-card {
+    border: 1px solid rgba(255,255,255,0.07);
+    background: rgba(255,255,255,0.03);
+    border-radius: 12px;
+    padding: 2rem;
+}
+.ent-card i { font-size: 1.6rem; margin-bottom: 1rem; display: block; }
+
+.ent-compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+@media(max-width:640px) { .ent-compare { grid-template-columns: 1fr; } }
+
+.ent-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(59,130,246,0.12); color: #60a5fa;
+    border: 1px solid rgba(59,130,246,0.25);
+    border-radius: 999px; font-size: 11px; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 0.3rem 0.85rem; margin-bottom: 1.25rem;
+}
+
+.use-card {
+    background: #fff;
+    border: 1px solid #e4e4e7;
+    border-radius: 12px;
+    padding: 2rem 1.75rem;
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+.use-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.08); border-color: #c4c4ca; }
+.use-card i { font-size: 1.4rem; color: var(--blue); margin-bottom: 0.85rem; display: block; }
+
+.capability-row {
+    display: flex; align-items: flex-start; gap: 1.25rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.capability-row:last-child { border-bottom: none; }
+.cap-icon {
+    width: 40px; height: 40px; flex-shrink: 0;
+    border-radius: 8px; background: rgba(59,130,246,0.12);
+    display: flex; align-items: center; justify-content: center;
+    color: #60a5fa; font-size: 1.1rem;
+}
+
+.process-num {
+    font-size: 3rem; font-weight: 900;
+    color: rgba(255,255,255,0.06);
+    line-height: 1; margin-bottom: 1rem;
+}
+
+.sla-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 12px;
+    overflow: hidden;
+}
+.sla-item {
+    padding: 1.75rem 1.5rem;
+    border-right: 1px solid rgba(255,255,255,0.07);
+    text-align: center;
+}
+.sla-item:last-child { border-right: none; }
+.sla-val { font-size: 2rem; font-weight: 900; color: #f4f4f5; margin-bottom: 0.25rem; }
+.sla-lbl { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #52525b; }
+@media(max-width:768px) { .sla-grid { grid-template-columns: 1fr 1fr; } .sla-item:nth-child(2) { border-right: none; } .sla-item:nth-child(2),.sla-item:nth-child(4) { border-right: none; } }
+
+.client-type {
+    display: flex; align-items: center; gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 10px;
+    background: rgba(255,255,255,0.03);
+}
+</style>
+
+<!-- ░░ HERO ░░ -->
+<section class="ent-hero">
+    <div class="nx-wrap" style="position:relative;z-index:1;">
+        <span class="ent-badge"><i class="ri-building-line" style="font-size:inherit;margin:0;"></i> Enterprise</span>
+        <h1 style="font-size:clamp(2.4rem,5vw,4rem);font-weight:900;line-height:1.1;letter-spacing:-0.03em;max-width:780px;margin-bottom:1.5rem;">
+            When SaaS isn't enough —<br/>
+            <span class="nx-grad">we build around you.</span>
+        </h1>
+        <p style="font-size:1.1rem;color:#d4d4d8;max-width:620px;line-height:1.8;margin-bottom:2.5rem;">
+            Same Nextract infrastructure. Custom schemas, managed delivery, bulk extracts, dedicated SLAs, and white-glove onboarding — designed for teams with requirements that go beyond a standard plan.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:1rem;">
+            <a href="{{ '/contact/' | relative_url }}" class="btn-dk-primary">Talk to enterprise sales <i class="ri-arrow-right-line"></i></a>
+            <a href="{{ '/pricing/' | relative_url }}" class="btn-dk-ghost">See standard plans</a>
+        </div>
+        <p style="font-size:12px;color:#71717a;margin-top:1rem;">No commitment required — we'll scope it first.</p>
+    </div>
+</section>
+
+<!-- ░░ SAAS VS ENTERPRISE ░░ -->
+<section style="background:var(--dk);padding:4rem 0 5rem;border-top:1px solid rgba(255,255,255,0.05);">
+    <div class="nx-wrap">
+        <div class="nx-label" style="color:#52525b;">Which plan is right for you?</div>
+        <div class="ent-compare" style="margin-top:1.5rem;">
+            <!-- SaaS -->
+            <div class="ent-card" style="border-color:rgba(255,255,255,0.1);">
+                <div style="font-size:10px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:#52525b;margin-bottom:1rem;">Standard SaaS Plans</div>
+                <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.75rem;">
+                    <li style="display:flex;align-items:center;gap:0.6rem;font-size:0.88rem;color:#a1a1aa;"><i class="ri-check-line" style="color:#22c55e;font-size:1rem;"></i> Dashboard + API access</li>
+                    <li style="display:flex;align-items:center;gap:0.6rem;font-size:0.88rem;color:#a1a1aa;"><i class="ri-check-line" style="color:#22c55e;font-size:1rem;"></i> Pre-built schemas (price, rank, stock)</li>
+                    <li style="display:flex;align-items:center;gap:0.6rem;font-size:0.88rem;color:#a1a1aa;"><i class="ri-check-line" style="color:#22c55e;font-size:1rem;"></i> Up to millions of credits/month</li>
+                    <li style="display:flex;align-items:center;gap:0.6rem;font-size:0.88rem;color:#a1a1aa;"><i class="ri-check-line" style="color:#22c55e;font-size:1rem;"></i> Email + chat support</li>
+                    <li style="display:flex;align-items:center;gap:0.6rem;font-size:0.88rem;color:#a1a1aa;"><i class="ri-check-line" style="color:#22c55e;font-size:1rem;"></i> Standard SLA</li>
+                </ul>
+                <a href="{{ '/pricing/' | relative_url }}" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1.5rem;font-size:0.85rem;font-weight:700;color:#3b82f6;text-decoration:none;">
+                    View pricing <i class="ri-arrow-right-line"></i>
+                </a>
+            </div>
+            <!-- Enterprise -->
+            <div class="ent-card" style="border-color:rgba(59,130,246,0.3);background:rgba(59,130,246,0.05);">
+                <div style="font-size:10px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:#60a5fa;margin-bottom:1rem;">Enterprise &amp; Custom</div>
+                <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.75rem;">
+                    <li style="display:flex;align-items:center;gap:0.6rem;font-size:0.88rem;color:#a1a1aa;"><i class="ri-star-line" style="color:#f59e0b;font-size:1rem;"></i> Everything in SaaS, plus:</li>
+                    <li style="display:flex;align-items:center;gap:0.6rem;font-size:0.88rem;color:#a1a1aa;"><i class="ri-check-line" style="color:#60a5fa;font-size:1rem;"></i> Custom field schemas &amp; data models</li>
+                    <li style="display:flex;align-items:center;gap:0.6rem;font-size:0.88rem;color:#a1a1aa;"><i class="ri-check-line" style="color:#60a5fa;font-size:1rem;"></i> Managed delivery (S3, SFTP, Webhook)</li>
+                    <li style="display:flex;align-items:center;gap:0.6rem;font-size:0.88rem;color:#a1a1aa;"><i class="ri-check-line" style="color:#60a5fa;font-size:1rem;"></i> Bulk exports &amp; custom delivery cadence</li>
+                    <li style="display:flex;align-items:center;gap:0.6rem;font-size:0.88rem;color:#a1a1aa;"><i class="ri-check-line" style="color:#60a5fa;font-size:1rem;"></i> Dedicated Slack channel + named CSM</li>
+                    <li style="display:flex;align-items:center;gap:0.6rem;font-size:0.88rem;color:#a1a1aa;"><i class="ri-check-line" style="color:#60a5fa;font-size:1rem;"></i> 99.5% uptime SLA, custom MSA</li>
+                    <li style="display:flex;align-items:center;gap:0.6rem;font-size:0.88rem;color:#a1a1aa;"><i class="ri-check-line" style="color:#60a5fa;font-size:1rem;"></i> AI/ML training dataset delivery</li>
+                </ul>
+                <a href="{{ '/contact/' | relative_url }}" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1.5rem;font-size:0.85rem;font-weight:700;color:#60a5fa;text-decoration:none;">
+                    Talk to sales <i class="ri-arrow-right-line"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ░░ CAPABILITIES ░░ -->
+<section style="background:var(--dk);padding:5rem 0;border-top:1px solid rgba(255,255,255,0.05);">
+    <div class="nx-wrap">
+        <div class="nx-label" style="color:#52525b;">What enterprise unlocks</div>
+        <h2 class="nx-h2" style="color:#f4f4f5;max-width:540px;margin-bottom:3rem;">Everything the platform can do — customised for your team.</h2>
+
+        <div class="capability-row">
+            <div class="cap-icon"><i class="ri-database-2-line"></i></div>
+            <div>
+                <div style="font-size:0.95rem;font-weight:700;color:#f4f4f5;margin-bottom:0.35rem;">Custom Data Schemas</div>
+                <div style="font-size:0.875rem;color:#71717a;line-height:1.65;">Need fields the standard API doesn't include — EAN codes, seller ratings, bundle detection, image counts, A+ content flags? We model it exactly to your spec.</div>
+            </div>
+        </div>
+
+        <div class="capability-row">
+            <div class="cap-icon"><i class="ri-send-plane-line"></i></div>
+            <div>
+                <div style="font-size:0.95rem;font-weight:700;color:#f4f4f5;margin-bottom:0.35rem;">Managed Data Delivery</div>
+                <div style="font-size:0.875rem;color:#71717a;line-height:1.65;">Push fresh data directly to your S3 bucket, SFTP server, BigQuery dataset, or webhook endpoint — on whatever cadence your data pipeline needs.</div>
+            </div>
+        </div>
+
+        <div class="capability-row">
+            <div class="cap-icon"><i class="ri-file-transfer-line"></i></div>
+            <div>
+                <div style="font-size:0.95rem;font-weight:700;color:#f4f4f5;margin-bottom:0.35rem;">Bulk Exports &amp; Custom Cadence</div>
+                <div style="font-size:0.875rem;color:#71717a;line-height:1.65;">One-time bulk pulls or ongoing scheduled exports — daily, hourly, or event-triggered. Delivered in JSON, CSV, or Parquet to your preferred destination.</div>
+            </div>
+        </div>
+
+        <div class="capability-row">
+            <div class="cap-icon"><i class="ri-store-2-line"></i></div>
+            <div>
+                <div style="font-size:0.95rem;font-weight:700;color:#f4f4f5;margin-bottom:0.35rem;">New Platform Coverage on Request</div>
+                <div style="font-size:0.875rem;color:#71717a;line-height:1.65;">Don't see your marketplace listed? Enterprise contracts include coverage SLAs for adding new platforms — regional apps, B2B portals, or any catalogue you need tracked.</div>
+            </div>
+        </div>
+
+        <div class="capability-row">
+            <div class="cap-icon"><i class="ri-brain-line"></i></div>
+            <div>
+                <div style="font-size:0.95rem;font-weight:700;color:#f4f4f5;margin-bottom:0.35rem;">AI/ML Training Datasets</div>
+                <div style="font-size:0.875rem;color:#71717a;line-height:1.65;">Structured product titles, descriptions, images, pricing curves, and category taxonomies — cleaned, deduplicated, and delivered in the format your model expects.</div>
+            </div>
+        </div>
+
+        <div class="capability-row">
+            <div class="cap-icon"><i class="ri-shield-check-line"></i></div>
+            <div>
+                <div style="font-size:0.95rem;font-weight:700;color:#f4f4f5;margin-bottom:0.35rem;">Enterprise SLA &amp; Legal</div>
+                <div style="font-size:0.875rem;color:#71717a;line-height:1.65;">Custom MSA, DPA, and NDAs supported. Dedicated Slack channel, named CSM, and 99.5% uptime guarantee with financial remedies.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ░░ SLA NUMBERS ░░ -->
+<section style="background:var(--dk);padding:4rem 0 5rem;border-top:1px solid rgba(255,255,255,0.05);">
+    <div class="nx-wrap">
+        <div class="nx-label" style="color:#52525b;margin-bottom:1.5rem;">Service commitments</div>
+        <div class="sla-grid">
+            <div class="sla-item">
+                <div class="sla-val">99.5<span style="font-size:1rem;">%</span></div>
+                <div class="sla-lbl">Uptime SLA</div>
+            </div>
+            <div class="sla-item">
+                <div class="sla-val">&lt;4<span style="font-size:1rem;">h</span></div>
+                <div class="sla-lbl">Incident response</div>
+            </div>
+            <div class="sla-item">
+                <div class="sla-val">5<span style="font-size:1rem;">d</span></div>
+                <div class="sla-lbl">Onboarding SLA</div>
+            </div>
+            <div class="sla-item">
+                <div class="sla-val">1:1</div>
+                <div class="sla-lbl">Dedicated CSM</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ░░ WHO IT'S FOR ░░ -->
+<section style="background:#fafafa;padding:5rem 0;">
+    <div class="nx-wrap">
+        <div class="nx-label">Who uses Enterprise</div>
+        <h2 class="nx-h2" style="max-width:480px;margin-bottom:2.5rem;">Built for teams with non-standard requirements.</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;">
+            <div class="use-card">
+                <i class="ri-building-4-line"></i>
+                <div style="font-weight:700;font-size:0.95rem;margin-bottom:0.4rem;">FMCG &amp; CPG Enterprises</div>
+                <div style="font-size:0.85rem;color:#71717a;line-height:1.6;">Track hundreds of SKUs across 10+ platforms, pincode-level availability, promo compliance, and share-of-search — all in one managed feed.</div>
+            </div>
+            <div class="use-card">
+                <i class="ri-rocket-line"></i>
+                <div style="font-weight:700;font-size:0.95rem;margin-bottom:0.4rem;">VC-backed D2C Brands</div>
+                <div style="font-size:0.85rem;color:#71717a;line-height:1.6;">Need competitor pricing hourly, not daily? Or a custom competitor watchlist with 500 ASINs? Enterprise gets you there without limits.</div>
+            </div>
+            <div class="use-card">
+                <i class="ri-bar-chart-grouped-line"></i>
+                <div style="font-weight:700;font-size:0.95rem;margin-bottom:0.4rem;">Analytics &amp; BI Teams</div>
+                <div style="font-size:0.85rem;color:#71717a;line-height:1.6;">Plug clean, structured JSON or Parquet directly into your data warehouse. No ETL guesswork — schema is defined upfront, delivered on schedule.</div>
+            </div>
+            <div class="use-card">
+                <i class="ri-cpu-line"></i>
+                <div style="font-weight:700;font-size:0.95rem;margin-bottom:0.4rem;">AI/ML Teams</div>
+                <div style="font-size:0.85rem;color:#71717a;line-height:1.6;">Fine-tune product recommendation models, train category classifiers, or build pricing engines with clean structured datasets delivered to your blob storage.</div>
+            </div>
+            <div class="use-card">
+                <i class="ri-global-line"></i>
+                <div style="font-weight:700;font-size:0.95rem;margin-bottom:0.4rem;">Agencies &amp; Aggregators</div>
+                <div style="font-size:0.85rem;color:#71717a;line-height:1.6;">White-label-friendly data feeds for category management tools, retail media platforms, or market intelligence dashboards you build for clients.</div>
+            </div>
+            <div class="use-card">
+                <i class="ri-shield-keyhole-line"></i>
+                <div style="font-weight:700;font-size:0.95rem;margin-bottom:0.4rem;">Compliance-Sensitive Teams</div>
+                <div style="font-size:0.85rem;color:#71717a;line-height:1.6;">DPA, NDA, and MSA-ready. Data never leaves approved regions. Audit logs, access controls, and dedicated infrastructure available on request.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ░░ HOW IT WORKS ░░ -->
+<section style="background:#fff;padding:5rem 0;border-top:1px solid #e4e4e7;">
+    <div class="nx-wrap">
+        <div class="nx-label">How enterprise onboarding works</div>
+        <h2 class="nx-h2" style="max-width:480px;margin-bottom:3rem;">Scoped, built, and running — in weeks, not months.</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:2rem;">
+            <div>
+                <div class="process-num" style="color:#e4e4e7;">01</div>
+                <div style="font-weight:700;font-size:0.95rem;margin-bottom:0.4rem;">Discovery call</div>
+                <div style="font-size:0.85rem;color:#71717a;line-height:1.6;">We learn your platforms, SKU volume, required fields, delivery cadence, and SLA needs.</div>
+            </div>
+            <div>
+                <div class="process-num" style="color:#e4e4e7;">02</div>
+                <div style="font-weight:700;font-size:0.95rem;margin-bottom:0.4rem;">Sample &amp; schema review</div>
+                <div style="font-size:0.85rem;color:#71717a;line-height:1.6;">You receive sample records to verify field coverage and data quality before committing.</div>
+            </div>
+            <div>
+                <div class="process-num" style="color:#e4e4e7;">03</div>
+                <div style="font-weight:700;font-size:0.95rem;margin-bottom:0.4rem;">Contract &amp; setup</div>
+                <div style="font-size:0.85rem;color:#71717a;line-height:1.6;">MSA, DPA if needed, delivery credentials configured. Usually done within 5 business days.</div>
+            </div>
+            <div>
+                <div class="process-num" style="color:#e4e4e7;">04</div>
+                <div style="font-weight:700;font-size:0.95rem;margin-bottom:0.4rem;">Live on schedule</div>
+                <div style="font-size:0.85rem;color:#71717a;line-height:1.6;">Data lands in your destination on the agreed cadence. Your CSM monitors freshness proactively.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ░░ FINAL CTA ░░ -->
+<section style="background:var(--dk);padding:5rem 0;">
+    <div class="nx-wrap" style="text-align:center;">
+        <div class="nx-label" style="color:#52525b;text-align:center;margin-bottom:1rem;">Enterprise sales</div>
+        <h2 style="font-size:clamp(2rem,4vw,3rem);font-weight:900;letter-spacing:-0.03em;color:#f4f4f5;margin-bottom:1rem;">Let's scope your requirements.</h2>
+        <p style="font-size:1rem;color:#71717a;margin-bottom:2rem;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.7;">No commitment required. Tell us what you need and we'll come back with a sample dataset and a concrete proposal within 48 hours.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;">
+            <a href="{{ '/contact/' | relative_url }}" class="btn-dk-primary">Talk to enterprise sales <i class="ri-arrow-right-line"></i></a>
+            <a href="{{ '/pricing/' | relative_url }}" class="btn-dk-ghost">Or start with a SaaS plan</a>
+        </div>
+    </div>
+</section>

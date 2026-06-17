@@ -1,179 +1,304 @@
 ---
 layout: default
-title: "Web Scraping API & Data Extraction API"
-description: "Custom web scraping API development for automated data extraction. RESTful APIs for any website. Professional API development service with reliable delivery."
-keywords: "web scraping api, data extraction api, scraping api, api for web scraping, web scraping rest api, custom scraping api, data extraction service api, web data api, scraper api, api development for web scraping, restful web scraping api"
-og_description: "Web scraping API & data extraction API development. Custom RESTful APIs for automated data extraction from any website."
-twitter_description: "Web scraping API development services. Custom data extraction APIs tailored to your needs. Any platform, reliable delivery."
+title: "Nextract API — Commerce Data at HTTP Speed"
+description: "Integrate Nextract's commerce intelligence directly into your product. REST API for product lookups, bulk jobs, pricing data, Buy Box, rank tracking, and more across Amazon, Flipkart, Blinkit, Zepto, and other platforms."
+keywords: "nextract api, commerce data api, amazon product api, flipkart data api, blinkit api, ecommerce intelligence api, price tracking api, buy box api"
+og_description: "Nextract REST API — pull live product data, prices, Buy Box, and rank data from Amazon, Flipkart, Blinkit, and more."
+canonical_url: "https://nextract.dev/apis/"
+permalink: /apis/
 ---
+{% include sol-styles.html %}
+<style>
+.api-code {
+  background: #0a0e1a;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 4px;
+  padding: 1.5rem;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  font-size: 0.78rem;
+  line-height: 1.7;
+  overflow-x: auto;
+  color: #e2e8f0;
+}
+.api-code .key   { color: #7dd3fc; }
+.api-code .str   { color: #86efac; }
+.api-code .num   { color: #fde68a; }
+.api-code .cmt   { color: #64748b; }
+.api-code .meth  { color: var(--orange); font-weight: 800; }
+.api-code .url   { color: #a5b4fc; }
+.api-param { display:grid; grid-template-columns: 130px 1fr; gap: 0.5rem 1.25rem; align-items: baseline; padding: 0.75rem 0; border-bottom: 1px solid var(--lt-b); font-size: 0.82rem; }
+.api-param:last-child { border-bottom: none; }
+.api-param-name { font-family: monospace; font-weight: 700; color: var(--lt-txt); }
+.api-param-req  { font-size: 10px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange); }
+.api-param-opt  { font-size: 10px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--lt-mut); }
+.api-param-desc { color: var(--lt-mut); line-height: 1.55; }
+.api-endpoint-pill { display:inline-flex;align-items:center;gap:8px;padding:0.35rem 0.9rem;border-radius:999px;font-size:0.72rem;font-weight:800;letter-spacing:0.05em;margin-bottom:1rem; }
+.ep-get  { background: rgba(59,130,246,0.1); color: var(--blue); border: 1px solid rgba(59,130,246,0.2); }
+.ep-post { background: rgba(249,115,22,0.1); color: var(--orange); border: 1px solid rgba(249,115,22,0.2); }
+</style>
 
 <main>
-    <!-- Hero Section -->
-    <section class="min-h-[80vh] flex items-center justify-center relative overflow-hidden bg-white">
-        <div class="absolute inset-0 overflow-hidden">
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 blur-[100px] animate-pulse"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-600/10 blur-[100px] animate-pulse" style="animation-delay: 1s;"></div>
+
+<!-- Hero -->
+<section style="background:var(--dk);padding:7rem 0 5rem;position:relative;overflow:hidden;">
+    <div class="orb orb-blue" style="width:600px;height:600px;top:50%;left:50%;transform:translate(-85%,-50%);opacity:0.9;"></div>
+    <div class="orb orb-orange" style="width:400px;height:400px;top:50%;right:-5%;transform:translateY(-50%);opacity:0.6;"></div>
+    <div class="nx-grid-bg" style="position:absolute;inset:0;opacity:0.5;pointer-events:none;"></div>
+    <div class="nx-wrap" style="position:relative;z-index:1;">
+        <div style="display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--dk-mut);border:1px solid var(--dk-b);padding:0.3rem 0.75rem;margin-bottom:1.5rem;">Developer Docs · REST API</div>
+        <p class="nx-label" style="color:var(--blue);margin-bottom:0.75rem;">Nextract API</p>
+        <h1 style="font-size:clamp(2.5rem,6vw,5rem);font-weight:900;line-height:1;letter-spacing:-0.05em;color:var(--dk-txt);margin-bottom:1.5rem;max-width:700px;">
+            Commerce data.<br/><span class="nx-grad">One clean endpoint.</span>
+        </h1>
+        <p style="font-size:1rem;color:var(--dk-mut);max-width:32rem;line-height:1.7;margin-bottom:2.5rem;">
+            Pull live product data, pricing, Buy Box status, keyword ranks, and shelf data from Amazon, Flipkart, Blinkit, Zepto, and more — all via a single authenticated REST API.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-bottom:2.5rem;">
+            <a href="{{ '/contact/' | relative_url }}" class="btn-dk-primary">Get API access <i class="ri-arrow-right-line"></i></a>
+            <a href="https://app.getnextract.com/register" class="btn-dk-ghost">Start free</a>
         </div>
-        
-        <div class="container mx-auto px-6 max-w-7xl relative z-10">
-            <div class="max-w-5xl mx-auto text-center">
-                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-6">Custom API Development</div>
-                <h1 class="text-6xl md:text-8xl font-black text-gray-900 mb-8 leading-[0.9] tracking-tight">
-                    Custom APIs<br/>
-                    <span class="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">Built for You</span>
-                </h1>
-                <p class="text-2xl md:text-3xl text-gray-600 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
-                    We build custom APIs for your specific data needs.<br/>
-                    <span class="font-semibold text-gray-900">Any platform, any data, delivered reliably.</span>
-                </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-                    <a href="/contact/" class="group relative px-10 py-5 bg-gray-900 text-white font-bold text-lg overflow-hidden">
-                        <span class="relative z-10 flex items-center gap-2">
-                            Request Consultation
-                            <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
-                        </span>
-                        <div class="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-                    </a>
-                    <a href="/contact/" class="px-10 py-5 border-2 border-gray-900 text-gray-900 font-bold text-lg hover:bg-gray-900 hover:text-white transition-all">
-                        Request Sample Data
-                    </a>
+        <!-- Quick stats -->
+        <div style="display:flex;flex-wrap:wrap;gap:2rem;padding-top:1.5rem;border-top:1px solid var(--dk-b);">
+            <div><div style="font-size:1.5rem;font-weight:900;color:var(--dk-txt);letter-spacing:-0.04em;">REST</div><div style="font-size:11px;color:var(--dk-mut);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">Protocol</div></div>
+            <div><div style="font-size:1.5rem;font-weight:900;color:var(--dk-txt);letter-spacing:-0.04em;">JSON</div><div style="font-size:11px;color:var(--dk-mut);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">Response format</div></div>
+            <div><div style="font-size:1.5rem;font-weight:900;color:var(--dk-txt);letter-spacing:-0.04em;">10+</div><div style="font-size:11px;color:var(--dk-mut);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">Platforms covered</div></div>
+            <div><div style="font-size:1.5rem;font-weight:900;color:var(--dk-txt);letter-spacing:-0.04em;">99.9%</div><div style="font-size:11px;color:var(--dk-mut);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">Uptime SLA</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- Base URL + Auth -->
+<section style="background:var(--lt);padding:5rem 0;border-top:1px solid var(--lt-b);">
+    <div class="nx-wrap">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;" class="sol-2col">
+            <div>
+                <p class="nx-label" style="color:var(--blue);margin-bottom:1rem;">Authentication</p>
+                <h2 class="nx-h2" style="color:var(--lt-txt);margin-bottom:1.25rem;">One API key.<br/>All endpoints.</h2>
+                <p style="font-size:0.88rem;color:var(--lt-mut);line-height:1.75;margin-bottom:1rem;">Pass your key in the <code style="font-family:monospace;background:var(--lt1);padding:2px 6px;border-radius:3px;font-size:0.82rem;">Authorization</code> header on every request. Keys are scoped to your account and rate-limited by plan.</p>
+                <p style="font-size:0.88rem;color:var(--lt-mut);line-height:1.75;">Base URL: <code style="font-family:monospace;background:var(--lt1);padding:2px 6px;border-radius:3px;font-size:0.82rem;">https://api.nextract.dev/v1</code></p>
+                <div style="margin-top:1.5rem;display:flex;flex-direction:column;gap:0.75rem;">
+                    <div style="display:flex;align-items:center;gap:8px;font-size:0.84rem;color:var(--lt-txt);"><i class="ri-check-line" style="color:var(--blue);flex-shrink:0;"></i> Keys issued within 24 h of signup</div>
+                    <div style="display:flex;align-items:center;gap:8px;font-size:0.84rem;color:var(--lt-txt);"><i class="ri-check-line" style="color:var(--blue);flex-shrink:0;"></i> HTTPS only — all traffic encrypted</div>
+                    <div style="display:flex;align-items:center;gap:8px;font-size:0.84rem;color:var(--lt-txt);"><i class="ri-check-line" style="color:var(--blue);flex-shrink:0;"></i> Rate limits returned in response headers</div>
+                    <div style="display:flex;align-items:center;gap:8px;font-size:0.84rem;color:var(--lt-txt);"><i class="ri-check-line" style="color:var(--blue);flex-shrink:0;"></i> Sandbox mode available for testing</div>
                 </div>
             </div>
-        </div>
-    </section>
+            <div>
+                <div class="api-code"><span class="cmt"># Example request with API key</span>
+<span class="meth">GET</span> <span class="url">https://api.nextract.dev/v1/product?asin=B09G9HD6PD&amp;platform=amazon_in</span>
 
-    <!-- What We Build -->
-    <section class="py-32 bg-white">
-        <div class="container mx-auto px-6 max-w-7xl">
-            <div class="mb-20">
-                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">What We Build</div>
-                <h2 class="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-tight">Every API<br/>Built Custom</h2>
-                <p class="text-xl text-gray-600 max-w-3xl">Generic APIs can't handle your specific requirements. We build custom APIs tailored to your exact needs - the platforms you target, the data you want, delivered exactly how you need it.</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="p-10 border-2 border-blue-600 bg-blue-50">
-                    <div class="text-4xl font-black text-blue-600 mb-6">01</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">RESTful APIs</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">We build RESTful APIs that integrate seamlessly with your existing systems. GET/POST endpoints, authentication, rate limiting - all customized to your needs.</p>
-                    <ul class="space-y-2 text-gray-700">
-                        <li class="flex items-start gap-2">
-                            <span class="text-blue-600 font-black">→</span>
-                            <span>Custom endpoints for your data</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-blue-600 font-black">→</span>
-                            <span>JSON/XML response formats</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-blue-600 font-black">→</span>
-                            <span>Authentication & security</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="p-10 border-2 border-orange-600 bg-orange-50">
-                    <div class="text-4xl font-black text-orange-600 mb-6">02</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Webhook Delivery</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">Real-time data delivery to your endpoints. We extract the data and push it to your webhook URL whenever new data is available.</p>
-                    <ul class="space-y-2 text-gray-700">
-                        <li class="flex items-start gap-2">
-                            <span class="text-orange-600 font-black">→</span>
-                            <span>Push notifications for new data</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-orange-600 font-black">→</span>
-                            <span>Custom scheduling</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-orange-600 font-black">→</span>
-                            <span>Retry logic & error handling</span>
-                        </li>
-                    </ul>
-                </div>
+<span class="cmt"># Request headers</span>
+<span class="key">Authorization</span>: Bearer <span class="str">nxt_sk_live_xxxxxxxxxxxx</span>
+<span class="key">Content-Type</span>: <span class="str">application/json</span>
+<span class="key">Accept</span>: <span class="str">application/json</span></div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Platforms We Can Extract -->
-    <section class="py-32 bg-gray-50">
-        <div class="container mx-auto px-6 max-w-7xl">
-            <div class="mb-20">
-                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Platforms</div>
-                <h2 class="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-tight">Any Platform,<br/>Any Data</h2>
-                <p class="text-xl text-gray-600 max-w-3xl">We build APIs for the platforms that matter to your business - from major marketplaces to niche platforms.</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <div class="p-6 bg-white border-2 border-gray-200">
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">E-commerce</h3>
-                    <p class="text-sm text-gray-600">Amazon, Walmart, Target, eBay, Shopify</p>
-                </div>
-                <div class="p-6 bg-white border-2 border-gray-200">
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Quick Commerce</h3>
-                    <p class="text-sm text-gray-600">Blinkit, Zepto, BigBasket, Instamart</p>
-                </div>
-                <div class="p-6 bg-white border-2 border-gray-200">
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Food Delivery</h3>
-                    <p class="text-sm text-gray-600">Zomato, Swiggy, DoorDash, Uber Eats</p>
-                </div>
-                <div class="p-6 bg-white border-2 border-gray-200">
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Travel</h3>
-                    <p class="text-sm text-gray-600">Airbnb, Booking, Expedia, TripAdvisor</p>
-                </div>
-                <div class="p-6 bg-white border-2 border-gray-200">
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Real Estate</h3>
-                    <p class="text-sm text-gray-600">Zillow, Realtor, Redfin, Trulia</p>
-                </div>
-                <div class="p-6 bg-white border-2 border-gray-200">
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Jobs</h3>
-                    <p class="text-sm text-gray-600">Indeed, LinkedIn, Glassdoor, Monster</p>
-                </div>
-                <div class="p-6 bg-white border-2 border-gray-200">
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Social Media</h3>
-                    <p class="text-sm text-gray-600">Twitter, Instagram, Facebook, Reddit</p>
-                </div>
-                <div class="p-6 bg-white border-2 border-gray-200">
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Any Website</h3>
-                    <p class="text-sm text-gray-600">We can extract from any site</p>
-                </div>
-            </div>
+<!-- Endpoint 1: Product Lookup -->
+<section style="background:var(--lt1);padding:5rem 0;border-top:1px solid var(--lt-b);">
+    <div class="nx-wrap">
+        <div style="margin-bottom:2rem;">
+            <p class="nx-label" style="color:var(--blue);margin-bottom:0.5rem;">Endpoint</p>
+            <h2 class="nx-h2" style="color:var(--lt-txt);">Product lookup</h2>
         </div>
-    </section>
-
-    <!-- How It Works -->
-    <section class="py-32 bg-white">
-        <div class="container mx-auto px-6 max-w-7xl">
-            <div class="mb-20">
-                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Process</div>
-                <h2 class="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-tight">How We Build<br/>Your API</h2>
-            </div>
-            
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="p-8 border-l-4 border-blue-600">
-                    <div class="text-4xl font-black text-blue-600 mb-4">01</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Discovery</h3>
-                    <p class="text-gray-600">We understand what data you need and how you want to access it</p>
-                </div>
-                <div class="p-8 border-l-4 border-orange-600">
-                    <div class="text-4xl font-black text-orange-600 mb-4">02</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Sample Data</h3>
-                    <p class="text-gray-600">We deliver sample data within 48-72 hours to validate quality</p>
-                </div>
-                <div class="p-8 border-l-4 border-blue-600">
-                    <div class="text-4xl font-black text-blue-600 mb-4">03</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">API Development</h3>
-                    <p class="text-gray-600">We build your custom API with documentation and testing</p>
-                </div>
-                <div class="p-8 border-l-4 border-orange-600">
-                    <div class="text-4xl font-black text-orange-600 mb-4">04</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Ongoing Support</h3>
-                    <p class="text-gray-600">24/7 monitoring, maintenance, and updates included</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;" class="sol-2col">
+            <div>
+                <div class="api-endpoint-pill ep-get"><i class="ri-arrow-right-line"></i> GET /product</div>
+                <p style="font-size:0.88rem;color:var(--lt-mut);line-height:1.75;margin-bottom:1.5rem;">Returns live product data for a single ASIN or SKU: title, images, pricing, Buy Box winner, BSR, ratings, availability, and more.</p>
+                <div style="border:1px solid var(--lt-b);background:var(--lt);">
+                    <div style="padding:0.75rem 1rem;border-bottom:1px solid var(--lt-b);">
+                        <p class="nx-label" style="color:var(--lt-mut);margin:0;">Parameters</p>
                     </div>
+                    <div style="padding:0.5rem 1rem;">
+                        <div class="api-param"><span class="api-param-name">asin <span class="api-param-req">required</span></span><span class="api-param-desc">ASIN, product ID, or URL slug depending on the platform.</span></div>
+                        <div class="api-param"><span class="api-param-name">platform <span class="api-param-req">required</span></span><span class="api-param-desc">Platform identifier: <code style="font-family:monospace;font-size:0.8rem;">amazon_in</code>, <code style="font-family:monospace;font-size:0.8rem;">amazon_us</code>, <code style="font-family:monospace;font-size:0.8rem;">flipkart</code>, <code style="font-family:monospace;font-size:0.8rem;">blinkit</code>, <code style="font-family:monospace;font-size:0.8rem;">zepto</code>, <code style="font-family:monospace;font-size:0.8rem;">instamart</code>.</span></div>
+                        <div class="api-param"><span class="api-param-name">fields <span class="api-param-opt">optional</span></span><span class="api-param-desc">Comma-separated list of fields to return. Defaults to all. E.g. <code style="font-family:monospace;font-size:0.8rem;">title,price,buy_box</code>.</span></div>
+                        <div class="api-param"><span class="api-param-name">pincode <span class="api-param-opt">optional</span></span><span class="api-param-desc">For quick-commerce platforms — returns availability and pricing for this delivery pin code.</span></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p style="font-size:11px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:var(--lt-mut);margin-bottom:0.5rem;">Response</p>
+                <div class="api-code">{
+  <span class="key">"asin"</span>: <span class="str">"B09G9HD6PD"</span>,
+  <span class="key">"platform"</span>: <span class="str">"amazon_in"</span>,
+  <span class="key">"title"</span>: <span class="str">"boAt Rockerz 450 Pro On-Ear Bluetooth Headphones"</span>,
+  <span class="key">"brand"</span>: <span class="str">"boAt"</span>,
+  <span class="key">"price"</span>: {
+    <span class="key">"current"</span>: <span class="num">1299</span>,
+    <span class="key">"mrp"</span>: <span class="num">2999</span>,
+    <span class="key">"discount_pct"</span>: <span class="num">56.7</span>,
+    <span class="key">"currency"</span>: <span class="str">"INR"</span>
+  },
+  <span class="key">"buy_box"</span>: {
+    <span class="key">"winner"</span>: <span class="str">"Appario Retail Pvt Ltd"</span>,
+    <span class="key">"is_amazon"</span>: <span class="num">false</span>,
+    <span class="key">"fulfilment"</span>: <span class="str">"FBA"</span>
+  },
+  <span class="key">"bsr"</span>: [
+    { <span class="key">"rank"</span>: <span class="num">3</span>, <span class="key">"category"</span>: <span class="str">"Electronics"</span> },
+    { <span class="key">"rank"</span>: <span class="num">1</span>, <span class="key">"category"</span>: <span class="str">"Bluetooth Headphones"</span> }
+  ],
+  <span class="key">"rating"</span>: <span class="num">4.2</span>,
+  <span class="key">"review_count"</span>: <span class="num">14832</span>,
+  <span class="key">"in_stock"</span>: <span class="num">true</span>,
+  <span class="key">"fetched_at"</span>: <span class="str">"2026-06-16T07:12:44Z"</span>
+}</div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- CTA Section -->
-    {% include contact-section.html %}
+<!-- Endpoint 2: Bulk Jobs -->
+<section style="background:var(--lt);padding:5rem 0;border-top:1px solid var(--lt-b);">
+    <div class="nx-wrap">
+        <div style="margin-bottom:2rem;">
+            <p class="nx-label" style="color:var(--orange);margin-bottom:0.5rem;">Endpoint</p>
+            <h2 class="nx-h2" style="color:var(--lt-txt);">Bulk jobs</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;" class="sol-2col">
+            <div>
+                <div class="api-endpoint-pill ep-post"><i class="ri-upload-line"></i> POST /jobs</div>
+                <p style="font-size:0.88rem;color:var(--lt-mut);line-height:1.75;margin-bottom:1.5rem;">Submit a list of ASINs or SKUs for asynchronous processing. Returns a <code style="font-family:monospace;font-size:0.82rem;background:var(--lt1);padding:2px 5px;border-radius:3px;">job_id</code> you can poll. Results are also pushed to your webhook URL when ready.</p>
+                <div style="border:1px solid var(--lt-b);background:var(--lt1);">
+                    <div style="padding:0.75rem 1rem;border-bottom:1px solid var(--lt-b);">
+                        <p class="nx-label" style="color:var(--lt-mut);margin:0;">Body (JSON)</p>
+                    </div>
+                    <div style="padding:0.5rem 1rem;">
+                        <div class="api-param"><span class="api-param-name">items <span class="api-param-req">required</span></span><span class="api-param-desc">Array of objects with <code style="font-family:monospace;font-size:0.8rem;">id</code> and <code style="font-family:monospace;font-size:0.8rem;">platform</code>. Max 10,000 per job.</span></div>
+                        <div class="api-param"><span class="api-param-name">fields <span class="api-param-opt">optional</span></span><span class="api-param-desc">Fields to return per item. Defaults to all.</span></div>
+                        <div class="api-param"><span class="api-param-name">webhook_url <span class="api-param-opt">optional</span></span><span class="api-param-desc">HTTPS URL. We POST results here when the job completes.</span></div>
+                        <div class="api-param"><span class="api-param-name">notify_email <span class="api-param-opt">optional</span></span><span class="api-param-desc">Email to notify when results are ready to download.</span></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p style="font-size:11px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:var(--lt-mut);margin-bottom:0.5rem;">Request body</p>
+                <div class="api-code">{
+  <span class="key">"items"</span>: [
+    { <span class="key">"id"</span>: <span class="str">"B09G9HD6PD"</span>, <span class="key">"platform"</span>: <span class="str">"amazon_in"</span> },
+    { <span class="key">"id"</span>: <span class="str">"B0CHX1W1XY"</span>, <span class="key">"platform"</span>: <span class="str">"amazon_in"</span> },
+    { <span class="key">"id"</span>: <span class="str">"BL_92841"</span>,   <span class="key">"platform"</span>: <span class="str">"blinkit"</span>    }
+  ],
+  <span class="key">"fields"</span>: [<span class="str">"title"</span>, <span class="str">"price"</span>, <span class="str">"buy_box"</span>, <span class="str">"in_stock"</span>],
+  <span class="key">"webhook_url"</span>: <span class="str">"https://your-app.com/hooks/nextract"</span>
+}
+
+<span class="cmt">──── Response ────</span>
+{
+  <span class="key">"job_id"</span>: <span class="str">"job_8f2k9p3x"</span>,
+  <span class="key">"status"</span>: <span class="str">"queued"</span>,
+  <span class="key">"item_count"</span>: <span class="num">3</span>,
+  <span class="key">"estimated_seconds"</span>: <span class="num">45</span>,
+  <span class="key">"results_url"</span>: <span class="str">"https://api.nextract.dev/v1/jobs/job_8f2k9p3x"</span>
+}</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Endpoint 3: Keyword Ranks -->
+<section style="background:var(--lt1);padding:5rem 0;border-top:1px solid var(--lt-b);">
+    <div class="nx-wrap">
+        <div style="margin-bottom:2rem;">
+            <p class="nx-label" style="color:var(--blue);margin-bottom:0.5rem;">Endpoint</p>
+            <h2 class="nx-h2" style="color:var(--lt-txt);">Keyword ranks</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;" class="sol-2col">
+            <div>
+                <div class="api-endpoint-pill ep-get"><i class="ri-arrow-right-line"></i> GET /ranks</div>
+                <p style="font-size:0.88rem;color:var(--lt-mut);line-height:1.75;margin-bottom:1.5rem;">Returns organic and sponsored rank positions for a product on a given keyword, with historical data available via <code style="font-family:monospace;font-size:0.82rem;background:var(--lt);padding:2px 5px;border-radius:3px;">from</code> and <code style="font-family:monospace;font-size:0.82rem;background:var(--lt);padding:2px 5px;border-radius:3px;">to</code> date range params.</p>
+                <div style="border:1px solid var(--lt-b);background:var(--lt);">
+                    <div style="padding:0.75rem 1rem;border-bottom:1px solid var(--lt-b);">
+                        <p class="nx-label" style="color:var(--lt-mut);margin:0;">Parameters</p>
+                    </div>
+                    <div style="padding:0.5rem 1rem;">
+                        <div class="api-param"><span class="api-param-name">asin <span class="api-param-req">required</span></span><span class="api-param-desc">ASIN or product identifier.</span></div>
+                        <div class="api-param"><span class="api-param-name">keyword <span class="api-param-req">required</span></span><span class="api-param-desc">Search term to track rank on.</span></div>
+                        <div class="api-param"><span class="api-param-name">platform <span class="api-param-req">required</span></span><span class="api-param-desc"><code style="font-family:monospace;font-size:0.8rem;">amazon_in</code>, <code style="font-family:monospace;font-size:0.8rem;">amazon_us</code>, or <code style="font-family:monospace;font-size:0.8rem;">flipkart</code>.</span></div>
+                        <div class="api-param"><span class="api-param-name">from / to <span class="api-param-opt">optional</span></span><span class="api-param-desc">ISO 8601 date range for historical ranks.</span></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p style="font-size:11px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:var(--lt-mut);margin-bottom:0.5rem;">Response</p>
+                <div class="api-code">{
+  <span class="key">"asin"</span>: <span class="str">"B09G9HD6PD"</span>,
+  <span class="key">"keyword"</span>: <span class="str">"wireless earbuds under 2000"</span>,
+  <span class="key">"platform"</span>: <span class="str">"amazon_in"</span>,
+  <span class="key">"organic_rank"</span>: <span class="num">4</span>,
+  <span class="key">"sponsored_rank"</span>: <span class="num">null</span>,
+  <span class="key">"page"</span>: <span class="num">1</span>,
+  <span class="key">"history"</span>: [
+    { <span class="key">"date"</span>: <span class="str">"2026-06-15"</span>, <span class="key">"organic"</span>: <span class="num">6</span>, <span class="key">"sponsored"</span>: <span class="num">2</span> },
+    { <span class="key">"date"</span>: <span class="str">"2026-06-16"</span>, <span class="key">"organic"</span>: <span class="num">4</span>, <span class="key">"sponsored"</span>: <span class="num">null</span> }
+  ],
+  <span class="key">"fetched_at"</span>: <span class="str">"2026-06-16T07:14:02Z"</span>
+}</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Delivery modes -->
+<section style="background:var(--lt);padding:5rem 0;border-top:1px solid var(--lt-b);">
+    <div class="nx-wrap">
+        <div style="margin-bottom:3rem;">
+            <p class="nx-label" style="color:var(--blue);margin-bottom:0.75rem;">Data Delivery</p>
+            <h2 class="nx-h2" style="color:var(--lt-txt);">Pull, push, or pipe.<br/>Your choice.</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;" class="sol-3col">
+            <div class="sol-card"><div class="sol-icon" style="background:rgba(59,130,246,0.08);color:var(--blue);"><i class="ri-code-s-slash-line"></i></div><div class="sol-card-title">REST API (sync)</div><p class="sol-card-body">Live per-SKU lookups. Ideal for real-time dashboards or on-demand queries.</p></div>
+            <div class="sol-card"><div class="sol-icon" style="background:rgba(249,115,22,0.08);color:var(--orange);"><i class="ri-stack-line"></i></div><div class="sol-card-title">Bulk jobs (async)</div><p class="sol-card-body">Submit thousands of ASINs in one job. Poll for completion or receive a webhook notification.</p></div>
+            <div class="sol-card"><div class="sol-icon" style="background:rgba(59,130,246,0.08);color:var(--blue);"><i class="ri-webhook-line"></i></div><div class="sol-card-title">Webhook push</div><p class="sol-card-body">We POST fresh data to your endpoint on schedule or when a monitored value changes.</p></div>
+            <div class="sol-card"><div class="sol-icon" style="background:rgba(249,115,22,0.08);color:var(--orange);"><i class="ri-database-2-line"></i></div><div class="sol-card-title">S3 / GCS drop</div><p class="sol-card-body">Daily or per-job files dropped to your cloud storage bucket as JSON or CSV.</p></div>
+            <div class="sol-card"><div class="sol-icon" style="background:rgba(59,130,246,0.08);color:var(--blue);"><i class="ri-bar-chart-grouped-line"></i></div><div class="sol-card-title">Warehouse load</div><p class="sol-card-body">Direct append into Snowflake, BigQuery, or Redshift — schema managed by us.</p></div>
+            <div class="sol-card"><div class="sol-icon" style="background:rgba(249,115,22,0.08);color:var(--orange);"><i class="ri-file-excel-2-line"></i></div><div class="sol-card-title">Scheduled exports</div><p class="sol-card-body">Get a clean CSV in your inbox daily — no engineering setup required.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- Platforms -->
+<section style="background:var(--lt1);padding:5rem 0;border-top:1px solid var(--lt-b);">
+    <div class="nx-wrap">
+        <div style="margin-bottom:2.5rem;">
+            <p class="nx-label" style="color:var(--blue);margin-bottom:0.75rem;">Platforms covered</p>
+            <h2 class="nx-h2" style="color:var(--lt-txt);">One API key covers<br/>every channel.</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0.75rem;" class="sol-3col">
+            {% assign api_platforms = "ri-amazon-line|Amazon IN / US / UK / DE~ri-store-3-line|Flipkart~ri-store-line|Blinkit~ri-flashlight-line|Zepto~ri-shopping-bag-3-line|Swiggy Instamart~ri-store-2-line|Myntra~ri-device-line|JioMart~ri-shopping-cart-line|Croma" | split: "~" %}
+            {% for p in api_platforms %}
+            {% assign pparts = p | split: "|" %}
+            <div style="background:var(--lt);border:1px solid var(--lt-b);padding:1rem 1.25rem;display:flex;align-items:center;gap:0.75rem;">
+                <i class="{{ pparts[0] }}" style="font-size:1.25rem;color:var(--blue);flex-shrink:0;"></i>
+                <span style="font-size:0.82rem;font-weight:700;color:var(--lt-txt);">{{ pparts[1] }}</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Get access CTA -->
+<section style="background:var(--dk);padding:5rem 0;border-top:1px solid var(--dk-b);position:relative;overflow:hidden;">
+    <div class="orb orb-blue" style="width:500px;height:500px;top:50%;left:0;transform:translate(-40%,-50%);opacity:0.7;"></div>
+    <div class="nx-grid-bg" style="position:absolute;inset:0;opacity:0.5;pointer-events:none;"></div>
+    <div class="nx-wrap" style="position:relative;z-index:1;">
+        <div style="display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center;" class="sol-2col">
+            <div>
+                <p class="nx-label" style="color:var(--dk-mut);margin-bottom:1rem;">Ready to integrate?</p>
+                <h2 class="nx-h2" style="color:var(--dk-txt);margin-bottom:1rem;">Start building<br/>in minutes.</h2>
+                <p style="font-size:0.88rem;color:var(--dk-mut);line-height:1.75;max-width:36rem;">Sign up, grab your API key from the dashboard, and make your first call. Full docs, code samples, and schema reference included — no approval process, no waiting.</p>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:0.75rem;min-width:200px;">
+                <a href="https://app.getnextract.com/register" class="btn-dk-primary" style="justify-content:center;">Start free <i class="ri-arrow-right-line"></i></a>
+                <a href="{{ '/enterprise/' | relative_url }}" class="btn-dk-ghost" style="justify-content:center;">Enterprise options</a>
+                <p style="font-size:11px;color:var(--dk-mut);text-align:center;margin:0;">5,000 credits free · first month · no card required</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include contact-section.html %}
 </main>

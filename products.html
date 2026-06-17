@@ -1,122 +1,172 @@
 ---
 layout: default
-title: "Web Scraping API for Developers"
-description: "Web scraping API and custom data pipelines. Automatic IP rotation, CAPTCHA handling, JavaScript rendering. Custom quotes. High uptime SLA."
-keywords: "web scraping API, data extraction API, scraping API, API for web scraping, automated data collection API, REST API scraping, web scraping service API, data extraction API service, scraping API documentation"
-og_description: "Nextract Web Scraping API - Custom data pipelines for developers. Automatic IP rotation, CAPTCHA solving, JavaScript rendering. Request a consultation."
-twitter_description: "Web Scraping API for developers. Auto IP rotation, CAPTCHA solving, JS rendering. Custom solutions. Request a consultation."
+title: "Products — Nextract Commerce Intelligence Platform"
+description: "Nextract's commerce intelligence products: real-time price tracking dashboard, developer API, and scheduled Excel reports. One platform, three delivery modes."
+keywords: "nextract products, commerce intelligence dashboard, price tracking API, product data API, ecommerce analytics platform, commerce data platform"
+permalink: /products/
+og_title: "Nextract Products — Dashboard, API, Excel"
+og_description: "Track prices, stock, and rankings across 30+ platforms. Dashboard, REST API, or scheduled Excel — one subscription, your choice of delivery."
 ---
 
-<main>
-    <!-- Hero Section -->
-    <section class="min-h-[80vh] flex items-center justify-center relative overflow-hidden bg-white">
-        <div class="absolute inset-0 overflow-hidden">
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 blur-[100px] animate-pulse"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-600/10 blur-[100px] animate-pulse" style="animation-delay: 1s;"></div>
-        </div>
-        
-        <div class="container mx-auto px-6 max-w-7xl relative z-10">
-            <div class="max-w-5xl mx-auto text-center">
-                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-6">Product</div>
-                <h1 class="text-6xl md:text-8xl font-black text-gray-900 mb-8 leading-[0.9] tracking-tight">
-                    Nextract<br/>
-                    <span class="bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent">API</span>
-                </h1>
-                <p class="text-2xl md:text-3xl text-gray-600 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
-                    The web scraping API built for developers.<br/>
-                    <span class="font-semibold text-gray-900">Simple, reliable, and scalable.</span>
-                </p>
-                <div class="mt-12 mb-12 p-8 bg-blue-50 border-l-4 border-blue-600 max-w-3xl mx-auto">
-                    <p class="text-lg text-gray-700 leading-relaxed">
-                        <strong class="text-gray-900">Need something custom?</strong> We also offer <a href="/solutions/" class="text-blue-600 font-semibold hover:underline">custom scraping solutions</a> built specifically for your unique requirements. 
-                        <a href="/contact/" class="text-blue-600 font-semibold hover:underline">Contact us</a> to discuss your needs.
-                    </p>
-                </div>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12">
-                    <a href="#contact-shared" class="group relative px-10 py-5 bg-gray-900 text-white font-bold text-lg overflow-hidden">
-                        <span class="relative z-10 flex items-center gap-2">
-                            Get Started Free
-                            <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
-                        </span>
-                        <div class="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-                    </a>
-                    <a href="/products/" class="px-10 py-5 border-2 border-gray-900 text-gray-900 font-bold text-lg hover:bg-gray-900 hover:text-white transition-all">
-                        Learn More
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+{% include sol-styles.html %}
 
-    <!-- Features -->
-    <section class="py-32 bg-white">
-        <div class="container mx-auto px-6 max-w-7xl">
-            <div class="mb-20">
-                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Features</div>
-                <h2 class="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-tight">API<br/>Features</h2>
+<!-- HERO -->
+<section style="background:var(--dk);color:#fff;padding:7rem 0 5rem;position:relative;">
+    <div style="background:radial-gradient(ellipse at 75% 20%, rgba(59,130,246,0.2) 0%, transparent 55%),var(--dk);position:absolute;inset:0;"></div>
+    <div class="nx-wrap" style="position:relative;z-index:1;">
+        <div class="nx-label" style="color:#52525b;">The platform</div>
+        <h1 style="font-size:clamp(2.4rem,5vw,3.8rem);font-weight:900;line-height:1.1;letter-spacing:-0.03em;max-width:720px;margin-bottom:1.25rem;">
+            One platform.<br/>
+            <span class="nx-grad">Three ways to get your data.</span>
+        </h1>
+        <p style="font-size:1.05rem;color:#d4d4d8;max-width:580px;line-height:1.8;margin-bottom:2.5rem;">
+            Nextract monitors prices, stock, rankings, and competitor activity across 30+ marketplaces. Access everything through the Dashboard, REST API, or automated Excel reports — whichever fits your workflow.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:1rem;">
+            <a href="https://app.getnextract.com/register" class="btn-dk-primary">Start free — first month included <i class="ri-arrow-right-line"></i></a>
+            <a href="{{ '/pricing/' | relative_url }}" class="btn-dk-ghost">View pricing</a>
+        </div>
+        <p style="font-size:12px;color:#52525b;margin-top:1rem;">5,000 credits free your first month · No card required</p>
+    </div>
+</section>
+
+<!-- THREE PRODUCTS -->
+<section style="background:#fff;padding:6rem 0;">
+    <div class="nx-wrap">
+        <div class="nx-label">Delivery modes</div>
+        <h2 class="nx-h2" style="max-width:480px;margin-bottom:3rem;">Use it however your team works.</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;">
+
+            <!-- Dashboard -->
+            <div style="border:1px solid #e4e4e7;border-radius:14px;overflow:hidden;">
+                <div style="background:#09090b;padding:2rem;min-height:160px;display:flex;flex-direction:column;justify-content:flex-end;">
+                    <i class="ri-dashboard-3-line" style="font-size:2rem;color:#3b82f6;margin-bottom:0.75rem;"></i>
+                    <div style="font-size:1.1rem;font-weight:800;color:#f4f4f5;letter-spacing:-0.02em;">Dashboard</div>
+                    <div style="font-size:0.8rem;color:#52525b;margin-top:0.2rem;">No code required</div>
+                </div>
+                <div style="padding:1.75rem;">
+                    <p style="font-size:0.88rem;color:#52525b;line-height:1.7;margin-bottom:1.25rem;">Log in, add your products, and start tracking instantly. Price charts, stock alerts, rank history, and competitor comparisons — all in one view.</p>
+                    <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.5rem;">
+                        {% assign features = "Real-time price + stock charts~Competitor comparison grids~Search rank tracking~Alert inbox for price drops~Export to CSV anytime" | split: "~" %}
+                        {% for f in features %}
+                        <li style="display:flex;align-items:center;gap:0.5rem;font-size:0.83rem;color:#3f3f46;">
+                            <i class="ri-check-line" style="color:#22c55e;font-size:0.9rem;flex-shrink:0;"></i> {{ f }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    <p style="font-size:11px;color:#a1a1aa;margin-top:1.25rem;">Best for: brand managers, category teams, non-technical users</p>
+                </div>
             </div>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="group p-10 border border-gray-200 hover:border-blue-600 transition-all bg-white hover:bg-gray-50">
-                    <div class="text-5xl font-black text-blue-600 mb-6">01</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Automatic IP Rotation</h3>
-                    <p class="text-gray-600 leading-relaxed text-lg">Never get blocked. Our API automatically rotates IPs to ensure continuous data extraction.</p>
+
+            <!-- API -->
+            <div style="border:1px solid #e4e4e7;border-radius:14px;overflow:hidden;">
+                <div style="background:#0f172a;padding:2rem;min-height:160px;display:flex;flex-direction:column;justify-content:flex-end;">
+                    <i class="ri-code-s-slash-line" style="font-size:2rem;color:#8b5cf6;margin-bottom:0.75rem;"></i>
+                    <div style="font-size:1.1rem;font-weight:800;color:#f4f4f5;letter-spacing:-0.02em;">REST API</div>
+                    <div style="font-size:0.8rem;color:#52525b;margin-top:0.2rem;">Integrate anywhere</div>
                 </div>
-                <div class="group p-10 border border-gray-200 hover:border-blue-600 transition-all bg-white hover:bg-gray-50">
-                    <div class="text-5xl font-black text-blue-600 mb-6">02</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">CAPTCHA Solving</h3>
-                    <p class="text-gray-600 leading-relaxed text-lg">Built-in CAPTCHA solving handles all types automatically. No manual intervention needed.</p>
+                <div style="padding:1.75rem;">
+                    <p style="font-size:0.88rem;color:#52525b;line-height:1.7;margin-bottom:1.25rem;">Pull structured JSON for any product, keyword, or category — on-demand or in scheduled batch jobs. Plug directly into your data pipeline, BI tool, or internal app.</p>
+                    <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.5rem;">
+                        {% assign features = "GET /product — price, stock, title, images~GET /ranks — search position by keyword~POST /jobs — async batch extraction~Webhook callbacks on job completion~JSON output, consistent schema" | split: "~" %}
+                        {% for f in features %}
+                        <li style="display:flex;align-items:center;gap:0.5rem;font-size:0.83rem;color:#3f3f46;">
+                            <i class="ri-check-line" style="color:#22c55e;font-size:0.9rem;flex-shrink:0;"></i> {{ f }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    <p style="font-size:11px;color:#a1a1aa;margin-top:1.25rem;">Best for: developers, data engineers, analytics teams</p>
                 </div>
-                <div class="group p-10 border border-gray-200 hover:border-blue-600 transition-all bg-white hover:bg-gray-50">
-                    <div class="text-5xl font-black text-blue-600 mb-6">03</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">JavaScript Rendering</h3>
-                    <p class="text-gray-600 leading-relaxed text-lg">Full browser rendering for JavaScript-heavy sites. Get the data you need, even from SPAs.</p>
+            </div>
+
+            <!-- Excel -->
+            <div style="border:1px solid #e4e4e7;border-radius:14px;overflow:hidden;">
+                <div style="background:#052e16;padding:2rem;min-height:160px;display:flex;flex-direction:column;justify-content:flex-end;">
+                    <i class="ri-file-excel-2-line" style="font-size:2rem;color:#22c55e;margin-bottom:0.75rem;"></i>
+                    <div style="font-size:1.1rem;font-weight:800;color:#f4f4f5;letter-spacing:-0.02em;">Scheduled Excel / CSV</div>
+                    <div style="font-size:0.8rem;color:#52525b;margin-top:0.2rem;">Inbox or Google Sheets</div>
                 </div>
-                <div class="group p-10 border border-gray-200 hover:border-orange-600 transition-all bg-white hover:bg-gray-50">
-                    <div class="text-5xl font-black text-orange-600 mb-6">04</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Structured Data</h3>
-                    <p class="text-gray-600 leading-relaxed text-lg">Receive clean, structured JSON responses. No parsing needed on your end.</p>
+                <div style="padding:1.75rem;">
+                    <p style="font-size:0.88rem;color:#52525b;line-height:1.7;margin-bottom:1.25rem;">Get a formatted report delivered to your email or connected Google Sheet — daily, weekly, or on a custom schedule. No login required to stay updated.</p>
+                    <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.5rem;">
+                        {% assign features = "Pre-formatted multi-tab reports~Email delivery on any schedule~Google Sheets auto-sync~Custom columns per report~Share with team — no extra seats" | split: "~" %}
+                        {% for f in features %}
+                        <li style="display:flex;align-items:center;gap:0.5rem;font-size:0.83rem;color:#3f3f46;">
+                            <i class="ri-check-line" style="color:#22c55e;font-size:0.9rem;flex-shrink:0;"></i> {{ f }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    <p style="font-size:11px;color:#a1a1aa;margin-top:1.25rem;">Best for: ops teams, supply chain, leadership dashboards</p>
                 </div>
-                <div class="group p-10 border border-gray-200 hover:border-blue-600 transition-all bg-white hover:bg-gray-50">
-                    <div class="text-5xl font-black text-blue-600 mb-6">05</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Rate Limiting</h3>
-                    <p class="text-gray-600 leading-relaxed text-lg">Intelligent rate limiting prevents overwhelming target sites while maximizing throughput.</p>
-                </div>
-                <div class="group p-10 border border-gray-200 hover:border-orange-600 transition-all bg-white hover:bg-gray-50">
-                    <div class="text-5xl font-black text-orange-600 mb-6">06</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Webhooks</h3>
-                    <p class="text-gray-600 leading-relaxed text-lg">Get notified when your scraping jobs complete. Integrate seamlessly with your workflow.</p>
-                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- WHAT'S TRACKED -->
+<section style="background:#fafafa;padding:5rem 0;border-top:1px solid #e4e4e7;">
+    <div class="nx-wrap">
+        <div class="nx-label">Intelligence coverage</div>
+        <h2 class="nx-h2" style="max-width:480px;margin-bottom:2.5rem;">Every signal that matters to your business.</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.25rem;">
+            <div style="padding:1.5rem;border:1px solid #e4e4e7;border-radius:10px;background:#fff;">
+                <i class="ri-price-tag-3-line" style="font-size:1.3rem;color:#3b82f6;margin-bottom:0.65rem;display:block;"></i>
+                <div style="font-weight:700;font-size:0.9rem;margin-bottom:0.35rem;">Price Intelligence</div>
+                <div style="font-size:0.83rem;color:#71717a;line-height:1.6;">MRP, selling price, discount, Buy Box winner, price history across platforms.</div>
+            </div>
+            <div style="padding:1.5rem;border:1px solid #e4e4e7;border-radius:10px;background:#fff;">
+                <i class="ri-store-line" style="font-size:1.3rem;color:#f97316;margin-bottom:0.65rem;display:block;"></i>
+                <div style="font-weight:700;font-size:0.9rem;margin-bottom:0.35rem;">Catalogue Monitoring</div>
+                <div style="font-size:0.83rem;color:#71717a;line-height:1.6;">Listing quality, images, descriptions, category placement, content changes.</div>
+            </div>
+            <div style="padding:1.5rem;border:1px solid #e4e4e7;border-radius:10px;background:#fff;">
+                <i class="ri-search-line" style="font-size:1.3rem;color:#8b5cf6;margin-bottom:0.65rem;display:block;"></i>
+                <div style="font-weight:700;font-size:0.9rem;margin-bottom:0.35rem;">Share of Search</div>
+                <div style="font-size:0.83rem;color:#71717a;line-height:1.6;">Keyword rank positions, brand visibility score, organic vs sponsored split.</div>
+            </div>
+            <div style="padding:1.5rem;border:1px solid #e4e4e7;border-radius:10px;background:#fff;">
+                <i class="ri-stack-line" style="font-size:1.3rem;color:#22c55e;margin-bottom:0.65rem;display:block;"></i>
+                <div style="font-weight:700;font-size:0.9rem;margin-bottom:0.35rem;">Stock &amp; Availability</div>
+                <div style="font-size:0.83rem;color:#71717a;line-height:1.6;">In-stock status, pincode-level availability for quick commerce, seller stock.</div>
+            </div>
+            <div style="padding:1.5rem;border:1px solid #e4e4e7;border-radius:10px;background:#fff;">
+                <i class="ri-flashlight-line" style="font-size:1.3rem;color:#f59e0b;margin-bottom:0.65rem;display:block;"></i>
+                <div style="font-weight:700;font-size:0.9rem;margin-bottom:0.35rem;">Digital Shelf (Quick Commerce)</div>
+                <div style="font-size:0.83rem;color:#71717a;line-height:1.6;">Delivery ETA, dark store coverage, pincode pricing differences on Zepto, Blinkit, Instamart.</div>
+            </div>
+            <div style="padding:1.5rem;border:1px solid #e4e4e7;border-radius:10px;background:#fff;">
+                <i class="ri-building-line" style="font-size:1.3rem;color:#b45309;margin-bottom:0.65rem;display:block;"></i>
+                <div style="font-weight:700;font-size:0.9rem;margin-bottom:0.35rem;">Enterprise &amp; Custom</div>
+                <div style="font-size:0.83rem;color:#71717a;line-height:1.6;">Custom schemas, managed delivery to S3/SFTP/BigQuery, bulk exports, dedicated SLA.</div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Code Example -->
-    <section class="py-32 bg-gray-50">
-        <div class="container mx-auto px-6 max-w-7xl">
-            <div class="mb-20">
-                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Quick Start</div>
-                <h2 class="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-tight">Get Started<br/>in Minutes</h2>
-            </div>
-            <div class="p-10 bg-gray-900 border border-gray-800 relative overflow-hidden">
-                <div class="absolute top-6 right-6 flex gap-2">
-                    <div class="w-3 h-3 bg-orange-600"></div>
-                    <div class="w-3 h-3 bg-orange-600"></div>
-                    <div class="w-3 h-3 bg-blue-600"></div>
-                </div>
-                <div class="flex items-center gap-2 mb-6 text-gray-400 text-sm">
-                    <i class="ri-terminal-box-line"></i>
-                    <span>Terminal</span>
-                </div>
-                <pre class="text-blue-400 text-sm overflow-x-auto font-mono leading-relaxed"><code>curl -X POST https://api.nextract.dev/v1/scrape \
-  -H "Authorization: Bearer YOUR_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "url": "https://example.com",
-    "format": "json"
-  }'</code></pre>
-            </div>
+<!-- PLATFORMS -->
+<section style="background:#fff;padding:4rem 0;border-top:1px solid #e4e4e7;">
+    <div class="nx-wrap">
+        <div class="nx-label">Platform coverage</div>
+        <h2 class="nx-h2" style="max-width:480px;margin-bottom:1.75rem;">30+ marketplaces. One subscription.</h2>
+        <div style="display:flex;flex-wrap:wrap;gap:0.65rem;">
+            {% assign platforms = "Amazon~Flipkart~Walmart~eBay~Etsy~Blinkit~Zepto~Swiggy Instamart~BigBasket~JioMart~Myntra~Nykaa~Meesho~Croma~Swiggy~Zomato~Doordash~UberEats" | split: "~" %}
+            {% for p in platforms %}
+            <span style="padding:0.4rem 0.9rem;background:#fafafa;border:1px solid #e4e4e7;border-radius:999px;font-size:0.82rem;color:#3f3f46;font-weight:600;">{{ p }}</span>
+            {% endfor %}
+            <span style="padding:0.4rem 0.9rem;background:#f3f4f6;border:1px solid #e4e4e7;border-radius:999px;font-size:0.82rem;color:#9ca3af;font-style:italic;">+ more on request</span>
         </div>
-    </section>
+    </div>
+</section>
 
-    {% include contact-section.html %}
-</main>
+<!-- CTA -->
+<section style="background:var(--dk);padding:5rem 0;">
+    <div class="nx-wrap" style="text-align:center;">
+        <h2 style="font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;letter-spacing:-0.03em;color:#f4f4f5;margin-bottom:1rem;">Start with 5,000 free credits.</h2>
+        <p style="color:#71717a;font-size:0.95rem;margin-bottom:2rem;max-width:400px;margin-left:auto;margin-right:auto;line-height:1.7;">First month free, no card required. All three delivery modes included from day one.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;">
+            <a href="https://app.getnextract.com/register" class="btn-dk-primary">Start free <i class="ri-arrow-right-line"></i></a>
+            <a href="{{ '/enterprise/' | relative_url }}" class="btn-dk-ghost">Enterprise options</a>
+        </div>
+    </div>
+</section>

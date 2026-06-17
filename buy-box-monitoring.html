@@ -1,180 +1,104 @@
 ---
 layout: default
-title: "Amazon Buy Box Monitoring — Automated Tracking for Brands & Sellers"
+title: "Amazon Buy Box Monitoring — Automated Tracking for Brands & Sellers | Nextract"
 description: "Hourly Amazon Buy Box monitoring across your ASINs. Know exactly who wins the Buy Box, at what price, and when you lose it. Alerts, reports, and historical data for brands and sellers."
-keywords: "amazon buy box monitoring, buy box tracker, amazon buy box scraping, buy box alerts, buy box winner, asin buy box monitoring, amazon seller intelligence"
+keywords: "amazon buy box monitoring, buy box tracker, amazon buy box api, buy box alerts, buy box winner, asin buy box monitoring, amazon seller intelligence"
 og_description: "Hourly Amazon Buy Box monitoring. Know who wins the Buy Box, at what price, and when you lose it. Built for brands and sellers."
-twitter_description: "Hourly Amazon Buy Box monitoring for brands and sellers. Alerts, history, and competitor pricing — all in one pipeline."
 canonical_url: "https://nextract.dev/buy-box-monitoring/"
+permalink: /buy-box-monitoring/
 ---
-
+{% include sol-styles.html %}
 <main>
-    <!-- Hero -->
-    <section class="min-h-[90vh] flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-orange-50">
-        <div class="absolute inset-0 overflow-hidden">
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 blur-[120px] animate-pulse"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-600/10 blur-[120px] animate-pulse" style="animation-delay: 1s;"></div>
+
+<section style="background:var(--dk);padding:8rem 0 6rem;position:relative;overflow:hidden;">
+    <div class="orb orb-blue" style="width:700px;height:700px;top:50%;left:50%;transform:translate(-80%,-50%);opacity:0.8;"></div>
+    <div class="orb orb-orange" style="width:500px;height:500px;top:50%;left:50%;transform:translate(15%,-50%);opacity:0.7;"></div>
+    <div class="nx-grid-bg" style="position:absolute;inset:0;opacity:0.5;pointer-events:none;"></div>
+    <div class="nx-wrap" style="position:relative;z-index:1;">
+        <div style="display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--dk-mut);border:1px solid var(--dk-b);padding:0.3rem 0.75rem;margin-bottom:1.5rem;">E-commerce · Amazon Intelligence</div>
+        <p class="nx-label" style="color:var(--blue);margin-bottom:0.75rem;">Buy Box Monitoring</p>
+        <h1 style="font-size:clamp(2.5rem,6vw,5.5rem);font-weight:900;line-height:1;letter-spacing:-0.05em;color:var(--dk-txt);margin-bottom:1.5rem;max-width:800px;">
+            Know who wins the<br/><span class="nx-grad">Amazon Buy Box.</span>
+        </h1>
+        <p style="font-size:1rem;color:var(--dk-mut);max-width:32rem;line-height:1.7;margin-bottom:2.5rem;">
+            The Buy Box changes by the second — and so does your revenue. We monitor it hourly across every ASIN you care about, flag the moment you lose it, and tell you exactly who took it and at what price.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-bottom:2.5rem;">
+            <a href="{{ '/contact/' | relative_url }}" class="btn-dk-primary">Request sample data <i class="ri-arrow-right-line"></i></a>
+            <a href="https://app.getnextract.com/register" class="btn-dk-ghost">Start free</a>
         </div>
+        <div style="display:flex;flex-wrap:wrap;gap:1.5rem;padding-top:1.5rem;border-top:1px solid var(--dk-b);">
+            <span style="display:flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--dk-mut);"><i class="ri-time-line" style="color:var(--blue);"></i> Hourly refresh</span>
+            <span style="display:flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--dk-mut);"><i class="ri-notification-line" style="color:var(--blue);"></i> Real-time alerts</span>
+            <span style="display:flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--dk-mut);"><i class="ri-global-line" style="color:var(--blue);"></i> All Amazon marketplaces</span>
+        </div>
+    </div>
+</section>
 
-        <div class="container mx-auto px-6 max-w-7xl relative z-10">
-            <div class="max-w-6xl mx-auto">
-                <div class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-gray-200 px-4 py-2 mb-6">
-                    <div class="w-2 h-2 bg-orange-600 animate-pulse"></div>
-                    <span class="text-xs font-semibold text-gray-700">E-commerce Use Case • Amazon Intelligence</span>
-                </div>
-                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-6">Buy Box Monitoring</div>
-                <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-8 leading-[1.05] tracking-tight">
-                    Know who wins the<br/>
-                    <span class="bg-gradient-to-r from-blue-600 to-orange-600 bg-clip-text text-transparent">Amazon Buy Box</span>
-                </h1>
-                <p class="text-xl md:text-2xl text-gray-600 mb-10 max-w-4xl leading-relaxed">
-                    The Buy Box changes by the second — and so does your revenue. We monitor it hourly across every ASIN you care about, flag the moment you lose it, and tell you exactly who took it and at what price.
-                </p>
-
-                <div class="flex flex-col sm:flex-row items-center gap-4 mb-12">
-                    <a href="/contact/" class="group relative px-10 py-5 bg-gray-900 text-white font-bold text-lg overflow-hidden hover:text-white">
-                        <span class="relative z-10 flex items-center gap-2">Request Sample Data <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i></span>
-                        <div class="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-                    </a>
-                    <a href="https://calendly.com/parthravrani/30min" target="_blank" class="px-10 py-5 border-2 border-gray-900 text-gray-900 font-bold text-lg hover:bg-gray-900 hover:text-white transition-all">Talk to Us</a>
-                </div>
-
-                <div class="flex flex-wrap items-center gap-8 pt-8 border-t border-gray-200">
-                    <div class="flex items-center gap-3"><i class="ri-time-line text-blue-600 text-xl"></i><span class="text-sm font-semibold text-gray-600">Hourly refresh</span></div>
-                    <div class="flex items-center gap-3"><i class="ri-notification-line text-blue-600 text-xl"></i><span class="text-sm font-semibold text-gray-600">Real-time alerts</span></div>
-                    <div class="flex items-center gap-3"><i class="ri-global-line text-blue-600 text-xl"></i><span class="text-sm font-semibold text-gray-600">All Amazon marketplaces</span></div>
-                </div>
+<section style="background:var(--lt);padding:5rem 0;border-top:1px solid var(--lt-b);">
+    <div class="nx-wrap">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;" class="sol-2col">
+            <div>
+                <p class="nx-label" style="color:var(--orange);margin-bottom:1rem;">The Problem</p>
+                <h2 class="nx-h2" style="color:var(--lt-txt);margin-bottom:1.25rem;">Lose the Buy Box,<br/>lose the sale.</h2>
+                <p style="font-size:0.88rem;color:var(--lt-mut);line-height:1.75;margin-bottom:1rem;">Around 83% of Amazon purchases go through the Buy Box. A product that loses it — even for a few hours — stops selling. Algorithmic sellers, unauthorised resellers, and price swings mean this can happen overnight.</p>
+                <p style="font-size:0.88rem;color:var(--lt-mut);line-height:1.75;">Checking it by hand across hundreds of ASINs isn't a plan. You need a system that watches constantly and tells you the moment something changes.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Problem -->
-    <section class="py-32 bg-white">
-        <div class="container mx-auto px-6 max-w-7xl">
-            <div class="grid md:grid-cols-2 gap-16 items-start max-w-6xl mx-auto">
-                <div>
-                    <div class="text-sm font-bold text-orange-600 uppercase tracking-widest mb-4">The Problem</div>
-                    <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">Lose the Buy Box, lose the sale.</h2>
-                    <p class="text-lg text-gray-600 leading-relaxed mb-4">
-                        Around 83% of Amazon purchases go through the Buy Box. A product that loses it — even for a few hours — stops selling. Algorithmic sellers, unauthorised resellers, and price swings mean this can happen overnight.
-                    </p>
-                    <p class="text-lg text-gray-600 leading-relaxed">
-                        Checking it by hand across hundreds of ASINs isn't a plan. You need a system that watches constantly and tells you the moment something changes.
-                    </p>
-                </div>
-                <div class="bg-gray-50 p-10 border-l-4 border-blue-600">
-                    <div class="text-sm font-bold text-gray-900 mb-4 uppercase tracking-widest">What we track, per ASIN</div>
-                    <ul class="space-y-3 text-gray-700">
-                        <li class="flex items-start gap-3"><i class="ri-check-line text-blue-600 text-xl mt-1"></i>Current Buy Box winner (seller name + ID)</li>
-                        <li class="flex items-start gap-3"><i class="ri-check-line text-blue-600 text-xl mt-1"></i>Buy Box price and shipping terms</li>
-                        <li class="flex items-start gap-3"><i class="ri-check-line text-blue-600 text-xl mt-1"></i>Fulfilment type (FBA / FBM / Amazon)</li>
-                        <li class="flex items-start gap-3"><i class="ri-check-line text-blue-600 text-xl mt-1"></i>Number of offers on the listing</li>
-                        <li class="flex items-start gap-3"><i class="ri-check-line text-blue-600 text-xl mt-1"></i>Prime eligibility</li>
-                        <li class="flex items-start gap-3"><i class="ri-check-line text-blue-600 text-xl mt-1"></i>Timestamped history of every change</li>
-                    </ul>
+            <div style="background:var(--lt1);border:1px solid var(--lt-b);border-left:3px solid var(--blue);padding:2rem;">
+                <p class="nx-label" style="color:var(--lt-mut);margin-bottom:1.25rem;">What we track per ASIN</p>
+                <div style="display:flex;flex-direction:column;gap:0.75rem;">
+                    {% assign bbtracks = "Current Buy Box winner (seller name + ID)~Buy Box price and shipping terms~Fulfilment type (FBA / FBM / Amazon)~Number of offers on the listing~Prime eligibility~Timestamped history of every change" | split: "~" %}
+                    {% for t in bbtracks %}
+                    <div style="display:flex;align-items:center;gap:8px;font-size:0.84rem;color:var(--lt-txt);"><i class="ri-check-line" style="color:var(--blue);flex-shrink:0;"></i> {{ t }}</div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- How It Works -->
-    <section class="py-32 bg-gray-50">
-        <div class="container mx-auto px-6 max-w-7xl">
-            <div class="mb-16 text-center">
-                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">How It Works</div>
-                <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">A pipeline built for<br/>Buy Box velocity</h2>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="p-10 bg-white border border-gray-200 hover:border-blue-600 transition-all">
-                    <div class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-6"><i class="ri-list-check-2 text-blue-600 text-2xl"></i></div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">1. You send ASINs</h3>
-                    <p class="text-gray-600 leading-relaxed">Drop in a list — 50 SKUs or 50,000. We support any Amazon marketplace: US, UK, IN, DE, CA, JP, and more.</p>
-                </div>
-                <div class="p-10 bg-white border border-gray-200 hover:border-blue-600 transition-all">
-                    <div class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-6"><i class="ri-radar-line text-blue-600 text-2xl"></i></div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">2. We watch hourly</h3>
-                    <p class="text-gray-600 leading-relaxed">Our infrastructure polls the Buy Box at a cadence you control — hourly, 15-minute, or event-driven.</p>
-                </div>
-                <div class="p-10 bg-white border border-gray-200 hover:border-orange-600 transition-all">
-                    <div class="w-14 h-14 rounded-full bg-orange-50 flex items-center justify-center mb-6"><i class="ri-alarm-warning-line text-orange-600 text-2xl"></i></div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">3. You get alerted</h3>
-                    <p class="text-gray-600 leading-relaxed">Slack, email, webhook — the instant an ASIN changes hands, you know about it, along with the new winner and price.</p>
-                </div>
-                <div class="p-10 bg-white border border-gray-200 hover:border-blue-600 transition-all">
-                    <div class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-6"><i class="ri-line-chart-line text-blue-600 text-2xl"></i></div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">4. History builds up</h3>
-                    <p class="text-gray-600 leading-relaxed">Every change is logged. Answer questions like "who's been winning on this ASIN for the last 60 days?" — backed by real data.</p>
-                </div>
-                <div class="p-10 bg-white border border-gray-200 hover:border-orange-600 transition-all">
-                    <div class="w-14 h-14 rounded-full bg-orange-50 flex items-center justify-center mb-6"><i class="ri-share-forward-line text-orange-600 text-2xl"></i></div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">5. Feeds into your stack</h3>
-                    <p class="text-gray-600 leading-relaxed">JSON/CSV, REST API, S3, Snowflake, BigQuery, your BI tool — delivered in the format you already use.</p>
-                </div>
-                <div class="p-10 bg-white border border-gray-200 hover:border-blue-600 transition-all">
-                    <div class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-6"><i class="ri-shield-check-line text-blue-600 text-2xl"></i></div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">6. We handle the hard part</h3>
-                    <p class="text-gray-600 leading-relaxed">Anti-bot handling, retries, CAPTCHAs, proxy rotation — you get a clean feed, not a broken scraper to babysit.</p>
-                </div>
-            </div>
+<section style="background:var(--lt1);padding:5rem 0;border-top:1px solid var(--lt-b);">
+    <div class="nx-wrap">
+        <div style="margin-bottom:3rem;">
+            <p class="nx-label" style="color:var(--blue);margin-bottom:0.75rem;">How It Works</p>
+            <h2 class="nx-h2" style="color:var(--lt-txt);">A pipeline built for<br/>Buy Box velocity.</h2>
         </div>
-    </section>
-
-    <!-- Who It's For -->
-    <section class="py-32 bg-white">
-        <div class="container mx-auto px-6 max-w-7xl">
-            <div class="mb-16 text-center">
-                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Who This Is For</div>
-                <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">Built for teams where<br/>Buy Box is revenue</h2>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <div class="p-10 border-l-4 border-blue-600 bg-gray-50 hover:shadow-xl transition-all">
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Brands selling on Amazon</h3>
-                    <p class="text-gray-600">Know when an unauthorised seller or counterfeit listing steals the Buy Box on your own ASIN — and respond before it costs you a week of sales.</p>
-                </div>
-                <div class="p-10 border-l-4 border-orange-600 bg-gray-50 hover:shadow-xl transition-all">
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">3P sellers & agencies</h3>
-                    <p class="text-gray-600">Feed your repricer with clean, timely Buy Box data. Identify when competitors soften on price and when they don't.</p>
-                </div>
-                <div class="p-10 border-l-4 border-blue-600 bg-gray-50 hover:shadow-xl transition-all">
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Price intelligence teams</h3>
-                    <p class="text-gray-600">Map Buy Box dynamics alongside your own ASP and margin model to pick the right floor, not a guess.</p>
-                </div>
-                <div class="p-10 border-l-4 border-orange-600 bg-gray-50 hover:shadow-xl transition-all">
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Analytics & BI platforms</h3>
-                    <p class="text-gray-600">Power a Buy Box module inside your product without building marketplace scraping from scratch.</p>
-                </div>
-            </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;" class="sol-3col">
+            <div class="sol-card"><div class="sol-icon" style="background:rgba(59,130,246,0.08);color:var(--blue);"><i class="ri-list-check-2"></i></div><div class="sol-card-title">1. You send ASINs</div><p class="sol-card-body">Drop in a list — 50 SKUs or 50,000. We support any Amazon marketplace: IN, US, UK, DE, CA, JP, and more.</p></div>
+            <div class="sol-card"><div class="sol-icon" style="background:rgba(59,130,246,0.08);color:var(--blue);"><i class="ri-radar-line"></i></div><div class="sol-card-title">2. We watch hourly</div><p class="sol-card-body">Our infrastructure polls the Buy Box at a cadence you control — hourly, 15-minute, or event-driven.</p></div>
+            <div class="sol-card"><div class="sol-icon" style="background:rgba(249,115,22,0.08);color:var(--orange);"><i class="ri-alarm-warning-line"></i></div><div class="sol-card-title">3. You get alerted</div><p class="sol-card-body">Slack, email, webhook — the instant an ASIN changes hands, you know about it, along with the new winner and price.</p></div>
+            <div class="sol-card"><div class="sol-icon" style="background:rgba(59,130,246,0.08);color:var(--blue);"><i class="ri-line-chart-line"></i></div><div class="sol-card-title">4. History builds up</div><p class="sol-card-body">Every change is logged. Answer questions like "who's been winning on this ASIN for the last 60 days?" — backed by real data.</p></div>
+            <div class="sol-card"><div class="sol-icon" style="background:rgba(249,115,22,0.08);color:var(--orange);"><i class="ri-share-forward-line"></i></div><div class="sol-card-title">5. Feeds your stack</div><p class="sol-card-body">JSON/CSV, REST API, S3, Snowflake, BigQuery, your BI tool — delivered in the format you already use.</p></div>
+            <div class="sol-card"><div class="sol-icon" style="background:rgba(59,130,246,0.08);color:var(--blue);"><i class="ri-shield-check-line"></i></div><div class="sol-card-title">6. We handle the hard part</div><p class="sol-card-body">Anti-bot handling, retries, CAPTCHAs, proxy rotation — you get a clean feed, not a broken scraper to babysit.</p></div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Related -->
-    <section class="py-32 bg-gray-50">
-        <div class="container mx-auto px-6 max-w-7xl">
-            <div class="mb-12 text-center">
-                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Related</div>
-                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">Go deeper</h2>
-            </div>
-            <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                <a href="/amazon/" class="p-8 bg-white border border-gray-200 hover:border-blue-600 transition-all block">
-                    <div class="text-xs font-bold text-blue-600 uppercase mb-2">Platform</div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Amazon Data Solutions</h3>
-                    <p class="text-sm text-gray-600">Full Amazon pipeline — products, pricing, reviews, sellers.</p>
-                </a>
-                <a href="/competitor-stockout-monitoring/" class="p-8 bg-white border border-gray-200 hover:border-blue-600 transition-all block">
-                    <div class="text-xs font-bold text-blue-600 uppercase mb-2">Use Case</div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Competitor Stockout Monitoring</h3>
-                    <p class="text-sm text-gray-600">Spot the window when a competitor runs out.</p>
-                </a>
-                <a href="/share-of-search/" class="p-8 bg-white border border-gray-200 hover:border-orange-600 transition-all block">
-                    <div class="text-xs font-bold text-orange-600 uppercase mb-2">Use Case</div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Share of Search</h3>
-                    <p class="text-sm text-gray-600">Track where your ASINs rank on Amazon and Flipkart.</p>
-                </a>
-            </div>
+<section style="background:var(--lt);padding:5rem 0;border-top:1px solid var(--lt-b);">
+    <div class="nx-wrap">
+        <div style="margin-bottom:3rem;">
+            <p class="nx-label" style="color:var(--blue);margin-bottom:0.75rem;">Who This Is For</p>
+            <h2 class="nx-h2" style="color:var(--lt-txt);">Built for teams where<br/>Buy Box is revenue.</h2>
         </div>
-    </section>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;" class="sol-2col">
+            <div class="sol-who"><h3 class="sol-who-title">Brands selling on Amazon</h3><p class="sol-who-body">Know when an unauthorised seller or counterfeit listing steals the Buy Box on your own ASIN — and respond before it costs you a week of sales.</p></div>
+            <div class="sol-who sol-who-orange"><h3 class="sol-who-title">3P sellers &amp; agencies</h3><p class="sol-who-body">Feed your repricer with clean, timely Buy Box data. Identify when competitors soften on price and when they don't.</p></div>
+            <div class="sol-who"><h3 class="sol-who-title">Price intelligence teams</h3><p class="sol-who-body">Map Buy Box dynamics alongside your own ASP and margin model to pick the right floor, not a guess.</p></div>
+            <div class="sol-who sol-who-orange"><h3 class="sol-who-title">Analytics &amp; BI platforms</h3><p class="sol-who-body">Power a Buy Box module inside your product without building marketplace scraping from scratch.</p></div>
+        </div>
+    </div>
+</section>
 
-    {% include contact-section.html %}
+<section style="background:var(--lt1);padding:4rem 0;border-top:1px solid var(--lt-b);">
+    <div class="nx-wrap">
+        <p class="nx-label" style="color:var(--lt-mut);margin-bottom:1.5rem;">Related</p>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;" class="sol-3col">
+            <a href="{{ '/share-of-search/' | relative_url }}" class="sol-related"><span class="sol-related-tag" style="color:var(--blue);">Use Case</span><div class="sol-related-title">Share of Search</div><p class="sol-related-body">Track where your ASINs rank on Amazon and Flipkart.</p></a>
+            <a href="{{ '/catalogue-monitoring/' | relative_url }}" class="sol-related"><span class="sol-related-tag" style="color:var(--orange);">Use Case</span><div class="sol-related-title">Catalogue Monitoring</div><p class="sol-related-body">Keep listings accurate across every marketplace.</p></a>
+            <a href="{{ '/solutions/' | relative_url }}" class="sol-related"><span class="sol-related-tag" style="color:var(--blue);">All use cases</span><div class="sol-related-title">All Solutions</div><p class="sol-related-body">See every use case Nextract covers.</p></a>
+        </div>
+    </div>
+</section>
+
+{% include contact-section.html %}
 </main>

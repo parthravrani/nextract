@@ -1,207 +1,235 @@
 ---
 layout: default
-title: "Frequently Asked Questions"
-description: "FAQ about Nextract's web scraping API and data extraction services. Answers to common questions about pricing, features, security, compliance, and more."
-keywords: "nextract FAQ, web scraping FAQ, data extraction FAQ, API FAQ, pricing FAQ, security FAQ"
-og_description: "FAQ about Nextract's web scraping services. Get answers to common questions about pricing, features, security, and compliance."
-twitter_description: "FAQ about Nextract web scraping API and services. Common questions answered about pricing, features, security."
+title: "FAQ — Nextract Commerce Intelligence Platform"
+description: "Answers to common questions about Nextract — pricing, free trial, credits, supported platforms, API, delivery modes, and enterprise options."
+keywords: "nextract FAQ, commerce intelligence FAQ, price tracking FAQ, ecommerce data API FAQ, nextract pricing questions, nextract free trial"
+permalink: /faq/
+og_title: "Frequently Asked Questions — Nextract"
+og_description: "How credits work, which platforms are supported, how to get started, and everything else about Nextract."
 ---
 
-<main>
-    <!-- Hero Section -->
-    <section class="min-h-[60vh] flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-orange-50">
-        <div class="absolute inset-0 overflow-hidden">
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 blur-[100px] animate-pulse"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-600/10 blur-[100px] animate-pulse" style="animation-delay: 1s;"></div>
-        </div>
-        
-        <div class="container mx-auto px-6 max-w-7xl relative z-10">
-            <div class="max-w-5xl mx-auto text-center">
-                <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-6">FAQ</div>
-                <h1 class="text-6xl md:text-8xl font-black text-gray-900 mb-8 leading-[0.9] tracking-tight">
-                    Frequently Asked<br/>
-                    <span class="bg-gradient-to-r from-blue-600 to-orange-600 bg-clip-text text-transparent">Questions</span>
-                </h1>
-                <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
-                    Everything you need to know about our web scraping services.<br/>
-                    <span class="font-semibold text-gray-900">Can't find your answer? Contact us.</span>
-                </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-                    <a href="/contact/" class="group relative px-10 py-5 bg-gray-900 text-white font-bold text-lg overflow-hidden">
-                        <span class="relative z-10 flex items-center gap-2">
-                            Get Your Answer
-                            <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
-                        </span>
-                        <div class="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-                    </a>
-                    <a href="/products/" class="px-10 py-5 border-2 border-gray-900 text-gray-900 font-bold text-lg hover:bg-gray-900 hover:text-white transition-all">
-                        View Products
-                    </a>
+{% include sol-styles.html %}
+
+<style>
+.faq-item { border-bottom: 1px solid #e4e4e7; }
+.faq-item:first-child { border-top: 1px solid #e4e4e7; }
+.faq-btn {
+    width: 100%; display: flex; align-items: center; justify-content: space-between;
+    padding: 1.25rem 0; gap: 1.5rem;
+    background: none; border: none; cursor: pointer; text-align: left;
+}
+.faq-q { font-size: 0.95rem; font-weight: 700; color: #09090b; line-height: 1.4; }
+.faq-icon { font-size: 1.1rem; color: #a1a1aa; flex-shrink: 0; transition: transform 0.2s, color 0.2s; }
+.faq-item.open .faq-icon { transform: rotate(45deg); color: #3b82f6; }
+.faq-body { display: none; padding-bottom: 1.25rem; }
+.faq-item.open .faq-body { display: block; }
+.faq-a { font-size: 0.875rem; color: #52525b; line-height: 1.8; }
+.faq-a a { color: #3b82f6; text-decoration: none; }
+.faq-a a:hover { text-decoration: underline; }
+.faq-group-head {
+    font-size: 9.5px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
+    color: #a1a1aa; margin: 2.5rem 0 0.5rem;
+}
+.faq-group-head:first-child { margin-top: 0; }
+</style>
+
+<!-- HERO -->
+<section style="background:var(--dk);color:#fff;padding:6rem 0 4.5rem;position:relative;">
+    <div style="background:radial-gradient(ellipse at 70% 20%, rgba(59,130,246,0.18) 0%, transparent 55%),var(--dk);position:absolute;inset:0;"></div>
+    <div class="nx-wrap" style="position:relative;z-index:1;">
+        <div class="nx-label" style="color:#52525b;">Support</div>
+        <h1 style="font-size:clamp(2.2rem,5vw,3.5rem);font-weight:900;line-height:1.1;letter-spacing:-0.03em;max-width:600px;margin-bottom:1rem;">
+            Frequently asked<br/><span class="nx-grad">questions.</span>
+        </h1>
+        <p style="font-size:1rem;color:#d4d4d8;max-width:520px;line-height:1.8;">
+            Can't find your answer? <a href="{{ '/contact/' | relative_url }}" style="color:#3b82f6;text-decoration:none;">Contact us</a> — we'll get back to you same day.
+        </p>
+    </div>
+</section>
+
+<!-- FAQ BODY -->
+<section style="background:#fff;padding:5rem 0;">
+    <div class="nx-wrap">
+        <div style="max-width:760px;">
+
+            <!-- Getting Started -->
+            <div class="faq-group-head">Getting started</div>
+
+            <div class="faq-item">
+                <button class="faq-btn">
+                    <span class="faq-q">What is Nextract?</span>
+                    <i class="ri-add-line faq-icon"></i>
+                </button>
+                <div class="faq-body">
+                    <p class="faq-a">Nextract is a commerce intelligence platform. We track prices, stock levels, search rankings, and competitor activity across 30+ marketplaces — Amazon, Flipkart, Blinkit, Zepto, Swiggy Instamart, BigBasket, Walmart, and more. You can access the data via a dashboard, REST API, or automated Excel/CSV reports. It's self-serve and free to start.</p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- FAQ Section -->
-    <section class="py-32 bg-white">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <div class="space-y-4">
-                <!-- FAQ Item 1 -->
-                <div class="accordion-item border border-gray-200 overflow-hidden">
-                    <button class="accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors">
-                        <span class="text-xl font-bold text-gray-900">What is web scraping and how does it work?</span>
-                        <i class="ri-add-line accordion-icon text-2xl text-blue-600"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="px-6 pb-6 text-gray-600 leading-relaxed">
-                            Web scraping is the automated extraction of data from websites. Our service uses advanced technology to access websites, extract structured data, and deliver it to you via API or custom solutions. We handle all the technical complexities including JavaScript rendering, anti-bot measures, CAPTCHA solving, and IP rotation, so you get clean, reliable data without the hassle.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 2 -->
-                <div class="accordion-item border border-gray-200 overflow-hidden">
-                    <button class="accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors">
-                        <span class="text-xl font-bold text-gray-900">Is web scraping legal and ethical?</span>
-                        <i class="ri-add-line accordion-icon text-2xl text-blue-600"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="px-6 pb-6 text-gray-600 leading-relaxed">
-                            Yes, when done correctly. We follow ethical scraping practices including respecting robots.txt files, terms of service, rate limits, and data privacy regulations. We're committed to security and compliance, and we're working towards GDPR compliance and other certifications. We only scrape publicly available data and never collect personal information without consent. We believe in ethical data practices and transparency.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 3 -->
-                <div class="accordion-item border border-gray-200 overflow-hidden">
-                    <button class="accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors">
-                        <span class="text-xl font-bold text-gray-900">How much does it cost?</span>
-                        <i class="ri-add-line accordion-icon text-2xl text-blue-600"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="px-6 pb-6 text-gray-600 leading-relaxed">
-                            We offer custom pricing based on your requirements. Every solution is scoped to your use case, volume, and delivery schedule. Contact us for a personalized quote. We also offer volume discounts for high-volume usage.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 4 -->
-                <div class="accordion-item border border-gray-200 overflow-hidden">
-                    <button class="accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors">
-                        <span class="text-xl font-bold text-gray-900">What platforms do you support?</span>
-                        <i class="ri-add-line accordion-icon text-2xl text-blue-600"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="px-6 pb-6 text-gray-600 leading-relaxed">
-                            We support 100+ platforms including Amazon, Walmart, eBay, LinkedIn, Zillow, Booking.com, Expedia, Zomato, Swiggy, DoorDash, Netflix, and many more. We also offer custom scraping solutions for any website or platform you need. If you don't see your platform listed, contact us and we'll build a custom solution for you.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 5 -->
-                <div class="accordion-item border border-gray-200 overflow-hidden">
-                    <button class="accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors">
-                        <span class="text-xl font-bold text-gray-900">How reliable is your service?</span>
-                        <i class="ri-add-line accordion-icon text-2xl text-blue-600"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="px-6 pb-6 text-gray-600 leading-relaxed">
-                            We're committed to providing reliable service. We use modern infrastructure with monitoring and automatic retry logic for data extraction. While we're a growing company, we focus on delivering consistent, reliable results for our clients. We provide 24/7 support and continuously work to improve our reliability and infrastructure.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 6 -->
-                <div class="accordion-item border border-gray-200 overflow-hidden">
-                    <button class="accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors">
-                        <span class="text-xl font-bold text-gray-900">How quickly can I get started?</span>
-                        <i class="ri-add-line accordion-icon text-2xl text-blue-600"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="px-6 pb-6 text-gray-600 leading-relaxed">
-                            We typically deliver custom solutions within 1-2 weeks depending on complexity. Request a consultation or sample data to get started; we'll scope your requirements and build the right data pipeline for you. Contact us to discuss your timeline.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 7 -->
-                <div class="accordion-item border border-gray-200 overflow-hidden">
-                    <button class="accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors">
-                        <span class="text-xl font-bold text-gray-900">What kind of support do you provide?</span>
-                        <i class="ri-add-line accordion-icon text-2xl text-blue-600"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="px-6 pb-6 text-gray-600 leading-relaxed">
-                            We provide 24/7 support via email, with average response times under 2 hours. We also offer comprehensive documentation, code samples in multiple languages, and dedicated support for enterprise clients. Our team is always ready to help you integrate, troubleshoot, or optimize your data extraction workflows.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 8 -->
-                <div class="accordion-item border border-gray-200 overflow-hidden">
-                    <button class="accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors">
-                        <span class="text-xl font-bold text-gray-900">Can you handle high-volume requests?</span>
-                        <i class="ri-add-line accordion-icon text-2xl text-blue-600"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="px-6 pb-6 text-gray-600 leading-relaxed">
-                            Absolutely. Our infrastructure is built to scale and can handle millions of requests per day. We have auto-scaling capabilities and distributed infrastructure across multiple data centers. Many of our enterprise clients process millions of requests daily without any issues. Contact us to discuss your specific volume requirements.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 9 -->
-                <div class="accordion-item border border-gray-200 overflow-hidden">
-                    <button class="accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors">
-                        <span class="text-xl font-bold text-gray-900">What data formats do you support?</span>
-                        <i class="ri-add-line accordion-icon text-2xl text-blue-600"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="px-6 pb-6 text-gray-600 leading-relaxed">
-                            We support multiple output formats including JSON (default), XML, CSV, and Parquet. Our API returns clean, structured JSON data. For datasets, we provide exports in CSV, JSON, or Parquet formats. We can also customize the output format to match your specific requirements.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 10 -->
-                <div class="accordion-item border border-gray-200 overflow-hidden">
-                    <button class="accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors">
-                        <span class="text-xl font-bold text-gray-900">Do you offer custom solutions?</span>
-                        <i class="ri-add-line accordion-icon text-2xl text-blue-600"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="px-6 pb-6 text-gray-600 leading-relaxed">
-                            Yes! We specialize in custom scraping solutions tailored to your specific needs. Whether you need custom data pipelines, enterprise integrations, white-label platforms, or specialized extraction workflows, our team can build it for you. We provide dedicated engineering teams, ongoing support, and custom SLAs. Contact us to discuss your requirements.
-                        </div>
-                    </div>
+            <div class="faq-item">
+                <button class="faq-btn">
+                    <span class="faq-q">How do I get started?</span>
+                    <i class="ri-add-line faq-icon"></i>
+                </button>
+                <div class="faq-body">
+                    <p class="faq-a">Sign up at <a href="https://app.getnextract.com/register">app.getnextract.com</a> — no card needed. Your first month includes 5,000 free credits. Add the products or keywords you want to track, pick your delivery mode (dashboard, API, or Excel), and you're live. Takes under 5 minutes.</p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Still Have Questions CTA -->
-    <section class="py-32 bg-gradient-to-r from-blue-600 to-blue-700">
-        <div class="container mx-auto px-6 max-w-4xl text-center">
-            <h2 class="text-4xl md:text-5xl font-black text-white mb-6">Still Have Questions?</h2>
-            <p class="text-xl text-white opacity-95 mb-8">Our team is here to help. Get in touch and we'll answer any questions you have.</p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="/contact/" class="px-10 py-5 bg-white text-blue-600 font-bold text-lg hover:bg-gray-100 transition-all inline-flex items-center gap-2">
-                    Contact Us
-                    <i class="ri-arrow-right-line"></i>
-                </a>
-                <a href="https://calendly.com/parthravrani/30min" target="_blank" class="px-10 py-5 border-2 border-white text-white font-bold text-lg hover:bg-white hover:text-blue-600 transition-all inline-flex items-center gap-2">
-                    <i class="ri-calendar-line"></i>
-                    Schedule a Call
-                </a>
-                <a href="{{ '/assets/deck/Nextract - Pitch Deck.pdf' | relative_url }}" download="Nextract-Pitch-Deck.pdf" class="px-10 py-5 border-2 border-white text-white font-bold text-lg hover:bg-white hover:text-blue-600 transition-all inline-flex items-center gap-2">
-                    <i class="ri-download-line"></i>
-                    Download Deck
-                </a>
+            <div class="faq-item">
+                <button class="faq-btn">
+                    <span class="faq-q">Is there a free trial?</span>
+                    <i class="ri-add-line faq-icon"></i>
+                </button>
+                <div class="faq-body">
+                    <p class="faq-a">Yes — your first month includes 5,000 credits at no charge, with no credit card required. This is a one-time free allocation when you sign up, not a recurring free tier. After the first month, you'll need a paid plan to continue. See <a href="{{ '/pricing/' | relative_url }}">pricing</a> for plan details.</p>
+                </div>
             </div>
+
+            <!-- Credits & Pricing -->
+            <div class="faq-group-head">Credits &amp; Pricing</div>
+
+            <div class="faq-item">
+                <button class="faq-btn">
+                    <span class="faq-q">What is a credit?</span>
+                    <i class="ri-add-line faq-icon"></i>
+                </button>
+                <div class="faq-body">
+                    <p class="faq-a">One credit = one data point fetched. Checking the price and stock of a single product on a single platform uses 1 credit. Fetching search rankings for a keyword, or pulling a product's full listing detail, also uses 1 credit. Credits don't expire within your billing month.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-btn">
+                    <span class="faq-q">What happens if I run out of credits mid-month?</span>
+                    <i class="ri-add-line faq-icon"></i>
+                </button>
+                <div class="faq-body">
+                    <p class="faq-a">Tracking pauses until your next billing cycle resets your credit balance. You can upgrade to a higher plan at any time to get more credits immediately. We'll send you an alert when you're approaching your limit so you're never caught off guard.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-btn">
+                    <span class="faq-q">Do you offer custom or enterprise pricing?</span>
+                    <i class="ri-add-line faq-icon"></i>
+                </button>
+                <div class="faq-body">
+                    <p class="faq-a">Yes. For high-volume usage, custom data delivery (S3, SFTP, BigQuery), or dedicated SLAs, see our <a href="{{ '/enterprise/' | relative_url }}">Enterprise page</a> or <a href="{{ '/contact/' | relative_url }}">contact us</a> directly. Enterprise plans are quoted based on your volume, platforms, and delivery requirements.</p>
+                </div>
+            </div>
+
+            <!-- Platforms & Data -->
+            <div class="faq-group-head">Platforms &amp; data</div>
+
+            <div class="faq-item">
+                <button class="faq-btn">
+                    <span class="faq-q">Which platforms do you support?</span>
+                    <i class="ri-add-line faq-icon"></i>
+                </button>
+                <div class="faq-body">
+                    <p class="faq-a">We cover 30+ platforms including Amazon, Flipkart, Walmart, eBay, Etsy, Blinkit, Zepto, Swiggy Instamart, BigBasket, JioMart, Myntra, Nykaa, Meesho, Croma, Swiggy, Zomato, DoorDash, and UberEats. Need a platform not listed? <a href="{{ '/contact/' | relative_url }}">Let us know</a> — we add platforms on request.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-btn">
+                    <span class="faq-q">What data fields does Nextract track?</span>
+                    <i class="ri-add-line faq-icon"></i>
+                </button>
+                <div class="faq-body">
+                    <p class="faq-a">Depending on the platform and plan: selling price, MRP, discount, Buy Box winner, stock / in-stock status, pincode-level availability (for quick commerce), search rank by keyword, product title and description, images, ratings &amp; review count, seller information, and listing quality signals. See <a href="{{ '/products/' | relative_url }}">Products</a> for a full breakdown.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-btn">
+                    <span class="faq-q">How fresh is the data?</span>
+                    <i class="ri-add-line faq-icon"></i>
+                </button>
+                <div class="faq-body">
+                    <p class="faq-a">Refresh frequency depends on your plan — from daily on Starter to near real-time on Scale and Enterprise. On-demand API calls return the latest available snapshot. For quick commerce platforms (Blinkit, Zepto, Instamart), we support multiple refreshes per day given how often prices and stock change.</p>
+                </div>
+            </div>
+
+            <!-- Delivery & Integration -->
+            <div class="faq-group-head">Delivery &amp; integration</div>
+
+            <div class="faq-item">
+                <button class="faq-btn">
+                    <span class="faq-q">What are the delivery modes?</span>
+                    <i class="ri-add-line faq-icon"></i>
+                </button>
+                <div class="faq-body">
+                    <p class="faq-a">Three ways to get your data: <strong>Dashboard</strong> — log in and view charts, alerts, and comparisons directly. <strong>REST API</strong> — query any endpoint in JSON; integrates with your existing stack. <strong>Scheduled Excel / CSV</strong> — formatted reports delivered to your inbox or Google Sheet on your schedule. All three are available from day one.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-btn">
+                    <span class="faq-q">How do I get my API key?</span>
+                    <i class="ri-add-line faq-icon"></i>
+                </button>
+                <div class="faq-body">
+                    <p class="faq-a">After signing up, your API key is available immediately in the dashboard under Settings → API. No approval process — sign up, copy the key, and make your first call. Full API reference is on the <a href="{{ '/apis/' | relative_url }}">API docs page</a>.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-btn">
+                    <span class="faq-q">What format does the API return?</span>
+                    <i class="ri-add-line faq-icon"></i>
+                </button>
+                <div class="faq-body">
+                    <p class="faq-a">JSON by default, with a consistent schema across all platforms. For bulk/enterprise delivery we also support JSON Lines, CSV, and Parquet. The schema is documented in the API reference.</p>
+                </div>
+            </div>
+
+            <!-- Compliance & Security -->
+            <div class="faq-group-head">Compliance &amp; security</div>
+
+            <div class="faq-item">
+                <button class="faq-btn">
+                    <span class="faq-q">Is the data collection legal and ethical?</span>
+                    <i class="ri-add-line faq-icon"></i>
+                </button>
+                <div class="faq-body">
+                    <p class="faq-a">Yes. Nextract collects only publicly available product data — prices, listings, rankings, and availability that any shopper can see. We do not collect personal data or bypass authentication. We follow ethical collection practices including rate limiting and robots.txt respect. See our <a href="{{ '/trust-security/' | relative_url }}">Trust &amp; Security</a> and <a href="{{ '/compliance/' | relative_url }}">Compliance</a> pages for details.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-btn">
+                    <span class="faq-q">Do you store my account or product data securely?</span>
+                    <i class="ri-add-line faq-icon"></i>
+                </button>
+                <div class="faq-body">
+                    <p class="faq-a">Yes. All data in transit is encrypted via HTTPS/TLS. Account data is stored in secured infrastructure with access controls. We're working towards formal GDPR compliance. Enterprise customers can request a data processing agreement (DPA). See <a href="{{ '/trust-security/' | relative_url }}">Trust &amp; Security</a> for the full picture.</p>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- CTA Section -->
-    {% include contact-section.html %}
-</main>
+<!-- CTA -->
+<section style="background:var(--dk);padding:5rem 0;">
+    <div class="nx-wrap" style="text-align:center;">
+        <h2 style="font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:900;letter-spacing:-0.03em;color:#f4f4f5;margin-bottom:1rem;">Still have a question?</h2>
+        <p style="color:#71717a;font-size:0.95rem;margin-bottom:2rem;max-width:380px;margin-left:auto;margin-right:auto;line-height:1.7;">We reply same day. Or just start free and see the platform for yourself.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;">
+            <a href="https://app.getnextract.com/register" class="btn-dk-primary">Start free <i class="ri-arrow-right-line"></i></a>
+            <a href="{{ '/contact/' | relative_url }}" class="btn-dk-ghost">Contact us</a>
+        </div>
+    </div>
+</section>
 
+<script>
+document.querySelectorAll('.faq-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+        var item = btn.closest('.faq-item');
+        var wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(function(o){ o.classList.remove('open'); });
+        if(!wasOpen) item.classList.add('open');
+    });
+});
+</script>
