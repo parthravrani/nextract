@@ -15,8 +15,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Meta Tags -->
-    <title>{% if page.title %}{{ page.title }}{% else %}Nextract | Modern Data Solutions & Extraction{% endif %}</title>
-    <meta name="title" content="{% if page.title %}{{ page.title }}{% else %}Nextract | Modern Data Solutions & Extraction{% endif %}">
+    <title>{% if page.title %}{{ page.title }}{% else %}Nextract — Commerce Intelligence Platform{% endif %}</title>
+    <meta name="title" content="{% if page.title %}{{ page.title }}{% else %}Nextract — Commerce Intelligence Platform{% endif %}">
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
     <meta name="author" content="{{ site.title }}">
@@ -51,7 +51,7 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site.canonical_url }}{{ page.url }}">
-    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }} | Enterprise Web Scraping & Data Extraction Services{% endif %}">
+    <meta property="og:title" content="{% if page.og_title %}{{ page.og_title }}{% elsif page.title %}{{ page.title }}{% else %}Nextract — Commerce Intelligence Platform{% endif %}">
     <meta property="og:description" content="{% if page.og_description %}{{ page.og_description }}{% else %}{{ page.description | default: site.description }}{% endif %}">
     <meta property="og:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.canonical_url }}/assets/images/og-image.jpg{% endif %}">
     <meta property="og:site_name" content="{{ site.title }}">
@@ -63,7 +63,7 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="{{ site.canonical_url }}{{ page.url }}">
-    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }} | Enterprise Web Scraping & Data Extraction Services{% endif %}">
+    <meta name="twitter:title" content="{% if page.og_title %}{{ page.og_title }}{% elsif page.title %}{{ page.title }}{% else %}Nextract — Commerce Intelligence Platform{% endif %}">
     <meta name="twitter:description" content="{% if page.twitter_description %}{{ page.twitter_description }}{% else %}{{ page.description | default: site.description }}{% endif %}">
     <meta name="twitter:image" content="{% if page.twitter_image %}{{ page.twitter_image }}{% else %}{{ site.canonical_url }}/assets/images/twitter-image.jpg{% endif %}">
     
@@ -79,7 +79,7 @@
       "legalName": "Nextract",
       "url": "https://nextract.dev",
       "logo": "https://nextract.dev/assets/images/logo.png",
-      "description": "Nextract is a modern data solutions company providing professional web scraping and data extraction services.",
+      "description": "Nextract is a commerce intelligence platform. Track prices, stock, rankings, and competitor activity across Amazon, Flipkart, Blinkit, Zepto, and 30+ marketplaces — via dashboard, API, or Excel.",
       "email": "hello@nextract.dev",
       "telephone": "{{ site.phone_sales }}",
       "address": {
@@ -100,7 +100,7 @@
         "value": "10-50"
       },
       "areaServed": "Worldwide",
-      "serviceType": "Web Scraping API and Data Extraction Services"
+      "knowsAbout": ["Price Intelligence", "Commerce Data", "Ecommerce Analytics", "Quick Commerce", "Digital Shelf Monitoring"]
     }
     </script>
     
@@ -111,6 +111,38 @@
       "@type": "WebSite",
       "name": "{{ site.title }}",
       "url": "{{ site.canonical_url }}"
+    }
+    </script>
+
+    <!-- SoftwareApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Nextract",
+      "url": "https://nextract.dev",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "First month free — 5,000 credits included, no card required"
+      },
+      "description": "Commerce intelligence platform. Track prices, stock, rankings, and competitor moves across Amazon, Flipkart, Blinkit, Zepto, and 30+ marketplaces.",
+      "featureList": [
+        "Real-time price tracking",
+        "Stock and availability monitoring",
+        "Share of search / keyword rankings",
+        "Catalogue and listing monitoring",
+        "Quick commerce digital shelf",
+        "REST API, Dashboard, and Excel delivery"
+      ],
+      "provider": {
+        "@type": "Organization",
+        "name": "Nextract Data Solutions",
+        "url": "https://nextract.dev"
+      }
     }
     </script>
     {% else %}
