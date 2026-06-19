@@ -6,7 +6,7 @@ keywords: "Etsy API, handmade API, vintage API, craft API, marketplace API"
 order: 4
 ---
 
-# Etsy API
+## Etsy API
 
 RESTful API for extracting comprehensive product data, pricing, reviews, ratings, and seller information from Etsy marketplace.
 

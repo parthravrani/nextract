@@ -15,7 +15,7 @@ breadcrumbs:
     url: "/brands/blinkit-scraper"
 ---
 
-# Blinkit Data Scraping Services
+## Blinkit Data Scraping Services
 
 Extract comprehensive grocery data, pricing intelligence, inventory levels, and delivery zone information from Blinkit. Real-time quick commerce intelligence.
 

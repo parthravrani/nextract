@@ -15,7 +15,7 @@ breadcrumbs:
     url: "/brands/swiggy-scraper"
 ---
 
-# Swiggy Data Scraping Services
+## Swiggy Data Scraping Services
 
 Extract comprehensive restaurant data, menu information, pricing, reviews, and delivery zone intelligence from Swiggy. Real-time food delivery market insights.
 

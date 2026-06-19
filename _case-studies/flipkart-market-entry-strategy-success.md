@@ -11,7 +11,7 @@ client: "International Consumer Goods Brand"
 <main>
 <div class="container mx-auto px-4 py-16">
 
-# Market Entry Success - Flipkart Case Study
+<h1>Market Entry Success - Flipkart Case Study</h1>
 
 <div class="bg-blue-50 border-l-4 border-blue-600 p-6 mb-8">
   <p class="text-lg"><strong>Client:</strong> International Consumer Goods Brand</p>

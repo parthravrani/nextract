@@ -6,7 +6,7 @@ keywords: "UberEats API, food delivery API, restaurant API, menu API, delivery A
 order: 6
 ---
 
-# UberEats API
+## UberEats API
 
 RESTful API for extracting comprehensive restaurant data including menus, prices, reviews, ratings, and delivery information from UberEats.
 

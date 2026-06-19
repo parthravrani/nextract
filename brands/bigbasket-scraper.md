@@ -15,7 +15,7 @@ breadcrumbs:
     url: "/brands/bigbasket-scraper"
 ---
 
-# BigBasket Data Scraping Services
+## BigBasket Data Scraping Services
 
 Extract comprehensive grocery data, pricing intelligence, inventory levels, and delivery zone information from BigBasket. Real-time quick commerce intelligence.
 

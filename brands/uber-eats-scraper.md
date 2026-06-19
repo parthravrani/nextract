@@ -15,7 +15,7 @@ breadcrumbs:
     url: "/brands/uber-eats-scraper"
 ---
 
-# Uber Eats Data Scraping Services
+## Uber Eats Data Scraping Services
 
 Extract comprehensive restaurant data, menu information, pricing, reviews, and delivery zone intelligence from Uber Eats. Real-time food delivery market insights.
 

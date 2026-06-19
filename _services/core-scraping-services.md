@@ -1,12 +1,12 @@
 ---
 layout: product-page
 title: "Enterprise Web Scraping: API, Crawler & AI Extraction"
-description: "Enterprise web scraping, REST API, live crawler, AI-powered extraction. Handle millions of pages daily. 99.9% uptime SLA. Real-time data delivery. JSON/CSV export."
+description: "Enterprise web scraping, REST API, live crawler, AI-powered extraction. Millions of pages daily. 99.9% uptime SLA. Real-time JSON/CSV export."
 keywords: "enterprise web crawling, web scraping services, web scraping API, live crawler, deep web scraping, data mining, AI scraping, search engine scraping"
 order: 0
 ---
 
-# Core Web Scraping Services
+## Core Web Scraping Services
 
 Professional web scraping solutions for businesses that need reliable, scalable data extraction. From simple web scraping to complex enterprise crawling, we provide comprehensive data extraction services.
 

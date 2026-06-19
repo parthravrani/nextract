@@ -6,7 +6,7 @@ keywords: "Big Basket API, grocery API, Big Basket scraping API, grocery data AP
 order: 10
 ---
 
-# Big Basket API
+## Big Basket API
 
 RESTful API for extracting comprehensive grocery data including products, prices, availability, and delivery information from Big Basket platform.
 

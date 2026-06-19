@@ -9,7 +9,7 @@ category: "E-commerce Intelligence"
 <main>
 <div class="container mx-auto px-4 py-16 max-w-4xl">
 
-# Cross-Border E-commerce Intelligence - Guide
+<h1>Cross-Border E-commerce Intelligence - Guide</h1>
 
 <div class="bg-gray-100 p-6 mb-8">
   <p class="text-sm font-bold text-gray-600 uppercase mb-2">Category</p>

@@ -1,12 +1,12 @@
 ---
 layout: product-page
 title: "Blinkit Dataset - Quick Commerce & Grocery Data"
-description: "Comprehensive Blinkit grocery and quick commerce dataset with monthly refresh. Product data, prices, availability, and delivery information. Export as CSV, JSON, or Parquet."
+description: "Comprehensive Blinkit grocery and quick commerce dataset with monthly refresh. Product data, prices, availability, delivery info. CSV, JSON, or Parquet."
 keywords: "Blinkit dataset, quick commerce dataset, grocery dataset, Blinkit data export"
 order: 2
 ---
 
-# Blinkit Dataset
+## Blinkit Dataset
 
 Comprehensive grocery and quick commerce dataset from Blinkit platform. Monthly refresh ensures you always have the latest data.
 

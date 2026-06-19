@@ -5,6 +5,7 @@
 title: "Nextract"
 name: "Nextract"
 short_name: "Nextract"
+logo: /assets/images/logo.png
 email: "hello@nextract.dev"
 description: >-
   Nextract is a commerce intelligence platform. Track prices, stock, rankings, and competitor activity across Amazon, Flipkart, Blinkit, Zepto, and 30+ marketplaces — via dashboard, API, or Excel. First month free.

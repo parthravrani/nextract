@@ -6,7 +6,7 @@ keywords: "digital shelf intelligence, share of search, content audit, reviews h
 order: 8
 ---
 
-# Digital Shelf Intelligence
+## Digital Shelf Intelligence
 
 Optimize your digital shelf presence with comprehensive intelligence. Monitor share of search, audit content, track reviews health, optimize retail media, and monitor buy box performance.
 

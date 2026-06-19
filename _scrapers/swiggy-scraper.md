@@ -6,7 +6,7 @@ keywords: "Swiggy scraper, food delivery scraper, restaurant scraper, Swiggy dat
 order: 12
 ---
 
-# Swiggy Scraper
+## Swiggy Scraper
 
 Extract comprehensive food delivery data including restaurant menus, prices, reviews, ratings, and delivery information from Swiggy platform.
 

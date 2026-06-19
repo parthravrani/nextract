@@ -6,7 +6,7 @@ keywords: "brand protection, MAP violations, counterfeit detection, unauthorized
 order: 7
 ---
 
-# Brand Protection Intelligence
+## Brand Protection Intelligence
 
 Protect your brand with comprehensive brand protection intelligence. Monitor MAP violations, detect counterfeits, identify unauthorized sellers, and maintain brand governance.
 

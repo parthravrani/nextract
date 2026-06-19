@@ -6,7 +6,7 @@ keywords: "DoorDash API, food delivery API, restaurant API, DoorDash scraping AP
 order: 12
 ---
 
-# DoorDash API
+## DoorDash API
 
 RESTful API for extracting comprehensive food delivery data including restaurant menus, prices, reviews, ratings, and delivery information from DoorDash platform.
 

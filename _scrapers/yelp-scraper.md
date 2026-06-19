@@ -6,7 +6,7 @@ keywords: "Yelp scraper, Yelp reviews scraper, business data extraction, local b
 order: 3
 ---
 
-# Yelp Scraper
+## Yelp Scraper
 
 Extract comprehensive business data including listings, reviews, ratings, photos, hours, and location information from Yelp.
 

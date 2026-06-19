@@ -6,7 +6,7 @@ keywords: "Swiggy API, food delivery API, restaurant API, Swiggy scraping API"
 order: 11
 ---
 
-# Swiggy API
+## Swiggy API
 
 RESTful API for extracting comprehensive food delivery data including restaurant menus, prices, reviews, ratings, and delivery information from Swiggy platform.
 

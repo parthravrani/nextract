@@ -9,7 +9,7 @@ category: "Food Delivery Intelligence"
 <main>
 <div class="container mx-auto px-4 py-16 max-w-4xl">
 
-# Food Delivery Competitive Analysis
+<h1>Food Delivery Competitive Analysis</h1>
 
 <div class="bg-gray-100 p-6 mb-8">
   <p class="text-sm font-bold text-gray-600 uppercase mb-2">Category</p>

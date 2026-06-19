@@ -6,7 +6,7 @@ keywords: "Best Buy API, electronics API, product API, Best Buy scraping API, te
 order: 8
 ---
 
-# Best Buy API
+## Best Buy API
 
 RESTful API for extracting comprehensive electronics product data, pricing, reviews, ratings, and specifications from Best Buy.
 

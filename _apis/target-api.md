@@ -6,7 +6,7 @@ keywords: "Target API, retail API, product API, Target scraping API, retail data
 order: 7
 ---
 
-# Target API
+## Target API
 
 RESTful API for extracting comprehensive product data, pricing, reviews, ratings, and inventory information from Target.com.
 

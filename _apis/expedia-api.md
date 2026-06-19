@@ -6,7 +6,7 @@ keywords: "Expedia API, travel API, hotel API, flight API, booking API"
 order: 5
 ---
 
-# Expedia API
+## Expedia API
 
 RESTful API for extracting comprehensive travel data including hotel rates, flight prices, car rental prices, and booking information from Expedia.
 

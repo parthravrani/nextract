@@ -1,12 +1,12 @@
 ---
 layout: product-page
 title: "TikTok Scraper: Videos, Engagement & Trends"
-description: "Extract TikTok videos, profiles, engagement metrics. Track 1B+ videos, trending hashtags, viral content. Analyze views, likes, shares. Real-time updates. JSON format."
+description: "Extract TikTok videos, profiles, and engagement metrics. Track 1B+ videos, trending hashtags, viral content, views, likes, shares. JSON format."
 keywords: "TikTok scraper, TikTok video scraper, TikTok data extraction, social media scraping, video content scraping"
 order: 6
 ---
 
-# TikTok Scraper
+## TikTok Scraper
 
 Extract comprehensive TikTok data including videos, user profiles, engagement metrics, trends, hashtags, and audience insights.
 

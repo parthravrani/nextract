@@ -127,13 +127,13 @@ client: "Growing regional dairy company"
                 <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Tool Used</div>
                 <div class="p-8 border-l-4 border-blue-600 bg-blue-50">
                     <p class="text-lg text-gray-900 font-semibold mb-4">
-                        This case study was powered by <a href="/scrava/" class="text-blue-600 hover:text-blue-800 font-bold">Scrava</a>, Nextract's Amazon ASIN-based scraping API.
+                        This case study was powered by <a href="/products/" class="text-blue-600 hover:text-blue-800 font-bold">Nextract</a>, our Amazon ASIN-based scraping API.
                     </p>
                     <p class="text-gray-700 mb-4">
-                        Scrava extracted 3,217 reviews with 99.7% success rate, automatically handling CAPTCHAs, rotating proxies, and Amazon's "Dog" page errors. The review data was then analyzed to identify critical market insights and competitive opportunities.
+                        Nextract extracted 3,217 reviews with 99.7% success rate, automatically handling CAPTCHAs, rotating proxies, and Amazon's "Dog" page errors. The review data was then analyzed to identify critical market insights and competitive opportunities.
                     </p>
-                    <a href="/scrava/" class="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-800">
-                        View Scrava Dashboard →
+                    <a href="/products/" class="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-800">
+                        Explore Nextract →
                     </a>
                 </div>
             </div>

@@ -6,7 +6,7 @@ keywords: "restaurant intelligence, food industry analytics, menu intelligence, 
 order: 4
 ---
 
-# Restaurant Intelligence
+## Restaurant Intelligence
 
 Transform restaurant data into actionable intelligence. Menu analysis, pricing strategies, review monitoring, and market insights to power your food business.
 

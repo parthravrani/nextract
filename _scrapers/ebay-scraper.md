@@ -6,7 +6,7 @@ keywords: "eBay scraper, eBay product scraper, auction scraper, marketplace scra
 order: 10
 ---
 
-# eBay Scraper
+## eBay Scraper
 
 Extract comprehensive product data, auction information, seller data, and marketplace intelligence from eBay marketplaces worldwide.
 

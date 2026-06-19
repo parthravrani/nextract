@@ -15,7 +15,7 @@ breadcrumbs:
     url: "/brands/swiggy-instamart-scraper"
 ---
 
-# Swiggy Instamart Data Scraping Services
+## Swiggy Instamart Data Scraping Services
 
 Extract comprehensive grocery data, pricing intelligence, inventory levels, and delivery zone information from Swiggy Instamart. Real-time quick commerce intelligence.
 

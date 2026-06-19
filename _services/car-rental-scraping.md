@@ -6,7 +6,7 @@ keywords: "car rental scraping, vehicle rental data, car rental prices, mobility
 order: 10
 ---
 
-# Car Rental Data Scraping Services
+## Car Rental Data Scraping Services
 
 Extract comprehensive car rental data including prices, availability, vehicle details, locations, and booking information from major car rental platforms.
 

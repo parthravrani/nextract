@@ -1,12 +1,12 @@
 ---
 layout: product-page
 title: "Real Estate Data Extraction: Properties & Market Data"
-description: "Extract 110M+ property listings from Zillow, Realtor.com, Trulia. Get prices, Zestimates, price history, images. Track market trends nationwide. Real-time updates."
+description: "Extract 110M+ property listings from Zillow, Realtor.com, Trulia. Prices, Zestimates, price history, images. Track market trends nationwide."
 keywords: "real estate scraping, property data extraction, Zillow scraping, property listings, real estate intelligence, housing market data"
 order: 4
 ---
 
-# Real Estate Data Scraping Services
+## Real Estate Data Scraping Services
 
 **Transform property listings into actionable market intelligence for real estate professionals.**
 

@@ -1,12 +1,12 @@
 ---
 layout: product-page
 title: "Netflix Content Scraper: Movies, Shows & Ratings"
-description: "Extract 15,000+ Netflix titles, ratings, cast info, streaming metadata. Track IMDB/Rotten Tomatoes scores. Content intelligence for entertainment tech. JSON format."
+description: "Extract 15,000+ Netflix titles, ratings, cast info, and streaming metadata. Track IMDB/Rotten Tomatoes scores. Content intelligence for entertainment."
 keywords: "Netflix scraper, streaming data extraction, content scraping, movie data, TV show data, entertainment data"
 order: 7
 ---
 
-# Netflix Scraper
+## Netflix Scraper
 
 Extract comprehensive Netflix content data including movies, TV shows, ratings, reviews, cast information, and streaming metadata.
 

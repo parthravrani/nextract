@@ -1,0 +1,144 @@
+---
+layout: default
+---
+
+{% include sol-styles.html %}
+
+<style>
+.post-body h2 { font-size: 1.45rem; font-weight: 800; color: #09090b; margin: 2.5rem 0 0.75rem; letter-spacing: -0.02em; line-height: 1.25; }
+.post-body h3 { font-size: 1.1rem; font-weight: 700; color: #09090b; margin: 2rem 0 0.5rem; }
+.post-body p { font-size: 0.96rem; color: #3f3f46; line-height: 1.85; margin-bottom: 1.25rem; }
+.post-body ul, .post-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; }
+.post-body li { font-size: 0.96rem; color: #3f3f46; line-height: 1.8; margin-bottom: 0.3rem; }
+.post-body strong { color: #09090b; font-weight: 700; }
+.post-body blockquote {
+    border-left: 3px solid #3b82f6;
+    margin: 1.5rem 0;
+    padding: 0.75rem 1.25rem;
+    background: #f8faff;
+    border-radius: 0 6px 6px 0;
+}
+.post-body blockquote p { color: #1e3a8a; font-size: 0.94rem; margin: 0; }
+.post-body a { color: #3b82f6; text-decoration: none; }
+.post-body a:hover { text-decoration: underline; }
+.post-body hr { border: none; border-top: 1px solid #e4e4e7; margin: 2.5rem 0; }
+.post-body table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; font-size: 0.875rem; }
+.post-body th { background: #f4f4f5; font-weight: 700; color: #09090b; padding: 0.6rem 0.9rem; border: 1px solid #e4e4e7; text-align: left; }
+.post-body td { padding: 0.55rem 0.9rem; border: 1px solid #e4e4e7; color: #3f3f46; }
+.post-body tr:nth-child(even) td { background: #fafafa; }
+.post-body code { background: #f4f4f5; padding: 0.15rem 0.4rem; border-radius: 3px; font-size: 0.85em; color: #dc2626; font-family: monospace; }
+.post-body pre { background: #09090b; border-radius: 8px; padding: 1.25rem; overflow-x: auto; margin-bottom: 1.5rem; }
+.post-body pre code { background: none; color: #e4e4e7; padding: 0; font-size: 0.875rem; }
+</style>
+
+<!-- ARTICLE HEADER -->
+<section style="background:var(--dk);color:#fff;padding:6rem 0 4rem;position:relative;">
+    <div style="background:radial-gradient(ellipse at 70% 20%, rgba(59,130,246,0.18) 0%, transparent 55%),var(--dk);position:absolute;inset:0;"></div>
+    <div class="nx-wrap" style="position:relative;z-index:1;max-width:820px;">
+        {% if page.category %}
+        <div style="display:inline-flex;align-items:center;font-size:10px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;padding:0.2rem 0.7rem;border-radius:999px;background:rgba(255,255,255,0.07);color:#a1a1aa;border:1px solid rgba(255,255,255,0.1);margin-bottom:1.25rem;">{{ page.category }}</div>
+        {% endif %}
+        <h1 style="font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;line-height:1.15;letter-spacing:-0.03em;color:#f4f4f5;margin-bottom:1.25rem;">{{ page.title }}</h1>
+        {% if page.description %}
+        <p style="font-size:1.05rem;color:#a1a1aa;line-height:1.7;max-width:640px;margin-bottom:1.5rem;">{{ page.description }}</p>
+        {% endif %}
+        <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+            <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:#52525b;font-weight:600;">
+                <i class="ri-calendar-line" style="font-size:13px;"></i>
+                {{ page.date | date: "%B %d, %Y" }}
+            </div>
+            {% if page.read_time %}
+            <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:#52525b;font-weight:600;">
+                <i class="ri-time-line" style="font-size:13px;"></i>
+                {{ page.read_time }} min read
+            </div>
+            {% endif %}
+            {% if page.author %}
+            <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:#52525b;font-weight:600;">
+                <i class="ri-user-line" style="font-size:13px;"></i>
+                {{ page.author }}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<!-- ARTICLE BODY -->
+<section style="background:#fff;padding:4rem 0 5rem;">
+    <div class="nx-wrap">
+        <div style="display:grid;grid-template-columns:1fr 260px;gap:4rem;align-items:start;max-width:1080px;" class="post-layout">
+
+            <!-- Content -->
+            <article class="post-body">
+                {{ content }}
+            </article>
+
+            <!-- Sidebar -->
+            <aside style="position:sticky;top:80px;" class="post-sidebar">
+                <div style="border:1px solid #e4e4e7;border-radius:12px;padding:1.5rem;margin-bottom:1.25rem;">
+                    <div style="font-size:9.5px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#a1a1aa;margin-bottom:1rem;">In this article</div>
+                    <div id="toc" style="display:flex;flex-direction:column;gap:0.3rem;font-size:12.5px;color:#52525b;"></div>
+                </div>
+                <div style="border:1px solid #e4e4e7;border-radius:12px;padding:1.5rem;background:#fafafa;">
+                    <div style="font-size:9.5px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#a1a1aa;margin-bottom:0.75rem;">Try Nextract free</div>
+                    <p style="font-size:12px;color:#71717a;line-height:1.65;margin-bottom:1rem;">5,000 credits your first month. Track prices, stock & rankings across 30+ platforms.</p>
+                    <a href="https://app.getnextract.com/register" style="display:block;text-align:center;padding:0.65rem;background:#09090b;color:#fff;font-weight:700;font-size:12.5px;border-radius:6px;text-decoration:none;transition:background 0.15s;" onmouseover="this.style.background='#3b82f6'" onmouseout="this.style.background='#09090b'">Start free <i class="ri-arrow-right-line"></i></a>
+                    <p style="font-size:10px;color:#a1a1aa;text-align:center;margin-top:0.5rem;">No card required</p>
+                </div>
+            </aside>
+
+        </div>
+    </div>
+</section>
+
+<!-- MORE ARTICLES -->
+{% assign related = site.blog | where: "category", page.category | where_exp: "p", "p.url != page.url" | limit: 3 %}
+{% if related.size == 0 %}
+    {% assign related = site.blog | where_exp: "p", "p.url != page.url" | limit: 3 %}
+{% endif %}
+{% if related.size > 0 %}
+<section style="background:#fafafa;padding:4rem 0;border-top:1px solid #e4e4e7;">
+    <div class="nx-wrap">
+        <div class="nx-label" style="margin-bottom:1.25rem;">More articles</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;">
+            {% for p in related %}
+            <a href="{{ p.url | relative_url }}" style="border:1px solid #e4e4e7;border-radius:10px;padding:1.25rem;background:#fff;text-decoration:none;display:block;transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.07)'" onmouseout="this.style.boxShadow='none'">
+                <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#a1a1aa;margin-bottom:0.5rem;">{{ p.category }}</div>
+                <div style="font-size:0.9rem;font-weight:700;color:#09090b;line-height:1.35;margin-bottom:0.4rem;">{{ p.title }}</div>
+                <div style="font-size:11px;color:#a1a1aa;">{{ p.date | date: "%b %d, %Y" }}{% if p.read_time %} · {{ p.read_time }} min{% endif %}</div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- CTA -->
+{% include contact-section.html %}
+
+<style>
+@media(max-width:860px){
+    .post-layout { grid-template-columns: 1fr !important; }
+    .post-sidebar { display: none; }
+}
+</style>
+
+<script>
+// Auto-generate TOC from h2 headings in the article
+(function(){
+    var headings = document.querySelectorAll('.post-body h2');
+    var toc = document.getElementById('toc');
+    if(!toc || headings.length === 0) { if(toc) toc.closest('div').style.display='none'; return; }
+    headings.forEach(function(h, i){
+        var id = 'section-' + i;
+        h.id = id;
+        var a = document.createElement('a');
+        a.href = '#' + id;
+        a.textContent = h.textContent;
+        a.style.cssText = 'color:#52525b;text-decoration:none;padding:0.2rem 0;display:block;line-height:1.4;transition:color 0.15s;';
+        a.onmouseover = function(){ this.style.color='#09090b'; };
+        a.onmouseout  = function(){ this.style.color='#52525b'; };
+        toc.appendChild(a);
+    });
+})();
+</script>

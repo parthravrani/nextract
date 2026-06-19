@@ -15,7 +15,7 @@ breadcrumbs:
     url: "/brands/zepto-scraper"
 ---
 
-# Zepto Data Scraping Services
+## Zepto Data Scraping Services
 
 Extract comprehensive grocery data, pricing intelligence, inventory levels, and delivery zone information from Zepto. Real-time quick commerce intelligence.
 

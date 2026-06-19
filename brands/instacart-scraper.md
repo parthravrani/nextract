@@ -15,7 +15,7 @@ breadcrumbs:
     url: "/brands/instacart-scraper"
 ---
 
-# Instacart Data Scraping Services
+## Instacart Data Scraping Services
 
 Extract comprehensive grocery data, pricing intelligence, inventory levels, and delivery zone information from Instacart. Real-time quick commerce intelligence.
 

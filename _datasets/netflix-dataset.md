@@ -1,12 +1,12 @@
 ---
 layout: product-page
 title: "Netflix Dataset - Streaming Content & Media Data"
-description: "Comprehensive Netflix content dataset with monthly refresh. Movies, TV shows, ratings, reviews, cast information, and streaming metadata. Export as CSV, JSON, or Parquet."
+description: "Comprehensive Netflix content dataset with monthly refresh. Movies, shows, ratings, reviews, cast info, and streaming metadata. CSV, JSON, or Parquet."
 keywords: "Netflix dataset, streaming dataset, OTT dataset, content dataset, Netflix data export"
 order: 5
 ---
 
-# Netflix Dataset
+## Netflix Dataset
 
 Comprehensive content dataset from Netflix platform. Monthly refresh ensures you always have the latest data.
 

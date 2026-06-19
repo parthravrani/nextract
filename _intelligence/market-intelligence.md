@@ -6,7 +6,7 @@ keywords: "market intelligence, market research, competitive intelligence, marke
 order: 3
 ---
 
-# Market Intelligence
+## Market Intelligence
 
 Transform market data into actionable insights. Market research, competitive analysis, trend identification, and strategic intelligence to power your business decisions.
 

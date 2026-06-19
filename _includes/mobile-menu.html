@@ -13,21 +13,6 @@
     </div>
     
     <nav class="flex flex-col space-y-4">
-        <!-- Pricing -->
-        <div>
-            <button type="button" class="mobile-menu-toggle w-full flex items-center justify-between py-4 px-4 text-lg font-bold text-gray-900 hover:bg-orange-50 transition-colors rounded-lg{% if page.url == '/scrava/' or page.url == '/pricing/' %} bg-orange-50 text-orange-600{% endif %}">
-                <div class="flex items-center gap-3">
-                    <i class="ri-amazon-line text-xl"></i>
-                    <span>Scrava</span>
-                </div>
-                <i class="ri-arrow-down-s-line transition-transform"></i>
-            </button>
-            <div class="mobile-menu-content hidden pl-6 space-y-1 mt-2">
-                <a href="/scrava/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded{% if page.url == '/scrava/' %} bg-orange-50 text-orange-600 font-semibold{% endif %}">Overview</a>
-                <a href="/pricing/" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded{% if page.url == '/pricing/' %} bg-orange-50 text-orange-600 font-semibold{% endif %}">Pricing</a>
-            </div>
-        </div>
-        
         <!-- Products & Services - Collapsible -->
         <div>
             <button class="mobile-menu-toggle w-full flex items-center justify-between py-4 px-4 text-lg font-bold text-gray-900 hover:bg-gray-50 transition-colors rounded-lg{% if page.url == '/products/' or page.url contains '/scrapers/' or page.url contains '/apis/' or page.url contains '/datasets/' or page.url contains '/services/' or page.url contains '/solutions/' or page.url == '/amazon/' or page.url == '/walmart/' or page.url == '/etsy/' or page.url == '/flipkart/' or page.url == '/ebay/' or page.url == '/e-commerce/' or page.url == '/blinkit/' or page.url == '/zepto/' or page.url == '/swiggy-instamart/' or page.url == '/bigbasket/' or page.url == '/quick-commerce/' or page.url == '/doordash/' or page.url == '/zomato/' or page.url == '/swiggy/' or page.url == '/ubereats/' or page.url == '/food-delivery/' or page.url == '/web-scraping-services/' or page.url == '/custom-api-development/' or page.url == '/mobile-app-data-extraction/' or page.url == '/ai-data-solutions/' or page.url == '/ai-training-data/' or page.url contains '/industries/' or page.url == '/buy-box-monitoring/' or page.url == '/share-of-search/' or page.url == '/catalogue-monitoring/' or page.url == '/review-intelligence/' or page.url == '/competitor-stockout-monitoring/' or page.url == '/dark-store-intelligence/' or page.url == '/fmcg-digital-shelf/' or page.url == '/private-label-monitoring/' or page.url == '/delivery-zone-mapping/' or page.url == '/promotional-velocity/' or page.url == '/ghost-kitchen-intelligence/' or page.url == '/restaurant-search-ranking/' or page.url == '/delivery-eta-benchmarking/' or page.url == '/food-delivery-market-entry/' or page.url == '/menu-sentiment-analysis/' %} bg-gray-50 text-blue-600{% endif %}">

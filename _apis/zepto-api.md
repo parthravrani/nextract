@@ -6,7 +6,7 @@ keywords: "Zepto API, quick commerce API, grocery API, Zepto scraping API"
 order: 9
 ---
 
-# Zepto API
+## Zepto API
 
 RESTful API for extracting comprehensive grocery and quick commerce data including products, prices, availability, and delivery information from Zepto platform.
 

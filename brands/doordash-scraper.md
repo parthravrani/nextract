@@ -15,7 +15,7 @@ breadcrumbs:
     url: "/brands/doordash-scraper"
 ---
 
-# DoorDash Data Scraping Services
+## DoorDash Data Scraping Services
 
 Extract comprehensive restaurant data, menu information, pricing, reviews, and delivery zone intelligence from DoorDash. Real-time food delivery market insights.
 

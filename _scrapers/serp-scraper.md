@@ -6,7 +6,7 @@ keywords: "SERP scraper, Google scraper, search results scraper, SEO data extrac
 order: 8
 ---
 
-# SERP Scraper
+## SERP Scraper
 
 Extract comprehensive search engine results data including organic results, paid ads, featured snippets, local packs, and SEO metrics from Google, Bing, and other search engines.
 

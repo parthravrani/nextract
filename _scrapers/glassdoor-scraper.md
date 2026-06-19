@@ -6,7 +6,7 @@ keywords: "Glassdoor scraper, job scraper, company reviews scraper, salary data 
 order: 5
 ---
 
-# Glassdoor Scraper
+## Glassdoor Scraper
 
 Extract comprehensive job and company data including listings, reviews, salaries, interview reviews, and employer information from Glassdoor.
 

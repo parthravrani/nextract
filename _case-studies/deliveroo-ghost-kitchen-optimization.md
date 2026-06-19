@@ -11,7 +11,7 @@ client: "Ghost Kitchen Operator"
 <main>
 <div class="container mx-auto px-4 py-16">
 
-# Ghost Kitchen Success - Deliveroo Case Study
+<h1>Ghost Kitchen Success - Deliveroo Case Study</h1>
 
 <div class="bg-blue-50 border-l-4 border-blue-600 p-6 mb-8">
   <p class="text-lg"><strong>Client:</strong> Ghost Kitchen Operator</p>

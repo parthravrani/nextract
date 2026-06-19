@@ -1,107 +1,365 @@
 ---
 layout: default
-title: "Intelligence & Blog: Data Strategies & Guides"
-description: "Expert guides, strategies, and insights for e-commerce, quick commerce, and food delivery intelligence. Learn from data extraction experts."
-keywords: "data intelligence, e-commerce guides, quick commerce strategies, food delivery insights, web scraping guides"
+title: "Nextract Blog — Commerce Intelligence Insights"
+description: "Practical guides on price intelligence, quick commerce monitoring, share of search, and digital shelf analytics for FMCG and D2C brands."
+keywords: "commerce intelligence blog, price tracking guide, quick commerce data, FMCG digital shelf, share of search"
+permalink: /blog/
+og_title: "Nextract Blog — Commerce Intelligence Insights"
+og_description: "Practical guides on price intelligence, quick commerce data, share of search, and digital shelf analytics for brands and sellers."
 ---
 
-<main>
-    <!-- Hero Section -->
-    <section class="py-20 bg-gradient-to-br from-blue-50 via-white to-gray-50">
-        <div class="container mx-auto px-6 max-w-7xl">
-            <div class="text-center max-w-3xl mx-auto">
-                <div class="inline-flex items-center gap-2 bg-white border border-gray-200 px-4 py-2 mb-6">
-                    <div class="w-2 h-2 bg-blue-600 animate-pulse"></div>
-                    <span class="text-xs font-semibold text-gray-700">Intelligence • Guides • Strategies</span>
-                </div>
-                
-                <h1 class="text-5xl md:text-6xl font-black text-gray-900 mb-6">
-                    Intelligence & Blog
-                </h1>
-                
-                <p class="text-xl text-gray-600 mb-8">
-                    Expert guides, strategies, and insights to master data-driven intelligence for e-commerce, quick commerce, and food delivery.
-                </p>
-            </div>
+<style>
+/* ── BLOG TOKENS ─────────────────────────── */
+:root {
+  --dk:  #09090b;
+  --blue: #3b82f6;
+  --orange: #f97316;
+}
+* { box-sizing: border-box; }
+
+/* ── MASTHEAD ────────────────────────────── */
+.blog-masthead {
+  background: #09090b;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 5rem 0 0;
+}
+.blog-masthead-inner {
+  max-width: 1360px; margin: 0 auto; padding: 0 2rem;
+}
+.blog-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 10px; font-weight: 800; letter-spacing: 0.2em;
+  text-transform: uppercase; color: #52525b;
+  margin-bottom: 2rem;
+}
+.blog-eyebrow-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #3b82f6; animation: blink 2s infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+.blog-wordmark {
+  font-size: clamp(3.5rem, 10vw, 9rem);
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  line-height: 0.9;
+  color: #f4f4f5;
+  margin-bottom: 2rem;
+}
+.blog-wordmark span {
+  background: linear-gradient(110deg,#3b82f6 0%,#8b5cf6 48%,#f97316 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+
+.blog-desc {
+  font-size: 1.05rem; color: #71717a; max-width: 480px; line-height: 1.75;
+  margin-bottom: 3rem;
+}
+
+/* ── CATEGORY FILTER BAR ─────────────────── */
+.blog-filter-bar {
+  display: flex; align-items: center; gap: 0; overflow-x: auto;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: 0; scrollbar-width: none;
+}
+.blog-filter-bar::-webkit-scrollbar { display: none; }
+.blog-filter-btn {
+  flex-shrink: 0;
+  padding: 1rem 1.5rem;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.04em;
+  color: #52525b; background: none; border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer; transition: color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+.blog-filter-btn:hover { color: #f4f4f5; }
+.blog-filter-btn.active { color: #f4f4f5; border-bottom-color: #3b82f6; }
+
+/* ── HERO ARTICLE ────────────────────────── */
+.blog-hero {
+  display: grid; grid-template-columns: 1fr 1fr;
+  min-height: 520px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  background: #09090b;
+}
+@media(max-width:800px){ .blog-hero { grid-template-columns: 1fr; min-height: auto; } }
+
+.blog-hero-visual {
+  position: relative; overflow: hidden;
+  background: #0f0f12;
+  min-height: 340px;
+}
+.blog-hero-visual-inner {
+  position: absolute; inset: 0;
+  display: flex; align-items: flex-end; padding: 2.5rem;
+}
+.blog-hero-body {
+  padding: 3.5rem 3rem 3.5rem 3.5rem;
+  display: flex; flex-direction: column; justify-content: center;
+  background: #09090b;
+}
+@media(max-width:800px){ .blog-hero-body { padding: 2rem; } }
+
+.blog-hero-cat {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 10px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;
+  color: #3b82f6; margin-bottom: 1.25rem;
+}
+.blog-hero-title {
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+  font-weight: 900; letter-spacing: -0.03em; line-height: 1.15;
+  color: #f4f4f5; margin-bottom: 1rem;
+}
+.blog-hero-excerpt {
+  font-size: 0.9rem; color: #71717a; line-height: 1.8; margin-bottom: 2rem; max-width: 480px;
+}
+.blog-hero-meta {
+  display: flex; align-items: center; gap: 1rem;
+  font-size: 11px; color: #3f3f46; font-weight: 600;
+}
+.blog-hero-cta {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 0.75rem 1.5rem;
+  background: #f4f4f5; color: #09090b;
+  font-size: 13px; font-weight: 800; border-radius: 6px;
+  text-decoration: none; transition: background 0.15s, gap 0.15s;
+  width: fit-content; margin-top: 2rem;
+}
+.blog-hero-cta:hover { background: #fff; gap: 10px; text-decoration: none; }
+
+/* ── GRID ────────────────────────────────── */
+.blog-grid-wrap {
+  background: #fafafa;
+  padding: 4rem 0 6rem;
+}
+.blog-grid-inner {
+  max-width: 1360px; margin: 0 auto; padding: 0 2rem;
+}
+.blog-section-label {
+  font-size: 9.5px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase;
+  color: #a1a1aa; margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: 0.75rem;
+}
+.blog-section-label::after {
+  content: ''; flex: 1; height: 1px; background: #e4e4e7;
+}
+
+.blog-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px,1fr));
+  gap: 1.5rem;
+}
+.blog-card {
+  background: #fff; border: 1px solid #e4e4e7; border-radius: 12px;
+  overflow: hidden; display: flex; flex-direction: column;
+  text-decoration: none;
+  transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+}
+.blog-card:hover {
+  box-shadow: 0 12px 40px rgba(0,0,0,0.09);
+  border-color: #c4c4ca; transform: translateY(-2px);
+  text-decoration: none;
+}
+.blog-card-accent { height: 3px; }
+.blog-card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+.blog-card-cat {
+  font-size: 10px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+  color: #a1a1aa; margin-bottom: 0.75rem;
+}
+.blog-card-title {
+  font-size: 1rem; font-weight: 800; color: #09090b; line-height: 1.35; margin-bottom: 0.65rem;
+}
+.blog-card-excerpt {
+  font-size: 0.845rem; color: #71717a; line-height: 1.72; flex: 1; margin-bottom: 1.1rem;
+}
+.blog-card-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 0.9rem; border-top: 1px solid #f4f4f5;
+  font-size: 11px; color: #a1a1aa; font-weight: 600;
+}
+.blog-card-footer-link {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 12px; font-weight: 700; color: #3b82f6;
+}
+.blog-card:hover .blog-card-footer-link { gap: 7px; }
+
+/* ── EMPTY STATE ─────────────────────────── */
+.blog-empty {
+  background: #fafafa; padding: 7rem 0;
+  text-align: center;
+}
+
+/* ── NEWSLETTER STRIP ────────────────────── */
+.blog-subscribe {
+  background: #09090b;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 5rem 0;
+}
+.blog-sub-inner {
+  max-width: 1360px; margin: 0 auto; padding: 0 2rem;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+}
+@media(max-width:720px){ .blog-sub-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+
+{% assign all_posts = site.blog | sort: "date" | reverse %}
+{% assign post_count = all_posts | size %}
+{% assign categories = site.blog | map: "category" | uniq | compact %}
+
+<!-- ── MASTHEAD ───────────────────────────────────── -->
+<div class="blog-masthead">
+  <div class="blog-masthead-inner">
+    <div class="blog-eyebrow">
+      <span class="blog-eyebrow-dot"></span>
+      Nextract Intelligence
+    </div>
+    <h1 class="blog-wordmark">Commerce<br/><span>Insights.</span></h1>
+    <p class="blog-desc">Practical guides on price intelligence, digital shelf monitoring, quick commerce data, and share of search — for brands and sellers who run on data.</p>
+
+    <!-- Filter bar -->
+    <div class="blog-filter-bar" id="blog-filter-bar">
+      <button class="blog-filter-btn active" data-cat="all">All</button>
+      {% for cat in categories %}
+      <button class="blog-filter-btn" data-cat="{{ cat }}">{{ cat }}</button>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% if post_count == 0 %}
+
+<!-- ── EMPTY STATE ───────────────────────────────── -->
+<div class="blog-empty">
+  <div style="max-width:480px;margin:0 auto;padding:0 2rem;">
+    <div style="width:56px;height:56px;border-radius:50%;background:#f4f4f5;border:1px solid #e4e4e7;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;">
+      <i class="ri-article-line" style="font-size:1.4rem;color:#a1a1aa;"></i>
+    </div>
+    <h2 style="font-size:1.5rem;font-weight:800;color:#09090b;margin-bottom:0.75rem;">First article coming soon.</h2>
+    <p style="font-size:0.9rem;color:#71717a;line-height:1.75;margin-bottom:2rem;">We're writing guides on price intelligence, quick commerce shelf data, and share of search. Follow us on LinkedIn to get notified.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;">
+      <a href="{{ site.linkedin_url }}" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:0.75rem 1.5rem;background:#09090b;color:#fff;font-weight:700;font-size:0.875rem;border-radius:6px;text-decoration:none;"><i class="ri-linkedin-fill"></i> Follow on LinkedIn</a>
+      <a href="{{ '/contact/' | relative_url }}" style="display:inline-flex;align-items:center;gap:6px;padding:0.75rem 1.5rem;background:#fff;color:#09090b;border:1.5px solid #e4e4e7;font-weight:700;font-size:0.875rem;border-radius:6px;text-decoration:none;">Suggest a topic</a>
+    </div>
+  </div>
+</div>
+
+{% else %}
+
+{% assign featured = all_posts | first %}
+{% assign rest = all_posts | slice: 1, 100 %}
+
+<!-- ── HERO ARTICLE ───────────────────────────────── -->
+<a href="{{ featured.url | relative_url }}" class="blog-hero" style="text-decoration:none;display:grid;">
+
+  <!-- Visual panel -->
+  <div class="blog-hero-visual">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 25% 60%, rgba(59,130,246,0.28) 0%, transparent 55%), radial-gradient(ellipse at 80% 20%, rgba(249,115,22,0.18) 0%, transparent 50%), #0a0a0e;"></div>
+    <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);background-size:60px 60px;"></div>
+    <div class="blog-hero-visual-inner">
+      <div style="position:relative;z-index:1;">
+        <div style="font-size:9.5px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#52525b;margin-bottom:0.65rem;">{{ featured.category }}</div>
+        <div style="font-size:clamp(1.4rem,3vw,2.2rem);font-weight:900;color:#f4f4f5;letter-spacing:-0.03em;line-height:1.2;max-width:400px;">{{ featured.title }}</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Body -->
+  <div class="blog-hero-body">
+    <div class="blog-hero-cat"><i class="ri-bookmark-line"></i> {{ featured.category }}</div>
+    <div class="blog-hero-title">{{ featured.title }}</div>
+    <p class="blog-hero-excerpt">{{ featured.description }}</p>
+    <div class="blog-hero-meta">
+      <span><i class="ri-calendar-line"></i> {{ featured.date | date: "%B %d, %Y" }}</span>
+      {% if featured.read_time %}<span><i class="ri-time-line"></i> {{ featured.read_time }} min read</span>{% endif %}
+      {% if featured.author %}<span><i class="ri-user-line"></i> {{ featured.author }}</span>{% endif %}
+    </div>
+    <div class="blog-hero-cta">Read article <i class="ri-arrow-right-line"></i></div>
+  </div>
+</a>
+
+<!-- ── ARTICLE GRID ────────────────────────────────── -->
+{% if rest.size > 0 %}
+<div class="blog-grid-wrap">
+  <div class="blog-grid-inner">
+    <div class="blog-section-label">More articles</div>
+    <div class="blog-cards" id="blog-cards">
+      {% for post in rest %}
+      <a href="{{ post.url | relative_url }}" class="blog-card" data-cat="{{ post.category }}" style="text-decoration:none;">
+        <div class="blog-card-accent" style="background:{% cycle '#3b82f6','#f97316','#8b5cf6','#22c55e','#f59e0b' %};"></div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">{{ post.category }}</div>
+          <div class="blog-card-title">{{ post.title }}</div>
+          <p class="blog-card-excerpt">{{ post.description | truncate: 160 }}</p>
+          <div class="blog-card-footer">
+            <span>{{ post.date | date: "%b %d, %Y" }}{% if post.read_time %} · {{ post.read_time }} min{% endif %}</span>
+            <span class="blog-card-footer-link">Read <i class="ri-arrow-right-line"></i></span>
+          </div>
         </div>
-    </section>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}
 
-    <!-- Articles Grid -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-6 max-w-7xl">
-            <!-- E-commerce Intelligence -->
-            <div class="mb-16">
-                <h2 class="text-3xl font-black text-gray-900 mb-8 border-l-4 border-blue-600 pl-4">E-commerce Intelligence</h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {% assign ecommerce_posts = site.blog | where_exp: "post", "post.category contains 'E-commerce'" %}
-                    {% for post in ecommerce_posts limit:6 %}
-                    <a href="{{ post.url }}" class="group block p-6 bg-white border border-gray-200 hover:border-blue-600 hover:shadow-lg transition-all">
-                        <div class="text-xs font-bold text-blue-600 uppercase mb-2">E-commerce</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600">{{ post.title | split: '|' | slice: 1 | join: '' | strip }}</h3>
-                        <p class="text-gray-600 text-sm mb-4">{{ post.description | truncate: 120 }}</p>
-                        <div class="flex items-center gap-2 text-blue-600 font-semibold text-sm">
-                            Read More <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
-                        </div>
-                    </a>
-                    {% endfor %}
-                </div>
-            </div>
+{% endif %}
 
-            <!-- Quick Commerce Intelligence -->
-            <div class="mb-16">
-                <h2 class="text-3xl font-black text-gray-900 mb-8 border-l-4 border-orange-600 pl-4">Quick Commerce Intelligence</h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {% assign quick_posts = site.blog | where_exp: "post", "post.category contains 'Quick Commerce'" %}
-                    {% for post in quick_posts limit:6 %}
-                    <a href="{{ post.url }}" class="group block p-6 bg-white border border-gray-200 hover:border-orange-600 hover:shadow-lg transition-all">
-                        <div class="text-xs font-bold text-orange-600 uppercase mb-2">Quick Commerce</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600">{{ post.title | split: '|' | slice: 1 | join: '' | strip }}</h3>
-                        <p class="text-gray-600 text-sm mb-4">{{ post.description | truncate: 120 }}</p>
-                        <div class="flex items-center gap-2 text-orange-600 font-semibold text-sm">
-                            Read More <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
-                        </div>
-                    </a>
-                    {% endfor %}
-                </div>
-            </div>
+<!-- ── SUBSCRIBE STRIP ─────────────────────────────── -->
+<div class="blog-subscribe">
+  <div class="blog-sub-inner">
+    <div>
+      <div style="font-size:9.5px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#52525b;margin-bottom:0.75rem;">Stay sharp</div>
+      <div style="font-size:clamp(1.5rem,3vw,2.4rem);font-weight:900;letter-spacing:-0.03em;color:#f4f4f5;line-height:1.1;margin-bottom:0.75rem;">Commerce intelligence,<br/>straight to you.</div>
+      <p style="font-size:0.9rem;color:#52525b;line-height:1.7;max-width:380px;">New articles on price tracking, quick commerce data, and digital shelf strategy — when they drop, not on a schedule.</p>
+    </div>
+    <div>
+      <div style="display:flex;flex-direction:column;gap:0.75rem;">
+        <a href="{{ site.linkedin_url }}" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:0.9rem 1.75rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:#f4f4f5;font-size:0.875rem;font-weight:700;border-radius:6px;text-decoration:none;transition:border-color 0.15s;" onmouseover="this.style.borderColor='rgba(255,255,255,0.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
+          <i class="ri-linkedin-fill" style="font-size:1rem;color:#3b82f6;"></i> Follow on LinkedIn
+        </a>
+        <a href="{{ '/contact/' | relative_url }}" style="display:inline-flex;align-items:center;gap:8px;padding:0.9rem 1.75rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:#71717a;font-size:0.875rem;font-weight:700;border-radius:6px;text-decoration:none;transition:border-color 0.15s,color 0.15s;" onmouseover="this.style.borderColor='rgba(255,255,255,0.3)';this.style.color='#f4f4f5'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)';this.style.color='#71717a'">
+          <i class="ri-mail-line"></i> Suggest a topic
+        </a>
+      </div>
+      <p style="font-size:11px;color:#3f3f46;margin-top:1rem;">Or just <a href="https://app.getnextract.com/register" style="color:#3b82f6;text-decoration:none;">start free</a> and see the data for yourself.</p>
+    </div>
+  </div>
+</div>
 
-            <!-- Food Delivery Intelligence -->
-            <div class="mb-16">
-                <h2 class="text-3xl font-black text-gray-900 mb-8 border-l-4 border-green-600 pl-4">Food Delivery Intelligence</h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {% assign food_posts = site.blog | where_exp: "post", "post.category contains 'Food Delivery'" %}
-                    {% for post in food_posts limit:6 %}
-                    <a href="{{ post.url }}" class="group block p-6 bg-white border border-gray-200 hover:border-green-600 hover:shadow-lg transition-all">
-                        <div class="text-xs font-bold text-green-600 uppercase mb-2">Food Delivery</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-600">{{ post.title | split: '|' | slice: 1 | join: '' | strip }}</h3>
-                        <p class="text-gray-600 text-sm mb-4">{{ post.description | truncate: 120 }}</p>
-                        <div class="flex items-center gap-2 text-green-600 font-semibold text-sm">
-                            Read More <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
-                        </div>
-                    </a>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    </section>
+<script>
+// Category filter
+(function(){
+  var btns = document.querySelectorAll('.blog-filter-btn');
+  var cards = document.querySelectorAll('#blog-cards .blog-card');
+  var heroLink = document.querySelector('.blog-hero');
+  var featuredCat = heroLink ? heroLink.querySelector('.blog-hero-cat') : null;
 
-    <!-- CTA Section -->
-    <section class="py-20 bg-gray-900 text-white">
-        <div class="container mx-auto px-6 max-w-4xl text-center">
-            <h2 class="text-4xl font-black mb-6">Ready to Implement These Strategies?</h2>
-            <p class="text-xl text-gray-300 mb-8">
-                Start extracting intelligence from your target platforms today with Nextract's powerful data extraction solutions.
-            </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="/contact/" class="px-8 py-4 bg-white text-gray-900 font-bold hover:bg-gray-100 transition-all inline-flex items-center gap-2">
-                    Start Free Trial
-                    <i class="ri-arrow-right-line"></i>
-                </a>
-                <a href="/enterprise/" class="px-8 py-4 border-2 border-white text-white font-bold hover:bg-white hover:text-gray-900 transition-all inline-flex items-center gap-2">
-                    <i class="ri-building-line"></i>
-                    Enterprise solutions
-                </a>
-            </div>
-        </div>
-    </section>
-</main>
+  btns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      btns.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      var cat = btn.dataset.cat;
+
+      // Filter grid cards
+      cards.forEach(function(card){
+        if(cat === 'all' || card.dataset.cat === cat){
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // Show/hide hero based on category
+      if(heroLink){
+        if(cat === 'all'){
+          heroLink.style.display = '';
+        } else {
+          var heroCatText = heroLink.querySelector('.blog-hero-cat') ?
+            heroLink.querySelector('.blog-hero-cat').textContent.trim() : '';
+          heroLink.style.display = (heroCatText.includes(cat)) ? '' : 'none';
+        }
+      }
+    });
+  });
+})();
+</script>

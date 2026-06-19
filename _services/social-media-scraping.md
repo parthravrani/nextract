@@ -1,12 +1,12 @@
 ---
 layout: product-page
 title: "Social Media Data Extraction: Posts, Profiles & Engagement"
-description: "Extract posts, profiles, engagement from LinkedIn, Twitter, Instagram, TikTok. Track 1B+ posts, trending hashtags, viral content. Real-time analytics. JSON format."
+description: "Extract posts, profiles, and engagement from LinkedIn, Twitter, Instagram, TikTok. Track 1B+ posts, trending hashtags. Real-time JSON format."
 keywords: "social media scraping, social data extraction, social media intelligence, profile scraping, engagement metrics, social analytics"
 order: 6
 ---
 
-# Social Media Data Scraping Services
+## Social Media Data Scraping Services
 
 **Transform social conversations into actionable brand intelligence and market insights.**
 

@@ -6,7 +6,7 @@ keywords: "restaurant scraping, menu scraping, food data extraction, restaurant 
 order: 2
 ---
 
-# Restaurant Data Scraping Services
+## Restaurant Data Scraping Services
 
 **Power your food-tech platform with real-time menu, pricing, and review intelligence from 200+ restaurant chains.**
 

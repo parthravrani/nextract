@@ -67,6 +67,15 @@ layout: null
   <url><loc>https://nextract.dev/faq/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://nextract.dev/trust-security/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
 
+  <!-- Blog -->
+  <url><loc>https://nextract.dev/blog/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://nextract.dev/blog/fmcg-stockout-quick-commerce/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://nextract.dev/blog/d2c-competitor-price-tracking/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://nextract.dev/blog/share-of-search-amazon-flipkart/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://nextract.dev/blog/catalogue-monitoring-listing-quality/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://nextract.dev/blog/fmcg-digital-shelf-guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://nextract.dev/blog/competitor-intelligence-ecommerce/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
   <!-- Legal -->
   <url><loc>https://nextract.dev/privacy/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://nextract.dev/terms/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>

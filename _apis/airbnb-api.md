@@ -6,7 +6,7 @@ keywords: "Airbnb API, property API, accommodation API, booking API, travel API"
 order: 3
 ---
 
-# Airbnb API
+## Airbnb API
 
 RESTful API for extracting comprehensive property listings, pricing, availability, reviews, and booking information from Airbnb.
 

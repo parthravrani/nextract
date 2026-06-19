@@ -6,7 +6,7 @@ keywords: "Zomato dataset, restaurant dataset, food delivery dataset, Zomato dat
 order: 3
 ---
 
-# Zomato Dataset
+## Zomato Dataset
 
 Comprehensive restaurant and food delivery dataset from Zomato platform. Monthly refresh ensures you always have the latest data.
 

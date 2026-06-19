@@ -15,7 +15,7 @@ breadcrumbs:
     url: "/brands/target-scraper"
 ---
 
-# Target Data Scraping Services
+## Target Data Scraping Services
 
 Extract comprehensive product data, pricing intelligence, customer reviews, and marketplace information from Target. Access real-time data across all product categories.
 

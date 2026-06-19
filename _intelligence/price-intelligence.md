@@ -6,7 +6,7 @@ keywords: "price intelligence, competitive pricing, price monitoring, dynamic pr
 order: 2
 ---
 
-# Price Intelligence
+## Price Intelligence
 
 Monitor competitor pricing, optimize your pricing strategy, and implement dynamic pricing with comprehensive price intelligence solutions.
 

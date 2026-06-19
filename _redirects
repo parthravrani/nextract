@@ -1,0 +1,6 @@
+# Scrava retirement — 301 redirects to Nextract equivalents
+/scrava/                    /pricing/                                                          301
+/scrava/subscribe/starter/  https://app.getnextract.com/register?mode=excel&tier=starter      301
+/scrava/subscribe/growth/   https://app.getnextract.com/register?mode=excel&tier=growth       301
+/scrava/subscribe/scale/    https://app.getnextract.com/register?mode=excel&tier=scale        301
+/scrava/subscribe/elite/    https://app.getnextract.com/register?mode=excel&tier=elite        301

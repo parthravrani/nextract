@@ -1,12 +1,12 @@
 ---
 layout: product-page
 title: "Healthcare Data Extraction: Drugs, Devices & Providers"
-description: "Extract drug data, medical device specs, provider info from WebMD, Drugs.com, Healthgrades. Track prices, availability, ratings. HIPAA-compliant extraction. JSON format."
+description: "Extract drug data, medical device specs, and provider info from WebMD, Drugs.com, Healthgrades. Track prices and ratings. HIPAA-compliant. JSON format."
 keywords: "healthcare scraping, medical data extraction, drug data scraping, healthcare intelligence, medical device data, provider data"
 order: 9
 ---
 
-# Healthcare Data Scraping Services
+## Healthcare Data Scraping Services
 
 Extract comprehensive healthcare data including drug information, medical device data, healthcare provider information, and medical research data from healthcare platforms.
 

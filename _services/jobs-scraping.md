@@ -6,7 +6,7 @@ keywords: "job scraping, recruitment data extraction, job board scraping, salary
 order: 7
 ---
 
-# Jobs & Recruitment Data Scraping Services
+## Jobs & Recruitment Data Scraping Services
 
 **Power your HR-Tech platform with fresh talent data from leading job boards worldwide.**
 

@@ -6,7 +6,7 @@ keywords: "hotel scraping, hotel data extraction, booking data, travel scraping,
 order: 3
 ---
 
-# Hotel Data Scraping Services
+## Hotel Data Scraping Services
 
 Extract comprehensive hotel data including prices, availability, reviews, amenities, locations, and booking information from major travel and accommodation platforms.
 

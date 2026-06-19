@@ -6,7 +6,7 @@ keywords: "Walmart API, Walmart product API, Walmart scraping API, retail API, p
 order: 2
 ---
 
-# Walmart API
+## Walmart API
 
 RESTful API for extracting comprehensive product data, pricing, reviews, ratings, and inventory information from Walmart.com.
 

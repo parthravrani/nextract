@@ -15,7 +15,7 @@ breadcrumbs:
     url: "/brands/shopify-scraper"
 ---
 
-# Shopify Store Data Scraping Services
+## Shopify Store Data Scraping Services
 
 Extract comprehensive product data, inventory levels, pricing, and store information from any Shopify-powered e-commerce store. Access data from 2+ million Shopify stores worldwide.
 

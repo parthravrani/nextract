@@ -6,7 +6,7 @@ keywords: "Zillow scraper, property scraper, real estate data extraction, proper
 order: 4
 ---
 
-# Zillow Scraper
+## Zillow Scraper
 
 Extract comprehensive property data including listings, prices, details, images, locations, and market trends from Zillow.
 

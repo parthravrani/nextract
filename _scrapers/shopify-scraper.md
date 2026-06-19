@@ -6,7 +6,7 @@ keywords: "Shopify scraper, Shopify store scraper, e-commerce scraper, Shopify d
 order: 9
 ---
 
-# Shopify Store Scraper
+## Shopify Store Scraper
 
 Extract comprehensive product data, pricing, reviews, inventory, and store information from any Shopify-powered e-commerce store.
 

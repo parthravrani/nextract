@@ -6,7 +6,7 @@ keywords: "Indeed dataset, jobs dataset, recruitment dataset, Indeed data export
 order: 6
 ---
 
-# Indeed Dataset
+## Indeed Dataset
 
 Comprehensive job and recruitment dataset from Indeed platform. Monthly refresh ensures you always have the latest data.
 

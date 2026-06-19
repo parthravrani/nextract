@@ -1,12 +1,12 @@
 ---
 layout: product-page
 title: "Real Estate Intelligence: Property Data & Market Analysis"
-description: "Transform real estate data into actionable intelligence. Market analysis, price trends, investment insights. Property intelligence made simple. Start free trial."
+description: "Transform real estate data into actionable intelligence. Market analysis, price trends, investment insights. Property intelligence made simple."
 keywords: "real estate intelligence, property intelligence, real estate analytics, housing market intelligence, property market research"
 order: 6
 ---
 
-# Real Estate Intelligence
+## Real Estate Intelligence
 
 Transform real estate data into actionable intelligence. Market analysis, price trends, investment insights, and property intelligence to power your real estate business.
 

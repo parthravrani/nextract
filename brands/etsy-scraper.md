@@ -15,7 +15,7 @@ breadcrumbs:
     url: "/brands/etsy-scraper"
 ---
 
-# Etsy Data Scraping Services
+## Etsy Data Scraping Services
 
 Extract comprehensive product data, pricing intelligence, customer reviews, and marketplace information from Etsy. Access real-time data across all product categories.
 

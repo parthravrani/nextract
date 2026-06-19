@@ -1,12 +1,12 @@
 ---
 layout: product-page
 title: "Mobile App Data Extraction: Android, iOS & OTT"
-description: "Extract app data from Play Store, App Store, Netflix, Prime Video. Get reviews, ratings, content catalogs. 15K+ Netflix titles tracked. Real-time updates. JSON format."
+description: "Extract app data from Play Store, App Store, Netflix, Prime Video. Reviews, ratings, content catalogs. 15K+ Netflix titles tracked. JSON format."
 keywords: "mobile app scraping, Android app scraping, iOS app scraping, app store scraping, OTT scraping, mobile data extraction"
 order: 11
 ---
 
-# Mobile App Scraping Services
+## Mobile App Scraping Services
 
 **Unlock app store intelligence and in-app content data to power your mobile strategy.**
 

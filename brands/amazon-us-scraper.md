@@ -1,7 +1,7 @@
 ---
 layout: product-page
 title: "Amazon US Scraper: Products, Prices & Reviews Data Extraction"
-description: "Extract Amazon US product data, prices, reviews, seller info via API. Real-time ASIN lookup, price tracking, review monitoring. Enterprise-grade scraping. Start free."
+description: "Extract Amazon US product data, prices, reviews, and seller info via API. Real-time ASIN lookup, price tracking, review monitoring. Start free."
 keywords: "Amazon US scraper, Amazon USA data extraction, Amazon product API, ASIN lookup, Amazon price tracking, Amazon reviews scraping, Amazon seller data"
 category: "E-commerce"
 platform: "Amazon US"
@@ -15,7 +15,7 @@ breadcrumbs:
     url: "/brands/amazon-us-scraper"
 ---
 
-# Amazon US Data Scraping Services
+## Amazon US Data Scraping Services
 
 Extract comprehensive product data, pricing intelligence, reviews, and seller information from Amazon's US marketplace. Our enterprise-grade scraping solution provides real-time access to millions of products across all categories.
 

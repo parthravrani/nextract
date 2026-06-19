@@ -6,7 +6,7 @@ keywords: "Amazon dataset, Amazon product data, custom dataset, product dataset,
 order: 1
 ---
 
-# Amazon Dataset
+## Amazon Dataset
 
 Custom product datasets from Amazon marketplaces worldwide, built to your specification. We collect the data you need and deliver on your schedule — one-time or recurring refresh.
 
@@ -46,7 +46,7 @@ Custom product datasets from Amazon marketplaces worldwide, built to your specif
 - **Historical Data**: Price history and trend data available
 - **Quality**: High data accuracy with quality assurance
 
-For a complete overview of our Amazon offerings including APIs, Scrava, and custom pipelines, see our [Amazon data solutions](/amazon/).
+For a complete overview of our Amazon offerings including APIs and custom pipelines, see our [Amazon data solutions](/amazon/).
 
 [Contact us](/contact/) to request a custom Amazon dataset built for your needs.
 

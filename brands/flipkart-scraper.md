@@ -15,7 +15,7 @@ breadcrumbs:
     url: "/brands/flipkart-scraper"
 ---
 
-# Flipkart Data Scraping Services
+## Flipkart Data Scraping Services
 
 Extract comprehensive product data, pricing intelligence, customer reviews, and seller information from Flipkart, India's leading e-commerce marketplace. Access real-time data across all product categories.
 

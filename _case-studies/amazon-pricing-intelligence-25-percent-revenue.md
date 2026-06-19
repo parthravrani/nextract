@@ -11,7 +11,7 @@ client: "Leading D2C Electronics Brand"
 <main>
 <div class="container mx-auto px-4 py-16">
 
-# 25% Revenue Boost - E-commerce Case Study
+<h1>25% Revenue Boost - E-commerce Case Study</h1>
 
 <div class="bg-blue-50 border-l-4 border-blue-600 p-6 mb-8">
   <p class="text-lg"><strong>Client:</strong> Leading D2C Electronics Brand</p>
@@ -78,9 +78,9 @@ Our team provided strategic guidance on interpreting the data and implementing c
 
 ## Tool Used
 
-This case study was powered by **[Scrava](https://nextract.dev/scrava/)**, Nextract's Amazon ASIN-based scraping API. Scrava processed 500+ competitor SKUs across 15 marketplaces with 99.7% success rate, automatically handling CAPTCHAs, rotating proxies, and Amazon's "Dog" page errors.
+This case study was powered by **[Nextract](https://nextract.dev/products/)**, our Amazon ASIN-based scraping API. Nextract processed 500+ competitor SKUs across 15 marketplaces with 99.7% success rate, automatically handling CAPTCHAs, rotating proxies, and Amazon's "Dog" page errors.
 
-[View Scrava Dashboard →](/scrava/)
+[Explore Nextract →](/products/)
 
 ## Client Testimonial
 

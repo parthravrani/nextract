@@ -11,7 +11,7 @@ client: "Restaurant Group (12 Locations)"
 <main>
 <div class="container mx-auto px-4 py-16">
 
-# 45% Profit Boost - DoorDash Case Study
+<h1>45% Profit Boost - DoorDash Case Study</h1>
 
 <div class="bg-blue-50 border-l-4 border-blue-600 p-6 mb-8">
   <p class="text-lg"><strong>Client:</strong> Restaurant Group (12 Locations)</p>

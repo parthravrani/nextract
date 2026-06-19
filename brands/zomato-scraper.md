@@ -15,7 +15,7 @@ breadcrumbs:
     url: "/brands/zomato-scraper"
 ---
 
-# Zomato Data Scraping Services
+## Zomato Data Scraping Services
 
 Extract comprehensive restaurant data, menu information, pricing, reviews, and delivery zone intelligence from Zomato. Real-time food delivery market insights.
 

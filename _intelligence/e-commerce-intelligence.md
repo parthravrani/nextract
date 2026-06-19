@@ -6,7 +6,7 @@ keywords: "e-commerce intelligence, price intelligence, competitive intelligence
 order: 1
 ---
 
-# E-commerce Intelligence
+## E-commerce Intelligence
 
 Transform raw e-commerce data into actionable business intelligence. Price intelligence, competitive analysis, market research, and product insights to power your e-commerce strategy.
 

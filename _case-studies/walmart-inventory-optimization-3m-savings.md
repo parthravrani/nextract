@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "$3M Cost Savings: Walmart Inventory Optimization"
-description: "Retail chain saved $3M annually by optimizing inventory using Walmart marketplace intelligence. Real-time stock tracking across 4,700+ stores. Inventory optimization."
+description: "Retail chain saved $3M annually optimizing inventory using Walmart marketplace intelligence — real-time stock tracking across 4,700+ stores."
 keywords: "Walmart inventory optimization, retail case study, supply chain intelligence, cost savings, inventory management"
 category: "case-study"
 industry: "Retail & Distribution"
@@ -11,7 +11,7 @@ client: "National Retail Chain"
 <main>
 <div class="container mx-auto px-4 py-16">
 
-# $3M Cost Savings - Walmart Case Study
+<h1>$3M Cost Savings - Walmart Case Study</h1>
 
 <div class="bg-blue-50 border-l-4 border-blue-600 p-6 mb-8">
   <p class="text-lg"><strong>Client:</strong> National Retail Chain</p>

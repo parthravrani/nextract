@@ -1,12 +1,12 @@
 ---
 layout: product-page
 title: "LinkedIn Scraper: Profiles, Jobs & Company Data"
-description: "Extract LinkedIn profiles, job listings, company pages. Access 900M+ profiles, 20M+ jobs. B2B lead generation, recruitment data. Compliant extraction. JSON format."
+description: "Extract LinkedIn profiles, job listings, and company pages. Access 900M+ profiles, 20M+ jobs. B2B lead generation, recruitment data. JSON format."
 keywords: "LinkedIn scraper, LinkedIn profile scraper, LinkedIn jobs scraper, LinkedIn company scraper, professional network scraping"
 order: 2
 ---
 
-# LinkedIn Scraper
+## LinkedIn Scraper
 
 Extract comprehensive professional network data including profiles, job listings, company information, and network insights from LinkedIn.
 

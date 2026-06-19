@@ -11,7 +11,7 @@ client: "Fast-Casual Restaurant Brand"
 <main>
 <div class="container mx-auto px-4 py-16">
 
-# 8 Cities Expanded - Uber Eats Case Study
+<h1>8 Cities Expanded - Uber Eats Case Study</h1>
 
 <div class="bg-blue-50 border-l-4 border-blue-600 p-6 mb-8">
   <p class="text-lg"><strong>Client:</strong> Fast-Casual Restaurant Brand</p>
