@@ -78,4 +78,4 @@ These are signals worth catching. They tell you what's working for them before y
 
 ---
 
-*Nextract tracks listing content, image changes, seller activity, and ratings across Amazon, Flipkart, and other platforms — daily. [Start free](/products/) — 5,000 credits your first month.*
+*Nextract tracks listing content, image changes, seller activity, and ratings across Amazon, Flipkart, and other platforms — daily. [Get started](/pricing/) — prepaid packs from ₹249.*

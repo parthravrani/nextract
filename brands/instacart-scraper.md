@@ -1,7 +1,7 @@
 ---
 layout: product-page
 title: "Instacart Scraper: Grocery, Prices & Delivery Zones Data"
-description: "Extract Instacart grocery data, prices, store availability via API. Multi-store shopping data. Real-time inventory across USA and Canada. Start free."
+description: "Extract Instacart grocery data, prices, store availability via API. Multi-store shopping data. Real-time inventory across USA and Canada. Get started."
 keywords: "Instacart scraper, Instacart data extraction, grocery delivery API, Instacart price tracking, multi-store shopping data"
 category: "Quick Commerce"
 platform: "Instacart"

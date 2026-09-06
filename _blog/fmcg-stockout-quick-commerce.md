@@ -3,6 +3,7 @@ layout: post
 title: "How FMCG Brands Catch Stockouts Before Their Distributors Do"
 description: "Quick commerce platforms update stock in near real-time. Most FMCG brands find out about stockouts from complaints. Here's how to flip that."
 category: "Quick Commerce"
+hidden: true
 date: 2026-06-01
 author: "Nextract Team"
 read_time: 7

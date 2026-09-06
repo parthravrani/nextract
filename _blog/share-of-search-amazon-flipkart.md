@@ -79,4 +79,4 @@ Weekly share of search reporting, not daily. Rankings fluctuate day-to-day based
 
 ---
 
-*Nextract tracks keyword rankings across Amazon, Flipkart, and quick commerce platforms — daily, at scale. [Start free](/products/) — 5,000 credits your first month.*
+*Nextract tracks keyword rankings across Amazon, Flipkart, and other e-commerce marketplaces — daily, at scale. [Get started](/pricing/) — prepaid packs from ₹249.*

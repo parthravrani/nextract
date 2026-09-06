@@ -1,7 +1,7 @@
 ---
 layout: product-page
 title: "Brand Protection Intelligence: MAP Monitoring & Counterfeit Detection"
-description: "Protect your brand with intelligence solutions. MAP violations, counterfeit detection, unauthorized sellers. Comprehensive brand governance. Start free trial."
+description: "Protect your brand with intelligence solutions. MAP violations, counterfeit detection, unauthorized sellers. Comprehensive brand governance. Prepaid packs from ₹249."
 keywords: "brand protection, MAP violations, counterfeit detection, unauthorized sellers, brand governance, brand intelligence"
 order: 7
 ---

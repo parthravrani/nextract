@@ -1,7 +1,7 @@
 ---
 layout: product-page
 title: "Swiggy Instamart Scraper: Grocery, Prices & Delivery Zones Data"
-description: "Extract Swiggy Instamart grocery data, prices, delivery zones via API. 15-minute grocery delivery. Real-time inventory across Indian cities. Start free."
+description: "Extract Swiggy Instamart grocery data, prices, delivery zones via API. 15-minute grocery delivery. Real-time inventory across Indian cities. Get started."
 keywords: "Swiggy Instamart scraper, Swiggy grocery API, quick commerce India, Instamart data extraction, 15-minute delivery data"
 category: "Quick Commerce"
 platform: "Swiggy Instamart"

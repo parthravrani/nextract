@@ -1,7 +1,7 @@
 ---
 layout: product-page
 title: "Blinkit Scraper: Grocery, Prices & Delivery Zones Data"
-description: "Extract Blinkit grocery data, prices, delivery zones via API. 10-minute delivery intelligence for India. Real-time inventory tracking. Start free."
+description: "Extract Blinkit grocery data, prices, delivery zones via API. 10-minute delivery intelligence for India. Real-time inventory tracking. Get started."
 keywords: "Blinkit scraper, Blinkit data extraction, quick commerce India, 10-minute delivery data, grocery scraping India, Blinkit API"
 category: "Quick Commerce"
 platform: "Blinkit"

@@ -1,7 +1,7 @@
 ---
 layout: product-page
 title: "Uber Eats Scraper: Restaurants, Menus & Delivery Data"
-description: "Extract Uber Eats restaurant data, menus, prices via API. Global food delivery platform. 6,000+ cities worldwide. Real-time data. Start free trial."
+description: "Extract Uber Eats restaurant data, menus, prices via API. Global food delivery platform. 6,000+ cities worldwide. Real-time data. Prepaid packs from ₹249."
 keywords: "Uber Eats scraper, Uber Eats data extraction, global food delivery API, restaurant data global, Uber Eats menu scraping"
 category: "Food Delivery"
 platform: "Uber Eats"

@@ -1,7 +1,7 @@
 ---
 layout: product-page
 title: "Swiggy Scraper: Restaurants, Menus & Delivery Data"
-description: "Extract Swiggy restaurant data, menus, prices, reviews via API. India's leading food delivery platform. 500+ cities covered. Start free trial today."
+description: "Extract Swiggy restaurant data, menus, prices, reviews via API. India's leading food delivery platform. 500+ cities covered. Prepaid packs from ₹249."
 keywords: "Swiggy scraper, Swiggy data extraction, food delivery India API, restaurant data India, Swiggy menu scraping, delivery zone mapping"
 category: "Food Delivery"
 platform: "Swiggy"

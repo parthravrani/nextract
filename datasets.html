@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "E-commerce Product Datasets — Nextract"
-description: "Structured e-commerce datasets from Amazon, Flipkart, Zepto, Blinkit and 30+ platforms. Pricing data, catalogues, stock data — API or bulk delivery."
+description: "Structured e-commerce datasets from Amazon, Flipkart, and major storefronts. Pricing data, catalogues, stock data — API or bulk delivery."
 keywords: "ecommerce datasets, product data, pricing dataset, Amazon product data, Flipkart dataset, commerce data, structured product data"
 permalink: /datasets/
 og_title: "E-commerce Product Datasets — Nextract"
@@ -22,10 +22,10 @@ og_description: "Clean structured product data from 30+ e-commerce platforms. De
             Product titles, prices, stock levels, categories, reviews, and search rankings — collected from 30+ platforms and delivered as clean structured data. Access via API or request bulk delivery for your analytics stack.
         </p>
         <div style="display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem;">
-            <a href="https://app.getnextract.com/register" class="btn-dk-primary">Start free — first month included <i class="ri-arrow-right-line"></i></a>
+            <a href="https://app.getnextract.com/register" class="btn-dk-primary">Get started <i class="ri-arrow-right-line"></i></a>
             <a href="{{ '/enterprise/' | relative_url }}" class="btn-dk-ghost">Bulk dataset delivery →</a>
         </div>
-        <p style="font-size:11.5px;color:#52525b;">5,000 credits free your first month · No card required</p>
+        <p style="font-size:11.5px;color:#52525b;">Prepaid packs from ₹249 · leftover tokens expire at cycle end</p>
     </div>
 </section>
 
@@ -48,7 +48,7 @@ og_description: "Clean structured product data from 30+ e-commerce platforms. De
             <div style="padding:1.5rem;border:1px solid #e4e4e7;border-radius:10px;">
                 <i class="ri-stack-line" style="font-size:1.4rem;color:#8b5cf6;margin-bottom:0.75rem;display:block;"></i>
                 <div style="font-weight:700;margin-bottom:0.4rem;">Stock &amp; availability</div>
-                <div style="font-size:0.85rem;color:#71717a;line-height:1.6;">In-stock/out-of-stock status, pincode-level availability for quick commerce, seller stock levels.</div>
+                <div style="font-size:0.85rem;color:#71717a;line-height:1.6;">In-stock/out-of-stock status, seller stock, and fulfillment type on Amazon and other storefronts.</div>
             </div>
             <div style="padding:1.5rem;border:1px solid #e4e4e7;border-radius:10px;">
                 <i class="ri-search-line" style="font-size:1.4rem;color:#22c55e;margin-bottom:0.75rem;display:block;"></i>
@@ -63,7 +63,7 @@ og_description: "Clean structured product data from 30+ e-commerce platforms. De
             <div style="padding:1.5rem;border:1px solid #e4e4e7;border-radius:10px;">
                 <i class="ri-map-pin-line" style="font-size:1.4rem;color:#ef4444;margin-bottom:0.75rem;display:block;"></i>
                 <div style="font-weight:700;margin-bottom:0.4rem;">Location-level data</div>
-                <div style="font-size:0.85rem;color:#71717a;line-height:1.6;">Pincode and city-level price and availability differences for quick commerce and grocery platforms.</div>
+                <div style="font-size:0.85rem;color:#71717a;line-height:1.6;">Marketplace-level price and availability differences across Amazon and other e-commerce storefronts.</div>
             </div>
         </div>
     </div>
@@ -75,7 +75,7 @@ og_description: "Clean structured product data from 30+ e-commerce platforms. De
         <div class="nx-label">Platforms covered</div>
         <h2 class="nx-h2" style="max-width:480px;margin-bottom:2rem;">30+ marketplaces in one dataset.</h2>
         <div style="display:flex;flex-wrap:wrap;gap:0.75rem;">
-            {% assign platforms = "Amazon~Flipkart~Walmart~eBay~Etsy~Blinkit~Zepto~Swiggy Instamart~BigBasket~JioMart~Myntra~Nykaa~Meesho~Croma~Doordash~UberEats~Swiggy~Zomato" | split: "~" %}
+            {% assign platforms = "Amazon~Flipkart~Walmart~eBay~Etsy~Croma~Myntra~Nykaa~Meesho" | split: "~" %}
             {% for p in platforms %}
             <span style="padding:0.45rem 1rem;background:#fff;border:1px solid #e4e4e7;border-radius:999px;font-size:0.83rem;color:#3f3f46;font-weight:600;">{{ p }}</span>
             {% endfor %}
@@ -92,8 +92,8 @@ og_description: "Clean structured product data from 30+ e-commerce platforms. De
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
             <div style="padding:2rem;border:1px solid #e4e4e7;border-radius:12px;">
                 <div style="font-size:10px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:#3b82f6;margin-bottom:1rem;">SaaS Platform</div>
-                <p style="font-size:0.88rem;color:#52525b;line-height:1.7;margin-bottom:1.25rem;">Access structured data via the Nextract API or Dashboard. Pull by ASIN, keyword, category, or platform. Billed by credit consumption. Start with 5,000 credits free.</p>
-                <a href="https://app.getnextract.com/register" style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.85rem;font-weight:700;color:#3b82f6;text-decoration:none;">Start free <i class="ri-arrow-right-line"></i></a>
+                <p style="font-size:0.88rem;color:#52525b;line-height:1.7;margin-bottom:1.25rem;">Access structured data via the Nextract API or Dashboard. Pull by ASIN, keyword, category, or platform. Billed by credit consumption. Start with a prepaid Spark pack.</p>
+                <a href="https://app.getnextract.com/register" style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.85rem;font-weight:700;color:#3b82f6;text-decoration:none;">Get started <i class="ri-arrow-right-line"></i></a>
             </div>
             <div style="padding:2rem;border:1px solid rgba(139,92,246,0.3);border-radius:12px;background:rgba(139,92,246,0.03);">
                 <div style="font-size:10px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:#8b5cf6;margin-bottom:1rem;">Enterprise Bulk</div>
@@ -108,7 +108,7 @@ og_description: "Clean structured product data from 30+ e-commerce platforms. De
 <section style="background:#111113;padding:5rem 0;">
     <div class="nx-wrap" style="text-align:center;">
         <h2 style="font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;letter-spacing:-0.03em;color:#f4f4f5;margin-bottom:1rem;">Start pulling data today.</h2>
-        <p style="color:#71717a;font-size:0.95rem;margin-bottom:2rem;max-width:420px;margin-left:auto;margin-right:auto;line-height:1.7;">5,000 credits free your first month. No card required.</p>
+        <p style="color:#71717a;font-size:0.95rem;margin-bottom:2rem;max-width:420px;margin-left:auto;margin-right:auto;line-height:1.7;">Prepaid packs from ₹249. Leftover tokens expire at cycle end.</p>
         <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;">
             <a href="https://app.getnextract.com/register" class="btn-dk-primary">Get started free <i class="ri-arrow-right-line"></i></a>
             <a href="{{ '/apis/' | relative_url }}" class="btn-dk-ghost">View API docs</a>

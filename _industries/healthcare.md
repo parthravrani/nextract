@@ -1,11 +1,11 @@
 ---
 layout: default
 title: "Healthcare Data Solutions: Clinical Trials & Provider Intelligence"
-description: "Extract clinical trial data, medical research, provider info from ClinicalTrials.gov, PubMed. Healthcare intelligence API. Real-time data. Start free trial."
+description: "Extract clinical trial data, medical research, provider info from ClinicalTrials.gov, PubMed. Healthcare intelligence API. Real-time data. Prepaid packs from ₹249."
 keywords: "healthcare data scraping, clinical trial scraping, medical research data extraction, provider data scraping, ClinicalTrials.gov scraping, PubMed data extraction, healthcare intelligence, medical database scraping"
 category: "Healthcare"
-og_description: "Extract clinical trial data, medical research, provider info from ClinicalTrials.gov, PubMed. Healthcare intelligence API. Real-time data. Start free trial."
-twitter_description: "Healthcare scraping: Clinical trials, medical research, provider data extraction. ClinicalTrials.gov, PubMed scraping. Start free."
+og_description: "Extract clinical trial data, medical research, provider info from ClinicalTrials.gov, PubMed. Healthcare intelligence API. Real-time data. Prepaid packs from ₹249."
+twitter_description: "Healthcare scraping: Clinical trials, medical research, provider data extraction. ClinicalTrials.gov, PubMed scraping. Get started."
 ---
 
 <main>

@@ -75,4 +75,4 @@ The operational value compounds quickly. Once you have 90 days of data, competit
 
 ---
 
-*Nextract tracks prices, Buy Box ownership, and discounts across Amazon, Flipkart, and 30+ other platforms. [Start free](/products/) — 5,000 credits your first month.*
+*Nextract tracks prices, Buy Box ownership, and discounts across Amazon, Flipkart, and 30+ other platforms. [Get started](/pricing/) — prepaid packs from ₹249.*

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "E-commerce Data Scrapers — Nextract"
-description: "Managed e-commerce scrapers for Amazon, Flipkart, Zepto, Blinkit and 30+ platforms. Structured product data without maintaining your own scrapers."
+description: "Managed e-commerce scrapers for Amazon, Flipkart, and major storefronts. Structured product data without maintaining your own scrapers."
 keywords: "ecommerce scrapers, product data scraper, Amazon scraper, Flipkart scraper, managed scrapers, web scraper API, data extraction"
 permalink: /scrapers/
 og_title: "E-commerce Data Scrapers — Nextract"
@@ -22,10 +22,10 @@ og_description: "Managed scraper infrastructure for 30+ platforms. You get clean
             Building and maintaining scrapers for e-commerce platforms is a full-time job. Nextract is managed scraping infrastructure — you get structured, clean data from 30+ marketplaces via API or Dashboard, without writing a single scraper.
         </p>
         <div style="display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem;">
-            <a href="https://app.getnextract.com/register" class="btn-dk-primary">Start free — first month included <i class="ri-arrow-right-line"></i></a>
+            <a href="https://app.getnextract.com/register" class="btn-dk-primary">Get started <i class="ri-arrow-right-line"></i></a>
             <a href="{{ '/apis/' | relative_url }}" class="btn-dk-ghost">View API docs →</a>
         </div>
-        <p style="font-size:11.5px;color:#52525b;">5,000 credits free your first month · No card required</p>
+        <p style="font-size:11.5px;color:#52525b;">Prepaid packs from ₹249 · leftover tokens expire at cycle end</p>
     </div>
 </section>
 
@@ -65,7 +65,7 @@ og_description: "Managed scraper infrastructure for 30+ platforms. You get clean
         <div class="nx-label">Platforms covered</div>
         <h2 class="nx-h2" style="max-width:480px;margin-bottom:1.75rem;">30+ marketplaces, one API.</h2>
         <div style="display:flex;flex-wrap:wrap;gap:0.75rem;">
-            {% assign platforms = "Amazon~Flipkart~eBay~Walmart~Etsy~Blinkit~Zepto~Swiggy Instamart~BigBasket~JioMart~Myntra~Nykaa~Meesho~Croma~Doordash~UberEats~Swiggy~Zomato" | split: "~" %}
+            {% assign platforms = "Amazon~Flipkart~eBay~Walmart~Etsy~Croma~Myntra~Nykaa~Meesho" | split: "~" %}
             {% for p in platforms %}
             <span style="padding:0.45rem 1rem;background:#fff;border:1px solid #e4e4e7;border-radius:999px;font-size:0.83rem;color:#3f3f46;font-weight:600;">{{ p }}</span>
             {% endfor %}
@@ -78,9 +78,9 @@ og_description: "Managed scraper infrastructure for 30+ platforms. You get clean
 <section style="background:#111113;padding:5rem 0;">
     <div class="nx-wrap" style="text-align:center;">
         <h2 style="font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;letter-spacing:-0.03em;color:#f4f4f5;margin-bottom:1rem;">Get data, not scrapers.</h2>
-        <p style="color:#71717a;font-size:0.95rem;margin-bottom:2rem;max-width:420px;margin-left:auto;margin-right:auto;line-height:1.7;">5,000 credits free your first month. API included.</p>
+        <p style="color:#71717a;font-size:0.95rem;margin-bottom:2rem;max-width:420px;margin-left:auto;margin-right:auto;line-height:1.7;">Prepaid packs from ₹249. API included.</p>
         <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;">
-            <a href="https://app.getnextract.com/register" class="btn-dk-primary">Start free <i class="ri-arrow-right-line"></i></a>
+            <a href="https://app.getnextract.com/register" class="btn-dk-primary">Get started <i class="ri-arrow-right-line"></i></a>
             <a href="{{ '/enterprise/' | relative_url }}" class="btn-dk-ghost">Custom scraping projects</a>
         </div>
     </div>

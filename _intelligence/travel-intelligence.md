@@ -1,7 +1,7 @@
 ---
 layout: product-page
 title: "Travel Intelligence: Hotel & Flight Data Extraction"
-description: "Transform travel data into actionable intelligence. Price monitoring, market research, competitive analysis for travel businesses. Start free."
+description: "Transform travel data into actionable intelligence. Price monitoring, market research, competitive analysis for travel businesses. Get started."
 keywords: "travel intelligence, travel analytics, hotel intelligence, flight intelligence, travel market research"
 order: 5
 ---

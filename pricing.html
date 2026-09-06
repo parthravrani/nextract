@@ -1,9 +1,9 @@
 ---
 layout: default
 title: "Pricing — Nextract Commerce Data Platform"
-description: "Simple, credit-based pricing for Nextract. Four volume tiers, three delivery modes — Excel, API, or Dashboard. First month free, no card required."
-keywords: "nextract pricing, commerce data api pricing, marketplace data pricing, amazon data api price, blinkit data api price, ecommerce data pricing"
-og_description: "Credit-based pricing for Nextract. Four tiers, Excel/API/Dashboard delivery. First month free — 5,000 credits included."
+description: "Prepaid credit packs for Nextract. Spark to Sovereign, three delivery modes — Excel, API, or Dashboard. From ₹249. No trial."
+keywords: "nextract pricing, commerce data api pricing, marketplace data pricing, amazon data api price, ecommerce data pricing"
+og_description: "Prepaid packs from Spark to Sovereign. Excel, API, or Dashboard. From ₹249. Leftover tokens expire at cycle end."
 permalink: /pricing/
 ---
 
@@ -82,11 +82,12 @@ permalink: /pricing/
 
 /* ── Plan cards ──────────────────────────── */
 .pp-cards { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--lt-b); border:1px solid var(--lt-b); }
-@media(max-width:960px){ .pp-cards { grid-template-columns:1fr 1fr; } }
+@media(max-width:1100px){ .pp-cards { grid-template-columns:repeat(3,1fr); } }
+@media(max-width:800px){ .pp-cards { grid-template-columns:1fr 1fr; } }
 @media(max-width:540px){ .pp-cards { grid-template-columns:1fr; } }
 
 .pp-card {
-  background:var(--lt); padding:2rem 1.75rem;
+  background:var(--lt); padding:1.5rem 1.25rem;
   display:flex; flex-direction:column;
   position:relative; transition:background 0.2s;
 }
@@ -98,10 +99,13 @@ permalink: /pricing/
   font-size:9px; font-weight:900; letter-spacing:0.12em; text-transform:uppercase;
   background:var(--blue); color:#fff; padding:0.22rem 0.7rem; white-space:nowrap;
 }
-.pp-tier { font-size:10px; font-weight:900; letter-spacing:0.18em; text-transform:uppercase; margin-bottom:0.25rem; }
+.pp-tier-row { display:flex; align-items:center; gap:8px; margin-bottom:0.35rem; color:var(--lt-mut); }
+.pp-tier-row svg { width:16px; height:16px; stroke-width:2; flex-shrink:0; }
+.featured .pp-tier-row { color:var(--blue); }
+.pp-tier { font-size:10px; font-weight:900; letter-spacing:0.18em; text-transform:uppercase; margin-bottom:0; }
 .pp-credits { font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--lt-mut); margin-bottom:1.25rem; }
 .featured .pp-credits { color:var(--dk-dim); }
-.pp-price { font-size:2.4rem; font-weight:900; letter-spacing:-0.04em; line-height:1; margin-bottom:0.2rem; }
+.pp-price { font-size:1.85rem; font-weight:900; letter-spacing:-0.04em; line-height:1; margin-bottom:0.2rem; }
 .pp-trial { font-size:11px; color:var(--lt-mut); margin-bottom:1.1rem; }
 .featured .pp-trial { color:var(--dk-mut); }
 .pp-desc { font-size:0.8rem; color:var(--lt-mut); line-height:1.65; flex:1; margin-bottom:1.5rem; }
@@ -177,10 +181,10 @@ permalink: /pricing/
             Simple pricing.<br/><span class="nx-grad">Honest credits.</span>
         </h1>
         <p style="font-size:1rem;color:var(--dk-mut);max-width:30rem;margin:0 auto 2.5rem;line-height:1.7;">
-            Four volume tiers. Three delivery modes — Excel, API, or Dashboard. Your first month includes 5,000 free credits — no card required.
+            17 prepaid packs from Spark to Sovereign. Excel, API, or Dashboard. Spark starts at ₹249. Unused tokens expire when the cycle ends. No trial.
         </p>
         <div style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--green);border:1px solid rgba(34,197,94,0.2);padding:0.4rem 1rem;background:rgba(34,197,94,0.06);border-radius:4px;">
-            <span class="nx-live"></span> First month free — 5,000 credits, no card required
+            <span class="nx-live"></span> Prepaid packs from ₹249 · leftover tokens expire at cycle end
         </div>
     </div>
 </section>
@@ -194,9 +198,9 @@ permalink: /pricing/
 
         <div style="text-align:center;margin-bottom:3rem;">
             <p class="nx-label" style="color:var(--lt-mut);margin-bottom:0.75rem;">Plans</p>
-            <h2 class="nx-h2" style="color:var(--lt-txt);margin-bottom:1rem;">Four tiers. Three surfaces.</h2>
+            <h2 class="nx-h2" style="color:var(--lt-txt);margin-bottom:1rem;">Prepaid packs. Three surfaces.</h2>
             <p style="font-size:0.88rem;color:var(--lt-mut);max-width:32rem;margin:0 auto 2rem;">
-                Switch delivery mode — prices update instantly. All plans include managed proxies, anti-blocking, and honest credits: 5 per e-commerce fetch, 10 per quick commerce fetch.
+                Switch delivery mode — prices update instantly. All plans include managed proxies, anti-blocking, and honest credits: 5 per e-commerce product fetch.
             </p>
 
             <!-- Mode toggle -->
@@ -207,48 +211,212 @@ permalink: /pricing/
             </div>
         </div>
 
-        <!-- Plan cards -->
+        <!-- Plan cards: 5 core + 12 volume. Compare table below stays on core only. -->
         <div class="pp-cards" style="margin-bottom:1rem;">
 
-            <!-- Starter -->
             <div class="pp-card">
-                <div class="pp-tier" style="color:var(--lt-mut);">Starter</div>
+                <div class="pp-tier-row">
+                    <i data-lucide="sparkles"></i>
+                    <div class="pp-tier" style="color:var(--lt-mut);">Spark</div>
+                </div>
+                <div class="pp-credits">5k credits / mo</div>
+                <div class="pp-price" style="color:var(--lt-txt);" data-plan-price="spark">₹249</div>
+                <div class="pp-trial" data-trial-note>28-day prepaid pack</div>
+                <div class="pp-desc">Entry pack. Buy tokens — unused expire when the cycle ends.</div>
+                <a href="https://app.getnextract.com/register?mode=excel&tier=spark" data-register-tier="spark" class="pp-cta pp-cta-lt">Buy Spark</a>
+            </div>
+
+            <div class="pp-card">
+                <div class="pp-tier-row">
+                    <i data-lucide="star"></i>
+                    <div class="pp-tier" style="color:var(--lt-mut);">Starter</div>
+                </div>
                 <div class="pp-credits">20k credits / mo</div>
                 <div class="pp-price" style="color:var(--lt-txt);" data-plan-price="starter">₹999</div>
-                <div class="pp-trial" data-trial-note>30-day trial</div>
+                <div class="pp-trial" data-trial-note>28-day prepaid pack</div>
                 <div class="pp-desc">Solo sellers &amp; light monitoring. Catalogue visibility without engineering.</div>
-                <a href="https://app.getnextract.com/register?mode=excel&tier=starter" data-register-tier="starter" class="pp-cta pp-cta-lt">Start Starter</a>
+                <a href="https://app.getnextract.com/register?mode=excel&tier=starter" data-register-tier="starter" class="pp-cta pp-cta-lt">Buy Starter</a>
             </div>
 
-            <!-- Growth — featured -->
-            <div class="pp-card featured" style="position:relative;">
-                <div class="pp-card-badge">Most popular</div>
-                <div class="pp-tier" style="color:var(--blue);">Growth</div>
-                <div class="pp-credits">75k credits / mo</div>
-                <div class="pp-price" style="color:var(--dk-txt);" data-plan-price="growth">₹2,999</div>
-                <div class="pp-trial" data-trial-note>30-day trial</div>
-                <div class="pp-desc">Growing catalogues &amp; integrations. Richer signals and more history.</div>
-                <a href="https://app.getnextract.com/register?mode=excel&tier=growth" data-register-tier="growth" class="pp-cta pp-cta-dk">Start Growth</a>
-            </div>
-
-            <!-- Scale -->
             <div class="pp-card">
-                <div class="pp-tier" style="color:var(--orange);">Scale</div>
+                <div class="pp-tier-row">
+                    <i data-lucide="zap"></i>
+                    <div class="pp-tier" style="color:var(--lt-mut);">Growth</div>
+                </div>
+                <div class="pp-credits">75k credits / mo</div>
+                <div class="pp-price" style="color:var(--lt-txt);" data-plan-price="growth">₹2,999</div>
+                <div class="pp-trial" data-trial-note>28-day prepaid pack</div>
+                <div class="pp-desc">Growing catalogues &amp; integrations. Richer signals and more history.</div>
+                <a href="https://app.getnextract.com/register?mode=excel&tier=growth" data-register-tier="growth" class="pp-cta pp-cta-lt">Buy Growth</a>
+            </div>
+
+            <div class="pp-card">
+                <div class="pp-tier-row">
+                    <i data-lucide="rocket"></i>
+                    <div class="pp-tier" style="color:var(--lt-mut);">Scale</div>
+                </div>
                 <div class="pp-credits">170k credits / mo</div>
                 <div class="pp-price" style="color:var(--lt-txt);" data-plan-price="scale">₹5,999</div>
-                <div class="pp-trial" data-trial-note>30-day trial</div>
+                <div class="pp-trial" data-trial-note>28-day prepaid pack</div>
                 <div class="pp-desc">High volume &amp; automation. Full data richness with speed for large operations.</div>
-                <a href="https://app.getnextract.com/register?mode=excel&tier=scale" data-register-tier="scale" class="pp-cta pp-cta-lt">Start Scale</a>
+                <a href="https://app.getnextract.com/register?mode=excel&tier=scale" data-register-tier="scale" class="pp-cta pp-cta-lt">Buy Scale</a>
             </div>
 
-            <!-- Elite -->
-            <div class="pp-card">
-                <div class="pp-tier" style="color:var(--blue);">Elite</div>
+            <div class="pp-card featured" style="position:relative;">
+                <div class="pp-card-badge">Most popular</div>
+                <div class="pp-tier-row">
+                    <i data-lucide="crown"></i>
+                    <div class="pp-tier">Elite</div>
+                </div>
                 <div class="pp-credits">450k credits / mo</div>
-                <div class="pp-price" style="color:var(--lt-txt);" data-plan-price="elite">₹14,999</div>
-                <div class="pp-trial" data-trial-note>30-day trial</div>
+                <div class="pp-price" style="color:var(--dk-txt);" data-plan-price="elite">₹14,999</div>
+                <div class="pp-trial" data-trial-note>28-day prepaid pack</div>
                 <div class="pp-desc">Large brands, aggregators &amp; agencies. Maximum parallelism and strategy support.</div>
-                <a href="https://app.getnextract.com/register?mode=excel&tier=elite" data-register-tier="elite" class="pp-cta pp-cta-blue">Start Elite</a>
+                <a href="https://app.getnextract.com/register?mode=excel&tier=elite" data-register-tier="elite" class="pp-cta pp-cta-dk">Buy Elite</a>
+            </div>
+
+            <div class="pp-card">
+                <div class="pp-tier-row">
+                    <i data-lucide="gem"></i>
+                    <div class="pp-tier" style="color:var(--lt-mut);">Apex</div>
+                </div>
+                <div class="pp-credits">940k credits / mo</div>
+                <div class="pp-price" style="color:var(--lt-txt);" data-plan-price="apex">₹29,999</div>
+                <div class="pp-trial" data-trial-note>28-day prepaid pack</div>
+                <div class="pp-desc">When 450k credits is tight — a full brand catalog, checked daily.</div>
+                <a href="https://app.getnextract.com/register?mode=excel&tier=apex" data-register-tier="apex" class="pp-cta pp-cta-lt">Buy Apex</a>
+            </div>
+
+            <div class="pp-card">
+                <div class="pp-tier-row">
+                    <i data-lucide="shield"></i>
+                    <div class="pp-tier" style="color:var(--lt-mut);">Titan</div>
+                </div>
+                <div class="pp-credits">1.8M credits / mo</div>
+                <div class="pp-price" style="color:var(--lt-txt);" data-plan-price="titan">₹54,999</div>
+                <div class="pp-trial" data-trial-note>28-day prepaid pack</div>
+                <div class="pp-desc">Several categories or brands, refreshed more than once a day.</div>
+                <a href="https://app.getnextract.com/register?mode=excel&tier=titan" data-register-tier="titan" class="pp-cta pp-cta-lt">Buy Titan</a>
+            </div>
+
+            <div class="pp-card">
+                <div class="pp-tier-row">
+                    <i data-lucide="orbit"></i>
+                    <div class="pp-tier" style="color:var(--lt-mut);">Nova</div>
+                </div>
+                <div class="pp-credits">3.3M credits / mo</div>
+                <div class="pp-price" style="color:var(--lt-txt);" data-plan-price="nova">₹94,999</div>
+                <div class="pp-trial" data-trial-note>28-day prepaid pack</div>
+                <div class="pp-desc">A group of storefronts — Amazon, Flipkart, and the rest of your e-commerce stack.</div>
+                <a href="https://app.getnextract.com/register?mode=excel&tier=nova" data-register-tier="nova" class="pp-cta pp-cta-lt">Buy Nova</a>
+            </div>
+
+            <div class="pp-card">
+                <div class="pp-tier-row">
+                    <i data-lucide="atom"></i>
+                    <div class="pp-tier" style="color:var(--lt-mut);">Quantum</div>
+                </div>
+                <div class="pp-credits">5.4M credits / mo</div>
+                <div class="pp-price" style="color:var(--lt-txt);" data-plan-price="quantum">₹1,49,999</div>
+                <div class="pp-trial" data-trial-note>28-day prepaid pack</div>
+                <div class="pp-desc">Country-wide assortment: cities, pin codes, and every listing you sell.</div>
+                <a href="https://app.getnextract.com/register?mode=excel&tier=quantum" data-register-tier="quantum" class="pp-cta pp-cta-lt">Buy Quantum</a>
+            </div>
+
+            <div class="pp-card">
+                <div class="pp-tier-row">
+                    <i data-lucide="sunrise"></i>
+                    <div class="pp-tier" style="color:var(--lt-mut);">Horizon</div>
+                </div>
+                <div class="pp-credits">8.6M credits / mo</div>
+                <div class="pp-price" style="color:var(--lt-txt);" data-plan-price="horizon">₹2,29,999</div>
+                <div class="pp-trial" data-trial-note>28-day prepaid pack</div>
+                <div class="pp-desc">Watch a whole category, not a sample of SKUs.</div>
+                <a href="https://app.getnextract.com/register?mode=excel&tier=horizon" data-register-tier="horizon" class="pp-cta pp-cta-lt">Buy Horizon</a>
+            </div>
+
+            <div class="pp-card">
+                <div class="pp-tier-row">
+                    <i data-lucide="mountain"></i>
+                    <div class="pp-tier" style="color:var(--lt-mut);">Summit</div>
+                </div>
+                <div class="pp-credits">13.5M credits / mo</div>
+                <div class="pp-price" style="color:var(--lt-txt);" data-plan-price="summit">₹3,44,999</div>
+                <div class="pp-trial" data-trial-note>28-day prepaid pack</div>
+                <div class="pp-desc">Agencies running many client catalogs from one account.</div>
+                <a href="https://app.getnextract.com/register?mode=excel&tier=summit" data-register-tier="summit" class="pp-cta pp-cta-lt">Buy Summit</a>
+            </div>
+
+            <div class="pp-card">
+                <div class="pp-tier-row">
+                    <i data-lucide="globe"></i>
+                    <div class="pp-tier" style="color:var(--lt-mut);">Atlas</div>
+                </div>
+                <div class="pp-credits">20.2M credits / mo</div>
+                <div class="pp-price" style="color:var(--lt-txt);" data-plan-price="atlas">₹4,99,999</div>
+                <div class="pp-trial" data-trial-note>28-day prepaid pack</div>
+                <div class="pp-desc">Your range plus competitors — kept current for the whole cycle.</div>
+                <a href="https://app.getnextract.com/register?mode=excel&tier=atlas" data-register-tier="atlas" class="pp-cta pp-cta-lt">Buy Atlas</a>
+            </div>
+
+            <div class="pp-card">
+                <div class="pp-tier-row">
+                    <i data-lucide="triangle"></i>
+                    <div class="pp-tier" style="color:var(--lt-mut);">Vertex</div>
+                </div>
+                <div class="pp-credits">29.8M credits / mo</div>
+                <div class="pp-price" style="color:var(--lt-txt);" data-plan-price="vertex">₹7,09,899</div>
+                <div class="pp-trial" data-trial-note>28-day prepaid pack</div>
+                <div class="pp-desc">Short refresh windows. Price and Buy Box checked through the day.</div>
+                <a href="https://app.getnextract.com/register?mode=excel&tier=vertex" data-register-tier="vertex" class="pp-cta pp-cta-lt">Buy Vertex</a>
+            </div>
+
+            <div class="pp-card">
+                <div class="pp-tier-row">
+                    <i data-lucide="award"></i>
+                    <div class="pp-tier" style="color:var(--lt-mut);">Prime</div>
+                </div>
+                <div class="pp-credits">43.3M credits / mo</div>
+                <div class="pp-price" style="color:var(--lt-txt);" data-plan-price="prime">₹9,94,899</div>
+                <div class="pp-trial" data-trial-note>28-day prepaid pack</div>
+                <div class="pp-desc">In-house data teams feeding a warehouse or internal tools.</div>
+                <a href="https://app.getnextract.com/register?mode=excel&tier=prime" data-register-tier="prime" class="pp-cta pp-cta-lt">Buy Prime</a>
+            </div>
+
+            <div class="pp-card">
+                <div class="pp-tier-row">
+                    <i data-lucide="hexagon"></i>
+                    <div class="pp-tier" style="color:var(--lt-mut);">Ultra</div>
+                </div>
+                <div class="pp-credits">61.9M credits / mo</div>
+                <div class="pp-price" style="color:var(--lt-txt);" data-plan-price="ultra">₹13,74,899</div>
+                <div class="pp-trial" data-trial-note>28-day prepaid pack</div>
+                <div class="pp-desc">Jobs that stay on — Amazon and e-commerce marketplaces in parallel.</div>
+                <a href="https://app.getnextract.com/register?mode=excel&tier=ultra" data-register-tier="ultra" class="pp-cta pp-cta-lt">Buy Ultra</a>
+            </div>
+
+            <div class="pp-card">
+                <div class="pp-tier-row">
+                    <i data-lucide="infinity"></i>
+                    <div class="pp-tier" style="color:var(--lt-mut);">Infinity</div>
+                </div>
+                <div class="pp-credits">86.3M credits / mo</div>
+                <div class="pp-price" style="color:var(--lt-txt);" data-plan-price="infinity">₹18,54,899</div>
+                <div class="pp-trial" data-trial-note>28-day prepaid pack</div>
+                <div class="pp-desc">A live catalog that cannot sit idle between cycles.</div>
+                <a href="https://app.getnextract.com/register?mode=excel&tier=infinity" data-register-tier="infinity" class="pp-cta pp-cta-lt">Buy Infinity</a>
+            </div>
+
+            <div class="pp-card">
+                <div class="pp-tier-row">
+                    <i data-lucide="landmark"></i>
+                    <div class="pp-tier" style="color:var(--lt-mut);">Sovereign</div>
+                </div>
+                <div class="pp-credits">118.3M credits / mo</div>
+                <div class="pp-price" style="color:var(--lt-txt);" data-plan-price="sovereign">₹24,64,799</div>
+                <div class="pp-trial" data-trial-note>28-day prepaid pack</div>
+                <div class="pp-desc">The largest prepaid allotment. For teams that already know they will use it.</div>
+                <a href="https://app.getnextract.com/register?mode=excel&tier=sovereign" data-register-tier="sovereign" class="pp-cta pp-cta-blue">Buy Sovereign</a>
             </div>
 
         </div>
@@ -256,7 +424,7 @@ permalink: /pricing/
         <p style="font-size:11px;color:var(--lt-mut);text-align:center;margin-bottom:0;">
             <span class="pp-footnote-inr">Prices in INR per month.</span>
             <span class="pp-footnote-usd" style="display:none;">Prices in USD per month.</span>
-            Credits reset each billing cycle. Upgrade anytime — no lock-in.
+            Unused tokens expire at cycle end. To change an active pack, contact support.
         </p>
 
     </div>
@@ -271,7 +439,8 @@ permalink: /pricing/
 
         <div style="text-align:center;margin-bottom:3rem;">
             <p class="nx-label" style="color:var(--lt-mut);margin-bottom:0.75rem;">Compare</p>
-            <h2 class="nx-h2" style="color:var(--lt-txt);">Every feature, side by side.</h2>
+            <h2 class="nx-h2" style="color:var(--lt-txt);">Core packs, side by side.</h2>
+            <p style="font-size:0.88rem;color:var(--lt-mut);margin-top:0.75rem;">Spark through Elite. Volume packs (Apex–Sovereign) are in the grid above.</p>
         </div>
 
         <div class="pp-compare-wrap">
@@ -280,78 +449,78 @@ permalink: /pricing/
                     <tr>
                         <th style="text-align:left;width:28%;min-width:160px;padding:1.25rem 1rem;font-size:10px;font-weight:900;letter-spacing:0.14em;text-transform:uppercase;color:var(--lt-mut);border-bottom:2px solid var(--lt-b);">Feature</th>
                         <th>Starter<br/><span style="font-size:10px;font-weight:600;color:var(--lt-mut);">20k credits</span></th>
-                        <th class="feat-col">Growth<br/><span style="font-size:10px;font-weight:600;">75k credits</span></th>
+                        <th>Growth<br/><span style="font-size:10px;font-weight:600;color:var(--lt-mut);">75k credits</span></th>
                         <th>Scale<br/><span style="font-size:10px;font-weight:600;color:var(--lt-mut);">170k credits</span></th>
-                        <th>Elite<br/><span style="font-size:10px;font-weight:600;color:var(--lt-mut);">450k credits</span></th>
+                        <th class="feat-col">Elite<br/><span style="font-size:10px;font-weight:600;">450k credits</span></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="group-row"><td colspan="5">Credits &amp; volume</td></tr>
                     <tr>
                         <td>Monthly credits</td>
-                        <td>20,000</td><td class="feat-col" style="font-weight:700;color:var(--blue);">75,000</td><td>170,000</td><td>450,000</td>
+                        <td>20,000</td><td>75,000</td><td>170,000</td><td class="feat-col" style="font-weight:700;color:var(--blue);">450,000</td>
                     </tr>
                     <tr>
                         <td>~Product fetches / mo</td>
-                        <td>~4,000</td><td class="feat-col" style="font-weight:700;color:var(--blue);">~15,000</td><td>~34,000</td><td>~90,000</td>
+                        <td>~4,000</td><td>~15,000</td><td>~34,000</td><td class="feat-col" style="font-weight:700;color:var(--blue);">~90,000</td>
                     </tr>
                     <tr>
                         <td>Parallel jobs</td>
-                        <td>1</td><td class="feat-col" style="font-weight:700;color:var(--blue);">3</td><td>5</td><td>10</td>
+                        <td>1</td><td>3</td><td>5</td><td class="feat-col" style="font-weight:700;color:var(--blue);">10</td>
                     </tr>
                     <tr>
                         <td>Credits per fetch</td>
-                        <td colspan="4" style="text-align:center;color:var(--lt-mut);">5 e-commerce · 10 quick commerce</td>
+                        <td colspan="4" style="text-align:center;color:var(--lt-mut);">5 credits per e-commerce fetch</td>
                     </tr>
 
                     <tr class="group-row"><td colspan="5">Data &amp; fields</td></tr>
                     <tr>
                         <td>Core fields (price, title, BSR)</td>
-                        <td><i class="ri-check-line chk"></i></td><td class="feat-col"><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td>
+                        <td><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td><td class="feat-col"><i class="ri-check-line chk"></i></td>
                     </tr>
                     <tr>
                         <td>Buy Box &amp; seller data</td>
-                        <td><i class="ri-check-line chk"></i></td><td class="feat-col"><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td>
+                        <td><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td><td class="feat-col"><i class="ri-check-line chk"></i></td>
                     </tr>
                     <tr>
                         <td>Extended intelligence (reviews, Q&amp;A, variations)</td>
-                        <td><span class="dash">—</span></td><td class="feat-col"><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td>
+                        <td><span class="dash">—</span></td><td><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td><td class="feat-col"><i class="ri-check-line chk"></i></td>
                     </tr>
                     <tr>
                         <td>Historical snapshots</td>
-                        <td>7 days</td><td class="feat-col" style="font-weight:700;color:var(--blue);">30 days</td><td>90 days</td><td>180 days</td>
+                        <td>7 days</td><td>30 days</td><td>90 days</td><td class="feat-col" style="font-weight:700;color:var(--blue);">180 days</td>
                     </tr>
 
                     <tr class="group-row"><td colspan="5">Delivery surfaces</td></tr>
                     <tr>
                         <td>Excel / scheduled file exports</td>
-                        <td><i class="ri-check-line chk"></i></td><td class="feat-col"><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td>
+                        <td><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td><td class="feat-col"><i class="ri-check-line chk"></i></td>
                     </tr>
                     <tr>
                         <td>REST API access</td>
-                        <td><span class="dash">—</span></td><td class="feat-col"><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td>
+                        <td><span class="dash">—</span></td><td><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td><td class="feat-col"><i class="ri-check-line chk"></i></td>
                     </tr>
                     <tr>
                         <td>Full dashboard UI</td>
-                        <td><span class="dash">—</span></td><td class="feat-col"><span class="dash">—</span></td><td><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td>
+                        <td><span class="dash">—</span></td><td><span class="dash">—</span></td><td><i class="ri-check-line chk"></i></td><td class="feat-col"><i class="ri-check-line chk"></i></td>
                     </tr>
                     <tr>
                         <td>Alerts &amp; schedules</td>
-                        <td><span class="dash">—</span></td><td class="feat-col"><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td>
+                        <td><span class="dash">—</span></td><td><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td><td class="feat-col"><i class="ri-check-line chk"></i></td>
                     </tr>
 
                     <tr class="group-row"><td colspan="5">Support &amp; onboarding</td></tr>
                     <tr>
                         <td>Email support</td>
-                        <td><i class="ri-check-line chk"></i></td><td class="feat-col"><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td>
+                        <td><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td><td class="feat-col"><i class="ri-check-line chk"></i></td>
                     </tr>
                     <tr>
                         <td>Priority support</td>
-                        <td><span class="dash">—</span></td><td class="feat-col"><span class="dash">—</span></td><td><i class="ri-check-line chk"></i></td><td><i class="ri-check-line chk"></i></td>
+                        <td><span class="dash">—</span></td><td><span class="dash">—</span></td><td><i class="ri-check-line chk"></i></td><td class="feat-col"><i class="ri-check-line chk"></i></td>
                     </tr>
                     <tr>
                         <td>Strategy partner / onboarding call</td>
-                        <td><span class="dash">—</span></td><td class="feat-col"><span class="dash">—</span></td><td><span class="dash">—</span></td><td><i class="ri-check-line chk"></i></td>
+                        <td><span class="dash">—</span></td><td><span class="dash">—</span></td><td><span class="dash">—</span></td><td class="feat-col"><i class="ri-check-line chk"></i></td>
                     </tr>
 
                     <tr class="group-row"><td colspan="5">Infrastructure (all tiers)</td></tr>
@@ -361,7 +530,7 @@ permalink: /pricing/
                     </tr>
                     <tr>
                         <td>Platforms covered</td>
-                        <td colspan="4" style="text-align:center;color:var(--lt-mut);">Amazon, Flipkart, Blinkit, Zepto, Instamart, BigBasket, JioMart, Croma +more</td>
+                        <td colspan="4" style="text-align:center;color:var(--lt-mut);">Amazon, Flipkart, Walmart, eBay, Etsy, Croma +more</td>
                     </tr>
                 </tbody>
             </table>
@@ -384,7 +553,7 @@ permalink: /pricing/
         <div class="pp-faq">
             <details open>
                 <summary>What are credits and how do they work? <i class="ri-arrow-down-s-line"></i></summary>
-                <p>E-commerce fetches (Amazon, Flipkart, Croma, Reliance Digital) cost 5 credits each. Quick commerce fetches (Blinkit, Zepto, Instamart, and more) cost 10 credits each. Your monthly allowance resets at the start of each billing cycle. Unused credits don't roll over — pick a tier that matches your typical volume.</p>
+                <p>Each e-commerce product fetch (Amazon, Flipkart, and other storefronts) costs 5 credits. Unused tokens expire when your cycle ends (28 days monthly, 336 days yearly). Buying a new pack replaces leftover credits.</p>
             </details>
             <details>
                 <summary>What's the difference between Excel, API, and Dashboard? <i class="ri-arrow-down-s-line"></i></summary>
@@ -392,19 +561,19 @@ permalink: /pricing/
             </details>
             <details>
                 <summary>Do I get a free trial? <i class="ri-arrow-down-s-line"></i></summary>
-                <p>Yes. Your first month includes 5,000 free credits — no card required. This gives you enough to explore the platform and validate data quality before committing to a paid plan. After the first month, choose the tier that fits your volume.</p>
+                <p>No. There is no trial. Spark is the entry prepaid pack — 5,000 credits from ₹249 / month. Yearly packs are 10% off with 12× tokens.</p>
             </details>
             <details>
                 <summary>Can I switch tiers or modes later? <i class="ri-arrow-down-s-line"></i></summary>
-                <p>Absolutely. Upgrade or change delivery mode anytime from your account settings. Changes take effect on your next billing cycle, or immediately for upgrades depending on your plan.</p>
+                <p>Buy another pack from Billing anytime — leftover credits are replaced by the new pack. To change an active pack without buying again, contact support.</p>
             </details>
             <details>
                 <summary>What marketplaces do you support? <i class="ri-arrow-down-s-line"></i></summary>
-                <p>Amazon, Flipkart, Blinkit, Zepto, Swiggy Instamart, BigBasket, JioMart, and Croma. We're actively adding more — <a href="{{ '/contact/' | relative_url }}" style="color:var(--blue);font-weight:700;">request a platform</a> and we'll reply within 48 hours.</p>
+                <p>Amazon, Flipkart, Walmart, eBay, Etsy, and Croma. We're actively adding more e-commerce storefronts — <a href="{{ '/contact/' | relative_url }}" style="color:var(--blue);font-weight:700;">request a platform</a> and we'll reply within 48 hours.</p>
             </details>
             <details>
                 <summary>Is there a contract or lock-in? <i class="ri-arrow-down-s-line"></i></summary>
-                <p>No. All plans are month-to-month. Cancel anytime from your dashboard. No hidden fees, no annual commitments.</p>
+                <p>No lock-in. Packs are prepaid for 28 days (monthly) or 336 days (yearly). There is no subscription auto-renewal.</p>
             </details>
             <details>
                 <summary>How does billing work for international customers? <i class="ri-arrow-down-s-line"></i></summary>
@@ -426,14 +595,14 @@ permalink: /pricing/
     <div class="nx-wrap" style="position:relative;z-index:1;text-align:center;">
         <p class="nx-label" style="color:var(--dk-mut);margin-bottom:1rem;">Ready?</p>
         <h2 style="font-size:clamp(2.5rem,6vw,5rem);font-weight:900;letter-spacing:-0.05em;color:var(--dk-txt);line-height:1;margin-bottom:1.5rem;">
-            Start free.<br/><span class="nx-grad">Scale when ready.</span>
+            Buy a pack.<br/><span class="nx-grad">Scale when ready.</span>
         </h2>
         <p style="font-size:1rem;color:var(--dk-mut);max-width:28rem;margin:0 auto 2.5rem;line-height:1.7;">
-            5,000 credits free your first month — no card required. Explore, validate, then pick the tier that fits.
+            Prepaid packs from ₹249. Leftover tokens expire at cycle end. Explore, validate, then pick the tier that fits.
         </p>
         <div style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:0.75rem;">
             <a href="https://app.getnextract.com/register" class="btn-dk-primary">
-                <span>Create free account</span>
+                <span>Get started</span>
                 <i class="ri-arrow-right-line"></i>
             </a>
             <a href="{{ '/contact/' | relative_url }}" class="btn-dk-ghost">Talk to us</a>
@@ -449,16 +618,46 @@ permalink: /pricing/
     if (!modeButtons.length) return;
 
     var PRICES_INR = {
-        excel:     { starter: 999,   growth: 2999,  scale: 5999,  elite: 14999 },
-        api:       { starter: 1350,  growth: 3999,  scale: 7999,  elite: 19999 },
-        dashboard: { starter: 1699,  growth: 4999,  scale: 9999,  elite: 24999 }
+        excel: {
+            spark: 249, starter: 999, growth: 2999, scale: 5999, elite: 14999,
+            apex: 29999, titan: 54999, nova: 94999, quantum: 149999, horizon: 229999,
+            summit: 344999, atlas: 499999, vertex: 709899, prime: 994899, ultra: 1374899,
+            infinity: 1854899, sovereign: 2464799
+        },
+        api: {
+            spark: 349, starter: 1350, growth: 3999, scale: 7999, elite: 19999,
+            apex: 39999, titan: 73299, nova: 126699, quantum: 199999, horizon: 306599,
+            summit: 459999, atlas: 666599, vertex: 946599, prime: 1326599, ultra: 1833199,
+            infinity: 2473099, sovereign: 3286399
+        },
+        dashboard: {
+            spark: 429, starter: 1699, growth: 4999, scale: 9999, elite: 24999,
+            apex: 49999, titan: 91699, nova: 158299, quantum: 249999, horizon: 383299,
+            summit: 574999, atlas: 833299, vertex: 1183199, prime: 1658199, ultra: 2291499,
+            infinity: 3091399, sovereign: 4107999
+        }
     };
     var PRICES_USD = {
-        excel:     { starter: 20,  growth: 60,  scale: 120, elite: 300 },
-        api:       { starter: 27,  growth: 80,  scale: 160, elite: 400 },
-        dashboard: { starter: 34,  growth: 100, scale: 200, elite: 500 }
+        excel: {
+            spark: 3, starter: 12, growth: 36, scale: 72, elite: 180,
+            apex: 360, titan: 660, nova: 1140, quantum: 1800, horizon: 2760,
+            summit: 4140, atlas: 6000, vertex: 8520, prime: 11940, ultra: 16500,
+            infinity: 22260, sovereign: 29580
+        },
+        api: {
+            spark: 4, starter: 16, growth: 48, scale: 96, elite: 240,
+            apex: 480, titan: 880, nova: 1520, quantum: 2400, horizon: 3680,
+            summit: 5520, atlas: 8000, vertex: 11360, prime: 15920, ultra: 22000,
+            infinity: 29680, sovereign: 39440
+        },
+        dashboard: {
+            spark: 5, starter: 20, growth: 60, scale: 120, elite: 300,
+            apex: 600, titan: 1100, nova: 1900, quantum: 3000, horizon: 4600,
+            summit: 6900, atlas: 10000, vertex: 14200, prime: 19900, ultra: 27500,
+            infinity: 37100, sovereign: 49300
+        }
     };
-    var TRIAL_DAYS = { excel: 30, api: 14, dashboard: 7 };
+    var PACK_NOTE = '28-day prepaid pack';
     var REGISTER_BASE = 'https://app.getnextract.com/register';
 
     var activeMode = 'excel';
@@ -478,7 +677,7 @@ permalink: /pricing/
             if (val != null) el.textContent = fmt(val, activeCurrency);
         });
         document.querySelectorAll('[data-trial-note]').forEach(function (el) {
-            el.textContent = TRIAL_DAYS[activeMode] + '-day trial';
+            el.textContent = PACK_NOTE;
         });
         document.querySelectorAll('[data-register-tier]').forEach(function (el) {
             el.href = REGISTER_BASE + '?mode=' + activeMode + '&tier=' + el.getAttribute('data-register-tier');
@@ -528,3 +727,5 @@ permalink: /pricing/
     }
 })();
 </script>
+<script src="https://unpkg.com/lucide@0.552.0/dist/umd/lucide.min.js"></script>
+<script>if (window.lucide) lucide.createIcons();</script>

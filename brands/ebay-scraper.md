@@ -1,7 +1,7 @@
 ---
 layout: product-page
 title: "eBay Scraper: Products, Auctions & Seller Data Extraction"
-description: "Extract eBay product data, auction prices, and seller info via API. Real-time scraping for USA, UK, Germany, Australia. Start free trial."
+description: "Extract eBay product data, auction prices, and seller info via API. Real-time scraping for USA, UK, Germany, Australia. Prepaid packs from ₹249."
 keywords: "eBay scraper, eBay data extraction, eBay auction scraping, eBay seller data, eBay product API, eBay price tracking, eBay marketplace scraping"
 category: "E-commerce"
 platform: "eBay"

@@ -1,11 +1,11 @@
 ---
 layout: default
 title: "Technology Data Solutions: GitHub, Stack Overflow & Developer Intelligence"
-description: "Extract software listings, reviews, code metrics from GitHub, Stack Overflow, Product Hunt, G2. Tech intelligence API. Real-time data. Start free trial."
+description: "Extract software listings, reviews, code metrics from GitHub, Stack Overflow, Product Hunt, G2. Tech intelligence API. Real-time data. Prepaid packs from ₹249."
 keywords: "technology data scraping, GitHub scraping API, Stack Overflow data extraction, software reviews scraping, Product Hunt scraping, G2 scraping, Capterra data, app store scraping, developer data extraction"
 category: "Technology"
-og_description: "Extract software listings, reviews, code metrics from GitHub, Stack Overflow, Product Hunt, G2. Tech intelligence API. Real-time data. Start free trial."
-twitter_description: "Tech scraping: Extract data from GitHub, Stack Overflow, Product Hunt. Software listings, reviews, developer metrics. Start free."
+og_description: "Extract software listings, reviews, code metrics from GitHub, Stack Overflow, Product Hunt, G2. Tech intelligence API. Real-time data. Prepaid packs from ₹249."
+twitter_description: "Tech scraping: Extract data from GitHub, Stack Overflow, Product Hunt. Software listings, reviews, developer metrics. Get started."
 ---
 
 <main>

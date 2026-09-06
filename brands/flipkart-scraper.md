@@ -1,7 +1,7 @@
 ---
 layout: product-page
 title: "Flipkart Scraper: Products, Prices & Reviews Data Extraction"
-description: "Extract Flipkart product data, prices, reviews, seller info via API. Real-time scraping for India's largest e-commerce platform. Start free trial today."
+description: "Extract Flipkart product data, prices, reviews, seller info via API. Real-time scraping for India's largest e-commerce platform. Prepaid packs from ₹249."
 keywords: "Flipkart scraper, Flipkart data extraction, Flipkart product API, Flipkart price tracking, Flipkart reviews scraping, India e-commerce scraping"
 category: "E-commerce"
 platform: "Flipkart"

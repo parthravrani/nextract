@@ -1,7 +1,7 @@
 ---
 layout: product-page
 title: "Zepto Scraper: Grocery, Prices & Delivery Zones Data"
-description: "Extract Zepto grocery data, prices, delivery zones via API. 10-minute grocery delivery intelligence. Real-time tracking across Indian cities. Start free."
+description: "Extract Zepto grocery data, prices, delivery zones via API. 10-minute grocery delivery intelligence. Real-time tracking across Indian cities. Get started."
 keywords: "Zepto scraper, Zepto data extraction, quick commerce scraping, Zepto grocery API, 10-minute delivery India, Zepto inventory"
 category: "Quick Commerce"
 platform: "Zepto"

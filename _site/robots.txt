@@ -1,21 +1,10 @@
 User-agent: *
 Allow: /
 
-# Sitemaps
+# Sitemap
 Sitemap: https://nextract.dev/sitemap.xml
-Sitemap: https://nextract.dev/sitemap-main.xml
-Sitemap: https://nextract.dev/sitemap-categories.xml
-Sitemap: https://nextract.dev/sitemap-brands.xml
-Sitemap: https://nextract.dev/sitemap-geographic.xml
-Sitemap: https://nextract.dev/sitemap-services.xml
-Sitemap: https://nextract.dev/sitemap-apis.xml
-Sitemap: https://nextract.dev/sitemap-scrapers.xml
-Sitemap: https://nextract.dev/sitemap-case-studies.xml
-Sitemap: https://nextract.dev/sitemap-intelligence.xml
-Sitemap: https://nextract.dev/sitemap-industries.xml
-Sitemap: https://nextract.dev/sitemap-blog.xml
 
-# Disallow admin and private areas
+# Disallow admin, private, and draft areas
 Disallow: /_site/
 Disallow: /vendor/
 Disallow: /.jekyll-cache/
@@ -23,16 +12,7 @@ Disallow: /.sass-cache/
 Disallow: /node_modules/
 Disallow: /generate-pdfs.js
 Disallow: /*.pdf$
-
-# Allow important pages
-Allow: /products/
-Allow: /solutions/
-Allow: /industries/
-Allow: /case-studies/
-Allow: /about/
-Allow: /contact/
-
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
-
-
+Disallow: /pitch-deck/
+Disallow: /pitch-deck copy/
+Disallow: /pitch-deck copy 2/
+Disallow: /scrava/subscribe/

@@ -1,7 +1,7 @@
 ---
 layout: product-page
 title: "DoorDash Scraper: Restaurants, Menus & Delivery Data"
-description: "Extract DoorDash restaurant data, menus, prices, delivery zones via API. USA's leading food delivery. Real-time tracking. Start free trial today."
+description: "Extract DoorDash restaurant data, menus, prices, delivery zones via API. USA's leading food delivery. Real-time tracking. Prepaid packs from ₹249."
 keywords: "DoorDash scraper, DoorDash data extraction, USA food delivery API, restaurant data USA, DoorDash menu scraping"
 category: "Food Delivery"
 platform: "DoorDash"

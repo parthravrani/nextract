@@ -1,7 +1,7 @@
 ---
 layout: product-page
 title: "Zomato Scraper: Restaurants, Menus & Delivery Data"
-description: "Extract Zomato restaurant data, menus, reviews, ratings via API. Global food delivery platform. 24+ countries covered. Start free trial today."
+description: "Extract Zomato restaurant data, menus, reviews, ratings via API. Global food delivery platform. 24+ countries covered. Prepaid packs from ₹249."
 keywords: "Zomato scraper, Zomato data extraction, restaurant API global, Zomato menu scraping, food delivery data, Zomato Gold"
 category: "Food Delivery"
 platform: "Zomato"

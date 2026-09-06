@@ -83,4 +83,4 @@ The opportunity isn't complicated. Your competitors' pricing, listing quality, a
 
 ---
 
-*Nextract tracks competitor prices, rankings, listing changes, and review activity across Amazon, Flipkart, and 30+ other platforms. [Start free](/products/) — 5,000 credits your first month.*
+*Nextract tracks competitor prices, rankings, listing changes, and review activity across Amazon, Flipkart, and 30+ other platforms. [Get started](/pricing/) — prepaid packs from ₹249.*

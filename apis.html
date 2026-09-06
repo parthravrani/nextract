@@ -1,9 +1,9 @@
 ---
 layout: default
 title: "Nextract API — Commerce Data at HTTP Speed"
-description: "Nextract's commerce intelligence REST API. Product lookups, bulk jobs, pricing, Buy Box, rank tracking — Amazon, Flipkart, Blinkit, Zepto."
-keywords: "nextract api, commerce data api, amazon product api, flipkart data api, blinkit api, ecommerce intelligence api, price tracking api, buy box api"
-og_description: "Nextract REST API — pull live product data, prices, Buy Box, and rank data from Amazon, Flipkart, Blinkit, and more."
+description: "Nextract's commerce intelligence REST API. Product lookups, bulk jobs, pricing, Buy Box, rank tracking — Amazon and e-commerce storefronts."
+keywords: "nextract api, commerce data api, amazon product api, flipkart data api, ecommerce intelligence api, price tracking api, buy box api"
+og_description: "Nextract REST API — pull live product data, prices, Buy Box, and rank data from Amazon, Flipkart, and more."
 canonical_url: "https://nextract.dev/apis/"
 permalink: /apis/
 ---
@@ -51,11 +51,11 @@ permalink: /apis/
             Commerce data.<br/><span class="nx-grad">One clean endpoint.</span>
         </h1>
         <p style="font-size:1rem;color:var(--dk-mut);max-width:32rem;line-height:1.7;margin-bottom:2.5rem;">
-            Pull live product data, pricing, Buy Box status, keyword ranks, and shelf data from Amazon, Flipkart, Blinkit, Zepto, and more — all via a single authenticated REST API.
+            Pull live product data, pricing, Buy Box status, keyword ranks, and listing data from Amazon, Flipkart, and other e-commerce storefronts — all via a single authenticated REST API.
         </p>
         <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-bottom:2.5rem;">
             <a href="{{ '/contact/' | relative_url }}" class="btn-dk-primary">Get API access <i class="ri-arrow-right-line"></i></a>
-            <a href="https://app.getnextract.com/register" class="btn-dk-ghost">Start free</a>
+            <a href="https://app.getnextract.com/register" class="btn-dk-ghost">Get started</a>
         </div>
         <!-- Quick stats -->
         <div style="display:flex;flex-wrap:wrap;gap:2rem;padding-top:1.5rem;border-top:1px solid var(--dk-b);">
@@ -113,9 +113,9 @@ permalink: /apis/
                     </div>
                     <div style="padding:0.5rem 1rem;">
                         <div class="api-param"><span class="api-param-name">asin <span class="api-param-req">required</span></span><span class="api-param-desc">ASIN, product ID, or URL slug depending on the platform.</span></div>
-                        <div class="api-param"><span class="api-param-name">platform <span class="api-param-req">required</span></span><span class="api-param-desc">Platform identifier: <code style="font-family:monospace;font-size:0.8rem;">amazon_in</code>, <code style="font-family:monospace;font-size:0.8rem;">amazon_us</code>, <code style="font-family:monospace;font-size:0.8rem;">flipkart</code>, <code style="font-family:monospace;font-size:0.8rem;">blinkit</code>, <code style="font-family:monospace;font-size:0.8rem;">zepto</code>, <code style="font-family:monospace;font-size:0.8rem;">instamart</code>.</span></div>
+                        <div class="api-param"><span class="api-param-name">platform <span class="api-param-req">required</span></span><span class="api-param-desc">Platform identifier: <code style="font-family:monospace;font-size:0.8rem;">amazon_in</code>, <code style="font-family:monospace;font-size:0.8rem;">amazon_us</code>, <code style="font-family:monospace;font-size:0.8rem;">flipkart</code>, <code style="font-family:monospace;font-size:0.8rem;">walmart</code>.</span></div>
                         <div class="api-param"><span class="api-param-name">fields <span class="api-param-opt">optional</span></span><span class="api-param-desc">Comma-separated list of fields to return. Defaults to all. E.g. <code style="font-family:monospace;font-size:0.8rem;">title,price,buy_box</code>.</span></div>
-                        <div class="api-param"><span class="api-param-name">pincode <span class="api-param-opt">optional</span></span><span class="api-param-desc">For quick-commerce platforms — returns availability and pricing for this delivery pin code.</span></div>
+                        <div class="api-param"><span class="api-param-name">marketplace <span class="api-param-opt">optional</span></span><span class="api-param-desc">Amazon marketplace code when needed — e.g. <code style="font-family:monospace;font-size:0.8rem;">IN</code>, <code style="font-family:monospace;font-size:0.8rem;">US</code>.</span></div>
                     </div>
                 </div>
             </div>
@@ -180,7 +180,7 @@ permalink: /apis/
   <span class="key">"items"</span>: [
     { <span class="key">"id"</span>: <span class="str">"B09G9HD6PD"</span>, <span class="key">"platform"</span>: <span class="str">"amazon_in"</span> },
     { <span class="key">"id"</span>: <span class="str">"B0CHX1W1XY"</span>, <span class="key">"platform"</span>: <span class="str">"amazon_in"</span> },
-    { <span class="key">"id"</span>: <span class="str">"BL_92841"</span>,   <span class="key">"platform"</span>: <span class="str">"blinkit"</span>    }
+    { <span class="key">"id"</span>: <span class="str">"SKU_92841"</span>,  <span class="key">"platform"</span>: <span class="str">"flipkart"</span>   }
   ],
   <span class="key">"fields"</span>: [<span class="str">"title"</span>, <span class="str">"price"</span>, <span class="str">"buy_box"</span>, <span class="str">"in_stock"</span>],
   <span class="key">"webhook_url"</span>: <span class="str">"https://your-app.com/hooks/nextract"</span>
@@ -268,7 +268,7 @@ permalink: /apis/
             <h2 class="nx-h2" style="color:var(--lt-txt);">One API key covers<br/>every channel.</h2>
         </div>
         <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0.75rem;" class="sol-3col">
-            {% assign api_platforms = "ri-amazon-line|Amazon IN / US / UK / DE~ri-store-3-line|Flipkart~ri-store-line|Blinkit~ri-flashlight-line|Zepto~ri-shopping-bag-3-line|Swiggy Instamart~ri-store-2-line|Myntra~ri-device-line|JioMart~ri-shopping-cart-line|Croma" | split: "~" %}
+            {% assign api_platforms = "ri-amazon-line|Amazon IN / US / UK / DE~ri-store-3-line|Flipkart~ri-store-2-line|Walmart~ri-shopping-bag-3-line|eBay~ri-gift-line|Etsy~ri-store-2-line|Myntra~ri-shopping-cart-line|Croma~ri-shopping-bag-line|Nykaa" | split: "~" %}
             {% for p in api_platforms %}
             {% assign pparts = p | split: "|" %}
             <div style="background:var(--lt);border:1px solid var(--lt-b);padding:1rem 1.25rem;display:flex;align-items:center;gap:0.75rem;">
@@ -292,9 +292,9 @@ permalink: /apis/
                 <p style="font-size:0.88rem;color:var(--dk-mut);line-height:1.75;max-width:36rem;">Sign up, grab your API key from the dashboard, and make your first call. Full docs, code samples, and schema reference included — no approval process, no waiting.</p>
             </div>
             <div style="display:flex;flex-direction:column;gap:0.75rem;min-width:200px;">
-                <a href="https://app.getnextract.com/register" class="btn-dk-primary" style="justify-content:center;">Start free <i class="ri-arrow-right-line"></i></a>
+                <a href="https://app.getnextract.com/register" class="btn-dk-primary" style="justify-content:center;">Get started <i class="ri-arrow-right-line"></i></a>
                 <a href="{{ '/enterprise/' | relative_url }}" class="btn-dk-ghost" style="justify-content:center;">Enterprise options</a>
-                <p style="font-size:11px;color:var(--dk-mut);text-align:center;margin:0;">5,000 credits free · first month · no card required</p>
+                <p style="font-size:11px;color:var(--dk-mut);text-align:center;margin:0;">Prepaid packs from ₹249 · leftover tokens expire at cycle end</p>
             </div>
         </div>
     </div>

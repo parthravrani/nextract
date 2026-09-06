@@ -1,11 +1,11 @@
 ---
 layout: default
 title: "Travel & Hospitality Data: Booking, Expedia & Airbnb Intelligence"
-description: "Extract travel data from Booking.com, Expedia, Airbnb, Kayak. Flight prices, hotel rates, booking data. Real-time intelligence. Start free trial."
+description: "Extract travel data from Booking.com, Expedia, Airbnb, Kayak. Flight prices, hotel rates, booking data. Real-time intelligence. Prepaid packs from ₹249."
 keywords: "travel data scraping, hotel data extraction, flight price scraping, Booking.com scraping API, Expedia data extraction, Airbnb scraping, Kayak scraping, TripAdvisor data, travel booking scraping"
 category: "Travel & Hospitality"
-og_description: "Extract travel data from Booking.com, Expedia, Airbnb, Kayak. Flight prices, hotel rates, booking data. Real-time intelligence. Start free trial."
-twitter_description: "Travel scraping: Extract data from Booking.com, Expedia, Airbnb. Flight prices, hotel rates, booking intelligence. Start free."
+og_description: "Extract travel data from Booking.com, Expedia, Airbnb, Kayak. Flight prices, hotel rates, booking data. Real-time intelligence. Prepaid packs from ₹249."
+twitter_description: "Travel scraping: Extract data from Booking.com, Expedia, Airbnb. Flight prices, hotel rates, booking intelligence. Get started."
 ---
 
 <main>

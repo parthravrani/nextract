@@ -1,10 +1,10 @@
 ---
 layout: default
-title: "Nextract — Commerce Data API for Amazon, Flipkart, Blinkit & Zepto"
-description: "Get structured product data from Amazon, Flipkart, Blinkit, Zepto and major marketplaces. Live prices, stock, listings via a single API. First month free."
-keywords: "commerce data api, product data api, ecommerce data api, marketplace data api, amazon product api, flipkart api, blinkit api, zepto api, quick commerce api, real-time product data, web scraping api, data extraction api"
-og_description: "Real-time product data from Amazon, Flipkart, Blinkit, Zepto and every major marketplace. One API. First month free — 5,000 credits included."
-twitter_description: "Commerce Data API — live prices, stock, listings from Amazon, Flipkart, Blinkit, Zepto and more. One key. Free to start."
+title: "Nextract — Amazon & E-commerce Data API"
+description: "Get structured product data from Amazon and major e-commerce marketplaces. Live prices, Buy Box, stock, and listings via a single API. Prepaid packs from ₹249."
+keywords: "commerce data api, product data api, ecommerce data api, marketplace data api, amazon product api, amazon buy box api, flipkart api, real-time product data, web scraping api, data extraction api"
+og_description: "Real-time product data from Amazon and major e-commerce marketplaces. One API. Prepaid packs from ₹249. Leftover tokens expire at cycle end."
+twitter_description: "Amazon & e-commerce data API — live prices, Buy Box, stock, listings. One key. Prepaid packs from ₹249."
 ---
 
 <style>
@@ -302,14 +302,14 @@ twitter_description: "Commerce Data API — live prices, stock, listings from Am
 
         <div style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:0.75rem;margin-bottom:2.5rem;">
             <a href="https://app.getnextract.com/register" class="btn-dk-primary">
-                <span>Start free — first month included</span>
+                <span>Get started</span>
                 <i class="ri-arrow-right-line"></i>
             </a>
             <a href="{{ '/pricing/' | relative_url }}" class="btn-dk-ghost">View pricing</a>
             <a href="#api-demo" class="btn-dk-ghost">See API example</a>
         </div>
 
-        <p style="font-size:11px;color:var(--dk-dim);text-align:center;margin-bottom:1.25rem;">5,000 credits free your first month — no card required.</p>
+        <p style="font-size:11px;color:var(--dk-dim);text-align:center;margin-bottom:1.25rem;">Prepaid packs from ₹249. Leftover tokens expire at cycle end.</p>
 
         <div class="nx-hero-foot" style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:1.5rem;">
             <a href="{{ '/apis/' | relative_url }}">API Reference</a>
@@ -358,7 +358,7 @@ twitter_description: "Commerce Data API — live prices, stock, listings from Am
     <!-- Row 2 — right -->
     <div class="nx-ticker-row">
         <div class="nx-tick-r">
-            {% assign tick_b = "BL_92841|Maggi Masala 70g · Blinkit|₹14|Stable|gray|PIN 400001 · 9 min~ZP_18823|Fortune Sunflower 1L · Zepto|₹185|↑5%|red|PIN 400001 · 8 min~B0CWQ4FNJ6|Samsung Galaxy A55 5G|₹28999|↓18%|green|#2 in Smartphones~FK_884421|Prestige Pressure Cooker|₹1299|↓10%|green|Flipkart · #3 Cookware~CR_20211|Sony Bravia 55 4K|₹62990|Stable|gray|Croma · In Stock~B09XM85WS1|Amul Butter 500g · Amazon|₹290|↑8%|red|#1 in Dairy" | split: "~" %}
+            {% assign tick_b = "B09XS7JWHC|Sony WH-1000XM5 · Amazon|₹24990|↓22%|green|#1 in Headphones~FK_MOBG9VHHF8|OnePlus 12 256GB|₹54999|↓8%|green|Flipkart · #4 Mobiles~B0CWQ4FNJ6|Samsung Galaxy A55 5G|₹28999|↓18%|green|#2 in Smartphones~FK_884421|Prestige Pressure Cooker|₹1299|↓10%|green|Flipkart · #3 Cookware~CR_20211|Sony Bravia 55 4K|₹62990|Stable|gray|Croma · In Stock~B09XM85WS1|Amul Butter 500g · Amazon|₹290|↑8%|red|#1 in Dairy" | split: "~" %}
             {% assign tick_b2 = tick_b | concat: tick_b %}
             {% for row in tick_b2 %}{% assign t = row | split: "|" %}
             <div class="nx-tick-item">
@@ -387,39 +387,19 @@ twitter_description: "Commerce Data API — live prices, stock, listings from Am
             <div>
                 <p class="nx-label" style="color:var(--lt-mut);margin-bottom:1rem;">One request. Structured data back.</p>
                 <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;letter-spacing:-0.04em;color:var(--lt-txt);line-height:1.1;margin-bottom:1rem;">
-                    Query any platform.<br/>Get clean, ready data.
+                    Query Amazon or Flipkart.<br/>Get clean, ready data.
                 </h2>
                 <p style="font-size:0.85rem;color:var(--lt-mut);line-height:1.7;margin-bottom:1.5rem;">
-                    Pass a product, pincode, or keyword — receive structured data instantly. No scraping, no proxies, no broken pipelines. Use it in your app, dashboard, or data workflow.
+                    Pass an ASIN, SKU, or keyword — receive structured product data instantly. No scraping, no proxies, no broken pipelines. Use it in your app, dashboard, or data workflow.
                 </p>
                 <a href="{{ '/apis/' | relative_url }}" style="font-size:11px;font-weight:800;color:var(--blue);letter-spacing:0.08em;text-transform:uppercase;display:inline-flex;align-items:center;gap:5px;">Full API reference <i class="ri-arrow-right-up-line"></i></a>
             </div>
             <div class="nx-code">
                 <div class="ntabs">
-                    <button class="ntab on" data-p="bl"><img src="{{ '/assets/images/logos/blinkit.svg'  | relative_url }}" alt=""> Blinkit</button>
-                    <button class="ntab"    data-p="am"><img src="{{ '/assets/images/logos/amazon.svg'   | relative_url }}" alt=""> Amazon</button>
+                    <button class="ntab on" data-p="am"><img src="{{ '/assets/images/logos/amazon.svg'   | relative_url }}" alt=""> Amazon</button>
                     <button class="ntab"    data-p="fk"><img src="{{ '/assets/images/logos/flipkart.svg' | relative_url }}" alt=""> Flipkart</button>
                 </div>
-                <div class="npanel on" id="p-bl"><div class="nx-code-body"><pre><span class="tc"># Quick commerce — pin-level search</span>
-<span class="tm">GET</span> <span class="tu">https://api.getnextract.com/v1/food/search</span>
-    ?platform=blinkit&q=maggi&pincode=400001
-Authorization: Bearer <span class="tt">nxt_live_••••••••••••</span>
-
-<span class="tc">── 200 OK ──────────────────────────────</span>
-{
-  <span class="tk">"platform"</span>:     <span class="ts">"blinkit"</span>,
-  <span class="tk">"pincode"</span>:      <span class="ts">"400001"</span>,
-  <span class="tk">"fetched_at"</span>:   <span class="ts">"2026-06-15T20:41:02Z"</span>,
-  <span class="tk">"results"</span>: [{
-    <span class="tk">"id"</span>:           <span class="ts">"BL_92841"</span>,
-    <span class="tk">"name"</span>:         <span class="ts">"Maggi 2-Min Masala Noodles 70g"</span>,
-    <span class="tk">"price"</span>:        <span class="tn">14</span>,
-    <span class="tk">"mrp"</span>:          <span class="tn">14</span>,
-    <span class="tk">"in_stock"</span>:     <span class="tb">true</span>,
-    <span class="tk">"delivery_eta"</span>: <span class="ts">"9 mins"</span>
-  }]
-}</pre></div></div>
-                <div class="npanel" id="p-am"><div class="nx-code-body"><pre><span class="tc"># ASIN lookup — Buy Box + ratings</span>
+                <div class="npanel on" id="p-am"><div class="nx-code-body"><pre><span class="tc"># ASIN lookup — Buy Box + ratings</span>
 <span class="tm">GET</span> <span class="tu">https://api.getnextract.com/v1/retail/product</span>
     ?platform=amazon&asin=B0CM5JV8LP
 Authorization: Bearer <span class="tt">nxt_live_••••••••••••</span>
@@ -527,7 +507,7 @@ Authorization: Bearer <span class="tt">nxt_live_••••••••••�
         </div>
 
         <div style="text-align:center;margin-top:3rem;">
-            <a href="https://app.getnextract.com/register" class="btn-lt-primary">Start free — first month included <i class="ri-arrow-right-line"></i></a>
+            <a href="https://app.getnextract.com/register" class="btn-lt-primary">Get started <i class="ri-arrow-right-line"></i></a>
         </div>
     </div>
 </section>
@@ -567,7 +547,7 @@ Authorization: Bearer <span class="tt">nxt_live_••••••••••�
                             <span style="display:flex;align-items:center;gap:6px;"><span style="color:#a1a1aa;text-decoration:line-through;font-size:9px;">₹3,990</span><span style="color:var(--green);font-weight:800;">₹899</span><span style="font-size:8px;background:rgba(34,197,94,0.1);color:var(--green);padding:1px 4px;font-weight:700;">↑ BB</span></span>
                         </div>
                         <div style="display:flex;justify-content:space-between;align-items:center;padding:0.38rem 0.75rem;border-bottom:1px solid #f4f4f5;">
-                            <span style="color:#52525b;">Maggi Masala 70g</span>
+                            <span style="color:#52525b;">Fire TV Stick 4K</span>
                             <span style="display:flex;align-items:center;gap:6px;"><span style="color:#ef4444;font-weight:800;">₹14</span><span style="font-size:8px;background:rgba(239,68,68,0.08);color:#ef4444;padding:1px 4px;font-weight:700;">↓ −12%</span></span>
                         </div>
                         <div style="display:flex;justify-content:space-between;align-items:center;padding:0.38rem 0.75rem;">
@@ -590,7 +570,7 @@ Authorization: Bearer <span class="tt">nxt_live_••••••••••�
                         <span style="font-size:9px;color:#56d364;font-weight:700;">● live stream</span>
                     </div>
                     <div style="padding:0.5rem 0.75rem;font-size:9.5px;line-height:1.8;">
-                        <div><span style="color:#3f3f46;">20:41:02</span> <span style="color:#56d364;">POST</span> <span style="color:#79c0ff;">/webhook</span> <span style="color:#a5d6ff;">200</span> <span style="color:#484f58;">price.changed · Blinkit</span></div>
+                        <div><span style="color:#3f3f46;">20:41:02</span> <span style="color:#56d364;">POST</span> <span style="color:#79c0ff;">/webhook</span> <span style="color:#a5d6ff;">200</span> <span style="color:#484f58;">buybox.changed · Amazon</span></div>
                         <div><span style="color:#3f3f46;">20:41:05</span> <span style="color:#56d364;">POST</span> <span style="color:#79c0ff;">/webhook</span> <span style="color:#a5d6ff;">200</span> <span style="color:#484f58;">stock.updated · Amazon</span></div>
                         <div><span style="color:#3f3f46;">20:41:11</span> <span style="color:#56d364;">POST</span> <span style="color:#79c0ff;">/webhook</span> <span style="color:#a5d6ff;">200</span> <span style="color:#484f58;">listing.new · Flipkart</span></div>
                     </div>
@@ -612,7 +592,7 @@ Authorization: Bearer <span class="tt">nxt_live_••••••••••�
                         <span style="color:#09090b;font-weight:700;">Product</span><span style="color:#09090b;font-weight:700;">Price</span><span style="color:#09090b;font-weight:700;">Stock</span><span style="color:#09090b;font-weight:700;">Platform</span>
                     </div>
                     <div style="padding:0.32rem 0.6rem;display:grid;grid-template-columns:1fr 60px 50px 60px;border-bottom:1px solid #f9f9f9;">
-                        <span style="color:#52525b;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">Maggi 70g</span><span style="color:var(--green);font-weight:700;">₹14</span><span style="color:var(--green);">✓</span><span style="color:#71717a;">Blinkit</span>
+                        <span style="color:#52525b;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">Fire TV Stick</span><span style="color:var(--green);font-weight:700;">₹3,999</span><span style="color:var(--green);">✓</span><span style="color:#71717a;">Amazon</span>
                     </div>
                     <div style="padding:0.32rem 0.6rem;display:grid;grid-template-columns:1fr 60px 50px 60px;border-bottom:1px solid #f9f9f9;">
                         <span style="color:#52525b;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">boAt Airdopes</span><span style="color:#52525b;font-weight:700;">₹899</span><span style="color:#ef4444;">✗</span><span style="color:#71717a;">Amazon</span>
@@ -695,7 +675,7 @@ Authorization: Bearer <span class="tt">nxt_live_••••••••••�
                 <p class="nx-label" style="color:var(--dk-mut);margin-bottom:1rem;">Platforms live</p>
                 <div>
                     <div class="nx-stat nx-grad" style="margin-bottom:0.5rem;">10+</div>
-                    <p style="font-size:0.8rem;color:var(--dk-mut);line-height:1.6;">Amazon, Flipkart, Blinkit, Zepto, Instamart, BigBasket, JioMart, Croma and counting.</p>
+                    <p style="font-size:0.8rem;color:var(--dk-mut);line-height:1.6;">Amazon, Flipkart, Walmart, eBay, Etsy, Croma and counting.</p>
                 </div>
                 <a href="{{ '/contact/' | relative_url }}" style="margin-top:1.5rem;font-size:11px;font-weight:800;color:var(--blue);letter-spacing:0.06em;text-transform:uppercase;display:inline-flex;align-items:center;gap:4px;">
                     Request a platform <i class="ri-add-line"></i>
@@ -711,34 +691,30 @@ Authorization: Bearer <span class="tt">nxt_live_••••••••••�
                 </div>
             </div>
 
-            <!-- Cell 4: Quick commerce -->
+            <!-- Cell 4: Amazon Buy Box -->
             <div class="cell" style="display:flex;flex-direction:column;justify-content:space-between;">
                 <div>
-                    <span style="display:inline-block;font-size:9px;font-weight:900;letter-spacing:0.14em;text-transform:uppercase;color:var(--orange);border:1px solid rgba(249,115,22,0.25);padding:0.25rem 0.55rem;margin-bottom:1rem;background:rgba(249,115,22,0.06);">Quick commerce</span>
-                    <h3 style="font-size:1.15rem;font-weight:900;letter-spacing:-0.03em;color:var(--dk-txt);margin-bottom:0.6rem;line-height:1.3;">PIN-level.<br/>Dark store data.</h3>
-                    <p style="font-size:0.8rem;color:var(--dk-mut);line-height:1.6;">Pass a pincode, get real availability and ETAs for that exact delivery zone.</p>
-                    <!-- mini: cross-platform availability comparison -->
+                    <span style="display:inline-block;font-size:9px;font-weight:900;letter-spacing:0.14em;text-transform:uppercase;color:var(--orange);border:1px solid rgba(249,115,22,0.25);padding:0.25rem 0.55rem;margin-bottom:1rem;background:rgba(249,115,22,0.06);">Amazon · Buy Box</span>
+                    <h3 style="font-size:1.15rem;font-weight:900;letter-spacing:-0.03em;color:var(--dk-txt);margin-bottom:0.6rem;line-height:1.3;">Who owns the offer.<br/>Seller, price, FBA.</h3>
+                    <p style="font-size:0.8rem;color:var(--dk-mut);line-height:1.6;">Track Buy Box winner, landed price, and fulfillment type on every ASIN you care about.</p>
                     <div style="margin-top:1.25rem;font-family:ui-monospace,monospace;font-size:9px;overflow-x:auto;">
-                        <div style="display:grid;grid-template-columns:90px repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.06);min-width:220px;">
-                            <div style="background:#0f0f12;padding:0.35rem 0.5rem;color:#3f3f46;font-weight:800;letter-spacing:0.06em;">Product</div>
-                            <div style="background:#0f0f12;padding:0.35rem 0.4rem;color:#3f3f46;font-weight:800;text-align:center;">BL</div>
-                            <div style="background:#0f0f12;padding:0.35rem 0.4rem;color:#3f3f46;font-weight:800;text-align:center;">ZP</div>
-                            <div style="background:#0f0f12;padding:0.35rem 0.4rem;color:#3f3f46;font-weight:800;text-align:center;">IM</div>
-                            <div style="background:var(--dk);padding:0.35rem 0.5rem;color:#71717a;white-space:nowrap;overflow:hidden;">Maggi 70g</div>
-                            <div style="background:var(--dk);padding:0.35rem;text-align:center;color:var(--green);font-weight:800;">₹14<br/><span style="color:#3f3f46;font-weight:400;">9m</span></div>
-                            <div style="background:var(--dk);padding:0.35rem;text-align:center;color:var(--green);font-weight:800;">₹15<br/><span style="color:#3f3f46;font-weight:400;">12m</span></div>
-                            <div style="background:var(--dk);padding:0.35rem;text-align:center;color:#ef4444;font-weight:800;">—</div>
-                            <div style="background:var(--dk);padding:0.35rem 0.5rem;color:#71717a;white-space:nowrap;overflow:hidden;">Fortune 1L</div>
-                            <div style="background:var(--dk);padding:0.35rem;text-align:center;color:#ef4444;font-weight:800;">—</div>
-                            <div style="background:var(--dk);padding:0.35rem;text-align:center;color:var(--green);font-weight:800;">₹185<br/><span style="color:#3f3f46;font-weight:400;">8m</span></div>
-                            <div style="background:var(--dk);padding:0.35rem;text-align:center;color:var(--green);font-weight:800;">₹179<br/><span style="color:#3f3f46;font-weight:400;">10m</span></div>
+                        <div style="display:grid;grid-template-columns:90px repeat(2,1fr);gap:1px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.06);min-width:220px;">
+                            <div style="background:#0f0f12;padding:0.35rem 0.5rem;color:#3f3f46;font-weight:800;letter-spacing:0.06em;">ASIN</div>
+                            <div style="background:#0f0f12;padding:0.35rem 0.4rem;color:#3f3f46;font-weight:800;text-align:center;">Buy Box</div>
+                            <div style="background:#0f0f12;padding:0.35rem 0.4rem;color:#3f3f46;font-weight:800;text-align:center;">Price</div>
+                            <div style="background:var(--dk);padding:0.35rem 0.5rem;color:#71717a;white-space:nowrap;overflow:hidden;">B0CM5JV8LP</div>
+                            <div style="background:var(--dk);padding:0.35rem;text-align:center;color:var(--green);font-weight:800;">Cloudtail</div>
+                            <div style="background:var(--dk);padding:0.35rem;text-align:center;color:var(--green);font-weight:800;">₹899</div>
+                            <div style="background:var(--dk);padding:0.35rem 0.5rem;color:#71717a;white-space:nowrap;overflow:hidden;">B0CHX1W1XY</div>
+                            <div style="background:var(--dk);padding:0.35rem;text-align:center;color:var(--orange);font-weight:800;">3P seller</div>
+                            <div style="background:var(--dk);padding:0.35rem;text-align:center;color:var(--dk-txt);font-weight:800;">₹59,999</div>
                         </div>
-                        <p style="color:#3f3f46;margin-top:0.4rem;font-size:8.5px;">BL=Blinkit · ZP=Zepto · IM=Instamart · pincode 400001</p>
+                        <p style="color:#3f3f46;margin-top:0.4rem;font-size:8.5px;">Amazon.in · refreshed on each fetch</p>
                     </div>
                 </div>
                 <div style="display:flex;align-items:center;gap:0.75rem;margin-top:1.5rem;flex-wrap:wrap;">
-                    {% assign qc = "blinkit,zepto,instamart,bigbasket" | split: "," %}
-                    {% for logo in qc %}<img src="{{ '/assets/images/logos/' | append: logo | append: '.svg' | relative_url }}" alt="{{ logo }}" style="height:12px;width:auto;filter:brightness(0) invert(1) opacity(0.4);">{% endfor %}
+                    {% assign ecom = "amazon,flipkart" | split: "," %}
+                    {% for logo in ecom %}<img src="{{ '/assets/images/logos/' | append: logo | append: '.svg' | relative_url }}" alt="{{ logo }}" style="height:12px;width:auto;filter:brightness(0) invert(1) opacity(0.4);">{% endfor %}
                 </div>
             </div>
 
@@ -769,7 +745,7 @@ Authorization: Bearer <span class="tt">nxt_live_••••••••••�
                 <p style="font-size:0.85rem;color:var(--lt-mut);line-height:1.7;">From solo founders tracking their first listing to enterprise teams running nightly reports — Nextract is the one data layer.</p>
             </div>
             <div>
-                {% assign ucs = "01|Price intelligence|Track competitors in real time. Monitor Buy Box ownership. Feed repricing engines automatically.|/buy-box-monitoring/~02|Catalog monitoring|Availability, content accuracy, ratings — across every marketplace you care about.|/catalogue-monitoring/~03|Share of search|Keyword rankings, listing density, brand visibility. Know exactly where you stand.|/share-of-search/~04|FMCG digital shelf|PIN-level stock, shelf position, promo detection. Built for FMCG brands on quick commerce.|/fmcg-digital-shelf/" | split: "~" %}
+                {% assign ucs = "01|Price intelligence|Track competitors in real time. Monitor Buy Box ownership. Feed repricing engines automatically.|/buy-box-monitoring/~02|Catalog monitoring|Availability, content accuracy, ratings — across every marketplace you care about.|/catalogue-monitoring/~03|Share of search|Keyword rankings, listing density, brand visibility. Know exactly where you stand.|/share-of-search/~04|Amazon digital shelf|A+ content, title accuracy, images, and search rank on the listings that convert.|/fmcg-digital-shelf/" | split: "~" %}
                 {% for uc in ucs %}
                     {% assign parts = uc | split: "|" %}
                 <a href="{{ parts[3] | relative_url }}" style="display:flex;align-items:flex-start;justify-content:space-between;padding:1.75rem 0;border-bottom:1px solid var(--lt-b);gap:2rem;text-decoration:none;transition:padding-left 0.2s;" class="uc-row">
@@ -848,17 +824,17 @@ Authorization: Bearer <span class="tt">nxt_live_••••••••••�
                 <div style="border:1px solid #e4e4e7;padding:1.5rem;display:flex;flex-direction:column;gap:1rem;position:relative;background:#fafafa;">
                     <div style="position:absolute;top:12px;right:16px;font-size:3.5rem;font-weight:900;color:#ececec;line-height:1;font-family:Georgia,serif;">"</div>
                     <div style="display:flex;gap:2px;">{% for i in (1..5) %}<i class="ri-star-fill" style="color:#f59e0b;font-size:11px;"></i>{% endfor %}</div>
-                    <p style="font-size:0.82rem;color:#52525b;line-height:1.7;flex:1;">"PIN-level stock data on Blinkit and Zepto. Couldn't get this anywhere else. Changed how we plan dark store coverage."</p>
+                    <p style="font-size:0.82rem;color:#52525b;line-height:1.7;flex:1;">"Buy Box alerts on every hero ASIN. We know the minute a 3P seller undercuts us — same day we take the offer back."</p>
                     <div style="border-top:1px solid #e4e4e7;padding-top:0.75rem;">
                         <div style="font-size:12px;font-weight:800;color:#09090b;">Priya Sharma</div>
-                        <div style="font-size:10.5px;color:#a1a1aa;">Growth Lead · FMCG Brand</div>
+                        <div style="font-size:10.5px;color:#a1a1aa;">Growth Lead · Amazon Brand</div>
                     </div>
                 </div>
 
                 <div style="border:1px solid #e4e4e7;padding:1.5rem;display:flex;flex-direction:column;gap:1rem;position:relative;background:#fafafa;">
                     <div style="position:absolute;top:12px;right:16px;font-size:3.5rem;font-weight:900;color:#ececec;line-height:1;font-family:Georgia,serif;">"</div>
                     <div style="display:flex;gap:2px;">{% for i in (1..5) %}<i class="ri-star-fill" style="color:#f59e0b;font-size:11px;"></i>{% endfor %}</div>
-                    <p style="font-size:0.82rem;color:#52525b;line-height:1.7;flex:1;">"Free tier tested it, Growth plan within a week. Dashboard is simple enough my sales team uses it directly."</p>
+                    <p style="font-size:0.82rem;color:#52525b;line-height:1.7;flex:1;">"Spark pack tested it, Growth within a week. Dashboard is simple enough my sales team uses it directly."</p>
                     <div style="border-top:1px solid #e4e4e7;padding-top:0.75rem;">
                         <div style="font-size:12px;font-weight:800;color:#09090b;">Siddharth Rao</div>
                         <div style="font-size:10.5px;color:#a1a1aa;">Founder · D2C Brand</div>
@@ -910,31 +886,23 @@ Authorization: Bearer <span class="tt">nxt_live_••••••••••�
         <div style="display:grid;grid-template-columns:1fr 1.6fr;gap:6rem;align-items:start;" class="prg">
             <div>
                 <p class="nx-label" style="color:var(--lt-mut);margin-bottom:1rem;">Pricing</p>
-                <h2 class="nx-h2" style="color:var(--lt-txt);margin-bottom:1.25rem;">Start free.<br/>Scale as<br/>you grow.</h2>
+                <h2 class="nx-h2" style="color:var(--lt-txt);margin-bottom:1.25rem;">Buy a pack.<br/>Scale as<br/>you grow.</h2>
                 <p style="font-size:0.85rem;color:var(--lt-mut);line-height:1.7;margin-bottom:2rem;">
-                    Your first month includes 5,000 free credits — no card required. After that, pick a plan that fits your volume.
+                    Prepaid packs from ₹249. Leftover tokens expire at cycle end. No trial.
                 </p>
                 <div style="display:flex;flex-wrap:wrap;gap:0.65rem;">
                     <a href="https://app.getnextract.com/register" class="btn-lt-primary">
-                        <span>Start free</span>
+                        <span>Get started</span>
                         <i class="ri-arrow-right-line"></i>
                     </a>
                     <a href="{{ '/pricing/' | relative_url }}" class="btn-lt-ghost">View all plans</a>
                 </div>
             </div>
             <div>
-                <!-- First month trial row -->
-                <div style="display:flex;align-items:center;justify-content:space-between;padding:1.4rem 0;border-top:1px solid var(--lt-b);border-bottom:1px solid var(--lt-b);gap:1rem;">
-                    <div>
-                        <div style="font-size:1rem;font-weight:900;color:var(--lt-txt);letter-spacing:-0.02em;display:flex;align-items:center;gap:8px;">First month <span style="font-size:8.5px;font-weight:900;letter-spacing:0.1em;text-transform:uppercase;background:var(--green);color:white;padding:0.2rem 0.5rem;">Free</span></div>
-                        <div style="font-size:11px;color:var(--lt-mut);margin-top:2px;font-weight:600;">5,000 credits · no card required</div>
-                    </div>
-                    <div style="font-size:1.4rem;font-weight:900;color:var(--green);letter-spacing:-0.03em;">₹0</div>
-                </div>
-                {% assign tiers = "Starter|20,000 credits / month~Growth|75,000 credits / month|popular~Scale|170,000 credits / month~Elite|450,000 credits / month" | split: "~" %}
+                {% assign tiers = "Spark|5,000 credits / month~Starter|20,000 credits / month~Growth|75,000 credits / month~Scale|170,000 credits / month~Elite|450,000 credits / month|popular" | split: "~" %}
                 {% for tier in tiers %}
                     {% assign tp = tier | split: "|" %}
-                <div style="display:flex;align-items:center;justify-content:space-between;padding:1.4rem 0;border-bottom:1px solid var(--lt-b);gap:1rem;">
+                <div style="display:flex;align-items:center;justify-content:space-between;padding:1.4rem 0;border-bottom:1px solid var(--lt-b);{% if forloop.first %}border-top:1px solid var(--lt-b);{% endif %}gap:1rem;">
                     <div>
                         <div style="font-size:1rem;font-weight:900;color:var(--lt-txt);letter-spacing:-0.02em;display:flex;align-items:center;gap:8px;">
                             {{ tp[0] }}
@@ -970,13 +938,13 @@ Authorization: Bearer <span class="tt">nxt_live_••••••••••�
         </p>
         <div style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:0.75rem;margin-bottom:2.5rem;">
             <a href="https://app.getnextract.com/register" class="btn-dk-primary">
-                <span>Start free — first month included</span>
+                <span>Get started</span>
                 <i class="ri-arrow-right-line"></i>
             </a>
             <a href="{{ '/contact/' | relative_url }}" class="btn-dk-ghost">Talk to us</a>
             <a href="{{ '/contact/' | relative_url }}" class="btn-dk-ghost">Request a platform</a>
         </div>
-        <p style="font-size:11px;color:var(--dk-dim);text-align:center;margin-bottom:0.5rem;">5,000 credits free your first month — no card required.</p>
+        <p style="font-size:11px;color:var(--dk-dim);text-align:center;margin-bottom:0.5rem;">Prepaid packs from ₹249. Leftover tokens expire at cycle end.</p>
         <div style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:1.5rem;">
             {% assign flinks = "Trust & Security|/trust-security/~SLA|/sla/~Compliance|/compliance/~Pricing|/pricing/~API Reference|/apis/" | split: "~" %}
             {% for fl in flinks %}

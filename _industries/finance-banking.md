@@ -1,11 +1,11 @@
 ---
 layout: default
 title: "Finance & Banking Data: Stock, Crypto & Banking Intelligence"
-description: "Extract financial data, stock prices, crypto data from NYSE, NASDAQ, Coinbase, Binance. Financial market intelligence API. Real-time data. Start free trial."
+description: "Extract financial data, stock prices, crypto data from NYSE, NASDAQ, Coinbase, Binance. Financial market intelligence API. Real-time data. Prepaid packs from ₹249."
 keywords: "finance data scraping, banking data extraction, stock market scraping, cryptocurrency data scraping, NYSE data, NASDAQ scraping, Coinbase API, Binance scraping, SEC filings scraping, financial market data extraction"
 category: "Finance & Banking"
-og_description: "Extract financial data, stock prices, crypto data from NYSE, NASDAQ, Coinbase, Binance. Financial market intelligence API. Real-time data. Start free trial."
-twitter_description: "Finance data scraping: Stock markets, crypto, regulatory data. Extract from NYSE, NASDAQ, Coinbase, Binance. Start free."
+og_description: "Extract financial data, stock prices, crypto data from NYSE, NASDAQ, Coinbase, Binance. Financial market intelligence API. Real-time data. Prepaid packs from ₹249."
+twitter_description: "Finance data scraping: Stock markets, crypto, regulatory data. Extract from NYSE, NASDAQ, Coinbase, Binance. Get started."
 ---
 
 <main>

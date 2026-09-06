@@ -1,7 +1,7 @@
 ---
 layout: product-page
 title: "Walmart Scraper: Products, Prices & Inventory Data"
-description: "Extract Walmart product data, prices, reviews, inventory via API. Real-time scraping for USA, Canada, Mexico. In-store and online data. Start free trial today."
+description: "Extract Walmart product data, prices, reviews, inventory via API. Real-time scraping for USA, Canada, Mexico. In-store and online data. Prepaid packs from ₹249."
 keywords: "Walmart scraper, Walmart data extraction, Walmart product API, Walmart price tracking, Walmart inventory scraping, Walmart reviews, Walmart marketplace"
 category: "E-commerce"
 platform: "Walmart"

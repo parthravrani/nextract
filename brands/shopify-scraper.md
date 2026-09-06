@@ -1,7 +1,7 @@
 ---
 layout: product-page
 title: "Shopify Scraper: Products, Inventory & Pricing Data"
-description: "Extract Shopify store data, product info, inventory, prices via API. Scrape any Shopify-powered store. 2M+ stores supported. Real-time data. Start free trial."
+description: "Extract Shopify store data, product info, inventory, prices via API. Scrape any Shopify-powered store. 2M+ stores supported. Real-time data. Prepaid packs from ₹249."
 keywords: "Shopify scraper, Shopify data extraction, Shopify product API, Shopify inventory tracking, Shopify price monitoring, Shopify store scraping"
 category: "E-commerce"
 platform: "Shopify"

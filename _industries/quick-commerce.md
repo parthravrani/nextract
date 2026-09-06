@@ -1,11 +1,11 @@
 ---
 layout: default
 title: "Quick Commerce Data Solutions: Blinkit, Zepto & Instacart Intelligence"
-description: "Extract quick commerce data from Blinkit, Zepto, Instacart. Grocery data, prices, delivery zones. 10-minute delivery intelligence. Real-time API. Start free."
+description: "Extract quick commerce data from Blinkit, Zepto, Instacart. Grocery data, prices, delivery zones. 10-minute delivery intelligence. Real-time API. Get started."
 keywords: "quick commerce scraping, Blinkit scraping API, Zepto data extraction, Instacart scraping, grocery scraping, quick commerce intelligence, delivery zone mapping, grocery data extraction, 10-minute delivery"
 category: "Quick Commerce"
-og_description: "Extract quick commerce data from Blinkit, Zepto, Instacart. Grocery data, prices, delivery zones. 10-minute delivery intelligence. Real-time API. Start free."
-twitter_description: "Quick commerce scraping: Blinkit, Zepto, Instacart data extraction. Grocery, prices, delivery zones. 10-min delivery. Start free."
+og_description: "Extract quick commerce data from Blinkit, Zepto, Instacart. Grocery data, prices, delivery zones. 10-minute delivery intelligence. Real-time API. Get started."
+twitter_description: "Quick commerce scraping: Blinkit, Zepto, Instacart data extraction. Grocery, prices, delivery zones. 10-min delivery. Get started."
 ---
 
 <main>

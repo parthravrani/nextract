@@ -8,7 +8,7 @@ short_name: "Nextract"
 logo: /assets/images/logo.png
 email: "hello@nextract.dev"
 description: >-
-  Nextract is a commerce intelligence platform. Track prices, stock, rankings, and competitor activity across Amazon, Flipkart, Blinkit, Zepto, and 30+ marketplaces — via dashboard, API, or Excel. First month free.
+  Nextract is a commerce intelligence platform. Track prices, stock, Buy Box, rankings, and competitor activity across Amazon and major e-commerce marketplaces — via dashboard, API, or Excel. Prepaid packs from ₹249.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://nextract.dev" # the base hostname & protocol for your site
 
@@ -64,13 +64,10 @@ navigation:
     dropdown:
       - name: "E-commerce Solutions"
         link: "/e-commerce/"
-        description: "Amazon, Walmart, eBay, Shopify"
-      - name: "Quick Commerce Solutions"
-        link: "/quick-commerce/"
-        description: "Blinkit, Zepto, Instacart"
-      - name: "Food Delivery Solutions"
-        link: "/food-delivery/"
-        description: "Swiggy, Zomato, DoorDash"
+        description: "Amazon, Flipkart, Walmart, eBay"
+      - name: "Amazon Data"
+        link: "/amazon/"
+        description: "Buy Box, ASINs, catalog jobs"
   - name: "Services"
     link: "#"
     dropdown:

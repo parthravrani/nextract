@@ -1,7 +1,7 @@
 ---
 layout: product-page
 title: "BigBasket Scraper: Grocery, Prices & Delivery Zones Data"
-description: "Extract BigBasket grocery data, prices, inventory via API. India's largest online grocery. 30,000+ products tracked. Real-time data. Start free trial."
+description: "Extract BigBasket grocery data, prices, inventory via API. India's largest online grocery. 30,000+ products tracked. Real-time data. Prepaid packs from ₹249."
 keywords: "BigBasket scraper, BigBasket data extraction, grocery API India, BigBasket price tracking, online grocery scraping, BB Daily"
 category: "Quick Commerce"
 platform: "BigBasket"

@@ -1,7 +1,7 @@
 ---
 layout: product-page
 title: "Etsy Scraper: Products, Prices & Reviews Data Extraction"
-description: "Extract Etsy handmade product data, seller info, reviews via API. Unique handcrafted items, vintage goods, craft supplies. Start free trial."
+description: "Extract Etsy handmade product data, seller info, reviews via API. Unique handcrafted items, vintage goods, craft supplies. Prepaid packs from ₹249."
 keywords: "Etsy scraper, Etsy data extraction, handmade scraping, Etsy seller data, craft marketplace API, vintage product scraping"
 category: "E Commerce"
 platform: "Etsy"

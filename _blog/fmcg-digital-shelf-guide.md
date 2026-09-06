@@ -20,18 +20,18 @@ The digital shelf is the set of touchpoints where your product is visible to a c
 
 For FMCG brands in India in 2026, this means:
 
-- **Search results** on Amazon, Flipkart (and increasingly on quick commerce apps)
+- **Search results** on Amazon, Flipkart, Walmart, and other marketplaces
 - **Category browse pages** on each platform
 - **Product listing pages** (your product page, and competitor pages where your product might be mentioned)
-- **Quick commerce app home screens** — personalised surfaces on Blinkit, Zepto, Swiggy Instamart
-- **Search results within quick commerce apps** for near-immediate purchase intent
+- **Amazon homepage and deal surfaces** — sponsored, lightning, and category placements
+- **In-app search** on Amazon and Flipkart, where most conversion happens
 
 Each of these is a shelf. On a physical shelf, you can send a field team to check. On a digital shelf, the data has to come from the platform — and the platforms don't just give it to you.
 
 ## The Five Dimensions Worth Measuring
 
 **1. Availability**
-Is your product in stock, right now, in the location being searched? For quick commerce, this is pincode-level. For traditional ecommerce, it's platform-wide availability and seller stock levels.
+Is your product in stock, right now, for the marketplace and seller being searched? On Amazon and Flipkart this is listing- and seller-level availability.
 
 Availability is the foundational metric. Everything else (search rank, content quality, conversion rate) is moot if you're out of stock.
 
@@ -59,7 +59,7 @@ A useful digital shelf scorecard for a brand looks something like this:
 
 | Metric | Frequency | What a good number looks like |
 |---|---|---|
-| Availability (% pincodes in stock) | Daily | >90% across tier-1 metros |
+| Availability (% ASINs / SKUs in stock) | Daily | >90% of tracked listings |
 | Share of search — tier 1 keywords | Weekly | Top 5 for brand terms; top 10 for category head terms |
 | Content completeness score | Monthly | >85% of SKUs with full title, 4+ images, bullets |
 | Price vs. market (% within ±10%) | Weekly | >80% of SKUs within 10% of nearest substitute |
@@ -67,25 +67,25 @@ A useful digital shelf scorecard for a brand looks something like this:
 
 The exact thresholds depend on your category. High-competition categories like FMCG personal care have tighter benchmarks. Lower-competition categories have more room.
 
-## Quick Commerce: Different Rules
+## Amazon: Different Rules
 
-The digital shelf on quick commerce apps (Blinkit, Zepto, Swiggy Instamart) behaves differently from traditional ecommerce, and many FMCG brands are still applying traditional ecommerce frameworks to a fundamentally different surface.
+The digital shelf on Amazon behaves differently from a brand site or a generic marketplace listing, and many FMCG brands still apply a one-size-fits-all framework.
 
 The key differences:
 
-**Purchase intent is immediate.** Someone searching for "shampoo" on Zepto is buying in the next 10 minutes, not browsing. Conversion rates are higher; so is the cost of being out of stock or ranked poorly.
+**Buy Box is the product.** Someone searching for "shampoo" on Amazon often never sees the listing — they see the offer that won. Conversion is higher when you own it; so is the cost of losing it.
 
-**Geography matters at a granular level.** Each dark store serves a 2–3 km radius. Your availability, price, and even your ETA can vary meaningfully between two pincodes in the same city. City-level reporting misses this.
+**Seller and fulfillment matter.** FBA vs 3P, landed price, and who holds the offer can change hourly. A city-level or weekly snapshot misses the move.
 
-**Content is minimal.** Quick commerce apps show a product image, a name, and a price. There's no A+ content, no extended descriptions. The image and the name carry almost all the conversion weight.
+**Content is the conversion engine.** Title, images, A+ modules, and bullets carry the listing. Incomplete or hijacked content loses rank and conversion.
 
-**Delivery ETA is part of the product.** On quick commerce, a 10-minute delivery versus a 40-minute delivery is a significant product difference — and it changes by time of day and dark store inventory levels.
+**Share of search is the shelf.** Rank on the keyword is as important as being in stock. Position 1–3 converts. Position 10+ is invisible.
 
 ## Building the Capability
 
 Most FMCG teams build digital shelf capability in three stages:
 
-**Stage 1 — Availability monitoring.** Start here. Daily stock checks across platforms and pincodes, with alerts when availability drops below threshold. This is the highest-ROI starting point because the problems are immediate and actionable.
+**Stage 1 — Availability monitoring.** Start here. Daily stock checks across Amazon and Flipkart, with alerts when availability drops below threshold. This is the highest-ROI starting point because the problems are immediate and actionable.
 
 **Stage 2 — Search and content.** Once availability is under control, add share of search tracking and a content quality audit. These feed into your catalogue team's priorities and your ecommerce content calendar.
 
@@ -106,4 +106,4 @@ The data is the easy part. Building the internal process around it is where most
 
 ---
 
-*Nextract's digital shelf monitoring covers availability, search rankings, content tracking, and price intelligence across Amazon, Flipkart, Blinkit, Zepto, and 30+ platforms. [Start free](/products/) — 5,000 credits your first month.*
+*Nextract's digital shelf monitoring covers availability, search rankings, content tracking, and price intelligence across Amazon, Flipkart, and major e-commerce marketplaces. [Get started](/pricing/) — prepaid packs from ₹249.*
