@@ -204,7 +204,7 @@ og_description: "Practical guides on price intelligence, Amazon data, share of s
 
 {% assign all_posts = site.blog | where_exp: "post", "post.hidden != true" | sort: "date" | reverse %}
 {% assign post_count = all_posts | size %}
-{% assign categories = site.blog | map: "category" | uniq | compact %}
+{% assign categories = all_posts | map: "category" | uniq | compact %}
 
 <!-- ── MASTHEAD ───────────────────────────────────── -->
 <div class="blog-masthead">

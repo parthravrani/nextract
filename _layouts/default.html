@@ -20,11 +20,22 @@
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
     <meta name="author" content="{{ site.title }}">
+    {% assign nx_unlisted = false %}
+    {% if page.noindex or page.hidden %}{% assign nx_unlisted = true %}{% endif %}
+    {% assign nx_url = page.url | downcase %}
+    {% assign nx_needles = "quick-commerce,blinkit,zepto,instamart,bigbasket,food-delivery,swiggy,zomato,doordash,ubereats,uber-eats,dark-store,ghost-kitchen,jiomart,delivery-eta,delivery-zone,menu-sentiment,restaurant-search,restaurant-delivery,grocery-assortment,deliveroo,instacart" | split: "," %}
+    {% for n in nx_needles %}{% if nx_url contains n %}{% assign nx_unlisted = true %}{% endif %}{% endfor %}
+    {% if nx_unlisted %}
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="bingbot" content="noindex, nofollow">
+    {% else %}
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="language" content="English">
-    <meta name="revisit-after" content="7 days">
     <meta name="googlebot" content="index, follow">
     <meta name="bingbot" content="index, follow">
+    {% endif %}
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
     <meta name="geo.region" content="IN-HR">
     <meta name="geo.placename" content="Gurugram">
     <meta name="geo.position" content="28.4115;77.0820">

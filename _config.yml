@@ -125,6 +125,109 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+# QC / food pages stay live (no 404) but are unlisted: no sitemap, noindex.
+defaults:
+  - scope: { path: "blinkit.html" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "zepto.html" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "swiggy-instamart.html" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "bigbasket.html" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "swiggy.html" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "zomato.html" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "doordash.html" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "ubereats.html" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "quick-commerce.html" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "food-delivery.html" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "food-delivery-market-entry.html" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "dark-store-intelligence.html" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "delivery-eta-benchmarking.html" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "delivery-zone-mapping.html" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "ghost-kitchen-intelligence.html" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "menu-sentiment-analysis.html" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "restaurant-search-ranking.html" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "_industries/quick-commerce.md" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "_blog/fmcg-stockout-quick-commerce.md" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "blog/quick-commerce" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "blog/food-delivery" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "blog/dark-store" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "blog/grocery-assortment" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "blog/restaurant-delivery" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "brands/blinkit" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "brands/zepto" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "brands/swiggy" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "brands/bigbasket" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "brands/zomato" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "brands/doordash" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "brands/uber-eats" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "_scrapers/blinkit" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "_scrapers/swiggy" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "_apis/zepto" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "_apis/swiggy" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "_apis/doordash" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "_apis/uber-eats" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "_case-studies/blinkit" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "_case-studies/zepto" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "_case-studies/swiggy" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "_case-studies/bigbasket" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "_case-studies/zomato" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "_case-studies/doordash" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "_case-studies/deliveroo" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "_case-studies/quick-commerce" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "_case-studies/uber-eats" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "_datasets/blinkit" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "_datasets/zomato" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "brands/instacart" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+  - scope: { path: "_case-studies/instacart" }
+    values: { sitemap: false, noindex: true, robots: "noindex, nofollow" }
+
 # Markdown settings
 markdown: kramdown
 highlighter: rouge

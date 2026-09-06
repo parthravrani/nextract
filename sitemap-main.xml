@@ -12,18 +12,8 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  <url>
-    <loc>https://nextract.dev/quick-commerce/</loc>
-    <lastmod>2026-02-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nextract.dev/food-delivery/</loc>
-    <lastmod>2026-02-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+  
+  
   <url>
     <loc>https://nextract.dev/web-scraping-services/</loc>
     <lastmod>2026-02-15</lastmod>
@@ -72,54 +62,14 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://nextract.dev/blinkit/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nextract.dev/zepto/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nextract.dev/swiggy-instamart/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nextract.dev/bigbasket/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nextract.dev/zomato/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nextract.dev/swiggy/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nextract.dev/doordash/</loc>
-    <lastmod>2026-03-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nextract.dev/ubereats/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  
+  
+  
+  
+  
+  
+  
+  
   <url>
     <loc>https://nextract.dev/amazon/</loc>
     <lastmod>2026-03-01</lastmod>
@@ -164,12 +114,7 @@
     <priority>0.85</priority>
   </url>
   <!-- Quick Commerce Use-Case Pages -->
-  <url>
-    <loc>https://nextract.dev/dark-store-intelligence/</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
+  
   <url>
     <loc>https://nextract.dev/fmcg-digital-shelf/</loc>
     <lastmod>2026-04-17</lastmod>
@@ -182,12 +127,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
-  <url>
-    <loc>https://nextract.dev/delivery-zone-mapping/</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
+  
   <url>
     <loc>https://nextract.dev/promotional-velocity/</loc>
     <lastmod>2026-04-17</lastmod>
@@ -195,36 +135,11 @@
     <priority>0.85</priority>
   </url>
   <!-- Food Delivery Use-Case Pages -->
-  <url>
-    <loc>https://nextract.dev/ghost-kitchen-intelligence/</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://nextract.dev/restaurant-search-ranking/</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://nextract.dev/delivery-eta-benchmarking/</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://nextract.dev/food-delivery-market-entry/</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://nextract.dev/menu-sentiment-analysis/</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
+  
+  
+  
+  
+  
   <url>
     <loc>https://nextract.dev/apis/</loc>
     <lastmod>2026-02-15</lastmod>
